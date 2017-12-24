@@ -1,0 +1,49 @@
+@import "responsiveQuery.scss";
+
+@mixin gridContainer {
+  display: flex;
+}
+
+//constructor
+@mixin setupGrid($device: "mobile", $size: "S", $spaceRatioOccupied: 12) {
+  .#{$device}#{$size}#{$spaceRatioOccupied} {
+      @if $device == "mobile" and $size == "S" {
+        @include mobile-s {
+          flex: $spaceRatioOccupied;
+        }
+      } @else if $device == "mobile" and $size == "M" {
+        @include mobile-m {
+          flex: $spaceRatioOccupied;
+        }
+      } @else if $device == "mobile" and $size == "L" {
+        @include mobile-l {
+          flex: $spaceRatioOccupied;
+        }
+      } @else if $device == "tablet" and $size == "M" {
+        @include tablet {
+          flex: $spaceRatioOccupied;
+        }
+      } @else if $device == "laptop" and $size == "M" {
+        @include laptop {
+          flex: $spaceRatioOccupied;
+        }
+      } @else if $device == "laptop" and $size == "L" {
+        @include laptop-l {
+          flex: $spaceRatioOccupied;
+        }
+      }
+  }
+}
+
+//builder
+@for $space from 1 to 13 {
+  @include setupGrid("mobile", "S", $space);
+  @include setupGrid("mobile", "M", $space);
+  @include setupGrid("mobile", "L", $space);
+  @include setupGrid("tablet", "M", $space);
+  @include setupGrid("laptop", "M", $space);
+  @include setupGrid("laptop", "L", $space);
+}
+
+
+
