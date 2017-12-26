@@ -54,7 +54,7 @@ class CredentialInput extends React.Component {
     );
   }
 }
-CredentialInput.PropTypes = {
+CredentialInput.propTypes = {
   htmlIdName: PropTypes.string,
   inputTitle: PropTypes.string,
   inputType: PropTypes.string,

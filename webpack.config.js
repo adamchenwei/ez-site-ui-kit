@@ -12,13 +12,18 @@ module.exports = {
   entry: SOURCE_DIR + '/index.js',
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: 'index.js'
+    filename: 'index.js',
+    libraryTarget: "commonjs"
   },
   module: {
     loaders: [
       { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
       { test: /\.jsx?$/, loader: 'babel-loader', exclude: /node_modules/ }
     ]
+  },
+  watchOptions: {
+    aggregateTimeout: 300,
+    poll: 1000
   },
   //plugins: [HtmlWebpackPluginConfig]
 }

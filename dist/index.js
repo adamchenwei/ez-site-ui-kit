@@ -1,4 +1,4 @@
-/******/ (function(modules) { // webpackBootstrap
+(function(e, a) { for(var i in a) e[i] = a[i]; }(exports, /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 /******/
@@ -15196,6 +15196,14 @@ exports.LoginForm = undefined;
 var _LoginForm = __webpack_require__(195);
 
 var _LoginForm2 = _interopRequireDefault(_LoginForm);
+
+var _tester = __webpack_require__(512);
+
+var _tester2 = _interopRequireDefault(_tester);
+
+var _tester3 = __webpack_require__(513);
+
+var _tester4 = _interopRequireDefault(_tester3);
 
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : { default: obj };
@@ -62710,7 +62718,7 @@ var CredentialInput = function (_React$Component) {
   return CredentialInput;
 }(_react2.default.Component);
 
-CredentialInput.PropTypes = {
+CredentialInput.propTypes = {
   htmlIdName: _propTypes2.default.string,
   inputTitle: _propTypes2.default.string,
   inputType: _propTypes2.default.string,
@@ -63700,5 +63708,35 @@ module.exports = function spread(callback) {
 };
 
 
+/***/ }),
+/* 512 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+exports.default = function () {
+  console.log('tester 1');
+};
+
+/***/ }),
+/* 513 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+exports.default = function () {
+  console.log('tester 2');
+};
+
 /***/ })
-/******/ ]);
+/******/ ])));
