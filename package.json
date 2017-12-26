@@ -1,8 +1,8 @@
 {
   "name": "ez-site-ui-kit",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "ui toolkit for ezeewei company websites",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
