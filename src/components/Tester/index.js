@@ -1,11 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 
 export default class Tester extends Component {
-  static propTypes = {
-    content: PropTypes.object,
-    style: PropTypes.object,
-    type: PropTypes.string,
-  }
 
   constructor(props) {
     super(props);
@@ -24,4 +19,9 @@ export default class Tester extends Component {
       </div>
     );
   }
+}
+Tester.propTypes = {
+  content: PropTypes.object,
+  style: PropTypes.object,
+  type: PropTypes.string,
 }

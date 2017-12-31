@@ -1,0 +1,178 @@
+export default [
+  {
+    menuId: 1,
+    menuLastUpdateDate: 1498688605759,
+    menuName: 'primary',
+    menuType: 'custom',
+    menuConfig: {
+      position: 'center',
+    },
+    menuItems: [
+      {
+        menuItemId: 1,
+        type: 'filter',
+        style: [],
+        name: 'home',
+        componentName: 'MenuBarItem',
+        responsiveProperties: {
+          xs: 12,
+          sm: 1,
+          md: 1,
+          lg: 1,
+          xl: 1,
+          offset: {
+            standard: '',
+            sm: '',
+            md: '',
+            lg: '',
+            xl: '',
+          },
+        },
+        content: {
+          type: 'products',
+          name: 'all',
+          query: [
+            /*{
+              paramName: 'tag',
+              paramValue: '',
+            },*/
+          ],
+          link: {
+            name: 'home',
+          },
+        },
+      },
+      {
+        menuItemId: 2,
+        type: 'page',
+        style: [],
+        name: '',
+        componentName: 'MenuBarItem',
+        responsiveProperties: {
+          xs: 12,
+          sm: 1,
+          md: 1,
+          lg: 1,
+          xl: 1,
+          offset: {
+            standard: '',
+            sm: '',
+            md: '',
+            lg: '',
+            xl: '',
+          },
+        },
+        content: {
+          pageId: 2,
+        },
+      },
+      {
+        menuItemId: 3,
+        type: 'page',
+        style: [],
+        name: '',
+        componentName: 'MenuBarItem',
+        responsiveProperties: {
+          xs: 12,
+          sm: 1,
+          md: 1,
+          lg: 1,
+          xl: 1,
+          offset: {
+            standard: '',
+            sm: '',
+            md: '',
+            lg: '',
+            xl: '',
+          },
+        },
+        content: {
+          pageId: 3,
+        },
+      },
+    ],
+  },
+  {
+    menuId: 2,
+    menuLastUpdateDate: 1498688605759,
+    menuName: 'tags',
+    menuType: 'collection',
+    menuConfig: {
+      collectionName: 'products',
+      doNotInclude: {
+        collectionKeys: [],
+      },
+      position: 'center',
+      type: 'collectionItems',
+      componentName: 'MenuBarItem',
+      menuItemId: 4,
+      menuItemType: 'filter',
+      menuItemStyle: [],
+      menuItemResponsiveProperties: {
+        xs: 12,
+        sm: 1,
+        md: 1,
+        lg: 1,
+        xl: 1,
+        offset: {
+          standard: '',
+          sm: '',
+          md: '',
+          lg: '',
+          xl: '',
+        },
+      },
+    },
+  },
+  {
+    menuId: 3,
+    menuLastUpdateDate: 1498688605759,
+    menuName: 'products',
+    menuType: 'collection',
+    menuConfig: {
+      collectionName: 'products',
+      doNotInclude: {
+        collectionKeys: [],
+      },
+      position: 'center',
+      type: 'collectionItems',
+      componentName: '',
+      menuItemId: 4,
+      menuItemType: 'filter',
+      menuItemStyle: [],
+      menuItemResponsiveProperties: {},
+    },
+  },
+  {
+    menuId: 4,
+    menuLastUpdateDate: 1498688605759,
+    menuName: 'products-all-items',
+    menuType: 'collection',
+    menuConfig: {
+      collectionName: 'products',
+      doNotInclude: {
+        collectionKeys: [],
+      },
+      position: 'center',
+      type: 'collectionItems',
+      componentName: 'MenuBarItem',
+      menuItemId: 4,
+      menuItemType: 'filter',
+      menuItemStyle: [],
+      menuItemResponsiveProperties: {
+        xs: 12,
+        sm: 1,
+        md: 1,
+        lg: 1,
+        xl: 1,
+        offset: {
+          standard: '',
+          sm: '',
+          md: '',
+          lg: '',
+          xl: '',
+        },
+      },
+    },
+  },
+];

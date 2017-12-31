@@ -28,6 +28,8 @@
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-images": "^0.5.14",
+    "react-share": "^1.18.1",
     "styled-components": "^2.4.0"
   }
 }

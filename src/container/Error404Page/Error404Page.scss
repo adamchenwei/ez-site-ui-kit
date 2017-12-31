@@ -1,0 +1,16 @@
+@import "../../theme/variables.scss";
+@import "../../theme/bem.scss";
+@import "../../theme/responsiveQuery.scss";
+
+.error404Page {
+  @include element('container') {
+    /* position: absolute;
+    overflow: hidden; */
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}

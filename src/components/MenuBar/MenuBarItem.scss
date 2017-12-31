@@ -1,0 +1,19 @@
+@import "../../theme/bem.scss";
+
+.menuBarItem {
+  @include element('container') {
+    text-align: center;
+
+    > a {
+      color: rgba(34,34,34,.55);
+
+      &:focus {
+        color: #212121;
+      }
+
+      &:hover {
+        color: #212121;
+      }
+    }
+  }
+}

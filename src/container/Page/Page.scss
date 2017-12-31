@@ -1,0 +1,16 @@
+@import "../../theme/variables.scss";
+@import "../../theme/bem.scss";
+@import "../../theme/responsiveQuery.scss";
+
+.page {
+  @include element('container') {
+    /* position: absolute;
+    overflow: hidden; */
+    // width: 100vw;
+    // height: 100vh;
+    left: 0;
+    top: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
