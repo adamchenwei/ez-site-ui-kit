@@ -1,14 +1,10 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import {
   Container,
-} from './../Common';
+} from './style';
 
 export default class _TemplateComponent extends Component {
-  static propTypes = {
-    content: PropTypes.object,
-    style: PropTypes.object,
-    type: PropTypes.string,
-  }
 
   constructor(props) {
     super(props);
@@ -20,13 +16,16 @@ export default class _TemplateComponent extends Component {
       style,
       type,
     } = this.props;
-    const COMPONENT_NAME = '_TemplateComponent';
     return (
-      <Container
-        componentName={COMPONENT_NAME}
-        gridAreaId={''}>
+      <Container>
         SUCCESS
       </Container>
     );
   }
 }
+
+_TemplateComponent.propTypes = {
+  content: PropTypes.object,
+  style: PropTypes.object,
+  type: PropTypes.string,
+};
