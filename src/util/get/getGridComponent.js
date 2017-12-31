@@ -9,7 +9,7 @@ import ListingItem from '../../components/ListingItem/ListingItem';
 import MenuBarItem from '../../components/MenuBar/MenuBarItem';
 import FooterBar from '../../components/FooterBar';
 import LogoBar from '../../components/LogoBar/LogoBar';
-import BreadCrumb from '../../components/BreadCrumb/BreadCrumb';
+import BreadCrumb from '../../components/BreadCrumb';
 
 export default function getGridComponent(componentName, gridContent, gridType) {
   //console.log(gridContent);

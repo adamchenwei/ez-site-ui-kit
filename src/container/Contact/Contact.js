@@ -14,10 +14,6 @@ import {
   Headline,
 } from './style';
 const Contact = class Contact extends Component {
-  static propTypes = {
-    location: PropTypes.any,
-    params: PropTypes.object,
-  }
 
   render() {
     require('./Contact.scss');
@@ -38,5 +34,8 @@ const Contact = class Contact extends Component {
     );
   }
 };
-
+Contact.propTypes = {
+  location: PropTypes.any,
+  params: PropTypes.object,
+}
 export default withRouter(Contact);

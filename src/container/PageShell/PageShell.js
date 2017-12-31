@@ -16,12 +16,6 @@ import {
 import SlideShow from './../../components/SlideShow';
 
 export default class PageShell extends Component {
-  static propTypes = {
-    style: PropTypes.object,
-    containerLevelClass: PropTypes.string,
-    hasSlides: PropTypes.bool,
-    anchorToBelow: PropTypes.string,
-  }
 
   constructor(props) {
     super(props);
@@ -140,4 +134,10 @@ export default class PageShell extends Component {
       </section>
     );
   }
+}
+PageShell.propTypes = {
+  style: PropTypes.object,
+  containerLevelClass: PropTypes.string,
+  hasSlides: PropTypes.bool,
+  anchorToBelow: PropTypes.string,
 }

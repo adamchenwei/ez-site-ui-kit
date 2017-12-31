@@ -2,9 +2,6 @@ import React, { Component } from 'react'; import PropTypes from 'prop-types';
 import ContentSynchronizer from '../../components/ContentSynchronizer/ContentSynchronizer';
 
 export default class Post extends Component {
-  static propTypes = {
-    params: PropTypes.object,
-  }
 
   render() {
     require('./Post.scss');
@@ -29,4 +26,5 @@ export default class Post extends Component {
 }
 
 Post.propTypes = {
-};
+  params: PropTypes.object,
+}

@@ -1,7 +1,7 @@
 import LoginForm from './components/LoginForm';
-import tester1 from './tester1';
-import tester2 from './tester2';
+import About from './container/About/About';
 
 export {
-  LoginForm
+  About,
+  LoginForm,
 }

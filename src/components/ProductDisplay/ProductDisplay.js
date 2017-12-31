@@ -1,6 +1,6 @@
  import React, { Component } from 'react'; import PropTypes from 'prop-types';
 import ContentSynchronizer from '../ContentSynchronizer/ContentSynchronizer';
-import BreadCrumb from '../BreadCrumb/BreadCrumb';
+import BreadCrumb from '../BreadCrumb';
 import getGridItem from './../../util/get/getGridItem';
 import ShareButtonsBar from '../ShareButtonsBar';
 import ProductGallery from '../ProductGallery';

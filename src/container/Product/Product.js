@@ -7,10 +7,6 @@ import PageShell from '../PageShell/PageShell';
 import { withRouter } from 'react-router';
 
 const Product = class Product extends Component {
-  static propTypes = {
-    location: PropTypes.any,
-    params: PropTypes.object,
-  }
 
   render() {
     require('./Product.scss');
@@ -43,5 +39,8 @@ const Product = class Product extends Component {
     );
   }
 };
-
+Product.propTypes = {
+  location: PropTypes.any,
+  params: PropTypes.object,
+}
 export default withRouter(Product);

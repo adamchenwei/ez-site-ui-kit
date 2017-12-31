@@ -2,7 +2,6 @@ import React, { Component } from 'react'; import PropTypes from 'prop-types';
 import GridItem from '../../components/GridItem/GridItem';
 import getGridItem from './../../util/get/getGridItem';
 import capToCamelCase from './../../util/transform/capToCamelCase';
-import { withRouter } from 'react-router';
 import PageShell from '../PageShell/PageShell';
 import GridItemShell from '../../components/GridItem/GridItemShell';
 import EmptyStateUnderConstruction from '../../components/EmptyStateUnderConstruction/EmptyStateUnderConstruction';
@@ -11,10 +10,6 @@ import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from
 import Description from './style/Description';
 
 const About = class About extends Component {
-  static propTypes = {
-    location: PropTypes.any,
-    params: PropTypes.object,
-  }
 
   render() {
     require('./About.scss');
@@ -67,5 +62,8 @@ const About = class About extends Component {
     );
   }
 };
-
-export default withRouter(About);
+About.propTypes = {
+  location: PropTypes.any,
+  params: PropTypes.object,
+};
+export default About;
