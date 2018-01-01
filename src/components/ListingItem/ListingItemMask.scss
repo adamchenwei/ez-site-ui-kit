@@ -1,69 +1,69 @@
-@import "../../theme/variables.scss";
-@import "../../theme/bem.scss";
-@import "../../theme/responsiveQuery.scss";
+// @import "../../theme/variables.scss";
+// @import "../../theme/bem.scss";
+// @import "../../theme/responsiveQuery.scss";
 
-.listingItemMask {
-  @include element('container') {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    opacity: 1;
-    transition: opacity 300ms ease-in-out;
-    @include modifier('hide') {
-      opacity: 0;
-    }
-  }
+// .listingItemMask {
+//   @include element('container') {
+//     position: absolute;
+//     height: 100%;
+//     width: 100%;
+//     display: flex;
+//     align-items: center;
+//     opacity: 1;
+//     transition: opacity 300ms ease-in-out;
+//     @include modifier('hide') {
+//       opacity: 0;
+//     }
+//   }
 
-  @include element('clickable') {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    z-index: 3;
-    top: 0;
-  }
+//   @include element('clickable') {
+//     position: absolute;
+//     height: 100%;
+//     width: 100%;
+//     z-index: 3;
+//     top: 0;
+//   }
 
-  @include element('shade') {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-color: white;
-    opacity: 0.65;
-    top: 0;
+//   @include element('shade') {
+//     position: absolute;
+//     height: 100%;
+//     width: 100%;
+//     background-color: white;
+//     opacity: 0.65;
+//     top: 0;
 
-    &:hover {
-      opacity: 1;
-      background: transparent;
-    }
+//     &:hover {
+//       opacity: 1;
+//       background: transparent;
+//     }
 
-    &:focus {
-      opacity: 1;
-      background: transparent;
-    }
-  }
+//     &:focus {
+//       opacity: 1;
+//       background: transparent;
+//     }
+//   }
 
-  @include element('summary') {
-    position: relative;
-    align-self: center;
-    width: 100%;
-    text-align: center;
-    font-weight: 600;
+//   @include element('summary') {
+//     position: relative;
+//     align-self: center;
+//     width: 100%;
+//     text-align: center;
+//     font-weight: 600;
 
-    &:hover {
-      display: none;
-    }
+//     &:hover {
+//       display: none;
+//     }
 
-    &:focus {
-      display: none;
-    }
+//     &:focus {
+//       display: none;
+//     }
 
-    @include mobile-s {
-      font-size: 24px;
-    }
+//     @include mobile-s {
+//       font-size: 24px;
+//     }
 
-    @include tablet {
-      font-size: 18px;
-    }
-  }
-}
+//     @include tablet {
+//       font-size: 18px;
+//     }
+//   }
+// }

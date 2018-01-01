@@ -6,10 +6,6 @@ import consoleShow from './../../util/debug/consoleShow';
 export default class GridItem extends Component {
 
   render() {
-    require('./GridItem.scss');
-    /*consoleShow('props', {
-      componentName: 'GridItem',
-      props: this.props});*/
     const GridComponent = getGridComponent(this.props.gridComponent, this.props.gridContent, this.props.gridType);
     const userCustomStyleClassNames = concatCssClasses(this.props.gridStyle) || '';
     const containerLevelStyle = `gridItem__container original ${userCustomStyleClassNames}`;

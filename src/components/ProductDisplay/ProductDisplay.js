@@ -66,7 +66,7 @@ export default class ProductDisplay extends Component {
     }
 
   render() {
-    require('./ProductDisplay.scss');
+    //require('./ProductDisplay.scss');
     const contentStyle = this.getStyle(this.props.contentStyle);
     //WARNNING: NEVER ADD  row WITHOUT no-gutters !!! CAUSE GHOST MARGIN ON THE RIGHT OF THE PAGE!!!!!
     const containerLevelStyle = `productDisplay__container ${contentStyle} row no-gutters`;

@@ -6,7 +6,6 @@ import consoleShow from './../../util/debug/consoleShow';
 export default class GridItemShell extends Component {
 
   render() {
-    require('./GridItemShell.scss');
     const userCustomStyleClassNames = concatCssClasses(this.props.gridStyle) || '';
     const containerLevelStyle = `gridItemShell__container original ${userCustomStyleClassNames}`;
     const responsive = this.props.gridResponsiveProperties || {};

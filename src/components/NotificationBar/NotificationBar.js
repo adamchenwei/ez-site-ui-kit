@@ -58,7 +58,7 @@ export default class NotificationBar extends Component {
   }
 
   render() {
-    require('./NotificationBar.scss');
+    //require('./NotificationBar.scss');
     const type = this.props.contentType;
     const data = this.props.contentData;
     const contentComponent = this.getContentComponent(type, data);

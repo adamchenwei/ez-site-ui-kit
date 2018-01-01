@@ -1,10 +1,5 @@
 import React, { Component } from 'react'; import PropTypes from 'prop-types';
-import GridItem from '../../components/GridItem/GridItem';
-import getGridItem from './../../util/get/getGridItem';
-import capToCamelCase from './../../util/transform/capToCamelCase';
 import PageShell from '../PageShell/PageShell';
-import GridItemShell from '../../components/GridItem/GridItemShell';
-import EmptyStateUnderConstruction from '../../components/EmptyStateUnderConstruction/EmptyStateUnderConstruction';
 import {PageContentContainer} from '../../components/Common';
 import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser';
 import Description from './style/Description';
@@ -12,17 +7,11 @@ import Description from './style/Description';
 const About = class About extends Component {
 
   render() {
-    require('./About.scss');
-
-    const component = capToCamelCase('SocialIcon');
     return (
 
       <PageShell
         containerLevelClass={''}
         style={{}} >
-         {/* <GridItemShell>
-          <EmptyStateUnderConstruction />
-        </GridItemShell> */}
         <PageContentContainer>
         {
           ReactHtmlParser(`

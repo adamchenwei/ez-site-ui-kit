@@ -4,7 +4,6 @@ import GridItem from '../../components/GridItem/GridItem';
 import getGridItem from './../../util/get/getGridItem';
 import capToCamelCase from './../../util/transform/capToCamelCase';
 import MobileMenu from './../../components/MobileMenu';
-import MenuBar from './../../components/MenuBar/MenuBar';
 import FooterBar from './../../components/FooterBar';
 
 import MenuBarNew from './../../components/MenuBarNew';
@@ -101,7 +100,6 @@ export default class PageShell extends Component {
   }
 
   render() {
-    require('./PageShell.scss');
 
     let {
       style,
