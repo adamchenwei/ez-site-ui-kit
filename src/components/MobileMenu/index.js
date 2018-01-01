@@ -18,7 +18,6 @@ import {
   EmptyStateHelperText,
 } from './../Common';
 
-
 import DropDownMenu from './../DropDownMenu';
 import MenuFilterItems from './../MenuFilterItems';
 import MenuItems from './../MenuItems';
@@ -31,7 +30,7 @@ export default class MobileMenu extends Component {
   constructor(props) {
     super(props);
     this.state = { isOpen: false };
-    this.toggleAnimation.bind(this);
+    this.toggleAnimation = this.toggleAnimation.bind(this);
   }
 
   toggleAnimation () {
