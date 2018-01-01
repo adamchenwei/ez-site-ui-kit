@@ -1,5 +1,5 @@
 import React from 'react';
-import NotificationBar from '../../components/NotificationBar/NotificationBar';
+import NotificationBar from '../../components/NotificationBar';
 import ProductDisplay from '../../components/ProductDisplay/ProductDisplay';
 // import HeaderBar from '../../components/HeaderBar/HeaderBar';
 import Listing from '../../components/Listing/Listing';

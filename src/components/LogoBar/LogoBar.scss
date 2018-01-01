@@ -1,0 +1,29 @@
+@import "../../theme/bem.scss";
+@import "../../theme/responsiveQuery.scss";
+
+.logoBar {
+  @include element('container') {
+    @include mobile-s {
+      margin-bottom: 24px;
+      margin-top: 24px;
+    }
+    @include tablet {
+      margin-bottom: initial;
+      margin-top: initial;
+    }
+  }
+
+  @include element('logoBox') {
+    @include mobile-s {
+      width: 100%;
+    }
+    @include mobile-l {
+      width: 400px;
+    }
+    margin: 0 auto;
+  }
+
+  @include element('logo') {
+    width: 100%;
+  }
+}

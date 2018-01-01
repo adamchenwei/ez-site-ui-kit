@@ -77707,7 +77707,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _NotificationBar = __webpack_require__(645);
+var _NotificationBar = __webpack_require__(837);
 
 var _NotificationBar2 = _interopRequireDefault(_NotificationBar);
 
@@ -77793,153 +77793,7 @@ function getGridComponent(componentName, gridContent, gridType) {
 // import LogoBar from '../../components/LogoBar/LogoBar';
 
 /***/ }),
-/* 645 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () {
-  function defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
-    }
-  }return function (Constructor, protoProps, staticProps) {
-    if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
-  };
-}();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _propTypes = __webpack_require__(1);
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
-var _ContentSynchronizer = __webpack_require__(41);
-
-var _ContentSynchronizer2 = _interopRequireDefault(_ContentSynchronizer);
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj };
-}
-
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-}
-
-function _possibleConstructorReturn(self, call) {
-  if (!self) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }return call && ((typeof call === "undefined" ? "undefined" : _typeof(call)) === "object" || typeof call === "function") ? call : self;
-}
-
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === "undefined" ? "undefined" : _typeof(superClass)));
-  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-}
-
-var NotificationBar = function (_Component) {
-  _inherits(NotificationBar, _Component);
-
-  function NotificationBar(props) {
-    _classCallCheck(this, NotificationBar);
-
-    var _this = _possibleConstructorReturn(this, (NotificationBar.__proto__ || Object.getPrototypeOf(NotificationBar)).call(this, props));
-
-    var isClosed = _ContentSynchronizer2.default.getProperty(_this.content, 'site.flag.notificationBar.closed.manually', false);;
-
-    _this.state = {
-      show: !isClosed
-    };
-    _this.getContentComponent.bind(_this);
-    _this.getStyle.bind(_this);
-    _this.close.bind(_this);
-    return _this;
-  }
-
-  _createClass(NotificationBar, [{
-    key: 'componentWillMount',
-    value: function componentWillMount() {}
-  }, {
-    key: 'getStyle',
-    value: function getStyle(name) {
-      //TODO: may need to expand to allow multiple styles!
-      var styleName = name[0];
-      switch (styleName) {
-        case 'center-text':
-          return 'notificationBar__text--center';
-        default:
-          return 'style-name-not-found';
-      }
-    }
-  }, {
-    key: 'getContentComponent',
-    value: function getContentComponent(type, data) {
-      /*this.setState({
-        show: data.showAsDefault,
-      });*/
-      switch (type) {
-        case 'textOnly':
-          return _react2.default.createElement('span', { className: 'notificationBar__textBody' }, data.text);
-        case 'textWithBarLink':
-          return _react2.default.createElement('a', { className: 'notificationBar__textBody notificationBar__type--textWithBarLink', href: data.link }, data.text);
-        default:
-          return 'Woops! No Notification Type Found!';
-      }
-    }
-  }, {
-    key: 'close',
-    value: function close() {
-      this.setState({
-        show: !this.state.show
-      });
-      _ContentSynchronizer2.default.updateNotificationBarStatus({
-        contentUpdated: {
-          date: Date.now()
-        },
-        closed: {
-          date: Date.now(),
-          manually: this.state.show
-        }
-      });
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      //require('./NotificationBar.scss');
-      var type = this.props.contentType;
-      var data = this.props.contentData;
-      var contentComponent = this.getContentComponent(type, data);
-      var contentStyle = this.getStyle(this.props.contentStyle);
-      var containerLevelStyle = this.state.show ? 'notificationBar__container ' + contentStyle : 'notificationBar__container ' + contentStyle + '\n        notificationBar__container--hide';
-
-      return _react2.default.createElement('section', { className: containerLevelStyle }, contentComponent, _react2.default.createElement('div', { className: 'notificationBar__closeButton', onClick: this.close.bind(this) }, 'x'));
-    }
-  }]);
-
-  return NotificationBar;
-}(_react.Component);
-
-exports.default = NotificationBar;
-
-NotificationBar.propTypes = {
-  contentData: _propTypes2.default.object.isRequired,
-  contentStyle: _propTypes2.default.array.isRequired,
-  contentType: _propTypes2.default.string.isRequired
-};
-
-/***/ }),
+/* 645 */,
 /* 646 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -91885,7 +91739,7 @@ var MobileMenu = function (_Component) {
     var _this = _possibleConstructorReturn(this, (MobileMenu.__proto__ || Object.getPrototypeOf(MobileMenu)).call(this, props));
 
     _this.state = { isOpen: false };
-    _this.toggleAnimation.bind(_this);
+    _this.toggleAnimation = _this.toggleAnimation.bind(_this);
     return _this;
   }
 
@@ -96527,6 +96381,269 @@ function _taggedTemplateLiteral(strings, raw) {
 }
 
 module.exports = _styledComponents2.default.p(_templateObject);
+
+/***/ }),
+/* 833 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _templateObject = _taggedTemplateLiteral(['\n  width: 100%;\n  height: 100%;\n  display: ', ';\n  align-items: center;\n  text-align: ', ';\n  background-color: #222;\n  color: #cf0;\n  text-transform: uppercase;\n'], ['\n  width: 100%;\n  height: 100%;\n  display: ', ';\n  align-items: center;\n  text-align: ', ';\n  background-color: #222;\n  color: #cf0;\n  text-transform: uppercase;\n']);
+
+var _styledComponents = __webpack_require__(14);
+
+var _styledComponents2 = _interopRequireDefault(_styledComponents);
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
+
+function _taggedTemplateLiteral(strings, raw) {
+  return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
+}
+
+exports.default = _styledComponents2.default.section(_templateObject, function (props) {
+  return props.hide ? 'none' : 'flex';
+}, function (props) {
+  return props.centerText ? 'center' : 'unset';
+});
+
+/***/ }),
+/* 834 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _templateObject = _taggedTemplateLiteral(['\n  width: 100%;\n  align-self: center;\n  padding-top: 14px;\n  padding-bottom: 14px;\n  color: inherit;\n  font-size: 20px;\n  font-weight: 400;\n\n  &:hover {\n    color: inherit;\n  }\n'], ['\n  width: 100%;\n  align-self: center;\n  padding-top: 14px;\n  padding-bottom: 14px;\n  color: inherit;\n  font-size: 20px;\n  font-weight: 400;\n\n  &:hover {\n    color: inherit;\n  }\n']);
+
+var _styledComponents = __webpack_require__(14);
+
+var _styledComponents2 = _interopRequireDefault(_styledComponents);
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
+
+function _taggedTemplateLiteral(strings, raw) {
+  return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
+}
+
+exports.default = _styledComponents2.default.span(_templateObject);
+
+/***/ }),
+/* 835 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _templateObject = _taggedTemplateLiteral(['\n  width: 100%;\n  align-self: center;\n  padding-top: 14px;\n  padding-bottom: 14px;\n  color: inherit;\n  font-size: 20px;\n  font-weight: 400;\n\n  &:hover {\n    color: inherit;\n  }\n'], ['\n  width: 100%;\n  align-self: center;\n  padding-top: 14px;\n  padding-bottom: 14px;\n  color: inherit;\n  font-size: 20px;\n  font-weight: 400;\n\n  &:hover {\n    color: inherit;\n  }\n']);
+
+var _styledComponents = __webpack_require__(14);
+
+var _styledComponents2 = _interopRequireDefault(_styledComponents);
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
+
+function _taggedTemplateLiteral(strings, raw) {
+  return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
+}
+
+exports.default = _styledComponents2.default.a(_templateObject);
+
+/***/ }),
+/* 836 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _templateObject = _taggedTemplateLiteral(['\n  padding: 14px;\n  cursor: pointer;\n  position: absolute;\n  right: 0;\n'], ['\n  padding: 14px;\n  cursor: pointer;\n  position: absolute;\n  right: 0;\n']);
+
+var _styledComponents = __webpack_require__(14);
+
+var _styledComponents2 = _interopRequireDefault(_styledComponents);
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
+
+function _taggedTemplateLiteral(strings, raw) {
+  return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
+}
+
+exports.default = _styledComponents2.default.div(_templateObject);
+
+/***/ }),
+/* 837 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () {
+  function defineProperties(target, props) {
+    for (var i = 0; i < props.length; i++) {
+      var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
+    }
+  }return function (Constructor, protoProps, staticProps) {
+    if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
+  };
+}();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(1);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _ContentSynchronizer = __webpack_require__(41);
+
+var _ContentSynchronizer2 = _interopRequireDefault(_ContentSynchronizer);
+
+var _Container = __webpack_require__(833);
+
+var _Container2 = _interopRequireDefault(_Container);
+
+var _TextBody = __webpack_require__(834);
+
+var _TextBody2 = _interopRequireDefault(_TextBody);
+
+var _LinkBody = __webpack_require__(835);
+
+var _LinkBody2 = _interopRequireDefault(_LinkBody);
+
+var _CloseButton = __webpack_require__(836);
+
+var _CloseButton2 = _interopRequireDefault(_CloseButton);
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
+
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+}
+
+function _possibleConstructorReturn(self, call) {
+  if (!self) {
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  }return call && ((typeof call === "undefined" ? "undefined" : _typeof(call)) === "object" || typeof call === "function") ? call : self;
+}
+
+function _inherits(subClass, superClass) {
+  if (typeof superClass !== "function" && superClass !== null) {
+    throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === "undefined" ? "undefined" : _typeof(superClass)));
+  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+}
+
+var NotificationBar = function (_Component) {
+  _inherits(NotificationBar, _Component);
+
+  function NotificationBar(props) {
+    _classCallCheck(this, NotificationBar);
+
+    var _this = _possibleConstructorReturn(this, (NotificationBar.__proto__ || Object.getPrototypeOf(NotificationBar)).call(this, props));
+
+    var isClosed = false;
+    // TODO - this should NOT delete but move into a callback for fine tune functionalities
+    //const isClosed = ContentSynchronizer.getProperty(this.content, 'site.flag.notificationBar.closed.manually', false);;
+
+    _this.state = {
+      show: !isClosed
+    };
+    _this.getContentComponent.bind(_this);
+    _this.close = _this.close.bind(_this);
+    return _this;
+  }
+
+  _createClass(NotificationBar, [{
+    key: 'componentWillMount',
+    value: function componentWillMount() {}
+  }, {
+    key: 'getContentComponent',
+    value: function getContentComponent(type, data) {
+      /*this.setState({
+        show: data.showAsDefault,
+      });*/
+      switch (type) {
+        case 'textOnly':
+          return _react2.default.createElement(_TextBody2.default, null, data.text);
+        case 'textWithBarLink':
+          return _react2.default.createElement(_LinkBody2.default, { href: data.link }, data.text);
+        default:
+          return 'Woops! No Notification Type Found!';
+      }
+    }
+  }, {
+    key: 'close',
+    value: function close() {
+      this.setState({
+        show: !this.state.show
+      });
+      // TODO - this should NOT delete but move into a callback for fine tune functionalities
+      // ContentSynchronizer.updateNotificationBarStatus({
+      //   contentUpdated: {
+      //     date: Date.now(),
+      //   },
+      //   closed: {
+      //     date: Date.now(),
+      //     manually: this.state.show,
+      //   }
+      // });
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      //require('./NotificationBar.scss');
+      var type = this.props.contentType;
+      var data = this.props.contentData;
+      var contentComponent = this.getContentComponent(type, data);
+
+      return _react2.default.createElement(_Container2.default, { hide: !this.state.show, centerText: this.props.contentStyle && this.props.contentStyle[0] === 'center-text' }, contentComponent, _react2.default.createElement(_CloseButton2.default, { onClick: this.close }, 'x'));
+    }
+  }]);
+
+  return NotificationBar;
+}(_react.Component);
+
+exports.default = NotificationBar;
+
+NotificationBar.propTypes = {
+  contentData: _propTypes2.default.object.isRequired,
+  contentStyle: _propTypes2.default.array.isRequired,
+  contentType: _propTypes2.default.string.isRequired
+};
 
 /***/ })
 /******/ ])));
