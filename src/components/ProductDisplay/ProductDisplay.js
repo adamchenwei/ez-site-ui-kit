@@ -1,6 +1,6 @@
  import React, { Component } from 'react'; import PropTypes from 'prop-types';
 import ContentSynchronizer from '../ContentSynchronizer/ContentSynchronizer';
-import BreadCrumb from '../BreadCrumb/BreadCrumb';
+import BreadCrumb from '../BreadCrumb';
 import getGridItem from './../../util/get/getGridItem';
 import ShareButtonsBar from '../ShareButtonsBar';
 import ProductGallery from '../ProductGallery';
@@ -66,7 +66,7 @@ export default class ProductDisplay extends Component {
     }
 
   render() {
-    require('./ProductDisplay.scss');
+    //require('./ProductDisplay.scss');
     const contentStyle = this.getStyle(this.props.contentStyle);
     //WARNNING: NEVER ADD  row WITHOUT no-gutters !!! CAUSE GHOST MARGIN ON THE RIGHT OF THE PAGE!!!!!
     const containerLevelStyle = `productDisplay__container ${contentStyle} row no-gutters`;

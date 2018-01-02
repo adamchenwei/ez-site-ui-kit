@@ -8,10 +8,6 @@ import PageShell from '../PageShell/PageShell';
 import { withRouter } from 'react-router';
 
 const ProductListing = class ProductListing extends Component {
-  static propTypes = {
-    location: PropTypes.any,
-    params: PropTypes.object,
-  }
 
   showNotificationBar() {
     const NOTIFICATION_BAR_GRID_ITEM_ID = 1;
@@ -108,5 +104,8 @@ const ProductListing = class ProductListing extends Component {
     );
   }
 };
-
+ProductListing.propTypes = {
+  location: PropTypes.any,
+  params: PropTypes.object,
+}
 export default withRouter(ProductListing);

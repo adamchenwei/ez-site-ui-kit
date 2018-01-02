@@ -25,5 +25,6 @@ module.exports = {
     aggregateTimeout: 300,
     poll: 1000
   },
+  watch: true,
   //plugins: [HtmlWebpackPluginConfig]
 }

@@ -1,0 +1,16 @@
+$black-1: #333;
+$black-2: #212121;
+
+@import './theme';
+
+h1 {
+  color: $black-1;
+}
+
+body {
+  color: $black-1;
+}
+
+a {
+  //color: $black-2;
+}

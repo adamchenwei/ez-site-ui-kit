@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -s ./public -p 9001",
     "build-storybook": "build-storybook"
   },
   "author": "Ezeewei",
@@ -28,8 +28,11 @@
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-html-parser": "^2.0.2",
     "react-images": "^0.5.14",
+    "react-router": "^4.2.0",
     "react-share": "^1.18.1",
+    "react-svg": "^2.2.6",
     "styled-components": "^2.4.0"
   }
 }

@@ -3,9 +3,6 @@ import ContentGrid from '../../components/ContentGrid/ContentGrid';
 import ContentSynchronizer from '../../components/ContentSynchronizer/ContentSynchronizer';
 
 export default class Page extends Component {
-  static propTypes = {
-    params: PropTypes.object,
-  }
 
   render() {
     require('./Page.scss');
@@ -23,4 +20,5 @@ export default class Page extends Component {
 }
 
 Page.propTypes = {
-};
+  params: PropTypes.object,
+}

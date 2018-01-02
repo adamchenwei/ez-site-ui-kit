@@ -4,7 +4,6 @@ import GridItem from '../../components/GridItem/GridItem';
 import getGridItem from './../../util/get/getGridItem';
 import capToCamelCase from './../../util/transform/capToCamelCase';
 import MobileMenu from './../../components/MobileMenu';
-import MenuBar from './../../components/MenuBar/MenuBar';
 import FooterBar from './../../components/FooterBar';
 
 import MenuBarNew from './../../components/MenuBarNew';
@@ -16,12 +15,6 @@ import {
 import SlideShow from './../../components/SlideShow';
 
 export default class PageShell extends Component {
-  static propTypes = {
-    style: PropTypes.object,
-    containerLevelClass: PropTypes.string,
-    hasSlides: PropTypes.bool,
-    anchorToBelow: PropTypes.string,
-  }
 
   constructor(props) {
     super(props);
@@ -107,7 +100,6 @@ export default class PageShell extends Component {
   }
 
   render() {
-    require('./PageShell.scss');
 
     let {
       style,
@@ -140,4 +132,10 @@ export default class PageShell extends Component {
       </section>
     );
   }
+}
+PageShell.propTypes = {
+  style: PropTypes.object,
+  containerLevelClass: PropTypes.string,
+  hasSlides: PropTypes.bool,
+  anchorToBelow: PropTypes.string,
 }

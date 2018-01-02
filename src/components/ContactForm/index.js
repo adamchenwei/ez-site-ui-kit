@@ -51,7 +51,7 @@ export default class ContactForm extends Component {
   }
 }
 
-ContactForm.PropTypes = {
+ContactForm.propTypes = {
   content: PropTypes.object,
   style: PropTypes.object,
   type: PropTypes.string,

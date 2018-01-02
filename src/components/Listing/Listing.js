@@ -13,7 +13,6 @@ export default class Listing extends Component {
   }
 
   render() {
-    require('./Listing.scss');
     const contentStyle = concatCssClasses(this.props.contentStyle);
     //const noGutter = 'no-gutters';
 

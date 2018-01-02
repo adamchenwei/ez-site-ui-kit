@@ -31,7 +31,7 @@ export default class ListingItem extends Component {
   }
 
   render() {
-    require('./ListingItem.scss');
+    //require('./ListingItem.scss');
     const style = concatCssClasses(this.props.style) || '';
     const containerLevelStyle = `listingItem__container ${style}`;
     const {
