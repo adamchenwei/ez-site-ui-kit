@@ -2,7 +2,6 @@ import React, { Component } from 'react'; import PropTypes from 'prop-types';
 import GridItem from '../../components/GridItem/GridItem';
 import getGridItem from './../../util/get/getGridItem';
 import capToCamelCase from './../../util/transform/capToCamelCase';
-import { withRouter } from 'react-router';
 import PageShell from '../PageShell/PageShell';
 import GridItemShell from '../../components/GridItem/GridItemShell';
 import ContactForm from '../../components/ContactForm';
@@ -16,7 +15,6 @@ import {
 const Contact = class Contact extends Component {
 
   render() {
-    require('./Contact.scss');
 
     const component = capToCamelCase('SocialIcon');
     return (
@@ -38,4 +36,4 @@ Contact.propTypes = {
   location: PropTypes.any,
   params: PropTypes.object,
 }
-export default withRouter(Contact);
+export default Contact;

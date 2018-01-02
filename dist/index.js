@@ -26915,21 +26915,26 @@ function isValidTagOrAttributeName(tagName) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.LoginForm = exports.About = undefined;
+exports.LoginForm = exports.Contact = exports.About = undefined;
 
 var _LoginForm = __webpack_require__(287);
 
 var _LoginForm2 = _interopRequireDefault(_LoginForm);
 
-var _About = __webpack_require__(593);
+var _About = __webpack_require__(842);
 
 var _About2 = _interopRequireDefault(_About);
+
+var _Contact = __webpack_require__(843);
+
+var _Contact2 = _interopRequireDefault(_Contact);
 
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : { default: obj };
 }
 
 exports.About = _About2.default;
+exports.Contact = _Contact2.default;
 exports.LoginForm = _LoginForm2.default;
 
 /***/ }),
@@ -75096,99 +75101,7 @@ module.exports = function spread(callback) {
 
 
 /***/ }),
-/* 593 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () {
-  function defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
-    }
-  }return function (Constructor, protoProps, staticProps) {
-    if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
-  };
-}();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _propTypes = __webpack_require__(1);
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
-var _PageShell = __webpack_require__(594);
-
-var _PageShell2 = _interopRequireDefault(_PageShell);
-
-var _Common = __webpack_require__(81);
-
-var _reactHtmlParser = __webpack_require__(786);
-
-var _reactHtmlParser2 = _interopRequireDefault(_reactHtmlParser);
-
-var _Description = __webpack_require__(832);
-
-var _Description2 = _interopRequireDefault(_Description);
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj };
-}
-
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-}
-
-function _possibleConstructorReturn(self, call) {
-  if (!self) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }return call && ((typeof call === "undefined" ? "undefined" : _typeof(call)) === "object" || typeof call === "function") ? call : self;
-}
-
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === "undefined" ? "undefined" : _typeof(superClass)));
-  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-}
-
-var About = function (_Component) {
-  _inherits(About, _Component);
-
-  function About() {
-    _classCallCheck(this, About);
-
-    return _possibleConstructorReturn(this, (About.__proto__ || Object.getPrototypeOf(About)).apply(this, arguments));
-  }
-
-  _createClass(About, [{
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(_PageShell2.default, {
-        containerLevelClass: '',
-        style: {} }, _react2.default.createElement(_Common.PageContentContainer, null, (0, _reactHtmlParser2.default)("\n          <section style=\"max-width: 60%\">\n          <h1 style=\"font-size: 24px;\n            text-transform: uppercase;\n            text-decoration: underline;\">Our Goal</h1>\n          <p style=\"font-size: 16px;\">We believe that health is the best investment. Our goal is to offer a healthy variety of nutritious snacks.</p>\n          <p style=\"font-size: 16px;\">Our portfolio of natural sun-dried fruits and raw nuts are exceptional in flavor, quality and taste.</p>\n          <p style=\"font-size: 16px;\">Our dried fruits and nuts are full of heart healthy antioxidants, essential trace elements and omega 3\u2019s fatty acids.</p>\n\n          <h1 style=\"font-size: 24px;\n            text-transform: uppercase;\n            text-decoration: underline;\">Our difference</h1>\n          <p style=\"font-size: 16px;\">Our products are exceptional in flavor, quality and taste.</p>\n          <p style=\"font-size: 16px;\">This can be attributed to the unique eco system of the orchards, from which we source our produce.</p>\n          <p style=\"font-size: 16px;\">These orchards are largely untouched by man, protected by Mother Nature and naturally irrigated by the water run-off from the surrounding mountain ranges. </p>\n          <p style=\"font-size: 16px;\">Our products are harvested with care, naturally sun-dried and meticulously hand-packed.</p>\n\n          <h1 style=\"font-size: 24px;\n            text-transform: uppercase;\n            text-decoration: underline;\">About Us</h1>\n          <p style=\"font-size: 16px;\">We are a small organic food startup with offices in New York and a warehouse in the New Jersey Area.</p>\n          <p style=\"font-size: 16px;\">Our initiatives are directed for the benefit of our suppliers and their communities most of whom are landlocked and have never before exported their produce beyond Central and South Asia.</p>\n          <p style=\"font-size: 16px;\">We have built a value-added supply chain based on the principle of mutual trust and fair compensation practices. </p>\n\n          <h1 style=\"font-size: 24px;\n            text-transform: uppercase;\n            text-decoration: underline;\">Organic Certification</h1>\n          <p style=\"font-size: 16px;\">All our products are organic in nature, free of pesticides insecticides and any additives or preservatives. We are in the process of actively pursuing USDA organic certification for our full line of dried fruits and nuts. </p>\n          </section>\n          ")));
-    }
-  }]);
-
-  return About;
-}(_react.Component);
-About.propTypes = {
-  location: _propTypes2.default.any,
-  params: _propTypes2.default.object
-};
-exports.default = About;
-
-/***/ }),
+/* 593 */,
 /* 594 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -77727,6 +77640,10 @@ var _FooterBar = __webpack_require__(267);
 
 var _FooterBar2 = _interopRequireDefault(_FooterBar);
 
+var _LogoBar = __webpack_require__(838);
+
+var _LogoBar2 = _interopRequireDefault(_LogoBar);
+
 var _BreadCrumb = __webpack_require__(248);
 
 var _BreadCrumb2 = _interopRequireDefault(_BreadCrumb);
@@ -77735,7 +77652,6 @@ function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : { default: obj };
 }
 
-// import HeaderBar from '../../components/HeaderBar/HeaderBar';
 function getGridComponent(componentName, gridContent, gridType) {
   //console.log(gridContent);
   var style = gridContent.style,
@@ -77776,11 +77692,11 @@ function getGridComponent(componentName, gridContent, gridType) {
         content: data,
         type: type,
         style: style });
-    // case 'LogoBar':
-    //   return <LogoBar
-    //     content={gridContent}
-    //     type={type}
-    //     style={style} />;
+    case 'LogoBar':
+      return _react2.default.createElement(_LogoBar2.default, {
+        content: gridContent,
+        type: type,
+        style: style });
     /*case 'TemplateComponent':
       return <TemplateComponent
         contentData={data}
@@ -77790,7 +77706,7 @@ function getGridComponent(componentName, gridContent, gridType) {
       return _react2.default.createElement('div', null, ' Woops! ');
   }
 }
-// import LogoBar from '../../components/LogoBar/LogoBar';
+// import HeaderBar from '../../components/HeaderBar/HeaderBar';
 
 /***/ }),
 /* 645 */,
@@ -96644,6 +96560,940 @@ NotificationBar.propTypes = {
   contentStyle: _propTypes2.default.array.isRequired,
   contentType: _propTypes2.default.string.isRequired
 };
+
+/***/ }),
+/* 838 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () {
+  function defineProperties(target, props) {
+    for (var i = 0; i < props.length; i++) {
+      var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
+    }
+  }return function (Constructor, protoProps, staticProps) {
+    if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
+  };
+}();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(1);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _Container = __webpack_require__(839);
+
+var _Container2 = _interopRequireDefault(_Container);
+
+var _LogoBox = __webpack_require__(840);
+
+var _LogoBox2 = _interopRequireDefault(_LogoBox);
+
+var _Logo = __webpack_require__(841);
+
+var _Logo2 = _interopRequireDefault(_Logo);
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
+
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+}
+
+function _possibleConstructorReturn(self, call) {
+  if (!self) {
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  }return call && ((typeof call === "undefined" ? "undefined" : _typeof(call)) === "object" || typeof call === "function") ? call : self;
+}
+
+function _inherits(subClass, superClass) {
+  if (typeof superClass !== "function" && superClass !== null) {
+    throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === "undefined" ? "undefined" : _typeof(superClass)));
+  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+}
+
+var LogoBar = function (_Component) {
+  _inherits(LogoBar, _Component);
+
+  function LogoBar(props) {
+    _classCallCheck(this, LogoBar);
+
+    return _possibleConstructorReturn(this, (LogoBar.__proto__ || Object.getPrototypeOf(LogoBar)).call(this, props));
+  }
+
+  _createClass(LogoBar, [{
+    key: 'render',
+    value: function render() {
+      var content = this.props.content.data;
+
+      return _react2.default.createElement(_Container2.default, null, _react2.default.createElement(_LogoBox2.default, null, _react2.default.createElement(_Logo2.default, { src: content.logo.image.url })));
+    }
+  }]);
+
+  return LogoBar;
+}(_react.Component);
+
+exports.default = LogoBar;
+
+LogoBar.propTypes = {
+  content: _propTypes2.default.object.isRequired,
+  style: _propTypes2.default.array,
+  type: _propTypes2.default.string
+};
+
+/***/ }),
+/* 839 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _templateObject = _taggedTemplateLiteral(["\n  ", "\n\n  ", "\n"], ["\n  ", "\n\n  ", "\n"]),
+    _templateObject2 = _taggedTemplateLiteral(["\n    margin-bottom: 24px;\n    margin-top: 24px;\n  "], ["\n    margin-bottom: 24px;\n    margin-top: 24px;\n  "]),
+    _templateObject3 = _taggedTemplateLiteral(["\n    margin-bottom: initial;\n    margin-top: initial;\n  "], ["\n    margin-bottom: initial;\n    margin-top: initial;\n  "]);
+
+var _styledComponents = __webpack_require__(14);
+
+var _styledComponents2 = _interopRequireDefault(_styledComponents);
+
+var _mediaQuery = __webpack_require__(39);
+
+var _mediaQuery2 = _interopRequireDefault(_mediaQuery);
+
+function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : { default: obj };
+}
+
+function _taggedTemplateLiteral(strings, raw) {
+    return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
+}
+
+module.exports = _styledComponents2.default.section(_templateObject, _mediaQuery2.default.mobileS(_templateObject2), _mediaQuery2.default.tablet(_templateObject3));
+
+/***/ }),
+/* 840 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _templateObject = _taggedTemplateLiteral(["\n  margin: 0 auto;\n  ", "\n\n  ", "\n"], ["\n  margin: 0 auto;\n  ", "\n\n  ", "\n"]),
+    _templateObject2 = _taggedTemplateLiteral(["\n    width: 100%;\n  "], ["\n    width: 100%;\n  "]),
+    _templateObject3 = _taggedTemplateLiteral(["\n    width: 400px;\n  "], ["\n    width: 400px;\n  "]);
+
+var _styledComponents = __webpack_require__(14);
+
+var _styledComponents2 = _interopRequireDefault(_styledComponents);
+
+var _mediaQuery = __webpack_require__(39);
+
+var _mediaQuery2 = _interopRequireDefault(_mediaQuery);
+
+function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : { default: obj };
+}
+
+function _taggedTemplateLiteral(strings, raw) {
+    return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
+}
+
+module.exports = _styledComponents2.default.section(_templateObject, _mediaQuery2.default.mobileS(_templateObject2), _mediaQuery2.default.mobileL(_templateObject3));
+
+/***/ }),
+/* 841 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _templateObject = _taggedTemplateLiteral(['\n  width: 100%;\n'], ['\n  width: 100%;\n']);
+
+var _styledComponents = __webpack_require__(14);
+
+var _styledComponents2 = _interopRequireDefault(_styledComponents);
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
+
+function _taggedTemplateLiteral(strings, raw) {
+  return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
+}
+
+module.exports = _styledComponents2.default.img(_templateObject);
+
+/***/ }),
+/* 842 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () {
+  function defineProperties(target, props) {
+    for (var i = 0; i < props.length; i++) {
+      var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
+    }
+  }return function (Constructor, protoProps, staticProps) {
+    if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
+  };
+}();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(1);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _PageShell = __webpack_require__(594);
+
+var _PageShell2 = _interopRequireDefault(_PageShell);
+
+var _Common = __webpack_require__(81);
+
+var _reactHtmlParser = __webpack_require__(786);
+
+var _reactHtmlParser2 = _interopRequireDefault(_reactHtmlParser);
+
+var _Description = __webpack_require__(832);
+
+var _Description2 = _interopRequireDefault(_Description);
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
+
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+}
+
+function _possibleConstructorReturn(self, call) {
+  if (!self) {
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  }return call && ((typeof call === "undefined" ? "undefined" : _typeof(call)) === "object" || typeof call === "function") ? call : self;
+}
+
+function _inherits(subClass, superClass) {
+  if (typeof superClass !== "function" && superClass !== null) {
+    throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === "undefined" ? "undefined" : _typeof(superClass)));
+  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+}
+
+var About = function (_Component) {
+  _inherits(About, _Component);
+
+  function About() {
+    _classCallCheck(this, About);
+
+    return _possibleConstructorReturn(this, (About.__proto__ || Object.getPrototypeOf(About)).apply(this, arguments));
+  }
+
+  _createClass(About, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(_PageShell2.default, {
+        containerLevelClass: '',
+        style: {} }, _react2.default.createElement(_Common.PageContentContainer, null, (0, _reactHtmlParser2.default)("\n          <section style=\"max-width: 60%\">\n          <h1 style=\"font-size: 24px;\n            text-transform: uppercase;\n            text-decoration: underline;\">Our Goal</h1>\n          <p style=\"font-size: 16px;\">We believe that health is the best investment. Our goal is to offer a healthy variety of nutritious snacks.</p>\n          <p style=\"font-size: 16px;\">Our portfolio of natural sun-dried fruits and raw nuts are exceptional in flavor, quality and taste.</p>\n          <p style=\"font-size: 16px;\">Our dried fruits and nuts are full of heart healthy antioxidants, essential trace elements and omega 3\u2019s fatty acids.</p>\n\n          <h1 style=\"font-size: 24px;\n            text-transform: uppercase;\n            text-decoration: underline;\">Our difference</h1>\n          <p style=\"font-size: 16px;\">Our products are exceptional in flavor, quality and taste.</p>\n          <p style=\"font-size: 16px;\">This can be attributed to the unique eco system of the orchards, from which we source our produce.</p>\n          <p style=\"font-size: 16px;\">These orchards are largely untouched by man, protected by Mother Nature and naturally irrigated by the water run-off from the surrounding mountain ranges. </p>\n          <p style=\"font-size: 16px;\">Our products are harvested with care, naturally sun-dried and meticulously hand-packed.</p>\n\n          <h1 style=\"font-size: 24px;\n            text-transform: uppercase;\n            text-decoration: underline;\">About Us</h1>\n          <p style=\"font-size: 16px;\">We are a small organic food startup with offices in New York and a warehouse in the New Jersey Area.</p>\n          <p style=\"font-size: 16px;\">Our initiatives are directed for the benefit of our suppliers and their communities most of whom are landlocked and have never before exported their produce beyond Central and South Asia.</p>\n          <p style=\"font-size: 16px;\">We have built a value-added supply chain based on the principle of mutual trust and fair compensation practices. </p>\n\n          <h1 style=\"font-size: 24px;\n            text-transform: uppercase;\n            text-decoration: underline;\">Organic Certification</h1>\n          <p style=\"font-size: 16px;\">All our products are organic in nature, free of pesticides insecticides and any additives or preservatives. We are in the process of actively pursuing USDA organic certification for our full line of dried fruits and nuts. </p>\n          </section>\n          ")));
+    }
+  }]);
+
+  return About;
+}(_react.Component);
+About.propTypes = {
+  location: _propTypes2.default.any,
+  params: _propTypes2.default.object
+};
+exports.default = About;
+
+/***/ }),
+/* 843 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () {
+  function defineProperties(target, props) {
+    for (var i = 0; i < props.length; i++) {
+      var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
+    }
+  }return function (Constructor, protoProps, staticProps) {
+    if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
+  };
+}();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(1);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _GridItem = __webpack_require__(148);
+
+var _GridItem2 = _interopRequireDefault(_GridItem);
+
+var _getGridItem = __webpack_require__(249);
+
+var _getGridItem2 = _interopRequireDefault(_getGridItem);
+
+var _capToCamelCase = __webpack_require__(65);
+
+var _capToCamelCase2 = _interopRequireDefault(_capToCamelCase);
+
+var _PageShell = __webpack_require__(594);
+
+var _PageShell2 = _interopRequireDefault(_PageShell);
+
+var _GridItemShell = __webpack_require__(844);
+
+var _GridItemShell2 = _interopRequireDefault(_GridItemShell);
+
+var _ContactForm = __webpack_require__(845);
+
+var _ContactForm2 = _interopRequireDefault(_ContactForm);
+
+var _style = __webpack_require__(853);
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
+
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+}
+
+function _possibleConstructorReturn(self, call) {
+  if (!self) {
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  }return call && ((typeof call === "undefined" ? "undefined" : _typeof(call)) === "object" || typeof call === "function") ? call : self;
+}
+
+function _inherits(subClass, superClass) {
+  if (typeof superClass !== "function" && superClass !== null) {
+    throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === "undefined" ? "undefined" : _typeof(superClass)));
+  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+}
+
+var Contact = function (_Component) {
+  _inherits(Contact, _Component);
+
+  function Contact() {
+    _classCallCheck(this, Contact);
+
+    return _possibleConstructorReturn(this, (Contact.__proto__ || Object.getPrototypeOf(Contact)).apply(this, arguments));
+  }
+
+  _createClass(Contact, [{
+    key: 'render',
+    value: function render() {
+
+      var component = (0, _capToCamelCase2.default)('SocialIcon');
+      return _react2.default.createElement(_PageShell2.default, {
+        containerLevelClass: '',
+        style: {} }, _react2.default.createElement(_GridItemShell2.default, null, _react2.default.createElement(_style.Container, null, _react2.default.createElement(_style.Headline, null, 'We\'d love to hear from you!'), _react2.default.createElement(_style.LeftColumn, null, _react2.default.createElement(_ContactForm2.default, null)))));
+    }
+  }]);
+
+  return Contact;
+}(_react.Component);
+Contact.propTypes = {
+  location: _propTypes2.default.any,
+  params: _propTypes2.default.object
+};
+exports.default = Contact;
+
+/***/ }),
+/* 844 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () {
+  function defineProperties(target, props) {
+    for (var i = 0; i < props.length; i++) {
+      var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
+    }
+  }return function (Constructor, protoProps, staticProps) {
+    if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
+  };
+}();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(1);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _concatCssClasses = __webpack_require__(51);
+
+var _concatCssClasses2 = _interopRequireDefault(_concatCssClasses);
+
+var _getGridComponent = __webpack_require__(644);
+
+var _getGridComponent2 = _interopRequireDefault(_getGridComponent);
+
+var _consoleShow = __webpack_require__(101);
+
+var _consoleShow2 = _interopRequireDefault(_consoleShow);
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
+
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+}
+
+function _possibleConstructorReturn(self, call) {
+  if (!self) {
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  }return call && ((typeof call === "undefined" ? "undefined" : _typeof(call)) === "object" || typeof call === "function") ? call : self;
+}
+
+function _inherits(subClass, superClass) {
+  if (typeof superClass !== "function" && superClass !== null) {
+    throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === "undefined" ? "undefined" : _typeof(superClass)));
+  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+}
+
+var GridItemShell = function (_Component) {
+  _inherits(GridItemShell, _Component);
+
+  function GridItemShell() {
+    _classCallCheck(this, GridItemShell);
+
+    return _possibleConstructorReturn(this, (GridItemShell.__proto__ || Object.getPrototypeOf(GridItemShell)).apply(this, arguments));
+  }
+
+  _createClass(GridItemShell, [{
+    key: 'render',
+    value: function render() {
+      var userCustomStyleClassNames = (0, _concatCssClasses2.default)(this.props.gridStyle) || '';
+      var containerLevelStyle = 'gridItemShell__container original ' + userCustomStyleClassNames;
+      var responsive = this.props.gridResponsiveProperties || {};
+      var standard = responsive.standard || 12;
+      var sm = responsive.sm || 12;
+      var md = responsive.md || 12;
+      var lg = responsive.lg || 12;
+      var xl = responsive.xl || 12;
+      var offset = responsive.offset || {
+        standard: '',
+        sm: '',
+        md: '',
+        lg: '',
+        xl: ''
+      };
+
+      var composedStyles = containerLevelStyle + '\n      col-' + standard + '\n      col-sm-' + sm + '\n      col-md-' + md + '\n      col-lg-' + lg + '\n      col-xl-' + xl + '\n      offset-' + offset.standard + '\n      offset-sm-' + offset.sm + '\n      offset-md-' + offset.md + '\n      offset-lg-' + offset.lg + '\n      offset-xl-' + offset.xl + '\n    ';
+
+      var customStyle = this.props.gridCustomStyle || {};
+      var noCustomStyleAvailable = !Object.keys(customStyle).length && customStyle.constructor === Object;
+      return _react2.default.createElement('section', { className: composedStyles, style: !noCustomStyleAvailable ? customStyle.container.inlineStyles : null }, this.props.children);
+    }
+  }]);
+
+  return GridItemShell;
+}(_react.Component);
+
+exports.default = GridItemShell;
+
+GridItemShell.propTypes = {
+  gridContent: _propTypes2.default.any,
+  gridResponsiveProperties: _propTypes2.default.object,
+  gridStyle: _propTypes2.default.any,
+  gridCustomStyle: _propTypes2.default.any,
+  gridType: _propTypes2.default.any
+};
+
+/***/ }),
+/* 845 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () {
+  function defineProperties(target, props) {
+    for (var i = 0; i < props.length; i++) {
+      var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
+    }
+  }return function (Constructor, protoProps, staticProps) {
+    if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
+  };
+}();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(1);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _StyledComponentWrapper = __webpack_require__(846);
+
+var _StyledComponentWrapper2 = _interopRequireDefault(_StyledComponentWrapper);
+
+var _style = __webpack_require__(847);
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
+
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+}
+
+function _possibleConstructorReturn(self, call) {
+  if (!self) {
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  }return call && ((typeof call === "undefined" ? "undefined" : _typeof(call)) === "object" || typeof call === "function") ? call : self;
+}
+
+function _inherits(subClass, superClass) {
+  if (typeof superClass !== "function" && superClass !== null) {
+    throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === "undefined" ? "undefined" : _typeof(superClass)));
+  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+}
+
+var ContactForm = function (_Component) {
+  _inherits(ContactForm, _Component);
+
+  function ContactForm(props) {
+    _classCallCheck(this, ContactForm);
+
+    return _possibleConstructorReturn(this, (ContactForm.__proto__ || Object.getPrototypeOf(ContactForm)).call(this, props));
+  }
+
+  _createClass(ContactForm, [{
+    key: 'render',
+    value: function render() {
+      var _props = this.props,
+          content = _props.content,
+          style = _props.style,
+          type = _props.type;
+
+      return _react2.default.createElement(_StyledComponentWrapper2.default, null, _react2.default.createElement(_style.ContactFormContainer, { action: 'https://formspree.io/support@naturalorchards.us',
+        method: 'POST' }, _react2.default.createElement(_style.ContactFormLegend, { gridAreaId: 'name' }, 'Name'), _react2.default.createElement(_style.ContactFormInput, { gridAreaId: 'first-name', name: 'customerFirstName',
+        placeholder: 'First Name' }), _react2.default.createElement(_style.ContactFormInput, {
+        responsive: true,
+        gridAreaId: 'last-name', name: 'customerLastName',
+        placeholder: 'Last Name' }), _react2.default.createElement(_style.ContactFormLegend, { gridAreaId: 'email' }, 'Email'), _react2.default.createElement(_style.ContactFormInput, { name: 'customerEmail',
+        gridAreaId: 'email',
+        type: 'email',
+        placeholder: 'i.e. youremail@gmail.com' }), _react2.default.createElement(_style.ContactFormLegend, { gridAreaId: 'phone' }, 'Phone'), _react2.default.createElement(_style.ContactFormInput, { name: 'customerPhone',
+        gridAreaId: 'phone',
+        type: 'tel',
+        placeholder: 'i.e. 3470000000' }), _react2.default.createElement(_style.ContactFormLegend, { gridAreaId: 'message' }, 'Message'), _react2.default.createElement(_style.ContactFormTextarea, {
+        gridAreaId: 'message',
+        name: 'message',
+        placeholder: 'please send us as much detail as possible. We appreciate your support' }), _react2.default.createElement(_style.ContactFormSubmitButton, { type: 'submit', value: 'Send' })));
+    }
+  }]);
+
+  return ContactForm;
+}(_react.Component);
+
+exports.default = ContactForm;
+
+ContactForm.PropTypes = {
+  content: _propTypes2.default.object,
+  style: _propTypes2.default.object,
+  type: _propTypes2.default.string
+};
+
+/***/ }),
+/* 846 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () {
+  function defineProperties(target, props) {
+    for (var i = 0; i < props.length; i++) {
+      var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
+    }
+  }return function (Constructor, protoProps, staticProps) {
+    if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
+  };
+}();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(1);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
+
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+}
+
+function _possibleConstructorReturn(self, call) {
+  if (!self) {
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  }return call && ((typeof call === "undefined" ? "undefined" : _typeof(call)) === "object" || typeof call === "function") ? call : self;
+}
+
+function _inherits(subClass, superClass) {
+  if (typeof superClass !== "function" && superClass !== null) {
+    throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === "undefined" ? "undefined" : _typeof(superClass)));
+  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+}
+
+var StyledComponentWrapper = function (_Component) {
+  _inherits(StyledComponentWrapper, _Component);
+
+  function StyledComponentWrapper(props) {
+    _classCallCheck(this, StyledComponentWrapper);
+
+    return _possibleConstructorReturn(this, (StyledComponentWrapper.__proto__ || Object.getPrototypeOf(StyledComponentWrapper)).call(this, props));
+  }
+
+  _createClass(StyledComponentWrapper, [{
+    key: 'render',
+    value: function render() {
+      var children = this.props.children;
+
+      return _react2.default.createElement('section', null, children);
+    }
+  }]);
+
+  return StyledComponentWrapper;
+}(_react.Component);
+
+exports.default = StyledComponentWrapper;
+
+/***/ }),
+/* 847 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = {
+  ContactFormContainer: __webpack_require__(848),
+  ContactFormInput: __webpack_require__(849),
+  ContactFormLegend: __webpack_require__(850),
+  ContactFormTextarea: __webpack_require__(851),
+  ContactFormSubmitButton: __webpack_require__(852)
+};
+
+/***/ }),
+/* 848 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _templateObject = _taggedTemplateLiteral(['\n  grid-area: form-contact-container', ';\n  display: grid;\n  grid-column-gap: 10px;\n  grid-row-gap: 14px;\n  grid-template-columns: 1fr 1fr;\n  grid-template-areas:\n    "form-legend-name form-legend-name"\n    "form-input-first-name form-input-last-name"\n    "form-legend-email form-legend-email"\n    "form-input-email form-input-email"\n    "form-legend-phone form-legend-phone"\n    "form-input-phone form-input-phone"\n    "form-legend-message form-legend-message"\n    "form-textarea-message form-textarea-message"\n     "form-submit-button .";\n'], ['\n  grid-area: form-contact-container', ';\n  display: grid;\n  grid-column-gap: 10px;\n  grid-row-gap: 14px;\n  grid-template-columns: 1fr 1fr;\n  grid-template-areas:\n    "form-legend-name form-legend-name"\n    "form-input-first-name form-input-last-name"\n    "form-legend-email form-legend-email"\n    "form-input-email form-input-email"\n    "form-legend-phone form-legend-phone"\n    "form-input-phone form-input-phone"\n    "form-legend-message form-legend-message"\n    "form-textarea-message form-textarea-message"\n     "form-submit-button .";\n']);
+
+var _styledComponents = __webpack_require__(14);
+
+var _styledComponents2 = _interopRequireDefault(_styledComponents);
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
+
+function _taggedTemplateLiteral(strings, raw) {
+  return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
+}
+
+module.exports = _styledComponents2.default.form(_templateObject, function (props) {
+  return props.gridAreaId ? '-' + props.gridAreaId : '';
+});
+
+/***/ }),
+/* 849 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _templateObject = _taggedTemplateLiteral(['\n  grid-area: form-input', ';\n  ', ';\n\n  width: 100%;\n  padding: 12px;\n  margin: 6px 0 4px;\n  border: 1px solid #ccc;\n  background: #fafafa;\n  color: #000;\n  font-family: sans-serif;\n  font-size: 12px;\n  line-height: normal;\n  box-sizing: border-box;\n  border-radius: 2px;\n  font-size: 14px;\n  background-color: white;\n  display: inline-block;\n  width: auto;\n  height: auto;\n  padding: 10px;\n'], ['\n  grid-area: form-input', ';\n  ', ';\n\n  width: 100%;\n  padding: 12px;\n  margin: 6px 0 4px;\n  border: 1px solid #ccc;\n  background: #fafafa;\n  color: #000;\n  font-family: sans-serif;\n  font-size: 12px;\n  line-height: normal;\n  box-sizing: border-box;\n  border-radius: 2px;\n  font-size: 14px;\n  background-color: white;\n  display: inline-block;\n  width: auto;\n  height: auto;\n  padding: 10px;\n']),
+    _templateObject2 = _taggedTemplateLiteral(['\n        display: block;\n        position: absolute;'], ['\n        display: block;\n        position: absolute;']),
+    _templateObject3 = _taggedTemplateLiteral(['\n        display: inline-block;\n        position: initial;'], ['\n        display: inline-block;\n        position: initial;']);
+
+var _styledComponents = __webpack_require__(14);
+
+var _styledComponents2 = _interopRequireDefault(_styledComponents);
+
+var _mediaQuery = __webpack_require__(39);
+
+var _mediaQuery2 = _interopRequireDefault(_mediaQuery);
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
+
+function _taggedTemplateLiteral(strings, raw) {
+  return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
+}
+
+module.exports = _styledComponents2.default.input(_templateObject, function (props) {
+  return props.gridAreaId ? '-' + props.gridAreaId : '';
+}, function (props) {
+  return props.responsive ? _mediaQuery2.default.mobileS(_templateObject2) + '\n      ' + _mediaQuery2.default.mobileL(_templateObject3) : '';
+});
+
+/***/ }),
+/* 850 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _templateObject = _taggedTemplateLiteral(['\n  grid-area: form-legend', ';\n'], ['\n  grid-area: form-legend', ';\n']);
+
+var _styledComponents = __webpack_require__(14);
+
+var _styledComponents2 = _interopRequireDefault(_styledComponents);
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
+
+function _taggedTemplateLiteral(strings, raw) {
+  return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
+}
+
+module.exports = _styledComponents2.default.legend(_templateObject, function (props) {
+  return props.gridAreaId ? '-' + props.gridAreaId : '';
+});
+
+/***/ }),
+/* 851 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _templateObject = _taggedTemplateLiteral(['\n  grid-area: form-textarea', ';\n  min-height: 100px;\n  resize: vertical;\n  padding: 12px;\n'], ['\n  grid-area: form-textarea', ';\n  min-height: 100px;\n  resize: vertical;\n  padding: 12px;\n']);
+
+var _styledComponents = __webpack_require__(14);
+
+var _styledComponents2 = _interopRequireDefault(_styledComponents);
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
+
+function _taggedTemplateLiteral(strings, raw) {
+  return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
+}
+
+module.exports = _styledComponents2.default.textarea(_templateObject, function (props) {
+  return props.gridAreaId ? '-' + props.gridAreaId : '';
+});
+
+/***/ }),
+/* 852 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _templateObject = _taggedTemplateLiteral(['\n  grid-area: form-submit-button;\n  text-transform: uppercase;\n  letter-spacing: 1px;\n  font-weight: bold;\n  font-style: normal;\n  background-color: transparent;\n  color: #222;\n  border-color: #333;\n  border-radius: 3px;\n  border-width: 2px;\n  border-style: solid;\n  transition: 0.1s background-color linear, 0.1s color linear;\n  text-align: center;\n  cursor: pointer;\n  height: 45px;\n'], ['\n  grid-area: form-submit-button;\n  text-transform: uppercase;\n  letter-spacing: 1px;\n  font-weight: bold;\n  font-style: normal;\n  background-color: transparent;\n  color: #222;\n  border-color: #333;\n  border-radius: 3px;\n  border-width: 2px;\n  border-style: solid;\n  transition: 0.1s background-color linear, 0.1s color linear;\n  text-align: center;\n  cursor: pointer;\n  height: 45px;\n']);
+
+var _styledComponents = __webpack_require__(14);
+
+var _styledComponents2 = _interopRequireDefault(_styledComponents);
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
+
+function _taggedTemplateLiteral(strings, raw) {
+  return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
+} //TODO - Its another kind of input only, but style change is too dramatic
+//merge into ContactFormInput once some sort of conditional becomes allowed in styled.components
+
+module.exports = _styledComponents2.default.input(_templateObject);
+
+/***/ }),
+/* 853 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = {
+  Container: __webpack_require__(854),
+  LeftColumn: __webpack_require__(855),
+  RightColumn: __webpack_require__(856),
+  Headline: __webpack_require__(857)
+};
+
+/***/ }),
+/* 854 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _templateObject = _taggedTemplateLiteral(['\n  grid-area: contact-page-container', ';\n  display: grid;\n  grid-column-gap: 10px;\n  grid-row-gap: 10px;\n  grid-template-columns: 1fr 1fr 1fr;\n  grid-template-areas:\n    ". contact-page-headline ."\n    ". contact-page-left-column .";\n  margin-left: 25px;\n  margin-right: 25px;\n'], ['\n  grid-area: contact-page-container', ';\n  display: grid;\n  grid-column-gap: 10px;\n  grid-row-gap: 10px;\n  grid-template-columns: 1fr 1fr 1fr;\n  grid-template-areas:\n    ". contact-page-headline ."\n    ". contact-page-left-column .";\n  margin-left: 25px;\n  margin-right: 25px;\n']);
+
+var _styledComponents = __webpack_require__(14);
+
+var _styledComponents2 = _interopRequireDefault(_styledComponents);
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
+
+function _taggedTemplateLiteral(strings, raw) {
+  return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
+}
+
+//two columns mode switch areas to:
+//"contact-page-left-column contact-page-right-column";
+
+module.exports = _styledComponents2.default.section(_templateObject, function (props) {
+  return props.gridAreaId ? '-' + props.gridAreaId : '';
+});
+
+/***/ }),
+/* 855 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _templateObject = _taggedTemplateLiteral(['\n  grid-area: contact-page-left-column', ';\n'], ['\n  grid-area: contact-page-left-column', ';\n']);
+
+var _styledComponents = __webpack_require__(14);
+
+var _styledComponents2 = _interopRequireDefault(_styledComponents);
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
+
+function _taggedTemplateLiteral(strings, raw) {
+  return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
+}
+
+module.exports = _styledComponents2.default.section(_templateObject, function (props) {
+  return props.gridAreaId ? '-' + props.gridAreaId : '';
+});
+
+/***/ }),
+/* 856 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _templateObject = _taggedTemplateLiteral(['\n  grid-area: contact-page-right-column', ';\n'], ['\n  grid-area: contact-page-right-column', ';\n']);
+
+var _styledComponents = __webpack_require__(14);
+
+var _styledComponents2 = _interopRequireDefault(_styledComponents);
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
+
+function _taggedTemplateLiteral(strings, raw) {
+  return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
+}
+
+module.exports = _styledComponents2.default.section(_templateObject, function (props) {
+  return props.gridAreaId ? '-' + props.gridAreaId : '';
+});
+
+/***/ }),
+/* 857 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _templateObject = _taggedTemplateLiteral(['\n  grid-area: contact-page-headline', ';\n  color: #333;\n  font-size: 24px;\n  text-align: center;\n  text-decoration: underline;\n  margin-top: 24px;\n'], ['\n  grid-area: contact-page-headline', ';\n  color: #333;\n  font-size: 24px;\n  text-align: center;\n  text-decoration: underline;\n  margin-top: 24px;\n']);
+
+var _styledComponents = __webpack_require__(14);
+
+var _styledComponents2 = _interopRequireDefault(_styledComponents);
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
+
+function _taggedTemplateLiteral(strings, raw) {
+  return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
+}
+
+module.exports = _styledComponents2.default.h1(_templateObject, function (props) {
+  return props.gridAreaId ? '-' + props.gridAreaId : '';
+});
 
 /***/ })
 /******/ ])));

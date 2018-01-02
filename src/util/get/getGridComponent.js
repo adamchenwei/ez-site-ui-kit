@@ -6,7 +6,7 @@ import Listing from '../../components/Listing/Listing';
 import ListingItem from '../../components/ListingItem/ListingItem';
 
 import FooterBar from '../../components/FooterBar';
-// import LogoBar from '../../components/LogoBar/LogoBar';
+import LogoBar from '../../components/LogoBar';
 import BreadCrumb from '../../components/BreadCrumb';
 
 export default function getGridComponent(componentName, gridContent, gridType) {
@@ -51,11 +51,11 @@ export default function getGridComponent(componentName, gridContent, gridType) {
         content={data}
         type={type}
         style={style} />;
-    // case 'LogoBar':
-    //   return <LogoBar
-    //     content={gridContent}
-    //     type={type}
-    //     style={style} />;
+    case 'LogoBar':
+      return <LogoBar
+        content={gridContent}
+        type={type}
+        style={style} />;
     /*case 'TemplateComponent':
       return <TemplateComponent
         contentData={data}
