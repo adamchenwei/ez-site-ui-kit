@@ -97149,7 +97149,7 @@ var ContactForm = function (_Component) {
 
 exports.default = ContactForm;
 
-ContactForm.PropTypes = {
+ContactForm.propTypes = {
   content: _propTypes2.default.object,
   style: _propTypes2.default.object,
   type: _propTypes2.default.string
