@@ -3,6 +3,11 @@ import consoleShow from './../../util/debug/consoleShow';
 import concatCssClasses from './../../util/concat/concatCssClasses';
 //import { Link } from 'react-router';
 import ListingItemMask from './ListingItemMask';
+import Container from './style/ListingItem/Container';
+import Display from './style/ListingItem/Display';
+import ImageAdjuster from './style/ListingItem/ImageAdjuster';
+import Image from './style/ListingItem/Image';
+
 
 export default class ListingItem extends Component {
   constructor(props) {
@@ -13,7 +18,8 @@ export default class ListingItem extends Component {
     consoleShow('props', {
       componentName: 'ListingItem',
       props: this.props});
-    this.childComponent.bind(this);
+      this.childComponent = this.childComponent.bind(this);
+      this.toggleThing = this.toggleThing.bind(this);
   }
 
   childComponent(type, data) {
@@ -31,33 +37,28 @@ export default class ListingItem extends Component {
   }
 
   render() {
-    //require('./ListingItem.scss');
-    const style = concatCssClasses(this.props.style) || '';
-    const containerLevelStyle = `listingItem__container ${style}`;
     const {
       collectionName,
       type,
       data,
       content,
     } = this.props;
-
-    //const contentComponent = this.childComponent(type, data);
     return (
-      <section className={containerLevelStyle}>
-        <section className='listingItemDisplay__container'
-          onMouseOver={this.toggleThing.bind(this)}
-          onMouseOut={this.toggleThing.bind(this)}>
+      <Container>
+        <Display
+          onMouseOver={this.toggleThing}
+          onMouseOut={this.toggleThing}>
           <ListingItemMask
             price={content.price.regular}
             title={content.title}
             collectionName={content.collectionName}
             path={content.route.name}
             show={this.state.showMask}/>
-          <section className='listingItemDisplay__imageAdjuster'>
-            <img className='img-fluid listingItemDisplay__image' src={content.slideShow[0].images[0].url} />
-          </section>
-        </section>
-      </section>
+          <ImageAdjuster>
+            <Image src={content.slideShow[0].images[0].url} />
+          </ImageAdjuster>
+        </Display>
+      </Container>
     );
   }
 }

@@ -5,8 +5,6 @@ import consoleShow from './../../util/debug/consoleShow';
 import getGridItem from './../../util/get/getGridItem';
 import PageShell from '../PageShell/PageShell';
 
-import { withRouter } from 'react-router';
-
 const ProductListing = class ProductListing extends Component {
 
   showNotificationBar() {
@@ -38,7 +36,6 @@ const ProductListing = class ProductListing extends Component {
     consoleShow('props', {
       componentName: 'Listing',
       props: this.props});
-    require('./ProductListing.scss');
     const routeParams = this.props.params;
     const {
       productRef,
@@ -108,4 +105,4 @@ ProductListing.propTypes = {
   location: PropTypes.any,
   params: PropTypes.object,
 }
-export default withRouter(ProductListing);
+export default ProductListing;

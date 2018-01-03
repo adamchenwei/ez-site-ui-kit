@@ -2,6 +2,10 @@ import React, { Component } from 'react'; import PropTypes from 'prop-types';
 import consoleShow from './../../util/debug/consoleShow';
 import concatCssClasses from './../../util/concat/concatCssClasses';
 import { Link } from 'react-router';
+import Container from './style/ListingItemMask/Container';
+import Shade from './style/ListingItemMask/Shade';
+import ClickableLink from './style/ListingItemMask/ClickableLink';
+import Summary from './style/ListingItemMask/Summary';
 
 export default class ListingItemMask extends Component {
   constructor(props) {
@@ -24,7 +28,6 @@ export default class ListingItemMask extends Component {
   }
 
   render() {
-    require('./ListingItemMask.scss');
     const {
       price,
       title,
@@ -33,28 +36,23 @@ export default class ListingItemMask extends Component {
       path,
       type,
     } = this.props;
-    const style = concatCssClasses(this.props.style) || '';
-    const containerLevelStyle = show
-      ? `listingItemMask__container ${style}`
-      : `listingItemMask__container listingItemMask__container--hide ${style}`;
+
     const data = this.props.content;
     const content = this.props.content;
 
     //const contentComponent = this.childComponent(type, data);
     return (
-      <section className={containerLevelStyle}>
+      <Container hide={!show}>
         {/*Shade should always BEFORE content to avoid bleeding opacity!!!*/}
-        <section className='listingItemMask__shade' />
-        <Link to={`/${collectionName}/specific/${path}`}
-          className='listingItemMask__clickable'
-          activeClassName='active' />
-        <section className='listingItemMask__summary'>
-          <span className='listingItemMask__title'>
+        <Shade />
+        <ClickableLink href={`/${collectionName}/specific/${path}`} />
+        <Summary>
+          <span>
           {title}</span> {
-            price ? <span className='listingItemMask__price'>${price}</span> : null
+            price ? <span>${price}</span> : null
           }
-        </section>
-      </section>
+        </Summary>
+      </Container>
     );
   }
 }
