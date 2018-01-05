@@ -2,6 +2,7 @@ import React, { Component } from 'react'; import PropTypes from 'prop-types';
 import concatCssClasses from './../../util/concat/concatCssClasses';
 import getGridComponent from './../../util/get/getGridComponent';
 import consoleShow from './../../util/debug/consoleShow';
+import {Col} from 'reactstrap';
 
 export default class GridItem extends Component {
 
@@ -11,6 +12,7 @@ export default class GridItem extends Component {
     const containerLevelStyle = `gridItem__container original ${userCustomStyleClassNames}`;
     const responsive = this.props.gridResponsiveProperties;
     const standard = responsive.standard || '';
+    const xs = responsive.xs || '';
     const sm = responsive.sm || '';
     const md = responsive.md || '';
     const lg = responsive.lg || '';
@@ -23,8 +25,8 @@ export default class GridItem extends Component {
       xl: '',
     };
 
-
     //Reactstrap Component Instead!
+
     const composedStyles = `${containerLevelStyle}
       col-${standard}
       col-sm-${sm}
@@ -41,17 +43,43 @@ export default class GridItem extends Component {
     const customStyle = this.props.gridCustomStyle || {};
     const noCustomStyleAvailable = !Object.keys(customStyle).length && customStyle.constructor === Object;
     return (
-      <section className={composedStyles} style={
-        !noCustomStyleAvailable ? customStyle.container.inlineStyles : null
-      }>
+      <Col
+        xs={{
+          size: xs || '',
+          offset: offset.xs || '',
+        }}
+        sm={{
+          size: sm || '',
+          offset: offset.sm || '',
+        }}
+        md={{
+          size: md || '',
+          offset: offset.md || '',
+        }}
+        lg={{
+          size: lg || '',
+          offset: offset.lg || '',
+        }}
+        xl={{
+          size: xl || '',
+          offset: offset.xl || '',
+        }}
+      >
         {GridComponent}
-        {
-          /*Array.isArray(GridComponent) ? GridComponent.map((GridComponent) => {
-            return GridComponent;
-          }) : GridComponent*/
-        }
-      </section>
+      </Col>
     );
+    // return (
+    //   <section className={composedStyles} style={
+    //     !noCustomStyleAvailable ? customStyle.container.inlineStyles : null
+    //   }>
+    //     {GridComponent}
+    //     {
+    //       /*Array.isArray(GridComponent) ? GridComponent.map((GridComponent) => {
+    //         return GridComponent;
+    //       }) : GridComponent*/
+    //     }
+    //   </section>
+    // );
   }
 }
 

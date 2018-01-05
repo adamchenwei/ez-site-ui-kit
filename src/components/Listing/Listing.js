@@ -3,6 +3,7 @@ import concatCssClasses from './../../util/concat/concatCssClasses';
 import ContentSynchronizer from '../ContentSynchronizer/ContentSynchronizer';
 import GridItem from '../GridItem/GridItem';
 import consoleShow from './../../util/debug/consoleShow';
+import {Container, Row, Col} from 'reactstrap';
 
 export default class Listing extends Component {
   constructor(props) {
@@ -43,7 +44,7 @@ export default class Listing extends Component {
         componentName: 'listingContentItemGridStyle',
         props: listingContentItemGridStyle});
       return (
-        <section className={containerLevelStyle}>
+        <Row>
           {listingContent.map((listing, index) => {
             consoleShow('props', {
               componentName: 'Listing Content Item',
@@ -64,8 +65,32 @@ export default class Listing extends Component {
                 key={index.toString()} />
             );
           })}
-        </section>
+        </Row>
       );
+      // return (
+      //   <section className={containerLevelStyle}>
+      //     {listingContent.map((listing, index) => {
+      //       consoleShow('props', {
+      //         componentName: 'Listing Content Item',
+      //         props: listing});
+      //       const responsiveProperties = data.listingItemResponsiveProperties;
+      //       const componentName = data.listingItemComponentName;
+      //       const collectionName = data.name;
+      //       //TODO anti pattern!!!! But need to be done
+      //       listing.collectionName = collectionName;
+      //       return (
+      //         <GridItem
+      //           gridResponsiveProperties={responsiveProperties}
+      //           gridContent={listing}
+      //           gridStyle={listingContentItemGridStyle}
+      //           gridCustomStyle={customStyle}
+      //           gridType={listing.gridTypeName}
+      //           gridComponent={componentName}
+      //           key={index.toString()} />
+      //       );
+      //     })}
+      //   </section>
+      // );
     } else {
       let listingContent = ContentSynchronizer.getCollection(
         data.name);
@@ -85,7 +110,7 @@ export default class Listing extends Component {
         componentName: 'listingContentItemGridStyle',
         props: listingContentItemGridStyle});
       return (
-        <section className={containerLevelStyle}>
+        <Row>
           {listingContent.map((listing, index) => {
             consoleShow('props', {
               componentName: 'Listing Content Item',
@@ -107,8 +132,33 @@ export default class Listing extends Component {
                 key={index.toString()} />
             );
           })}
-        </section>
+        </Row>
       );
+        // return (
+      //   <section className={containerLevelStyle}>
+      //     {listingContent.map((listing, index) => {
+      //       consoleShow('props', {
+      //         componentName: 'Listing Content Item',
+      //         props: listing});
+      //       const responsiveProperties = data.listingItemResponsiveProperties;
+      //       const componentName = data.listingItemComponentName;
+      //       const collectionName = data.name;
+      //       //TODO anti pattern!!!! But need to be done
+      //       listing.collectionName = collectionName;
+
+      //       return (
+      //         <GridItem
+      //           gridResponsiveProperties={responsiveProperties}
+      //           gridContent={listing}
+      //           gridStyle={listingContentItemGridStyle}
+      //           gridCustomStyle={customStyle}
+      //           gridType={listing.gridTypeName}
+      //           gridComponent={componentName}
+      //           key={index.toString()} />
+      //       );
+      //     })}
+      //   </section>
+      // );
     }
   }
 }

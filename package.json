@@ -34,7 +34,7 @@
     "react-router": "^4.2.0",
     "react-share": "^1.18.1",
     "react-svg": "^2.2.6",
-    "reactstrap": "^4.8.0",
+    "reactstrap": "^5.0.0-alpha.4",
     "styled-components": "^2.4.0"
   }
 }
