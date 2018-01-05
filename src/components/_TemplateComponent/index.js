@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import {
-  Container,
-} from './style';
+import Container from './style/Container';
 
 export default class _TemplateComponent extends Component {
 

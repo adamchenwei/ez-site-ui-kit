@@ -1,8 +1,0 @@
-@import "../../theme/variables.scss";
-@import "../../theme/bem.scss";
-@import "../../theme/responsiveQuery.scss";
-
-.containerWrapper {
-  @include element('container') {
-  }
-}

@@ -23,6 +23,8 @@ export default class GridItem extends Component {
       xl: '',
     };
 
+
+    //Reactstrap Component Instead!
     const composedStyles = `${containerLevelStyle}
       col-${standard}
       col-sm-${sm}
