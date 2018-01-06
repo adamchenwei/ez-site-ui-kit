@@ -4,7 +4,7 @@ import concatCssClasses from './../../util/concat/concatCssClasses';
 import capToCamelCase from './../../util/transform/capToCamelCase';
 
 import Container from './style/Container';
-import HomeLink from './style/Container';
+import HomeLink from './style/HomeLink';
 export default class BreadCrumb extends Component {
 
   constructor(props) {
@@ -27,9 +27,9 @@ export default class BreadCrumb extends Component {
     } = this.props.content;
     //TODO: Link's to should be a prop!!!
     return (
-      <section className={containerLevelStyle} >
+      <Container>
         <HomeLink className={`${componentCSSName}__homeLink`} href='/products/all'>Home</HomeLink> / {title}
-      </section>
+      </Container>
     );
   }
 }

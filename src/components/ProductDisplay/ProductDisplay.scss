@@ -1,83 +1,83 @@
-// @import "../../theme/variables.scss";
-// @import "../../theme/bem.scss";
-// @import "../../theme/responsiveQuery.scss";
+@import "../../theme/variables.scss";
+@import "../../theme/bem.scss";
+@import "../../theme/responsiveQuery.scss";
 
-// .productDisplay {
-//   @include element('container') {
-//     font-size: 18px;
-//     color: rgba(34, 34, 34, 0.55);
-//   }
-// }
+.productDisplay {
+  @include element('container') {
+    font-size: 18px;
+    color: rgba(34, 34, 34, 0.55);
+  }
+}
 
-// .productSlideShow {
-//   @include element('container') {
-//     height: 100%;
-//   }
-// }
+.productSlideShow {
+  @include element('container') {
+    height: 100%;
+  }
+}
 
-// .productDescriptions {
-//   @include element('container') {
-//     @include mobile-s {
-//       &.over-ride-bootstrap {
-//         padding-left: 16px;
-//         padding-right: 16px;
-//       }
-//     }
-//     @include tablet {
-//       &.over-ride-bootstrap {
-//         padding-left: 16px;
-//       }
-//     }
-//   }
-//   @include element('title') {
-//     font-weight: 500;
-//     font-size: 24px;
+.productDescriptions {
+  @include element('container') {
+    @include mobile-s {
+      &.over-ride-bootstrap {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+    }
+    @include tablet {
+      &.over-ride-bootstrap {
+        padding-left: 16px;
+      }
+    }
+  }
+  @include element('title') {
+    font-weight: 500;
+    font-size: 24px;
 
-//     @include mobile-s {
-//       margin-top: 32px;
-//     }
-//     @include mobile-m {
-//       margin-top: initial;
-//     }
+    @include mobile-s {
+      margin-top: 32px;
+    }
+    @include mobile-m {
+      margin-top: initial;
+    }
 
-//   }
+  }
 
-//   @include element('description') {
-//     margin-top: 14px;
+  @include element('description') {
+    margin-top: 14px;
 
-//     @include modifier('title') {
-//       font-weight: 500;
-//     }
-//   }
+    @include modifier('title') {
+      font-weight: 500;
+    }
+  }
 
-//   @include element('ingredients') {
-//     margin-top: 14px;
+  @include element('ingredients') {
+    margin-top: 14px;
 
-//     @include modifier('title') {
-//       font-weight: 500;
-//     }
-//   }
+    @include modifier('title') {
+      font-weight: 500;
+    }
+  }
 
-//   @include element('allergyInformation') {
-//     margin-top: 14px;
+  @include element('allergyInformation') {
+    margin-top: 14px;
 
-//     @include modifier('title') {
-//       font-weight: 500;
-//     }
-//   }
+    @include modifier('title') {
+      font-weight: 500;
+    }
+  }
 
-//   @include element('storageInformation') {
-//     margin-top: 14px;
+  @include element('storageInformation') {
+    margin-top: 14px;
 
-//     @include modifier('title') {
-//       font-weight: 500;
-//     }
-//   }
-// }
+    @include modifier('title') {
+      font-weight: 500;
+    }
+  }
+}
 
-// .productAddToCart {
-//   @include element('container') {
-//     //TODO: disable temporarily
-//     display: none;
-//   }
-// }
+.productAddToCart {
+  @include element('container') {
+    //TODO: disable temporarily
+    display: none;
+  }
+}
