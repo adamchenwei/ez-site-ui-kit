@@ -2,7 +2,7 @@ import ReactDOM from 'react-dom';
 
 export default function scrollToDom(dom, delayMs) {
   const delay = delayMs || 500;
-  if (!dom) {
+  if (!dom & window) {
     window.scrollTo(0, 0);
   } else {
     setTimeout(() => {

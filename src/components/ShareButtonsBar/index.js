@@ -46,27 +46,30 @@ export default class ShareButtonsBar extends Component {
     const FacebookIcon = generateShareIcon('facebook');
     const TwitterIcon = generateShareIcon('twitter');
     const PinterestIcon = generateShareIcon('pinterest');
-    const absoluteUrl = `${window.location.href}${sharedImageUrl}`;
+    const locationHref = window
+      ? window.location.href
+      : '';
+    const absoluteUrl = `${locationHref}${sharedImageUrl}`;
 
     return (
       <Container
         componentName={containerName}
         gridAreaId={''} style={style}>
         <IconHolder>
-          <FacebookShareButton url={window.location.href}
+          <FacebookShareButton url={locationHref}
             quote={sharedTitle}>
             <FacebookIcon size={32} />
           </FacebookShareButton>
         </IconHolder>
 
         <IconHolder>
-          <TwitterShareButton url={window.location.href}>
+          <TwitterShareButton url={locationHref}>
             <TwitterIcon size={32} />
           </TwitterShareButton>
         </IconHolder>
 
         <IconHolder>
-          <PinterestShareButton url={window.location.href}
+          <PinterestShareButton url={locationHref}
             description={sharedDescriptionText}
             media={absoluteUrl}
             hashtags={hashtags}>
