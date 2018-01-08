@@ -18,7 +18,7 @@ const Product = class Product extends Component {
     //find specific product grid item with productRef & queryParams
     //TODO: right now its NOT COMPLETE!!!!
     console.log('PRODUCT REF IS ' + productRef);
-    console.log(props);
+    console.log(this.props);
     const productSpecs = ContentSynchronizer.getProductGrid(productRef);
     const PRODUCT_GRID_ITEM_ID = 3;
     const productGridItem = ContentSynchronizer.getItem(

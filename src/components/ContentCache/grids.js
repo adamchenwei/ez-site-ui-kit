@@ -328,7 +328,7 @@ export default [
       data: {
         logo: {
           image: {
-            url: './assets/images/logo.svg',
+            url: '/assets/images/logo.svg',
           }
         }
       },
