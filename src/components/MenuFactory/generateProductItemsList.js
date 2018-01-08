@@ -11,7 +11,7 @@ module.exports = function generateProductItemsList(
         collection.forEach((collectionItem, index) => {
           //console.log(collectionItem);
           const productRouteName = collectionItem.route.name;
-          const path = `${baseTag}/${collectionName}/specific/${productRouteName}`;
+          const path = `${baseTag}/${collectionName}/detail/${productRouteName}`;
           const title = collectionItem.shortTitle;
           list.push({
             path,

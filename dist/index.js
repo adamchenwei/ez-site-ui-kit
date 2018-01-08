@@ -17635,7 +17635,7 @@ module.exports = {
       https: false,
       name: 'http://localhost:8080'
     },
-    baseTag: '#'
+    baseTag: ''
   },
   cache: {
     updated: {
@@ -98965,7 +98965,7 @@ module.exports = function generateProductItemsList(collection, collectionName, m
         collection.forEach(function (collectionItem, index) {
           //console.log(collectionItem);
           var productRouteName = collectionItem.route.name;
-          var path = baseTag + '/' + collectionName + '/specific/' + productRouteName;
+          var path = baseTag + '/' + collectionName + '/detail/' + productRouteName;
           var title = collectionItem.shortTitle;
           list.push({
             path: path,
