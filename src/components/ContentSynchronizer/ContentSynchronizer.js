@@ -7,7 +7,8 @@ class ContentSynchronizer {
     this.cacheLocalStorageName = this.getStorageName();
     this.content = ContentCache;
     this.dynamicContent = {};
-    console.log(JSON.stringify(ContentCache));
+    console.log('print content cache here... if you neede it')
+    //console.log(JSON.stringify(ContentCache));
     //TODO - enable when go prod
     //TODO - not yet, has cache problem when there is old cache
     //        MUST need old cache clean up logic!!!! BEFORE app is even started!!!!!
@@ -62,7 +63,9 @@ class ContentSynchronizer {
   }
 
   getStorageName() {
-    const domain = window.location.hostname;
+    const domain = window
+      ? window.location.hostname
+      : 'localhost';
     //'ezLandingSite' + domain.name
     return `ezLandingSite${domain}`;
   }

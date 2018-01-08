@@ -27,6 +27,8 @@ export default function getGridComponent(componentName, gridContent, gridType) {
     // case 'HeaderBar':
     //   return <HeaderBar />;
     case 'ProductDisplay':
+      console.log('we see its ProductDisplay Grid Component!')
+      console.log(gridContent);
       return <ProductDisplay
         productName={gridContent.productName}
         content={gridContent.productSpecs}

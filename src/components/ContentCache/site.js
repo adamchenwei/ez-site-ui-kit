@@ -11,7 +11,7 @@ module.exports = {
       https: false,
       name: 'http://localhost:8080',
     },
-    baseTag: '#',
+    baseTag: '',
   },
   cache: {
     updated: {
