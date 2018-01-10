@@ -3,7 +3,10 @@ import PropTypes from 'prop-types';
 import {
   Container,
 } from './../Common';
-import {Paper, Card, Button, Avatar} from 'material-ui';
+import Paper from 'material-ui/Paper';
+import Card from 'material-ui/Card';
+import Button from 'material-ui/Button';
+import Avatar from 'material-ui/Avatar';
 import CredentialInput from './CredientialInput';
 import axios from 'axios';
 

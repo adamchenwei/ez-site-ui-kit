@@ -78,5 +78,80 @@ module.exports = env => {
     watch: Boolean(watch),
     plugins: [Defined, configedAnalyzer],
     //plugins: [HtmlWebpackPluginConfig]
+    externals: {
+      react: 'react',
+      reactstrap: 'reactstrap',
+      'react-dom': {
+        root: 'ReactDOM',
+        commonjs2: 'react-dom',
+        commonjs: 'react-dom',
+        amd: 'react-dom',
+        umd: 'react-dom',
+      },
+      'axios': {
+        root: 'axios',
+        commonjs2: 'axios',
+        commonjs: 'axios',
+        amd: 'axios',
+        umd: 'axios',
+      },
+      'styled-components': {
+        root: 'styled-components',
+        commonjs2: 'styled-components',
+        commonjs: 'styled-components',
+        amd: 'styled-components',
+        umd: 'styled-components',
+      },
+      'react-share': {
+        root: 'react-share',
+        commonjs2: 'react-share',
+        commonjs: 'react-share',
+        amd: 'react-share',
+        umd: 'react-share',
+      },
+      'react-html-parser': {
+        root: 'react-html-parser',
+        commonjs2: 'react-html-parser',
+        commonjs: 'react-html-parser',
+        amd: 'react-html-parser',
+        umd: 'react-html-parser',
+      },
+      'react-images': {
+        root: 'react-images',
+        commonjs2: 'react-images',
+        commonjs: 'react-images',
+        amd: 'react-images',
+        umd: 'react-images',
+      },
+      'react-transition-group': {
+        root: 'react-transition-group',
+        commonjs2: 'react-transition-group',
+        commonjs: 'react-transition-group',
+        amd: 'react-transition-group',
+        umd: 'react-transition-group',
+      },
+      'lodash': {
+        root: 'lodash',
+        commonjs2: 'lodash',
+        commonjs: 'lodash',
+        amd: 'lodash',
+        umd: 'lodash',
+      },
+      'react-router': {
+        root: 'react-router',
+        commonjs2: 'react-router',
+        commonjs: 'react-router',
+        amd: 'react-router',
+        umd: 'react-router',
+      },
+      'material-ui': {
+        root: 'material-ui',
+        commonjs2: 'material-ui',
+        commonjs: 'material-ui',
+        amd: 'material-ui',
+        umd: 'material-ui',
+      },
+      
+    }
   };
 }
