@@ -6,11 +6,13 @@
   "scripts": {
     "p": "webpack -p",
     "pa": "webpack -p && npm run analyze:win",
+    "prod": "set NODE_ENV=production npm run p && npm run analyze",
     "start": "webpack --env.watch=true",
     "start:p": "webpack -p --env.watch=true",
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -s ./public -p 9001",
     "build-storybook": "build-storybook",
+    "analyze": "webpack --profile --json > stats.json",
     "analyze:win": "webpack --env-analyze=true --profile --json | Out-file 'stats.json' -Encoding OEM"
   },
   "author": "Ezeewei",

@@ -14,6 +14,7 @@ import {
 } from './../../components/MobileMenu/factory/menu';
 
 import SlideShow from './../../components/SlideShow';
+//import { Head } from 'react-static'
 
 export default class PageShell extends Component {
 
@@ -121,6 +122,9 @@ export default class PageShell extends Component {
     containerLevelStyle = containerLevelStyle || 'page__container row no-gutters';
     return (
       <section className={containerLevelStyle} style={style}>
+        {/* <Head>
+          <title>Products</title>
+        </Head> */}
         {this.showNotificationBar()}
         {this.showMobileMenu()}
         {this.showMenuBar()}

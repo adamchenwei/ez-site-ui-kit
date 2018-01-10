@@ -1,6 +1,10 @@
 const path = require('path');
 //const HtmlWebpackPlugin = require('html-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const DefinePlugin = require('webpack').DefinePlugin;
+const Defined = new DefinePlugin({
+  'process.env.NODE_ENV': JSON.stringify('production')
+});
 
 
 const SOURCE_DIR = './src';
@@ -27,18 +31,18 @@ module.exports = env => {
     // In `server` mode analyzer will start HTTP server to show bundle report.
     // In `static` mode single HTML file with bundle report will be generated.
     // In `disabled` mode you can use this plugin to just generate Webpack Stats JSON file by setting `generateStatsFile` to `true`.
-    analyzerMode: 'server',
+    analyzerMode: 'static',
     // Host that will be used in `server` mode to start HTTP server.
     analyzerHost: '127.0.0.1',
     // Port that will be used in `server` mode to start HTTP server.
     analyzerPort: 8888,
     // Path to bundle report file that will be generated in `static` mode.
     // Relative to bundles output directory.
-    reportFilename: 'report.html',
+    reportFilename: './../report/bundle_anlaysis.html',
     // Module sizes to show in report by default.
     // Should be one of `stat`, `parsed` or `gzip`.
     // See "Definitions" section for more information.
-    defaultSizes: 'parsed',
+    defaultSizes: 'gzip',
     // Automatically open report in default browser
     openAnalyzer: Boolean(analyze),
     // If `true`, Webpack Stats JSON file will be generated in bundles output directory
@@ -72,7 +76,7 @@ module.exports = env => {
       poll: 1000
     },
     watch: Boolean(watch),
-    plugins: [configedAnalyzer],
+    plugins: [Defined, configedAnalyzer],
     //plugins: [HtmlWebpackPluginConfig]
   };
 }

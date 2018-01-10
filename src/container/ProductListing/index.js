@@ -97,6 +97,7 @@ const ProductListing = class ProductListing extends Component {
       containerLevelClass={'productListing__container row no-gutters'}
       style={{}} >
         {bodyDisplay}
+        {this.props.children}
       </PageShell>
     );
   }
