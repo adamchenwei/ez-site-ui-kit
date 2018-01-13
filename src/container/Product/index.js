@@ -1,9 +1,8 @@
 import React, { Component } from 'react'; import PropTypes from 'prop-types';
-import ContentSynchronizer from '../../components/ContentSynchronizer/ContentSynchronizer';
+import {ContentSynchronizer} from 'ez-site-content';
 import GridItem from '../../components/GridItem/GridItem';
 import getGridItem from './../../util/get/getGridItem';
 import PageShell from '../PageShell/PageShell';
-
 
 const Product = class Product extends Component {
   constructor(props) {

@@ -1,8 +1,8 @@
-import ContentSynchronizer from './../../ContentSynchronizer/ContentSynchronizer';
+import {ContentSynchronizer} from 'ez-site-content';
 import generateFilterItemsList from './../../MenuFactory/generateFilterItemsList';
 import generateMenuItemsList from './../../MenuFactory/generateMenuItemsList';
 import generateProductItemsList from './../../MenuFactory/generateProductItemsList';
-
+import content from 'ez-site-content';
 
 module.exports = {
   buildMenuItems,
@@ -13,7 +13,7 @@ module.exports = {
 //gridId 2
 function buildMenuItems(gridItemId) {
   if (!gridItemId) return [];
-
+  console.log(content);
   const menuBar = ContentSynchronizer.getItem(
     'grids', 'gridItemId', gridItemId, true);
   const menuBarConfig = ContentSynchronizer.getItem(

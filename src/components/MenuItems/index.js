@@ -3,7 +3,7 @@ import {
   Container,
 } from './../Common';
 import MenuItem from './../MenuItem';
-import ContentSynchronizer from '../ContentSynchronizer/ContentSynchronizer';
+import {ContentSynchronizer} from 'ez-site-content';
 const setComponentWrapperContainerClasses = require('../../util/setup/setComponentWrapperContainerClasses');
 
 export default class MenuItems extends Component {

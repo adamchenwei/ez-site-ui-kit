@@ -1,13 +1,13 @@
  import React, { Component } from 'react'; import PropTypes from 'prop-types';
  import {Container, Row, Col} from 'reactstrap';
 
-import ContentSynchronizer from '../ContentSynchronizer/ContentSynchronizer';
+import {ContentSynchronizer} from 'ez-site-content';
 import BreadCrumb from '../BreadCrumb';
 import getGridItem from './../../util/get/getGridItem';
 import ShareButtonsBar from '../ShareButtonsBar';
 import ProductGallery from '../ProductGallery';
 
-import site from '../ContentCache/site';
+import {www___naturalorchards__us as ContentCache} from 'ez-site-content';
 
 import ContainerRow from './style/ContainerRow';
 import ProductSlideShowCol from './style/ProductSlideShowCol';
@@ -104,7 +104,7 @@ export default class ProductDisplay extends Component {
       availableQuantity,
       properties,
     } = content;
-
+    const {site} = ContentCache;
     const {
       ingredients,
       allergyInformation,

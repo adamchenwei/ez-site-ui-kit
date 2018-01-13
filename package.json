@@ -43,6 +43,7 @@
     "react-share": "^1.18.1",
     "react-svg": "^2.2.6",
     "reactstrap": "^5.0.0-alpha.4",
-    "styled-components": "^2.4.0"
+    "styled-components": "^2.4.0",
+    "ez-site-content": "git+https://adam_chen_wei@bitbucket.org/adam_chen_wei/ez-site-content.git"
   }
 }

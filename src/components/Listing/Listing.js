@@ -1,6 +1,6 @@
 import React, { Component } from 'react'; import PropTypes from 'prop-types';
 import concatCssClasses from './../../util/concat/concatCssClasses';
-import ContentSynchronizer from '../ContentSynchronizer/ContentSynchronizer';
+import {ContentSynchronizer} from 'ez-site-content';
 import GridItem from '../GridItem/GridItem';
 import consoleShow from './../../util/debug/consoleShow';
 import {Container, Row, Col} from 'reactstrap';

@@ -1,4 +1,4 @@
-import ContentSynchronizer from './../ContentSynchronizer/ContentSynchronizer';
+import {ContentSynchronizer} from 'ez-site-content';
 
 module.exports = function generateMenuItemsList (menu, baseTag) {
   let list = [];

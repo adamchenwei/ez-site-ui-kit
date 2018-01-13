@@ -3,9 +3,8 @@ import About from './container/About';
 import Contact from './container/Contact';
 import ProductListing from './container/ProductListing';
 import Product from './container/Product';
-import ContentCache from './components/ContentCache';
-import products from './components/ContentCache/products';
-
+import {www___naturalorchards__us as ContentCache} from 'ez-site-content';
+const {products} = ContentCache;
 export {
   About,
   Contact,
