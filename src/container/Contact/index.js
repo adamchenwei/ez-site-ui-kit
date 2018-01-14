@@ -28,6 +28,7 @@ const Contact = class Contact extends Component {
             <LeftColumn><ContactForm /></LeftColumn>
           </Container>
         </GridItemShell>
+        {this.props.children}
       </PageShell>
     );
   }

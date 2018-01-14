@@ -9,16 +9,19 @@ const Product = class Product extends Component {
     super();
   }
   render() {
-    
+    const {
+      productRef,
+      children,
+    } = this.props;
     const routeParams = this.props.params;
-    const productRef = routeParams ? routeParams.productRef : this.props.productRef;
+    const productRefRefreshed = routeParams ? routeParams.productRef : productRef;
     //const queryParams = this.props.location.query;
 
     //find specific product grid item with productRef & queryParams
     //TODO: right now its NOT COMPLETE!!!!
-    console.log('PRODUCT REF IS ' + productRef);
+    console.log('PRODUCT REF IS ' + productRefRefreshed);
     console.log(this.props);
-    const productSpecs = ContentSynchronizer.getProductGrid(productRef);
+    const productSpecs = ContentSynchronizer.getProductGrid(productRefRefreshed);
     const PRODUCT_GRID_ITEM_ID = 3;
     const productGridItem = ContentSynchronizer.getItem(
       'grids', 'gridItemId', PRODUCT_GRID_ITEM_ID, true);
@@ -39,6 +42,7 @@ const Product = class Product extends Component {
         anchorToBelow={'sub-menu-bar'}
         style={{}} >
         {bodyDisplay}
+        {children}
       </PageShell>
     );
   }

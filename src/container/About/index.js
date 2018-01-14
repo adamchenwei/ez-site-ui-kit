@@ -1,4 +1,4 @@
-import React, { Component } from 'react'; import PropTypes from 'prop-types';
+import React, { Component, Children } from 'react'; import PropTypes from 'prop-types';
 import PageShell from '../PageShell/PageShell';
 import {PageContentContainer} from '../../components/Common';
 import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser';
@@ -46,7 +46,7 @@ const About = class About extends Component {
           `)
         }
         </PageContentContainer>
-
+        {this.props.children}
       </PageShell>
     );
   }
