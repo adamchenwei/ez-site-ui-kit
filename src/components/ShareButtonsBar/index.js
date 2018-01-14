@@ -10,6 +10,8 @@ import {
 } from 'react-share';
 const setComponentWrapperContainerClasses = require('../../util/setup/setComponentWrapperContainerClasses');
 
+import getWindow from './../../util/get/getWindow';
+
 export default class ShareButtonsBar extends Component {
 
   constructor(props) {
@@ -46,8 +48,8 @@ export default class ShareButtonsBar extends Component {
     const FacebookIcon = generateShareIcon('facebook');
     const TwitterIcon = generateShareIcon('twitter');
     const PinterestIcon = generateShareIcon('pinterest');
-    const locationHref = window
-      ? window.location.href
+    const locationHref = getWindow
+      ? getWindow.location.href
       : '';
     const absoluteUrl = `${locationHref}${sharedImageUrl}`;
 

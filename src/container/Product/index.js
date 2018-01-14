@@ -25,7 +25,7 @@ const Product = class Product extends Component {
     //TODO: Dynamic inject content... not very dry
     productGridItem.gridContent.productSpecs = productSpecs;
     console.log('-----Product');
-    console.log(productGridItem);
+    console.log(productGridItem.gridContent.prodctSpecs);
 
     const bodyDisplay = <GridItem
       gridResponsiveProperties={productGridItem.gridResponsiveProperties}

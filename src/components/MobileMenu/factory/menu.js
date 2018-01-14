@@ -13,7 +13,7 @@ module.exports = {
 //gridId 2
 function buildMenuItems(gridItemId) {
   if (!gridItemId) return [];
-  console.log(content);
+  //console.log(content);
   const menuBar = ContentSynchronizer.getItem(
     'grids', 'gridItemId', gridItemId, true);
   const menuBarConfig = ContentSynchronizer.getItem(
