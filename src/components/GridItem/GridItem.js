@@ -27,23 +27,12 @@ export default class GridItem extends Component {
 
     //Reactstrap Component Instead!
 
-    const composedStyles = `${containerLevelStyle}
-      col-${standard}
-      col-sm-${sm}
-      col-md-${md}
-      col-lg-${lg}
-      col-xl-${xl}
-      offset-${offset.standard}
-      offset-sm-${offset.sm}
-      offset-md-${offset.md}
-      offset-lg-${offset.lg}
-      offset-xl-${offset.xl}
-    `;
 
     const customStyle = this.props.gridCustomStyle || {};
     const noCustomStyleAvailable = !Object.keys(customStyle).length && customStyle.constructor === Object;
     return (
       <Col
+        size={standard}
         xs={{
           size: xs || '',
           offset: offset.xs || '',
@@ -68,18 +57,6 @@ export default class GridItem extends Component {
         {GridComponent}
       </Col>
     );
-    // return (
-    //   <section className={composedStyles} style={
-    //     !noCustomStyleAvailable ? customStyle.container.inlineStyles : null
-    //   }>
-    //     {GridComponent}
-    //     {
-    //       /*Array.isArray(GridComponent) ? GridComponent.map((GridComponent) => {
-    //         return GridComponent;
-    //       }) : GridComponent*/
-    //     }
-    //   </section>
-    // );
   }
 }
 
