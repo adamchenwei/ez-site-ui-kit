@@ -1,5 +1,5 @@
 import React, { Component } from 'react'; import PropTypes from 'prop-types';
-import {ContentSynchronizer} from 'ez-site-content';
+import {ContentSynchronizer} from 'ez-site-content-store';
 import Container from './style/Container';
 import TextBody from './style/TextBody';
 import LinkBody from './style/LinkBody';

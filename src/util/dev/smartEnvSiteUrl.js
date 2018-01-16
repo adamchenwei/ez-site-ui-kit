@@ -1,4 +1,4 @@
-import {www___naturalorchards__us as ContentCache} from 'ez-site-content';
+import {www___naturalorchards__us as ContentCache} from 'ez-site-content-store';
 const {site} = ContentCache;
 module.exports = function smartEnvSiteUrl(hostName) {
   if (hostName === 'localhost') {

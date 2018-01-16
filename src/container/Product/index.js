@@ -1,5 +1,5 @@
 import React, { Component } from 'react'; import PropTypes from 'prop-types';
-import {ContentSynchronizer} from 'ez-site-content';
+import {ContentSynchronizer} from 'ez-site-content-store';
 import GridItem from '../../components/GridItem/GridItem';
 import getGridItem from './../../util/get/getGridItem';
 import PageShell from '../PageShell/PageShell';

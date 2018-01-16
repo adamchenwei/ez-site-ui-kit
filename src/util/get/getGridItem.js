@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import GridItem from '../../components/GridItem/GridItem';
-import {ContentSynchronizer} from 'ez-site-content';
+import {ContentSynchronizer} from 'ez-site-content-store';
 
 export default function getGridItem(
   value,

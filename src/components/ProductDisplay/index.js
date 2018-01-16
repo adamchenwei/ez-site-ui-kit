@@ -1,13 +1,13 @@
  import React, { Component } from 'react'; import PropTypes from 'prop-types';
  import {Container, Row, Col} from 'reactstrap';
 
-import {ContentSynchronizer} from 'ez-site-content';
+import {ContentSynchronizer} from 'ez-site-content-store';
 import BreadCrumb from '../BreadCrumb';
 import getGridItem from './../../util/get/getGridItem';
 import ShareButtonsBar from '../ShareButtonsBar';
 import ProductGallery from '../ProductGallery';
 
-import {www___naturalorchards__us as ContentCache} from 'ez-site-content';
+import {www___naturalorchards__us as ContentCache} from 'ez-site-content-store';
 
 import ContainerRow from './style/ContainerRow';
 import ProductSlideShowCol from './style/ProductSlideShowCol';

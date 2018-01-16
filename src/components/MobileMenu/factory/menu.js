@@ -1,8 +1,8 @@
-import {ContentSynchronizer} from 'ez-site-content';
+import {ContentSynchronizer} from 'ez-site-content-store';
 import generateFilterItemsList from './../../MenuFactory/generateFilterItemsList';
 import generateMenuItemsList from './../../MenuFactory/generateMenuItemsList';
 import generateProductItemsList from './../../MenuFactory/generateProductItemsList';
-import content from 'ez-site-content';
+import content from 'ez-site-content-store';
 
 module.exports = {
   buildMenuItems,
