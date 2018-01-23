@@ -41,11 +41,12 @@ export default class ListingItemMask extends Component {
     const content = this.props.content;
 
     //const contentComponent = this.childComponent(type, data);
+    
     return (
       <Container hide={!show}>
         {/*Shade should always BEFORE content to avoid bleeding opacity!!!*/}
         <Shade />
-        <ClickableLink href={`/${collectionName}/specific/${path}`} />
+        <ClickableLink href={`/${collectionName}/detail/${path}`} />
         <Summary>
           <span>
           {title}</span> {
