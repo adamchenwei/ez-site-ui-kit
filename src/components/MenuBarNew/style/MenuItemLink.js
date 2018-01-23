@@ -1,10 +1,10 @@
 import styled from 'styled-components';
-
-module.exports = styled.a`
+import {Link} from 'react-router';
+module.exports = styled(Link)`
   font-size: 16px;
   line-height: 24px;
   text-transform: uppercase;
-  text-decoration: none;
+  text-decoration: underline;
   color: rgba(34,34,34,.55);
   &:hover {
     color: #212121;

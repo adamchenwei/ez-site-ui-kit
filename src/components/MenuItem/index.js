@@ -25,7 +25,7 @@ export default class MenuItem extends Component {
         componentName={COMPONENT_NAME}
         gridAreaId={''}
         onClick={this.toggleMenu}>
-        <Link href={path}>{title}</Link>
+        <Link to={path}>111{title}</Link>
       </Container>
     );
   }
