@@ -43,7 +43,7 @@ export default class MenuBarNew extends Component {
               <MenuItemBox key={index}>
                 <MenuItemLink
                   href={menuItem.path}>
-                  {menuItem.title} aaa
+                  {menuItem.title}
                 </MenuItemLink>
               </MenuItemBox>
             )

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import {Link} from 'react-router';
-module.exports = styled(Link)`
+import {Link} from 'react-router-dom';
+module.exports = styled.a`
   font-size: 16px;
   line-height: 24px;
   text-transform: uppercase;

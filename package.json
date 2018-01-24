@@ -11,6 +11,7 @@
     "start:p": "webpack -p --env.watch=true",
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -s ./public -p 9001",
+    "s": "npm run storybook",
     "build-storybook": "build-storybook",
     "analyze": "webpack --profile --json > stats.json",
     "analyze:win": "webpack --env-analyze=true --profile --json | Out-file 'stats.json' -Encoding OEM"
@@ -32,6 +33,7 @@
   "dependencies": {
     "axios": "^0.17.1",
     "bootstrap": "^4.0.0-beta.3",
+    "ez-site-content-store": "git+ssh://git@bitbucket.org:adam_chen_wei/ez-site-content-store.git",
     "material-ui": "^1.0.0-beta.20",
     "material-ui-icons": "^1.0.0-beta.17",
     "prop-types": "^15.6.0",
@@ -40,10 +42,10 @@
     "react-html-parser": "^2.0.2",
     "react-images": "^0.5.14",
     "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
     "react-share": "^1.18.1",
     "react-svg": "^2.2.6",
     "reactstrap": "^5.0.0-alpha.4",
-    "styled-components": "^2.4.0",
-    "ez-site-content-store": "git+ssh://git@bitbucket.org:adam_chen_wei/ez-site-content-store.git"
+    "styled-components": "^2.4.0"
   }
 }
