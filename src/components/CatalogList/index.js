@@ -32,8 +32,8 @@ export default class CatalogList extends Component {
               xs={12}
               sm={6}
               md={4}
-              lg={2}
-              xl={2}>
+              lg={3}
+              xl={3}>
               <Card>
                 <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
                 <CardBody>
