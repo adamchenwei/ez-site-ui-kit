@@ -3,7 +3,7 @@ import {
   Container,
   Link,
 } from './style';
-//import { Link } from 'react-router';
+//import { Link } from 'react-router-dom';
 
 export default class MenuFilterItem extends Component {
 

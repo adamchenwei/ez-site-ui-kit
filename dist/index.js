@@ -1030,9 +1030,3615 @@ $exports.store = store;
 
 /***/ }),
 /* 18 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-!function(t,e){for(var r in e)t[r]=e[r]}(exports,function(t){function e(n){if(r[n])return r[n].exports;var i=r[n]={i:n,l:!1,exports:{}};return t[n].call(i.exports,i,i.exports,e),i.l=!0,i.exports}var r={};return e.m=t,e.c=r,e.d=function(t,r,n){e.o(t,r)||Object.defineProperty(t,r,{configurable:!1,enumerable:!0,get:n})},e.n=function(t){var r=t&&t.__esModule?function(){return t.default}:function(){return t};return e.d(r,"a",r),r},e.o=function(t,e){return Object.prototype.hasOwnProperty.call(t,e)},e.p="",e(e.s=14)}([function(t,e,r){var n=r(7),i=n(Object,"create");t.exports=i},function(t,e,r){function n(t,e){for(var r=t.length;r--;)if(i(t[r][0],e))return r;return-1}var i=r(12);t.exports=n},function(t,e,r){function n(t,e){var r=t.__data__;return i(e)?r["string"==typeof e?"string":"hash"]:r.map}var i=r(57);t.exports=n},function(t,e){var r=Array.isArray;t.exports=r},function(t,e,r){function n(t){return"symbol"==typeof t||o(t)&&i(t)==a}var i=r(11),o=r(31),a="[object Symbol]";t.exports=n},function(t,e,r){var n=r(6),i=n.Symbol;t.exports=i},function(t,e,r){var n=r(27),i="object"==typeof self&&self&&self.Object===Object&&self,o=n||i||Function("return this")();t.exports=o},function(t,e,r){function n(t,e){var r=o(t,e);return i(r)?r:void 0}var i=r(39),o=r(44);t.exports=n},function(t,e){function r(t){var e=typeof t;return null!=t&&("object"==e||"function"==e)}t.exports=r},function(t,e,r){"use strict";function n(t){return t&&t.__esModule?t:{default:t}}Object.defineProperty(e,"__esModule",{value:!0});var i=r(15),o=n(i),a=r(16),s=n(a),u=r(17),l=n(u),c=r(18),d=n(c),m=r(19),p=n(m),f=r(20),g=n(f),h=r(21),y=n(h),v=r(22),b=n(v);e.default={site:p.default,menus:l.default,pages:d.default,gridContainerProperties:["abc"],grids:s.default,assets:o.default,products:g.default,banners:y.default,footer:b.default}},function(t,e,r){function n(t,e){return i(t)?t:o(t,e)?[t]:a(s(t))}var i=r(3),o=r(26),a=r(32),s=r(61);t.exports=n},function(t,e,r){function n(t){return null==t?void 0===t?u:s:l&&l in Object(t)?o(t):a(t)}var i=r(5),o=r(29),a=r(30),s="[object Null]",u="[object Undefined]",l=i?i.toStringTag:void 0;t.exports=n},function(t,e){function r(t,e){return t===e||t!==t&&e!==e}t.exports=r},function(t,e,r){function n(t){if("string"==typeof t||i(t))return t;var e=t+"";return"0"==e&&1/t==-o?"-0":e}var i=r(4),o=1/0;t.exports=n},function(t,e,r){"use strict";function n(t){return t&&t.__esModule?t:{default:t}}Object.defineProperty(e,"__esModule",{value:!0}),e.ContentSynchronizer=e.www___naturalorchards__us=void 0;var i=r(9),o=n(i),a=r(23),s=n(a);e.www___naturalorchards__us=o.default,e.ContentSynchronizer=s.default},function(t,e,r){"use strict";Object.defineProperty(e,"__esModule",{value:!0}),e.default=[]},function(t,e,r){"use strict";Object.defineProperty(e,"__esModule",{value:!0}),e.default=[{gridItemId:1,gridItemName:"notifcation bar",gridTypeName:"custom",gridCustomName:"notification bar",gridComponent:"NotificationBar",gridContent:{type:"textWithBarLink",data:{text:"we are in opening sale!",link:"http://naturalorchards.us",showAsDefault:!0},style:["center-text"]},gridCustomStyle:{},gridStyle:[],gridResponsiveProperties:{standard:12,xs:12,sm:12,md:12,lg:12,xl:12,offset:{standard:"",sm:"",md:"",lg:"",xl:""}}},{gridItemId:2,gridItemName:"main menu bar",gridTypeName:"menu",gridCustomName:"menu bar",gridComponent:"MenuBar",gridContent:{menuId:1,menuType:"custom"},gridCustomStyle:{container:{inlineStyles:{marginTop:"20px",marginBottom:"20px"}}},gridStyle:[],gridResponsiveProperties:{standard:12,xs:12,sm:12,md:12,lg:12,xl:12,offset:{standard:"",sm:"",md:"",lg:"",xl:""}}},{gridItemId:3,gridItemName:"specific product",gridTypeName:"specific product",gridCustomName:"specific product",gridComponent:"ProductDisplay",gridContent:{productName:"product",style:[]},gridCustomStyle:{},gridStyle:[],gridResponsiveProperties:{standard:12,xs:12,sm:12,md:12,lg:6,xl:6,offset:{standard:"",sm:"",md:"",lg:3,xl:3}}},{gridItemId:4,gridItemName:"main footer",gridTypeName:"menu",gridCustomName:"footer bar",gridComponent:"FooterBar",gridContent:{data:{}},gridCustomStyle:{},gridStyle:[],gridResponsiveProperties:{standard:12,xs:12,sm:12,md:12,lg:12,xl:12,offset:{standard:"",sm:"",md:"",lg:"",xl:""}}},{gridItemId:5,gridItemName:"product listing",gridTypeName:"listing",gridCustomName:"product listing",gridComponent:"Listing",gridContent:{data:{name:"products",listingItemComponentName:"ListingItem",listingItemResponsiveProperties:{standard:12,xs:12,sm:12,md:4,lg:4,xl:4,offset:{standard:"",sm:"",md:"",lg:"",xl:""}},listingCustomStyle:{container:{inlineStyles:{marginTop:"1%",marginBottom:"1%"}}},listingItemStyle:["listingItem__shell"]}},gridCustomStyle:{},gridStyle:[],gridResponsiveProperties:{standard:10,xs:10,sm:10,md:10,lg:10,xl:10,offset:{standard:1,xs:1,sm:1,md:1,lg:1,xl:1}}},{gridItemId:6,gridItemName:"tags menu bar",gridTypeName:"menu",gridCustomName:"tags menu bar",gridComponent:"MenuBar",gridContent:{menuId:2,menuType:"collection"},gridCustomStyle:{container:{inlineStyles:{marginTop:"20px",marginBottom:"20px"}}},gridStyle:[],gridResponsiveProperties:{standard:12,xs:12,sm:12,md:12,lg:12,xl:12,offset:{standard:"",sm:"",md:"",lg:"",xl:""}}},{gridItemId:7,gridItemName:"specific tag product listing",gridTypeName:"listing",gridCustomName:"specific tag product listing",gridComponent:"Listing",gridContent:{data:{name:"products",type:"filter",listingItemComponentName:"ListingItem",listingItemResponsiveProperties:{standard:12,xs:12,sm:12,md:4,lg:4,xl:4,offset:{standard:"",sm:"",md:"",lg:"",xl:""}},listingItemStyle:["listingItem__shell"]}},gridCustomStyle:{},gridStyle:[],gridResponsiveProperties:{standard:10,xs:10,sm:10,md:10,lg:10,xl:10,offset:{standard:1,xs:1,sm:1,md:1,lg:1,xl:1}}},{gridItemId:8,gridItemName:"bread crumb",gridTypeName:"custom",gridCustomName:"bread crumb",gridComponent:"BreadCrumb",gridContent:{data:{},style:{container:{inlineStyles:{marginTop:"20px"}}}},gridCustomStyle:{},gridStyle:[],gridResponsiveProperties:{standard:12,xs:12,sm:12,md:12,lg:12,xl:12,offset:{standard:"",sm:"",md:"",lg:"",xl:""}}},{gridItemId:9,gridItemName:"logo bar",gridTypeName:"custom",gridCustomName:"logo bar",gridComponent:"LogoBar",gridContent:{data:{logo:{image:{url:"/assets/images/logo.svg"}}}},gridCustomStyle:{},gridStyle:[],gridResponsiveProperties:{standard:12,xs:12,sm:12,md:12,lg:12,xl:12,offset:{standard:"",sm:"",md:"",lg:"",xl:""}}},{gridItemId:10,gridItemName:"all products direct link menu bar",gridTypeName:"menu",gridCustomName:"all products direct link menu bar",gridComponent:"MenuBar",gridContent:{menuId:4,menuType:"collection"},gridCustomStyle:{container:{inlineStyles:{marginTop:"20px",marginBottom:"20px"}}},gridStyle:[],gridResponsiveProperties:{standard:12,xs:12,sm:12,md:12,lg:12,xl:12,offset:{standard:"",sm:"",md:"",lg:"",xl:""}}}]},function(t,e,r){"use strict";Object.defineProperty(e,"__esModule",{value:!0}),e.default=[{menuId:1,menuLastUpdateDate:1498688605759,menuName:"primary",menuType:"custom",menuConfig:{position:"center"},menuItems:[{menuItemId:1,type:"filter",style:[],name:"home",componentName:"MenuBarItem",responsiveProperties:{xs:12,sm:1,md:1,lg:1,xl:1,offset:{standard:"",sm:"",md:"",lg:"",xl:""}},content:{type:"products",name:"all",query:[],link:{name:"home"}}},{menuItemId:2,type:"page",style:[],name:"",componentName:"MenuBarItem",responsiveProperties:{xs:12,sm:1,md:1,lg:1,xl:1,offset:{standard:"",sm:"",md:"",lg:"",xl:""}},content:{pageId:2}},{menuItemId:3,type:"page",style:[],name:"",componentName:"MenuBarItem",responsiveProperties:{xs:12,sm:1,md:1,lg:1,xl:1,offset:{standard:"",sm:"",md:"",lg:"",xl:""}},content:{pageId:3}}]},{menuId:2,menuLastUpdateDate:1498688605759,menuName:"tags",menuType:"collection",menuConfig:{collectionName:"products",doNotInclude:{collectionKeys:[]},position:"center",type:"collectionItems",componentName:"MenuBarItem",menuItemId:4,menuItemType:"filter",menuItemStyle:[],menuItemResponsiveProperties:{xs:12,sm:1,md:1,lg:1,xl:1,offset:{standard:"",sm:"",md:"",lg:"",xl:""}}}},{menuId:3,menuLastUpdateDate:1498688605759,menuName:"products",menuType:"collection",menuConfig:{collectionName:"products",doNotInclude:{collectionKeys:[]},position:"center",type:"collectionItems",componentName:"",menuItemId:4,menuItemType:"filter",menuItemStyle:[],menuItemResponsiveProperties:{}}},{menuId:4,menuLastUpdateDate:1498688605759,menuName:"products-all-items",menuType:"collection",menuConfig:{collectionName:"products",doNotInclude:{collectionKeys:[]},position:"center",type:"collectionItems",componentName:"MenuBarItem",menuItemId:4,menuItemType:"filter",menuItemStyle:[],menuItemResponsiveProperties:{xs:12,sm:1,md:1,lg:1,xl:1,offset:{standard:"",sm:"",md:"",lg:"",xl:""}}}}]},function(t,e,r){"use strict";Object.defineProperty(e,"__esModule",{value:!0}),e.default=[{id:1,path:"/",componentName:"LandingPage",name:"home",title:"Home",include:{grids:[1,6,2]}},{id:2,path:"/about",componentName:"About",name:"about",title:"About",include:{grids:[1,6,2]}},{id:3,path:"/contact",componentName:"Contact",name:"contact",title:"Contact",include:{grids:[1,6,2]}}]},function(t,e,r){"use strict";t.exports={siteId:1,siteName:{casual:"Natural Orchards"},domain:{https:!1,name:"naturalorchards",space:"us",development:{https:!1,name:"http://localhost:8080"},baseTag:""},cache:{updated:{time:1508673731080},storedOnClient:{time:null}},date:{updated:1508673731080,storedOnClient:0},flag:{notificationBar:{contentUpdated:{date:null},closed:{date:null,manually:!1}}}}},function(t,e,r){"use strict";Object.defineProperty(e,"__esModule",{value:!0}),e.default=[{id:1,name:"premium-sun-dried-reaisins",title:"Premium Sun Dried Raisins",shortTitle:"Raisins",tags:["raisin","fruit"],route:{name:"premium-sun-dried-reaisins"},description:"Our Premium Raisins are handpicked with care and sun-dried in trellised\n    vineyards. The exceptional flavor of our Raisins is directly attributable to the\n    unique climate, soil and water runoff from the Hindu Kush mountains – the\n    primary source of irrigation for the pristine orchards from which we source our\n    Premium Raisins.",properties:{ingredients:"Natural Sun-dried Raisins (unsulfured) no preservatives, chemicals\n      or additives.",allergyInformation:"This product was packaged in a facility that handles tree\n      nuts.",storageInformation:"Once opened - recommended to refrigerate.",nutritionFactLabel:{image:{label:"nutrition",url:""}},distributedBy:"Natural Orchards, LLC",madeIn:"Product of Afghanistan"},price:{regular:0,sale:0},availableQuantity:99999,slideShow:[{name:"front",images:[{url:"/assets/images/products/Raisins 1.jpg"},{url:"/assets/images/products/Raisins 2.jpg"},{url:"/assets/images/products/Raisins 3.jpeg"},{url:"/assets/images/products/Raisins 4.jpg"}]}]},{id:2,name:"premium-raw-pistachios",title:"Premium Raw Pistachios",shortTitle:"Pistachios",tags:["pistachio","nut"],route:{name:"premium-raw-pistachios"},description:"Our Premium Pistachios are the finest naturally grown raw pistachios. Our\n    Pistachios are handpicked from wild woodlands, untouched by man and\n    protected by mother nature. The exceptional flavor of our Pistachios is directly\n    attributable to the unique climate, soil and water runoff from the Hindu Kush\n    mountains – the primary source of irrigation for the pristine woodlands from\n    which we source our Premium Pistachios.",properties:{ingredients:"Natural Raw Unsalted Pistachios – (unsulfured) no preservatives,\n      chemicals or additives.",allergyInformation:"This product was packaged in a facility that handles tree\n      nuts.",storageInformation:"Once opened - recommended to refrigerate.",nutritionFactLabel:{image:{label:"nutrition",url:""}},distributedBy:"Natural Orchards, LLC",madeIn:"Product of Afghanistan"},price:{regular:0,sale:0},availableQuantity:99999,slideShow:[{name:"front",images:[{url:"/assets/images/products/Pistachios 1.jpg"},{url:"/assets/images/products/Pistachios 2.jpg"},{url:"/assets/images/products/Pistachios 3.jpeg"},{url:"/assets/images/products/Pistachios 4.jpg"},{url:"/assets/images/products/Pistachios 5.jpg"}]}]},{id:3,name:"premium-sun-dried-mulberries",title:"Premium Sun Dried Mulberries",shortTitle:"Mulberries",tags:["mulberry","fruit"],route:{name:"premium-sun-dried-mulberries"},description:"Our Premium sun-dried Mulberries are the finest naturally grown mulberries – a\n    superfruit packed with vitamin C and antioxidants. Our mulberries are hand-\n    picked from orchards largely untouched by man and protected by mother\n    nature. The exceptional flavor of our Mulberries is directly attributable to the\n    unique climate, soil and water runoff from the Hindu Kush mountains – the\n    primary source of irrigation for the pristine orchards from which we source our Premium Mulberries.",properties:{ingredients:"Natural sun-dried Mulberries – (unsulfured) no preservatives,\n      chemicals or additives.",allergyInformation:"This product was packaged in a facility that handles tree\n      nuts.",storageInformation:"Once opened - recommended to refrigerate.",nutritionFactLabel:{image:{label:"nutrition",url:""}},distributedBy:"Natural Orchards, LLC",madeIn:"Product of Afghanistan"},price:{regular:0,sale:0},availableQuantity:99999,slideShow:[{name:"front",images:[{url:"/assets/images/products/Mulberries 1.jpg"},{url:"/assets/images/products/Mulberries 2.jpg"},{url:"/assets/images/products/Mulberries 3.jpeg"},{url:"/assets/images/products/Mulberries 4.jpg"},{url:"/assets/images/products/Mulberries 5.jpg"}]}]},{id:4,name:"premium-raw-almonds",title:"Premium Raw Almonds",shortTitle:"Almonds",tags:["almond","nut"],route:{name:"premium-raw-almonds"},description:"Our Premium Raw Almonds are the finest naturally grown, soft-shelled\n    almonds. Our Almonds are sun dried without pasteurization, which often results\n    in the reduction of healthy oil content. The exceptional flavor of our Almonds is\n    directly attributable to the unique climate, soil and water runoff from the Hindu\n    Kush mountains – the primary source of irrigation for the pristine orchards from\n    which we source our Premium Almonds.",properties:{ingredients:"Natural Raw Unsalted Almonds – (unsulfured) no preservatives,\n      chemicals or additives.",allergyInformation:"This product was packaged in a facility that handles tree\n      nuts.",storageInformation:"Once opened - recommended to refrigerate.",nutritionFactLabel:{image:{label:"nutrition",url:""}},distributedBy:"Natural Orchards, LLC",madeIn:"Product of Afghanistan"},price:{regular:0,sale:0},availableQuantity:99999,slideShow:[{name:"front",images:[{url:"/assets/images/products/Almonds 1.jpg"},{url:"/assets/images/products/Almonds 2.jpg"},{url:"/assets/images/products/Almonds 3.jpeg"},{url:"/assets/images/products/Almonds 4.jpg"},{url:"/assets/images/products/Almonds 5.jpg"}]}]},{id:5,name:"premium-sun-dried-apricots",title:"Premium Sun Dried Apricots",shortTitle:"Apricots",tags:["apricot","fruit"],route:{name:"premium-sun-dried-apricots"},description:"Our Premium sun-dried Apricots are the finest naturally grown Apricots. Our\n    Premium Apricots are handpicked with care from orchards largely untouched by\n    man and protected by mother nature. The exceptional flavor of our Apricots is\n    directly attributable to the unique climate, soil and water runoff from the Hindu\n    Kush mountains – the primary source of irrigation for the pristine orchards from\n    which we source our Premium Apricots.",properties:{ingredients:"Natural Sun-dried Apricots– (unsulfured) no preservatives,\n      chemicals or additives.",allergyInformation:"This product was packaged in a facility that handles tree\n      nuts.",storageInformation:"Once opened - recommended to refrigerate.",nutritionFactLabel:{image:{label:"nutrition",url:""}},distributedBy:"Natural Orchards, LLC",madeIn:"Product of Afghanistan"},price:{regular:0,sale:0},availableQuantity:99999,slideShow:[{name:"front",images:[{url:"/assets/images/products/Apricots 1.jpg"},{url:"/assets/images/products/Apricots 2.jpg"},{url:"/assets/images/products/Apricots 3.jpg"},{url:"/assets/images/products/Apricots 4.jpg"},{url:"/assets/images/products/Apricots 5.jpg"}]}]},{id:6,name:"premium-raw-walnuts",title:"Premium Raw Walnuts",shortTitle:"Walnuts",tags:["walnut","nut"],route:{name:"premium-raw-walnuts"},description:"Our Premium Raw Walnuts are the finest naturally grown Walnuts. Our sweet\n    and crunchy Walnuts are sun dried without pasteurization, which often results\n    in the reduction of healthy oil content. The exceptional flavor of our Walnuts is\n    directly attributable to the unique climate, soil and water runoff from the Hindu\n    Kush mountains – the primary source of irrigation for the pristine orchards from\n    which we source our Premium Walnuts.",properties:{ingredients:"Natural Raw Unsalted Walnuts – (unsulfured) no preservatives,\n      chemicals or additives.",allergyInformation:"This product was packaged in a facility that handles tree\n      nuts.",storageInformation:"Once opened - recommended to refrigerate.",nutritionFactLabel:{image:{label:"nutrition",url:""}},distributedBy:"Natural Orchards, LLC",madeIn:"Product of Afghanistan"},price:{regular:0,sale:0},availableQuantity:99999,slideShow:[{name:"front",images:[{url:"/assets/images/products/Walnuts 1.jpg"},{url:"/assets/images/products/Walnuts 2.jpg"},{url:"/assets/images/products/Walnuts 3.jpeg"},{url:"/assets/images/products/Walnuts 4.jpg"}]}]}]},function(t,e,r){"use strict";t.exports=[{id:0,content:{url:"/assets/images/banner/Banner 1.jpg"}},{id:1,content:{url:"/assets/images/banner/Banner 2.jpg"}},{id:2,content:{url:"/assets/images/banner/Banner 3.jpg"}},{id:3,content:{url:"/assets/images/banner/Banner 4.jpg"}}]},function(t,e,r){"use strict";t.exports={socialIcons:[{name:"facebook",customName:"Facebook Social Icon With Link",srcUrl:"/assets/social/facebook-mono.svg",linkUrl:"https://www.facebook.com/Natural-Orchards-308949709568249/"},{name:"twitter",customName:"Twitter Social Icon With Link",srcUrl:"/assets/social/twitter-mono.svg",linkUrl:"https://twitter.com/NaturalOrchards"},{name:"Pinterest",customName:"Pinterest Social Icon With Link",srcUrl:"/assets/social/pinterest-mono.svg",linkUrl:"https://www.pinterest.com/naturalorchards/"}]}},function(t,e,r){"use strict";function n(t){return t&&t.__esModule?t:{default:t}}function i(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}Object.defineProperty(e,"__esModule",{value:!0});var o=function(){function t(t,e){for(var r=0;r<e.length;r++){var n=e[r];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(t,n.key,n)}}return function(e,r,n){return r&&t(e.prototype,r),n&&t(e,n),e}}(),a=r(24),s=n(a),u=r(64),l=n(u),c=r(9),d=n(c),m=function(){function t(e){i(this,t),this.cacheLocalStorageName=this.getStorageName(),this.content=e||d.default,this.user={userName:"",password:""},this.dynamicContent={};var r=new Date,n=new Date(r.getTime()-864e5);this.getProperty(this.content,"site.cache.storedOnClient.time",0)<n.getTime()&&this.setProperty(this.content,"site.cache.storedOnClient.time",Date.now()),this.cacheIt()}return o(t,[{key:"setFirebase",value:function(t){this.firebase=t}},{key:"getFirebase",value:function(){return this.firebase}},{key:"setContent",value:function(t){t&&(this.content=t)}},{key:"setProperty",value:function(t,e,r){(0,l.default)(t,e,r),this.content=t}},{key:"getProperty",value:function(t,e,r){var n=t;return"string"==typeof t&&(n=this.content[t]||{}),(0,s.default)(n,e,r)}},{key:"getDynamicContent",value:function(t){return t&&this.dynamicContent[t]?this.dynamicContent[t].content:this.dynamicContent}},{key:"getDynamicContentState",value:function(t){if(t)return this.dynamicContent[t]&&this.dynamicContent[name].status||(this.dynamicContent[name]={content:[],status:"initial"}),this.dynamicContent[name].status}},{key:"getStorageName",value:function(){return"ezLandingSite"}},{key:"cacheIt",value:function(){var t=t||null;t&&(t.setItem(this.cacheLocalStorageName,JSON.stringify(this.content)),t.setItem(this.cacheLocalStorageName+"-Dynamic",JSON.stringify(this.dynamicContent)))}},{key:"getCache",value:function(){var t="",e=e||null;return e&&(t=JSON.parse(e.getItem(this.cacheLocalStorageName))),t}},{key:"getContent",value:function(){return this.content}},{key:"isFresh",value:function(t){if(t===this.content.lastUpdatedDate)return!0}},{key:"getCollection",value:function(t){return this.content[t]}},{key:"getItem",value:function(t,e,r,n){var i=this.content,o=null;if(n){for(var a=Object.keys(i),s=a.length-1,u=0;u<=s;u++){var l=a[u];if(l===t){for(var c=i[l],d=c.length-1,m=0;m<=d;m++){if(!c[m][e]&&m===d){o=this.error(t,e,r,n,"all collection child searched");break}if(c[m][e]===r){o=c[m];break}}break}if(u===s){o=this.error(t,e,r,n,"all nodes searched");break}}return o}return this.error(t,e,r,n)}},{key:"getProductGrid",value:function(t){for(var e=this.content.products,r=0;r<e.length;r++)if(e[r].name===t)return!0,e[r];return null}},{key:"updateNotificationBarStatus",value:function(t){this.content.site.flag.notificationBar=t,this.cacheIt()}},{key:"error",value:function(t,e,r,n,i){return new Error("content not found: logged\n      *"+i+"\n      collection: "+t+"\n      key: "+e+"= "+r+"\n      is array: "+n+"\n    ")}}]),t}();e.default=new m},function(t,e,r){function n(t,e,r){var n=null==t?void 0:i(t,e);return void 0===n?r:n}var i=r(25);t.exports=n},function(t,e,r){function n(t,e){e=i(e,t);for(var r=0,n=e.length;null!=t&&r<n;)t=t[o(e[r++])];return r&&r==n?t:void 0}var i=r(10),o=r(13);t.exports=n},function(t,e,r){function n(t,e){if(i(t))return!1;var r=typeof t;return!("number"!=r&&"symbol"!=r&&"boolean"!=r&&null!=t&&!o(t))||(s.test(t)||!a.test(t)||null!=e&&t in Object(e))}var i=r(3),o=r(4),a=/\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/,s=/^\w*$/;t.exports=n},function(t,e,r){(function(e){var r="object"==typeof e&&e&&e.Object===Object&&e;t.exports=r}).call(e,r(28))},function(t,e){var r;r=function(){return this}();try{r=r||Function("return this")()||(0,eval)("this")}catch(t){"object"==typeof window&&(r=window)}t.exports=r},function(t,e,r){function n(t){var e=a.call(t,u),r=t[u];try{t[u]=void 0;var n=!0}catch(t){}var i=s.call(t);return n&&(e?t[u]=r:delete t[u]),i}var i=r(5),o=Object.prototype,a=o.hasOwnProperty,s=o.toString,u=i?i.toStringTag:void 0;t.exports=n},function(t,e){function r(t){return i.call(t)}var n=Object.prototype,i=n.toString;t.exports=r},function(t,e){function r(t){return null!=t&&"object"==typeof t}t.exports=r},function(t,e,r){var n=r(33),i=/^\./,o=/[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g,a=/\\(\\)?/g,s=n(function(t){var e=[];return i.test(t)&&e.push(""),t.replace(o,function(t,r,n,i){e.push(n?i.replace(a,"$1"):r||t)}),e});t.exports=s},function(t,e,r){function n(t){var e=i(t,function(t){return r.size===o&&r.clear(),t}),r=e.cache;return e}var i=r(34),o=500;t.exports=n},function(t,e,r){function n(t,e){if("function"!=typeof t||null!=e&&"function"!=typeof e)throw new TypeError(o);var r=function(){var n=arguments,i=e?e.apply(this,n):n[0],o=r.cache;if(o.has(i))return o.get(i);var a=t.apply(this,n);return r.cache=o.set(i,a)||o,a};return r.cache=new(n.Cache||i),r}var i=r(35),o="Expected a function";n.Cache=i,t.exports=n},function(t,e,r){function n(t){var e=-1,r=null==t?0:t.length;for(this.clear();++e<r;){var n=t[e];this.set(n[0],n[1])}}var i=r(36),o=r(56),a=r(58),s=r(59),u=r(60);n.prototype.clear=i,n.prototype.delete=o,n.prototype.get=a,n.prototype.has=s,n.prototype.set=u,t.exports=n},function(t,e,r){function n(){this.size=0,this.__data__={hash:new i,map:new(a||o),string:new i}}var i=r(37),o=r(49),a=r(55);t.exports=n},function(t,e,r){function n(t){var e=-1,r=null==t?0:t.length;for(this.clear();++e<r;){var n=t[e];this.set(n[0],n[1])}}var i=r(38),o=r(45),a=r(46),s=r(47),u=r(48);n.prototype.clear=i,n.prototype.delete=o,n.prototype.get=a,n.prototype.has=s,n.prototype.set=u,t.exports=n},function(t,e,r){function n(){this.__data__=i?i(null):{},this.size=0}var i=r(0);t.exports=n},function(t,e,r){function n(t){return!(!a(t)||o(t))&&(i(t)?f:l).test(s(t))}var i=r(40),o=r(41),a=r(8),s=r(43),u=/[\\^$.*+?()[\]{}|]/g,l=/^\[object .+?Constructor\]$/,c=Function.prototype,d=Object.prototype,m=c.toString,p=d.hasOwnProperty,f=RegExp("^"+m.call(p).replace(u,"\\$&").replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g,"$1.*?")+"$");t.exports=n},function(t,e,r){function n(t){if(!o(t))return!1;var e=i(t);return e==s||e==u||e==a||e==l}var i=r(11),o=r(8),a="[object AsyncFunction]",s="[object Function]",u="[object GeneratorFunction]",l="[object Proxy]";t.exports=n},function(t,e,r){function n(t){return!!o&&o in t}var i=r(42),o=function(){var t=/[^.]+$/.exec(i&&i.keys&&i.keys.IE_PROTO||"");return t?"Symbol(src)_1."+t:""}();t.exports=n},function(t,e,r){var n=r(6),i=n["__core-js_shared__"];t.exports=i},function(t,e){function r(t){if(null!=t){try{return i.call(t)}catch(t){}try{return t+""}catch(t){}}return""}var n=Function.prototype,i=n.toString;t.exports=r},function(t,e){function r(t,e){return null==t?void 0:t[e]}t.exports=r},function(t,e){function r(t){var e=this.has(t)&&delete this.__data__[t];return this.size-=e?1:0,e}t.exports=r},function(t,e,r){function n(t){var e=this.__data__;if(i){var r=e[t];return r===o?void 0:r}return s.call(e,t)?e[t]:void 0}var i=r(0),o="__lodash_hash_undefined__",a=Object.prototype,s=a.hasOwnProperty;t.exports=n},function(t,e,r){function n(t){var e=this.__data__;return i?void 0!==e[t]:a.call(e,t)}var i=r(0),o=Object.prototype,a=o.hasOwnProperty;t.exports=n},function(t,e,r){function n(t,e){var r=this.__data__;return this.size+=this.has(t)?0:1,r[t]=i&&void 0===e?o:e,this}var i=r(0),o="__lodash_hash_undefined__";t.exports=n},function(t,e,r){function n(t){var e=-1,r=null==t?0:t.length;for(this.clear();++e<r;){var n=t[e];this.set(n[0],n[1])}}var i=r(50),o=r(51),a=r(52),s=r(53),u=r(54);n.prototype.clear=i,n.prototype.delete=o,n.prototype.get=a,n.prototype.has=s,n.prototype.set=u,t.exports=n},function(t,e){function r(){this.__data__=[],this.size=0}t.exports=r},function(t,e,r){function n(t){var e=this.__data__,r=i(e,t);return!(r<0)&&(r==e.length-1?e.pop():a.call(e,r,1),--this.size,!0)}var i=r(1),o=Array.prototype,a=o.splice;t.exports=n},function(t,e,r){function n(t){var e=this.__data__,r=i(e,t);return r<0?void 0:e[r][1]}var i=r(1);t.exports=n},function(t,e,r){function n(t){return i(this.__data__,t)>-1}var i=r(1);t.exports=n},function(t,e,r){function n(t,e){var r=this.__data__,n=i(r,t);return n<0?(++this.size,r.push([t,e])):r[n][1]=e,this}var i=r(1);t.exports=n},function(t,e,r){var n=r(7),i=r(6),o=n(i,"Map");t.exports=o},function(t,e,r){function n(t){var e=i(this,t).delete(t);return this.size-=e?1:0,e}var i=r(2);t.exports=n},function(t,e){function r(t){var e=typeof t;return"string"==e||"number"==e||"symbol"==e||"boolean"==e?"__proto__"!==t:null===t}t.exports=r},function(t,e,r){function n(t){return i(this,t).get(t)}var i=r(2);t.exports=n},function(t,e,r){function n(t){return i(this,t).has(t)}var i=r(2);t.exports=n},function(t,e,r){function n(t,e){var r=i(this,t),n=r.size;return r.set(t,e),this.size+=r.size==n?0:1,this}var i=r(2);t.exports=n},function(t,e,r){function n(t){return null==t?"":i(t)}var i=r(62);t.exports=n},function(t,e,r){function n(t){if("string"==typeof t)return t;if(a(t))return o(t,n)+"";if(s(t))return c?c.call(t):"";var e=t+"";return"0"==e&&1/t==-u?"-0":e}var i=r(5),o=r(63),a=r(3),s=r(4),u=1/0,l=i?i.prototype:void 0,c=l?l.toString:void 0;t.exports=n},function(t,e){function r(t,e){for(var r=-1,n=null==t?0:t.length,i=Array(n);++r<n;)i[r]=e(t[r],r,t);return i}t.exports=r},function(t,e,r){function n(t,e,r){return null==t?t:i(t,e,r)}var i=r(65);t.exports=n},function(t,e,r){function n(t,e,r,n){if(!s(t))return t;e=o(e,t);for(var l=-1,c=e.length,d=c-1,m=t;null!=m&&++l<c;){var p=u(e[l]),f=r;if(l!=d){var g=m[p];f=n?n(g,p,m):void 0,void 0===f&&(f=s(g)?g:a(e[l+1])?[]:{})}i(m,p,f),m=m[p]}return t}var i=r(66),o=r(10),a=r(69),s=r(8),u=r(13);t.exports=n},function(t,e,r){function n(t,e,r){var n=t[e];s.call(t,e)&&o(n,r)&&(void 0!==r||e in t)||i(t,e,r)}var i=r(67),o=r(12),a=Object.prototype,s=a.hasOwnProperty;t.exports=n},function(t,e,r){function n(t,e,r){"__proto__"==e&&i?i(t,e,{configurable:!0,enumerable:!0,value:r,writable:!0}):t[e]=r}var i=r(68);t.exports=n},function(t,e,r){var n=r(7),i=function(){try{var t=n(Object,"defineProperty");return t({},"",{}),t}catch(t){}}();t.exports=i},function(t,e){function r(t,e){return!!(e=null==e?n:e)&&("number"==typeof t||i.test(t))&&t>-1&&t%1==0&&t<e}var n=9007199254740991,i=/^(?:0|[1-9]\d*)$/;t.exports=r}]));
+"use strict";
+
+
+var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+var _typeof = typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol" ? function (obj) {
+  return typeof obj === "undefined" ? "undefined" : _typeof2(obj);
+} : function (obj) {
+  return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj === "undefined" ? "undefined" : _typeof2(obj);
+};
+
+(function (e, a) {
+  for (var i in a) {
+    e[i] = a[i];
+  }
+})(exports, /******/function (modules) {
+  // webpackBootstrap
+  /******/ // The module cache
+  /******/var installedModules = {};
+  /******/
+  /******/ // The require function
+  /******/function __webpack_require__(moduleId) {
+    /******/
+    /******/ // Check if module is in cache
+    /******/if (installedModules[moduleId]) {
+      /******/return installedModules[moduleId].exports;
+      /******/
+    }
+    /******/ // Create a new module (and put it into the cache)
+    /******/var module = installedModules[moduleId] = {
+      /******/i: moduleId,
+      /******/l: false,
+      /******/exports: {}
+      /******/ };
+    /******/
+    /******/ // Execute the module function
+    /******/modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+    /******/
+    /******/ // Flag the module as loaded
+    /******/module.l = true;
+    /******/
+    /******/ // Return the exports of the module
+    /******/return module.exports;
+    /******/
+  }
+  /******/
+  /******/
+  /******/ // expose the modules object (__webpack_modules__)
+  /******/__webpack_require__.m = modules;
+  /******/
+  /******/ // expose the module cache
+  /******/__webpack_require__.c = installedModules;
+  /******/
+  /******/ // define getter function for harmony exports
+  /******/__webpack_require__.d = function (exports, name, getter) {
+    /******/if (!__webpack_require__.o(exports, name)) {
+      /******/Object.defineProperty(exports, name, {
+        /******/configurable: false,
+        /******/enumerable: true,
+        /******/get: getter
+        /******/ });
+      /******/
+    }
+    /******/
+  };
+  /******/
+  /******/ // getDefaultExport function for compatibility with non-harmony modules
+  /******/__webpack_require__.n = function (module) {
+    /******/var getter = module && module.__esModule ?
+    /******/function getDefault() {
+      return module['default'];
+    } :
+    /******/function getModuleExports() {
+      return module;
+    };
+    /******/__webpack_require__.d(getter, 'a', getter);
+    /******/return getter;
+    /******/
+  };
+  /******/
+  /******/ // Object.prototype.hasOwnProperty.call
+  /******/__webpack_require__.o = function (object, property) {
+    return Object.prototype.hasOwnProperty.call(object, property);
+  };
+  /******/
+  /******/ // __webpack_public_path__
+  /******/__webpack_require__.p = "";
+  /******/
+  /******/ // Load entry module and return exports
+  /******/return __webpack_require__(__webpack_require__.s = 16);
+  /******/
+}(
+/************************************************************************/
+/******/[
+/* 0 */
+/***/function (module, exports, __webpack_require__) {
+
+  var getNative = __webpack_require__(7);
+
+  /* Built-in method references that are verified to be native. */
+  var nativeCreate = getNative(Object, 'create');
+
+  module.exports = nativeCreate;
+
+  /***/
+},
+/* 1 */
+/***/function (module, exports, __webpack_require__) {
+
+  var eq = __webpack_require__(12);
+
+  /**
+   * Gets the index at which the `key` is found in `array` of key-value pairs.
+   *
+   * @private
+   * @param {Array} array The array to inspect.
+   * @param {*} key The key to search for.
+   * @returns {number} Returns the index of the matched value, else `-1`.
+   */
+  function assocIndexOf(array, key) {
+    var length = array.length;
+    while (length--) {
+      if (eq(array[length][0], key)) {
+        return length;
+      }
+    }
+    return -1;
+  }
+
+  module.exports = assocIndexOf;
+
+  /***/
+},
+/* 2 */
+/***/function (module, exports, __webpack_require__) {
+
+  var isKeyable = __webpack_require__(59);
+
+  /**
+   * Gets the data for `map`.
+   *
+   * @private
+   * @param {Object} map The map to query.
+   * @param {string} key The reference key.
+   * @returns {*} Returns the map data.
+   */
+  function getMapData(map, key) {
+    var data = map.__data__;
+    return isKeyable(key) ? data[typeof key == 'string' ? 'string' : 'hash'] : data.map;
+  }
+
+  module.exports = getMapData;
+
+  /***/
+},
+/* 3 */
+/***/function (module, exports) {
+
+  /**
+   * Checks if `value` is classified as an `Array` object.
+   *
+   * @static
+   * @memberOf _
+   * @since 0.1.0
+   * @category Lang
+   * @param {*} value The value to check.
+   * @returns {boolean} Returns `true` if `value` is an array, else `false`.
+   * @example
+   *
+   * _.isArray([1, 2, 3]);
+   * // => true
+   *
+   * _.isArray(document.body.children);
+   * // => false
+   *
+   * _.isArray('abc');
+   * // => false
+   *
+   * _.isArray(_.noop);
+   * // => false
+   */
+  var isArray = Array.isArray;
+
+  module.exports = isArray;
+
+  /***/
+},
+/* 4 */
+/***/function (module, exports, __webpack_require__) {
+
+  var baseGetTag = __webpack_require__(11),
+      isObjectLike = __webpack_require__(33);
+
+  /** `Object#toString` result references. */
+  var symbolTag = '[object Symbol]';
+
+  /**
+   * Checks if `value` is classified as a `Symbol` primitive or object.
+   *
+   * @static
+   * @memberOf _
+   * @since 4.0.0
+   * @category Lang
+   * @param {*} value The value to check.
+   * @returns {boolean} Returns `true` if `value` is a symbol, else `false`.
+   * @example
+   *
+   * _.isSymbol(Symbol.iterator);
+   * // => true
+   *
+   * _.isSymbol('abc');
+   * // => false
+   */
+  function isSymbol(value) {
+    return (typeof value === 'undefined' ? 'undefined' : _typeof(value)) == 'symbol' || isObjectLike(value) && baseGetTag(value) == symbolTag;
+  }
+
+  module.exports = isSymbol;
+
+  /***/
+},
+/* 5 */
+/***/function (module, exports, __webpack_require__) {
+
+  var root = __webpack_require__(6);
+
+  /** Built-in value references. */
+  var _Symbol = root.Symbol;
+
+  module.exports = _Symbol;
+
+  /***/
+},
+/* 6 */
+/***/function (module, exports, __webpack_require__) {
+
+  var freeGlobal = __webpack_require__(29);
+
+  /** Detect free variable `self`. */
+  var freeSelf = (typeof self === 'undefined' ? 'undefined' : _typeof(self)) == 'object' && self && self.Object === Object && self;
+
+  /** Used as a reference to the global object. */
+  var root = freeGlobal || freeSelf || Function('return this')();
+
+  module.exports = root;
+
+  /***/
+},
+/* 7 */
+/***/function (module, exports, __webpack_require__) {
+
+  var baseIsNative = __webpack_require__(41),
+      getValue = __webpack_require__(46);
+
+  /**
+   * Gets the native function at `key` of `object`.
+   *
+   * @private
+   * @param {Object} object The object to query.
+   * @param {string} key The key of the method to get.
+   * @returns {*} Returns the function if it's native, else `undefined`.
+   */
+  function getNative(object, key) {
+    var value = getValue(object, key);
+    return baseIsNative(value) ? value : undefined;
+  }
+
+  module.exports = getNative;
+
+  /***/
+},
+/* 8 */
+/***/function (module, exports) {
+
+  /**
+   * Checks if `value` is the
+   * [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types)
+   * of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
+   *
+   * @static
+   * @memberOf _
+   * @since 0.1.0
+   * @category Lang
+   * @param {*} value The value to check.
+   * @returns {boolean} Returns `true` if `value` is an object, else `false`.
+   * @example
+   *
+   * _.isObject({});
+   * // => true
+   *
+   * _.isObject([1, 2, 3]);
+   * // => true
+   *
+   * _.isObject(_.noop);
+   * // => true
+   *
+   * _.isObject(null);
+   * // => false
+   */
+  function isObject(value) {
+    var type = typeof value === 'undefined' ? 'undefined' : _typeof(value);
+    return value != null && (type == 'object' || type == 'function');
+  }
+
+  module.exports = isObject;
+
+  /***/
+},
+/* 9 */
+/***/function (module, exports, __webpack_require__) {
+
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _assets = __webpack_require__(17);
+
+  var _assets2 = _interopRequireDefault(_assets);
+
+  var _grids = __webpack_require__(18);
+
+  var _grids2 = _interopRequireDefault(_grids);
+
+  var _menus = __webpack_require__(19);
+
+  var _menus2 = _interopRequireDefault(_menus);
+
+  var _pages = __webpack_require__(20);
+
+  var _pages2 = _interopRequireDefault(_pages);
+
+  var _site = __webpack_require__(21);
+
+  var _site2 = _interopRequireDefault(_site);
+
+  var _products = __webpack_require__(22);
+
+  var _products2 = _interopRequireDefault(_products);
+
+  var _banners = __webpack_require__(23);
+
+  var _banners2 = _interopRequireDefault(_banners);
+
+  var _footer = __webpack_require__(24);
+
+  var _footer2 = _interopRequireDefault(_footer);
+
+  function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : { default: obj };
+  }
+
+  exports.default = {
+    //each node is a collection
+    //each collection MUST BE an array
+    //each collection item MUST HAVE itemId (can custom name)
+    site: _site2.default,
+    menus: _menus2.default,
+    pages: _pages2.default,
+    gridContainerProperties: ['abc'],
+    grids: _grids2.default,
+    //? not sure if I ever need assets... since webpack optimize them
+    assets: _assets2.default,
+    products: _products2.default,
+    banners: _banners2.default,
+    footer: _footer2.default
+  };
+
+  /***/
+},
+/* 10 */
+/***/function (module, exports, __webpack_require__) {
+
+  var isArray = __webpack_require__(3),
+      isKey = __webpack_require__(28),
+      stringToPath = __webpack_require__(34),
+      toString = __webpack_require__(63);
+
+  /**
+   * Casts `value` to a path array if it's not one.
+   *
+   * @private
+   * @param {*} value The value to inspect.
+   * @param {Object} [object] The object to query keys on.
+   * @returns {Array} Returns the cast property path array.
+   */
+  function castPath(value, object) {
+    if (isArray(value)) {
+      return value;
+    }
+    return isKey(value, object) ? [value] : stringToPath(toString(value));
+  }
+
+  module.exports = castPath;
+
+  /***/
+},
+/* 11 */
+/***/function (module, exports, __webpack_require__) {
+
+  var _Symbol2 = __webpack_require__(5),
+      getRawTag = __webpack_require__(31),
+      objectToString = __webpack_require__(32);
+
+  /** `Object#toString` result references. */
+  var nullTag = '[object Null]',
+      undefinedTag = '[object Undefined]';
+
+  /** Built-in value references. */
+  var symToStringTag = _Symbol2 ? _Symbol2.toStringTag : undefined;
+
+  /**
+   * The base implementation of `getTag` without fallbacks for buggy environments.
+   *
+   * @private
+   * @param {*} value The value to query.
+   * @returns {string} Returns the `toStringTag`.
+   */
+  function baseGetTag(value) {
+    if (value == null) {
+      return value === undefined ? undefinedTag : nullTag;
+    }
+    return symToStringTag && symToStringTag in Object(value) ? getRawTag(value) : objectToString(value);
+  }
+
+  module.exports = baseGetTag;
+
+  /***/
+},
+/* 12 */
+/***/function (module, exports) {
+
+  /**
+   * Performs a
+   * [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
+   * comparison between two values to determine if they are equivalent.
+   *
+   * @static
+   * @memberOf _
+   * @since 4.0.0
+   * @category Lang
+   * @param {*} value The value to compare.
+   * @param {*} other The other value to compare.
+   * @returns {boolean} Returns `true` if the values are equivalent, else `false`.
+   * @example
+   *
+   * var object = { 'a': 1 };
+   * var other = { 'a': 1 };
+   *
+   * _.eq(object, object);
+   * // => true
+   *
+   * _.eq(object, other);
+   * // => false
+   *
+   * _.eq('a', 'a');
+   * // => true
+   *
+   * _.eq('a', Object('a'));
+   * // => false
+   *
+   * _.eq(NaN, NaN);
+   * // => true
+   */
+  function eq(value, other) {
+    return value === other || value !== value && other !== other;
+  }
+
+  module.exports = eq;
+
+  /***/
+},
+/* 13 */
+/***/function (module, exports, __webpack_require__) {
+
+  var isSymbol = __webpack_require__(4);
+
+  /** Used as references for various `Number` constants. */
+  var INFINITY = 1 / 0;
+
+  /**
+   * Converts `value` to a string key if it's not a string or symbol.
+   *
+   * @private
+   * @param {*} value The value to inspect.
+   * @returns {string|symbol} Returns the key.
+   */
+  function toKey(value) {
+    if (typeof value == 'string' || isSymbol(value)) {
+      return value;
+    }
+    var result = value + '';
+    return result == '0' && 1 / value == -INFINITY ? '-0' : result;
+  }
+
+  module.exports = toKey;
+
+  /***/
+},
+/* 14 */
+/***/function (module, exports, __webpack_require__) {
+
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _AppRoute = __webpack_require__(74);
+
+  var _AppRoute2 = _interopRequireDefault(_AppRoute);
+
+  var _Reference = __webpack_require__(75);
+
+  var _Reference2 = _interopRequireDefault(_Reference);
+
+  var _CollectedBy = __webpack_require__(76);
+
+  var _CollectedBy2 = _interopRequireDefault(_CollectedBy);
+
+  var _CachedContent = __webpack_require__(77);
+
+  var _CachedContent2 = _interopRequireDefault(_CachedContent);
+
+  function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : { default: obj };
+  }
+
+  function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
+    }
+  }
+
+  var Record = function Record() {
+    var id = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '0';
+    var title = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
+    var route = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {
+      appRouteCustom: '',
+      appRouteDefault: '',
+      webRoute: ''
+    };
+    var tags = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : [];
+    var references = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : [];
+    var collectionInfo = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : [];
+
+    _classCallCheck(this, Record);
+
+    var referencesInstance = references.map(function (reference) {
+      return new _Reference2.default(reference.url, reference.note);
+    });
+    var collectionInfoInstance = collectionInfo.map(function (collectedBy) {
+      return new _CollectedBy2.default(collectedBy.userId, collectedBy.date);
+    });
+    return {
+      id: id,
+      content: {
+        title: title,
+        appRoute: new _AppRoute2.default(route.appRouteCustom, route.appRouteDefault),
+        webRoute: route.webRoute,
+        tags: tags,
+        references: referencesInstance,
+        collectionInfo: collectionInfoInstance,
+        cachedContent: {
+          content: '',
+          collectedByUserId: '',
+          collectedTime: 0 //new CachedContent(id)
+        } }
+    };
+  };
+
+  exports.default = Record;
+  ;
+
+  /***/
+},
+/* 15 */
+/***/function (module, exports, __webpack_require__) {
+
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _a = __webpack_require__(78);
+
+  var _a2 = _interopRequireDefault(_a);
+
+  function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : { default: obj };
+  }
+
+  exports.default = {
+    a1: _a2.default
+  };
+
+  /***/
+},
+/* 16 */
+/***/function (module, exports, __webpack_require__) {
+
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.Records = exports.ContentSynchronizer = exports.www___naturalorchards__us = undefined;
+
+  var _www___naturalorchards__us = __webpack_require__(9);
+
+  var _www___naturalorchards__us2 = _interopRequireDefault(_www___naturalorchards__us);
+
+  var _ContentSynchronizer = __webpack_require__(25);
+
+  var _ContentSynchronizer2 = _interopRequireDefault(_ContentSynchronizer);
+
+  var _records = __webpack_require__(72);
+
+  var _records2 = _interopRequireDefault(_records);
+
+  function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : { default: obj };
+  }
+
+  exports.www___naturalorchards__us = _www___naturalorchards__us2.default;
+  exports.ContentSynchronizer = _ContentSynchronizer2.default;
+  exports.Records = _records2.default;
+
+  /***/
+},
+/* 17 */
+/***/function (module, exports, __webpack_require__) {
+
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = [];
+
+  /***/
+},
+/* 18 */
+/***/function (module, exports, __webpack_require__) {
+
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = [
+  //A grid is a component neutral container that can be loaded and become any kind of components!
+  //gridComponent is the recognizer to make that happen!
+  {
+    gridItemId: 1,
+    gridItemName: 'notifcation bar', //name use by the application for search queries
+    gridTypeName: 'custom', //not sure when I will need it, but it definately need to be here, as type is critical for query
+    gridCustomName: 'notification bar', //custom name for user, not used by app
+    gridComponent: 'NotificationBar', //this grid's core component it is loading
+    gridContent: {
+      //all the data that is passing into the component, VERY FLEXIBLE
+      //HOWEVER it MUST FOLLOW THE FOLLOWING ROOT LAYER DATA PATTERN
+      /*
+        {
+          type: 'type name',
+          data: {
+            ....
+          },
+          style: {
+            ....
+          }
+        }
+      */
+      type: 'textWithBarLink',
+      data: {
+        text: 'we are in opening sale!',
+        link: 'http://naturalorchards.us',
+        showAsDefault: true
+      },
+      style: [//MANDATORY: needed for inside component style
+      'center-text']
+    },
+    gridCustomStyle: {},
+    gridStyle: [], //Styles apply to the grid itself
+    gridResponsiveProperties: { //How grid itself will response to different screen sizes
+      standard: 12,
+      xs: 12,
+      sm: 12,
+      md: 12,
+      lg: 12,
+      xl: 12,
+      offset: {
+        standard: '',
+        sm: '',
+        md: '',
+        lg: '',
+        xl: ''
+      }
+    }
+  }, {
+    gridItemId: 2,
+    gridItemName: 'main menu bar',
+    gridTypeName: 'menu',
+    gridCustomName: 'menu bar',
+    gridComponent: 'MenuBar',
+    gridContent: {
+      menuId: 1,
+      menuType: 'custom'
+    },
+    gridCustomStyle: {
+      container: {
+        inlineStyles: {
+          marginTop: '20px',
+          marginBottom: '20px'
+        }
+      }
+    },
+    gridStyle: [],
+    gridResponsiveProperties: {
+      standard: 12,
+      xs: 12,
+      sm: 12,
+      md: 12,
+      lg: 12,
+      xl: 12,
+      offset: {
+        standard: '',
+        sm: '',
+        md: '',
+        lg: '',
+        xl: ''
+      }
+    }
+  }, {
+    gridItemId: 3,
+    gridItemName: 'specific product',
+    gridTypeName: 'specific product',
+    gridCustomName: 'specific product',
+    gridComponent: 'ProductDisplay',
+    gridContent: {
+      productName: 'product',
+      style: []
+    },
+    gridCustomStyle: {},
+    gridStyle: [],
+    gridResponsiveProperties: {
+      standard: 12,
+      xs: 12,
+      sm: 12,
+      md: 12,
+      lg: 6,
+      xl: 6,
+      offset: {
+        standard: '',
+        sm: '',
+        md: '',
+        lg: 3,
+        xl: 3
+      }
+    }
+  }, {
+    gridItemId: 4,
+    gridItemName: 'main footer',
+    gridTypeName: 'menu',
+    gridCustomName: 'footer bar',
+    gridComponent: 'FooterBar',
+    gridContent: {
+      data: {}
+    },
+    gridCustomStyle: {},
+    gridStyle: [],
+    gridResponsiveProperties: {
+      standard: 12,
+      xs: 12,
+      sm: 12,
+      md: 12,
+      lg: 12,
+      xl: 12,
+      offset: {
+        standard: '',
+        sm: '',
+        md: '',
+        lg: '',
+        xl: ''
+      }
+    }
+  }, {
+    gridItemId: 5,
+    gridItemName: 'product listing',
+    gridTypeName: 'listing',
+    gridCustomName: 'product listing',
+    gridComponent: 'Listing',
+    gridContent: {
+      data: {
+        name: 'products',
+        listingItemComponentName: 'ListingItem',
+        listingItemResponsiveProperties: {
+          standard: 12,
+          xs: 12,
+          sm: 12,
+          md: 4,
+          lg: 4,
+          xl: 4,
+          offset: {
+            standard: '',
+            sm: '',
+            md: '',
+            lg: '',
+            xl: ''
+          }
+        },
+        listingCustomStyle: {
+          container: {
+            inlineStyles: {
+              marginTop: '1%',
+              marginBottom: '1%'
+            }
+          }
+        },
+        listingItemStyle: ['listingItem__shell']
+      }
+    },
+    gridCustomStyle: {},
+    gridStyle: [],
+    gridResponsiveProperties: {
+      standard: 10,
+      xs: 10,
+      sm: 10,
+      md: 10,
+      lg: 10,
+      xl: 10,
+      offset: {
+        standard: 1,
+        xs: 1,
+        sm: 1,
+        md: 1,
+        lg: 1,
+        xl: 1
+      }
+    }
+  }, {
+    gridItemId: 6,
+    gridItemName: 'tags menu bar',
+    gridTypeName: 'menu',
+    gridCustomName: 'tags menu bar',
+    gridComponent: 'MenuBar',
+    gridContent: {
+      menuId: 2,
+      menuType: 'collection'
+    },
+    gridCustomStyle: {
+      container: {
+        inlineStyles: {
+          marginTop: '20px',
+          marginBottom: '20px'
+        }
+      }
+    },
+    gridStyle: [],
+    gridResponsiveProperties: {
+      standard: 12,
+      xs: 12,
+      sm: 12,
+      md: 12,
+      lg: 12,
+      xl: 12,
+      offset: {
+        standard: '',
+        sm: '',
+        md: '',
+        lg: '',
+        xl: ''
+      }
+    }
+  }, {
+    gridItemId: 7,
+    gridItemName: 'specific tag product listing',
+    gridTypeName: 'listing',
+    gridCustomName: 'specific tag product listing',
+    gridComponent: 'Listing',
+    gridContent: {
+      data: {
+        name: 'products',
+        type: 'filter',
+        //filterData: this need to be ALWAYS DYNAMICALLY INSERTED TO BE EFFECTIVE!
+        listingItemComponentName: 'ListingItem',
+        listingItemResponsiveProperties: {
+          standard: 12,
+          xs: 12,
+          sm: 12,
+          md: 4,
+          lg: 4,
+          xl: 4,
+          offset: {
+            standard: '',
+            sm: '',
+            md: '',
+            lg: '',
+            xl: ''
+          }
+        },
+        listingItemStyle: ['listingItem__shell']
+      }
+    },
+    gridCustomStyle: {},
+    gridStyle: [],
+    gridResponsiveProperties: {
+      standard: 10,
+      xs: 10,
+      sm: 10,
+      md: 10,
+      lg: 10,
+      xl: 10,
+      offset: {
+        standard: 1,
+        xs: 1,
+        sm: 1,
+        md: 1,
+        lg: 1,
+        xl: 1
+      }
+    }
+  }, {
+    gridItemId: 8,
+    gridItemName: 'bread crumb',
+    gridTypeName: 'custom',
+    gridCustomName: 'bread crumb',
+    gridComponent: 'BreadCrumb',
+    gridContent: {
+      data: {
+        //dynamically generated
+      },
+      style: {
+        container: {
+          inlineStyles: {
+            marginTop: '20px'
+          }
+
+        }
+      }
+    },
+    gridCustomStyle: {
+      // container: {
+      //   inlineStyles: {
+
+      //   }
+      // }
+    },
+    gridStyle: [],
+    gridResponsiveProperties: {
+      standard: 12,
+      xs: 12,
+      sm: 12,
+      md: 12,
+      lg: 12,
+      xl: 12,
+      offset: {
+        standard: '',
+        sm: '',
+        md: '',
+        lg: '',
+        xl: ''
+      }
+    }
+  }, {
+    gridItemId: 9,
+    gridItemName: 'logo bar',
+    gridTypeName: 'custom',
+    gridCustomName: 'logo bar',
+    gridComponent: 'LogoBar',
+    gridContent: {
+      data: {
+        logo: {
+          image: {
+            url: '/assets/images/logo.svg'
+          }
+        }
+      }
+    },
+    gridCustomStyle: {},
+    gridStyle: [],
+    gridResponsiveProperties: {
+      standard: 12,
+      xs: 12,
+      sm: 12,
+      md: 12,
+      lg: 12,
+      xl: 12,
+      offset: {
+        standard: '',
+        sm: '',
+        md: '',
+        lg: '',
+        xl: ''
+      }
+    }
+  }, {
+    gridItemId: 10,
+    gridItemName: 'all products direct link menu bar',
+    gridTypeName: 'menu',
+    gridCustomName: 'all products direct link menu bar',
+    gridComponent: 'MenuBar',
+    gridContent: {
+      menuId: 4,
+      menuType: 'collection'
+    },
+    gridCustomStyle: {
+      container: {
+        inlineStyles: {
+          marginTop: '20px',
+          marginBottom: '20px'
+        }
+      }
+    },
+    gridStyle: [],
+    gridResponsiveProperties: {
+      standard: 12,
+      xs: 12,
+      sm: 12,
+      md: 12,
+      lg: 12,
+      xl: 12,
+      offset: {
+        standard: '',
+        sm: '',
+        md: '',
+        lg: '',
+        xl: ''
+      }
+    }
+  }];
+
+  /***/
+},
+/* 19 */
+/***/function (module, exports, __webpack_require__) {
+
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = [{
+    menuId: 1,
+    menuLastUpdateDate: 1498688605759,
+    menuName: 'primary',
+    menuType: 'custom',
+    menuConfig: {
+      position: 'center'
+    },
+    menuItems: [{
+      menuItemId: 1,
+      type: 'filter',
+      style: [],
+      name: 'home',
+      componentName: 'MenuBarItem',
+      responsiveProperties: {
+        xs: 12,
+        sm: 1,
+        md: 1,
+        lg: 1,
+        xl: 1,
+        offset: {
+          standard: '',
+          sm: '',
+          md: '',
+          lg: '',
+          xl: ''
+        }
+      },
+      content: {
+        type: 'products',
+        name: 'all',
+        query: [
+          /*{
+            paramName: 'tag',
+            paramValue: '',
+          },*/
+        ],
+        link: {
+          name: 'home'
+        }
+      }
+    }, {
+      menuItemId: 2,
+      type: 'page',
+      style: [],
+      name: '',
+      componentName: 'MenuBarItem',
+      responsiveProperties: {
+        xs: 12,
+        sm: 1,
+        md: 1,
+        lg: 1,
+        xl: 1,
+        offset: {
+          standard: '',
+          sm: '',
+          md: '',
+          lg: '',
+          xl: ''
+        }
+      },
+      content: {
+        pageId: 2
+      }
+    }, {
+      menuItemId: 3,
+      type: 'page',
+      style: [],
+      name: '',
+      componentName: 'MenuBarItem',
+      responsiveProperties: {
+        xs: 12,
+        sm: 1,
+        md: 1,
+        lg: 1,
+        xl: 1,
+        offset: {
+          standard: '',
+          sm: '',
+          md: '',
+          lg: '',
+          xl: ''
+        }
+      },
+      content: {
+        pageId: 3
+      }
+    }]
+  }, {
+    menuId: 2,
+    menuLastUpdateDate: 1498688605759,
+    menuName: 'tags',
+    menuType: 'collection',
+    menuConfig: {
+      collectionName: 'products',
+      doNotInclude: {
+        collectionKeys: []
+      },
+      position: 'center',
+      type: 'collectionItems',
+      componentName: 'MenuBarItem',
+      menuItemId: 4,
+      menuItemType: 'filter',
+      menuItemStyle: [],
+      menuItemResponsiveProperties: {
+        xs: 12,
+        sm: 1,
+        md: 1,
+        lg: 1,
+        xl: 1,
+        offset: {
+          standard: '',
+          sm: '',
+          md: '',
+          lg: '',
+          xl: ''
+        }
+      }
+    }
+  }, {
+    menuId: 3,
+    menuLastUpdateDate: 1498688605759,
+    menuName: 'products',
+    menuType: 'collection',
+    menuConfig: {
+      collectionName: 'products',
+      doNotInclude: {
+        collectionKeys: []
+      },
+      position: 'center',
+      type: 'collectionItems',
+      componentName: '',
+      menuItemId: 4,
+      menuItemType: 'filter',
+      menuItemStyle: [],
+      menuItemResponsiveProperties: {}
+    }
+  }, {
+    menuId: 4,
+    menuLastUpdateDate: 1498688605759,
+    menuName: 'products-all-items',
+    menuType: 'collection',
+    menuConfig: {
+      collectionName: 'products',
+      doNotInclude: {
+        collectionKeys: []
+      },
+      position: 'center',
+      type: 'collectionItems',
+      componentName: 'MenuBarItem',
+      menuItemId: 4,
+      menuItemType: 'filter',
+      menuItemStyle: [],
+      menuItemResponsiveProperties: {
+        xs: 12,
+        sm: 1,
+        md: 1,
+        lg: 1,
+        xl: 1,
+        offset: {
+          standard: '',
+          sm: '',
+          md: '',
+          lg: '',
+          xl: ''
+        }
+      }
+    }
+  }];
+
+  /***/
+},
+/* 20 */
+/***/function (module, exports, __webpack_require__) {
+
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = [
+  /*
+    Features
+    - referencing grid Id for content
+    Each page not necessarily a component, but a collection of various grid items!
+    BUT its also allowed if its more of a specific component thing that generate grids in its own way.
+  */
+
+  {
+    id: 1,
+    path: '/',
+    componentName: 'LandingPage',
+    name: 'home',
+    title: 'Home',
+    //may have alternateTitle later, for menu reference purpose
+    include: {
+      grids: [1, 6, 2]
+    }
+  }, {
+    id: 2,
+    path: '/about',
+    componentName: 'About',
+    name: 'about',
+    title: 'About',
+    include: {
+      grids: [1, 6, 2]
+    }
+  }, {
+    id: 3,
+    path: '/contact',
+    componentName: 'Contact',
+    name: 'contact',
+    title: 'Contact',
+    include: {
+      grids: [1, 6, 2]
+    }
+  }];
+
+  /***/
+},
+/* 21 */
+/***/function (module, exports, __webpack_require__) {
+
+  "use strict";
+
+  module.exports = {
+    siteId: 1,
+    siteName: {
+      casual: 'Natural Orchards'
+    },
+    domain: {
+      https: false,
+      name: 'naturalorchards',
+      space: 'us',
+      development: {
+        https: false,
+        name: 'http://localhost:8080'
+      },
+      baseTag: ''
+    },
+    cache: {
+      updated: {
+        time: 1508673731080
+      },
+      storedOnClient: {
+        time: null
+      }
+    },
+    date: { //deprecated, use cache->updated->date instead
+      updated: 1508673731080, //unix value
+      storedOnClient: 0
+    },
+    flag: {
+      notificationBar: {
+        contentUpdated: {
+          date: null
+        },
+        closed: {
+          date: null,
+          manually: false
+        }
+      }
+    }
+
+  };
+
+  /***/
+},
+/* 22 */
+/***/function (module, exports, __webpack_require__) {
+
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  ///NOTE: each item will have a dynamically injected attribute collectionName which equal 'products'
+
+  exports.default = [{
+    id: 1,
+    name: 'premium-sun-dried-reaisins',
+    title: 'Premium Sun Dried Raisins',
+    shortTitle: 'Raisins',
+    tags: ['raisin', 'fruit'],
+    route: {
+      name: 'premium-sun-dried-reaisins'
+    },
+    description: "Our Premium Raisins are handpicked with care and sun-dried in trellised\n    vineyards. The exceptional flavor of our Raisins is directly attributable to the\n    unique climate, soil and water runoff from the Hindu Kush mountains \u2013 the\n    primary source of irrigation for the pristine orchards from which we source our\n    Premium Raisins.",
+    properties: {
+      ingredients: 'Natural Sun-dried Raisins (unsulfured) no preservatives, chemicals\n      or additives.',
+      allergyInformation: 'This product was packaged in a facility that handles tree\n      nuts.',
+      storageInformation: 'Once opened - recommended to refrigerate.',
+      nutritionFactLabel: {
+        image: {
+          label: 'nutrition',
+          url: ''
+        }
+      },
+      distributedBy: 'Natural Orchards, LLC',
+      madeIn: 'Product of Afghanistan'
+    },
+    price: {
+      regular: 0,
+      sale: 0
+    },
+    availableQuantity: 99999, //99999 means unlimited
+    slideShow: [{
+      name: 'front',
+      images: [{
+        url: '/assets/images/products/Raisins 1.jpg'
+      }, {
+        url: '/assets/images/products/Raisins 2.jpg'
+      }, {
+        url: '/assets/images/products/Raisins 3.jpeg'
+      }, {
+        url: '/assets/images/products/Raisins 4.jpg'
+      }]
+    }]
+  }, {
+    id: 2,
+    name: 'premium-raw-pistachios',
+    title: 'Premium Raw Pistachios',
+    shortTitle: 'Pistachios',
+    tags: ['pistachio', 'nut'],
+    route: {
+      name: 'premium-raw-pistachios'
+    },
+    description: "Our Premium Pistachios are the finest naturally grown raw pistachios. Our\n    Pistachios are handpicked from wild woodlands, untouched by man and\n    protected by mother nature. The exceptional flavor of our Pistachios is directly\n    attributable to the unique climate, soil and water runoff from the Hindu Kush\n    mountains \u2013 the primary source of irrigation for the pristine woodlands from\n    which we source our Premium Pistachios.",
+    properties: {
+      ingredients: "Natural Raw Unsalted Pistachios \u2013 (unsulfured) no preservatives,\n      chemicals or additives.",
+      allergyInformation: 'This product was packaged in a facility that handles tree\n      nuts.',
+      storageInformation: 'Once opened - recommended to refrigerate.',
+      nutritionFactLabel: {
+        image: {
+          label: 'nutrition',
+          url: ''
+        }
+      },
+      distributedBy: 'Natural Orchards, LLC',
+      madeIn: 'Product of Afghanistan'
+    },
+    price: {
+      regular: 0,
+      sale: 0
+    },
+    availableQuantity: 99999, //99999 means unlimited
+    slideShow: [{
+      name: 'front',
+      images: [{
+        url: '/assets/images/products/Pistachios 1.jpg'
+      }, {
+        url: '/assets/images/products/Pistachios 2.jpg'
+      }, {
+        url: '/assets/images/products/Pistachios 3.jpeg'
+      }, {
+        url: '/assets/images/products/Pistachios 4.jpg'
+      }, {
+        url: '/assets/images/products/Pistachios 5.jpg'
+      }]
+    }]
+  }, {
+    id: 3,
+    name: 'premium-sun-dried-mulberries',
+    title: 'Premium Sun Dried Mulberries',
+    shortTitle: 'Mulberries',
+    tags: ['mulberry', 'fruit'],
+    route: {
+      name: 'premium-sun-dried-mulberries'
+    },
+    description: "Our Premium sun-dried Mulberries are the finest naturally grown mulberries \u2013 a\n    superfruit packed with vitamin C and antioxidants. Our mulberries are hand-\n    picked from orchards largely untouched by man and protected by mother\n    nature. The exceptional flavor of our Mulberries is directly attributable to the\n    unique climate, soil and water runoff from the Hindu Kush mountains \u2013 the\n    primary source of irrigation for the pristine orchards from which we source our Premium Mulberries.",
+    properties: {
+      ingredients: "Natural sun-dried Mulberries \u2013 (unsulfured) no preservatives,\n      chemicals or additives.",
+      allergyInformation: 'This product was packaged in a facility that handles tree\n      nuts.',
+      storageInformation: 'Once opened - recommended to refrigerate.',
+      nutritionFactLabel: {
+        image: {
+          label: 'nutrition',
+          url: ''
+        }
+      },
+      distributedBy: 'Natural Orchards, LLC',
+      madeIn: 'Product of Afghanistan'
+    },
+    price: {
+      regular: 0,
+      sale: 0
+    },
+    availableQuantity: 99999, //99999 means unlimited
+    slideShow: [{
+      name: 'front',
+      images: [{
+        url: '/assets/images/products/Mulberries 1.jpg'
+      }, {
+        url: '/assets/images/products/Mulberries 2.jpg'
+      }, {
+        url: '/assets/images/products/Mulberries 3.jpeg'
+      }, {
+        url: '/assets/images/products/Mulberries 4.jpg'
+      }, {
+        url: '/assets/images/products/Mulberries 5.jpg'
+      }]
+    }]
+  }, {
+    id: 4,
+    name: 'premium-raw-almonds',
+    title: 'Premium Raw Almonds',
+    shortTitle: 'Almonds',
+    tags: ['almond', 'nut'],
+    route: {
+      name: 'premium-raw-almonds'
+    },
+    description: "Our Premium Raw Almonds are the finest naturally grown, soft-shelled\n    almonds. Our Almonds are sun dried without pasteurization, which often results\n    in the reduction of healthy oil content. The exceptional flavor of our Almonds is\n    directly attributable to the unique climate, soil and water runoff from the Hindu\n    Kush mountains \u2013 the primary source of irrigation for the pristine orchards from\n    which we source our Premium Almonds.",
+    properties: {
+      ingredients: "Natural Raw Unsalted Almonds \u2013 (unsulfured) no preservatives,\n      chemicals or additives.",
+      allergyInformation: 'This product was packaged in a facility that handles tree\n      nuts.',
+      storageInformation: 'Once opened - recommended to refrigerate.',
+      nutritionFactLabel: {
+        image: {
+          label: 'nutrition',
+          url: ''
+        }
+      },
+      distributedBy: 'Natural Orchards, LLC',
+      madeIn: 'Product of Afghanistan'
+    },
+    price: {
+      regular: 0,
+      sale: 0
+    },
+    availableQuantity: 99999, //99999 means unlimited
+    slideShow: [{
+      name: 'front',
+      images: [{
+        url: '/assets/images/products/Almonds 1.jpg'
+      }, {
+        url: '/assets/images/products/Almonds 2.jpg'
+      }, {
+        url: '/assets/images/products/Almonds 3.jpeg'
+      }, {
+        url: '/assets/images/products/Almonds 4.jpg'
+      }, {
+        url: '/assets/images/products/Almonds 5.jpg'
+      }]
+    }]
+  }, {
+    id: 5,
+    name: 'premium-sun-dried-apricots',
+    title: 'Premium Sun Dried Apricots',
+    shortTitle: 'Apricots',
+    tags: ['apricot', 'fruit'],
+    route: {
+      name: 'premium-sun-dried-apricots'
+    },
+    description: "Our Premium sun-dried Apricots are the finest naturally grown Apricots. Our\n    Premium Apricots are handpicked with care from orchards largely untouched by\n    man and protected by mother nature. The exceptional flavor of our Apricots is\n    directly attributable to the unique climate, soil and water runoff from the Hindu\n    Kush mountains \u2013 the primary source of irrigation for the pristine orchards from\n    which we source our Premium Apricots.",
+    properties: {
+      ingredients: "Natural Sun-dried Apricots\u2013 (unsulfured) no preservatives,\n      chemicals or additives.",
+      allergyInformation: 'This product was packaged in a facility that handles tree\n      nuts.',
+      storageInformation: 'Once opened - recommended to refrigerate.',
+      nutritionFactLabel: {
+        image: {
+          label: 'nutrition',
+          url: ''
+        }
+      },
+      distributedBy: 'Natural Orchards, LLC',
+      madeIn: 'Product of Afghanistan'
+    },
+    price: {
+      regular: 0,
+      sale: 0
+    },
+    availableQuantity: 99999, //99999 means unlimited
+    slideShow: [{
+      name: 'front',
+      images: [{
+        url: '/assets/images/products/Apricots 1.jpg'
+      }, {
+        url: '/assets/images/products/Apricots 2.jpg'
+      }, {
+        url: '/assets/images/products/Apricots 3.jpg'
+      }, {
+        url: '/assets/images/products/Apricots 4.jpg'
+      }, {
+        url: '/assets/images/products/Apricots 5.jpg'
+      }]
+    }]
+  }, {
+    id: 6,
+    name: 'premium-raw-walnuts',
+    title: 'Premium Raw Walnuts',
+    shortTitle: 'Walnuts',
+    tags: ['walnut', 'nut'],
+    route: {
+      name: 'premium-raw-walnuts'
+    },
+    description: "Our Premium Raw Walnuts are the finest naturally grown Walnuts. Our sweet\n    and crunchy Walnuts are sun dried without pasteurization, which often results\n    in the reduction of healthy oil content. The exceptional flavor of our Walnuts is\n    directly attributable to the unique climate, soil and water runoff from the Hindu\n    Kush mountains \u2013 the primary source of irrigation for the pristine orchards from\n    which we source our Premium Walnuts.",
+    properties: {
+      ingredients: "Natural Raw Unsalted Walnuts \u2013 (unsulfured) no preservatives,\n      chemicals or additives.",
+      allergyInformation: 'This product was packaged in a facility that handles tree\n      nuts.',
+      storageInformation: 'Once opened - recommended to refrigerate.',
+      nutritionFactLabel: {
+        image: {
+          label: 'nutrition',
+          url: ''
+        }
+      },
+      distributedBy: 'Natural Orchards, LLC',
+      madeIn: 'Product of Afghanistan'
+    },
+    price: {
+      regular: 0,
+      sale: 0
+    },
+    availableQuantity: 99999, //99999 means unlimited
+    slideShow: [{
+      name: 'front',
+      images: [{
+        url: '/assets/images/products/Walnuts 1.jpg'
+      }, {
+        url: '/assets/images/products/Walnuts 2.jpg'
+      }, {
+        url: '/assets/images/products/Walnuts 3.jpeg'
+      }, {
+        url: '/assets/images/products/Walnuts 4.jpg'
+      }]
+    }]
+  }];
+
+  /***/
+},
+/* 23 */
+/***/function (module, exports, __webpack_require__) {
+
+  "use strict";
+
+  module.exports = [{
+    id: 0,
+    content: {
+      url: '/assets/images/banner/Banner 1.jpg'
+    }
+  }, {
+    id: 1,
+    content: {
+      url: '/assets/images/banner/Banner 2.jpg'
+    }
+  }, {
+    id: 2,
+    content: {
+      url: '/assets/images/banner/Banner 3.jpg'
+    }
+  }, {
+    id: 3,
+    content: {
+      url: '/assets/images/banner/Banner 4.jpg'
+    }
+  }];
+
+  /***/
+},
+/* 24 */
+/***/function (module, exports, __webpack_require__) {
+
+  "use strict";
+
+  module.exports = {
+    socialIcons: [{
+      name: 'facebook',
+      customName: 'Facebook Social Icon With Link',
+      srcUrl: '/assets/social/facebook-mono.svg',
+      linkUrl: 'https://www.facebook.com/Natural-Orchards-308949709568249/'
+    }, {
+      name: 'twitter',
+      customName: 'Twitter Social Icon With Link',
+      srcUrl: '/assets/social/twitter-mono.svg',
+      linkUrl: 'https://twitter.com/NaturalOrchards'
+    }, {
+      name: 'Pinterest',
+      customName: 'Pinterest Social Icon With Link',
+      srcUrl: '/assets/social/pinterest-mono.svg',
+      linkUrl: 'https://www.pinterest.com/naturalorchards/'
+    }]
+  };
+
+  /***/
+},
+/* 25 */
+/***/function (module, exports, __webpack_require__) {
+
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _createClass = function () {
+    function defineProperties(target, props) {
+      for (var i = 0; i < props.length; i++) {
+        var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
+      }
+    }return function (Constructor, protoProps, staticProps) {
+      if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
+    };
+  }();
+
+  var _get = __webpack_require__(26);
+
+  var _get2 = _interopRequireDefault(_get);
+
+  var _set = __webpack_require__(66);
+
+  var _set2 = _interopRequireDefault(_set);
+
+  var _www___naturalorchards__us = __webpack_require__(9);
+
+  var _www___naturalorchards__us2 = _interopRequireDefault(_www___naturalorchards__us);
+
+  function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : { default: obj };
+  }
+
+  function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
+    }
+  }
+
+  var ContentSynchronizer = function () {
+    function ContentSynchronizer(content) {
+      _classCallCheck(this, ContentSynchronizer);
+
+      this.cacheLocalStorageName = this.getStorageName();
+      this.content = content || _www___naturalorchards__us2.default;
+      this.user = {
+        userName: '',
+        password: ''
+      };
+      this.dynamicContent = {};
+      //TODO - enable when go prod
+      //TODO - not yet, has cache problem when there is old cache
+      //        MUST need old cache clean up logic!!!! BEFORE app is even started!!!!!
+      // this.content =
+      //   localStorage.getItem(this.cacheLocalStorageName)
+      //   ? this.getCache()
+      //   : ContentCache || content || {};
+
+      //console.log(this.getProperty(this.content, 'site.cache.updated.time'));
+      //check if client cache is stail or not and update cache accordingly
+      var today = new Date();
+      var yesterday = new Date(today.getTime() - 24 * 60 * 60 * 1000);
+      var storedOnClientTime = this.getProperty(this.content, 'site.cache.storedOnClient.time', 0);
+      var yesterdayTime = yesterday.getTime();
+      if (storedOnClientTime < yesterdayTime) {
+        this.setProperty(this.content, 'site.cache.storedOnClient.time', Date.now());
+        //also make async call to update this.content!
+      }
+
+      //try get from localstorage if its fresh, meaning within 1 day
+      //if  localstorage not available, get data from memory / http call
+      //if  localstorage data empty or http call failed,
+      //fall back to stale content local storage cache,
+      //if there is one, if not, then redirect to a 404 page
+      this.cacheIt();
+    }
+
+    _createClass(ContentSynchronizer, [{
+      key: 'setFirebase',
+      value: function setFirebase(firebase) {
+        this.firebase = firebase;
+      }
+    }, {
+      key: 'getFirebase',
+      value: function getFirebase() {
+        return this.firebase;
+      }
+    }, {
+      key: 'setContent',
+      value: function setContent(newContent) {
+        if (!newContent) return;
+        this.content = newContent;
+      }
+    }, {
+      key: 'setProperty',
+      value: function setProperty(collection, propertyChain, value) {
+        (0, _set2.default)(collection, propertyChain, value);
+        this.content = collection;
+      }
+    }, {
+      key: 'getProperty',
+      value: function getProperty(collection, propertyChain, defaultValue) {
+        var collectionObject = collection;
+        if (typeof collection === 'string') {
+          collectionObject = this.content[collection] || {};
+        }
+        return (0, _get2.default)(collectionObject, propertyChain, defaultValue);
+      }
+    }, {
+      key: 'getDynamicContent',
+      value: function getDynamicContent(itemName) {
+        if (!itemName || !this.dynamicContent[itemName]) return this.dynamicContent;
+        return this.dynamicContent[itemName].content;
+      }
+    }, {
+      key: 'getDynamicContentState',
+      value: function getDynamicContentState(itemName) {
+        if (!itemName) {
+          return;
+        }
+        if (!this.dynamicContent[itemName] || !this.dynamicContent[name].status) {
+          this.dynamicContent[name] = { content: [], status: 'initial' };
+        }
+        return this.dynamicContent[name].status;
+      }
+    }, {
+      key: 'getStorageName',
+      value: function getStorageName() {
+        // let windowInBrowser = window || null;
+        // const domain = windowInBrowser
+        //   ? windowInBrowser.location.hostname
+        //   : 'localhost';
+        //'ezLandingSite' + domain.name
+        // return `ezLandingSite${domain}`;
+        return 'ezLandingSite';
+      }
+    }, {
+      key: 'cacheIt',
+      value: function cacheIt() {
+        var localStorage = localStorage || null;
+        if (localStorage) {
+          localStorage.setItem(this.cacheLocalStorageName, JSON.stringify(this.content));
+          localStorage.setItem(this.cacheLocalStorageName + '-Dynamic', JSON.stringify(this.dynamicContent));
+        }
+      }
+    }, {
+      key: 'getCache',
+      value: function getCache() {
+        //console.log('using cache'); //eslint-disable-line
+        var cache = '';
+        var localStorage = localStorage || null;
+        if (localStorage) {
+          cache = JSON.parse(localStorage.getItem(this.cacheLocalStorageName));
+        }
+        return cache;
+      }
+    }, {
+      key: 'getContent',
+      value: function getContent() {
+        return this.content;
+      }
+    }, {
+      key: 'isFresh',
+      value: function isFresh(date) {
+        if (date === this.content.lastUpdatedDate) {
+          return true;
+        }
+      }
+    }, {
+      key: 'getCollection',
+      value: function getCollection(collectionName) {
+        return this.content[collectionName];
+      }
+    }, {
+      key: 'getItem',
+      value: function getItem(collectionName, keyName, keyValue, isArray) {
+        var content = this.content;
+        var result = null;
+        //let found = false;
+        if (isArray) {
+          var contentArray = Object.keys(content);
+          var contentLength = contentArray.length - 1;
+          for (var i = 0; i <= contentLength; i++) {
+            var collectionKeyName = contentArray[i];
+            if (collectionKeyName === collectionName) {
+              var collection = content[collectionKeyName];
+              var collectionLength = collection.length - 1;
+              for (var ci = 0; ci <= collectionLength; ci++) {
+                if (!collection[ci][keyName] && ci === collectionLength) {
+                  result = this.error(collectionName, keyName, keyValue, isArray, 'all collection child searched');
+                  break;
+                } else if (collection[ci][keyName] === keyValue) {
+                  //console.log('child found');
+                  result = collection[ci];
+                  break;
+                }
+              }
+              break;
+            } else if (i === contentLength) {
+              result = this.error(collectionName, keyName, keyValue, isArray, 'all nodes searched');
+              break;
+            }
+          }
+          return result;
+        } else {
+          return this.error(collectionName, keyName, keyValue, isArray);
+        }
+      }
+    }, {
+      key: 'getProductGrid',
+      value: function getProductGrid(productName) {
+        var products = this.content.products;
+        var isMatched = false;
+        for (var i = 0; i < products.length; i++) {
+          if (products[i].name === productName) {
+            isMatched = true;
+            return products[i];
+          }
+        }
+        return null;
+      }
+    }, {
+      key: 'updateNotificationBarStatus',
+      value: function updateNotificationBarStatus(newStatus) {
+        this.content.site.flag.notificationBar = newStatus;
+        this.cacheIt();
+      }
+    }, {
+      key: 'error',
+      value: function error(collectionName, keyName, keyValue, isArray, addedComment) {
+        return new Error('content not found: logged\n      *' + addedComment + '\n      collection: ' + collectionName + '\n      key: ' + keyName + '= ' + keyValue + '\n      is array: ' + isArray + '\n    ');
+      }
+    }]);
+
+    return ContentSynchronizer;
+  }();
+
+  exports.default = new ContentSynchronizer();
+
+  /***/
+},
+/* 26 */
+/***/function (module, exports, __webpack_require__) {
+
+  var baseGet = __webpack_require__(27);
+
+  /**
+   * Gets the value at `path` of `object`. If the resolved value is
+   * `undefined`, the `defaultValue` is returned in its place.
+   *
+   * @static
+   * @memberOf _
+   * @since 3.7.0
+   * @category Object
+   * @param {Object} object The object to query.
+   * @param {Array|string} path The path of the property to get.
+   * @param {*} [defaultValue] The value returned for `undefined` resolved values.
+   * @returns {*} Returns the resolved value.
+   * @example
+   *
+   * var object = { 'a': [{ 'b': { 'c': 3 } }] };
+   *
+   * _.get(object, 'a[0].b.c');
+   * // => 3
+   *
+   * _.get(object, ['a', '0', 'b', 'c']);
+   * // => 3
+   *
+   * _.get(object, 'a.b.c', 'default');
+   * // => 'default'
+   */
+  function get(object, path, defaultValue) {
+    var result = object == null ? undefined : baseGet(object, path);
+    return result === undefined ? defaultValue : result;
+  }
+
+  module.exports = get;
+
+  /***/
+},
+/* 27 */
+/***/function (module, exports, __webpack_require__) {
+
+  var castPath = __webpack_require__(10),
+      toKey = __webpack_require__(13);
+
+  /**
+   * The base implementation of `_.get` without support for default values.
+   *
+   * @private
+   * @param {Object} object The object to query.
+   * @param {Array|string} path The path of the property to get.
+   * @returns {*} Returns the resolved value.
+   */
+  function baseGet(object, path) {
+    path = castPath(path, object);
+
+    var index = 0,
+        length = path.length;
+
+    while (object != null && index < length) {
+      object = object[toKey(path[index++])];
+    }
+    return index && index == length ? object : undefined;
+  }
+
+  module.exports = baseGet;
+
+  /***/
+},
+/* 28 */
+/***/function (module, exports, __webpack_require__) {
+
+  var isArray = __webpack_require__(3),
+      isSymbol = __webpack_require__(4);
+
+  /** Used to match property names within property paths. */
+  var reIsDeepProp = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/,
+      reIsPlainProp = /^\w*$/;
+
+  /**
+   * Checks if `value` is a property name and not a property path.
+   *
+   * @private
+   * @param {*} value The value to check.
+   * @param {Object} [object] The object to query keys on.
+   * @returns {boolean} Returns `true` if `value` is a property name, else `false`.
+   */
+  function isKey(value, object) {
+    if (isArray(value)) {
+      return false;
+    }
+    var type = typeof value === 'undefined' ? 'undefined' : _typeof(value);
+    if (type == 'number' || type == 'symbol' || type == 'boolean' || value == null || isSymbol(value)) {
+      return true;
+    }
+    return reIsPlainProp.test(value) || !reIsDeepProp.test(value) || object != null && value in Object(object);
+  }
+
+  module.exports = isKey;
+
+  /***/
+},
+/* 29 */
+/***/function (module, exports, __webpack_require__) {
+
+  /* WEBPACK VAR INJECTION */(function (global) {
+    /** Detect free variable `global` from Node.js. */
+    var freeGlobal = (typeof global === 'undefined' ? 'undefined' : _typeof(global)) == 'object' && global && global.Object === Object && global;
+
+    module.exports = freeGlobal;
+
+    /* WEBPACK VAR INJECTION */
+  }).call(exports, __webpack_require__(30));
+
+  /***/
+},
+/* 30 */
+/***/function (module, exports) {
+
+  var g;
+
+  // This works in non-strict mode
+  g = function () {
+    return this;
+  }();
+
+  try {
+    // This works if eval is allowed (see CSP)
+    g = g || Function("return this")() || (1, eval)("this");
+  } catch (e) {
+    // This works if the window reference is available
+    if ((typeof window === 'undefined' ? 'undefined' : _typeof(window)) === "object") g = window;
+  }
+
+  // g can still be undefined, but nothing to do about it...
+  // We return undefined, instead of nothing here, so it's
+  // easier to handle this case. if(!global) { ...}
+
+  module.exports = g;
+
+  /***/
+},
+/* 31 */
+/***/function (module, exports, __webpack_require__) {
+
+  var _Symbol3 = __webpack_require__(5);
+
+  /** Used for built-in method references. */
+  var objectProto = Object.prototype;
+
+  /** Used to check objects for own properties. */
+  var hasOwnProperty = objectProto.hasOwnProperty;
+
+  /**
+   * Used to resolve the
+   * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
+   * of values.
+   */
+  var nativeObjectToString = objectProto.toString;
+
+  /** Built-in value references. */
+  var symToStringTag = _Symbol3 ? _Symbol3.toStringTag : undefined;
+
+  /**
+   * A specialized version of `baseGetTag` which ignores `Symbol.toStringTag` values.
+   *
+   * @private
+   * @param {*} value The value to query.
+   * @returns {string} Returns the raw `toStringTag`.
+   */
+  function getRawTag(value) {
+    var isOwn = hasOwnProperty.call(value, symToStringTag),
+        tag = value[symToStringTag];
+
+    try {
+      value[symToStringTag] = undefined;
+      var unmasked = true;
+    } catch (e) {}
+
+    var result = nativeObjectToString.call(value);
+    if (unmasked) {
+      if (isOwn) {
+        value[symToStringTag] = tag;
+      } else {
+        delete value[symToStringTag];
+      }
+    }
+    return result;
+  }
+
+  module.exports = getRawTag;
+
+  /***/
+},
+/* 32 */
+/***/function (module, exports) {
+
+  /** Used for built-in method references. */
+  var objectProto = Object.prototype;
+
+  /**
+   * Used to resolve the
+   * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
+   * of values.
+   */
+  var nativeObjectToString = objectProto.toString;
+
+  /**
+   * Converts `value` to a string using `Object.prototype.toString`.
+   *
+   * @private
+   * @param {*} value The value to convert.
+   * @returns {string} Returns the converted string.
+   */
+  function objectToString(value) {
+    return nativeObjectToString.call(value);
+  }
+
+  module.exports = objectToString;
+
+  /***/
+},
+/* 33 */
+/***/function (module, exports) {
+
+  /**
+   * Checks if `value` is object-like. A value is object-like if it's not `null`
+   * and has a `typeof` result of "object".
+   *
+   * @static
+   * @memberOf _
+   * @since 4.0.0
+   * @category Lang
+   * @param {*} value The value to check.
+   * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
+   * @example
+   *
+   * _.isObjectLike({});
+   * // => true
+   *
+   * _.isObjectLike([1, 2, 3]);
+   * // => true
+   *
+   * _.isObjectLike(_.noop);
+   * // => false
+   *
+   * _.isObjectLike(null);
+   * // => false
+   */
+  function isObjectLike(value) {
+    return value != null && (typeof value === 'undefined' ? 'undefined' : _typeof(value)) == 'object';
+  }
+
+  module.exports = isObjectLike;
+
+  /***/
+},
+/* 34 */
+/***/function (module, exports, __webpack_require__) {
+
+  var memoizeCapped = __webpack_require__(35);
+
+  /** Used to match property names within property paths. */
+  var reLeadingDot = /^\./,
+      rePropName = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g;
+
+  /** Used to match backslashes in property paths. */
+  var reEscapeChar = /\\(\\)?/g;
+
+  /**
+   * Converts `string` to a property path array.
+   *
+   * @private
+   * @param {string} string The string to convert.
+   * @returns {Array} Returns the property path array.
+   */
+  var stringToPath = memoizeCapped(function (string) {
+    var result = [];
+    if (reLeadingDot.test(string)) {
+      result.push('');
+    }
+    string.replace(rePropName, function (match, number, quote, string) {
+      result.push(quote ? string.replace(reEscapeChar, '$1') : number || match);
+    });
+    return result;
+  });
+
+  module.exports = stringToPath;
+
+  /***/
+},
+/* 35 */
+/***/function (module, exports, __webpack_require__) {
+
+  var memoize = __webpack_require__(36);
+
+  /** Used as the maximum memoize cache size. */
+  var MAX_MEMOIZE_SIZE = 500;
+
+  /**
+   * A specialized version of `_.memoize` which clears the memoized function's
+   * cache when it exceeds `MAX_MEMOIZE_SIZE`.
+   *
+   * @private
+   * @param {Function} func The function to have its output memoized.
+   * @returns {Function} Returns the new memoized function.
+   */
+  function memoizeCapped(func) {
+    var result = memoize(func, function (key) {
+      if (cache.size === MAX_MEMOIZE_SIZE) {
+        cache.clear();
+      }
+      return key;
+    });
+
+    var cache = result.cache;
+    return result;
+  }
+
+  module.exports = memoizeCapped;
+
+  /***/
+},
+/* 36 */
+/***/function (module, exports, __webpack_require__) {
+
+  var MapCache = __webpack_require__(37);
+
+  /** Error message constants. */
+  var FUNC_ERROR_TEXT = 'Expected a function';
+
+  /**
+   * Creates a function that memoizes the result of `func`. If `resolver` is
+   * provided, it determines the cache key for storing the result based on the
+   * arguments provided to the memoized function. By default, the first argument
+   * provided to the memoized function is used as the map cache key. The `func`
+   * is invoked with the `this` binding of the memoized function.
+   *
+   * **Note:** The cache is exposed as the `cache` property on the memoized
+   * function. Its creation may be customized by replacing the `_.memoize.Cache`
+   * constructor with one whose instances implement the
+   * [`Map`](http://ecma-international.org/ecma-262/7.0/#sec-properties-of-the-map-prototype-object)
+   * method interface of `clear`, `delete`, `get`, `has`, and `set`.
+   *
+   * @static
+   * @memberOf _
+   * @since 0.1.0
+   * @category Function
+   * @param {Function} func The function to have its output memoized.
+   * @param {Function} [resolver] The function to resolve the cache key.
+   * @returns {Function} Returns the new memoized function.
+   * @example
+   *
+   * var object = { 'a': 1, 'b': 2 };
+   * var other = { 'c': 3, 'd': 4 };
+   *
+   * var values = _.memoize(_.values);
+   * values(object);
+   * // => [1, 2]
+   *
+   * values(other);
+   * // => [3, 4]
+   *
+   * object.a = 2;
+   * values(object);
+   * // => [1, 2]
+   *
+   * // Modify the result cache.
+   * values.cache.set(object, ['a', 'b']);
+   * values(object);
+   * // => ['a', 'b']
+   *
+   * // Replace `_.memoize.Cache`.
+   * _.memoize.Cache = WeakMap;
+   */
+  function memoize(func, resolver) {
+    if (typeof func != 'function' || resolver != null && typeof resolver != 'function') {
+      throw new TypeError(FUNC_ERROR_TEXT);
+    }
+    var memoized = function memoized() {
+      var args = arguments,
+          key = resolver ? resolver.apply(this, args) : args[0],
+          cache = memoized.cache;
+
+      if (cache.has(key)) {
+        return cache.get(key);
+      }
+      var result = func.apply(this, args);
+      memoized.cache = cache.set(key, result) || cache;
+      return result;
+    };
+    memoized.cache = new (memoize.Cache || MapCache)();
+    return memoized;
+  }
+
+  // Expose `MapCache`.
+  memoize.Cache = MapCache;
+
+  module.exports = memoize;
+
+  /***/
+},
+/* 37 */
+/***/function (module, exports, __webpack_require__) {
+
+  var mapCacheClear = __webpack_require__(38),
+      mapCacheDelete = __webpack_require__(58),
+      mapCacheGet = __webpack_require__(60),
+      mapCacheHas = __webpack_require__(61),
+      mapCacheSet = __webpack_require__(62);
+
+  /**
+   * Creates a map cache object to store key-value pairs.
+   *
+   * @private
+   * @constructor
+   * @param {Array} [entries] The key-value pairs to cache.
+   */
+  function MapCache(entries) {
+    var index = -1,
+        length = entries == null ? 0 : entries.length;
+
+    this.clear();
+    while (++index < length) {
+      var entry = entries[index];
+      this.set(entry[0], entry[1]);
+    }
+  }
+
+  // Add methods to `MapCache`.
+  MapCache.prototype.clear = mapCacheClear;
+  MapCache.prototype['delete'] = mapCacheDelete;
+  MapCache.prototype.get = mapCacheGet;
+  MapCache.prototype.has = mapCacheHas;
+  MapCache.prototype.set = mapCacheSet;
+
+  module.exports = MapCache;
+
+  /***/
+},
+/* 38 */
+/***/function (module, exports, __webpack_require__) {
+
+  var Hash = __webpack_require__(39),
+      ListCache = __webpack_require__(51),
+      Map = __webpack_require__(57);
+
+  /**
+   * Removes all key-value entries from the map.
+   *
+   * @private
+   * @name clear
+   * @memberOf MapCache
+   */
+  function mapCacheClear() {
+    this.size = 0;
+    this.__data__ = {
+      'hash': new Hash(),
+      'map': new (Map || ListCache)(),
+      'string': new Hash()
+    };
+  }
+
+  module.exports = mapCacheClear;
+
+  /***/
+},
+/* 39 */
+/***/function (module, exports, __webpack_require__) {
+
+  var hashClear = __webpack_require__(40),
+      hashDelete = __webpack_require__(47),
+      hashGet = __webpack_require__(48),
+      hashHas = __webpack_require__(49),
+      hashSet = __webpack_require__(50);
+
+  /**
+   * Creates a hash object.
+   *
+   * @private
+   * @constructor
+   * @param {Array} [entries] The key-value pairs to cache.
+   */
+  function Hash(entries) {
+    var index = -1,
+        length = entries == null ? 0 : entries.length;
+
+    this.clear();
+    while (++index < length) {
+      var entry = entries[index];
+      this.set(entry[0], entry[1]);
+    }
+  }
+
+  // Add methods to `Hash`.
+  Hash.prototype.clear = hashClear;
+  Hash.prototype['delete'] = hashDelete;
+  Hash.prototype.get = hashGet;
+  Hash.prototype.has = hashHas;
+  Hash.prototype.set = hashSet;
+
+  module.exports = Hash;
+
+  /***/
+},
+/* 40 */
+/***/function (module, exports, __webpack_require__) {
+
+  var nativeCreate = __webpack_require__(0);
+
+  /**
+   * Removes all key-value entries from the hash.
+   *
+   * @private
+   * @name clear
+   * @memberOf Hash
+   */
+  function hashClear() {
+    this.__data__ = nativeCreate ? nativeCreate(null) : {};
+    this.size = 0;
+  }
+
+  module.exports = hashClear;
+
+  /***/
+},
+/* 41 */
+/***/function (module, exports, __webpack_require__) {
+
+  var isFunction = __webpack_require__(42),
+      isMasked = __webpack_require__(43),
+      isObject = __webpack_require__(8),
+      toSource = __webpack_require__(45);
+
+  /**
+   * Used to match `RegExp`
+   * [syntax characters](http://ecma-international.org/ecma-262/7.0/#sec-patterns).
+   */
+  var reRegExpChar = /[\\^$.*+?()[\]{}|]/g;
+
+  /** Used to detect host constructors (Safari). */
+  var reIsHostCtor = /^\[object .+?Constructor\]$/;
+
+  /** Used for built-in method references. */
+  var funcProto = Function.prototype,
+      objectProto = Object.prototype;
+
+  /** Used to resolve the decompiled source of functions. */
+  var funcToString = funcProto.toString;
+
+  /** Used to check objects for own properties. */
+  var hasOwnProperty = objectProto.hasOwnProperty;
+
+  /** Used to detect if a method is native. */
+  var reIsNative = RegExp('^' + funcToString.call(hasOwnProperty).replace(reRegExpChar, '\\$&').replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, '$1.*?') + '$');
+
+  /**
+   * The base implementation of `_.isNative` without bad shim checks.
+   *
+   * @private
+   * @param {*} value The value to check.
+   * @returns {boolean} Returns `true` if `value` is a native function,
+   *  else `false`.
+   */
+  function baseIsNative(value) {
+    if (!isObject(value) || isMasked(value)) {
+      return false;
+    }
+    var pattern = isFunction(value) ? reIsNative : reIsHostCtor;
+    return pattern.test(toSource(value));
+  }
+
+  module.exports = baseIsNative;
+
+  /***/
+},
+/* 42 */
+/***/function (module, exports, __webpack_require__) {
+
+  var baseGetTag = __webpack_require__(11),
+      isObject = __webpack_require__(8);
+
+  /** `Object#toString` result references. */
+  var asyncTag = '[object AsyncFunction]',
+      funcTag = '[object Function]',
+      genTag = '[object GeneratorFunction]',
+      proxyTag = '[object Proxy]';
+
+  /**
+   * Checks if `value` is classified as a `Function` object.
+   *
+   * @static
+   * @memberOf _
+   * @since 0.1.0
+   * @category Lang
+   * @param {*} value The value to check.
+   * @returns {boolean} Returns `true` if `value` is a function, else `false`.
+   * @example
+   *
+   * _.isFunction(_);
+   * // => true
+   *
+   * _.isFunction(/abc/);
+   * // => false
+   */
+  function isFunction(value) {
+    if (!isObject(value)) {
+      return false;
+    }
+    // The use of `Object#toString` avoids issues with the `typeof` operator
+    // in Safari 9 which returns 'object' for typed arrays and other constructors.
+    var tag = baseGetTag(value);
+    return tag == funcTag || tag == genTag || tag == asyncTag || tag == proxyTag;
+  }
+
+  module.exports = isFunction;
+
+  /***/
+},
+/* 43 */
+/***/function (module, exports, __webpack_require__) {
+
+  var coreJsData = __webpack_require__(44);
+
+  /** Used to detect methods masquerading as native. */
+  var maskSrcKey = function () {
+    var uid = /[^.]+$/.exec(coreJsData && coreJsData.keys && coreJsData.keys.IE_PROTO || '');
+    return uid ? 'Symbol(src)_1.' + uid : '';
+  }();
+
+  /**
+   * Checks if `func` has its source masked.
+   *
+   * @private
+   * @param {Function} func The function to check.
+   * @returns {boolean} Returns `true` if `func` is masked, else `false`.
+   */
+  function isMasked(func) {
+    return !!maskSrcKey && maskSrcKey in func;
+  }
+
+  module.exports = isMasked;
+
+  /***/
+},
+/* 44 */
+/***/function (module, exports, __webpack_require__) {
+
+  var root = __webpack_require__(6);
+
+  /** Used to detect overreaching core-js shims. */
+  var coreJsData = root['__core-js_shared__'];
+
+  module.exports = coreJsData;
+
+  /***/
+},
+/* 45 */
+/***/function (module, exports) {
+
+  /** Used for built-in method references. */
+  var funcProto = Function.prototype;
+
+  /** Used to resolve the decompiled source of functions. */
+  var funcToString = funcProto.toString;
+
+  /**
+   * Converts `func` to its source code.
+   *
+   * @private
+   * @param {Function} func The function to convert.
+   * @returns {string} Returns the source code.
+   */
+  function toSource(func) {
+    if (func != null) {
+      try {
+        return funcToString.call(func);
+      } catch (e) {}
+      try {
+        return func + '';
+      } catch (e) {}
+    }
+    return '';
+  }
+
+  module.exports = toSource;
+
+  /***/
+},
+/* 46 */
+/***/function (module, exports) {
+
+  /**
+   * Gets the value at `key` of `object`.
+   *
+   * @private
+   * @param {Object} [object] The object to query.
+   * @param {string} key The key of the property to get.
+   * @returns {*} Returns the property value.
+   */
+  function getValue(object, key) {
+    return object == null ? undefined : object[key];
+  }
+
+  module.exports = getValue;
+
+  /***/
+},
+/* 47 */
+/***/function (module, exports) {
+
+  /**
+   * Removes `key` and its value from the hash.
+   *
+   * @private
+   * @name delete
+   * @memberOf Hash
+   * @param {Object} hash The hash to modify.
+   * @param {string} key The key of the value to remove.
+   * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+   */
+  function hashDelete(key) {
+    var result = this.has(key) && delete this.__data__[key];
+    this.size -= result ? 1 : 0;
+    return result;
+  }
+
+  module.exports = hashDelete;
+
+  /***/
+},
+/* 48 */
+/***/function (module, exports, __webpack_require__) {
+
+  var nativeCreate = __webpack_require__(0);
+
+  /** Used to stand-in for `undefined` hash values. */
+  var HASH_UNDEFINED = '__lodash_hash_undefined__';
+
+  /** Used for built-in method references. */
+  var objectProto = Object.prototype;
+
+  /** Used to check objects for own properties. */
+  var hasOwnProperty = objectProto.hasOwnProperty;
+
+  /**
+   * Gets the hash value for `key`.
+   *
+   * @private
+   * @name get
+   * @memberOf Hash
+   * @param {string} key The key of the value to get.
+   * @returns {*} Returns the entry value.
+   */
+  function hashGet(key) {
+    var data = this.__data__;
+    if (nativeCreate) {
+      var result = data[key];
+      return result === HASH_UNDEFINED ? undefined : result;
+    }
+    return hasOwnProperty.call(data, key) ? data[key] : undefined;
+  }
+
+  module.exports = hashGet;
+
+  /***/
+},
+/* 49 */
+/***/function (module, exports, __webpack_require__) {
+
+  var nativeCreate = __webpack_require__(0);
+
+  /** Used for built-in method references. */
+  var objectProto = Object.prototype;
+
+  /** Used to check objects for own properties. */
+  var hasOwnProperty = objectProto.hasOwnProperty;
+
+  /**
+   * Checks if a hash value for `key` exists.
+   *
+   * @private
+   * @name has
+   * @memberOf Hash
+   * @param {string} key The key of the entry to check.
+   * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+   */
+  function hashHas(key) {
+    var data = this.__data__;
+    return nativeCreate ? data[key] !== undefined : hasOwnProperty.call(data, key);
+  }
+
+  module.exports = hashHas;
+
+  /***/
+},
+/* 50 */
+/***/function (module, exports, __webpack_require__) {
+
+  var nativeCreate = __webpack_require__(0);
+
+  /** Used to stand-in for `undefined` hash values. */
+  var HASH_UNDEFINED = '__lodash_hash_undefined__';
+
+  /**
+   * Sets the hash `key` to `value`.
+   *
+   * @private
+   * @name set
+   * @memberOf Hash
+   * @param {string} key The key of the value to set.
+   * @param {*} value The value to set.
+   * @returns {Object} Returns the hash instance.
+   */
+  function hashSet(key, value) {
+    var data = this.__data__;
+    this.size += this.has(key) ? 0 : 1;
+    data[key] = nativeCreate && value === undefined ? HASH_UNDEFINED : value;
+    return this;
+  }
+
+  module.exports = hashSet;
+
+  /***/
+},
+/* 51 */
+/***/function (module, exports, __webpack_require__) {
+
+  var listCacheClear = __webpack_require__(52),
+      listCacheDelete = __webpack_require__(53),
+      listCacheGet = __webpack_require__(54),
+      listCacheHas = __webpack_require__(55),
+      listCacheSet = __webpack_require__(56);
+
+  /**
+   * Creates an list cache object.
+   *
+   * @private
+   * @constructor
+   * @param {Array} [entries] The key-value pairs to cache.
+   */
+  function ListCache(entries) {
+    var index = -1,
+        length = entries == null ? 0 : entries.length;
+
+    this.clear();
+    while (++index < length) {
+      var entry = entries[index];
+      this.set(entry[0], entry[1]);
+    }
+  }
+
+  // Add methods to `ListCache`.
+  ListCache.prototype.clear = listCacheClear;
+  ListCache.prototype['delete'] = listCacheDelete;
+  ListCache.prototype.get = listCacheGet;
+  ListCache.prototype.has = listCacheHas;
+  ListCache.prototype.set = listCacheSet;
+
+  module.exports = ListCache;
+
+  /***/
+},
+/* 52 */
+/***/function (module, exports) {
+
+  /**
+   * Removes all key-value entries from the list cache.
+   *
+   * @private
+   * @name clear
+   * @memberOf ListCache
+   */
+  function listCacheClear() {
+    this.__data__ = [];
+    this.size = 0;
+  }
+
+  module.exports = listCacheClear;
+
+  /***/
+},
+/* 53 */
+/***/function (module, exports, __webpack_require__) {
+
+  var assocIndexOf = __webpack_require__(1);
+
+  /** Used for built-in method references. */
+  var arrayProto = Array.prototype;
+
+  /** Built-in value references. */
+  var splice = arrayProto.splice;
+
+  /**
+   * Removes `key` and its value from the list cache.
+   *
+   * @private
+   * @name delete
+   * @memberOf ListCache
+   * @param {string} key The key of the value to remove.
+   * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+   */
+  function listCacheDelete(key) {
+    var data = this.__data__,
+        index = assocIndexOf(data, key);
+
+    if (index < 0) {
+      return false;
+    }
+    var lastIndex = data.length - 1;
+    if (index == lastIndex) {
+      data.pop();
+    } else {
+      splice.call(data, index, 1);
+    }
+    --this.size;
+    return true;
+  }
+
+  module.exports = listCacheDelete;
+
+  /***/
+},
+/* 54 */
+/***/function (module, exports, __webpack_require__) {
+
+  var assocIndexOf = __webpack_require__(1);
+
+  /**
+   * Gets the list cache value for `key`.
+   *
+   * @private
+   * @name get
+   * @memberOf ListCache
+   * @param {string} key The key of the value to get.
+   * @returns {*} Returns the entry value.
+   */
+  function listCacheGet(key) {
+    var data = this.__data__,
+        index = assocIndexOf(data, key);
+
+    return index < 0 ? undefined : data[index][1];
+  }
+
+  module.exports = listCacheGet;
+
+  /***/
+},
+/* 55 */
+/***/function (module, exports, __webpack_require__) {
+
+  var assocIndexOf = __webpack_require__(1);
+
+  /**
+   * Checks if a list cache value for `key` exists.
+   *
+   * @private
+   * @name has
+   * @memberOf ListCache
+   * @param {string} key The key of the entry to check.
+   * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+   */
+  function listCacheHas(key) {
+    return assocIndexOf(this.__data__, key) > -1;
+  }
+
+  module.exports = listCacheHas;
+
+  /***/
+},
+/* 56 */
+/***/function (module, exports, __webpack_require__) {
+
+  var assocIndexOf = __webpack_require__(1);
+
+  /**
+   * Sets the list cache `key` to `value`.
+   *
+   * @private
+   * @name set
+   * @memberOf ListCache
+   * @param {string} key The key of the value to set.
+   * @param {*} value The value to set.
+   * @returns {Object} Returns the list cache instance.
+   */
+  function listCacheSet(key, value) {
+    var data = this.__data__,
+        index = assocIndexOf(data, key);
+
+    if (index < 0) {
+      ++this.size;
+      data.push([key, value]);
+    } else {
+      data[index][1] = value;
+    }
+    return this;
+  }
+
+  module.exports = listCacheSet;
+
+  /***/
+},
+/* 57 */
+/***/function (module, exports, __webpack_require__) {
+
+  var getNative = __webpack_require__(7),
+      root = __webpack_require__(6);
+
+  /* Built-in method references that are verified to be native. */
+  var Map = getNative(root, 'Map');
+
+  module.exports = Map;
+
+  /***/
+},
+/* 58 */
+/***/function (module, exports, __webpack_require__) {
+
+  var getMapData = __webpack_require__(2);
+
+  /**
+   * Removes `key` and its value from the map.
+   *
+   * @private
+   * @name delete
+   * @memberOf MapCache
+   * @param {string} key The key of the value to remove.
+   * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+   */
+  function mapCacheDelete(key) {
+    var result = getMapData(this, key)['delete'](key);
+    this.size -= result ? 1 : 0;
+    return result;
+  }
+
+  module.exports = mapCacheDelete;
+
+  /***/
+},
+/* 59 */
+/***/function (module, exports) {
+
+  /**
+   * Checks if `value` is suitable for use as unique object key.
+   *
+   * @private
+   * @param {*} value The value to check.
+   * @returns {boolean} Returns `true` if `value` is suitable, else `false`.
+   */
+  function isKeyable(value) {
+    var type = typeof value === 'undefined' ? 'undefined' : _typeof(value);
+    return type == 'string' || type == 'number' || type == 'symbol' || type == 'boolean' ? value !== '__proto__' : value === null;
+  }
+
+  module.exports = isKeyable;
+
+  /***/
+},
+/* 60 */
+/***/function (module, exports, __webpack_require__) {
+
+  var getMapData = __webpack_require__(2);
+
+  /**
+   * Gets the map value for `key`.
+   *
+   * @private
+   * @name get
+   * @memberOf MapCache
+   * @param {string} key The key of the value to get.
+   * @returns {*} Returns the entry value.
+   */
+  function mapCacheGet(key) {
+    return getMapData(this, key).get(key);
+  }
+
+  module.exports = mapCacheGet;
+
+  /***/
+},
+/* 61 */
+/***/function (module, exports, __webpack_require__) {
+
+  var getMapData = __webpack_require__(2);
+
+  /**
+   * Checks if a map value for `key` exists.
+   *
+   * @private
+   * @name has
+   * @memberOf MapCache
+   * @param {string} key The key of the entry to check.
+   * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+   */
+  function mapCacheHas(key) {
+    return getMapData(this, key).has(key);
+  }
+
+  module.exports = mapCacheHas;
+
+  /***/
+},
+/* 62 */
+/***/function (module, exports, __webpack_require__) {
+
+  var getMapData = __webpack_require__(2);
+
+  /**
+   * Sets the map `key` to `value`.
+   *
+   * @private
+   * @name set
+   * @memberOf MapCache
+   * @param {string} key The key of the value to set.
+   * @param {*} value The value to set.
+   * @returns {Object} Returns the map cache instance.
+   */
+  function mapCacheSet(key, value) {
+    var data = getMapData(this, key),
+        size = data.size;
+
+    data.set(key, value);
+    this.size += data.size == size ? 0 : 1;
+    return this;
+  }
+
+  module.exports = mapCacheSet;
+
+  /***/
+},
+/* 63 */
+/***/function (module, exports, __webpack_require__) {
+
+  var baseToString = __webpack_require__(64);
+
+  /**
+   * Converts `value` to a string. An empty string is returned for `null`
+   * and `undefined` values. The sign of `-0` is preserved.
+   *
+   * @static
+   * @memberOf _
+   * @since 4.0.0
+   * @category Lang
+   * @param {*} value The value to convert.
+   * @returns {string} Returns the converted string.
+   * @example
+   *
+   * _.toString(null);
+   * // => ''
+   *
+   * _.toString(-0);
+   * // => '-0'
+   *
+   * _.toString([1, 2, 3]);
+   * // => '1,2,3'
+   */
+  function toString(value) {
+    return value == null ? '' : baseToString(value);
+  }
+
+  module.exports = toString;
+
+  /***/
+},
+/* 64 */
+/***/function (module, exports, __webpack_require__) {
+
+  var _Symbol4 = __webpack_require__(5),
+      arrayMap = __webpack_require__(65),
+      isArray = __webpack_require__(3),
+      isSymbol = __webpack_require__(4);
+
+  /** Used as references for various `Number` constants. */
+  var INFINITY = 1 / 0;
+
+  /** Used to convert symbols to primitives and strings. */
+  var symbolProto = _Symbol4 ? _Symbol4.prototype : undefined,
+      symbolToString = symbolProto ? symbolProto.toString : undefined;
+
+  /**
+   * The base implementation of `_.toString` which doesn't convert nullish
+   * values to empty strings.
+   *
+   * @private
+   * @param {*} value The value to process.
+   * @returns {string} Returns the string.
+   */
+  function baseToString(value) {
+    // Exit early for strings to avoid a performance hit in some environments.
+    if (typeof value == 'string') {
+      return value;
+    }
+    if (isArray(value)) {
+      // Recursively convert values (susceptible to call stack limits).
+      return arrayMap(value, baseToString) + '';
+    }
+    if (isSymbol(value)) {
+      return symbolToString ? symbolToString.call(value) : '';
+    }
+    var result = value + '';
+    return result == '0' && 1 / value == -INFINITY ? '-0' : result;
+  }
+
+  module.exports = baseToString;
+
+  /***/
+},
+/* 65 */
+/***/function (module, exports) {
+
+  /**
+   * A specialized version of `_.map` for arrays without support for iteratee
+   * shorthands.
+   *
+   * @private
+   * @param {Array} [array] The array to iterate over.
+   * @param {Function} iteratee The function invoked per iteration.
+   * @returns {Array} Returns the new mapped array.
+   */
+  function arrayMap(array, iteratee) {
+    var index = -1,
+        length = array == null ? 0 : array.length,
+        result = Array(length);
+
+    while (++index < length) {
+      result[index] = iteratee(array[index], index, array);
+    }
+    return result;
+  }
+
+  module.exports = arrayMap;
+
+  /***/
+},
+/* 66 */
+/***/function (module, exports, __webpack_require__) {
+
+  var baseSet = __webpack_require__(67);
+
+  /**
+   * Sets the value at `path` of `object`. If a portion of `path` doesn't exist,
+   * it's created. Arrays are created for missing index properties while objects
+   * are created for all other missing properties. Use `_.setWith` to customize
+   * `path` creation.
+   *
+   * **Note:** This method mutates `object`.
+   *
+   * @static
+   * @memberOf _
+   * @since 3.7.0
+   * @category Object
+   * @param {Object} object The object to modify.
+   * @param {Array|string} path The path of the property to set.
+   * @param {*} value The value to set.
+   * @returns {Object} Returns `object`.
+   * @example
+   *
+   * var object = { 'a': [{ 'b': { 'c': 3 } }] };
+   *
+   * _.set(object, 'a[0].b.c', 4);
+   * console.log(object.a[0].b.c);
+   * // => 4
+   *
+   * _.set(object, ['x', '0', 'y', 'z'], 5);
+   * console.log(object.x[0].y.z);
+   * // => 5
+   */
+  function set(object, path, value) {
+    return object == null ? object : baseSet(object, path, value);
+  }
+
+  module.exports = set;
+
+  /***/
+},
+/* 67 */
+/***/function (module, exports, __webpack_require__) {
+
+  var assignValue = __webpack_require__(68),
+      castPath = __webpack_require__(10),
+      isIndex = __webpack_require__(71),
+      isObject = __webpack_require__(8),
+      toKey = __webpack_require__(13);
+
+  /**
+   * The base implementation of `_.set`.
+   *
+   * @private
+   * @param {Object} object The object to modify.
+   * @param {Array|string} path The path of the property to set.
+   * @param {*} value The value to set.
+   * @param {Function} [customizer] The function to customize path creation.
+   * @returns {Object} Returns `object`.
+   */
+  function baseSet(object, path, value, customizer) {
+    if (!isObject(object)) {
+      return object;
+    }
+    path = castPath(path, object);
+
+    var index = -1,
+        length = path.length,
+        lastIndex = length - 1,
+        nested = object;
+
+    while (nested != null && ++index < length) {
+      var key = toKey(path[index]),
+          newValue = value;
+
+      if (index != lastIndex) {
+        var objValue = nested[key];
+        newValue = customizer ? customizer(objValue, key, nested) : undefined;
+        if (newValue === undefined) {
+          newValue = isObject(objValue) ? objValue : isIndex(path[index + 1]) ? [] : {};
+        }
+      }
+      assignValue(nested, key, newValue);
+      nested = nested[key];
+    }
+    return object;
+  }
+
+  module.exports = baseSet;
+
+  /***/
+},
+/* 68 */
+/***/function (module, exports, __webpack_require__) {
+
+  var baseAssignValue = __webpack_require__(69),
+      eq = __webpack_require__(12);
+
+  /** Used for built-in method references. */
+  var objectProto = Object.prototype;
+
+  /** Used to check objects for own properties. */
+  var hasOwnProperty = objectProto.hasOwnProperty;
+
+  /**
+   * Assigns `value` to `key` of `object` if the existing value is not equivalent
+   * using [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
+   * for equality comparisons.
+   *
+   * @private
+   * @param {Object} object The object to modify.
+   * @param {string} key The key of the property to assign.
+   * @param {*} value The value to assign.
+   */
+  function assignValue(object, key, value) {
+    var objValue = object[key];
+    if (!(hasOwnProperty.call(object, key) && eq(objValue, value)) || value === undefined && !(key in object)) {
+      baseAssignValue(object, key, value);
+    }
+  }
+
+  module.exports = assignValue;
+
+  /***/
+},
+/* 69 */
+/***/function (module, exports, __webpack_require__) {
+
+  var defineProperty = __webpack_require__(70);
+
+  /**
+   * The base implementation of `assignValue` and `assignMergeValue` without
+   * value checks.
+   *
+   * @private
+   * @param {Object} object The object to modify.
+   * @param {string} key The key of the property to assign.
+   * @param {*} value The value to assign.
+   */
+  function baseAssignValue(object, key, value) {
+    if (key == '__proto__' && defineProperty) {
+      defineProperty(object, key, {
+        'configurable': true,
+        'enumerable': true,
+        'value': value,
+        'writable': true
+      });
+    } else {
+      object[key] = value;
+    }
+  }
+
+  module.exports = baseAssignValue;
+
+  /***/
+},
+/* 70 */
+/***/function (module, exports, __webpack_require__) {
+
+  var getNative = __webpack_require__(7);
+
+  var defineProperty = function () {
+    try {
+      var func = getNative(Object, 'defineProperty');
+      func({}, '', {});
+      return func;
+    } catch (e) {}
+  }();
+
+  module.exports = defineProperty;
+
+  /***/
+},
+/* 71 */
+/***/function (module, exports) {
+
+  /** Used as references for various `Number` constants. */
+  var MAX_SAFE_INTEGER = 9007199254740991;
+
+  /** Used to detect unsigned integer values. */
+  var reIsUint = /^(?:0|[1-9]\d*)$/;
+
+  /**
+   * Checks if `value` is a valid array-like index.
+   *
+   * @private
+   * @param {*} value The value to check.
+   * @param {number} [length=MAX_SAFE_INTEGER] The upper bounds of a valid index.
+   * @returns {boolean} Returns `true` if `value` is a valid index, else `false`.
+   */
+  function isIndex(value, length) {
+    length = length == null ? MAX_SAFE_INTEGER : length;
+    return !!length && (typeof value == 'number' || reIsUint.test(value)) && value > -1 && value % 1 == 0 && value < length;
+  }
+
+  module.exports = isIndex;
+
+  /***/
+},
+/* 72 */
+/***/function (module, exports, __webpack_require__) {
+
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _createClass = function () {
+    function defineProperties(target, props) {
+      for (var i = 0; i < props.length; i++) {
+        var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
+      }
+    }return function (Constructor, protoProps, staticProps) {
+      if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
+    };
+  }(); // import record from './mock';
+
+
+  var _production = __webpack_require__(73);
+
+  var _production2 = _interopRequireDefault(_production);
+
+  var _Record = __webpack_require__(14);
+
+  var _Record2 = _interopRequireDefault(_Record);
+
+  function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : { default: obj };
+  }
+
+  function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
+    }
+  }
+
+  function generateList(item, key) {
+    var list = [];
+    var max = 200;
+    for (var i = 0; i < max; i++) {
+      (function (index) {
+        item.id = 'aW' + index;
+        list.push(item);
+      })(i);
+    }
+    return list;
+  }
+
+  function generateRecord(item, key) {
+    var newItem = Object.assign({}, item);
+    newItem.id = key;
+    return newItem;
+  }
+
+  // const theList = [
+  //   generateRecord(record, 0),
+  //   generateRecord(record, 1),
+  //   generateRecord(record, 2),
+  // ];
+
+  var theList = _production2.default;
+
+  var Records = function () {
+    function Records(records) {
+      _classCallCheck(this, Records);
+
+      this.list = records;
+    }
+
+    _createClass(Records, [{
+      key: 'getAll',
+      value: function getAll() {
+        return this.list;
+      }
+    }, {
+      key: 'getARecord',
+      value: function getARecord(recordId) {
+        var resultList = this.list.filter(function (item) {
+          return item.id === recordId;
+        });
+
+        return resultList.length === 1 ? resultList[0] : new _Record2.default();
+      }
+    }]);
+
+    return Records;
+  }();
+
+  exports.default = Records;
+
+  /***/
+},
+/* 73 */
+/***/function (module, exports, __webpack_require__) {
+
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _Record = __webpack_require__(14);
+
+  var _Record2 = _interopRequireDefault(_Record);
+
+  var _content = __webpack_require__(15);
+
+  var _content2 = _interopRequireDefault(_content);
+
+  function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : { default: obj };
+  }
+
+  exports.default = [new _Record2.default('a0', //id
+  'interest', //title
+  'west-interest', //appRouteCustom
+  '', //appRouteDefault
+  //tags
+  ['ribaa', 'interest', 'west', 'Ahmed al-Wasaabee'],
+  //references
+  [{
+    url: 'https://google.com/interest',
+    note: ''
+  }],
+  //collectedBy
+  [{
+    userId: '0',
+    date: 1512795251600
+  }]), new _Record2.default('a1', //id
+  'whom', //title
+  'whom', //appRouteCustom
+  '', //appRouteDefault
+  //tags
+  ['advise'],
+  //references
+  [{
+    url: 'http://www.google.com/whom',
+    note: ''
+  }],
+  //collectedBy
+  [{
+    userId: '0',
+    date: 0
+  }],
+  //cached content
+  _content2.default.a1)];
+
+  /***/
+},
+/* 74 */
+/***/function (module, exports, __webpack_require__) {
+
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
+    }
+  }
+
+  var AppRoute = function AppRoute() {
+    var routeCustom = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+    var routeDefault = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
+
+    _classCallCheck(this, AppRoute);
+
+    return {
+      custom: routeCustom,
+      default: routeDefault
+    };
+  };
+
+  exports.default = AppRoute;
+  ;
+
+  /***/
+},
+/* 75 */
+/***/function (module, exports, __webpack_require__) {
+
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
+    }
+  }
+
+  var Reference = function Reference() {
+    var url = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+    var note = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
+
+    _classCallCheck(this, Reference);
+
+    return {
+      url: url,
+      note: note
+    };
+  };
+
+  exports.default = Reference;
+  ;
+
+  /***/
+},
+/* 76 */
+/***/function (module, exports, __webpack_require__) {
+
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
+    }
+  }
+
+  var CollectedBy = function CollectedBy() {
+    var userId = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+    var date = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+
+    _classCallCheck(this, CollectedBy);
+
+    return {
+      userId: userId,
+      date: date
+    };
+  };
+
+  exports.default = CollectedBy;
+  ;
+
+  /***/
+},
+/* 77 */
+/***/function (module, exports, __webpack_require__) {
+
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _content = __webpack_require__(15);
+
+  var _content2 = _interopRequireDefault(_content);
+
+  function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : { default: obj };
+  }
+
+  function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
+    }
+  }
+
+  var CachedContent = function CachedContent(recordId) {
+    _classCallCheck(this, CachedContent);
+
+    return {
+      content: _content2.default[recordId] || '',
+      collectedByUserId: '',
+      collectedTime: 0
+    } || {
+      content: '',
+      collectedByUserId: '',
+      collectedTime: 0
+    };
+  };
+
+  exports.default = CachedContent;
+  ;
+
+  /***/
+},
+/* 78 */
+/***/function (module, exports, __webpack_require__) {
+
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = "a lot of content for a1";
+
+  /***/
+}]
+/******/));
 
 /***/ }),
 /* 19 */
@@ -27660,7 +31266,7 @@ function _inherits(subClass, superClass) {
     throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === "undefined" ? "undefined" : _typeof(superClass)));
   }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
 }
-//import { Link } from 'react-router';
+//import { Link } from 'react-router-dom';
 
 
 var ListingItem = function (_Component) {
@@ -27768,7 +31374,7 @@ var _concatCssClasses = __webpack_require__(27);
 
 var _concatCssClasses2 = _interopRequireDefault(_concatCssClasses);
 
-var _reactRouter = __webpack_require__(409);
+var _reactRouterDom = __webpack_require__(169);
 
 var _Container = __webpack_require__(410);
 
@@ -27871,12 +31477,7 @@ ListingItemMask.propTypes = {
 };
 
 /***/ }),
-/* 409 */
-/***/ (function(module, exports) {
-
-module.exports = require("react-router");
-
-/***/ }),
+/* 409 */,
 /* 410 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -30258,7 +33859,7 @@ function _inherits(subClass, superClass) {
   }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
 }
 
-//import { Link } from 'react-router';
+//import { Link } from 'react-router-dom';
 
 var MenuFilterItem = function (_Component) {
   _inherits(MenuFilterItem, _Component);
@@ -30528,7 +34129,7 @@ function _inherits(subClass, superClass) {
   }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
 }
 
-//import { Link } from 'react-router';
+//import { Link } from 'react-router-dom';
 
 var MenuItem = function (_Component) {
   _inherits(MenuItem, _Component);

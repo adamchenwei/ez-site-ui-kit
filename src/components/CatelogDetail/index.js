@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Container from './style/Container';
 
-export default class Catalog extends Component {
+export default class CatalogDetail extends Component {
 
   constructor(props) {
     super(props);
@@ -22,7 +22,7 @@ export default class Catalog extends Component {
   }
 }
 
-Catalog.propTypes = {
+CatalogDetail.propTypes = {
   content: PropTypes.object,
   style: PropTypes.object,
   type: PropTypes.string,

@@ -2,7 +2,7 @@ import React, { Component } from 'react'; import PropTypes from 'prop-types';
 import GridItem from '../../components/GridItem/GridItem';
 import getGridItem from './../../util/get/getGridItem';
 import capToCamelCase from './../../util/transform/capToCamelCase';
-import { withRouter } from 'react-router';
+import { withRouter } from 'react-router-dom';
 import PageShell from '../PageShell/PageShell';
 import GridItemShell from '../../components/GridItem/GridItemShell';
 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'; import PropTypes from 'prop-types';
 import consoleShow from './../../util/debug/consoleShow';
 import concatCssClasses from './../../util/concat/concatCssClasses';
-//import { Link } from 'react-router';
+//import { Link } from 'react-router-dom';
 import ListingItemMask from './ListingItemMask';
 import Container from './style/ListingItem/Container';
 import Display from './style/ListingItem/Display';
