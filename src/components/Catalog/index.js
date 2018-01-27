@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Container from './style/Container';
-import { Card, CardImg, CardText, CardBody,
+//import Container from './style/Container';
+import { Container, Row, Column, Card, CardImg, CardText, CardBody,
   CardTitle, CardSubtitle, Button } from 'reactstrap';
 
 export default class Catalog extends Component {
@@ -12,28 +12,35 @@ export default class Catalog extends Component {
 
   render() {
     let {
-      content,
+      collection,
       style,
       type,
     } = this.props;
+
     return (
       <Container>
-        <Card>
-          <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
-          <CardBody>
-            <CardTitle>Card title</CardTitle>
-            <CardSubtitle>Card subtitle</CardSubtitle>
-            <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
-            <Button>Button</Button>
-          </CardBody>
-        </Card>
+        {collection.data.map((item) => {
+          return (
+            <Column>
+            <Card>
+              <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
+              <CardBody>
+                <CardTitle>Card title</CardTitle>
+                <CardSubtitle>Card subtitle</CardSubtitle>
+                <CardText>Some quick example text to build on the card title and make up the bulk of the card's collection.</CardText>
+                <Button>Button</Button>
+              </CardBody>
+            </Card>
+            </Column>
+          )
+        })}
       </Container>
     );
   }
 }
 
 Catalog.propTypes = {
-  content: PropTypes.object,
+  collection: PropTypes.object,
   style: PropTypes.object,
   type: PropTypes.string,
 };
