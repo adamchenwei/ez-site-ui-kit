@@ -1,1 +1,2 @@
-npm run s
+#!/bin/sh
+npm run workspace
