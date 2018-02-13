@@ -23,7 +23,7 @@ export default class MenuFilterItem extends Component {
         onClick={this.toggleMenu}
         componentName={COMPONENT_NAME}
         gridAreaId={''}>
-        <Link href={path}>{title}</Link>
+        <Link to={path}>{title}</Link>
       </Container>
     );
   }

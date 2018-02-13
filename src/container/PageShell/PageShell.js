@@ -4,7 +4,7 @@ import {ContentSynchronizer} from 'ez-site-content-store';
 import GridItem from '../../components/GridItem/GridItem';
 import getGridItem from './../../util/get/getGridItem';
 import capToCamelCase from './../../util/transform/capToCamelCase';
-import MobileMenu from './../../components/MobileMenu';
+import MobileMenuRouteEnabled from './../../components/MobileMenuRouteEnabled';
 import FooterBar from './../../components/FooterBar';
 
 import MenuBarNewRouteEnabled from './../../components/MenuBarNewRouteEnabled';
@@ -72,7 +72,7 @@ export default class PageShell extends Component {
     const site = ContentSynchronizer.getCollection('site');
     const siteName = site.siteName.casual;
     const baseTag = site.baseTag;
-    return (<MobileMenu
+    return (<MobileMenuRouteEnabled
       siteName={siteName}
       baseTag={baseTag}
       filterItems={this.state.menuItems.tags}
