@@ -7,7 +7,7 @@ import capToCamelCase from './../../util/transform/capToCamelCase';
 import MobileMenu from './../../components/MobileMenu';
 import FooterBar from './../../components/FooterBar';
 
-import MenuBarNew from './../../components/MenuBarNew';
+import MenuBarNewRouteEnabled from './../../components/MenuBarNewRouteEnabled';
 import {
   buildProductMenuItems,
   buildMenuItems,
@@ -38,7 +38,7 @@ export default class PageShell extends Component {
     // const MENU_BAR_GRID_ITEM_ID = 2;
     // return getGridItem(MENU_BAR_GRID_ITEM_ID);
     const items = buildMenuItems(2);
-    return <MenuBarNew
+    return <MenuBarNewRouteEnabled
       customStyles={{
         marginTop: '16px',
         marginBottom: '16px',
@@ -58,7 +58,7 @@ export default class PageShell extends Component {
       return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
     });
     //console.log(items)
-    return <MenuBarNew
+    return <MenuBarNewRouteEnabled
       customStyles={{
         marginTop: '24px',
         marginBottom: '24px',

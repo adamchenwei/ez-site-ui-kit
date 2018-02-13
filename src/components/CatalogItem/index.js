@@ -21,7 +21,7 @@ export default class CatalogItem extends Component {
         <CardImg top width="100%" src="/assets/images/logo.png" alt="Card image cap" />
         <CardBody>
           <CardTitle>{title}</CardTitle>
-          <CardSubtitle>{route.webRoute}</CardSubtitle>
+          <CardSubtitle>{route ? route.webRoute : ''}</CardSubtitle>
           <CardText>
               {description}
           </CardText>

@@ -1,6 +1,7 @@
 import LoginForm from './components/LoginForm';
 import CatalogList from './components/CatalogList';
 import CatalogItem from './components/CatalogItem';
+import MenuBarNewRouteEnabled  from './components/MenuBarNewRouteEnabled';
 
 import About from './container/About';
 import Contact from './container/Contact';
@@ -14,7 +15,7 @@ export {
   LoginForm,
   CatalogList,
   CatalogItem,
-
+  MenuBarNewRouteEnabled,
   About,
   Contact,
   ProductListing,
