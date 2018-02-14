@@ -19,6 +19,7 @@ import {
 } from './../MobileMenu/factory/menu';
 const menuBarItems = buildMenuItems(2);
 const filterBarItems = buildMenuFilterItems(6);
+import {BrowserRouter as Router} from 'react-router-dom';
 
 storiesOf(`
 Mobile Menu
@@ -26,76 +27,78 @@ Mobile Menu
 `, module)
 .add('with actual data expanded', () => {
 return (
-  <MobileMenu
-    siteName={'My Website'}
-    isExpanded={true}
-    menuItems={menuBarItems}
-    filterItems={filterBarItems}>
-  </MobileMenu>
+  <Router>
+    <MobileMenu
+      siteName={'My Website'}
+      isExpanded={true}
+      menuItems={menuBarItems}
+      filterItems={filterBarItems}>
+    </MobileMenu>
+  </Router>
 )
 })
 
 .add('collapsed - empty state', () => {
 return (
-  <MobileMenu
+  <Router><MobileMenu
     siteName={''}
     menuItems={[]}
-    filterItems={[]} />
+    filterItems={[]} /></Router>
 )
 })
 .add('expanded - empty state', () => {
 return (
-  <MobileMenu
+  <Router><MobileMenu
     siteName={''}
     menuItems={[]}
     filterItems={[]}
-    isExpanded={true} />
+    isExpanded={true} /></Router>
 )
 })
 .add('collapsed', () => {
 return (
-  <MobileMenu
+  <Router><MobileMenu
     siteName={'My Website'}
-    menuItems={MastMenuShort} />
+    menuItems={MastMenuShort} /></Router>
 )
 })
 .add('expanded', () => {
 return (
-  <MobileMenu
+  <Router><MobileMenu
     siteName={'My Website'}
     menuItems={MastMenuShort}
-    isExpanded={true} />
+    isExpanded={true} /></Router>
 )
 })
 .add('with filter, collapsed', () => {
 
 return (
-  <MobileMenu
+  <Router><MobileMenu
     siteName={'My Website'}
     menuItems={MastMenuShort}
-    filterItems={MasterMenuLong} />
+    filterItems={MasterMenuLong} /></Router>
 )
 })
 .add('with filter, expanded', () => {
 return (
-  <MobileMenu
+  <Router><MobileMenu
     siteName={'My Website'}
     isExpanded={true}
     menuItems={MastMenuShort}
     filterItems={MasterMenuLong}>
-  </MobileMenu>
+  </MobileMenu></Router>
 )
 })
 .add('with filter and top bar, expanded', () => {
 return (
   <DummyStager>
     <DummyBar />
-    <MobileMenu
+    <Router><MobileMenu
       siteName={'My Website'}
       isExpanded={true}
       menuItems={MastMenuShort}
       filterItems={MasterMenuLong}>
-    </MobileMenu>
+    </MobileMenu></Router>
   </DummyStager>
 )
 })

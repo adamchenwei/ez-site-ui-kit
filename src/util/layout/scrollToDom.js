@@ -7,7 +7,10 @@ export default function scrollToDom(dom, delayMs) {
     getWindow.scrollTo(0, 0);
   } else {
     setTimeout(() => {
-      ReactDOM.findDOMNode(dom).scrollIntoView({behavior: 'smooth'});
+      const node = ReactDOM.findDOMNode(dom);
+      if (node) {
+        node.scrollIntoView({behavior: 'smooth'});
+      }
     }, delay);
   }
 

@@ -37,67 +37,68 @@ return (
 )
 })
 
-// .add('collapsed - empty state', () => {
-// return (
-//   <MobileMenuRouteEnabled
-//     siteName={''}
-//     menuItems={[]}
-//     filterItems={[]} />
-// )
-// })
-// .add('expanded - empty state', () => {
-// return (
-//   <MobileMenuRouteEnabled
-//     siteName={''}
-//     menuItems={[]}
-//     filterItems={[]}
-//     isExpanded={true} />
-// )
-// })
-// .add('collapsed', () => {
-// return (
-//   <MobileMenuRouteEnabled
-//     siteName={'My Website'}
-//     menuItems={MastMenuShort} />
-// )
-// })
-// .add('expanded', () => {
-// return (
-//   <MobileMenuRouteEnabled
-//     siteName={'My Website'}
-//     menuItems={MastMenuShort}
-//     isExpanded={true} />
-// )
-// })
-// .add('with filter, collapsed', () => {
+.add('collapsed - empty state', () => {
+return (
 
-// return (
-//   <MobileMenuRouteEnabled
-//     siteName={'My Website'}
-//     menuItems={MastMenuShort}
-//     filterItems={MasterMenuLong} />
-// )
-// })
-// .add('with filter, expanded', () => {
-// return (
-//   <MobileMenuRouteEnabled
-//     siteName={'My Website'}
-//     isExpanded={true}
-//     menuItems={MastMenuShort}
-//     filterItems={MasterMenuLong}>
-//   </MobileMenuRouteEnabled>
-// )
-// })
-// .add('with filter and top bar, expanded', () => {
-// return (
-//   <DummyStager>
-//     <DummyBar />
-//     <MobileMenuRouteEnabled
-//       siteName={'My Website'}
-//       isExpanded={true}
-//       menuItems={MastMenuShort}
-//       filterItems={MasterMenuLong}>
-//     </MobileMenuRouteEnabled>
-//   </DummyStager>
-// )
-// })
+  <Router><MobileMenuRouteEnabled
+    siteName={''}
+    menuItems={[]}
+    filterItems={[]} /></Router>
+)
+})
+.add('expanded - empty state', () => {
+return (
+  <Router><MobileMenuRouteEnabled
+    siteName={''}
+    menuItems={[]}
+    filterItems={[]}
+    isExpanded={true} /></Router>
+)
+})
+.add('collapsed', () => {
+return (
+  <Router><MobileMenuRouteEnabled
+    siteName={'My Website'}
+    menuItems={MastMenuShort} /></Router>
+)
+})
+.add('expanded', () => {
+return (
+  <Router><MobileMenuRouteEnabled
+    siteName={'My Website'}
+    menuItems={MastMenuShort}
+    isExpanded={true} /></Router>
+)
+})
+.add('with filter, collapsed', () => {
+
+return (
+  <Router><MobileMenuRouteEnabled
+    siteName={'My Website'}
+    menuItems={MastMenuShort}
+    filterItems={MasterMenuLong} /></Router>
+)
+})
+.add('with filter, expanded', () => {
+return (
+  <Router><MobileMenuRouteEnabled
+    siteName={'My Website'}
+    isExpanded={true}
+    menuItems={MastMenuShort}
+    filterItems={MasterMenuLong}>
+  </MobileMenuRouteEnabled></Router>
+)
+})
+.add('with filter and top bar, expanded', () => {
+return (
+  <DummyStager>
+    <DummyBar />
+    <Router><MobileMenuRouteEnabled
+      siteName={'My Website'}
+      isExpanded={true}
+      menuItems={MastMenuShort}
+      filterItems={MasterMenuLong}>
+    </MobileMenuRouteEnabled></Router>
+  </DummyStager>
+)
+})

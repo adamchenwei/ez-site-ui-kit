@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import {Link} from 'react-router-dom';
-module.exports = styled.a`
+module.exports = styled(Link)`
   color: white;
   text-transform: uppercase;
   font-size: 12px;
