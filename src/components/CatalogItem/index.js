@@ -23,21 +23,13 @@ export default class CatalogItem extends Component {
     const image = snapshots[0];
     return (
       <Card>
-        <CardImg top width="100%" src={image.url} alt={image.name} />
+        <CardImg top width="100%" height="250px" src={image.url} alt={image.name} />
         <CardBody>
           <CardTitle>{title}</CardTitle>
           <CardSubtitle>{subTitle}</CardSubtitle>
           <CardText>
               {description}
           </CardText>
-          {/* {
-            websiteUrl ?
-              <a href={websiteUrl}><Button>Website</Button></a>
-            : null
-          }
-          <Button>Address</Button>
-          <Button>Phone</Button>
-          {children} */}
         </CardBody>
       </Card>
     )
