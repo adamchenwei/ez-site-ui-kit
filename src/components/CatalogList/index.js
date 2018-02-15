@@ -23,8 +23,9 @@ export default class CatalogList extends Component {
           const {
             id,
             title,
+            subTitle,
             description,
-            route,
+            websiteUrl,
           } = item;
           return (
             <Col
@@ -38,11 +39,11 @@ export default class CatalogList extends Component {
                 <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
                 <CardBody>
                   <CardTitle>{title}</CardTitle>
-                  <CardSubtitle>{route.webRoute}</CardSubtitle>
+                  <CardSubtitle>{subTitle}</CardSubtitle>
                   <CardText>
                       {description}
                   </CardText>
-                  <Button>Website</Button>
+                  <a href={websiteUrl}><Button>Website</Button></a>
                   <Button>Direction</Button>
                   <Button>Phone</Button>
                 </CardBody>
@@ -59,4 +60,7 @@ CatalogList.propTypes = {
   collection: PropTypes.object,
   style: PropTypes.object,
   type: PropTypes.string,
+  title: PropTypes.string,
+  subTitle: PropTypes.string,
+  websiteUrl: PropTypes.string,
 };

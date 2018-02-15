@@ -3,14 +3,24 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import React from 'react';
 
-import Records from './__mock__/Records';
+import catelog from './__mock__/catelog';
 
-const data = Records.getAll()[0];
-console.log(data);
+const {
+  id,
+  style,
+  title,
+  subTitle,
+  description,
+  websiteUrl,
+  snapshots,
+} = catelog[0];
+
 storiesOf('CatalogItem', module)
 .add('default', () => <CatalogItem
-  id={data.id}
-  title={data.title}
-  description={data.description}
-  route={data.route}
+  id={id}
+  title={title}
+  description={description}
+  subTitle={subTitle}
+  websiteUrl={websiteUrl}
+  snapshots={snapshots}
 />)

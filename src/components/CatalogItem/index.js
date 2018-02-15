@@ -11,24 +11,33 @@ export default class CatalogItem extends Component {
   render() {
     const {
       id,
+      style,
       title,
+      location,
+      subTitle,
       description,
-      route,
+      websiteUrl,
       children,
+      snapshots,
     } = this.props;
+    const image = snapshots[0];
     return (
       <Card>
-        <CardImg top width="100%" src="/assets/images/logo.png" alt="Card image cap" />
+        <CardImg top width="100%" src={image.url} alt={image.name} />
         <CardBody>
           <CardTitle>{title}</CardTitle>
-          <CardSubtitle>{route ? route.webRoute : ''}</CardSubtitle>
+          <CardSubtitle>{subTitle}</CardSubtitle>
           <CardText>
               {description}
           </CardText>
-          <Button>Website</Button>
-          <Button>Direction</Button>
+          {/* {
+            websiteUrl ?
+              <a href={websiteUrl}><Button>Website</Button></a>
+            : null
+          }
+          <Button>Address</Button>
           <Button>Phone</Button>
-          {children}
+          {children} */}
         </CardBody>
       </Card>
     )
@@ -37,9 +46,36 @@ export default class CatalogItem extends Component {
 
 CatalogItem.propTypes = {
   id: PropTypes.number,
+  style: PropTypes.object,
   title: PropTypes.string,
-  description: PropTypes.string,
-  route: PropTypes.shape({
-    webRoute: PropTypes.string,
+  location: PropTypes.shape({
+    longitude: PropTypes.string,
+    latitude: PropTypes.string,
+    address: PropTypes.string,
+    city: PropTypes.string,
+    state: PropTypes.string,
+    zip: PropTypes.string,
   }),
+  subTitle: PropTypes.string,
+  description: PropTypes.string,
+  websiteUrl: PropTypes.string,
+  snapshots: PropTypes.arrayOf(PropTypes.string),
+};
+
+CatalogItem.defaultProps = {
+  id: 0,
+  style: {},
+  title: '',
+  location: {
+    longitude: '',
+    latitude: '',
+    address: '',
+    city: '',
+    state: '',
+    zip: '',
+  },
+  subTitle: '',
+  description: '',
+  websiteUrl: '',
+  snapshots: [],
 };
