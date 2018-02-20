@@ -14,13 +14,12 @@ export default class ContactForm extends Component {
 
   render() {
     let {
-      content,
       style,
-      type,
+      receiverEmail,
     } = this.props;
     return (
       <StyledComponentWrapper>
-        <ContactFormContainer action="https://formspree.io/support@naturalorchards.us"
+        <ContactFormContainer action={`https://formspree.io/${receiverEmail}`}
             method="POST">
             <ContactFormLegend gridAreaId="name">Name</ContactFormLegend>
             <ContactFormInput gridAreaId="first-name" name={'customerFirstName'}
@@ -52,7 +51,11 @@ export default class ContactForm extends Component {
 }
 
 ContactForm.propTypes = {
-  content: PropTypes.object,
   style: PropTypes.object,
-  type: PropTypes.string,
+  receiverEmail: PropTypes.string,
+};
+
+ContactForm.defaultProps = {
+  style: {},
+  receiverEmail: 'support@naturalorchards.us',
 };

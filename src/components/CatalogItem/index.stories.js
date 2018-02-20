@@ -2,25 +2,31 @@ import CatalogItem from './index';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import React from 'react';
-
-import catelog from './__mock__/catelog';
+import getACatelogItem from './../../__mock__/getACatelogItem';
 
 const {
   id,
-  style,
-  title,
-  subTitle,
+  name,
+  route,
   description,
-  websiteUrl,
+  website,
+  socialAccounts,
+  locations,
+  imamsList,
+  phones,
   snapshots,
-} = catelog[0];
+} = getACatelogItem();
+
+const location = locations[0];
+const subTitle = `${location.city || ''}, ${location.state || ''} ${location.country || ''}`
 
 storiesOf('CatalogItem', module)
 .add('default', () => <CatalogItem
   id={id}
-  title={title}
-  description={description}
+  title={name}
+  location={location}
   subTitle={subTitle}
-  websiteUrl={websiteUrl}
+  description={description}
+  websiteUrl={website}
   snapshots={snapshots}
 />)

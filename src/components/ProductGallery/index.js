@@ -44,11 +44,13 @@ export default class ProductGallery extends Component {
   render() {
     let {
       images,
+      style,
     } = this.props;
     const COMPONENT_NAME = 'ProductGallery';
     const hasOnlyOneImage = images.length === 1 || !images.length;
     return (
       <Container
+        style={style}
         componentName={COMPONENT_NAME}
         gridAreaId={''}>
         <DisplayImageBox asfullHeight={hasOnlyOneImage} ref={(element)=> { this.displayBoxDom = element}}>
@@ -79,4 +81,5 @@ export default class ProductGallery extends Component {
 
 ProductGallery.propTypes = {
   images: PropTypes.array.isRequired,
+  style: PropTypes.object,
 }

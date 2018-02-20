@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Container, Row, Col, Card, CardImg, CardText, CardBody,
   CardTitle, CardSubtitle, Button } from 'reactstrap';
+import {Link} from 'react-router-dom';
+import CatalogItem  from './../CatalogItem';
 
 export default class CatalogList extends Component {
 
@@ -19,35 +21,50 @@ export default class CatalogList extends Component {
     if (!collection.data.length) return null;
     return (
       <Container fluid><Row>
-        {collection.data.map((item) => {
+        {collection.data.map((record) => {
           const {
             id,
-            title,
-            subTitle,
+            name,
+            route,
             description,
-            websiteUrl,
-          } = item;
+            website,
+            socialAccounts,
+            locations,
+            imamsList,
+            phones,
+            snapshots,
+          } = record;
+
+          const location = locations[0];
+          const subTitle = `${location.city || ''}, ${location.state || ''} ${location.country || ''}`
           return (
             <Col
               key={id}
-              xs={12}
-              sm={6}
-              md={4}
-              lg={3}
-              xl={3}>
-              <Card>
-                <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
-                <CardBody>
-                  <CardTitle>{title}</CardTitle>
-                  <CardSubtitle>{subTitle}</CardSubtitle>
-                  <CardText>
-                      {description}
-                  </CardText>
-                  <a href={websiteUrl}><Button>Website</Button></a>
-                  <Button>Direction</Button>
-                  <Button>Phone</Button>
-                </CardBody>
-              </Card>
+              xs={{
+                size: 12,
+              }}
+              sm={{
+                size: 6,
+              }}
+              md={{
+                size: 4,
+              }}
+              lg={{
+                size: 4,
+              }}
+              xl={{
+                size: 4,
+              }}>
+              <Link to={`/list/masjid/${route}/`}><CatalogItem
+                id={id}
+                title={name}
+                location={location}
+                subTitle={subTitle}
+                description={description}
+                websiteUrl={website}
+                snapshots={snapshots} >
+
+              </CatalogItem></Link>
             </Col>
           )
         })}

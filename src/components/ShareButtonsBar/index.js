@@ -8,12 +8,11 @@ import {
   ShareCounts,
   generateShareIcon
 } from 'react-share';
+import Link from 'material-ui-icons/Link';
+import getWindow from './../../util/get/getWindow';
 const setComponentWrapperContainerClasses = require('../../util/setup/setComponentWrapperContainerClasses');
 
-import getWindow from './../../util/get/getWindow';
-
 export default class ShareButtonsBar extends Component {
-
   constructor(props) {
     super(props);
   }
@@ -27,6 +26,9 @@ export default class ShareButtonsBar extends Component {
       sharedDescriptionText,
       hashtags,
       sharedTitle,
+      homeLink,
+      hasMarginBottom,
+      moreLink,
     } = this.props;
 
     const {
@@ -53,10 +55,19 @@ export default class ShareButtonsBar extends Component {
       : '';
     const absoluteUrl = `${locationHref}${sharedImageUrl}`;
 
+    const {
+      spreaker,
+      mixler,
+    } = moreLink;
+
     return (
       <Container
+        hasMarginBottom
         componentName={containerName}
         gridAreaId={''} style={style}>
+        {homeLink ? <IconHolder>
+          <a href={homeLink}><Link /></a>
+        </IconHolder> : null}
         <IconHolder>
           <FacebookShareButton url={locationHref}
             quote={sharedTitle}>
@@ -92,4 +103,20 @@ ShareButtonsBar.propTypes = {
   sharedDescriptionText: PropTypes.string,
   hashtags: PropTypes.string,
   sharedTitle: PropTypes.string,
+  homeLink: PropTypes.string,
+  hasMarginBottom: PropTypes.bool,
+  moreLink: PropTypes.objectOf(PropTypes.object),
+}
+
+ShareButtonsBar.defaultProps = {
+  content: {},
+  style: {},
+  type: '',
+  sharedImageUrl: '',
+  sharedDescriptionText: '',
+  hashtags: '',
+  sharedTitle: '',
+  homeLink: '',
+  hasMarginBottom: false,
+  moreLink: {},
 }

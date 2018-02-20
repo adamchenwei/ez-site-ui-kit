@@ -2,7 +2,7 @@ import React, { Component, Children } from 'react';
 import PropTypes from 'prop-types';
 import { Container, Row, Col, Card, CardImg, CardText, CardBody,
   CardTitle, CardSubtitle, Button } from 'reactstrap';
-
+import SnapshotContainer from './style/SnapshotContainer';
 export default class CatalogItem extends Component {
   constructor(props) {
     super(props);
@@ -23,7 +23,9 @@ export default class CatalogItem extends Component {
     const image = snapshots[0];
     return (
       <Card>
-        <CardImg top width="100%" height="250px" src={image.url} alt={image.name} />
+        <SnapshotContainer>
+          <CardImg top height="250px" src={image.url} alt={image.name} />
+        </SnapshotContainer>
         <CardBody>
           <CardTitle>{title}</CardTitle>
           <CardSubtitle>{subTitle}</CardSubtitle>
@@ -41,8 +43,8 @@ CatalogItem.propTypes = {
   style: PropTypes.object,
   title: PropTypes.string,
   location: PropTypes.shape({
-    longitude: PropTypes.string,
-    latitude: PropTypes.string,
+    longitude: PropTypes.number,
+    latitude: PropTypes.number,
     address: PropTypes.string,
     city: PropTypes.string,
     state: PropTypes.string,
@@ -51,7 +53,7 @@ CatalogItem.propTypes = {
   subTitle: PropTypes.string,
   description: PropTypes.string,
   websiteUrl: PropTypes.string,
-  snapshots: PropTypes.arrayOf(PropTypes.string),
+  snapshots: PropTypes.arrayOf(PropTypes.object),
 };
 
 CatalogItem.defaultProps = {
