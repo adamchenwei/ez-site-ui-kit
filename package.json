@@ -15,7 +15,7 @@
     "build-storybook": "build-storybook",
     "analyze": "webpack --profile --json > stats.json",
     "analyze:win": "webpack --env-analyze=true --profile --json | Out-file 'stats.json' -Encoding OEM",
-    "workspace": "npm-run-all --parallel start:p storybook"
+    "workspace": "npm-run-all --parallel start storybook"
   },
   "author": "Ezeewei",
   "license": "ISC",

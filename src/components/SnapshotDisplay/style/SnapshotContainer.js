@@ -5,7 +5,6 @@ module.exports = styled.section`
   width: 100%;
   display:flex;
   overflow: hidden;
-  margin-bottom: 16px;
   justify-content: center;
   align-items: center;
 `;

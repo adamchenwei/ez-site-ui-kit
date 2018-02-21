@@ -12,11 +12,13 @@ export default class GoogleEmbbededMapView extends Component {
     let {
       style,
       query,
+      width,
+      height,
     } = this.props;
     return (
       <iframe
-        width="100%"
-        height="450"
+        width={width}
+        height={height}
         frameBorder="0" style={style}
         src={`https://www.google.com/maps/embed/v1/place?key=${GOOGLE_EMBEDDED_MAP_API}&q=${query}`} allowFullScreen>
       </iframe>
@@ -27,4 +29,12 @@ export default class GoogleEmbbededMapView extends Component {
 GoogleEmbbededMapView.propTypes = {
   style: PropTypes.object,
   query: PropTypes.string,
+  height: PropTypes.string,
+};
+
+GoogleEmbbededMapView.defaultProps = {
+  style: {},
+  query: '',
+  width: '100%',
+  height: '100%',
 };

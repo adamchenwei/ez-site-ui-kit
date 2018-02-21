@@ -11,6 +11,7 @@ import {
 import Link from 'material-ui-icons/Link';
 import getWindow from './../../util/get/getWindow';
 const setComponentWrapperContainerClasses = require('../../util/setup/setComponentWrapperContainerClasses');
+import LinkIconContainer from './style/LinkIconContainer';
 
 export default class ShareButtonsBar extends Component {
   constructor(props) {
@@ -50,8 +51,8 @@ export default class ShareButtonsBar extends Component {
     const FacebookIcon = generateShareIcon('facebook');
     const TwitterIcon = generateShareIcon('twitter');
     const PinterestIcon = generateShareIcon('pinterest');
-    const locationHref = getWindow
-      ? getWindow.location.href
+    const locationHref = getWindow()
+      ? getWindow().location.href
       : '';
     const absoluteUrl = `${locationHref}${sharedImageUrl}`;
 
@@ -65,8 +66,8 @@ export default class ShareButtonsBar extends Component {
         hasMarginBottom
         componentName={containerName}
         gridAreaId={''} style={style}>
-        {homeLink ? <IconHolder>
-          <a href={homeLink}><Link /></a>
+        {homeLink ? <IconHolder style={{backgroundColor: '#11111108'}}>
+          <LinkIconContainer href={homeLink}><Link /></LinkIconContainer>
         </IconHolder> : null}
         <IconHolder>
           <FacebookShareButton url={locationHref}

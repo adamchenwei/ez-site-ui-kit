@@ -2,7 +2,8 @@ import React, { Component, Children } from 'react';
 import PropTypes from 'prop-types';
 import { Container, Row, Col, Card, CardImg, CardText, CardBody,
   CardTitle, CardSubtitle, Button } from 'reactstrap';
-import SnapshotContainer from './style/SnapshotContainer';
+import SnapshotDisplay from './../SnapshotDisplay';
+
 export default class CatalogItem extends Component {
   constructor(props) {
     super(props);
@@ -23,9 +24,10 @@ export default class CatalogItem extends Component {
     const image = snapshots[0];
     return (
       <Card>
-        <SnapshotContainer>
-          <CardImg top height="250px" src={image.url} alt={image.name} />
-        </SnapshotContainer>
+        <SnapshotDisplay
+          snapshotSrc={image.url}
+          alt={image.name}
+        />
         <CardBody>
           <CardTitle>{title}</CardTitle>
           <CardSubtitle>{subTitle}</CardSubtitle>
