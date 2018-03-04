@@ -46,6 +46,8 @@ export default class MobileMenuRouteEnabled extends Component {
       isExpanded,
       filterItems,
       menuItems,
+      isCustomFilterItems,
+      isCustomMenuItems,
     } = this.props;
     const isOpen = isExpanded || this.state.isOpen;
     const COMPONENT_NAME = 'MobileMenuRouteEnabled';
@@ -53,13 +55,15 @@ export default class MobileMenuRouteEnabled extends Component {
 
     //was filter but now its becoming just specific items ONLY
     //filterItems = buildMenuFilterItems(6) || [];
-    filterItems = buildProductMenuItems(10).sort((a, b) => {
+    filterItems = !isCustomFilterItems ? buildProductMenuItems(10).sort((a, b) => {
       var textA = a.title.toUpperCase();
       var textB = b.title.toUpperCase();
       return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
-    }) || [];
-    menuItems = buildMenuItems(2) || [];
+    }) : filterItems;
 
+    menuItems = !isCustomMenuItems ? buildMenuItems(2) : menuItems;
+    console.log(filterItems);
+    console.log(menuItems);
     return (
       <Container
         componentName={containerName}
@@ -114,4 +118,17 @@ MobileMenuRouteEnabled.propTypes = {
   siteName: PropTypes.string,
   filterItems: PropTypes.array,
   menuItems: PropTypes.array,
-}
+  isCustomFilterItems: PropTypes.bool,
+  isCustomMenuItems: PropTypes.bool,
+};
+
+MobileMenuRouteEnabled.defaultProps = {
+  content: {},
+  style: {},
+  type: '',
+  siteName: '',
+  filterItems: [],
+  menuItems: [],
+  isCustomFilterItems: false,
+  isCustomMenuItems: false,
+};

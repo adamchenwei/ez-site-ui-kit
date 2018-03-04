@@ -21,22 +21,49 @@ import {
 } from './../MobileMenuRouteEnabled/factory/menu';
 const menuBarItems = buildMenuItems(2);
 const filterBarItems = buildMenuFilterItems(6);
+console.log('----')
+console.log(menuBarItems);
+
+const MOCK_MENU = [
+  {path: '/',
+    title: 'Home',
+  },
+  {path: '/contact',
+    title: 'Contact',
+  },
+  {path: '/about',
+    title: 'About',
+  },
+  {path: '/list',
+    title: 'Masjids',
+  },
+];
 
 storiesOf(`
 Mobile Menu Route Enabled
 * Disappear on tablet size (768px+)
 `, module)
-.add('with actual data expanded', () => {
-return (
-  <Router><MobileMenuRouteEnabled
-    siteName={'My Website'}
-    isExpanded={true}
-    menuItems={menuBarItems}
-    filterItems={filterBarItems}>
-  </MobileMenuRouteEnabled></Router>
-)
+.add('with menu and filter items', () => {
+  return (
+    <Router><MobileMenuRouteEnabled
+      siteName={'My Website'}
+      isExpanded={true}
+      menuItems={menuBarItems}
+      filterItems={filterBarItems}>
+    </MobileMenuRouteEnabled></Router>
+  )
 })
-
+.add('with menu items only (enable custom filter)', () => {
+  return (
+    <Router><MobileMenuRouteEnabled
+      siteName={'My Website'}
+      isExpanded={true}
+      menuItems={MOCK_MENU}
+      isCustomMenuItems
+      isCustomFilterItems />
+    </Router>
+  )
+  })
 .add('collapsed - empty state', () => {
 return (
 

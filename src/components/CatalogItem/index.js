@@ -2,6 +2,7 @@ import React, { Component, Children } from 'react';
 import PropTypes from 'prop-types';
 import { Container, Row, Col, Card, CardImg, CardText, CardBody,
   CardTitle, CardSubtitle, Button } from 'reactstrap';
+import get from 'lodash/get';
 import SnapshotDisplay from './../SnapshotDisplay';
 
 export default class CatalogItem extends Component {
@@ -20,13 +21,18 @@ export default class CatalogItem extends Component {
       websiteUrl,
       children,
       snapshots,
+      svgSnapshot,
     } = this.props;
-    const image = snapshots[0];
+    const image = get(snapshots, '[0]', {});
+    const {
+      url,
+      name,
+    } = image;
     return (
       <Card>
         <SnapshotDisplay
-          snapshotSrc={image.url}
-          alt={image.name}
+          snapshotSrc={url}
+          alt={name}
         />
         <CardBody>
           <CardTitle>{title}</CardTitle>
@@ -56,6 +62,7 @@ CatalogItem.propTypes = {
   description: PropTypes.string,
   websiteUrl: PropTypes.string,
   snapshots: PropTypes.arrayOf(PropTypes.object),
+  svgSnapshot: PropTypes.object,
 };
 
 CatalogItem.defaultProps = {

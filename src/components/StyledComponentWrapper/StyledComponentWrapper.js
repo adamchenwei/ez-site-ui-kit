@@ -11,9 +11,7 @@ export default class StyledComponentWrapper extends Component {
     } = this.props;
 
     return (
-      <section>
-        {children}
-      </section>
+      children
     );
   }
 }
