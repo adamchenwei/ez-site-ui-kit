@@ -43,9 +43,6 @@ const ProductListing = class ProductListing extends Component {
     } = routeParams;
     //const productRef = routeParams.productRef;
     //const queryParams = this.props.location.query;
-    console.log('---product listing ---');
-    console.log(routeParams);
-    //console.log(queryParams);
 
     //find specific product grid item with productRef & queryParams
     //TODO: right now its NOT COMPLETE!!!!

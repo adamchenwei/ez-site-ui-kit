@@ -19,16 +19,13 @@ const Product = class Product extends Component {
 
     //find specific product grid item with productRef & queryParams
     //TODO: right now its NOT COMPLETE!!!!
-    console.log('PRODUCT REF IS ' + productRefRefreshed);
-    console.log(this.props);
+
     const productSpecs = ContentSynchronizer.getProductGrid(productRefRefreshed);
     const PRODUCT_GRID_ITEM_ID = 3;
     const productGridItem = ContentSynchronizer.getItem(
       'grids', 'gridItemId', PRODUCT_GRID_ITEM_ID, true);
     //TODO: Dynamic inject content... not very dry
     productGridItem.gridContent.productSpecs = productSpecs;
-    console.log('-----Product');
-    console.log(productGridItem.gridContent.prodctSpecs);
 
     const bodyDisplay = <GridItem
       gridResponsiveProperties={productGridItem.gridResponsiveProperties}

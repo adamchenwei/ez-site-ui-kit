@@ -78,7 +78,6 @@ export default class SlideShow extends Component {
   }
 
   goToSlide(keyValue) {
-    console.log(keyValue);
     if (!keyValue && keyValue !== 0) return;
     const slides = this.props.slides;
     const currentSlide = slides.filter((slide) => {

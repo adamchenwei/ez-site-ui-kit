@@ -17,7 +17,6 @@ export default class CatalogList extends Component {
       style,
       type,
     } = this.props;
-    console.log(collection.data)
     if (!collection.data.length) return null;
     return (
       <Container fluid><Row>

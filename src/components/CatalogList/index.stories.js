@@ -10,7 +10,6 @@ for (let i=0; i < 10; i ++) {
   data.push(getACatelogItem());
 }
 
-console.log(data);
 storiesOf('CatalogList', module)
 .add('default', () => <Router><CatalogList collection={{
   data,

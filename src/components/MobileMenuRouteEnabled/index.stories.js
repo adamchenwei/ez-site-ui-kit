@@ -21,8 +21,6 @@ import {
 } from './../MobileMenuRouteEnabled/factory/menu';
 const menuBarItems = buildMenuItems(2);
 const filterBarItems = buildMenuFilterItems(6);
-console.log('----')
-console.log(menuBarItems);
 
 const MOCK_MENU = [
   {path: '/',

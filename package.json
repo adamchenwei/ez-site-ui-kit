@@ -37,6 +37,7 @@
     "axios": "^0.17.1",
     "bootstrap": "^4.0.0-beta.3",
     "ez-site-content-store": "git+ssh://git@bitbucket.org:adam_chen_wei/ez-site-content-store.git",
+    "html-react-parser": "^0.4.2",
     "material-ui": "^1.0.0-beta.20",
     "material-ui-icons": "^1.0.0-beta.17",
     "prop-types": "^15.6.0",

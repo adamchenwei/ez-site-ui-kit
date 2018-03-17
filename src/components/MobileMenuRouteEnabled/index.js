@@ -62,8 +62,7 @@ export default class MobileMenuRouteEnabled extends Component {
     }) : filterItems;
 
     menuItems = !isCustomMenuItems ? buildMenuItems(2) : menuItems;
-    console.log(filterItems);
-    console.log(menuItems);
+
     return (
       <Container
         componentName={containerName}
