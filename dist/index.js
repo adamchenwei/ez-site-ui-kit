@@ -885,7 +885,11 @@ var _templateObject = _taggedTemplateLiteral(['\n    @media (min-width: 320px) {
     _templateObject8 = _taggedTemplateLiteral(['\n  @media (min-width: 768px) and (max-width: 1023px) {\n      ', '\n    }\n  '], ['\n  @media (min-width: 768px) and (max-width: 1023px) {\n      ', '\n    }\n  ']),
     _templateObject9 = _taggedTemplateLiteral(['\n    @media (min-width: 1024px) {\n      ', '\n    }\n  '], ['\n    @media (min-width: 1024px) {\n      ', '\n    }\n  ']),
     _templateObject10 = _taggedTemplateLiteral(['\n  @media (min-width: 1024px) and (max-width: 1439px) {\n      ', '\n    }\n  '], ['\n  @media (min-width: 1024px) and (max-width: 1439px) {\n      ', '\n    }\n  ']),
-    _templateObject11 = _taggedTemplateLiteral(['\n    @media (min-width: 1440px) {\n      ', '\n    }\n  '], ['\n    @media (min-width: 1440px) {\n      ', '\n    }\n  ']);
+    _templateObject11 = _taggedTemplateLiteral(['\n    @media (min-width: 1440px) {\n      ', '\n    }\n  '], ['\n    @media (min-width: 1440px) {\n      ', '\n    }\n  ']),
+    _templateObject12 = _taggedTemplateLiteral(['\n    ', '\n  '], ['\n    ', '\n  ']),
+    _templateObject13 = _taggedTemplateLiteral(['\n    @media (min-width: 576px) {\n      ', '\n    }\n  '], ['\n    @media (min-width: 576px) {\n      ', '\n    }\n  ']),
+    _templateObject14 = _taggedTemplateLiteral(['\n    @media (min-width: 992px) {\n      ', '\n    }\n  '], ['\n    @media (min-width: 992px) {\n      ', '\n    }\n  ']),
+    _templateObject15 = _taggedTemplateLiteral(['\n    @media (min-width: 1200px) {\n      ', '\n    }\n  '], ['\n    @media (min-width: 1200px) {\n      ', '\n    }\n  ']);
 
 var _styledComponents = __webpack_require__(2);
 
@@ -894,6 +898,8 @@ function _taggedTemplateLiteral(strings, raw) {
 }
 
 var mediaQuery = {
+
+  //Chrome Inspctor
   'mobileS': function mobileS() {
     return (0, _styledComponents.css)(_templateObject, _styledComponents.css.apply(undefined, arguments));
   },
@@ -931,6 +937,25 @@ var mediaQuery = {
 
   'laptopL': function laptopL() {
     return (0, _styledComponents.css)(_templateObject11, _styledComponents.css.apply(undefined, arguments));
+  },
+
+  //Bootstrap 4
+  // xs: Extra small devices (portrait phones, less than 576px)
+  // No media query since this is the default in Bootstrap
+  'xs': function xs() {
+    return (0, _styledComponents.css)(_templateObject12, _styledComponents.css.apply(undefined, arguments));
+  },
+  'sm': function sm() {
+    return (0, _styledComponents.css)(_templateObject13, _styledComponents.css.apply(undefined, arguments));
+  },
+  'md': function md() {
+    return (0, _styledComponents.css)(_templateObject7, _styledComponents.css.apply(undefined, arguments));
+  },
+  'lg': function lg() {
+    return (0, _styledComponents.css)(_templateObject14, _styledComponents.css.apply(undefined, arguments));
+  },
+  'xl': function xl() {
+    return (0, _styledComponents.css)(_templateObject15, _styledComponents.css.apply(undefined, arguments));
   }
 };
 
@@ -1026,873 +1051,4119 @@ var _typeof = typeof Symbol === "function" && _typeof2(Symbol.iterator) === "sym
   return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj === "undefined" ? "undefined" : _typeof2(obj);
 };
 
-!function (e, t) {
-  for (var n in t) {
-    e[n] = t[n];
+(function (e, a) {
+  for (var i in a) {
+    e[i] = a[i];
   }
-}(exports, function (e) {
-  function t(r) {
-    if (n[r]) return n[r].exports;var i = n[r] = { i: r, l: !1, exports: {} };return e[r].call(i.exports, i, i.exports, t), i.l = !0, i.exports;
-  }var n = {};return t.m = e, t.c = n, t.d = function (e, n, r) {
-    t.o(e, n) || Object.defineProperty(e, n, { configurable: !1, enumerable: !0, get: r });
-  }, t.n = function (e) {
-    var n = e && e.__esModule ? function () {
-      return e.default;
-    } : function () {
-      return e;
-    };return t.d(n, "a", n), n;
-  }, t.o = function (e, t) {
-    return Object.prototype.hasOwnProperty.call(e, t);
-  }, t.p = "", t(t.s = 18);
-}([function (e, t, n) {
-  "use strict";
-
-  function r() {
-    return Math.floor(1e9 * Math.random());
-  }Object.defineProperty(t, "__esModule", { value: !0 }), t.default = r;
-}, function (e, t, n) {
-  var r = n(8),
-      i = r(Object, "create");e.exports = i;
-}, function (e, t, n) {
-  function r(e, t) {
-    for (var n = e.length; n--;) {
-      if (i(e[n][0], t)) return n;
-    }return -1;
-  }var i = n(14);e.exports = r;
-}, function (e, t, n) {
-  function r(e, t) {
-    var n = e.__data__;return i(t) ? n["string" == typeof t ? "string" : "hash"] : n.map;
-  }var i = n(61);e.exports = r;
-}, function (e, t) {
-  var n = Array.isArray;e.exports = n;
-}, function (e, t, n) {
-  function r(e) {
-    return "symbol" == (typeof e === "undefined" ? "undefined" : _typeof(e)) || o(e) && i(e) == a;
-  }var i = n(13),
-      o = n(35),
-      a = "[object Symbol]";e.exports = r;
-}, function (e, t, n) {
-  var r = n(7),
-      i = r.Symbol;e.exports = i;
-}, function (e, t, n) {
-  var r = n(31),
-      i = "object" == (typeof self === "undefined" ? "undefined" : _typeof(self)) && self && self.Object === Object && self,
-      o = r || i || Function("return this")();e.exports = o;
-}, function (e, t, n) {
-  function r(e, t) {
-    var n = o(e, t);return i(n) ? n : void 0;
-  }var i = n(43),
-      o = n(48);e.exports = r;
-}, function (e, t) {
-  function n(e) {
-    var t = typeof e === "undefined" ? "undefined" : _typeof(e);return null != e && ("object" == t || "function" == t);
-  }e.exports = n;
-}, function (e, t, n) {
-  "use strict";
-
-  function r(e) {
-    return e && e.__esModule ? e : { default: e };
-  }function i(e, t) {
-    if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function");
-  }Object.defineProperty(t, "__esModule", { value: !0 });var o = n(76),
-      a = r(o),
-      s = n(77),
-      u = r(s),
-      l = n(78),
-      c = r(l),
-      d = n(79),
-      f = (r(d), function e() {
-    var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "0",
-        n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "",
-        r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : { appRouteCustom: "", appRouteDefault: "", webRoute: "" },
-        o = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : [],
-        s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : [],
-        l = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : [];i(this, e);var d = s.map(function (e) {
-      return new u.default(e.url, e.note);
-    }),
-        f = l.map(function (e) {
-      return new c.default(e.userId, e.date);
-    });return { id: t, content: { title: n, appRoute: new a.default(r.appRouteCustom, r.appRouteDefault), webRoute: r.webRoute, tags: o, references: d, collectionInfo: f, cachedContent: { content: "", collectedByUserId: "", collectedTime: 0 } } };
-  });t.default = f;
-}, function (e, t, n) {
-  "use strict";
-
-  function r(e) {
-    return e && e.__esModule ? e : { default: e };
-  }Object.defineProperty(t, "__esModule", { value: !0 });var i = n(19),
-      o = r(i),
-      a = n(20),
-      s = r(a),
-      u = n(21),
-      l = r(u),
-      c = n(22),
-      d = r(c),
-      f = n(23),
-      m = r(f),
-      p = n(24),
-      g = r(p),
-      h = n(25),
-      v = r(h),
-      y = n(26),
-      b = r(y);t.default = { site: m.default, menus: l.default, pages: d.default, gridContainerProperties: ["abc"], grids: s.default, assets: o.default, products: g.default, banners: v.default, footer: b.default };
-}, function (e, t, n) {
-  function r(e, t) {
-    return i(e) ? e : o(e, t) ? [e] : a(s(e));
-  }var i = n(4),
-      o = n(30),
-      a = n(36),
-      s = n(65);e.exports = r;
-}, function (e, t, n) {
-  function r(e) {
-    return null == e ? void 0 === e ? u : s : l && l in Object(e) ? o(e) : a(e);
-  }var i = n(6),
-      o = n(33),
-      a = n(34),
-      s = "[object Null]",
-      u = "[object Undefined]",
-      l = i ? i.toStringTag : void 0;e.exports = r;
-}, function (e, t) {
-  function n(e, t) {
-    return e === t || e !== e && t !== t;
-  }e.exports = n;
-}, function (e, t, n) {
-  function r(e) {
-    if ("string" == typeof e || i(e)) return e;var t = e + "";return "0" == t && 1 / e == -o ? "-0" : t;
-  }var i = n(5),
-      o = 1 / 0;e.exports = r;
-}, function (e, t, n) {
-  "use strict";
-
-  Object.defineProperty(t, "__esModule", { value: !0 });var r = n(80),
-      i = function (e) {
-    return e && e.__esModule ? e : { default: e };
-  }(r);t.default = { a1: i.default };
-}, function (e, t, n) {
-  "use strict";
-
-  function r() {
-    var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "",
-        t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "",
-        n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "",
-        r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "",
-        i = { location: e.replace(/[^A-Z0-9]/gi, "+") || "", city: t.replace(/[^A-Z0-9]/gi, "+") || "", state: n.replace(/[^A-Z0-9]/gi, "+") || "" };return i.location + (i.city ? "+" : "") + i.city + (i.state ? "+" : "") + i.state + (r ? "+" : "") + r;
-  }Object.defineProperty(t, "__esModule", { value: !0 }), t.default = r;
-}, function (e, t, n) {
-  "use strict";
-
-  function r(e) {
-    return e && e.__esModule ? e : { default: e };
-  }Object.defineProperty(t, "__esModule", { value: !0 }), t.getRoute = t.getGoogleMapQuery = t.getGoogleMapUrl = t.getRandomId = t.Snapshot = t.SocialNetworkAccount = t.Collection = t.Location = t.Log = t.Person = t.Record = t.Records = t.ContentSynchronizer = t.www___naturalorchards__us = void 0;var i = n(11),
-      o = r(i),
-      a = n(27),
-      s = r(a),
-      u = n(74),
-      l = r(u),
-      c = n(10),
-      d = r(c),
-      f = n(81),
-      m = r(f),
-      p = n(82),
-      g = r(p),
-      h = n(83),
-      v = r(h),
-      y = n(84),
-      b = r(y),
-      _ = n(85),
-      w = r(_),
-      x = n(86),
-      I = r(x),
-      P = n(0),
-      C = r(P),
-      j = n(87),
-      N = r(j),
-      O = n(17),
-      S = r(O),
-      k = n(88),
-      M = r(k);t.www___naturalorchards__us = o.default, t.ContentSynchronizer = s.default, t.Records = l.default, t.Record = d.default, t.Person = m.default, t.Log = g.default, t.Location = v.default, t.Collection = b.default, t.SocialNetworkAccount = w.default, t.Snapshot = I.default, t.getRandomId = C.default, t.getGoogleMapUrl = N.default, t.getGoogleMapQuery = S.default, t.getRoute = M.default;
-}, function (e, t, n) {
-  "use strict";
-
-  Object.defineProperty(t, "__esModule", { value: !0 }), t.default = [];
-}, function (e, t, n) {
-  "use strict";
-
-  Object.defineProperty(t, "__esModule", { value: !0 }), t.default = [{ gridItemId: 1, gridItemName: "notifcation bar", gridTypeName: "custom", gridCustomName: "notification bar", gridComponent: "NotificationBar", gridContent: { type: "textWithBarLink", data: { text: "we are in opening sale!", link: "http://naturalorchards.us", showAsDefault: !0 }, style: ["center-text"] }, gridCustomStyle: {}, gridStyle: [], gridResponsiveProperties: { standard: 12, xs: 12, sm: 12, md: 12, lg: 12, xl: 12, offset: { standard: "", sm: "", md: "", lg: "", xl: "" } } }, { gridItemId: 2, gridItemName: "main menu bar", gridTypeName: "menu", gridCustomName: "menu bar", gridComponent: "MenuBar", gridContent: { menuId: 1, menuType: "custom" }, gridCustomStyle: { container: { inlineStyles: { marginTop: "20px", marginBottom: "20px" } } }, gridStyle: [], gridResponsiveProperties: { standard: 12, xs: 12, sm: 12, md: 12, lg: 12, xl: 12, offset: { standard: "", sm: "", md: "", lg: "", xl: "" } } }, { gridItemId: 3, gridItemName: "specific product", gridTypeName: "specific product", gridCustomName: "specific product", gridComponent: "ProductDisplay", gridContent: { productName: "product", style: [] }, gridCustomStyle: {}, gridStyle: [], gridResponsiveProperties: { standard: 12, xs: 12, sm: 12, md: 12, lg: 6, xl: 6, offset: { standard: "", sm: "", md: "", lg: 3, xl: 3 } } }, { gridItemId: 4, gridItemName: "main footer", gridTypeName: "menu", gridCustomName: "footer bar", gridComponent: "FooterBar", gridContent: { data: {} }, gridCustomStyle: {}, gridStyle: [], gridResponsiveProperties: { standard: 12, xs: 12, sm: 12, md: 12, lg: 12, xl: 12, offset: { standard: "", sm: "", md: "", lg: "", xl: "" } } }, { gridItemId: 5, gridItemName: "product listing", gridTypeName: "listing", gridCustomName: "product listing", gridComponent: "Listing", gridContent: { data: { name: "products", listingItemComponentName: "ListingItem", listingItemResponsiveProperties: { standard: 12, xs: 12, sm: 12, md: 4, lg: 4, xl: 4, offset: { standard: "", sm: "", md: "", lg: "", xl: "" } }, listingCustomStyle: { container: { inlineStyles: { marginTop: "1%", marginBottom: "1%" } } }, listingItemStyle: ["listingItem__shell"] } }, gridCustomStyle: {}, gridStyle: [], gridResponsiveProperties: { standard: 10, xs: 10, sm: 10, md: 10, lg: 10, xl: 10, offset: { standard: 1, xs: 1, sm: 1, md: 1, lg: 1, xl: 1 } } }, { gridItemId: 6, gridItemName: "tags menu bar", gridTypeName: "menu", gridCustomName: "tags menu bar", gridComponent: "MenuBar", gridContent: { menuId: 2, menuType: "collection" }, gridCustomStyle: { container: { inlineStyles: { marginTop: "20px", marginBottom: "20px" } } }, gridStyle: [], gridResponsiveProperties: { standard: 12, xs: 12, sm: 12, md: 12, lg: 12, xl: 12, offset: { standard: "", sm: "", md: "", lg: "", xl: "" } } }, { gridItemId: 7, gridItemName: "specific tag product listing", gridTypeName: "listing", gridCustomName: "specific tag product listing", gridComponent: "Listing", gridContent: { data: { name: "products", type: "filter", listingItemComponentName: "ListingItem", listingItemResponsiveProperties: { standard: 12, xs: 12, sm: 12, md: 4, lg: 4, xl: 4, offset: { standard: "", sm: "", md: "", lg: "", xl: "" } }, listingItemStyle: ["listingItem__shell"] } }, gridCustomStyle: {}, gridStyle: [], gridResponsiveProperties: { standard: 10, xs: 10, sm: 10, md: 10, lg: 10, xl: 10, offset: { standard: 1, xs: 1, sm: 1, md: 1, lg: 1, xl: 1 } } }, { gridItemId: 8, gridItemName: "bread crumb", gridTypeName: "custom", gridCustomName: "bread crumb", gridComponent: "BreadCrumb", gridContent: { data: {}, style: { container: { inlineStyles: { marginTop: "20px" } } } }, gridCustomStyle: {}, gridStyle: [], gridResponsiveProperties: { standard: 12, xs: 12, sm: 12, md: 12, lg: 12, xl: 12, offset: { standard: "", sm: "", md: "", lg: "", xl: "" } } }, { gridItemId: 9, gridItemName: "logo bar", gridTypeName: "custom", gridCustomName: "logo bar", gridComponent: "LogoBar", gridContent: { data: { logo: { image: { url: "/assets/images/logo.svg" } } } }, gridCustomStyle: {}, gridStyle: [], gridResponsiveProperties: { standard: 12, xs: 12, sm: 12, md: 12, lg: 12, xl: 12, offset: { standard: "", sm: "", md: "", lg: "", xl: "" } } }, { gridItemId: 10, gridItemName: "all products direct link menu bar", gridTypeName: "menu", gridCustomName: "all products direct link menu bar", gridComponent: "MenuBar", gridContent: { menuId: 4, menuType: "collection" }, gridCustomStyle: { container: { inlineStyles: { marginTop: "20px", marginBottom: "20px" } } }, gridStyle: [], gridResponsiveProperties: { standard: 12, xs: 12, sm: 12, md: 12, lg: 12, xl: 12, offset: { standard: "", sm: "", md: "", lg: "", xl: "" } } }];
-}, function (e, t, n) {
-  "use strict";
-
-  Object.defineProperty(t, "__esModule", { value: !0 }), t.default = [{ menuId: 1, menuLastUpdateDate: 1498688605759, menuName: "primary", menuType: "custom", menuConfig: { position: "center" }, menuItems: [{ menuItemId: 1, type: "filter", style: [], name: "home", componentName: "MenuBarItem", responsiveProperties: { xs: 12, sm: 1, md: 1, lg: 1, xl: 1, offset: { standard: "", sm: "", md: "", lg: "", xl: "" } }, content: { type: "products", name: "all", query: [], link: { name: "home" } } }, { menuItemId: 2, type: "page", style: [], name: "", componentName: "MenuBarItem", responsiveProperties: { xs: 12, sm: 1, md: 1, lg: 1, xl: 1, offset: { standard: "", sm: "", md: "", lg: "", xl: "" } }, content: { pageId: 2 } }, { menuItemId: 3, type: "page", style: [], name: "", componentName: "MenuBarItem", responsiveProperties: { xs: 12, sm: 1, md: 1, lg: 1, xl: 1, offset: { standard: "", sm: "", md: "", lg: "", xl: "" } }, content: { pageId: 3 } }] }, { menuId: 2, menuLastUpdateDate: 1498688605759, menuName: "tags", menuType: "collection", menuConfig: { collectionName: "products", doNotInclude: { collectionKeys: [] }, position: "center", type: "collectionItems", componentName: "MenuBarItem", menuItemId: 4, menuItemType: "filter", menuItemStyle: [], menuItemResponsiveProperties: { xs: 12, sm: 1, md: 1, lg: 1, xl: 1, offset: { standard: "", sm: "", md: "", lg: "", xl: "" } } } }, { menuId: 3, menuLastUpdateDate: 1498688605759, menuName: "products", menuType: "collection", menuConfig: { collectionName: "products", doNotInclude: { collectionKeys: [] }, position: "center", type: "collectionItems", componentName: "", menuItemId: 4, menuItemType: "filter", menuItemStyle: [], menuItemResponsiveProperties: {} } }, { menuId: 4, menuLastUpdateDate: 1498688605759, menuName: "products-all-items", menuType: "collection", menuConfig: { collectionName: "products", doNotInclude: { collectionKeys: [] }, position: "center", type: "collectionItems", componentName: "MenuBarItem", menuItemId: 4, menuItemType: "filter", menuItemStyle: [], menuItemResponsiveProperties: { xs: 12, sm: 1, md: 1, lg: 1, xl: 1, offset: { standard: "", sm: "", md: "", lg: "", xl: "" } } } }];
-}, function (e, t, n) {
-  "use strict";
-
-  Object.defineProperty(t, "__esModule", { value: !0 }), t.default = [{ id: 1, path: "/", componentName: "LandingPage", name: "home", title: "Home", include: { grids: [1, 6, 2] } }, { id: 2, path: "/about", componentName: "About", name: "about", title: "About", include: { grids: [1, 6, 2] } }, { id: 3, path: "/contact", componentName: "Contact", name: "contact", title: "Contact", include: { grids: [1, 6, 2] } }];
-}, function (e, t, n) {
-  "use strict";
-
-  e.exports = { siteId: 1, siteName: { casual: "Natural Orchards" }, domain: { https: !1, name: "naturalorchards", space: "us", development: { https: !1, name: "http://localhost:8080" }, baseTag: "" }, cache: { updated: { time: 1508673731080 }, storedOnClient: { time: null } }, date: { updated: 1508673731080, storedOnClient: 0 }, flag: { notificationBar: { contentUpdated: { date: null }, closed: { date: null, manually: !1 } } } };
-}, function (e, t, n) {
-  "use strict";
-
-  Object.defineProperty(t, "__esModule", { value: !0 }), t.default = [{ id: 1, name: "premium-sun-dried-reaisins", title: "Premium Sun Dried Raisins", shortTitle: "Raisins", tags: ["raisin", "fruit"], route: { name: "premium-sun-dried-reaisins" }, description: "Our Premium Raisins are handpicked with care and sun-dried in trellised\n    vineyards. The exceptional flavor of our Raisins is directly attributable to the\n    unique climate, soil and water runoff from the Hindu Kush mountains – the\n    primary source of irrigation for the pristine orchards from which we source our\n    Premium Raisins.", properties: { ingredients: "Natural Sun-dried Raisins (unsulfured) no preservatives, chemicals\n      or additives.", allergyInformation: "This product was packaged in a facility that handles tree\n      nuts.", storageInformation: "Once opened - recommended to refrigerate.", nutritionFactLabel: { image: { label: "nutrition", url: "" } }, distributedBy: "Natural Orchards, LLC", madeIn: "Product of Afghanistan" }, price: { regular: 0, sale: 0 }, availableQuantity: 99999, slideShow: [{ name: "front", images: [{ url: "/assets/images/products/Raisins 1.jpg" }, { url: "/assets/images/products/Raisins 2.jpg" }, { url: "/assets/images/products/Raisins 3.jpeg" }, { url: "/assets/images/products/Raisins 4.jpg" }] }] }, { id: 2, name: "premium-raw-pistachios", title: "Premium Raw Pistachios", shortTitle: "Pistachios", tags: ["pistachio", "nut"], route: { name: "premium-raw-pistachios" }, description: "Our Premium Pistachios are the finest naturally grown raw pistachios. Our\n    Pistachios are handpicked from wild woodlands, untouched by man and\n    protected by mother nature. The exceptional flavor of our Pistachios is directly\n    attributable to the unique climate, soil and water runoff from the Hindu Kush\n    mountains – the primary source of irrigation for the pristine woodlands from\n    which we source our Premium Pistachios.", properties: { ingredients: "Natural Raw Unsalted Pistachios – (unsulfured) no preservatives,\n      chemicals or additives.", allergyInformation: "This product was packaged in a facility that handles tree\n      nuts.", storageInformation: "Once opened - recommended to refrigerate.", nutritionFactLabel: { image: { label: "nutrition", url: "" } }, distributedBy: "Natural Orchards, LLC", madeIn: "Product of Afghanistan" }, price: { regular: 0, sale: 0 }, availableQuantity: 99999, slideShow: [{ name: "front", images: [{ url: "/assets/images/products/Pistachios 1.jpg" }, { url: "/assets/images/products/Pistachios 2.jpg" }, { url: "/assets/images/products/Pistachios 3.jpeg" }, { url: "/assets/images/products/Pistachios 4.jpg" }, { url: "/assets/images/products/Pistachios 5.jpg" }] }] }, { id: 3, name: "premium-sun-dried-mulberries", title: "Premium Sun Dried Mulberries", shortTitle: "Mulberries", tags: ["mulberry", "fruit"], route: { name: "premium-sun-dried-mulberries" }, description: "Our Premium sun-dried Mulberries are the finest naturally grown mulberries – a\n    superfruit packed with vitamin C and antioxidants. Our mulberries are hand-\n    picked from orchards largely untouched by man and protected by mother\n    nature. The exceptional flavor of our Mulberries is directly attributable to the\n    unique climate, soil and water runoff from the Hindu Kush mountains – the\n    primary source of irrigation for the pristine orchards from which we source our Premium Mulberries.", properties: { ingredients: "Natural sun-dried Mulberries – (unsulfured) no preservatives,\n      chemicals or additives.", allergyInformation: "This product was packaged in a facility that handles tree\n      nuts.", storageInformation: "Once opened - recommended to refrigerate.", nutritionFactLabel: { image: { label: "nutrition", url: "" } }, distributedBy: "Natural Orchards, LLC", madeIn: "Product of Afghanistan" }, price: { regular: 0, sale: 0 }, availableQuantity: 99999, slideShow: [{ name: "front", images: [{ url: "/assets/images/products/Mulberries 1.jpg" }, { url: "/assets/images/products/Mulberries 2.jpg" }, { url: "/assets/images/products/Mulberries 3.jpeg" }, { url: "/assets/images/products/Mulberries 4.jpg" }, { url: "/assets/images/products/Mulberries 5.jpg" }] }] }, { id: 4, name: "premium-raw-almonds", title: "Premium Raw Almonds", shortTitle: "Almonds", tags: ["almond", "nut"], route: { name: "premium-raw-almonds" }, description: "Our Premium Raw Almonds are the finest naturally grown, soft-shelled\n    almonds. Our Almonds are sun dried without pasteurization, which often results\n    in the reduction of healthy oil content. The exceptional flavor of our Almonds is\n    directly attributable to the unique climate, soil and water runoff from the Hindu\n    Kush mountains – the primary source of irrigation for the pristine orchards from\n    which we source our Premium Almonds.", properties: { ingredients: "Natural Raw Unsalted Almonds – (unsulfured) no preservatives,\n      chemicals or additives.", allergyInformation: "This product was packaged in a facility that handles tree\n      nuts.", storageInformation: "Once opened - recommended to refrigerate.", nutritionFactLabel: { image: { label: "nutrition", url: "" } }, distributedBy: "Natural Orchards, LLC", madeIn: "Product of Afghanistan" }, price: { regular: 0, sale: 0 }, availableQuantity: 99999, slideShow: [{ name: "front", images: [{ url: "/assets/images/products/Almonds 1.jpg" }, { url: "/assets/images/products/Almonds 2.jpg" }, { url: "/assets/images/products/Almonds 3.jpeg" }, { url: "/assets/images/products/Almonds 4.jpg" }, { url: "/assets/images/products/Almonds 5.jpg" }] }] }, { id: 5, name: "premium-sun-dried-apricots", title: "Premium Sun Dried Apricots", shortTitle: "Apricots", tags: ["apricot", "fruit"], route: { name: "premium-sun-dried-apricots" }, description: "Our Premium sun-dried Apricots are the finest naturally grown Apricots. Our\n    Premium Apricots are handpicked with care from orchards largely untouched by\n    man and protected by mother nature. The exceptional flavor of our Apricots is\n    directly attributable to the unique climate, soil and water runoff from the Hindu\n    Kush mountains – the primary source of irrigation for the pristine orchards from\n    which we source our Premium Apricots.", properties: { ingredients: "Natural Sun-dried Apricots– (unsulfured) no preservatives,\n      chemicals or additives.", allergyInformation: "This product was packaged in a facility that handles tree\n      nuts.", storageInformation: "Once opened - recommended to refrigerate.", nutritionFactLabel: { image: { label: "nutrition", url: "" } }, distributedBy: "Natural Orchards, LLC", madeIn: "Product of Afghanistan" }, price: { regular: 0, sale: 0 }, availableQuantity: 99999, slideShow: [{ name: "front", images: [{ url: "/assets/images/products/Apricots 1.jpg" }, { url: "/assets/images/products/Apricots 2.jpg" }, { url: "/assets/images/products/Apricots 3.jpg" }, { url: "/assets/images/products/Apricots 4.jpg" }, { url: "/assets/images/products/Apricots 5.jpg" }] }] }, { id: 6, name: "premium-raw-walnuts", title: "Premium Raw Walnuts", shortTitle: "Walnuts", tags: ["walnut", "nut"], route: { name: "premium-raw-walnuts" }, description: "Our Premium Raw Walnuts are the finest naturally grown Walnuts. Our sweet\n    and crunchy Walnuts are sun dried without pasteurization, which often results\n    in the reduction of healthy oil content. The exceptional flavor of our Walnuts is\n    directly attributable to the unique climate, soil and water runoff from the Hindu\n    Kush mountains – the primary source of irrigation for the pristine orchards from\n    which we source our Premium Walnuts.", properties: { ingredients: "Natural Raw Unsalted Walnuts – (unsulfured) no preservatives,\n      chemicals or additives.", allergyInformation: "This product was packaged in a facility that handles tree\n      nuts.", storageInformation: "Once opened - recommended to refrigerate.", nutritionFactLabel: { image: { label: "nutrition", url: "" } }, distributedBy: "Natural Orchards, LLC", madeIn: "Product of Afghanistan" }, price: { regular: 0, sale: 0 }, availableQuantity: 99999, slideShow: [{ name: "front", images: [{ url: "/assets/images/products/Walnuts 1.jpg" }, { url: "/assets/images/products/Walnuts 2.jpg" }, { url: "/assets/images/products/Walnuts 3.jpeg" }, { url: "/assets/images/products/Walnuts 4.jpg" }] }] }];
-}, function (e, t, n) {
-  "use strict";
-
-  e.exports = [{ id: 0, content: { url: "/assets/images/banner/Banner 1.jpg" } }, { id: 1, content: { url: "/assets/images/banner/Banner 2.jpg" } }, { id: 2, content: { url: "/assets/images/banner/Banner 3.jpg" } }, { id: 3, content: { url: "/assets/images/banner/Banner 4.jpg" } }];
-}, function (e, t, n) {
-  "use strict";
-
-  e.exports = { socialIcons: [{ name: "facebook", customName: "Facebook Social Icon With Link", srcUrl: "/assets/social/facebook-mono.svg", linkUrl: "https://www.facebook.com/Natural-Orchards-308949709568249/" }, { name: "twitter", customName: "Twitter Social Icon With Link", srcUrl: "/assets/social/twitter-mono.svg", linkUrl: "https://twitter.com/NaturalOrchards" }, { name: "Pinterest", customName: "Pinterest Social Icon With Link", srcUrl: "/assets/social/pinterest-mono.svg", linkUrl: "https://www.pinterest.com/naturalorchards/" }] };
-}, function (e, t, n) {
-  "use strict";
-
-  function r(e) {
-    return e && e.__esModule ? e : { default: e };
-  }function i(e, t) {
-    if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function");
-  }Object.defineProperty(t, "__esModule", { value: !0 });var o = function () {
-    function e(e, t) {
-      for (var n = 0; n < t.length; n++) {
-        var r = t[n];r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
-      }
-    }return function (t, n, r) {
-      return n && e(t.prototype, n), r && e(t, r), t;
+})(exports, /******/function (modules) {
+  // webpackBootstrap
+  /******/ // The module cache
+  /******/var installedModules = {};
+  /******/
+  /******/ // The require function
+  /******/function __webpack_require__(moduleId) {
+    /******/
+    /******/ // Check if module is in cache
+    /******/if (installedModules[moduleId]) {
+      /******/return installedModules[moduleId].exports;
+      /******/
+    }
+    /******/ // Create a new module (and put it into the cache)
+    /******/var module = installedModules[moduleId] = {
+      /******/i: moduleId,
+      /******/l: false,
+      /******/exports: {}
+      /******/ };
+    /******/
+    /******/ // Execute the module function
+    /******/modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+    /******/
+    /******/ // Flag the module as loaded
+    /******/module.l = true;
+    /******/
+    /******/ // Return the exports of the module
+    /******/return module.exports;
+    /******/
+  }
+  /******/
+  /******/
+  /******/ // expose the modules object (__webpack_modules__)
+  /******/__webpack_require__.m = modules;
+  /******/
+  /******/ // expose the module cache
+  /******/__webpack_require__.c = installedModules;
+  /******/
+  /******/ // define getter function for harmony exports
+  /******/__webpack_require__.d = function (exports, name, getter) {
+    /******/if (!__webpack_require__.o(exports, name)) {
+      /******/Object.defineProperty(exports, name, {
+        /******/configurable: false,
+        /******/enumerable: true,
+        /******/get: getter
+        /******/ });
+      /******/
+    }
+    /******/
+  };
+  /******/
+  /******/ // getDefaultExport function for compatibility with non-harmony modules
+  /******/__webpack_require__.n = function (module) {
+    /******/var getter = module && module.__esModule ?
+    /******/function getDefault() {
+      return module['default'];
+    } :
+    /******/function getModuleExports() {
+      return module;
     };
-  }(),
-      a = n(28),
-      s = r(a),
-      u = n(68),
-      l = r(u),
-      c = n(11),
-      d = r(c),
-      f = function () {
-    function e(t) {
-      i(this, e), this.cacheLocalStorageName = this.getStorageName(), this.content = t || d.default, this.user = { userName: "", password: "" }, this.dynamicContent = {};var n = new Date(),
-          r = new Date(n.getTime() - 864e5);this.getProperty(this.content, "site.cache.storedOnClient.time", 0) < r.getTime() && this.setProperty(this.content, "site.cache.storedOnClient.time", Date.now()), this.cacheIt();
-    }return o(e, [{ key: "setFirebase", value: function value(e) {
-        this.firebase = e;
-      } }, { key: "getFirebase", value: function value() {
-        return this.firebase;
-      } }, { key: "setContent", value: function value(e) {
-        e && (this.content = e);
-      } }, { key: "setProperty", value: function value(e, t, n) {
-        (0, l.default)(e, t, n), this.content = e;
-      } }, { key: "getProperty", value: function value(e, t, n) {
-        var r = e;return "string" == typeof e && (r = this.content[e] || {}), (0, s.default)(r, t, n);
-      } }, { key: "getDynamicContent", value: function value(e) {
-        return e && this.dynamicContent[e] ? this.dynamicContent[e].content : this.dynamicContent;
-      } }, { key: "getDynamicContentState", value: function value(e) {
-        if (e) return this.dynamicContent[e] && this.dynamicContent[name].status || (this.dynamicContent[name] = { content: [], status: "initial" }), this.dynamicContent[name].status;
-      } }, { key: "getStorageName", value: function value() {
-        return "ezLandingSite";
-      } }, { key: "cacheIt", value: function value() {
-        var e = e || null;e && (e.setItem(this.cacheLocalStorageName, JSON.stringify(this.content)), e.setItem(this.cacheLocalStorageName + "-Dynamic", JSON.stringify(this.dynamicContent)));
-      } }, { key: "getCache", value: function value() {
-        var e = "",
-            t = t || null;return t && (e = JSON.parse(t.getItem(this.cacheLocalStorageName))), e;
-      } }, { key: "getContent", value: function value() {
-        return this.content;
-      } }, { key: "isFresh", value: function value(e) {
-        if (e === this.content.lastUpdatedDate) return !0;
-      } }, { key: "getCollection", value: function value(e) {
-        return this.content[e];
-      } }, { key: "getItem", value: function value(e, t, n, r) {
-        var i = this.content,
-            o = null;if (r) {
-          for (var a = Object.keys(i), s = a.length - 1, u = 0; u <= s; u++) {
-            var l = a[u];if (l === e) {
-              for (var c = i[l], d = c.length - 1, f = 0; f <= d; f++) {
-                if (!c[f][t] && f === d) {
-                  o = this.error(e, t, n, r, "all collection child searched");break;
-                }if (c[f][t] === n) {
-                  o = c[f];break;
-                }
-              }break;
-            }if (u === s) {
-              o = this.error(e, t, n, r, "all nodes searched");break;
+    /******/__webpack_require__.d(getter, 'a', getter);
+    /******/return getter;
+    /******/
+  };
+  /******/
+  /******/ // Object.prototype.hasOwnProperty.call
+  /******/__webpack_require__.o = function (object, property) {
+    return Object.prototype.hasOwnProperty.call(object, property);
+  };
+  /******/
+  /******/ // __webpack_public_path__
+  /******/__webpack_require__.p = "";
+  /******/
+  /******/ // Load entry module and return exports
+  /******/return __webpack_require__(__webpack_require__.s = 18);
+  /******/
+}(
+/************************************************************************/
+/******/[
+/* 0 */
+/***/function (module, exports, __webpack_require__) {
+
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = getRandomId;
+  function getRandomId() {
+    return Math.floor(Math.random() * 1000000000);
+  }
+
+  /***/
+},
+/* 1 */
+/***/function (module, exports, __webpack_require__) {
+
+  var getNative = __webpack_require__(8);
+
+  /* Built-in method references that are verified to be native. */
+  var nativeCreate = getNative(Object, 'create');
+
+  module.exports = nativeCreate;
+
+  /***/
+},
+/* 2 */
+/***/function (module, exports, __webpack_require__) {
+
+  var eq = __webpack_require__(14);
+
+  /**
+   * Gets the index at which the `key` is found in `array` of key-value pairs.
+   *
+   * @private
+   * @param {Array} array The array to inspect.
+   * @param {*} key The key to search for.
+   * @returns {number} Returns the index of the matched value, else `-1`.
+   */
+  function assocIndexOf(array, key) {
+    var length = array.length;
+    while (length--) {
+      if (eq(array[length][0], key)) {
+        return length;
+      }
+    }
+    return -1;
+  }
+
+  module.exports = assocIndexOf;
+
+  /***/
+},
+/* 3 */
+/***/function (module, exports, __webpack_require__) {
+
+  var isKeyable = __webpack_require__(61);
+
+  /**
+   * Gets the data for `map`.
+   *
+   * @private
+   * @param {Object} map The map to query.
+   * @param {string} key The reference key.
+   * @returns {*} Returns the map data.
+   */
+  function getMapData(map, key) {
+    var data = map.__data__;
+    return isKeyable(key) ? data[typeof key == 'string' ? 'string' : 'hash'] : data.map;
+  }
+
+  module.exports = getMapData;
+
+  /***/
+},
+/* 4 */
+/***/function (module, exports) {
+
+  /**
+   * Checks if `value` is classified as an `Array` object.
+   *
+   * @static
+   * @memberOf _
+   * @since 0.1.0
+   * @category Lang
+   * @param {*} value The value to check.
+   * @returns {boolean} Returns `true` if `value` is an array, else `false`.
+   * @example
+   *
+   * _.isArray([1, 2, 3]);
+   * // => true
+   *
+   * _.isArray(document.body.children);
+   * // => false
+   *
+   * _.isArray('abc');
+   * // => false
+   *
+   * _.isArray(_.noop);
+   * // => false
+   */
+  var isArray = Array.isArray;
+
+  module.exports = isArray;
+
+  /***/
+},
+/* 5 */
+/***/function (module, exports, __webpack_require__) {
+
+  var baseGetTag = __webpack_require__(13),
+      isObjectLike = __webpack_require__(35);
+
+  /** `Object#toString` result references. */
+  var symbolTag = '[object Symbol]';
+
+  /**
+   * Checks if `value` is classified as a `Symbol` primitive or object.
+   *
+   * @static
+   * @memberOf _
+   * @since 4.0.0
+   * @category Lang
+   * @param {*} value The value to check.
+   * @returns {boolean} Returns `true` if `value` is a symbol, else `false`.
+   * @example
+   *
+   * _.isSymbol(Symbol.iterator);
+   * // => true
+   *
+   * _.isSymbol('abc');
+   * // => false
+   */
+  function isSymbol(value) {
+    return (typeof value === 'undefined' ? 'undefined' : _typeof(value)) == 'symbol' || isObjectLike(value) && baseGetTag(value) == symbolTag;
+  }
+
+  module.exports = isSymbol;
+
+  /***/
+},
+/* 6 */
+/***/function (module, exports, __webpack_require__) {
+
+  var root = __webpack_require__(7);
+
+  /** Built-in value references. */
+  var _Symbol = root.Symbol;
+
+  module.exports = _Symbol;
+
+  /***/
+},
+/* 7 */
+/***/function (module, exports, __webpack_require__) {
+
+  var freeGlobal = __webpack_require__(31);
+
+  /** Detect free variable `self`. */
+  var freeSelf = (typeof self === 'undefined' ? 'undefined' : _typeof(self)) == 'object' && self && self.Object === Object && self;
+
+  /** Used as a reference to the global object. */
+  var root = freeGlobal || freeSelf || Function('return this')();
+
+  module.exports = root;
+
+  /***/
+},
+/* 8 */
+/***/function (module, exports, __webpack_require__) {
+
+  var baseIsNative = __webpack_require__(43),
+      getValue = __webpack_require__(48);
+
+  /**
+   * Gets the native function at `key` of `object`.
+   *
+   * @private
+   * @param {Object} object The object to query.
+   * @param {string} key The key of the method to get.
+   * @returns {*} Returns the function if it's native, else `undefined`.
+   */
+  function getNative(object, key) {
+    var value = getValue(object, key);
+    return baseIsNative(value) ? value : undefined;
+  }
+
+  module.exports = getNative;
+
+  /***/
+},
+/* 9 */
+/***/function (module, exports) {
+
+  /**
+   * Checks if `value` is the
+   * [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types)
+   * of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
+   *
+   * @static
+   * @memberOf _
+   * @since 0.1.0
+   * @category Lang
+   * @param {*} value The value to check.
+   * @returns {boolean} Returns `true` if `value` is an object, else `false`.
+   * @example
+   *
+   * _.isObject({});
+   * // => true
+   *
+   * _.isObject([1, 2, 3]);
+   * // => true
+   *
+   * _.isObject(_.noop);
+   * // => true
+   *
+   * _.isObject(null);
+   * // => false
+   */
+  function isObject(value) {
+    var type = typeof value === 'undefined' ? 'undefined' : _typeof(value);
+    return value != null && (type == 'object' || type == 'function');
+  }
+
+  module.exports = isObject;
+
+  /***/
+},
+/* 10 */
+/***/function (module, exports, __webpack_require__) {
+
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _AppRoute = __webpack_require__(76);
+
+  var _AppRoute2 = _interopRequireDefault(_AppRoute);
+
+  var _Reference = __webpack_require__(77);
+
+  var _Reference2 = _interopRequireDefault(_Reference);
+
+  var _CollectedBy = __webpack_require__(78);
+
+  var _CollectedBy2 = _interopRequireDefault(_CollectedBy);
+
+  var _CachedContent = __webpack_require__(79);
+
+  var _CachedContent2 = _interopRequireDefault(_CachedContent);
+
+  function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : { default: obj };
+  }
+
+  function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
+    }
+  }
+
+  var Record = function Record() {
+    var id = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '0';
+    var title = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
+    var route = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {
+      appRouteCustom: '',
+      appRouteDefault: '',
+      webRoute: ''
+    };
+    var tags = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : [];
+    var references = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : [];
+    var collectionInfo = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : [];
+
+    _classCallCheck(this, Record);
+
+    var referencesInstance = references.map(function (reference) {
+      return new _Reference2.default(reference.url, reference.note);
+    });
+    var collectionInfoInstance = collectionInfo.map(function (collectedBy) {
+      return new _CollectedBy2.default(collectedBy.userId, collectedBy.date);
+    });
+    return {
+      id: id,
+      content: {
+        title: title,
+        appRoute: new _AppRoute2.default(route.appRouteCustom, route.appRouteDefault),
+        webRoute: route.webRoute,
+        tags: tags,
+        references: referencesInstance,
+        collectionInfo: collectionInfoInstance,
+        cachedContent: {
+          content: '',
+          collectedByUserId: '',
+          collectedTime: 0 //new CachedContent(id)
+        } }
+    };
+  };
+
+  exports.default = Record;
+  ;
+
+  /***/
+},
+/* 11 */
+/***/function (module, exports, __webpack_require__) {
+
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _assets = __webpack_require__(19);
+
+  var _assets2 = _interopRequireDefault(_assets);
+
+  var _grids = __webpack_require__(20);
+
+  var _grids2 = _interopRequireDefault(_grids);
+
+  var _menus = __webpack_require__(21);
+
+  var _menus2 = _interopRequireDefault(_menus);
+
+  var _pages = __webpack_require__(22);
+
+  var _pages2 = _interopRequireDefault(_pages);
+
+  var _site = __webpack_require__(23);
+
+  var _site2 = _interopRequireDefault(_site);
+
+  var _products = __webpack_require__(24);
+
+  var _products2 = _interopRequireDefault(_products);
+
+  var _banners = __webpack_require__(25);
+
+  var _banners2 = _interopRequireDefault(_banners);
+
+  var _footer = __webpack_require__(26);
+
+  var _footer2 = _interopRequireDefault(_footer);
+
+  function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : { default: obj };
+  }
+
+  exports.default = {
+    //each node is a collection
+    //each collection MUST BE an array
+    //each collection item MUST HAVE itemId (can custom name)
+    site: _site2.default,
+    menus: _menus2.default,
+    pages: _pages2.default,
+    gridContainerProperties: ['abc'],
+    grids: _grids2.default,
+    //? not sure if I ever need assets... since webpack optimize them
+    assets: _assets2.default,
+    products: _products2.default,
+    banners: _banners2.default,
+    footer: _footer2.default
+  };
+
+  /***/
+},
+/* 12 */
+/***/function (module, exports, __webpack_require__) {
+
+  var isArray = __webpack_require__(4),
+      isKey = __webpack_require__(30),
+      stringToPath = __webpack_require__(36),
+      toString = __webpack_require__(65);
+
+  /**
+   * Casts `value` to a path array if it's not one.
+   *
+   * @private
+   * @param {*} value The value to inspect.
+   * @param {Object} [object] The object to query keys on.
+   * @returns {Array} Returns the cast property path array.
+   */
+  function castPath(value, object) {
+    if (isArray(value)) {
+      return value;
+    }
+    return isKey(value, object) ? [value] : stringToPath(toString(value));
+  }
+
+  module.exports = castPath;
+
+  /***/
+},
+/* 13 */
+/***/function (module, exports, __webpack_require__) {
+
+  var _Symbol2 = __webpack_require__(6),
+      getRawTag = __webpack_require__(33),
+      objectToString = __webpack_require__(34);
+
+  /** `Object#toString` result references. */
+  var nullTag = '[object Null]',
+      undefinedTag = '[object Undefined]';
+
+  /** Built-in value references. */
+  var symToStringTag = _Symbol2 ? _Symbol2.toStringTag : undefined;
+
+  /**
+   * The base implementation of `getTag` without fallbacks for buggy environments.
+   *
+   * @private
+   * @param {*} value The value to query.
+   * @returns {string} Returns the `toStringTag`.
+   */
+  function baseGetTag(value) {
+    if (value == null) {
+      return value === undefined ? undefinedTag : nullTag;
+    }
+    return symToStringTag && symToStringTag in Object(value) ? getRawTag(value) : objectToString(value);
+  }
+
+  module.exports = baseGetTag;
+
+  /***/
+},
+/* 14 */
+/***/function (module, exports) {
+
+  /**
+   * Performs a
+   * [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
+   * comparison between two values to determine if they are equivalent.
+   *
+   * @static
+   * @memberOf _
+   * @since 4.0.0
+   * @category Lang
+   * @param {*} value The value to compare.
+   * @param {*} other The other value to compare.
+   * @returns {boolean} Returns `true` if the values are equivalent, else `false`.
+   * @example
+   *
+   * var object = { 'a': 1 };
+   * var other = { 'a': 1 };
+   *
+   * _.eq(object, object);
+   * // => true
+   *
+   * _.eq(object, other);
+   * // => false
+   *
+   * _.eq('a', 'a');
+   * // => true
+   *
+   * _.eq('a', Object('a'));
+   * // => false
+   *
+   * _.eq(NaN, NaN);
+   * // => true
+   */
+  function eq(value, other) {
+    return value === other || value !== value && other !== other;
+  }
+
+  module.exports = eq;
+
+  /***/
+},
+/* 15 */
+/***/function (module, exports, __webpack_require__) {
+
+  var isSymbol = __webpack_require__(5);
+
+  /** Used as references for various `Number` constants. */
+  var INFINITY = 1 / 0;
+
+  /**
+   * Converts `value` to a string key if it's not a string or symbol.
+   *
+   * @private
+   * @param {*} value The value to inspect.
+   * @returns {string|symbol} Returns the key.
+   */
+  function toKey(value) {
+    if (typeof value == 'string' || isSymbol(value)) {
+      return value;
+    }
+    var result = value + '';
+    return result == '0' && 1 / value == -INFINITY ? '-0' : result;
+  }
+
+  module.exports = toKey;
+
+  /***/
+},
+/* 16 */
+/***/function (module, exports, __webpack_require__) {
+
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _a = __webpack_require__(80);
+
+  var _a2 = _interopRequireDefault(_a);
+
+  function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : { default: obj };
+  }
+
+  exports.default = {
+    a1: _a2.default
+  };
+
+  /***/
+},
+/* 17 */
+/***/function (module, exports, __webpack_require__) {
+
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = getGoogleMapQuery;
+  function getGoogleMapQuery() {
+    var locationName = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+    var city = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
+    var state = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : '';
+    var zipcode = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : '';
+
+    var formatted = {
+      location: locationName.replace(/[^A-Z0-9]/ig, "+") || '',
+      city: city.replace(/[^A-Z0-9]/ig, "+") || '',
+      state: state.replace(/[^A-Z0-9]/ig, "+") || ''
+    };
+    var query = '' + formatted.location + (formatted.city ? '+' : '') + formatted.city + (formatted.state ? '+' : '') + formatted.state + (zipcode ? '+' : '') + zipcode;
+    return query;
+  }
+
+  /***/
+},
+/* 18 */
+/***/function (module, exports, __webpack_require__) {
+
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.getRoute = exports.getGoogleMapQuery = exports.getGoogleMapUrl = exports.getRandomId = exports.Snapshot = exports.SocialNetworkAccount = exports.Collection = exports.Location = exports.Log = exports.Person = exports.Record = exports.Records = exports.ContentSynchronizer = exports.www___naturalorchards__us = undefined;
+
+  var _www___naturalorchards__us = __webpack_require__(11);
+
+  var _www___naturalorchards__us2 = _interopRequireDefault(_www___naturalorchards__us);
+
+  var _ContentSynchronizer = __webpack_require__(27);
+
+  var _ContentSynchronizer2 = _interopRequireDefault(_ContentSynchronizer);
+
+  var _Records = __webpack_require__(74);
+
+  var _Records2 = _interopRequireDefault(_Records);
+
+  var _Record = __webpack_require__(10);
+
+  var _Record2 = _interopRequireDefault(_Record);
+
+  var _Person = __webpack_require__(81);
+
+  var _Person2 = _interopRequireDefault(_Person);
+
+  var _Log = __webpack_require__(82);
+
+  var _Log2 = _interopRequireDefault(_Log);
+
+  var _Location = __webpack_require__(83);
+
+  var _Location2 = _interopRequireDefault(_Location);
+
+  var _Collection = __webpack_require__(84);
+
+  var _Collection2 = _interopRequireDefault(_Collection);
+
+  var _SocialNetworkAccount = __webpack_require__(85);
+
+  var _SocialNetworkAccount2 = _interopRequireDefault(_SocialNetworkAccount);
+
+  var _Snapshot = __webpack_require__(86);
+
+  var _Snapshot2 = _interopRequireDefault(_Snapshot);
+
+  var _getRandomId = __webpack_require__(0);
+
+  var _getRandomId2 = _interopRequireDefault(_getRandomId);
+
+  var _getGoogleMapUrl = __webpack_require__(87);
+
+  var _getGoogleMapUrl2 = _interopRequireDefault(_getGoogleMapUrl);
+
+  var _getGoogleMapQuery = __webpack_require__(17);
+
+  var _getGoogleMapQuery2 = _interopRequireDefault(_getGoogleMapQuery);
+
+  var _getRoute = __webpack_require__(88);
+
+  var _getRoute2 = _interopRequireDefault(_getRoute);
+
+  function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : { default: obj };
+  }
+
+  exports.www___naturalorchards__us = _www___naturalorchards__us2.default;
+  exports.ContentSynchronizer = _ContentSynchronizer2.default;
+  exports.Records = _Records2.default;
+  exports.Record = _Record2.default;
+  exports.Person = _Person2.default;
+  exports.Log = _Log2.default;
+  exports.Location = _Location2.default;
+  exports.Collection = _Collection2.default;
+  exports.SocialNetworkAccount = _SocialNetworkAccount2.default;
+  exports.Snapshot = _Snapshot2.default;
+  exports.getRandomId = _getRandomId2.default;
+  exports.getGoogleMapUrl = _getGoogleMapUrl2.default;
+  exports.getGoogleMapQuery = _getGoogleMapQuery2.default;
+  exports.getRoute = _getRoute2.default;
+
+  /***/
+},
+/* 19 */
+/***/function (module, exports, __webpack_require__) {
+
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = [];
+
+  /***/
+},
+/* 20 */
+/***/function (module, exports, __webpack_require__) {
+
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = [
+  //A grid is a component neutral container that can be loaded and become any kind of components!
+  //gridComponent is the recognizer to make that happen!
+  {
+    gridItemId: 1,
+    gridItemName: 'notifcation bar', //name use by the application for search queries
+    gridTypeName: 'custom', //not sure when I will need it, but it definately need to be here, as type is critical for query
+    gridCustomName: 'notification bar', //custom name for user, not used by app
+    gridComponent: 'NotificationBar', //this grid's core component it is loading
+    gridContent: {
+      //all the data that is passing into the component, VERY FLEXIBLE
+      //HOWEVER it MUST FOLLOW THE FOLLOWING ROOT LAYER DATA PATTERN
+      /*
+        {
+          type: 'type name',
+          data: {
+            ....
+          },
+          style: {
+            ....
+          }
+        }
+      */
+      type: 'textWithBarLink',
+      data: {
+        text: 'we are in opening sale!',
+        link: 'http://naturalorchards.us',
+        showAsDefault: true
+      },
+      style: [//MANDATORY: needed for inside component style
+      'center-text']
+    },
+    gridCustomStyle: {},
+    gridStyle: [], //Styles apply to the grid itself
+    gridResponsiveProperties: { //How grid itself will response to different screen sizes
+      standard: 12,
+      xs: 12,
+      sm: 12,
+      md: 12,
+      lg: 12,
+      xl: 12,
+      offset: {
+        standard: '',
+        sm: '',
+        md: '',
+        lg: '',
+        xl: ''
+      }
+    }
+  }, {
+    gridItemId: 2,
+    gridItemName: 'main menu bar',
+    gridTypeName: 'menu',
+    gridCustomName: 'menu bar',
+    gridComponent: 'MenuBar',
+    gridContent: {
+      menuId: 1,
+      menuType: 'custom'
+    },
+    gridCustomStyle: {
+      container: {
+        inlineStyles: {
+          marginTop: '20px',
+          marginBottom: '20px'
+        }
+      }
+    },
+    gridStyle: [],
+    gridResponsiveProperties: {
+      standard: 12,
+      xs: 12,
+      sm: 12,
+      md: 12,
+      lg: 12,
+      xl: 12,
+      offset: {
+        standard: '',
+        sm: '',
+        md: '',
+        lg: '',
+        xl: ''
+      }
+    }
+  }, {
+    gridItemId: 3,
+    gridItemName: 'specific product',
+    gridTypeName: 'specific product',
+    gridCustomName: 'specific product',
+    gridComponent: 'ProductDisplay',
+    gridContent: {
+      productName: 'product',
+      style: []
+    },
+    gridCustomStyle: {},
+    gridStyle: [],
+    gridResponsiveProperties: {
+      standard: 12,
+      xs: 12,
+      sm: 12,
+      md: 12,
+      lg: 6,
+      xl: 6,
+      offset: {
+        standard: '',
+        sm: '',
+        md: '',
+        lg: 3,
+        xl: 3
+      }
+    }
+  }, {
+    gridItemId: 4,
+    gridItemName: 'main footer',
+    gridTypeName: 'menu',
+    gridCustomName: 'footer bar',
+    gridComponent: 'FooterBar',
+    gridContent: {
+      data: {}
+    },
+    gridCustomStyle: {},
+    gridStyle: [],
+    gridResponsiveProperties: {
+      standard: 12,
+      xs: 12,
+      sm: 12,
+      md: 12,
+      lg: 12,
+      xl: 12,
+      offset: {
+        standard: '',
+        sm: '',
+        md: '',
+        lg: '',
+        xl: ''
+      }
+    }
+  }, {
+    gridItemId: 5,
+    gridItemName: 'product listing',
+    gridTypeName: 'listing',
+    gridCustomName: 'product listing',
+    gridComponent: 'Listing',
+    gridContent: {
+      data: {
+        name: 'products',
+        listingItemComponentName: 'ListingItem',
+        listingItemResponsiveProperties: {
+          standard: 12,
+          xs: 12,
+          sm: 12,
+          md: 4,
+          lg: 4,
+          xl: 4,
+          offset: {
+            standard: '',
+            sm: '',
+            md: '',
+            lg: '',
+            xl: ''
+          }
+        },
+        listingCustomStyle: {
+          container: {
+            inlineStyles: {
+              marginTop: '1%',
+              marginBottom: '1%'
             }
-          }return o;
-        }return this.error(e, t, n, r);
-      } }, { key: "getProductGrid", value: function value(e) {
-        for (var t = this.content.products, n = 0; n < t.length; n++) {
-          if (t[n].name === e) return !0, t[n];
-        }return null;
-      } }, { key: "updateNotificationBarStatus", value: function value(e) {
-        this.content.site.flag.notificationBar = e, this.cacheIt();
-      } }, { key: "error", value: function value(e, t, n, r, i) {
-        return new Error("content not found: logged\n      *" + i + "\n      collection: " + e + "\n      key: " + t + "= " + n + "\n      is array: " + r + "\n    ");
-      } }]), e;
-  }();t.default = new f();
-}, function (e, t, n) {
-  function r(e, t, n) {
-    var r = null == e ? void 0 : i(e, t);return void 0 === r ? n : r;
-  }var i = n(29);e.exports = r;
-}, function (e, t, n) {
-  function r(e, t) {
-    t = i(t, e);for (var n = 0, r = t.length; null != e && n < r;) {
-      e = e[o(t[n++])];
-    }return n && n == r ? e : void 0;
-  }var i = n(12),
-      o = n(15);e.exports = r;
-}, function (e, t, n) {
-  function r(e, t) {
-    if (i(e)) return !1;var n = typeof e === "undefined" ? "undefined" : _typeof(e);return !("number" != n && "symbol" != n && "boolean" != n && null != e && !o(e)) || s.test(e) || !a.test(e) || null != t && e in Object(t);
-  }var i = n(4),
-      o = n(5),
-      a = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/,
-      s = /^\w*$/;e.exports = r;
-}, function (e, t, n) {
-  (function (t) {
-    var n = "object" == (typeof t === "undefined" ? "undefined" : _typeof(t)) && t && t.Object === Object && t;e.exports = n;
-  }).call(t, n(32));
-}, function (e, t) {
-  var n;n = function () {
+          }
+        },
+        listingItemStyle: ['listingItem__shell']
+      }
+    },
+    gridCustomStyle: {},
+    gridStyle: [],
+    gridResponsiveProperties: {
+      standard: 10,
+      xs: 10,
+      sm: 10,
+      md: 10,
+      lg: 10,
+      xl: 10,
+      offset: {
+        standard: 1,
+        xs: 1,
+        sm: 1,
+        md: 1,
+        lg: 1,
+        xl: 1
+      }
+    }
+  }, {
+    gridItemId: 6,
+    gridItemName: 'tags menu bar',
+    gridTypeName: 'menu',
+    gridCustomName: 'tags menu bar',
+    gridComponent: 'MenuBar',
+    gridContent: {
+      menuId: 2,
+      menuType: 'collection'
+    },
+    gridCustomStyle: {
+      container: {
+        inlineStyles: {
+          marginTop: '20px',
+          marginBottom: '20px'
+        }
+      }
+    },
+    gridStyle: [],
+    gridResponsiveProperties: {
+      standard: 12,
+      xs: 12,
+      sm: 12,
+      md: 12,
+      lg: 12,
+      xl: 12,
+      offset: {
+        standard: '',
+        sm: '',
+        md: '',
+        lg: '',
+        xl: ''
+      }
+    }
+  }, {
+    gridItemId: 7,
+    gridItemName: 'specific tag product listing',
+    gridTypeName: 'listing',
+    gridCustomName: 'specific tag product listing',
+    gridComponent: 'Listing',
+    gridContent: {
+      data: {
+        name: 'products',
+        type: 'filter',
+        //filterData: this need to be ALWAYS DYNAMICALLY INSERTED TO BE EFFECTIVE!
+        listingItemComponentName: 'ListingItem',
+        listingItemResponsiveProperties: {
+          standard: 12,
+          xs: 12,
+          sm: 12,
+          md: 4,
+          lg: 4,
+          xl: 4,
+          offset: {
+            standard: '',
+            sm: '',
+            md: '',
+            lg: '',
+            xl: ''
+          }
+        },
+        listingItemStyle: ['listingItem__shell']
+      }
+    },
+    gridCustomStyle: {},
+    gridStyle: [],
+    gridResponsiveProperties: {
+      standard: 10,
+      xs: 10,
+      sm: 10,
+      md: 10,
+      lg: 10,
+      xl: 10,
+      offset: {
+        standard: 1,
+        xs: 1,
+        sm: 1,
+        md: 1,
+        lg: 1,
+        xl: 1
+      }
+    }
+  }, {
+    gridItemId: 8,
+    gridItemName: 'bread crumb',
+    gridTypeName: 'custom',
+    gridCustomName: 'bread crumb',
+    gridComponent: 'BreadCrumb',
+    gridContent: {
+      data: {
+        //dynamically generated
+      },
+      style: {
+        container: {
+          inlineStyles: {
+            marginTop: '20px'
+          }
+
+        }
+      }
+    },
+    gridCustomStyle: {
+      // container: {
+      //   inlineStyles: {
+
+      //   }
+      // }
+    },
+    gridStyle: [],
+    gridResponsiveProperties: {
+      standard: 12,
+      xs: 12,
+      sm: 12,
+      md: 12,
+      lg: 12,
+      xl: 12,
+      offset: {
+        standard: '',
+        sm: '',
+        md: '',
+        lg: '',
+        xl: ''
+      }
+    }
+  }, {
+    gridItemId: 9,
+    gridItemName: 'logo bar',
+    gridTypeName: 'custom',
+    gridCustomName: 'logo bar',
+    gridComponent: 'LogoBar',
+    gridContent: {
+      data: {
+        logo: {
+          image: {
+            url: '/assets/images/logo.svg'
+          }
+        }
+      }
+    },
+    gridCustomStyle: {},
+    gridStyle: [],
+    gridResponsiveProperties: {
+      standard: 12,
+      xs: 12,
+      sm: 12,
+      md: 12,
+      lg: 12,
+      xl: 12,
+      offset: {
+        standard: '',
+        sm: '',
+        md: '',
+        lg: '',
+        xl: ''
+      }
+    }
+  }, {
+    gridItemId: 10,
+    gridItemName: 'all products direct link menu bar',
+    gridTypeName: 'menu',
+    gridCustomName: 'all products direct link menu bar',
+    gridComponent: 'MenuBar',
+    gridContent: {
+      menuId: 4,
+      menuType: 'collection'
+    },
+    gridCustomStyle: {
+      container: {
+        inlineStyles: {
+          marginTop: '20px',
+          marginBottom: '20px'
+        }
+      }
+    },
+    gridStyle: [],
+    gridResponsiveProperties: {
+      standard: 12,
+      xs: 12,
+      sm: 12,
+      md: 12,
+      lg: 12,
+      xl: 12,
+      offset: {
+        standard: '',
+        sm: '',
+        md: '',
+        lg: '',
+        xl: ''
+      }
+    }
+  }];
+
+  /***/
+},
+/* 21 */
+/***/function (module, exports, __webpack_require__) {
+
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = [{
+    menuId: 1,
+    menuLastUpdateDate: 1498688605759,
+    menuName: 'primary',
+    menuType: 'custom',
+    menuConfig: {
+      position: 'center'
+    },
+    menuItems: [{
+      menuItemId: 1,
+      type: 'filter',
+      style: [],
+      name: 'home',
+      componentName: 'MenuBarItem',
+      responsiveProperties: {
+        xs: 12,
+        sm: 1,
+        md: 1,
+        lg: 1,
+        xl: 1,
+        offset: {
+          standard: '',
+          sm: '',
+          md: '',
+          lg: '',
+          xl: ''
+        }
+      },
+      content: {
+        type: 'products',
+        name: 'all',
+        query: [
+          /*{
+            paramName: 'tag',
+            paramValue: '',
+          },*/
+        ],
+        link: {
+          name: 'home'
+        }
+      }
+    }, {
+      menuItemId: 2,
+      type: 'page',
+      style: [],
+      name: '',
+      componentName: 'MenuBarItem',
+      responsiveProperties: {
+        xs: 12,
+        sm: 1,
+        md: 1,
+        lg: 1,
+        xl: 1,
+        offset: {
+          standard: '',
+          sm: '',
+          md: '',
+          lg: '',
+          xl: ''
+        }
+      },
+      content: {
+        pageId: 2
+      }
+    }, {
+      menuItemId: 3,
+      type: 'page',
+      style: [],
+      name: '',
+      componentName: 'MenuBarItem',
+      responsiveProperties: {
+        xs: 12,
+        sm: 1,
+        md: 1,
+        lg: 1,
+        xl: 1,
+        offset: {
+          standard: '',
+          sm: '',
+          md: '',
+          lg: '',
+          xl: ''
+        }
+      },
+      content: {
+        pageId: 3
+      }
+    }]
+  }, {
+    menuId: 2,
+    menuLastUpdateDate: 1498688605759,
+    menuName: 'tags',
+    menuType: 'collection',
+    menuConfig: {
+      collectionName: 'products',
+      doNotInclude: {
+        collectionKeys: []
+      },
+      position: 'center',
+      type: 'collectionItems',
+      componentName: 'MenuBarItem',
+      menuItemId: 4,
+      menuItemType: 'filter',
+      menuItemStyle: [],
+      menuItemResponsiveProperties: {
+        xs: 12,
+        sm: 1,
+        md: 1,
+        lg: 1,
+        xl: 1,
+        offset: {
+          standard: '',
+          sm: '',
+          md: '',
+          lg: '',
+          xl: ''
+        }
+      }
+    }
+  }, {
+    menuId: 3,
+    menuLastUpdateDate: 1498688605759,
+    menuName: 'products',
+    menuType: 'collection',
+    menuConfig: {
+      collectionName: 'products',
+      doNotInclude: {
+        collectionKeys: []
+      },
+      position: 'center',
+      type: 'collectionItems',
+      componentName: '',
+      menuItemId: 4,
+      menuItemType: 'filter',
+      menuItemStyle: [],
+      menuItemResponsiveProperties: {}
+    }
+  }, {
+    menuId: 4,
+    menuLastUpdateDate: 1498688605759,
+    menuName: 'products-all-items',
+    menuType: 'collection',
+    menuConfig: {
+      collectionName: 'products',
+      doNotInclude: {
+        collectionKeys: []
+      },
+      position: 'center',
+      type: 'collectionItems',
+      componentName: 'MenuBarItem',
+      menuItemId: 4,
+      menuItemType: 'filter',
+      menuItemStyle: [],
+      menuItemResponsiveProperties: {
+        xs: 12,
+        sm: 1,
+        md: 1,
+        lg: 1,
+        xl: 1,
+        offset: {
+          standard: '',
+          sm: '',
+          md: '',
+          lg: '',
+          xl: ''
+        }
+      }
+    }
+  }];
+
+  /***/
+},
+/* 22 */
+/***/function (module, exports, __webpack_require__) {
+
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = [
+  /*
+    Features
+    - referencing grid Id for content
+    Each page not necessarily a component, but a collection of various grid items!
+    BUT its also allowed if its more of a specific component thing that generate grids in its own way.
+  */
+
+  {
+    id: 1,
+    path: '/',
+    componentName: 'LandingPage',
+    name: 'home',
+    title: 'Home',
+    //may have alternateTitle later, for menu reference purpose
+    include: {
+      grids: [1, 6, 2]
+    }
+  }, {
+    id: 2,
+    path: '/about',
+    componentName: 'About',
+    name: 'about',
+    title: 'About',
+    include: {
+      grids: [1, 6, 2]
+    }
+  }, {
+    id: 3,
+    path: '/contact',
+    componentName: 'Contact',
+    name: 'contact',
+    title: 'Contact',
+    include: {
+      grids: [1, 6, 2]
+    }
+  }];
+
+  /***/
+},
+/* 23 */
+/***/function (module, exports, __webpack_require__) {
+
+  "use strict";
+
+  module.exports = {
+    siteId: 1,
+    siteName: {
+      casual: 'Natural Orchards'
+    },
+    domain: {
+      https: false,
+      name: 'naturalorchards',
+      space: 'us',
+      development: {
+        https: false,
+        name: 'http://localhost:8080'
+      },
+      baseTag: ''
+    },
+    cache: {
+      updated: {
+        time: 1508673731080
+      },
+      storedOnClient: {
+        time: null
+      }
+    },
+    date: { //deprecated, use cache->updated->date instead
+      updated: 1508673731080, //unix value
+      storedOnClient: 0
+    },
+    flag: {
+      notificationBar: {
+        contentUpdated: {
+          date: null
+        },
+        closed: {
+          date: null,
+          manually: false
+        }
+      }
+    }
+
+  };
+
+  /***/
+},
+/* 24 */
+/***/function (module, exports, __webpack_require__) {
+
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  ///NOTE: each item will have a dynamically injected attribute collectionName which equal 'products'
+
+  exports.default = [{
+    id: 1,
+    name: 'premium-sun-dried-reaisins',
+    title: 'Premium Sun Dried Raisins',
+    shortTitle: 'Raisins',
+    tags: ['raisin', 'fruit'],
+    route: {
+      name: 'premium-sun-dried-reaisins'
+    },
+    description: "Our Premium Raisins are handpicked with care and sun-dried in trellised\n    vineyards. The exceptional flavor of our Raisins is directly attributable to the\n    unique climate, soil and water runoff from the Hindu Kush mountains \u2013 the\n    primary source of irrigation for the pristine orchards from which we source our\n    Premium Raisins.",
+    properties: {
+      ingredients: 'Natural Sun-dried Raisins (unsulfured) no preservatives, chemicals\n      or additives.',
+      allergyInformation: 'This product was packaged in a facility that handles tree\n      nuts.',
+      storageInformation: 'Once opened - recommended to refrigerate.',
+      nutritionFactLabel: {
+        image: {
+          label: 'nutrition',
+          url: ''
+        }
+      },
+      distributedBy: 'Natural Orchards, LLC',
+      madeIn: 'Product of Afghanistan'
+    },
+    price: {
+      regular: 0,
+      sale: 0
+    },
+    availableQuantity: 99999, //99999 means unlimited
+    slideShow: [{
+      name: 'front',
+      images: [{
+        url: '/assets/images/products/Raisins 1.jpg'
+      }, {
+        url: '/assets/images/products/Raisins 2.jpg'
+      }, {
+        url: '/assets/images/products/Raisins 3.jpeg'
+      }, {
+        url: '/assets/images/products/Raisins 4.jpg'
+      }]
+    }]
+  }, {
+    id: 2,
+    name: 'premium-raw-pistachios',
+    title: 'Premium Raw Pistachios',
+    shortTitle: 'Pistachios',
+    tags: ['pistachio', 'nut'],
+    route: {
+      name: 'premium-raw-pistachios'
+    },
+    description: "Our Premium Pistachios are the finest naturally grown raw pistachios. Our\n    Pistachios are handpicked from wild woodlands, untouched by man and\n    protected by mother nature. The exceptional flavor of our Pistachios is directly\n    attributable to the unique climate, soil and water runoff from the Hindu Kush\n    mountains \u2013 the primary source of irrigation for the pristine woodlands from\n    which we source our Premium Pistachios.",
+    properties: {
+      ingredients: "Natural Raw Unsalted Pistachios \u2013 (unsulfured) no preservatives,\n      chemicals or additives.",
+      allergyInformation: 'This product was packaged in a facility that handles tree\n      nuts.',
+      storageInformation: 'Once opened - recommended to refrigerate.',
+      nutritionFactLabel: {
+        image: {
+          label: 'nutrition',
+          url: ''
+        }
+      },
+      distributedBy: 'Natural Orchards, LLC',
+      madeIn: 'Product of Afghanistan'
+    },
+    price: {
+      regular: 0,
+      sale: 0
+    },
+    availableQuantity: 99999, //99999 means unlimited
+    slideShow: [{
+      name: 'front',
+      images: [{
+        url: '/assets/images/products/Pistachios 1.jpg'
+      }, {
+        url: '/assets/images/products/Pistachios 2.jpg'
+      }, {
+        url: '/assets/images/products/Pistachios 3.jpeg'
+      }, {
+        url: '/assets/images/products/Pistachios 4.jpg'
+      }, {
+        url: '/assets/images/products/Pistachios 5.jpg'
+      }]
+    }]
+  }, {
+    id: 3,
+    name: 'premium-sun-dried-mulberries',
+    title: 'Premium Sun Dried Mulberries',
+    shortTitle: 'Mulberries',
+    tags: ['mulberry', 'fruit'],
+    route: {
+      name: 'premium-sun-dried-mulberries'
+    },
+    description: "Our Premium sun-dried Mulberries are the finest naturally grown mulberries \u2013 a\n    superfruit packed with vitamin C and antioxidants. Our mulberries are hand-\n    picked from orchards largely untouched by man and protected by mother\n    nature. The exceptional flavor of our Mulberries is directly attributable to the\n    unique climate, soil and water runoff from the Hindu Kush mountains \u2013 the\n    primary source of irrigation for the pristine orchards from which we source our Premium Mulberries.",
+    properties: {
+      ingredients: "Natural sun-dried Mulberries \u2013 (unsulfured) no preservatives,\n      chemicals or additives.",
+      allergyInformation: 'This product was packaged in a facility that handles tree\n      nuts.',
+      storageInformation: 'Once opened - recommended to refrigerate.',
+      nutritionFactLabel: {
+        image: {
+          label: 'nutrition',
+          url: ''
+        }
+      },
+      distributedBy: 'Natural Orchards, LLC',
+      madeIn: 'Product of Afghanistan'
+    },
+    price: {
+      regular: 0,
+      sale: 0
+    },
+    availableQuantity: 99999, //99999 means unlimited
+    slideShow: [{
+      name: 'front',
+      images: [{
+        url: '/assets/images/products/Mulberries 1.jpg'
+      }, {
+        url: '/assets/images/products/Mulberries 2.jpg'
+      }, {
+        url: '/assets/images/products/Mulberries 3.jpeg'
+      }, {
+        url: '/assets/images/products/Mulberries 4.jpg'
+      }, {
+        url: '/assets/images/products/Mulberries 5.jpg'
+      }]
+    }]
+  }, {
+    id: 4,
+    name: 'premium-raw-almonds',
+    title: 'Premium Raw Almonds',
+    shortTitle: 'Almonds',
+    tags: ['almond', 'nut'],
+    route: {
+      name: 'premium-raw-almonds'
+    },
+    description: "Our Premium Raw Almonds are the finest naturally grown, soft-shelled\n    almonds. Our Almonds are sun dried without pasteurization, which often results\n    in the reduction of healthy oil content. The exceptional flavor of our Almonds is\n    directly attributable to the unique climate, soil and water runoff from the Hindu\n    Kush mountains \u2013 the primary source of irrigation for the pristine orchards from\n    which we source our Premium Almonds.",
+    properties: {
+      ingredients: "Natural Raw Unsalted Almonds \u2013 (unsulfured) no preservatives,\n      chemicals or additives.",
+      allergyInformation: 'This product was packaged in a facility that handles tree\n      nuts.',
+      storageInformation: 'Once opened - recommended to refrigerate.',
+      nutritionFactLabel: {
+        image: {
+          label: 'nutrition',
+          url: ''
+        }
+      },
+      distributedBy: 'Natural Orchards, LLC',
+      madeIn: 'Product of Afghanistan'
+    },
+    price: {
+      regular: 0,
+      sale: 0
+    },
+    availableQuantity: 99999, //99999 means unlimited
+    slideShow: [{
+      name: 'front',
+      images: [{
+        url: '/assets/images/products/Almonds 1.jpg'
+      }, {
+        url: '/assets/images/products/Almonds 2.jpg'
+      }, {
+        url: '/assets/images/products/Almonds 3.jpeg'
+      }, {
+        url: '/assets/images/products/Almonds 4.jpg'
+      }, {
+        url: '/assets/images/products/Almonds 5.jpg'
+      }]
+    }]
+  }, {
+    id: 5,
+    name: 'premium-sun-dried-apricots',
+    title: 'Premium Sun Dried Apricots',
+    shortTitle: 'Apricots',
+    tags: ['apricot', 'fruit'],
+    route: {
+      name: 'premium-sun-dried-apricots'
+    },
+    description: "Our Premium sun-dried Apricots are the finest naturally grown Apricots. Our\n    Premium Apricots are handpicked with care from orchards largely untouched by\n    man and protected by mother nature. The exceptional flavor of our Apricots is\n    directly attributable to the unique climate, soil and water runoff from the Hindu\n    Kush mountains \u2013 the primary source of irrigation for the pristine orchards from\n    which we source our Premium Apricots.",
+    properties: {
+      ingredients: "Natural Sun-dried Apricots\u2013 (unsulfured) no preservatives,\n      chemicals or additives.",
+      allergyInformation: 'This product was packaged in a facility that handles tree\n      nuts.',
+      storageInformation: 'Once opened - recommended to refrigerate.',
+      nutritionFactLabel: {
+        image: {
+          label: 'nutrition',
+          url: ''
+        }
+      },
+      distributedBy: 'Natural Orchards, LLC',
+      madeIn: 'Product of Afghanistan'
+    },
+    price: {
+      regular: 0,
+      sale: 0
+    },
+    availableQuantity: 99999, //99999 means unlimited
+    slideShow: [{
+      name: 'front',
+      images: [{
+        url: '/assets/images/products/Apricots 1.jpg'
+      }, {
+        url: '/assets/images/products/Apricots 2.jpg'
+      }, {
+        url: '/assets/images/products/Apricots 3.jpg'
+      }, {
+        url: '/assets/images/products/Apricots 4.jpg'
+      }, {
+        url: '/assets/images/products/Apricots 5.jpg'
+      }]
+    }]
+  }, {
+    id: 6,
+    name: 'premium-raw-walnuts',
+    title: 'Premium Raw Walnuts',
+    shortTitle: 'Walnuts',
+    tags: ['walnut', 'nut'],
+    route: {
+      name: 'premium-raw-walnuts'
+    },
+    description: "Our Premium Raw Walnuts are the finest naturally grown Walnuts. Our sweet\n    and crunchy Walnuts are sun dried without pasteurization, which often results\n    in the reduction of healthy oil content. The exceptional flavor of our Walnuts is\n    directly attributable to the unique climate, soil and water runoff from the Hindu\n    Kush mountains \u2013 the primary source of irrigation for the pristine orchards from\n    which we source our Premium Walnuts.",
+    properties: {
+      ingredients: "Natural Raw Unsalted Walnuts \u2013 (unsulfured) no preservatives,\n      chemicals or additives.",
+      allergyInformation: 'This product was packaged in a facility that handles tree\n      nuts.',
+      storageInformation: 'Once opened - recommended to refrigerate.',
+      nutritionFactLabel: {
+        image: {
+          label: 'nutrition',
+          url: ''
+        }
+      },
+      distributedBy: 'Natural Orchards, LLC',
+      madeIn: 'Product of Afghanistan'
+    },
+    price: {
+      regular: 0,
+      sale: 0
+    },
+    availableQuantity: 99999, //99999 means unlimited
+    slideShow: [{
+      name: 'front',
+      images: [{
+        url: '/assets/images/products/Walnuts 1.jpg'
+      }, {
+        url: '/assets/images/products/Walnuts 2.jpg'
+      }, {
+        url: '/assets/images/products/Walnuts 3.jpeg'
+      }, {
+        url: '/assets/images/products/Walnuts 4.jpg'
+      }]
+    }]
+  }];
+
+  /***/
+},
+/* 25 */
+/***/function (module, exports, __webpack_require__) {
+
+  "use strict";
+
+  module.exports = [{
+    id: 0,
+    content: {
+      url: '/assets/images/banner/Banner 1.jpg'
+    }
+  }, {
+    id: 1,
+    content: {
+      url: '/assets/images/banner/Banner 2.jpg'
+    }
+  }, {
+    id: 2,
+    content: {
+      url: '/assets/images/banner/Banner 3.jpg'
+    }
+  }, {
+    id: 3,
+    content: {
+      url: '/assets/images/banner/Banner 4.jpg'
+    }
+  }];
+
+  /***/
+},
+/* 26 */
+/***/function (module, exports, __webpack_require__) {
+
+  "use strict";
+
+  module.exports = {
+    socialIcons: [{
+      name: 'facebook',
+      customName: 'Facebook Social Icon With Link',
+      srcUrl: '/assets/social/facebook-mono.svg',
+      linkUrl: 'https://www.facebook.com/Natural-Orchards-308949709568249/'
+    }, {
+      name: 'twitter',
+      customName: 'Twitter Social Icon With Link',
+      srcUrl: '/assets/social/twitter-mono.svg',
+      linkUrl: 'https://twitter.com/NaturalOrchards'
+    }, {
+      name: 'Pinterest',
+      customName: 'Pinterest Social Icon With Link',
+      srcUrl: '/assets/social/pinterest-mono.svg',
+      linkUrl: 'https://www.pinterest.com/naturalorchards/'
+    }]
+  };
+
+  /***/
+},
+/* 27 */
+/***/function (module, exports, __webpack_require__) {
+
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _createClass = function () {
+    function defineProperties(target, props) {
+      for (var i = 0; i < props.length; i++) {
+        var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
+      }
+    }return function (Constructor, protoProps, staticProps) {
+      if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
+    };
+  }();
+
+  var _get = __webpack_require__(28);
+
+  var _get2 = _interopRequireDefault(_get);
+
+  var _set = __webpack_require__(68);
+
+  var _set2 = _interopRequireDefault(_set);
+
+  var _www___naturalorchards__us = __webpack_require__(11);
+
+  var _www___naturalorchards__us2 = _interopRequireDefault(_www___naturalorchards__us);
+
+  function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : { default: obj };
+  }
+
+  function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
+    }
+  }
+
+  var ContentSynchronizer = function () {
+    function ContentSynchronizer(content) {
+      _classCallCheck(this, ContentSynchronizer);
+
+      this.cacheLocalStorageName = this.getStorageName();
+      this.content = content || _www___naturalorchards__us2.default;
+      this.user = {
+        userName: '',
+        password: ''
+      };
+      this.dynamicContent = {};
+      //TODO - enable when go prod
+      //TODO - not yet, has cache problem when there is old cache
+      //        MUST need old cache clean up logic!!!! BEFORE app is even started!!!!!
+      // this.content =
+      //   localStorage.getItem(this.cacheLocalStorageName)
+      //   ? this.getCache()
+      //   : ContentCache || content || {};
+
+      //console.log(this.getProperty(this.content, 'site.cache.updated.time'));
+      //check if client cache is stail or not and update cache accordingly
+      var today = new Date();
+      var yesterday = new Date(today.getTime() - 24 * 60 * 60 * 1000);
+      var storedOnClientTime = this.getProperty(this.content, 'site.cache.storedOnClient.time', 0);
+      var yesterdayTime = yesterday.getTime();
+      if (storedOnClientTime < yesterdayTime) {
+        this.setProperty(this.content, 'site.cache.storedOnClient.time', Date.now());
+        //also make async call to update this.content!
+      }
+
+      //try get from localstorage if its fresh, meaning within 1 day
+      //if  localstorage not available, get data from memory / http call
+      //if  localstorage data empty or http call failed,
+      //fall back to stale content local storage cache,
+      //if there is one, if not, then redirect to a 404 page
+      this.cacheIt();
+    }
+
+    _createClass(ContentSynchronizer, [{
+      key: 'setFirebase',
+      value: function setFirebase(firebase) {
+        this.firebase = firebase;
+      }
+    }, {
+      key: 'getFirebase',
+      value: function getFirebase() {
+        return this.firebase;
+      }
+    }, {
+      key: 'setContent',
+      value: function setContent(newContent) {
+        if (!newContent) return;
+        this.content = newContent;
+      }
+    }, {
+      key: 'setProperty',
+      value: function setProperty(collection, propertyChain, value) {
+        (0, _set2.default)(collection, propertyChain, value);
+        this.content = collection;
+      }
+    }, {
+      key: 'getProperty',
+      value: function getProperty(collection, propertyChain, defaultValue) {
+        var collectionObject = collection;
+        if (typeof collection === 'string') {
+          collectionObject = this.content[collection] || {};
+        }
+        return (0, _get2.default)(collectionObject, propertyChain, defaultValue);
+      }
+    }, {
+      key: 'getDynamicContent',
+      value: function getDynamicContent(itemName) {
+        if (!itemName || !this.dynamicContent[itemName]) return this.dynamicContent;
+        return this.dynamicContent[itemName].content;
+      }
+    }, {
+      key: 'getDynamicContentState',
+      value: function getDynamicContentState(itemName) {
+        if (!itemName) {
+          return;
+        }
+        if (!this.dynamicContent[itemName] || !this.dynamicContent[name].status) {
+          this.dynamicContent[name] = { content: [], status: 'initial' };
+        }
+        return this.dynamicContent[name].status;
+      }
+    }, {
+      key: 'getStorageName',
+      value: function getStorageName() {
+        // let windowInBrowser = window || null;
+        // const domain = windowInBrowser
+        //   ? windowInBrowser.location.hostname
+        //   : 'localhost';
+        //'ezLandingSite' + domain.name
+        // return `ezLandingSite${domain}`;
+        return 'ezLandingSite';
+      }
+    }, {
+      key: 'cacheIt',
+      value: function cacheIt() {
+        var localStorage = localStorage || null;
+        if (localStorage) {
+          localStorage.setItem(this.cacheLocalStorageName, JSON.stringify(this.content));
+          localStorage.setItem(this.cacheLocalStorageName + '-Dynamic', JSON.stringify(this.dynamicContent));
+        }
+      }
+    }, {
+      key: 'getCache',
+      value: function getCache() {
+        //console.log('using cache'); //eslint-disable-line
+        var cache = '';
+        var localStorage = localStorage || null;
+        if (localStorage) {
+          cache = JSON.parse(localStorage.getItem(this.cacheLocalStorageName));
+        }
+        return cache;
+      }
+    }, {
+      key: 'getContent',
+      value: function getContent() {
+        return this.content;
+      }
+    }, {
+      key: 'isFresh',
+      value: function isFresh(date) {
+        if (date === this.content.lastUpdatedDate) {
+          return true;
+        }
+      }
+    }, {
+      key: 'getCollection',
+      value: function getCollection(collectionName) {
+        return this.content[collectionName];
+      }
+    }, {
+      key: 'getItem',
+      value: function getItem(collectionName, keyName, keyValue, isArray) {
+        var content = this.content;
+        var result = null;
+        //let found = false;
+        if (isArray) {
+          var contentArray = Object.keys(content);
+          var contentLength = contentArray.length - 1;
+          for (var i = 0; i <= contentLength; i++) {
+            var collectionKeyName = contentArray[i];
+            if (collectionKeyName === collectionName) {
+              var collection = content[collectionKeyName];
+              var collectionLength = collection.length - 1;
+              for (var ci = 0; ci <= collectionLength; ci++) {
+                if (!collection[ci][keyName] && ci === collectionLength) {
+                  result = this.error(collectionName, keyName, keyValue, isArray, 'all collection child searched');
+                  break;
+                } else if (collection[ci][keyName] === keyValue) {
+                  //console.log('child found');
+                  result = collection[ci];
+                  break;
+                }
+              }
+              break;
+            } else if (i === contentLength) {
+              result = this.error(collectionName, keyName, keyValue, isArray, 'all nodes searched');
+              break;
+            }
+          }
+          return result;
+        } else {
+          return this.error(collectionName, keyName, keyValue, isArray);
+        }
+      }
+    }, {
+      key: 'getProductGrid',
+      value: function getProductGrid(productName) {
+        var products = this.content.products;
+        var isMatched = false;
+        for (var i = 0; i < products.length; i++) {
+          if (products[i].name === productName) {
+            isMatched = true;
+            return products[i];
+          }
+        }
+        return null;
+      }
+    }, {
+      key: 'updateNotificationBarStatus',
+      value: function updateNotificationBarStatus(newStatus) {
+        this.content.site.flag.notificationBar = newStatus;
+        this.cacheIt();
+      }
+    }, {
+      key: 'error',
+      value: function error(collectionName, keyName, keyValue, isArray, addedComment) {
+        return new Error('content not found: logged\n      *' + addedComment + '\n      collection: ' + collectionName + '\n      key: ' + keyName + '= ' + keyValue + '\n      is array: ' + isArray + '\n    ');
+      }
+    }]);
+
+    return ContentSynchronizer;
+  }();
+
+  exports.default = new ContentSynchronizer();
+
+  /***/
+},
+/* 28 */
+/***/function (module, exports, __webpack_require__) {
+
+  var baseGet = __webpack_require__(29);
+
+  /**
+   * Gets the value at `path` of `object`. If the resolved value is
+   * `undefined`, the `defaultValue` is returned in its place.
+   *
+   * @static
+   * @memberOf _
+   * @since 3.7.0
+   * @category Object
+   * @param {Object} object The object to query.
+   * @param {Array|string} path The path of the property to get.
+   * @param {*} [defaultValue] The value returned for `undefined` resolved values.
+   * @returns {*} Returns the resolved value.
+   * @example
+   *
+   * var object = { 'a': [{ 'b': { 'c': 3 } }] };
+   *
+   * _.get(object, 'a[0].b.c');
+   * // => 3
+   *
+   * _.get(object, ['a', '0', 'b', 'c']);
+   * // => 3
+   *
+   * _.get(object, 'a.b.c', 'default');
+   * // => 'default'
+   */
+  function get(object, path, defaultValue) {
+    var result = object == null ? undefined : baseGet(object, path);
+    return result === undefined ? defaultValue : result;
+  }
+
+  module.exports = get;
+
+  /***/
+},
+/* 29 */
+/***/function (module, exports, __webpack_require__) {
+
+  var castPath = __webpack_require__(12),
+      toKey = __webpack_require__(15);
+
+  /**
+   * The base implementation of `_.get` without support for default values.
+   *
+   * @private
+   * @param {Object} object The object to query.
+   * @param {Array|string} path The path of the property to get.
+   * @returns {*} Returns the resolved value.
+   */
+  function baseGet(object, path) {
+    path = castPath(path, object);
+
+    var index = 0,
+        length = path.length;
+
+    while (object != null && index < length) {
+      object = object[toKey(path[index++])];
+    }
+    return index && index == length ? object : undefined;
+  }
+
+  module.exports = baseGet;
+
+  /***/
+},
+/* 30 */
+/***/function (module, exports, __webpack_require__) {
+
+  var isArray = __webpack_require__(4),
+      isSymbol = __webpack_require__(5);
+
+  /** Used to match property names within property paths. */
+  var reIsDeepProp = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/,
+      reIsPlainProp = /^\w*$/;
+
+  /**
+   * Checks if `value` is a property name and not a property path.
+   *
+   * @private
+   * @param {*} value The value to check.
+   * @param {Object} [object] The object to query keys on.
+   * @returns {boolean} Returns `true` if `value` is a property name, else `false`.
+   */
+  function isKey(value, object) {
+    if (isArray(value)) {
+      return false;
+    }
+    var type = typeof value === 'undefined' ? 'undefined' : _typeof(value);
+    if (type == 'number' || type == 'symbol' || type == 'boolean' || value == null || isSymbol(value)) {
+      return true;
+    }
+    return reIsPlainProp.test(value) || !reIsDeepProp.test(value) || object != null && value in Object(object);
+  }
+
+  module.exports = isKey;
+
+  /***/
+},
+/* 31 */
+/***/function (module, exports, __webpack_require__) {
+
+  /* WEBPACK VAR INJECTION */(function (global) {
+    /** Detect free variable `global` from Node.js. */
+    var freeGlobal = (typeof global === 'undefined' ? 'undefined' : _typeof(global)) == 'object' && global && global.Object === Object && global;
+
+    module.exports = freeGlobal;
+
+    /* WEBPACK VAR INJECTION */
+  }).call(exports, __webpack_require__(32));
+
+  /***/
+},
+/* 32 */
+/***/function (module, exports) {
+
+  var g;
+
+  // This works in non-strict mode
+  g = function () {
     return this;
-  }();try {
-    n = n || Function("return this")() || (0, eval)("this");
+  }();
+
+  try {
+    // This works if eval is allowed (see CSP)
+    g = g || Function("return this")() || (1, eval)("this");
   } catch (e) {
-    "object" == (typeof window === "undefined" ? "undefined" : _typeof(window)) && (n = window);
-  }e.exports = n;
-}, function (e, t, n) {
-  function r(e) {
-    var t = a.call(e, u),
-        n = e[u];try {
-      e[u] = void 0;var r = !0;
-    } catch (e) {}var i = s.call(e);return r && (t ? e[u] = n : delete e[u]), i;
-  }var i = n(6),
-      o = Object.prototype,
-      a = o.hasOwnProperty,
-      s = o.toString,
-      u = i ? i.toStringTag : void 0;e.exports = r;
-}, function (e, t) {
-  function n(e) {
-    return i.call(e);
-  }var r = Object.prototype,
-      i = r.toString;e.exports = n;
-}, function (e, t) {
-  function n(e) {
-    return null != e && "object" == (typeof e === "undefined" ? "undefined" : _typeof(e));
-  }e.exports = n;
-}, function (e, t, n) {
-  var r = n(37),
-      i = /^\./,
-      o = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g,
-      a = /\\(\\)?/g,
-      s = r(function (e) {
-    var t = [];return i.test(e) && t.push(""), e.replace(o, function (e, n, r, i) {
-      t.push(r ? i.replace(a, "$1") : n || e);
-    }), t;
-  });e.exports = s;
-}, function (e, t, n) {
-  function r(e) {
-    var t = i(e, function (e) {
-      return n.size === o && n.clear(), e;
-    }),
-        n = t.cache;return t;
-  }var i = n(38),
-      o = 500;e.exports = r;
-}, function (e, t, n) {
-  function r(e, t) {
-    if ("function" != typeof e || null != t && "function" != typeof t) throw new TypeError(o);var n = function n() {
-      var r = arguments,
-          i = t ? t.apply(this, r) : r[0],
-          o = n.cache;if (o.has(i)) return o.get(i);var a = e.apply(this, r);return n.cache = o.set(i, a) || o, a;
-    };return n.cache = new (r.Cache || i)(), n;
-  }var i = n(39),
-      o = "Expected a function";r.Cache = i, e.exports = r;
-}, function (e, t, n) {
-  function r(e) {
-    var t = -1,
-        n = null == e ? 0 : e.length;for (this.clear(); ++t < n;) {
-      var r = e[t];this.set(r[0], r[1]);
-    }
-  }var i = n(40),
-      o = n(60),
-      a = n(62),
-      s = n(63),
-      u = n(64);r.prototype.clear = i, r.prototype.delete = o, r.prototype.get = a, r.prototype.has = s, r.prototype.set = u, e.exports = r;
-}, function (e, t, n) {
-  function r() {
-    this.size = 0, this.__data__ = { hash: new i(), map: new (a || o)(), string: new i() };
-  }var i = n(41),
-      o = n(53),
-      a = n(59);e.exports = r;
-}, function (e, t, n) {
-  function r(e) {
-    var t = -1,
-        n = null == e ? 0 : e.length;for (this.clear(); ++t < n;) {
-      var r = e[t];this.set(r[0], r[1]);
-    }
-  }var i = n(42),
-      o = n(49),
-      a = n(50),
-      s = n(51),
-      u = n(52);r.prototype.clear = i, r.prototype.delete = o, r.prototype.get = a, r.prototype.has = s, r.prototype.set = u, e.exports = r;
-}, function (e, t, n) {
-  function r() {
-    this.__data__ = i ? i(null) : {}, this.size = 0;
-  }var i = n(1);e.exports = r;
-}, function (e, t, n) {
-  function r(e) {
-    return !(!a(e) || o(e)) && (i(e) ? p : l).test(s(e));
-  }var i = n(44),
-      o = n(45),
-      a = n(9),
-      s = n(47),
-      u = /[\\^$.*+?()[\]{}|]/g,
-      l = /^\[object .+?Constructor\]$/,
-      c = Function.prototype,
-      d = Object.prototype,
-      f = c.toString,
-      m = d.hasOwnProperty,
-      p = RegExp("^" + f.call(m).replace(u, "\\$&").replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, "$1.*?") + "$");e.exports = r;
-}, function (e, t, n) {
-  function r(e) {
-    if (!o(e)) return !1;var t = i(e);return t == s || t == u || t == a || t == l;
-  }var i = n(13),
-      o = n(9),
-      a = "[object AsyncFunction]",
-      s = "[object Function]",
-      u = "[object GeneratorFunction]",
-      l = "[object Proxy]";e.exports = r;
-}, function (e, t, n) {
-  function r(e) {
-    return !!o && o in e;
-  }var i = n(46),
-      o = function () {
-    var e = /[^.]+$/.exec(i && i.keys && i.keys.IE_PROTO || "");return e ? "Symbol(src)_1." + e : "";
-  }();e.exports = r;
-}, function (e, t, n) {
-  var r = n(7),
-      i = r["__core-js_shared__"];e.exports = i;
-}, function (e, t) {
-  function n(e) {
-    if (null != e) {
-      try {
-        return i.call(e);
-      } catch (e) {}try {
-        return e + "";
-      } catch (e) {}
-    }return "";
-  }var r = Function.prototype,
-      i = r.toString;e.exports = n;
-}, function (e, t) {
-  function n(e, t) {
-    return null == e ? void 0 : e[t];
-  }e.exports = n;
-}, function (e, t) {
-  function n(e) {
-    var t = this.has(e) && delete this.__data__[e];return this.size -= t ? 1 : 0, t;
-  }e.exports = n;
-}, function (e, t, n) {
-  function r(e) {
-    var t = this.__data__;if (i) {
-      var n = t[e];return n === o ? void 0 : n;
-    }return s.call(t, e) ? t[e] : void 0;
-  }var i = n(1),
-      o = "__lodash_hash_undefined__",
-      a = Object.prototype,
-      s = a.hasOwnProperty;e.exports = r;
-}, function (e, t, n) {
-  function r(e) {
-    var t = this.__data__;return i ? void 0 !== t[e] : a.call(t, e);
-  }var i = n(1),
-      o = Object.prototype,
-      a = o.hasOwnProperty;e.exports = r;
-}, function (e, t, n) {
-  function r(e, t) {
-    var n = this.__data__;return this.size += this.has(e) ? 0 : 1, n[e] = i && void 0 === t ? o : t, this;
-  }var i = n(1),
-      o = "__lodash_hash_undefined__";e.exports = r;
-}, function (e, t, n) {
-  function r(e) {
-    var t = -1,
-        n = null == e ? 0 : e.length;for (this.clear(); ++t < n;) {
-      var r = e[t];this.set(r[0], r[1]);
-    }
-  }var i = n(54),
-      o = n(55),
-      a = n(56),
-      s = n(57),
-      u = n(58);r.prototype.clear = i, r.prototype.delete = o, r.prototype.get = a, r.prototype.has = s, r.prototype.set = u, e.exports = r;
-}, function (e, t) {
-  function n() {
-    this.__data__ = [], this.size = 0;
-  }e.exports = n;
-}, function (e, t, n) {
-  function r(e) {
-    var t = this.__data__,
-        n = i(t, e);return !(n < 0) && (n == t.length - 1 ? t.pop() : a.call(t, n, 1), --this.size, !0);
-  }var i = n(2),
-      o = Array.prototype,
-      a = o.splice;e.exports = r;
-}, function (e, t, n) {
-  function r(e) {
-    var t = this.__data__,
-        n = i(t, e);return n < 0 ? void 0 : t[n][1];
-  }var i = n(2);e.exports = r;
-}, function (e, t, n) {
-  function r(e) {
-    return i(this.__data__, e) > -1;
-  }var i = n(2);e.exports = r;
-}, function (e, t, n) {
-  function r(e, t) {
-    var n = this.__data__,
-        r = i(n, e);return r < 0 ? (++this.size, n.push([e, t])) : n[r][1] = t, this;
-  }var i = n(2);e.exports = r;
-}, function (e, t, n) {
-  var r = n(8),
-      i = n(7),
-      o = r(i, "Map");e.exports = o;
-}, function (e, t, n) {
-  function r(e) {
-    var t = i(this, e).delete(e);return this.size -= t ? 1 : 0, t;
-  }var i = n(3);e.exports = r;
-}, function (e, t) {
-  function n(e) {
-    var t = typeof e === "undefined" ? "undefined" : _typeof(e);return "string" == t || "number" == t || "symbol" == t || "boolean" == t ? "__proto__" !== e : null === e;
-  }e.exports = n;
-}, function (e, t, n) {
-  function r(e) {
-    return i(this, e).get(e);
-  }var i = n(3);e.exports = r;
-}, function (e, t, n) {
-  function r(e) {
-    return i(this, e).has(e);
-  }var i = n(3);e.exports = r;
-}, function (e, t, n) {
-  function r(e, t) {
-    var n = i(this, e),
-        r = n.size;return n.set(e, t), this.size += n.size == r ? 0 : 1, this;
-  }var i = n(3);e.exports = r;
-}, function (e, t, n) {
-  function r(e) {
-    return null == e ? "" : i(e);
-  }var i = n(66);e.exports = r;
-}, function (e, t, n) {
-  function r(e) {
-    if ("string" == typeof e) return e;if (a(e)) return o(e, r) + "";if (s(e)) return c ? c.call(e) : "";var t = e + "";return "0" == t && 1 / e == -u ? "-0" : t;
-  }var i = n(6),
-      o = n(67),
-      a = n(4),
-      s = n(5),
-      u = 1 / 0,
-      l = i ? i.prototype : void 0,
-      c = l ? l.toString : void 0;e.exports = r;
-}, function (e, t) {
-  function n(e, t) {
-    for (var n = -1, r = null == e ? 0 : e.length, i = Array(r); ++n < r;) {
-      i[n] = t(e[n], n, e);
-    }return i;
-  }e.exports = n;
-}, function (e, t, n) {
-  function r(e, t, n) {
-    return null == e ? e : i(e, t, n);
-  }var i = n(69);e.exports = r;
-}, function (e, t, n) {
-  function r(e, t, n, r) {
-    if (!s(e)) return e;t = o(t, e);for (var l = -1, c = t.length, d = c - 1, f = e; null != f && ++l < c;) {
-      var m = u(t[l]),
-          p = n;if (l != d) {
-        var g = f[m];p = r ? r(g, m, f) : void 0, void 0 === p && (p = s(g) ? g : a(t[l + 1]) ? [] : {});
-      }i(f, m, p), f = f[m];
-    }return e;
-  }var i = n(70),
-      o = n(12),
-      a = n(73),
-      s = n(9),
-      u = n(15);e.exports = r;
-}, function (e, t, n) {
-  function r(e, t, n) {
-    var r = e[t];s.call(e, t) && o(r, n) && (void 0 !== n || t in e) || i(e, t, n);
-  }var i = n(71),
-      o = n(14),
-      a = Object.prototype,
-      s = a.hasOwnProperty;e.exports = r;
-}, function (e, t, n) {
-  function r(e, t, n) {
-    "__proto__" == t && i ? i(e, t, { configurable: !0, enumerable: !0, value: n, writable: !0 }) : e[t] = n;
-  }var i = n(72);e.exports = r;
-}, function (e, t, n) {
-  var r = n(8),
-      i = function () {
+    // This works if the window reference is available
+    if ((typeof window === 'undefined' ? 'undefined' : _typeof(window)) === "object") g = window;
+  }
+
+  // g can still be undefined, but nothing to do about it...
+  // We return undefined, instead of nothing here, so it's
+  // easier to handle this case. if(!global) { ...}
+
+  module.exports = g;
+
+  /***/
+},
+/* 33 */
+/***/function (module, exports, __webpack_require__) {
+
+  var _Symbol3 = __webpack_require__(6);
+
+  /** Used for built-in method references. */
+  var objectProto = Object.prototype;
+
+  /** Used to check objects for own properties. */
+  var hasOwnProperty = objectProto.hasOwnProperty;
+
+  /**
+   * Used to resolve the
+   * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
+   * of values.
+   */
+  var nativeObjectToString = objectProto.toString;
+
+  /** Built-in value references. */
+  var symToStringTag = _Symbol3 ? _Symbol3.toStringTag : undefined;
+
+  /**
+   * A specialized version of `baseGetTag` which ignores `Symbol.toStringTag` values.
+   *
+   * @private
+   * @param {*} value The value to query.
+   * @returns {string} Returns the raw `toStringTag`.
+   */
+  function getRawTag(value) {
+    var isOwn = hasOwnProperty.call(value, symToStringTag),
+        tag = value[symToStringTag];
+
     try {
-      var e = r(Object, "defineProperty");return e({}, "", {}), e;
+      value[symToStringTag] = undefined;
+      var unmasked = true;
     } catch (e) {}
-  }();e.exports = i;
-}, function (e, t) {
-  function n(e, t) {
-    return !!(t = null == t ? r : t) && ("number" == typeof e || i.test(e)) && e > -1 && e % 1 == 0 && e < t;
-  }var r = 9007199254740991,
-      i = /^(?:0|[1-9]\d*)$/;e.exports = n;
-}, function (e, t, n) {
+
+    var result = nativeObjectToString.call(value);
+    if (unmasked) {
+      if (isOwn) {
+        value[symToStringTag] = tag;
+      } else {
+        delete value[symToStringTag];
+      }
+    }
+    return result;
+  }
+
+  module.exports = getRawTag;
+
+  /***/
+},
+/* 34 */
+/***/function (module, exports) {
+
+  /** Used for built-in method references. */
+  var objectProto = Object.prototype;
+
+  /**
+   * Used to resolve the
+   * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
+   * of values.
+   */
+  var nativeObjectToString = objectProto.toString;
+
+  /**
+   * Converts `value` to a string using `Object.prototype.toString`.
+   *
+   * @private
+   * @param {*} value The value to convert.
+   * @returns {string} Returns the converted string.
+   */
+  function objectToString(value) {
+    return nativeObjectToString.call(value);
+  }
+
+  module.exports = objectToString;
+
+  /***/
+},
+/* 35 */
+/***/function (module, exports) {
+
+  /**
+   * Checks if `value` is object-like. A value is object-like if it's not `null`
+   * and has a `typeof` result of "object".
+   *
+   * @static
+   * @memberOf _
+   * @since 4.0.0
+   * @category Lang
+   * @param {*} value The value to check.
+   * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
+   * @example
+   *
+   * _.isObjectLike({});
+   * // => true
+   *
+   * _.isObjectLike([1, 2, 3]);
+   * // => true
+   *
+   * _.isObjectLike(_.noop);
+   * // => false
+   *
+   * _.isObjectLike(null);
+   * // => false
+   */
+  function isObjectLike(value) {
+    return value != null && (typeof value === 'undefined' ? 'undefined' : _typeof(value)) == 'object';
+  }
+
+  module.exports = isObjectLike;
+
+  /***/
+},
+/* 36 */
+/***/function (module, exports, __webpack_require__) {
+
+  var memoizeCapped = __webpack_require__(37);
+
+  /** Used to match property names within property paths. */
+  var reLeadingDot = /^\./,
+      rePropName = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g;
+
+  /** Used to match backslashes in property paths. */
+  var reEscapeChar = /\\(\\)?/g;
+
+  /**
+   * Converts `string` to a property path array.
+   *
+   * @private
+   * @param {string} string The string to convert.
+   * @returns {Array} Returns the property path array.
+   */
+  var stringToPath = memoizeCapped(function (string) {
+    var result = [];
+    if (reLeadingDot.test(string)) {
+      result.push('');
+    }
+    string.replace(rePropName, function (match, number, quote, string) {
+      result.push(quote ? string.replace(reEscapeChar, '$1') : number || match);
+    });
+    return result;
+  });
+
+  module.exports = stringToPath;
+
+  /***/
+},
+/* 37 */
+/***/function (module, exports, __webpack_require__) {
+
+  var memoize = __webpack_require__(38);
+
+  /** Used as the maximum memoize cache size. */
+  var MAX_MEMOIZE_SIZE = 500;
+
+  /**
+   * A specialized version of `_.memoize` which clears the memoized function's
+   * cache when it exceeds `MAX_MEMOIZE_SIZE`.
+   *
+   * @private
+   * @param {Function} func The function to have its output memoized.
+   * @returns {Function} Returns the new memoized function.
+   */
+  function memoizeCapped(func) {
+    var result = memoize(func, function (key) {
+      if (cache.size === MAX_MEMOIZE_SIZE) {
+        cache.clear();
+      }
+      return key;
+    });
+
+    var cache = result.cache;
+    return result;
+  }
+
+  module.exports = memoizeCapped;
+
+  /***/
+},
+/* 38 */
+/***/function (module, exports, __webpack_require__) {
+
+  var MapCache = __webpack_require__(39);
+
+  /** Error message constants. */
+  var FUNC_ERROR_TEXT = 'Expected a function';
+
+  /**
+   * Creates a function that memoizes the result of `func`. If `resolver` is
+   * provided, it determines the cache key for storing the result based on the
+   * arguments provided to the memoized function. By default, the first argument
+   * provided to the memoized function is used as the map cache key. The `func`
+   * is invoked with the `this` binding of the memoized function.
+   *
+   * **Note:** The cache is exposed as the `cache` property on the memoized
+   * function. Its creation may be customized by replacing the `_.memoize.Cache`
+   * constructor with one whose instances implement the
+   * [`Map`](http://ecma-international.org/ecma-262/7.0/#sec-properties-of-the-map-prototype-object)
+   * method interface of `clear`, `delete`, `get`, `has`, and `set`.
+   *
+   * @static
+   * @memberOf _
+   * @since 0.1.0
+   * @category Function
+   * @param {Function} func The function to have its output memoized.
+   * @param {Function} [resolver] The function to resolve the cache key.
+   * @returns {Function} Returns the new memoized function.
+   * @example
+   *
+   * var object = { 'a': 1, 'b': 2 };
+   * var other = { 'c': 3, 'd': 4 };
+   *
+   * var values = _.memoize(_.values);
+   * values(object);
+   * // => [1, 2]
+   *
+   * values(other);
+   * // => [3, 4]
+   *
+   * object.a = 2;
+   * values(object);
+   * // => [1, 2]
+   *
+   * // Modify the result cache.
+   * values.cache.set(object, ['a', 'b']);
+   * values(object);
+   * // => ['a', 'b']
+   *
+   * // Replace `_.memoize.Cache`.
+   * _.memoize.Cache = WeakMap;
+   */
+  function memoize(func, resolver) {
+    if (typeof func != 'function' || resolver != null && typeof resolver != 'function') {
+      throw new TypeError(FUNC_ERROR_TEXT);
+    }
+    var memoized = function memoized() {
+      var args = arguments,
+          key = resolver ? resolver.apply(this, args) : args[0],
+          cache = memoized.cache;
+
+      if (cache.has(key)) {
+        return cache.get(key);
+      }
+      var result = func.apply(this, args);
+      memoized.cache = cache.set(key, result) || cache;
+      return result;
+    };
+    memoized.cache = new (memoize.Cache || MapCache)();
+    return memoized;
+  }
+
+  // Expose `MapCache`.
+  memoize.Cache = MapCache;
+
+  module.exports = memoize;
+
+  /***/
+},
+/* 39 */
+/***/function (module, exports, __webpack_require__) {
+
+  var mapCacheClear = __webpack_require__(40),
+      mapCacheDelete = __webpack_require__(60),
+      mapCacheGet = __webpack_require__(62),
+      mapCacheHas = __webpack_require__(63),
+      mapCacheSet = __webpack_require__(64);
+
+  /**
+   * Creates a map cache object to store key-value pairs.
+   *
+   * @private
+   * @constructor
+   * @param {Array} [entries] The key-value pairs to cache.
+   */
+  function MapCache(entries) {
+    var index = -1,
+        length = entries == null ? 0 : entries.length;
+
+    this.clear();
+    while (++index < length) {
+      var entry = entries[index];
+      this.set(entry[0], entry[1]);
+    }
+  }
+
+  // Add methods to `MapCache`.
+  MapCache.prototype.clear = mapCacheClear;
+  MapCache.prototype['delete'] = mapCacheDelete;
+  MapCache.prototype.get = mapCacheGet;
+  MapCache.prototype.has = mapCacheHas;
+  MapCache.prototype.set = mapCacheSet;
+
+  module.exports = MapCache;
+
+  /***/
+},
+/* 40 */
+/***/function (module, exports, __webpack_require__) {
+
+  var Hash = __webpack_require__(41),
+      ListCache = __webpack_require__(53),
+      Map = __webpack_require__(59);
+
+  /**
+   * Removes all key-value entries from the map.
+   *
+   * @private
+   * @name clear
+   * @memberOf MapCache
+   */
+  function mapCacheClear() {
+    this.size = 0;
+    this.__data__ = {
+      'hash': new Hash(),
+      'map': new (Map || ListCache)(),
+      'string': new Hash()
+    };
+  }
+
+  module.exports = mapCacheClear;
+
+  /***/
+},
+/* 41 */
+/***/function (module, exports, __webpack_require__) {
+
+  var hashClear = __webpack_require__(42),
+      hashDelete = __webpack_require__(49),
+      hashGet = __webpack_require__(50),
+      hashHas = __webpack_require__(51),
+      hashSet = __webpack_require__(52);
+
+  /**
+   * Creates a hash object.
+   *
+   * @private
+   * @constructor
+   * @param {Array} [entries] The key-value pairs to cache.
+   */
+  function Hash(entries) {
+    var index = -1,
+        length = entries == null ? 0 : entries.length;
+
+    this.clear();
+    while (++index < length) {
+      var entry = entries[index];
+      this.set(entry[0], entry[1]);
+    }
+  }
+
+  // Add methods to `Hash`.
+  Hash.prototype.clear = hashClear;
+  Hash.prototype['delete'] = hashDelete;
+  Hash.prototype.get = hashGet;
+  Hash.prototype.has = hashHas;
+  Hash.prototype.set = hashSet;
+
+  module.exports = Hash;
+
+  /***/
+},
+/* 42 */
+/***/function (module, exports, __webpack_require__) {
+
+  var nativeCreate = __webpack_require__(1);
+
+  /**
+   * Removes all key-value entries from the hash.
+   *
+   * @private
+   * @name clear
+   * @memberOf Hash
+   */
+  function hashClear() {
+    this.__data__ = nativeCreate ? nativeCreate(null) : {};
+    this.size = 0;
+  }
+
+  module.exports = hashClear;
+
+  /***/
+},
+/* 43 */
+/***/function (module, exports, __webpack_require__) {
+
+  var isFunction = __webpack_require__(44),
+      isMasked = __webpack_require__(45),
+      isObject = __webpack_require__(9),
+      toSource = __webpack_require__(47);
+
+  /**
+   * Used to match `RegExp`
+   * [syntax characters](http://ecma-international.org/ecma-262/7.0/#sec-patterns).
+   */
+  var reRegExpChar = /[\\^$.*+?()[\]{}|]/g;
+
+  /** Used to detect host constructors (Safari). */
+  var reIsHostCtor = /^\[object .+?Constructor\]$/;
+
+  /** Used for built-in method references. */
+  var funcProto = Function.prototype,
+      objectProto = Object.prototype;
+
+  /** Used to resolve the decompiled source of functions. */
+  var funcToString = funcProto.toString;
+
+  /** Used to check objects for own properties. */
+  var hasOwnProperty = objectProto.hasOwnProperty;
+
+  /** Used to detect if a method is native. */
+  var reIsNative = RegExp('^' + funcToString.call(hasOwnProperty).replace(reRegExpChar, '\\$&').replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, '$1.*?') + '$');
+
+  /**
+   * The base implementation of `_.isNative` without bad shim checks.
+   *
+   * @private
+   * @param {*} value The value to check.
+   * @returns {boolean} Returns `true` if `value` is a native function,
+   *  else `false`.
+   */
+  function baseIsNative(value) {
+    if (!isObject(value) || isMasked(value)) {
+      return false;
+    }
+    var pattern = isFunction(value) ? reIsNative : reIsHostCtor;
+    return pattern.test(toSource(value));
+  }
+
+  module.exports = baseIsNative;
+
+  /***/
+},
+/* 44 */
+/***/function (module, exports, __webpack_require__) {
+
+  var baseGetTag = __webpack_require__(13),
+      isObject = __webpack_require__(9);
+
+  /** `Object#toString` result references. */
+  var asyncTag = '[object AsyncFunction]',
+      funcTag = '[object Function]',
+      genTag = '[object GeneratorFunction]',
+      proxyTag = '[object Proxy]';
+
+  /**
+   * Checks if `value` is classified as a `Function` object.
+   *
+   * @static
+   * @memberOf _
+   * @since 0.1.0
+   * @category Lang
+   * @param {*} value The value to check.
+   * @returns {boolean} Returns `true` if `value` is a function, else `false`.
+   * @example
+   *
+   * _.isFunction(_);
+   * // => true
+   *
+   * _.isFunction(/abc/);
+   * // => false
+   */
+  function isFunction(value) {
+    if (!isObject(value)) {
+      return false;
+    }
+    // The use of `Object#toString` avoids issues with the `typeof` operator
+    // in Safari 9 which returns 'object' for typed arrays and other constructors.
+    var tag = baseGetTag(value);
+    return tag == funcTag || tag == genTag || tag == asyncTag || tag == proxyTag;
+  }
+
+  module.exports = isFunction;
+
+  /***/
+},
+/* 45 */
+/***/function (module, exports, __webpack_require__) {
+
+  var coreJsData = __webpack_require__(46);
+
+  /** Used to detect methods masquerading as native. */
+  var maskSrcKey = function () {
+    var uid = /[^.]+$/.exec(coreJsData && coreJsData.keys && coreJsData.keys.IE_PROTO || '');
+    return uid ? 'Symbol(src)_1.' + uid : '';
+  }();
+
+  /**
+   * Checks if `func` has its source masked.
+   *
+   * @private
+   * @param {Function} func The function to check.
+   * @returns {boolean} Returns `true` if `func` is masked, else `false`.
+   */
+  function isMasked(func) {
+    return !!maskSrcKey && maskSrcKey in func;
+  }
+
+  module.exports = isMasked;
+
+  /***/
+},
+/* 46 */
+/***/function (module, exports, __webpack_require__) {
+
+  var root = __webpack_require__(7);
+
+  /** Used to detect overreaching core-js shims. */
+  var coreJsData = root['__core-js_shared__'];
+
+  module.exports = coreJsData;
+
+  /***/
+},
+/* 47 */
+/***/function (module, exports) {
+
+  /** Used for built-in method references. */
+  var funcProto = Function.prototype;
+
+  /** Used to resolve the decompiled source of functions. */
+  var funcToString = funcProto.toString;
+
+  /**
+   * Converts `func` to its source code.
+   *
+   * @private
+   * @param {Function} func The function to convert.
+   * @returns {string} Returns the source code.
+   */
+  function toSource(func) {
+    if (func != null) {
+      try {
+        return funcToString.call(func);
+      } catch (e) {}
+      try {
+        return func + '';
+      } catch (e) {}
+    }
+    return '';
+  }
+
+  module.exports = toSource;
+
+  /***/
+},
+/* 48 */
+/***/function (module, exports) {
+
+  /**
+   * Gets the value at `key` of `object`.
+   *
+   * @private
+   * @param {Object} [object] The object to query.
+   * @param {string} key The key of the property to get.
+   * @returns {*} Returns the property value.
+   */
+  function getValue(object, key) {
+    return object == null ? undefined : object[key];
+  }
+
+  module.exports = getValue;
+
+  /***/
+},
+/* 49 */
+/***/function (module, exports) {
+
+  /**
+   * Removes `key` and its value from the hash.
+   *
+   * @private
+   * @name delete
+   * @memberOf Hash
+   * @param {Object} hash The hash to modify.
+   * @param {string} key The key of the value to remove.
+   * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+   */
+  function hashDelete(key) {
+    var result = this.has(key) && delete this.__data__[key];
+    this.size -= result ? 1 : 0;
+    return result;
+  }
+
+  module.exports = hashDelete;
+
+  /***/
+},
+/* 50 */
+/***/function (module, exports, __webpack_require__) {
+
+  var nativeCreate = __webpack_require__(1);
+
+  /** Used to stand-in for `undefined` hash values. */
+  var HASH_UNDEFINED = '__lodash_hash_undefined__';
+
+  /** Used for built-in method references. */
+  var objectProto = Object.prototype;
+
+  /** Used to check objects for own properties. */
+  var hasOwnProperty = objectProto.hasOwnProperty;
+
+  /**
+   * Gets the hash value for `key`.
+   *
+   * @private
+   * @name get
+   * @memberOf Hash
+   * @param {string} key The key of the value to get.
+   * @returns {*} Returns the entry value.
+   */
+  function hashGet(key) {
+    var data = this.__data__;
+    if (nativeCreate) {
+      var result = data[key];
+      return result === HASH_UNDEFINED ? undefined : result;
+    }
+    return hasOwnProperty.call(data, key) ? data[key] : undefined;
+  }
+
+  module.exports = hashGet;
+
+  /***/
+},
+/* 51 */
+/***/function (module, exports, __webpack_require__) {
+
+  var nativeCreate = __webpack_require__(1);
+
+  /** Used for built-in method references. */
+  var objectProto = Object.prototype;
+
+  /** Used to check objects for own properties. */
+  var hasOwnProperty = objectProto.hasOwnProperty;
+
+  /**
+   * Checks if a hash value for `key` exists.
+   *
+   * @private
+   * @name has
+   * @memberOf Hash
+   * @param {string} key The key of the entry to check.
+   * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+   */
+  function hashHas(key) {
+    var data = this.__data__;
+    return nativeCreate ? data[key] !== undefined : hasOwnProperty.call(data, key);
+  }
+
+  module.exports = hashHas;
+
+  /***/
+},
+/* 52 */
+/***/function (module, exports, __webpack_require__) {
+
+  var nativeCreate = __webpack_require__(1);
+
+  /** Used to stand-in for `undefined` hash values. */
+  var HASH_UNDEFINED = '__lodash_hash_undefined__';
+
+  /**
+   * Sets the hash `key` to `value`.
+   *
+   * @private
+   * @name set
+   * @memberOf Hash
+   * @param {string} key The key of the value to set.
+   * @param {*} value The value to set.
+   * @returns {Object} Returns the hash instance.
+   */
+  function hashSet(key, value) {
+    var data = this.__data__;
+    this.size += this.has(key) ? 0 : 1;
+    data[key] = nativeCreate && value === undefined ? HASH_UNDEFINED : value;
+    return this;
+  }
+
+  module.exports = hashSet;
+
+  /***/
+},
+/* 53 */
+/***/function (module, exports, __webpack_require__) {
+
+  var listCacheClear = __webpack_require__(54),
+      listCacheDelete = __webpack_require__(55),
+      listCacheGet = __webpack_require__(56),
+      listCacheHas = __webpack_require__(57),
+      listCacheSet = __webpack_require__(58);
+
+  /**
+   * Creates an list cache object.
+   *
+   * @private
+   * @constructor
+   * @param {Array} [entries] The key-value pairs to cache.
+   */
+  function ListCache(entries) {
+    var index = -1,
+        length = entries == null ? 0 : entries.length;
+
+    this.clear();
+    while (++index < length) {
+      var entry = entries[index];
+      this.set(entry[0], entry[1]);
+    }
+  }
+
+  // Add methods to `ListCache`.
+  ListCache.prototype.clear = listCacheClear;
+  ListCache.prototype['delete'] = listCacheDelete;
+  ListCache.prototype.get = listCacheGet;
+  ListCache.prototype.has = listCacheHas;
+  ListCache.prototype.set = listCacheSet;
+
+  module.exports = ListCache;
+
+  /***/
+},
+/* 54 */
+/***/function (module, exports) {
+
+  /**
+   * Removes all key-value entries from the list cache.
+   *
+   * @private
+   * @name clear
+   * @memberOf ListCache
+   */
+  function listCacheClear() {
+    this.__data__ = [];
+    this.size = 0;
+  }
+
+  module.exports = listCacheClear;
+
+  /***/
+},
+/* 55 */
+/***/function (module, exports, __webpack_require__) {
+
+  var assocIndexOf = __webpack_require__(2);
+
+  /** Used for built-in method references. */
+  var arrayProto = Array.prototype;
+
+  /** Built-in value references. */
+  var splice = arrayProto.splice;
+
+  /**
+   * Removes `key` and its value from the list cache.
+   *
+   * @private
+   * @name delete
+   * @memberOf ListCache
+   * @param {string} key The key of the value to remove.
+   * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+   */
+  function listCacheDelete(key) {
+    var data = this.__data__,
+        index = assocIndexOf(data, key);
+
+    if (index < 0) {
+      return false;
+    }
+    var lastIndex = data.length - 1;
+    if (index == lastIndex) {
+      data.pop();
+    } else {
+      splice.call(data, index, 1);
+    }
+    --this.size;
+    return true;
+  }
+
+  module.exports = listCacheDelete;
+
+  /***/
+},
+/* 56 */
+/***/function (module, exports, __webpack_require__) {
+
+  var assocIndexOf = __webpack_require__(2);
+
+  /**
+   * Gets the list cache value for `key`.
+   *
+   * @private
+   * @name get
+   * @memberOf ListCache
+   * @param {string} key The key of the value to get.
+   * @returns {*} Returns the entry value.
+   */
+  function listCacheGet(key) {
+    var data = this.__data__,
+        index = assocIndexOf(data, key);
+
+    return index < 0 ? undefined : data[index][1];
+  }
+
+  module.exports = listCacheGet;
+
+  /***/
+},
+/* 57 */
+/***/function (module, exports, __webpack_require__) {
+
+  var assocIndexOf = __webpack_require__(2);
+
+  /**
+   * Checks if a list cache value for `key` exists.
+   *
+   * @private
+   * @name has
+   * @memberOf ListCache
+   * @param {string} key The key of the entry to check.
+   * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+   */
+  function listCacheHas(key) {
+    return assocIndexOf(this.__data__, key) > -1;
+  }
+
+  module.exports = listCacheHas;
+
+  /***/
+},
+/* 58 */
+/***/function (module, exports, __webpack_require__) {
+
+  var assocIndexOf = __webpack_require__(2);
+
+  /**
+   * Sets the list cache `key` to `value`.
+   *
+   * @private
+   * @name set
+   * @memberOf ListCache
+   * @param {string} key The key of the value to set.
+   * @param {*} value The value to set.
+   * @returns {Object} Returns the list cache instance.
+   */
+  function listCacheSet(key, value) {
+    var data = this.__data__,
+        index = assocIndexOf(data, key);
+
+    if (index < 0) {
+      ++this.size;
+      data.push([key, value]);
+    } else {
+      data[index][1] = value;
+    }
+    return this;
+  }
+
+  module.exports = listCacheSet;
+
+  /***/
+},
+/* 59 */
+/***/function (module, exports, __webpack_require__) {
+
+  var getNative = __webpack_require__(8),
+      root = __webpack_require__(7);
+
+  /* Built-in method references that are verified to be native. */
+  var Map = getNative(root, 'Map');
+
+  module.exports = Map;
+
+  /***/
+},
+/* 60 */
+/***/function (module, exports, __webpack_require__) {
+
+  var getMapData = __webpack_require__(3);
+
+  /**
+   * Removes `key` and its value from the map.
+   *
+   * @private
+   * @name delete
+   * @memberOf MapCache
+   * @param {string} key The key of the value to remove.
+   * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+   */
+  function mapCacheDelete(key) {
+    var result = getMapData(this, key)['delete'](key);
+    this.size -= result ? 1 : 0;
+    return result;
+  }
+
+  module.exports = mapCacheDelete;
+
+  /***/
+},
+/* 61 */
+/***/function (module, exports) {
+
+  /**
+   * Checks if `value` is suitable for use as unique object key.
+   *
+   * @private
+   * @param {*} value The value to check.
+   * @returns {boolean} Returns `true` if `value` is suitable, else `false`.
+   */
+  function isKeyable(value) {
+    var type = typeof value === 'undefined' ? 'undefined' : _typeof(value);
+    return type == 'string' || type == 'number' || type == 'symbol' || type == 'boolean' ? value !== '__proto__' : value === null;
+  }
+
+  module.exports = isKeyable;
+
+  /***/
+},
+/* 62 */
+/***/function (module, exports, __webpack_require__) {
+
+  var getMapData = __webpack_require__(3);
+
+  /**
+   * Gets the map value for `key`.
+   *
+   * @private
+   * @name get
+   * @memberOf MapCache
+   * @param {string} key The key of the value to get.
+   * @returns {*} Returns the entry value.
+   */
+  function mapCacheGet(key) {
+    return getMapData(this, key).get(key);
+  }
+
+  module.exports = mapCacheGet;
+
+  /***/
+},
+/* 63 */
+/***/function (module, exports, __webpack_require__) {
+
+  var getMapData = __webpack_require__(3);
+
+  /**
+   * Checks if a map value for `key` exists.
+   *
+   * @private
+   * @name has
+   * @memberOf MapCache
+   * @param {string} key The key of the entry to check.
+   * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+   */
+  function mapCacheHas(key) {
+    return getMapData(this, key).has(key);
+  }
+
+  module.exports = mapCacheHas;
+
+  /***/
+},
+/* 64 */
+/***/function (module, exports, __webpack_require__) {
+
+  var getMapData = __webpack_require__(3);
+
+  /**
+   * Sets the map `key` to `value`.
+   *
+   * @private
+   * @name set
+   * @memberOf MapCache
+   * @param {string} key The key of the value to set.
+   * @param {*} value The value to set.
+   * @returns {Object} Returns the map cache instance.
+   */
+  function mapCacheSet(key, value) {
+    var data = getMapData(this, key),
+        size = data.size;
+
+    data.set(key, value);
+    this.size += data.size == size ? 0 : 1;
+    return this;
+  }
+
+  module.exports = mapCacheSet;
+
+  /***/
+},
+/* 65 */
+/***/function (module, exports, __webpack_require__) {
+
+  var baseToString = __webpack_require__(66);
+
+  /**
+   * Converts `value` to a string. An empty string is returned for `null`
+   * and `undefined` values. The sign of `-0` is preserved.
+   *
+   * @static
+   * @memberOf _
+   * @since 4.0.0
+   * @category Lang
+   * @param {*} value The value to convert.
+   * @returns {string} Returns the converted string.
+   * @example
+   *
+   * _.toString(null);
+   * // => ''
+   *
+   * _.toString(-0);
+   * // => '-0'
+   *
+   * _.toString([1, 2, 3]);
+   * // => '1,2,3'
+   */
+  function toString(value) {
+    return value == null ? '' : baseToString(value);
+  }
+
+  module.exports = toString;
+
+  /***/
+},
+/* 66 */
+/***/function (module, exports, __webpack_require__) {
+
+  var _Symbol4 = __webpack_require__(6),
+      arrayMap = __webpack_require__(67),
+      isArray = __webpack_require__(4),
+      isSymbol = __webpack_require__(5);
+
+  /** Used as references for various `Number` constants. */
+  var INFINITY = 1 / 0;
+
+  /** Used to convert symbols to primitives and strings. */
+  var symbolProto = _Symbol4 ? _Symbol4.prototype : undefined,
+      symbolToString = symbolProto ? symbolProto.toString : undefined;
+
+  /**
+   * The base implementation of `_.toString` which doesn't convert nullish
+   * values to empty strings.
+   *
+   * @private
+   * @param {*} value The value to process.
+   * @returns {string} Returns the string.
+   */
+  function baseToString(value) {
+    // Exit early for strings to avoid a performance hit in some environments.
+    if (typeof value == 'string') {
+      return value;
+    }
+    if (isArray(value)) {
+      // Recursively convert values (susceptible to call stack limits).
+      return arrayMap(value, baseToString) + '';
+    }
+    if (isSymbol(value)) {
+      return symbolToString ? symbolToString.call(value) : '';
+    }
+    var result = value + '';
+    return result == '0' && 1 / value == -INFINITY ? '-0' : result;
+  }
+
+  module.exports = baseToString;
+
+  /***/
+},
+/* 67 */
+/***/function (module, exports) {
+
+  /**
+   * A specialized version of `_.map` for arrays without support for iteratee
+   * shorthands.
+   *
+   * @private
+   * @param {Array} [array] The array to iterate over.
+   * @param {Function} iteratee The function invoked per iteration.
+   * @returns {Array} Returns the new mapped array.
+   */
+  function arrayMap(array, iteratee) {
+    var index = -1,
+        length = array == null ? 0 : array.length,
+        result = Array(length);
+
+    while (++index < length) {
+      result[index] = iteratee(array[index], index, array);
+    }
+    return result;
+  }
+
+  module.exports = arrayMap;
+
+  /***/
+},
+/* 68 */
+/***/function (module, exports, __webpack_require__) {
+
+  var baseSet = __webpack_require__(69);
+
+  /**
+   * Sets the value at `path` of `object`. If a portion of `path` doesn't exist,
+   * it's created. Arrays are created for missing index properties while objects
+   * are created for all other missing properties. Use `_.setWith` to customize
+   * `path` creation.
+   *
+   * **Note:** This method mutates `object`.
+   *
+   * @static
+   * @memberOf _
+   * @since 3.7.0
+   * @category Object
+   * @param {Object} object The object to modify.
+   * @param {Array|string} path The path of the property to set.
+   * @param {*} value The value to set.
+   * @returns {Object} Returns `object`.
+   * @example
+   *
+   * var object = { 'a': [{ 'b': { 'c': 3 } }] };
+   *
+   * _.set(object, 'a[0].b.c', 4);
+   * console.log(object.a[0].b.c);
+   * // => 4
+   *
+   * _.set(object, ['x', '0', 'y', 'z'], 5);
+   * console.log(object.x[0].y.z);
+   * // => 5
+   */
+  function set(object, path, value) {
+    return object == null ? object : baseSet(object, path, value);
+  }
+
+  module.exports = set;
+
+  /***/
+},
+/* 69 */
+/***/function (module, exports, __webpack_require__) {
+
+  var assignValue = __webpack_require__(70),
+      castPath = __webpack_require__(12),
+      isIndex = __webpack_require__(73),
+      isObject = __webpack_require__(9),
+      toKey = __webpack_require__(15);
+
+  /**
+   * The base implementation of `_.set`.
+   *
+   * @private
+   * @param {Object} object The object to modify.
+   * @param {Array|string} path The path of the property to set.
+   * @param {*} value The value to set.
+   * @param {Function} [customizer] The function to customize path creation.
+   * @returns {Object} Returns `object`.
+   */
+  function baseSet(object, path, value, customizer) {
+    if (!isObject(object)) {
+      return object;
+    }
+    path = castPath(path, object);
+
+    var index = -1,
+        length = path.length,
+        lastIndex = length - 1,
+        nested = object;
+
+    while (nested != null && ++index < length) {
+      var key = toKey(path[index]),
+          newValue = value;
+
+      if (index != lastIndex) {
+        var objValue = nested[key];
+        newValue = customizer ? customizer(objValue, key, nested) : undefined;
+        if (newValue === undefined) {
+          newValue = isObject(objValue) ? objValue : isIndex(path[index + 1]) ? [] : {};
+        }
+      }
+      assignValue(nested, key, newValue);
+      nested = nested[key];
+    }
+    return object;
+  }
+
+  module.exports = baseSet;
+
+  /***/
+},
+/* 70 */
+/***/function (module, exports, __webpack_require__) {
+
+  var baseAssignValue = __webpack_require__(71),
+      eq = __webpack_require__(14);
+
+  /** Used for built-in method references. */
+  var objectProto = Object.prototype;
+
+  /** Used to check objects for own properties. */
+  var hasOwnProperty = objectProto.hasOwnProperty;
+
+  /**
+   * Assigns `value` to `key` of `object` if the existing value is not equivalent
+   * using [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
+   * for equality comparisons.
+   *
+   * @private
+   * @param {Object} object The object to modify.
+   * @param {string} key The key of the property to assign.
+   * @param {*} value The value to assign.
+   */
+  function assignValue(object, key, value) {
+    var objValue = object[key];
+    if (!(hasOwnProperty.call(object, key) && eq(objValue, value)) || value === undefined && !(key in object)) {
+      baseAssignValue(object, key, value);
+    }
+  }
+
+  module.exports = assignValue;
+
+  /***/
+},
+/* 71 */
+/***/function (module, exports, __webpack_require__) {
+
+  var defineProperty = __webpack_require__(72);
+
+  /**
+   * The base implementation of `assignValue` and `assignMergeValue` without
+   * value checks.
+   *
+   * @private
+   * @param {Object} object The object to modify.
+   * @param {string} key The key of the property to assign.
+   * @param {*} value The value to assign.
+   */
+  function baseAssignValue(object, key, value) {
+    if (key == '__proto__' && defineProperty) {
+      defineProperty(object, key, {
+        'configurable': true,
+        'enumerable': true,
+        'value': value,
+        'writable': true
+      });
+    } else {
+      object[key] = value;
+    }
+  }
+
+  module.exports = baseAssignValue;
+
+  /***/
+},
+/* 72 */
+/***/function (module, exports, __webpack_require__) {
+
+  var getNative = __webpack_require__(8);
+
+  var defineProperty = function () {
+    try {
+      var func = getNative(Object, 'defineProperty');
+      func({}, '', {});
+      return func;
+    } catch (e) {}
+  }();
+
+  module.exports = defineProperty;
+
+  /***/
+},
+/* 73 */
+/***/function (module, exports) {
+
+  /** Used as references for various `Number` constants. */
+  var MAX_SAFE_INTEGER = 9007199254740991;
+
+  /** Used to detect unsigned integer values. */
+  var reIsUint = /^(?:0|[1-9]\d*)$/;
+
+  /**
+   * Checks if `value` is a valid array-like index.
+   *
+   * @private
+   * @param {*} value The value to check.
+   * @param {number} [length=MAX_SAFE_INTEGER] The upper bounds of a valid index.
+   * @returns {boolean} Returns `true` if `value` is a valid index, else `false`.
+   */
+  function isIndex(value, length) {
+    length = length == null ? MAX_SAFE_INTEGER : length;
+    return !!length && (typeof value == 'number' || reIsUint.test(value)) && value > -1 && value % 1 == 0 && value < length;
+  }
+
+  module.exports = isIndex;
+
+  /***/
+},
+/* 74 */
+/***/function (module, exports, __webpack_require__) {
+
   "use strict";
 
-  function r(e) {
-    return e && e.__esModule ? e : { default: e };
-  }function i(e, t) {
-    if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function");
-  }Object.defineProperty(t, "__esModule", { value: !0 });var o = function () {
-    function e(e, t) {
-      for (var n = 0; n < t.length; n++) {
-        var r = t[n];r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _createClass = function () {
+    function defineProperties(target, props) {
+      for (var i = 0; i < props.length; i++) {
+        var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
       }
-    }return function (t, n, r) {
-      return n && e(t.prototype, n), r && e(t, r), t;
+    }return function (Constructor, protoProps, staticProps) {
+      if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
     };
-  }(),
-      a = n(75),
-      s = r(a),
-      u = n(10),
-      l = r(u),
-      c = (s.default, function () {
-    function e(t) {
-      i(this, e), this.list = t;
-    }return o(e, [{ key: "getAll", value: function value() {
+  }(); // import record from './mock';
+
+
+  var _production = __webpack_require__(75);
+
+  var _production2 = _interopRequireDefault(_production);
+
+  var _Record = __webpack_require__(10);
+
+  var _Record2 = _interopRequireDefault(_Record);
+
+  function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : { default: obj };
+  }
+
+  function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
+    }
+  }
+
+  function generateList(item, key) {
+    var list = [];
+    var max = 200;
+    for (var i = 0; i < max; i++) {
+      (function (index) {
+        item.id = 'aW' + index;
+        list.push(item);
+      })(i);
+    }
+    return list;
+  }
+
+  function generateRecord(item, key) {
+    var newItem = Object.assign({}, item);
+    newItem.id = key;
+    return newItem;
+  }
+
+  // const theList = [
+  //   generateRecord(record, 0),
+  //   generateRecord(record, 1),
+  //   generateRecord(record, 2),
+  // ];
+
+  var theList = _production2.default;
+
+  var Records = function () {
+    function Records(records) {
+      _classCallCheck(this, Records);
+
+      this.list = records;
+    }
+
+    _createClass(Records, [{
+      key: 'getAll',
+      value: function getAll() {
         return this.list;
-      } }, { key: "getARecord", value: function value(e) {
-        var t = this.list.filter(function (t) {
-          return t.id === e;
-        });return 1 === t.length ? t[0] : new l.default();
-      } }]), e;
-  }());t.default = c;
-}, function (e, t, n) {
-  "use strict";
-
-  function r(e) {
-    return e && e.__esModule ? e : { default: e };
-  }Object.defineProperty(t, "__esModule", { value: !0 });var i = n(10),
-      o = r(i),
-      a = n(16),
-      s = r(a);t.default = [new o.default("a0", "interest", "west-interest", "", ["ribaa", "interest", "west", "Ahmed al-Wasaabee"], [{ url: "https://google.com/interest", note: "" }], [{ userId: "0", date: 1512795251600 }]), new o.default("a1", "whom", "whom", "", ["advise"], [{ url: "http://www.google.com/whom", note: "" }], [{ userId: "0", date: 0 }], s.default.a1)];
-}, function (e, t, n) {
-  "use strict";
-
-  function r(e, t) {
-    if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function");
-  }Object.defineProperty(t, "__esModule", { value: !0 });var i = function e() {
-    var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "",
-        n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";return r(this, e), { custom: t, default: n };
-  };t.default = i;
-}, function (e, t, n) {
-  "use strict";
-
-  function r(e, t) {
-    if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function");
-  }Object.defineProperty(t, "__esModule", { value: !0 });var i = function e() {
-    var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "",
-        n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";return r(this, e), { url: t, note: n };
-  };t.default = i;
-}, function (e, t, n) {
-  "use strict";
-
-  function r(e, t) {
-    if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function");
-  }Object.defineProperty(t, "__esModule", { value: !0 });var i = function e() {
-    var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "",
-        n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;return r(this, e), { userId: t, date: n };
-  };t.default = i;
-}, function (e, t, n) {
-  "use strict";
-
-  function r(e, t) {
-    if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function");
-  }Object.defineProperty(t, "__esModule", { value: !0 });var i = n(16),
-      o = function (e) {
-    return e && e.__esModule ? e : { default: e };
-  }(i),
-      a = function e(t) {
-    return r(this, e), { content: o.default[t] || "", collectedByUserId: "", collectedTime: 0 } || { content: "", collectedByUserId: "", collectedTime: 0 };
-  };t.default = a;
-}, function (e, t, n) {
-  "use strict";
-
-  Object.defineProperty(t, "__esModule", { value: !0 }), t.default = "a lot of content for a1";
-}, function (e, t, n) {
-  "use strict";
-
-  function r(e, t) {
-    if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function");
-  }Object.defineProperty(t, "__esModule", { value: !0 });var i = function () {
-    function e(e, t) {
-      for (var n = 0; n < t.length; n++) {
-        var r = t[n];r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
       }
-    }return function (t, n, r) {
-      return n && e(t.prototype, n), r && e(t, r), t;
-    };
-  }(),
-      o = n(0),
-      a = function (e) {
-    return e && e.__esModule ? e : { default: e };
-  }(o),
-      s = function () {
-    function e(t) {
-      var n = t.firstName,
-          i = void 0 === n ? "Annoymous" : n,
-          o = t.middleName,
-          s = void 0 === o ? "" : o,
-          u = t.lastName,
-          l = void 0 === u ? "" : u,
-          c = t.nickName,
-          d = void 0 === c ? "" : c,
-          f = t.birth,
-          m = void 0 === f ? "" : f;r(this, e), this.properties = { id: (0, a.default)(), firstName: i, middleName: s, lastName: l, nickName: d, birth: m };
-    }return i(e, [{ key: "getAll", value: function value() {
-        return this.properties;
-      } }]), e;
-  }();t.default = s;
-}, function (e, t, n) {
-  "use strict";
+    }, {
+      key: 'getARecord',
+      value: function getARecord(recordId) {
+        var resultList = this.list.filter(function (item) {
+          return item.id === recordId;
+        });
 
-  function r(e, t) {
-    if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function");
-  }Object.defineProperty(t, "__esModule", { value: !0 });var i = function () {
-    function e(e, t) {
-      for (var n = 0; n < t.length; n++) {
-        var r = t[n];r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
+        return resultList.length === 1 ? resultList[0] : new _Record2.default();
       }
-    }return function (t, n, r) {
-      return n && e(t.prototype, n), r && e(t, r), t;
-    };
-  }(),
-      o = function () {
-    function e(t) {
-      var n = t.createdBy,
-          i = void 0 === n ? "annonymous" : n,
-          o = t.createdDate,
-          a = void 0 === o ? 0 : o,
-          s = t.lastEditedBy,
-          u = void 0 === s ? "annonymous" : s,
-          l = t.lastEditedDate,
-          c = void 0 === l ? 0 : l,
-          d = t.approvedByList,
-          f = void 0 === d ? [{ userId: 0, time: 0 }] : d;r(this, e), this.properties = { createdBy: i, createdDate: a, lastEditedBy: u, lastEditedDate: c, approvedByList: f };
-    }return i(e, [{ key: "getAll", value: function value() {
-        return this.properties;
-      } }]), e;
-  }();t.default = o;
-}, function (e, t, n) {
+    }]);
+
+    return Records;
+  }();
+
+  exports.default = Records;
+
+  /***/
+},
+/* 75 */
+/***/function (module, exports, __webpack_require__) {
+
   "use strict";
 
-  function r(e, t) {
-    if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function");
-  }Object.defineProperty(t, "__esModule", { value: !0 });var i = function () {
-    function e(e, t) {
-      for (var n = 0; n < t.length; n++) {
-        var r = t[n];r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _Record = __webpack_require__(10);
+
+  var _Record2 = _interopRequireDefault(_Record);
+
+  var _content = __webpack_require__(16);
+
+  var _content2 = _interopRequireDefault(_content);
+
+  function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : { default: obj };
+  }
+
+  exports.default = [new _Record2.default('a0', //id
+  'interest', //title
+  'west-interest', //appRouteCustom
+  '', //appRouteDefault
+  //tags
+  ['ribaa', 'interest', 'west', 'Ahmed al-Wasaabee'],
+  //references
+  [{
+    url: 'https://google.com/interest',
+    note: ''
+  }],
+  //collectedBy
+  [{
+    userId: '0',
+    date: 1512795251600
+  }]), new _Record2.default('a1', //id
+  'whom', //title
+  'whom', //appRouteCustom
+  '', //appRouteDefault
+  //tags
+  ['advise'],
+  //references
+  [{
+    url: 'http://www.google.com/whom',
+    note: ''
+  }],
+  //collectedBy
+  [{
+    userId: '0',
+    date: 0
+  }],
+  //cached content
+  _content2.default.a1)];
+
+  /***/
+},
+/* 76 */
+/***/function (module, exports, __webpack_require__) {
+
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
+    }
+  }
+
+  var AppRoute = function AppRoute() {
+    var routeCustom = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+    var routeDefault = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
+
+    _classCallCheck(this, AppRoute);
+
+    return {
+      custom: routeCustom,
+      default: routeDefault
+    };
+  };
+
+  exports.default = AppRoute;
+  ;
+
+  /***/
+},
+/* 77 */
+/***/function (module, exports, __webpack_require__) {
+
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
+    }
+  }
+
+  var Reference = function Reference() {
+    var url = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+    var note = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
+
+    _classCallCheck(this, Reference);
+
+    return {
+      url: url,
+      note: note
+    };
+  };
+
+  exports.default = Reference;
+  ;
+
+  /***/
+},
+/* 78 */
+/***/function (module, exports, __webpack_require__) {
+
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
+    }
+  }
+
+  var CollectedBy = function CollectedBy() {
+    var userId = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+    var date = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+
+    _classCallCheck(this, CollectedBy);
+
+    return {
+      userId: userId,
+      date: date
+    };
+  };
+
+  exports.default = CollectedBy;
+  ;
+
+  /***/
+},
+/* 79 */
+/***/function (module, exports, __webpack_require__) {
+
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _content = __webpack_require__(16);
+
+  var _content2 = _interopRequireDefault(_content);
+
+  function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : { default: obj };
+  }
+
+  function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
+    }
+  }
+
+  var CachedContent = function CachedContent(recordId) {
+    _classCallCheck(this, CachedContent);
+
+    return {
+      content: _content2.default[recordId] || '',
+      collectedByUserId: '',
+      collectedTime: 0
+    } || {
+      content: '',
+      collectedByUserId: '',
+      collectedTime: 0
+    };
+  };
+
+  exports.default = CachedContent;
+  ;
+
+  /***/
+},
+/* 80 */
+/***/function (module, exports, __webpack_require__) {
+
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = "a lot of content for a1";
+
+  /***/
+},
+/* 81 */
+/***/function (module, exports, __webpack_require__) {
+
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _createClass = function () {
+    function defineProperties(target, props) {
+      for (var i = 0; i < props.length; i++) {
+        var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
       }
-    }return function (t, n, r) {
-      return n && e(t.prototype, n), r && e(t, r), t;
+    }return function (Constructor, protoProps, staticProps) {
+      if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
     };
-  }(),
-      o = n(0),
-      a = function (e) {
-    return e && e.__esModule ? e : { default: e };
-  }(o),
-      s = function () {
-    function e(t) {
-      var n = t.longitude,
-          i = void 0 === n ? 0 : n,
-          o = t.latitude,
-          s = void 0 === o ? 0 : o,
-          u = t.address,
-          l = void 0 === u ? "" : u,
-          c = t.city,
-          d = void 0 === c ? "" : c,
-          f = t.state,
-          m = void 0 === f ? "" : f,
-          p = t.zipcode,
-          g = void 0 === p ? "" : p,
-          h = t.country,
-          v = void 0 === h ? "" : h,
-          y = t.tags,
-          b = void 0 === y ? [] : y;r(this, e), this.properties = { id: (0, a.default)(), longitude: i, latitude: s, address: l, city: d, state: m, zipcode: g, country: v, tags: b };
-    }return i(e, [{ key: "getAll", value: function value() {
+  }();
+
+  var _getRandomId = __webpack_require__(0);
+
+  var _getRandomId2 = _interopRequireDefault(_getRandomId);
+
+  function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : { default: obj };
+  }
+
+  function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
+    }
+  }
+
+  var Person = function () {
+    function Person(_ref) {
+      var _ref$firstName = _ref.firstName,
+          firstName = _ref$firstName === undefined ? 'Annoymous' : _ref$firstName,
+          _ref$middleName = _ref.middleName,
+          middleName = _ref$middleName === undefined ? '' : _ref$middleName,
+          _ref$lastName = _ref.lastName,
+          lastName = _ref$lastName === undefined ? '' : _ref$lastName,
+          _ref$nickName = _ref.nickName,
+          nickName = _ref$nickName === undefined ? '' : _ref$nickName,
+          _ref$birth = _ref.birth,
+          birth = _ref$birth === undefined ? '' : _ref$birth;
+
+      _classCallCheck(this, Person);
+
+      this.properties = {
+        id: (0, _getRandomId2.default)(),
+        firstName: firstName,
+        middleName: middleName,
+        lastName: lastName,
+        nickName: nickName,
+        birth: birth //{day, month, year, country, city}
+      };
+    }
+
+    _createClass(Person, [{
+      key: 'getAll',
+      value: function getAll() {
         return this.properties;
-      } }]), e;
-  }();t.default = s;
-}, function (e, t, n) {
-  "use strict";
-
-  function r(e, t) {
-    if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function");
-  }Object.defineProperty(t, "__esModule", { value: !0 });var i = function e(t, n) {
-    return r(this, e), t && n ? t.map(function (e) {
-      return n(e);
-    }) : t && !n ? t : void 0;
-  };t.default = i;
-}, function (e, t, n) {
-  "use strict";
-
-  function r(e, t) {
-    if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function");
-  }Object.defineProperty(t, "__esModule", { value: !0 });var i = function () {
-    function e(e, t) {
-      for (var n = 0; n < t.length; n++) {
-        var r = t[n];r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
       }
-    }return function (t, n, r) {
-      return n && e(t.prototype, n), r && e(t, r), t;
-    };
-  }(),
-      o = n(0),
-      a = (function (e) {
-    e && e.__esModule;
-  }(o), function () {
-    function e(t) {
-      var n = t.name,
-          i = t.url;r(this, e), this.properties = { name: n, url: i };
-    }return i(e, [{ key: "getAll", value: function value() {
-        return this.properties;
-      } }]), e;
-  }());t.default = a;
-}, function (e, t, n) {
+    }]);
+
+    return Person;
+  }();
+
+  exports.default = Person;
+
+  /***/
+},
+/* 82 */
+/***/function (module, exports, __webpack_require__) {
+
   "use strict";
 
-  function r(e, t) {
-    if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function");
-  }Object.defineProperty(t, "__esModule", { value: !0 });var i = function () {
-    function e(e, t) {
-      for (var n = 0; n < t.length; n++) {
-        var r = t[n];r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _createClass = function () {
+    function defineProperties(target, props) {
+      for (var i = 0; i < props.length; i++) {
+        var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
       }
-    }return function (t, n, r) {
-      return n && e(t.prototype, n), r && e(t, r), t;
+    }return function (Constructor, protoProps, staticProps) {
+      if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
     };
-  }(),
-      o = n(0),
-      a = function (e) {
-    return e && e.__esModule ? e : { default: e };
-  }(o),
-      s = function () {
-    function e(t) {
-      var n = t.name,
-          i = void 0 === n ? "" : n,
-          o = t.url,
-          s = void 0 === o ? "" : o;r(this, e), this.properties = { id: (0, a.default)(), name: i, url: s };
-    }return i(e, [{ key: "getAll", value: function value() {
+  }();
+
+  function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
+    }
+  }
+
+  var Log = function () {
+    function Log(_ref) {
+      var _ref$createdBy = _ref.createdBy,
+          createdBy = _ref$createdBy === undefined ? 'annonymous' : _ref$createdBy,
+          _ref$createdDate = _ref.createdDate,
+          createdDate = _ref$createdDate === undefined ? 0 : _ref$createdDate,
+          _ref$lastEditedBy = _ref.lastEditedBy,
+          lastEditedBy = _ref$lastEditedBy === undefined ? 'annonymous' : _ref$lastEditedBy,
+          _ref$lastEditedDate = _ref.lastEditedDate,
+          lastEditedDate = _ref$lastEditedDate === undefined ? 0 : _ref$lastEditedDate,
+          _ref$approvedByList = _ref.approvedByList,
+          approvedByList = _ref$approvedByList === undefined ? [{
+        userId: 0,
+        time: 0
+      }] : _ref$approvedByList;
+
+      _classCallCheck(this, Log);
+
+      this.properties = {
+        createdBy: createdBy,
+        createdDate: createdDate,
+        lastEditedBy: lastEditedBy,
+        lastEditedDate: lastEditedDate,
+        approvedByList: approvedByList
+      };
+    }
+
+    _createClass(Log, [{
+      key: 'getAll',
+      value: function getAll() {
         return this.properties;
-      } }]), e;
-  }();t.default = s;
-}, function (e, t, n) {
+      }
+    }]);
+
+    return Log;
+  }();
+
+  exports.default = Log;
+
+  /***/
+},
+/* 83 */
+/***/function (module, exports, __webpack_require__) {
+
   "use strict";
 
-  function r() {
-    var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "",
-        t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "",
-        n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "",
-        r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "";return "https://www.google.com/maps/search/?api=1&query=" + (0, o.default)(e, t, n, r);
-  }Object.defineProperty(t, "__esModule", { value: !0 }), t.default = r;var i = n(17),
-      o = function (e) {
-    return e && e.__esModule ? e : { default: e };
-  }(i);
-}, function (e, t, n) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _createClass = function () {
+    function defineProperties(target, props) {
+      for (var i = 0; i < props.length; i++) {
+        var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
+      }
+    }return function (Constructor, protoProps, staticProps) {
+      if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
+    };
+  }();
+
+  var _getRandomId = __webpack_require__(0);
+
+  var _getRandomId2 = _interopRequireDefault(_getRandomId);
+
+  function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : { default: obj };
+  }
+
+  function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
+    }
+  }
+
+  var Location = function () {
+    function Location(_ref) {
+      var _ref$longitude = _ref.longitude,
+          longitude = _ref$longitude === undefined ? 0 : _ref$longitude,
+          _ref$latitude = _ref.latitude,
+          latitude = _ref$latitude === undefined ? 0 : _ref$latitude,
+          _ref$address = _ref.address,
+          address = _ref$address === undefined ? '' : _ref$address,
+          _ref$city = _ref.city,
+          city = _ref$city === undefined ? '' : _ref$city,
+          _ref$state = _ref.state,
+          state = _ref$state === undefined ? '' : _ref$state,
+          _ref$zipcode = _ref.zipcode,
+          zipcode = _ref$zipcode === undefined ? '' : _ref$zipcode,
+          _ref$country = _ref.country,
+          country = _ref$country === undefined ? '' : _ref$country,
+          _ref$tags = _ref.tags,
+          tags = _ref$tags === undefined ? [] : _ref$tags;
+
+      _classCallCheck(this, Location);
+
+      this.properties = {
+        id: (0, _getRandomId2.default)(),
+        longitude: longitude,
+        latitude: latitude,
+        address: address,
+        city: city,
+        state: state,
+        zipcode: zipcode,
+        country: country,
+        tags: tags
+      };
+    }
+
+    _createClass(Location, [{
+      key: 'getAll',
+      value: function getAll() {
+        return this.properties;
+      }
+    }]);
+
+    return Location;
+  }();
+
+  exports.default = Location;
+
+  /***/
+},
+/* 84 */
+/***/function (module, exports, __webpack_require__) {
+
   "use strict";
 
-  function r(e, t) {
-    return e.replace(/[^A-Z0-9]/gi, "-") + "-" + t;
-  }Object.defineProperty(t, "__esModule", { value: !0 }), t.default = r;
-}]));
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
+    }
+  }
+
+  var Collection = function Collection(listData, Object) {
+    _classCallCheck(this, Collection);
+
+    if (listData && Object) {
+      return listData.map(function (item) {
+        return Object(item);
+      });
+    }
+
+    if (listData && !Object) {
+      return listData;
+    }
+  };
+
+  exports.default = Collection;
+
+  /***/
+},
+/* 85 */
+/***/function (module, exports, __webpack_require__) {
+
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _createClass = function () {
+    function defineProperties(target, props) {
+      for (var i = 0; i < props.length; i++) {
+        var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
+      }
+    }return function (Constructor, protoProps, staticProps) {
+      if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
+    };
+  }();
+
+  var _getRandomId = __webpack_require__(0);
+
+  var _getRandomId2 = _interopRequireDefault(_getRandomId);
+
+  function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : { default: obj };
+  }
+
+  function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
+    }
+  }
+
+  var SocialNetworkAccount = function () {
+    function SocialNetworkAccount(_ref) {
+      var name = _ref.name,
+          url = _ref.url;
+
+      _classCallCheck(this, SocialNetworkAccount);
+
+      this.properties = {
+        name: name,
+        url: url
+      };
+    }
+
+    _createClass(SocialNetworkAccount, [{
+      key: 'getAll',
+      value: function getAll() {
+        return this.properties;
+      }
+    }]);
+
+    return SocialNetworkAccount;
+  }();
+
+  exports.default = SocialNetworkAccount;
+
+  /***/
+},
+/* 86 */
+/***/function (module, exports, __webpack_require__) {
+
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _createClass = function () {
+    function defineProperties(target, props) {
+      for (var i = 0; i < props.length; i++) {
+        var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
+      }
+    }return function (Constructor, protoProps, staticProps) {
+      if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
+    };
+  }();
+
+  var _getRandomId = __webpack_require__(0);
+
+  var _getRandomId2 = _interopRequireDefault(_getRandomId);
+
+  function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : { default: obj };
+  }
+
+  function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
+    }
+  }
+
+  var Snapshot = function () {
+    function Snapshot(_ref) {
+      var _ref$name = _ref.name,
+          name = _ref$name === undefined ? '' : _ref$name,
+          _ref$url = _ref.url,
+          url = _ref$url === undefined ? '' : _ref$url;
+
+      _classCallCheck(this, Snapshot);
+
+      this.properties = {
+        id: (0, _getRandomId2.default)(),
+        name: name,
+        url: url
+      };
+    }
+
+    _createClass(Snapshot, [{
+      key: 'getAll',
+      value: function getAll() {
+        return this.properties;
+      }
+    }]);
+
+    return Snapshot;
+  }();
+
+  exports.default = Snapshot;
+
+  /***/
+},
+/* 87 */
+/***/function (module, exports, __webpack_require__) {
+
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = getGoogleMapUrl;
+
+  var _getGoogleMapQuery = __webpack_require__(17);
+
+  var _getGoogleMapQuery2 = _interopRequireDefault(_getGoogleMapQuery);
+
+  function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : { default: obj };
+  }
+
+  function getGoogleMapUrl() {
+    var locationName = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+    var city = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
+    var state = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : '';
+    var zipcode = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : '';
+
+    var query = (0, _getGoogleMapQuery2.default)(locationName, city, state, zipcode);
+    return 'https://www.google.com/maps/search/?api=1&query=' + query;
+  }
+
+  /***/
+},
+/* 88 */
+/***/function (module, exports, __webpack_require__) {
+
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = getRoute;
+  function getRoute(name, createdDate) {
+    var routeName = name.replace(/[^A-Z0-9]/ig, "-");
+    return routeName + "-" + createdDate;
+  }
+
+  /***/
+}]
+/******/));
 
 /***/ }),
 /* 18 */

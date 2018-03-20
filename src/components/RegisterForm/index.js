@@ -6,7 +6,7 @@ import {
 import {Paper, Card, Button, Avatar} from 'material-ui';
 import CredentialInput from './CredientialInput';
 import axios from 'axios';
-import ContentSynchronizer from '../ContentSynchronizer/ContentSynchronizer';
+import ContentSynchronizer from 'ez-site-content-store';
 
 export default class RegisterForm extends Component {
   constructor(props) {
