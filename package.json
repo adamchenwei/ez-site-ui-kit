@@ -16,7 +16,8 @@
     "analyze": "webpack --profile --json > stats.json",
     "analyze:win": "webpack --env-analyze=true --profile --json | Out-file 'stats.json' -Encoding OEM",
     "workspace": "npm-run-all --parallel start storybook",
-    "lint:fix:custom": "./node_modules/eslint/bin/eslint.js --debug --c ./.eslintrc --fix ./src",
+    "lint:fix:custom": "./node_modules/eslint/bin/eslint.js --c ./.eslintrc --fix ./src",
+    "lint:fix:custom:debugg": "./node_modules/eslint/bin/eslint.js --debug --c ./.eslintrc --fix ./src",
     "lint:fix": "./node_modules/eslint/bin/eslint.js --debug --fix ./src"
   },
   "author": "Ezeewei",

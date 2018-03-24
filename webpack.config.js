@@ -1,12 +1,12 @@
 // const HtmlWebpackPlugin = require('html-webpack-plugin');
-import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
-import { DefinePlugin } from 'webpack';
-import { path } from 'path';
-
+/* eslint-disable */
+const path = require('path');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const DefinePlugin = require('webpack').DefinePlugin;
 const Defined = new DefinePlugin({
   'process.env.NODE_ENV': JSON.stringify('production')
 });
-
+/* eslint-enable */
 
 const SOURCE_DIR = './src';
 // const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({

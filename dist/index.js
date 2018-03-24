@@ -899,62 +899,62 @@ function _taggedTemplateLiteral(strings, raw) {
 
 var mediaQuery = {
 
-  //Chrome Inspctor
-  'mobileS': function mobileS() {
+  // Chrome Inspctor
+  mobileS: function mobileS() {
     return (0, _styledComponents.css)(_templateObject, _styledComponents.css.apply(undefined, arguments));
   },
-  'mobileSOnly': function mobileSOnly() {
+  mobileSOnly: function mobileSOnly() {
     return (0, _styledComponents.css)(_templateObject2, _styledComponents.css.apply(undefined, arguments));
   },
 
-  'mobileM': function mobileM() {
+  mobileM: function mobileM() {
     return (0, _styledComponents.css)(_templateObject3, _styledComponents.css.apply(undefined, arguments));
   },
-  'mobileMOnly': function mobileMOnly() {
+  mobileMOnly: function mobileMOnly() {
     return (0, _styledComponents.css)(_templateObject4, _styledComponents.css.apply(undefined, arguments));
   },
 
-  'mobileL': function mobileL() {
+  mobileL: function mobileL() {
     return (0, _styledComponents.css)(_templateObject5, _styledComponents.css.apply(undefined, arguments));
   },
-  'mobileLOnly': function mobileLOnly() {
+  mobileLOnly: function mobileLOnly() {
     return (0, _styledComponents.css)(_templateObject6, _styledComponents.css.apply(undefined, arguments));
   },
 
-  'tablet': function tablet() {
+  tablet: function tablet() {
     return (0, _styledComponents.css)(_templateObject7, _styledComponents.css.apply(undefined, arguments));
   },
-  'tabletOnly': function tabletOnly() {
+  tabletOnly: function tabletOnly() {
     return (0, _styledComponents.css)(_templateObject8, _styledComponents.css.apply(undefined, arguments));
   },
 
-  'laptop': function laptop() {
+  laptop: function laptop() {
     return (0, _styledComponents.css)(_templateObject9, _styledComponents.css.apply(undefined, arguments));
   },
-  'laptopOnly': function laptopOnly() {
+  laptopOnly: function laptopOnly() {
     return (0, _styledComponents.css)(_templateObject10, _styledComponents.css.apply(undefined, arguments));
   },
 
-  'laptopL': function laptopL() {
+  laptopL: function laptopL() {
     return (0, _styledComponents.css)(_templateObject11, _styledComponents.css.apply(undefined, arguments));
   },
 
-  //Bootstrap 4
+  // Bootstrap 4
   // xs: Extra small devices (portrait phones, less than 576px)
   // No media query since this is the default in Bootstrap
-  'xs': function xs() {
+  xs: function xs() {
     return (0, _styledComponents.css)(_templateObject12, _styledComponents.css.apply(undefined, arguments));
   },
-  'sm': function sm() {
+  sm: function sm() {
     return (0, _styledComponents.css)(_templateObject13, _styledComponents.css.apply(undefined, arguments));
   },
-  'md': function md() {
+  md: function md() {
     return (0, _styledComponents.css)(_templateObject7, _styledComponents.css.apply(undefined, arguments));
   },
-  'lg': function lg() {
+  lg: function lg() {
     return (0, _styledComponents.css)(_templateObject14, _styledComponents.css.apply(undefined, arguments));
   },
-  'xl': function xl() {
+  xl: function xl() {
     return (0, _styledComponents.css)(_templateObject15, _styledComponents.css.apply(undefined, arguments));
   }
 };
@@ -6071,7 +6071,7 @@ var GridItem = function (_Component) {
         xl: ''
       };
 
-      //Reactstrap Component Instead!
+      // Reactstrap Component Instead!
 
 
       var customStyle = this.props.gridCustomStyle || {};
@@ -7701,7 +7701,7 @@ function _inherits(subClass, superClass) {
   }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
 }
 
-//import { Head } from 'react-static'
+// import { Head } from 'react-static'
 
 var PageShell = function (_Component) {
   _inherits(PageShell, _Component);
@@ -7744,8 +7744,8 @@ var PageShell = function (_Component) {
   }, {
     key: 'showSubMenuBar',
     value: function showSubMenuBar() {
-      //start move away from grid reference matrix!
-      //reason: way too deep reference complicate work
+      // start move away from grid reference matrix!
+      // reason: way too deep reference complicate work
       // const SUB_MENU_BAR_GRID_ITEM_ID = 6;
       // return getGridItem(SUB_MENU_BAR_GRID_ITEM_ID);
       var items = (0, _menu.buildProductMenuItems)(10).sort(function (a, b) {
@@ -7753,7 +7753,7 @@ var PageShell = function (_Component) {
         var textB = b.title.toUpperCase();
         return textA < textB ? -1 : textA > textB ? 1 : 0;
       });
-      //console.log(items)
+      // console.log(items)
       return _react2.default.createElement(_MenuBarNewRouteEnabled2.default, {
         customStyles: {
           marginTop: '24px',
@@ -7814,7 +7814,7 @@ var PageShell = function (_Component) {
         };
       }
 
-      //NOTE: So far diff between PageShell and ComponentWrapper is the row class name!!!(at that time, since then there were lots done)
+      // NOTE: So far diff between PageShell and ComponentWrapper is the row class name!!!(at that time, since then there were lots done)
       containerLevelStyle = containerLevelStyle || 'page__container row no-gutters';
       return _react2.default.createElement('section', { className: containerLevelStyle, style: style }, this.showNotificationBar(), this.showMobileMenu(), this.showMenuBar(), this.showLogoBar(), this.showSubMenuBar(), hasSlides ? this.showSlides() : null, children, this.showFooterBar());
     }
@@ -13739,21 +13739,33 @@ var ContactForm = function (_Component) {
           style = _props.style,
           receiverEmail = _props.receiverEmail;
 
-      return _react2.default.createElement(_StyledComponentWrapper2.default, null, _react2.default.createElement(_style.ContactFormContainer, { action: 'https://formspree.io/' + receiverEmail,
-        method: 'POST' }, _react2.default.createElement(_style.ContactFormLegend, { gridAreaId: 'name' }, 'Name'), _react2.default.createElement(_style.ContactFormInput, { gridAreaId: 'first-name', name: 'customerFirstName',
-        placeholder: 'First Name' }), _react2.default.createElement(_style.ContactFormInput, {
+      return _react2.default.createElement(_StyledComponentWrapper2.default, null, _react2.default.createElement(_style.ContactFormContainer, {
+        action: 'https://formspree.io/' + receiverEmail,
+        method: 'POST'
+      }, _react2.default.createElement(_style.ContactFormLegend, { gridAreaId: 'name' }, 'Name'), _react2.default.createElement(_style.ContactFormInput, {
+        gridAreaId: 'first-name',
+        name: 'customerFirstName',
+        placeholder: 'First Name'
+      }), _react2.default.createElement(_style.ContactFormInput, {
         responsive: true,
-        gridAreaId: 'last-name', name: 'customerLastName',
-        placeholder: 'Last Name' }), _react2.default.createElement(_style.ContactFormLegend, { gridAreaId: 'email' }, 'Email'), _react2.default.createElement(_style.ContactFormInput, { name: 'customerEmail',
+        gridAreaId: 'last-name',
+        name: 'customerLastName',
+        placeholder: 'Last Name'
+      }), _react2.default.createElement(_style.ContactFormLegend, { gridAreaId: 'email' }, 'Email'), _react2.default.createElement(_style.ContactFormInput, {
+        name: 'customerEmail',
         gridAreaId: 'email',
         type: 'email',
-        placeholder: 'i.e. youremail@gmail.com' }), _react2.default.createElement(_style.ContactFormLegend, { gridAreaId: 'phone' }, 'Phone'), _react2.default.createElement(_style.ContactFormInput, { name: 'customerPhone',
+        placeholder: 'i.e. youremail@gmail.com'
+      }), _react2.default.createElement(_style.ContactFormLegend, { gridAreaId: 'phone' }, 'Phone'), _react2.default.createElement(_style.ContactFormInput, {
+        name: 'customerPhone',
         gridAreaId: 'phone',
         type: 'tel',
-        placeholder: 'i.e. 3470000000' }), _react2.default.createElement(_style.ContactFormLegend, { gridAreaId: 'message' }, 'Message'), _react2.default.createElement(_style.ContactFormTextarea, {
+        placeholder: 'i.e. 3470000000'
+      }), _react2.default.createElement(_style.ContactFormLegend, { gridAreaId: 'message' }, 'Message'), _react2.default.createElement(_style.ContactFormTextarea, {
         gridAreaId: 'message',
         name: 'message',
-        placeholder: 'please send us as much detail as possible. We appreciate your support' }), _react2.default.createElement(_style.ContactFormSubmitButton, { type: 'submit', value: 'Send' })));
+        placeholder: 'please send us as much detail as possible. We appreciate your support'
+      }), _react2.default.createElement(_style.ContactFormSubmitButton, { type: 'submit', value: 'Send' })));
     }
   }]);
 
@@ -14792,7 +14804,8 @@ var ProductGallery = function (_Component) {
       return _react2.default.createElement(_style.Container, {
         style: style,
         componentName: COMPONENT_NAME,
-        gridAreaId: '' }, _react2.default.createElement(_style.DisplayImageBox, { asfullHeight: hasOnlyOneImage, ref: function ref(element) {
+        gridAreaId: ''
+      }, _react2.default.createElement(_style.DisplayImageBox, { asfullHeight: hasOnlyOneImage, ref: function ref(element) {
           _this2.displayBoxDom = element;
         } }, _react2.default.createElement(_style.DisplayImage, { className: 'img-fluid', src: this.state.displayImageUrl })), hasOnlyOneImage ? null : _react2.default.createElement(_style.ThumbnailsContainer, null, images.map(function (image, index) {
         return _react2.default.createElement(_ThumbnailImageHolder2.default, {
@@ -14868,7 +14881,7 @@ function scrollToDom(dom, delayMs) {
       }
     }, delay);
   }
-};
+}
 
 /***/ }),
 /* 185 */
@@ -15010,11 +15023,17 @@ var ShareButtonsBar = function (_Component) {
       return _react2.default.createElement(_style.Container, {
         hasMarginBottom: true,
         componentName: containerName,
-        gridAreaId: '', style: style }, homeLink ? _react2.default.createElement(_style.IconHolder, { style: { backgroundColor: '#11111108' } }, _react2.default.createElement(_LinkIconContainer2.default, { href: homeLink }, _react2.default.createElement(_Link2.default, null))) : null, _react2.default.createElement(_style.IconHolder, null, _react2.default.createElement(FacebookShareButton, { url: locationHref,
-        quote: sharedTitle }, _react2.default.createElement(FacebookIcon, { size: 32 }))), _react2.default.createElement(_style.IconHolder, null, _react2.default.createElement(TwitterShareButton, { url: locationHref }, _react2.default.createElement(TwitterIcon, { size: 32 }))), _react2.default.createElement(_style.IconHolder, null, _react2.default.createElement(PinterestShareButton, { url: locationHref,
+        gridAreaId: '',
+        style: style
+      }, homeLink ? _react2.default.createElement(_style.IconHolder, { style: { backgroundColor: '#11111108' } }, _react2.default.createElement(_LinkIconContainer2.default, { href: homeLink }, _react2.default.createElement(_Link2.default, null))) : null, _react2.default.createElement(_style.IconHolder, null, _react2.default.createElement(FacebookShareButton, {
+        url: locationHref,
+        quote: sharedTitle
+      }, _react2.default.createElement(FacebookIcon, { size: 32 }))), _react2.default.createElement(_style.IconHolder, null, _react2.default.createElement(TwitterShareButton, { url: locationHref }, _react2.default.createElement(TwitterIcon, { size: 32 }))), _react2.default.createElement(_style.IconHolder, null, _react2.default.createElement(PinterestShareButton, {
+        url: locationHref,
         description: sharedDescriptionText,
         media: absoluteUrl,
-        hashtags: hashtags }, _react2.default.createElement(PinterestIcon, { size: 32 }))));
+        hashtags: hashtags
+      }, _react2.default.createElement(PinterestIcon, { size: 32 }))));
     }
   }]);
 
@@ -15152,9 +15171,11 @@ var MenuBarNewRouteEnabled = function (_Component) {
         ref: function ref(element) {
           _this2.MenuBarTop = element;
         },
-        gridAreaId: '' }, menuItems.map(function (menuItem, index) {
+        gridAreaId: ''
+      }, menuItems.map(function (menuItem, index) {
         return _react2.default.createElement(_style.MenuItemBox, { key: index }, _react2.default.createElement(_style.MenuItemLink, {
-          to: menuItem.path }, menuItem.title));
+          to: menuItem.path
+        }, menuItem.title));
       }));
     }
   }]);
@@ -15280,8 +15301,8 @@ var MobileMenuRouteEnabled = function (_Component) {
       var COMPONENT_NAME = 'MobileMenuRouteEnabled';
       var containerName = setComponentWrapperContainerClasses(COMPONENT_NAME);
 
-      //was filter but now its becoming just specific items ONLY
-      //filterItems = buildMenuFilterItems(6) || [];
+      // was filter but now its becoming just specific items ONLY
+      // filterItems = buildMenuFilterItems(6) || [];
       filterItems = !isCustomFilterItems ? (0, _menu.buildProductMenuItems)(10).sort(function (a, b) {
         var textA = a.title.toUpperCase();
         var textB = b.title.toUpperCase();
@@ -15296,19 +15317,27 @@ var MobileMenuRouteEnabled = function (_Component) {
         style: {
           backgroundColor: '#212121',
           paddingTop: '14px'
-        } }, _react2.default.createElement(_style.MenuToggleButton, {
+        }
+      }, _react2.default.createElement(_style.MenuToggleButton, {
         componentName: 'menuToggleButton',
-        onClick: this.toggleAnimation }, _react2.default.createElement(_style.MenuButtonSpan, null, "\u2630")), _react2.default.createElement(_style.TitleSpan, { gridAreaId: 'site-name-title',
+        onClick: this.toggleAnimation
+      }, _react2.default.createElement(_style.MenuButtonSpan, null, "\u2630")), _react2.default.createElement(_style.TitleSpan, {
+        gridAreaId: 'site-name-title',
         style: {
           textAlign: 'center',
           color: 'white',
           textTransform: 'uppercase'
-        } }, siteName || 'My Website'), _react2.default.createElement(_DropDownMenu2.default, { isOpen: isOpen,
-        componentName: 'collapsibleMenu' }, filterItems.length ? _react2.default.createElement(_MenuFilterItems2.default, {
+        }
+      }, siteName || 'My Website'), _react2.default.createElement(_DropDownMenu2.default, {
+        isOpen: isOpen,
+        componentName: 'collapsibleMenu'
+      }, filterItems.length ? _react2.default.createElement(_MenuFilterItems2.default, {
         menuItems: filterItems,
-        toggleMenu: this.toggleAnimation }) : null, menuItems.length ? _react2.default.createElement(_MenuItems2.default, {
+        toggleMenu: this.toggleAnimation
+      }) : null, menuItems.length ? _react2.default.createElement(_MenuItems2.default, {
         menuItems: menuItems,
-        toggleMenu: this.toggleAnimation }) : _react2.default.createElement(_Common.EmptyStateHelperText, { color: 'white', fontSize: '25px' }, ' Lets add some menu items!')));
+        toggleMenu: this.toggleAnimation
+      }) : _react2.default.createElement(_Common.EmptyStateHelperText, { color: 'white', fontSize: '25px' }, ' Lets add some menu items!')));
     }
   }]);
 
@@ -15347,7 +15376,6 @@ MobileMenuRouteEnabled.defaultProps = {
 
 
 module.exports = function generateFilterItemsList(collection, collectionName, menuItemType, menuName, baseTag) {
-
   var list = [];
   switch (menuName) {
     case 'tags':
@@ -15386,12 +15414,12 @@ function constructCollectionMenuItemConfig(item, collectionName, menuItemType, m
           type: menuName,
           name: item,
           collectionName: collectionName,
-          /*query: [
+          /* query: [
             {
               paramName: 'tag',
               paramValue: '',
             },
-          ],*/
+          ], */
           link: {
             name: item
           }
@@ -15476,13 +15504,12 @@ function constructMenuItem(menuItem, baseTag) {
 
 
 module.exports = function generateProductItemsList(collection, collectionName, menuItemType, menuName, baseTag) {
-
   var list = [];
   switch (menuName) {
     case 'products-all-items':
       {
         collection.forEach(function (collectionItem, index) {
-          //console.log(collectionItem);
+          // console.log(collectionItem);
           var productRouteName = collectionItem.route.name;
           var path = baseTag + '/' + collectionName + '/detail/' + productRouteName;
           var title = collectionItem.shortTitle;
@@ -15507,12 +15534,12 @@ function constructCollectionMenuItemConfig(item, collectionName, menuItemType, m
           type: menuName,
           name: item,
           collectionName: collectionName,
-          /*query: [
+          /* query: [
             {
               paramName: 'tag',
               paramValue: '',
             },
-          ],*/
+          ], */
           link: {
             name: item
           }
@@ -15573,18 +15600,18 @@ function _interopRequireDefault(obj) {
 }
 
 function getGridComponent(componentName, gridContent, gridType) {
-  //console.log(gridContent);
+  // console.log(gridContent);
   var style = gridContent.style,
       data = gridContent.data,
       type = gridContent.type;
 
   switch (componentName) {
-
     case 'NotificationBar':
       return _react2.default.createElement(_NotificationBar2.default, {
         contentData: data,
         contentType: type,
-        contentStyle: style });
+        contentStyle: style
+      });
     // case 'HeaderBar':
     //   return <HeaderBar />;
     case 'ProductDisplay':
@@ -15592,37 +15619,43 @@ function getGridComponent(componentName, gridContent, gridType) {
       return _react2.default.createElement(_ProductDisplay2.default, {
         productName: gridContent.productName,
         content: gridContent.productSpecs,
-        contentStyle: style });
+        contentStyle: style
+      });
     case 'FooterBar':
       return _react2.default.createElement(_FooterBar2.default, {
         contentData: data,
         contentType: type,
-        contentStyle: style });
+        contentStyle: style
+      });
     case 'Listing':
       return _react2.default.createElement(_Listing2.default, {
         contentData: data,
         contentType: type,
-        contentStyle: style });
+        contentStyle: style
+      });
     case 'ListingItem':
       return _react2.default.createElement(_ListingItem2.default, {
         content: gridContent,
         type: type,
-        style: style });
+        style: style
+      });
     case 'BreadCrumb':
       return _react2.default.createElement(_BreadCrumb2.default, {
         content: data,
         type: type,
-        style: style });
+        style: style
+      });
     case 'LogoBar':
       return _react2.default.createElement(_LogoBar2.default, {
         content: gridContent,
         type: type,
-        style: style });
-    /*case 'TemplateComponent':
+        style: style
+      });
+    /* case 'TemplateComponent':
       return <TemplateComponent
         contentData={data}
         contentType={type}
-        contentStyle={style} />;*/
+        contentStyle={style} />; */
     default:
       return _react2.default.createElement('div', null, ' Woops! ');
   }
@@ -15719,7 +15752,7 @@ var BreadCrumb = function (_Component) {
       var containerLevelStyle = componentCSSName + '__container';
 
       var title = this.props.content.title;
-      //TODO: Link's to should be a prop!!!
+      // TODO: Link's to should be a prop!!!
 
       return _react2.default.createElement(_Container2.default, null, _react2.default.createElement(_HomeLink2.default, { className: componentCSSName + '__homeLink', href: '/products/all' }, 'Home'), ' / ', title);
     }
@@ -15807,7 +15840,6 @@ var FooterBar = function (_Component) {
   _createClass(FooterBar, [{
     key: 'render',
     value: function render() {
-
       var icons = this.props.socialIcons || [];
       return _react2.default.createElement(_style.Container, null, icons.length ? icons.map(function (icon, index) {
         return _react2.default.createElement(_SocialIcon2.default, {
@@ -16249,7 +16281,6 @@ var LoginForm = function (_Component) {
     _this.handleFormChange = _this.handleFormChange.bind(_this);
     _this.changeLoggingInState = _this.changeLoggingInState.bind(_this);
     _this.login = _this.login.bind(_this);
-
     return _this;
   }
 
@@ -31656,8 +31687,8 @@ function _interopRequireDefault(obj) {
 
 function _taggedTemplateLiteral(strings, raw) {
   return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
-} //TODO - Its another kind of input only, but style change is too dramatic
-//merge into ContactFormInput once some sort of conditional becomes allowed in styled.components
+} // TODO - Its another kind of input only, but style change is too dramatic
+// merge into ContactFormInput once some sort of conditional becomes allowed in styled.components
 
 module.exports = _styledComponents2.default.input(_templateObject);
 
@@ -31770,14 +31801,16 @@ var CatalogList = function (_Component) {
           },
           xl: {
             size: 4
-          } }, _react2.default.createElement(_reactRouterDom.Link, { to: '/list/masjid/' + route + '/' }, _react2.default.createElement(_CatalogItem2.default, {
+          }
+        }, _react2.default.createElement(_reactRouterDom.Link, { to: '/list/masjid/' + route + '/' }, _react2.default.createElement(_CatalogItem2.default, {
           id: id,
           title: name,
           location: location,
           subTitle: subTitle,
           description: description,
           websiteUrl: website,
-          snapshots: snapshots })));
+          snapshots: snapshots
+        })));
       })));
     }
   }]);
@@ -36228,7 +36261,8 @@ var CatalogDetail = function (_Component) {
         query: query
       }), _react2.default.createElement(_ShareButtonsBar2.default, {
         hasMarginBottom: true,
-        homeLink: website }));
+        homeLink: website
+      }));
     }
   }]);
 
@@ -36356,8 +36390,11 @@ var GoogleEmbbededMapView = function (_Component) {
       return _react2.default.createElement('iframe', {
         width: width,
         height: height,
-        frameBorder: '0', style: style,
-        src: 'https://www.google.com/maps/embed/v1/place?key=' + _GOOGLE_EMBEDDED_MAP_API2.default + '&q=' + query, allowFullScreen: true });
+        frameBorder: '0',
+        style: style,
+        src: 'https://www.google.com/maps/embed/v1/place?key=' + _GOOGLE_EMBEDDED_MAP_API2.default + '&q=' + query,
+        allowFullScreen: true
+      });
     }
   }]);
 
@@ -36632,7 +36669,7 @@ var ThumbnailImageHolder = function (_Component) {
   _createClass(ThumbnailImageHolder, [{
     key: 'changeImage',
     value: function changeImage() {
-      //HACK - for some reason first time the dom will be null!!!
+      // HACK - for some reason first time the dom will be null!!!
       (0, _scrollToDom2.default)();
 
       this.props.changeImage(this.props.src);
@@ -36857,9 +36894,9 @@ module.exports = _styledComponents2.default.section(_templateObject, _mediaQuery
 "use strict";
 
 
-var _templateObject = _taggedTemplateLiteral(["\n  ", "\n\n  ", "\n  text-align: center;\n"], ["\n  ", "\n\n  ", "\n  text-align: center;\n"]),
-    _templateObject2 = _taggedTemplateLiteral(["\n    flex-basis: 16%;\n  "], ["\n    flex-basis: 16%;\n  "]),
-    _templateObject3 = _taggedTemplateLiteral(["\n    flex-basis: 8%;\n  "], ["\n    flex-basis: 8%;\n  "]);
+var _templateObject = _taggedTemplateLiteral(['\n  ', '\n\n  ', '\n  text-align: center;\n'], ['\n  ', '\n\n  ', '\n  text-align: center;\n']),
+    _templateObject2 = _taggedTemplateLiteral(['\n    flex-basis: 16%;\n  '], ['\n    flex-basis: 16%;\n  ']),
+    _templateObject3 = _taggedTemplateLiteral(['\n    flex-basis: 8%;\n  '], ['\n    flex-basis: 8%;\n  ']);
 
 var _styledComponents = __webpack_require__(2);
 
@@ -36918,7 +36955,7 @@ module.exports = {
   MenuButtonSpan: __webpack_require__(495),
   TitleSpan: __webpack_require__(496)
   // SiteNameTitle: require('./SiteNameTitle'),
-  //MobileMenuItem: require('./MobileMenuItem'),
+  // MobileMenuItem: require('./MobileMenuItem'),
 };
 
 /***/ }),
@@ -36989,7 +37026,7 @@ module.exports = _styledComponents2.default.a(_templateObject);
 "use strict";
 
 
-//import css from 'styled-components'
+// import css from 'styled-components'
 
 module.exports = function (componentName, gridAreaId) {
   return componentName || gridAreaId ? '\n    grid-area: ' + (componentName ? '' + componentName : 'component-container') + (componentName && gridAreaId ? '-' : '') + (gridAreaId ? '' + gridAreaId : '') + ';\n  ' : '';
@@ -37107,11 +37144,12 @@ module.exports = {
   buildMenuItems: buildMenuItems,
   buildMenuFilterItems: buildMenuFilterItems,
   buildProductMenuItems: buildProductMenuItems
+};
 
-  //gridId 2
-};function buildMenuItems(gridItemId) {
+// gridId 2
+function buildMenuItems(gridItemId) {
   if (!gridItemId) return [];
-  //console.log(content);
+  // console.log(content);
   var menuBar = _ezSiteContentStore.ContentSynchronizer.getItem('grids', 'gridItemId', gridItemId, true);
   var menuBarConfig = _ezSiteContentStore.ContentSynchronizer.getItem('menus', 'menuId', menuBar.gridContent.menuId, true);
   var baseTag = _ezSiteContentStore.ContentSynchronizer.getCollection('site').domain.baseTag;
@@ -37119,7 +37157,7 @@ module.exports = {
   return (0, _generateMenuItemsList2.default)(menuBarConfig, baseTag);
 }
 
-//gridId 6
+// gridId 6
 function buildMenuFilterItems(gridItemId) {
   if (!gridItemId) return [];
 
@@ -37135,15 +37173,15 @@ function buildMenuFilterItems(gridItemId) {
   return (0, _generateFilterItemsList2.default)(collection, collectionName, menuItemType, menuName, baseTag);
 }
 
-//gridId 10
+// gridId 10
 function buildProductMenuItems(gridItemId) {
-  //IDENTICAL WITH buildMenuFilterItems!!!!!!!!!!!!!!!!!!!!! refactor now
+  // IDENTICAL WITH buildMenuFilterItems!!!!!!!!!!!!!!!!!!!!! refactor now
   if (!gridItemId) return [];
 
   var productsBar = _ezSiteContentStore.ContentSynchronizer.getItem('grids', 'gridItemId', gridItemId, true);
-  //console.log(productsBar);
+  // console.log(productsBar);
   var productsBarConfig = _ezSiteContentStore.ContentSynchronizer.getItem('menus', 'menuId', productsBar.gridContent.menuId, true);
-  //console.log(productsBarConfig);
+  // console.log(productsBarConfig);
   var _productsBarConfig$me = productsBarConfig.menuConfig,
       collectionName = _productsBarConfig$me.collectionName,
       menuItemType = _productsBarConfig$me.menuItemType;
@@ -37256,9 +37294,7 @@ var MenuFilterItems = function (_Component) {
 
     var _this = _possibleConstructorReturn(this, (MenuFilterItems.__proto__ || Object.getPrototypeOf(MenuFilterItems)).call(this, props));
 
-    _this.toggleMenu = _this.props.toggleMenu ? _this.props.toggleMenu.bind(_this) : function () {
-      return;
-    };
+    _this.toggleMenu = _this.props.toggleMenu ? _this.props.toggleMenu.bind(_this) : function () {};
     return _this;
   }
 
@@ -37286,7 +37322,8 @@ var MenuFilterItems = function (_Component) {
 
       return _react2.default.createElement(_style.Container, {
         componentName: containerName,
-        gridAreaId: '' }, _react2.default.createElement(_style.Header, null, ' filter by:'), _react2.default.createElement(_style.ItemsContainer, null, this.generatedMenuFilterItems(menuItems)));
+        gridAreaId: ''
+      }, _react2.default.createElement(_style.Header, null, ' filter by:'), _react2.default.createElement(_style.ItemsContainer, null, this.generatedMenuFilterItems(menuItems)));
     }
   }]);
 
@@ -37311,7 +37348,7 @@ module.exports = {
   Container: __webpack_require__(501),
   ItemsContainer: __webpack_require__(502),
   Header: __webpack_require__(503)
-  //MenuItem: require('./MenuItem'),
+  // MenuItem: require('./MenuItem'),
 };
 
 /***/ }),
@@ -37438,7 +37475,7 @@ function _inherits(subClass, superClass) {
   }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
 }
 
-//import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 var MenuFilterItem = function (_Component) {
   _inherits(MenuFilterItem, _Component);
@@ -37463,7 +37500,8 @@ var MenuFilterItem = function (_Component) {
       return _react2.default.createElement(_style.Container, {
         onClick: this.toggleMenu,
         componentName: COMPONENT_NAME,
-        gridAreaId: '' }, _react2.default.createElement(_style.Link, { to: path }, title));
+        gridAreaId: ''
+      }, _react2.default.createElement(_style.Link, { to: path }, title));
     }
   }]);
 
@@ -37609,9 +37647,7 @@ var MenuItems = function (_Component) {
 
     var _this = _possibleConstructorReturn(this, (MenuItems.__proto__ || Object.getPrototypeOf(MenuItems)).call(this, props));
 
-    _this.toggleMenu = _this.props.toggleMenu ? _this.props.toggleMenu.bind(_this) : function () {
-      return;
-    };
+    _this.toggleMenu = _this.props.toggleMenu ? _this.props.toggleMenu.bind(_this) : function () {};
     return _this;
   }
 
@@ -37625,7 +37661,10 @@ var MenuItems = function (_Component) {
       return items.map(function (item, index) {
         return _react2.default.createElement(_MenuItem2.default, {
           toggleMenu: _this2.toggleMenu,
-          path: item.path, title: item.title, key: index }) || null;
+          path: item.path,
+          title: item.title,
+          key: index
+        }) || null;
       });
     }
   }, {
@@ -37641,7 +37680,8 @@ var MenuItems = function (_Component) {
 
       return _react2.default.createElement(_Common.Container, {
         componentName: containerName,
-        gridAreaId: '' }, this.generatedMenuItems(menuItems));
+        gridAreaId: ''
+      }, this.generatedMenuItems(menuItems));
     }
   }]);
 
@@ -37710,8 +37750,6 @@ function _inherits(subClass, superClass) {
   }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
 }
 
-//import { Link } from 'react-router-dom';
-
 var MenuItem = function (_Component) {
   _inherits(MenuItem, _Component);
 
@@ -37720,9 +37758,9 @@ var MenuItem = function (_Component) {
 
     var _this = _possibleConstructorReturn(this, (MenuItem.__proto__ || Object.getPrototypeOf(MenuItem)).call(this, props));
 
-    _this.toggleMenu = _this.props.toggleMenu ? _this.props.toggleMenu.bind(_this) : function () {
-      return;
-    };
+    if (props.toggleMenu) {
+      _this.toggleMenu = _this.toggleMenu.bind(_this);
+    }
     return _this;
   }
 
@@ -37737,7 +37775,8 @@ var MenuItem = function (_Component) {
       return _react2.default.createElement(_style.Container, {
         componentName: COMPONENT_NAME,
         gridAreaId: '',
-        onClick: this.toggleMenu }, _react2.default.createElement(_style.Link, { to: path }, title));
+        onClick: this.toggleMenu
+      }, _react2.default.createElement(_style.Link, { to: path }, title));
     }
   }]);
 
@@ -37924,8 +37963,11 @@ var CustomizableForm = function (_Component) {
           receiverEmail = _props.receiverEmail,
           instruction = _props.instruction;
 
-      return _react2.default.createElement(_FormContainer2.default, { style: style, action: 'https://formspree.io/' + receiverEmail,
-        method: 'POST' }, instruction.map(function (config) {
+      return _react2.default.createElement(_FormContainer2.default, {
+        style: style,
+        action: 'https://formspree.io/' + receiverEmail,
+        method: 'POST'
+      }, instruction.map(function (config) {
         var id = config.id,
             fieldLegendTitle = config.fieldLegendTitle,
             fieldName = config.fieldName,
@@ -38067,10 +38109,12 @@ var FormInput = function (_Component) {
           inputType = _props.inputType,
           placeholderText = _props.placeholderText;
 
-      return _react2.default.createElement(_InputField2.default, { name: fieldName,
+      return _react2.default.createElement(_InputField2.default, {
+        name: fieldName,
         gridAreaId: inputType,
         type: inputType,
-        placeholder: placeholderText });
+        placeholder: placeholderText
+      });
     }
   }, {
     key: 'getTextArea',
@@ -38084,7 +38128,8 @@ var FormInput = function (_Component) {
       return _react2.default.createElement(_FormTextarea2.default, {
         gridAreaId: inputType,
         name: fieldName,
-        placeholder: placeholderText });
+        placeholder: placeholderText
+      });
     }
   }, {
     key: 'render',
@@ -38267,8 +38312,8 @@ function _interopRequireDefault(obj) {
 
 function _taggedTemplateLiteral(strings, raw) {
   return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
-} //TODO - Its another kind of input only, but style change is too dramatic
-//merge into ContactFormInput once some sort of conditional becomes allowed in styled.components
+} // TODO - Its another kind of input only, but style change is too dramatic
+// merge into ContactFormInput once some sort of conditional becomes allowed in styled.components
 
 module.exports = _styledComponents2.default.input(_templateObject);
 
@@ -38357,7 +38402,8 @@ var About = function (_Component) {
     value: function render() {
       return _react2.default.createElement(_PageShell2.default, {
         containerLevelClass: '',
-        style: {} }, _react2.default.createElement(_Common.PageContentContainer, null, (0, _htmlReactParser2.default)("\n          <section style=\"max-width: 60%\">\n          <h1 style=\"font-size: 24px;\n            text-transform: uppercase;\n            text-decoration: underline;\">Our Goal</h1>\n          <p style=\"font-size: 16px;\">We believe that health is the best investment. Our goal is to offer a healthy variety of nutritious snacks.</p>\n          <p style=\"font-size: 16px;\">Our portfolio of natural sun-dried fruits and raw nuts are exceptional in flavor, quality and taste.</p>\n          <p style=\"font-size: 16px;\">Our dried fruits and nuts are full of heart healthy antioxidants, essential trace elements and omega 3\u2019s fatty acids.</p>\n\n          <h1 style=\"font-size: 24px;\n            text-transform: uppercase;\n            text-decoration: underline;\">Our difference</h1>\n          <p style=\"font-size: 16px;\">Our products are exceptional in flavor, quality and taste.</p>\n          <p style=\"font-size: 16px;\">This can be attributed to the unique eco system of the orchards, from which we source our produce.</p>\n          <p style=\"font-size: 16px;\">These orchards are largely untouched by man, protected by Mother Nature and naturally irrigated by the water run-off from the surrounding mountain ranges. </p>\n          <p style=\"font-size: 16px;\">Our products are harvested with care, naturally sun-dried and meticulously hand-packed.</p>\n\n          <h1 style=\"font-size: 24px;\n            text-transform: uppercase;\n            text-decoration: underline;\">About Us</h1>\n          <p style=\"font-size: 16px;\">We are a small organic food startup with offices in New York and a warehouse in the New Jersey Area.</p>\n          <p style=\"font-size: 16px;\">Our initiatives are directed for the benefit of our suppliers and their communities most of whom are landlocked and have never before exported their produce beyond Central and South Asia.</p>\n          <p style=\"font-size: 16px;\">We have built a value-added supply chain based on the principle of mutual trust and fair compensation practices. </p>\n\n          <h1 style=\"font-size: 24px;\n            text-transform: uppercase;\n            text-decoration: underline;\">Organic Certification</h1>\n          <p style=\"font-size: 16px;\">All our products are organic in nature, free of pesticides insecticides and any additives or preservatives. We are in the process of actively pursuing USDA organic certification for our full line of dried fruits and nuts. </p>\n          </section>\n          ")), this.props.children);
+        style: {}
+      }, _react2.default.createElement(_Common.PageContentContainer, null, (0, _htmlReactParser2.default)("\n          <section style=\"max-width: 60%\">\n          <h1 style=\"font-size: 24px;\n            text-transform: uppercase;\n            text-decoration: underline;\">Our Goal</h1>\n          <p style=\"font-size: 16px;\">We believe that health is the best investment. Our goal is to offer a healthy variety of nutritious snacks.</p>\n          <p style=\"font-size: 16px;\">Our portfolio of natural sun-dried fruits and raw nuts are exceptional in flavor, quality and taste.</p>\n          <p style=\"font-size: 16px;\">Our dried fruits and nuts are full of heart healthy antioxidants, essential trace elements and omega 3\u2019s fatty acids.</p>\n\n          <h1 style=\"font-size: 24px;\n            text-transform: uppercase;\n            text-decoration: underline;\">Our difference</h1>\n          <p style=\"font-size: 16px;\">Our products are exceptional in flavor, quality and taste.</p>\n          <p style=\"font-size: 16px;\">This can be attributed to the unique eco system of the orchards, from which we source our produce.</p>\n          <p style=\"font-size: 16px;\">These orchards are largely untouched by man, protected by Mother Nature and naturally irrigated by the water run-off from the surrounding mountain ranges. </p>\n          <p style=\"font-size: 16px;\">Our products are harvested with care, naturally sun-dried and meticulously hand-packed.</p>\n\n          <h1 style=\"font-size: 24px;\n            text-transform: uppercase;\n            text-decoration: underline;\">About Us</h1>\n          <p style=\"font-size: 16px;\">We are a small organic food startup with offices in New York and a warehouse in the New Jersey Area.</p>\n          <p style=\"font-size: 16px;\">Our initiatives are directed for the benefit of our suppliers and their communities most of whom are landlocked and have never before exported their produce beyond Central and South Asia.</p>\n          <p style=\"font-size: 16px;\">We have built a value-added supply chain based on the principle of mutual trust and fair compensation practices. </p>\n\n          <h1 style=\"font-size: 24px;\n            text-transform: uppercase;\n            text-decoration: underline;\">Organic Certification</h1>\n          <p style=\"font-size: 16px;\">All our products are organic in nature, free of pesticides insecticides and any additives or preservatives. We are in the process of actively pursuing USDA organic certification for our full line of dried fruits and nuts. </p>\n          </section>\n          ")), this.props.children);
     }
   }]);
 
@@ -38450,7 +38496,7 @@ var NotificationBar = function (_Component) {
 
     var isClosed = false;
     // TODO - this should NOT delete but move into a callback for fine tune functionalities
-    //const isClosed = ContentSynchronizer.getProperty(this.content, 'site.flag.notificationBar.closed.manually', false);;
+    // const isClosed = ContentSynchronizer.getProperty(this.content, 'site.flag.notificationBar.closed.manually', false);;
 
     _this.state = {
       show: !isClosed
@@ -38466,9 +38512,9 @@ var NotificationBar = function (_Component) {
   }, {
     key: 'getContentComponent',
     value: function getContentComponent(type, data) {
-      /*this.setState({
+      /* this.setState({
         show: data.showAsDefault,
-      });*/
+      }); */
       switch (type) {
         case 'textOnly':
           return _react2.default.createElement(_TextBody2.default, null, data.text);
@@ -38498,7 +38544,7 @@ var NotificationBar = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      //require('./NotificationBar.scss');
+      // require('./NotificationBar.scss');
       var type = this.props.contentType;
       var data = this.props.contentData;
       var contentComponent = this.getContentComponent(type, data);
@@ -38763,7 +38809,7 @@ var ProductDisplay = function (_Component) {
   }, {
     key: 'getStyle',
     value: function getStyle(name) {
-      //TODO: may need to expand to allow multiple styles!
+      // TODO: may need to expand to allow multiple styles!
       var styleName = name[0];
       switch (styleName) {
         case 'center-text':
@@ -38785,7 +38831,7 @@ var ProductDisplay = function (_Component) {
   }, {
     key: 'showBreadCrumb',
     value: function showBreadCrumb(title) {
-      //better switch to getGridItem! More effective...
+      // better switch to getGridItem! More effective...
       var BREADCRUMB_GRID_ID = 8;
       var breadCrumb = _ezSiteContentStore.ContentSynchronizer.getItem('grids', 'gridItemId', BREADCRUMB_GRID_ID, true);
       return _react2.default.createElement(_reactstrap.Col, {
@@ -38794,8 +38840,10 @@ var ProductDisplay = function (_Component) {
         md: { size: 12 },
         lg: { size: 12 },
         xl: { size: 12 }
-      }, _react2.default.createElement(_BreadCrumb2.default, { content: { title: title },
-        style: breadCrumb.gridContent.style }));
+      }, _react2.default.createElement(_BreadCrumb2.default, {
+        content: { title: title },
+        style: breadCrumb.gridContent.style
+      }));
       // return (
       //   <section className={`breadCrumb__container
       //     col-12
@@ -38812,7 +38860,7 @@ var ProductDisplay = function (_Component) {
     key: 'render',
     value: function render() {
       var contentStyle = this.getStyle(this.props.contentStyle);
-      //WARNNING: NEVER ADD  row WITHOUT no-gutters !!! CAUSE GHOST MARGIN ON THE RIGHT OF THE PAGE!!!!!
+      // WARNNING: NEVER ADD  row WITHOUT no-gutters !!! CAUSE GHOST MARGIN ON THE RIGHT OF THE PAGE!!!!!
       var containerLevelStyle = 'productDisplay__container ' + contentStyle + ' row no-gutters';
       var _props = this.props,
           productName = _props.productName,
@@ -38836,7 +38884,7 @@ var ProductDisplay = function (_Component) {
           }
         };
       });
-      //<img className='img-fluid' src={imageUrl} />
+      // <img className='img-fluid' src={imageUrl} />
       return _react2.default.createElement(_ContainerRow2.default, null, this.showBreadCrumb(title), _react2.default.createElement(_ProductSlideShowCol2.default, {
         xs: { size: 12 },
         sm: { size: 12 },
@@ -38853,7 +38901,8 @@ var ProductDisplay = function (_Component) {
         sharedImageUrl: imageUrl,
         sharedTitle: title,
         sharedDescriptionText: description,
-        hashtags: site.domain.name })))));
+        hashtags: site.domain.name
+      })))));
       // return (
       //   <section className={containerLevelStyle}>
       //     {this.showBreadCrumb(title)}
@@ -39079,9 +39128,9 @@ module.exports = (0, _styledComponents2.default)(_reactstrap.Col)(_templateObjec
 "use strict";
 
 
-var _templateObject = _taggedTemplateLiteral(["\n  font-weight: 500;\n  font-size: 24px;\n  ", "\n  ", "\n"], ["\n  font-weight: 500;\n  font-size: 24px;\n  ", "\n  ", "\n"]),
-    _templateObject2 = _taggedTemplateLiteral(["\n    margin-top: 32px;\n  "], ["\n    margin-top: 32px;\n  "]),
-    _templateObject3 = _taggedTemplateLiteral(["\n    margin-top: initial;\n  "], ["\n    margin-top: initial;\n  "]);
+var _templateObject = _taggedTemplateLiteral(['\n  font-weight: 500;\n  font-size: 24px;\n  ', '\n  ', '\n'], ['\n  font-weight: 500;\n  font-size: 24px;\n  ', '\n  ', '\n']),
+    _templateObject2 = _taggedTemplateLiteral(['\n    margin-top: 32px;\n  '], ['\n    margin-top: 32px;\n  ']),
+    _templateObject3 = _taggedTemplateLiteral(['\n    margin-top: initial;\n  '], ['\n    margin-top: initial;\n  ']);
 
 var _styledComponents = __webpack_require__(2);
 
@@ -39272,7 +39321,8 @@ var Listing = function (_Component) {
 
     (0, _consoleShow2.default)('props', {
       componentName: 'Listing',
-      props: _this.props });
+      props: _this.props
+    });
     return _this;
   }
 
@@ -39280,7 +39330,7 @@ var Listing = function (_Component) {
     key: 'render',
     value: function render() {
       var contentStyle = (0, _concatCssClasses2.default)(this.props.contentStyle);
-      //const noGutter = 'no-gutters';
+      // const noGutter = 'no-gutters';
 
       var containerLevelStyle = 'listing__container row ' + contentStyle;
 
@@ -39289,75 +39339,16 @@ var Listing = function (_Component) {
       var customStyle = data.listingCustomStyle;
 
       if (data.type === 'filter') {
-        //when its filter, we expect a dynamic injected array call filteredListing
-        //which got created inside ProductListing component
+        // when its filter, we expect a dynamic injected array call filteredListing
+        // which got created inside ProductListing component
 
-        var listingContent = data.filteredListing;
-        var mockedListingContent = [];
-        listingContent.forEach(function (listing, index) {
-          mockedListingContent.push(listing);
-        });
-
-        //TODO - remove once go prod, this create dups hack!
-        // listingContent.forEach((listing, index) => {
-        //   mockedListingContent.push(listing);
-        // });
-
-        listingContent = mockedListingContent;
-        var listingContentItemGridStyle = data.listingItemStyle;
-        (0, _consoleShow2.default)('props', {
-          componentName: 'listingContentItemGridStyle',
-          props: listingContentItemGridStyle });
-        return _react2.default.createElement(_reactstrap.Row, null, listingContent.map(function (listing, index) {
-          (0, _consoleShow2.default)('props', {
-            componentName: 'Listing Content Item',
-            props: listing });
-          var responsiveProperties = data.listingItemResponsiveProperties;
-          var componentName = data.listingItemComponentName;
-          var collectionName = data.name;
-          //TODO anti pattern!!!! But need to be done
-          listing.collectionName = collectionName;
-          return _react2.default.createElement(_GridItem2.default, {
-            gridResponsiveProperties: responsiveProperties,
-            gridContent: listing,
-            gridStyle: listingContentItemGridStyle,
-            gridCustomStyle: customStyle,
-            gridType: listing.gridTypeName,
-            gridComponent: componentName,
-            key: index.toString() });
-        }));
-        // return (
-        //   <section className={containerLevelStyle}>
-        //     {listingContent.map((listing, index) => {
-        //       consoleShow('props', {
-        //         componentName: 'Listing Content Item',
-        //         props: listing});
-        //       const responsiveProperties = data.listingItemResponsiveProperties;
-        //       const componentName = data.listingItemComponentName;
-        //       const collectionName = data.name;
-        //       //TODO anti pattern!!!! But need to be done
-        //       listing.collectionName = collectionName;
-        //       return (
-        //         <GridItem
-        //           gridResponsiveProperties={responsiveProperties}
-        //           gridContent={listing}
-        //           gridStyle={listingContentItemGridStyle}
-        //           gridCustomStyle={customStyle}
-        //           gridType={listing.gridTypeName}
-        //           gridComponent={componentName}
-        //           key={index.toString()} />
-        //       );
-        //     })}
-        //   </section>
-        // );
-      } else {
-        var _listingContent = _ezSiteContentStore.ContentSynchronizer.getCollection(data.name);
+        var _listingContent = data.filteredListing;
         var _mockedListingContent = [];
         _listingContent.forEach(function (listing, index) {
           _mockedListingContent.push(listing);
         });
 
-        //TODO - remove once go prod, this create dups hack!
+        // TODO - remove once go prod, this create dups hack!
         // listingContent.forEach((listing, index) => {
         //   mockedListingContent.push(listing);
         // });
@@ -39366,17 +39357,18 @@ var Listing = function (_Component) {
         var _listingContentItemGridStyle = data.listingItemStyle;
         (0, _consoleShow2.default)('props', {
           componentName: 'listingContentItemGridStyle',
-          props: _listingContentItemGridStyle });
+          props: _listingContentItemGridStyle
+        });
         return _react2.default.createElement(_reactstrap.Row, null, _listingContent.map(function (listing, index) {
           (0, _consoleShow2.default)('props', {
             componentName: 'Listing Content Item',
-            props: listing });
+            props: listing
+          });
           var responsiveProperties = data.listingItemResponsiveProperties;
           var componentName = data.listingItemComponentName;
           var collectionName = data.name;
-          //TODO anti pattern!!!! But need to be done
+          // TODO anti pattern!!!! But need to be done
           listing.collectionName = collectionName;
-
           return _react2.default.createElement(_GridItem2.default, {
             gridResponsiveProperties: responsiveProperties,
             gridContent: listing,
@@ -39384,7 +39376,8 @@ var Listing = function (_Component) {
             gridCustomStyle: customStyle,
             gridType: listing.gridTypeName,
             gridComponent: componentName,
-            key: index.toString() });
+            key: index.toString()
+          });
         }));
         // return (
         //   <section className={containerLevelStyle}>
@@ -39397,7 +39390,6 @@ var Listing = function (_Component) {
         //       const collectionName = data.name;
         //       //TODO anti pattern!!!! But need to be done
         //       listing.collectionName = collectionName;
-
         //       return (
         //         <GridItem
         //           gridResponsiveProperties={responsiveProperties}
@@ -39412,6 +39404,69 @@ var Listing = function (_Component) {
         //   </section>
         // );
       }
+      var listingContent = _ezSiteContentStore.ContentSynchronizer.getCollection(data.name);
+      var mockedListingContent = [];
+      listingContent.forEach(function (listing, index) {
+        mockedListingContent.push(listing);
+      });
+
+      // TODO - remove once go prod, this create dups hack!
+      // listingContent.forEach((listing, index) => {
+      //   mockedListingContent.push(listing);
+      // });
+
+      listingContent = mockedListingContent;
+      var listingContentItemGridStyle = data.listingItemStyle;
+      (0, _consoleShow2.default)('props', {
+        componentName: 'listingContentItemGridStyle',
+        props: listingContentItemGridStyle
+      });
+      return _react2.default.createElement(_reactstrap.Row, null, listingContent.map(function (listing, index) {
+        (0, _consoleShow2.default)('props', {
+          componentName: 'Listing Content Item',
+          props: listing
+        });
+        var responsiveProperties = data.listingItemResponsiveProperties;
+        var componentName = data.listingItemComponentName;
+        var collectionName = data.name;
+        // TODO anti pattern!!!! But need to be done
+        listing.collectionName = collectionName;
+
+        return _react2.default.createElement(_GridItem2.default, {
+          gridResponsiveProperties: responsiveProperties,
+          gridContent: listing,
+          gridStyle: listingContentItemGridStyle,
+          gridCustomStyle: customStyle,
+          gridType: listing.gridTypeName,
+          gridComponent: componentName,
+          key: index.toString()
+        });
+      }));
+      // return (
+      //   <section className={containerLevelStyle}>
+      //     {listingContent.map((listing, index) => {
+      //       consoleShow('props', {
+      //         componentName: 'Listing Content Item',
+      //         props: listing});
+      //       const responsiveProperties = data.listingItemResponsiveProperties;
+      //       const componentName = data.listingItemComponentName;
+      //       const collectionName = data.name;
+      //       //TODO anti pattern!!!! But need to be done
+      //       listing.collectionName = collectionName;
+
+      //       return (
+      //         <GridItem
+      //           gridResponsiveProperties={responsiveProperties}
+      //           gridContent={listing}
+      //           gridStyle={listingContentItemGridStyle}
+      //           gridCustomStyle={customStyle}
+      //           gridType={listing.gridTypeName}
+      //           gridComponent={componentName}
+      //           key={index.toString()} />
+      //       );
+      //     })}
+      //   </section>
+      // );
     }
   }]);
 
@@ -39506,7 +39561,7 @@ function _inherits(subClass, superClass) {
     throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === "undefined" ? "undefined" : _typeof(superClass)));
   }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
 }
-//import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 
 var ListingItem = function (_Component) {
@@ -39522,7 +39577,8 @@ var ListingItem = function (_Component) {
     };
     (0, _consoleShow2.default)('props', {
       componentName: 'ListingItem',
-      props: _this.props });
+      props: _this.props
+    });
     _this.childComponent = _this.childComponent.bind(_this);
     _this.toggleThing = _this.toggleThing.bind(_this);
     return _this;
@@ -39555,12 +39611,14 @@ var ListingItem = function (_Component) {
 
       return _react2.default.createElement(_Container2.default, null, _react2.default.createElement(_Display2.default, {
         onMouseOver: this.toggleThing,
-        onMouseOut: this.toggleThing }, _react2.default.createElement(_ListingItemMask2.default, {
+        onMouseOut: this.toggleThing
+      }, _react2.default.createElement(_ListingItemMask2.default, {
         price: content.price.regular,
         title: content.title,
         collectionName: content.collectionName,
         path: content.route.name,
-        show: this.state.showMask }), _react2.default.createElement(_ImageAdjuster2.default, null, _react2.default.createElement(_Image2.default, { src: content.slideShow[0].images[0].url }))));
+        show: this.state.showMask
+      }), _react2.default.createElement(_ImageAdjuster2.default, null, _react2.default.createElement(_Image2.default, { src: content.slideShow[0].images[0].url }))));
     }
   }]);
 
@@ -39664,7 +39722,8 @@ var ListingItemMask = function (_Component) {
 
     (0, _consoleShow2.default)('props', {
       componentName: 'ListingItemMask',
-      props: _this.props });
+      props: _this.props
+    });
     _this.childComponent.bind(_this);
     return _this;
   }
@@ -39696,7 +39755,7 @@ var ListingItemMask = function (_Component) {
       var data = this.props.content;
       var content = this.props.content;
 
-      //const contentComponent = this.childComponent(type, data);
+      // const contentComponent = this.childComponent(type, data);
 
       return _react2.default.createElement(_Container2.default, { hide: !show }, _react2.default.createElement(_Shade2.default, null), _react2.default.createElement(_ClickableLink2.default, { href: '/' + collectionName + '/detail/' + path }), _react2.default.createElement(_Summary2.default, null, _react2.default.createElement('span', null, title), ' ', price ? _react2.default.createElement('span', null, '$', price) : null));
     }
@@ -39794,9 +39853,9 @@ module.exports = _styledComponents2.default.a(_templateObject);
 "use strict";
 
 
-var _templateObject = _taggedTemplateLiteral(["\n  position: relative;\n  align-self: center;\n  width: 100%;\n  text-align: center;\n  font-weight: 600;\n\n  &:hover {\n    display: none;\n  }\n\n  &:focus {\n    display: none;\n  }\n\n  ", "\n  ", "\n"], ["\n  position: relative;\n  align-self: center;\n  width: 100%;\n  text-align: center;\n  font-weight: 600;\n\n  &:hover {\n    display: none;\n  }\n\n  &:focus {\n    display: none;\n  }\n\n  ", "\n  ", "\n"]),
-    _templateObject2 = _taggedTemplateLiteral(["\n    font-size: 24px;"], ["\n    font-size: 24px;"]),
-    _templateObject3 = _taggedTemplateLiteral(["\n    font-size: 18px;"], ["\n    font-size: 18px;"]);
+var _templateObject = _taggedTemplateLiteral(['\n  position: relative;\n  align-self: center;\n  width: 100%;\n  text-align: center;\n  font-weight: 600;\n\n  &:hover {\n    display: none;\n  }\n\n  &:focus {\n    display: none;\n  }\n\n  ', '\n  ', '\n'], ['\n  position: relative;\n  align-self: center;\n  width: 100%;\n  text-align: center;\n  font-weight: 600;\n\n  &:hover {\n    display: none;\n  }\n\n  &:focus {\n    display: none;\n  }\n\n  ', '\n  ', '\n']),
+    _templateObject2 = _taggedTemplateLiteral(['\n    font-size: 24px;'], ['\n    font-size: 24px;']),
+    _templateObject3 = _taggedTemplateLiteral(['\n    font-size: 18px;'], ['\n    font-size: 18px;']);
 
 var _styledComponents = __webpack_require__(2);
 
@@ -39995,7 +40054,7 @@ var SocialIcon = function (_Component) {
   _createClass(SocialIcon, [{
     key: 'render',
     value: function render() {
-      //require('./SocialIcon.scss');
+      // require('./SocialIcon.scss');
 
       var _props = this.props,
           content = _props.content,
@@ -40010,7 +40069,8 @@ var SocialIcon = function (_Component) {
         style: style,
         linkUrl: linkUrl
       }, _react2.default.createElement(_style.IconImage, {
-        src: srcUrl }));
+        src: srcUrl
+      }));
     }
   }]);
 
@@ -40998,7 +41058,7 @@ var SocialButtonShell = function (_Component) {
   _createClass(SocialButtonShell, [{
     key: 'render',
     value: function render() {
-      //require('./SocialButtonShell.scss');
+      // require('./SocialButtonShell.scss');
 
       var _props = this.props,
           style = _props.style,
@@ -41014,10 +41074,13 @@ var SocialButtonShell = function (_Component) {
         };
       }
 
-      return _react2.default.createElement(_style.IconBoxLink, { href: linkUrl || '/', className: containerLevelStyle,
+      return _react2.default.createElement(_style.IconBoxLink, {
+        href: linkUrl || '/',
+        className: containerLevelStyle,
         'data-event-category': 'Links',
         'data-event-action': 'Click',
-        'data-event-label': linkUrl }, children);
+        'data-event-label': linkUrl
+      }, children);
     }
   }]);
 
@@ -41039,9 +41102,9 @@ SocialButtonShell.propTypes = {
 "use strict";
 
 
-var _templateObject = _taggedTemplateLiteral(["\n  ", "\n  ", "\n  cursor: pointer;\n"], ["\n  ", "\n  ", "\n  cursor: pointer;\n"]),
-    _templateObject2 = _taggedTemplateLiteral(["\n    height: 32px;\n  "], ["\n    height: 32px;\n  "]),
-    _templateObject3 = _taggedTemplateLiteral(["\n    height: 48px;\n  "], ["\n    height: 48px;\n  "]);
+var _templateObject = _taggedTemplateLiteral(['\n  ', '\n  ', '\n  cursor: pointer;\n'], ['\n  ', '\n  ', '\n  cursor: pointer;\n']),
+    _templateObject2 = _taggedTemplateLiteral(['\n    height: 32px;\n  '], ['\n    height: 32px;\n  ']),
+    _templateObject3 = _taggedTemplateLiteral(['\n    height: 48px;\n  '], ['\n    height: 48px;\n  ']);
 
 var _styledComponents = __webpack_require__(2);
 
@@ -41068,9 +41131,9 @@ module.exports = _styledComponents2.default.img(_templateObject, _mediaQuery2.de
 "use strict";
 
 
-var _templateObject = _taggedTemplateLiteral(["\n  ", "\n  ", "\n  display: inline-block;\n  background-repeat: no-repeat;\n  align-self: center;\n  text-align: center;\n"], ["\n  ", "\n  ", "\n  display: inline-block;\n  background-repeat: no-repeat;\n  align-self: center;\n  text-align: center;\n"]),
-    _templateObject2 = _taggedTemplateLiteral(["\n    flex-basis: 16%;\n  "], ["\n    flex-basis: 16%;\n  "]),
-    _templateObject3 = _taggedTemplateLiteral(["\n    flex-basis: 8%;\n  "], ["\n    flex-basis: 8%;\n  "]);
+var _templateObject = _taggedTemplateLiteral(['\n  ', '\n  ', '\n  display: inline-block;\n  background-repeat: no-repeat;\n  align-self: center;\n  text-align: center;\n'], ['\n  ', '\n  ', '\n  display: inline-block;\n  background-repeat: no-repeat;\n  align-self: center;\n  text-align: center;\n']),
+    _templateObject2 = _taggedTemplateLiteral(['\n    flex-basis: 16%;\n  '], ['\n    flex-basis: 16%;\n  ']),
+    _templateObject3 = _taggedTemplateLiteral(['\n    flex-basis: 8%;\n  '], ['\n    flex-basis: 8%;\n  ']);
 
 var _styledComponents = __webpack_require__(2);
 
@@ -41231,9 +41294,9 @@ LogoBar.propTypes = {
 "use strict";
 
 
-var _templateObject = _taggedTemplateLiteral(["\n  ", "\n\n  ", "\n"], ["\n  ", "\n\n  ", "\n"]),
-    _templateObject2 = _taggedTemplateLiteral(["\n    margin-bottom: 24px;\n    margin-top: 24px;\n  "], ["\n    margin-bottom: 24px;\n    margin-top: 24px;\n  "]),
-    _templateObject3 = _taggedTemplateLiteral(["\n    margin-bottom: initial;\n    margin-top: initial;\n  "], ["\n    margin-bottom: initial;\n    margin-top: initial;\n  "]);
+var _templateObject = _taggedTemplateLiteral(['\n  ', '\n\n  ', '\n'], ['\n  ', '\n\n  ', '\n']),
+    _templateObject2 = _taggedTemplateLiteral(['\n    margin-bottom: 24px;\n    margin-top: 24px;\n  '], ['\n    margin-bottom: 24px;\n    margin-top: 24px;\n  ']),
+    _templateObject3 = _taggedTemplateLiteral(['\n    margin-bottom: initial;\n    margin-top: initial;\n  '], ['\n    margin-bottom: initial;\n    margin-top: initial;\n  ']);
 
 var _styledComponents = __webpack_require__(2);
 
@@ -41260,9 +41323,9 @@ module.exports = _styledComponents2.default.section(_templateObject, _mediaQuery
 "use strict";
 
 
-var _templateObject = _taggedTemplateLiteral(["\n  margin: 0 auto;\n  ", "\n\n  ", "\n"], ["\n  margin: 0 auto;\n  ", "\n\n  ", "\n"]),
-    _templateObject2 = _taggedTemplateLiteral(["\n    width: 100%;\n  "], ["\n    width: 100%;\n  "]),
-    _templateObject3 = _taggedTemplateLiteral(["\n    width: 400px;\n  "], ["\n    width: 400px;\n  "]);
+var _templateObject = _taggedTemplateLiteral(['\n  margin: 0 auto;\n  ', '\n\n  ', '\n'], ['\n  margin: 0 auto;\n  ', '\n\n  ', '\n']),
+    _templateObject2 = _taggedTemplateLiteral(['\n    width: 100%;\n  '], ['\n    width: 100%;\n  ']),
+    _templateObject3 = _taggedTemplateLiteral(['\n    width: 400px;\n  '], ['\n    width: 400px;\n  ']);
 
 var _styledComponents = __webpack_require__(2);
 
@@ -41336,11 +41399,12 @@ module.exports = {
   buildMenuItems: buildMenuItems,
   buildMenuFilterItems: buildMenuFilterItems,
   buildProductMenuItems: buildProductMenuItems
+};
 
-  //gridId 2
-};function buildMenuItems(gridItemId) {
+// gridId 2
+function buildMenuItems(gridItemId) {
   if (!gridItemId) return [];
-  //console.log(content);
+  // console.log(content);
   var menuBar = _ezSiteContentStore.ContentSynchronizer.getItem('grids', 'gridItemId', gridItemId, true);
   var menuBarConfig = _ezSiteContentStore.ContentSynchronizer.getItem('menus', 'menuId', menuBar.gridContent.menuId, true);
   var baseTag = _ezSiteContentStore.ContentSynchronizer.getCollection('site').domain.baseTag;
@@ -41348,7 +41412,7 @@ module.exports = {
   return (0, _generateMenuItemsList2.default)(menuBarConfig, baseTag);
 }
 
-//gridId 6
+// gridId 6
 function buildMenuFilterItems(gridItemId) {
   if (!gridItemId) return [];
 
@@ -41364,15 +41428,15 @@ function buildMenuFilterItems(gridItemId) {
   return (0, _generateFilterItemsList2.default)(collection, collectionName, menuItemType, menuName, baseTag);
 }
 
-//gridId 10
+// gridId 10
 function buildProductMenuItems(gridItemId) {
-  //IDENTICAL WITH buildMenuFilterItems!!!!!!!!!!!!!!!!!!!!! refactor now
+  // IDENTICAL WITH buildMenuFilterItems!!!!!!!!!!!!!!!!!!!!! refactor now
   if (!gridItemId) return [];
 
   var productsBar = _ezSiteContentStore.ContentSynchronizer.getItem('grids', 'gridItemId', gridItemId, true);
-  //console.log(productsBar);
+  // console.log(productsBar);
   var productsBarConfig = _ezSiteContentStore.ContentSynchronizer.getItem('menus', 'menuId', productsBar.gridContent.menuId, true);
-  //console.log(productsBarConfig);
+  // console.log(productsBarConfig);
   var _productsBarConfig$me = productsBarConfig.menuConfig,
       collectionName = _productsBarConfig$me.collectionName,
       menuItemType = _productsBarConfig$me.menuItemType;
@@ -41553,7 +41617,8 @@ var SlideShow = function (_Component) {
           width: '100%',
           overflow: 'hidden',
           marginBottom: '16px'
-        } }, _react2.default.createElement(_style.SlidesBox, { style: {
+        }
+      }, _react2.default.createElement(_style.SlidesBox, { style: {
           alignSelf: 'center',
           height: '100%',
           width: '100%',
@@ -41562,17 +41627,22 @@ var SlideShow = function (_Component) {
           justifyContent: 'center',
           alignItems: 'center',
           flexDirection: 'column'
-        } }, _react2.default.createElement('img', { src: this.state.url || '', style: {
+        }
+      }, _react2.default.createElement('img', {
+        src: this.state.url || '',
+        style: {
           width: '100%',
           transition: 'opacity 300ms ease-in-out',
           opacity: '' + this.state.opacity,
           cursor: 'default'
-        } })), _react2.default.createElement(_style.SlideButtonsBox, null, slides.map(function (slide, index) {
+        }
+      })), _react2.default.createElement(_style.SlideButtonsBox, null, slides.map(function (slide, index) {
         return _react2.default.createElement(_SlideButton2.default, {
           key: index,
           currentSlideId: _this3.state.currentSlideId,
           slideId: slide.id,
-          goToSlide: _this3.goToSlide });
+          goToSlide: _this3.goToSlide
+        });
       })));
     }
   }]);
@@ -41771,14 +41841,16 @@ var SlideButton = function (_Component) {
       var isCurrent = slideId === currentSlideId;
       return _react2.default.createElement(_style.Container, {
         componentName: COMPONENT_NAME,
-        gridAreaId: '', onClick: this.goSlide,
+        gridAreaId: '',
+        onClick: this.goSlide,
         style: {
           opacity: isCurrent ? '.75' : '.25',
           alignSelf: 'center',
           marginLeft: '8px',
           marginRight: '8px',
           marginBottom: '16px'
-        } }, "\u2022");
+        }
+      }, "\u2022");
     }
   }]);
 
@@ -43908,11 +43980,11 @@ var Contact = function (_Component) {
   _createClass(Contact, [{
     key: 'render',
     value: function render() {
-
       var component = (0, _capToCamelCase2.default)('SocialIcon');
       return _react2.default.createElement(_PageShell2.default, {
         containerLevelClass: '',
-        style: {} }, _react2.default.createElement(_GridItemShell2.default, null, _react2.default.createElement(_style.Container, null, _react2.default.createElement(_style.Headline, null, 'We\'d love to hear from you!'), _react2.default.createElement(_style.LeftColumn, null, _react2.default.createElement(_ContactForm2.default, null)))), this.props.children);
+        style: {}
+      }, _react2.default.createElement(_GridItemShell2.default, null, _react2.default.createElement(_style.Container, null, _react2.default.createElement(_style.Headline, null, 'We\'d love to hear from you!'), _react2.default.createElement(_style.LeftColumn, null, _react2.default.createElement(_ContactForm2.default, null)))), this.props.children);
     }
   }]);
 
@@ -44021,7 +44093,10 @@ var GridItemShell = function (_Component) {
 
       var customStyle = this.props.gridCustomStyle || {};
       var noCustomStyleAvailable = !Object.keys(customStyle).length && customStyle.constructor === Object;
-      return _react2.default.createElement('section', { className: composedStyles, style: !noCustomStyleAvailable ? customStyle.container.inlineStyles : null }, this.props.children);
+      return _react2.default.createElement('section', {
+        className: composedStyles,
+        style: !noCustomStyleAvailable ? customStyle.container.inlineStyles : null
+      }, this.props.children);
     }
   }]);
 
@@ -44073,8 +44148,8 @@ function _taggedTemplateLiteral(strings, raw) {
   return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
 }
 
-//two columns mode switch areas to:
-//"contact-page-left-column contact-page-right-column";
+// two columns mode switch areas to:
+// "contact-page-left-column contact-page-right-column";
 
 module.exports = _styledComponents2.default.section(_templateObject, function (props) {
   return props.gridAreaId ? '-' + props.gridAreaId : '';
@@ -44270,27 +44345,28 @@ var ProductListing = function (_Component) {
     value: function render() {
       (0, _consoleShow2.default)('props', {
         componentName: 'Listing',
-        props: this.props });
+        props: this.props
+      });
       var routeParams = this.props.params;
       var productRef = routeParams.productRef,
           tagRef = routeParams.tagRef;
-      //const productRef = routeParams.productRef;
-      //const queryParams = this.props.location.query;
+      // const productRef = routeParams.productRef;
+      // const queryParams = this.props.location.query;
 
-      //find specific product grid item with productRef & queryParams
-      //TODO: right now its NOT COMPLETE!!!!
+      // find specific product grid item with productRef & queryParams
+      // TODO: right now its NOT COMPLETE!!!!
 
       var gridItemName = '';
       var listingGridItem = null;
 
-      //TODO in the future, taag path should be query param for multiple tags, instead of a path ref!!! NOT SCALABLE!
+      // TODO in the future, taag path should be query param for multiple tags, instead of a path ref!!! NOT SCALABLE!
       if (tagRef) {
         gridItemName = 'specific tag product listing';
         listingGridItem = _ezSiteContentStore.ContentSynchronizer.getItem('grids', 'gridItemName', gridItemName, true);
 
-        //WARNNING:
-        //a anti-pattern way to injecting dynamic var into existing data....
-        //had to be done for the filter type grid
+        // WARNNING:
+        // a anti-pattern way to injecting dynamic var into existing data....
+        // had to be done for the filter type grid
         var collectionFilterName = listingGridItem.gridContent.data.name;
         var listingContentRaw = _ezSiteContentStore.ContentSynchronizer.getCollection(collectionFilterName);
         listingGridItem.gridContent.data.filteredListing = listingContentRaw.filter(function (item, index) {
@@ -44317,11 +44393,13 @@ var ProductListing = function (_Component) {
         gridContent: listingGridItem.gridContent,
         gridStyle: listingGridItem.gridStyle,
         gridComponent: listingGridItem.gridComponent,
-        key: listingGridItem.gridItemId.toString() });
+        key: listingGridItem.gridItemId.toString()
+      });
       return _react2.default.createElement(_PageShell2.default, {
         hasSlides: true,
         containerLevelClass: 'productListing__container row no-gutters',
-        style: {} }, bodyDisplay, this.props.children);
+        style: {}
+      }, bodyDisplay, this.props.children);
     }
   }]);
 
@@ -44418,15 +44496,15 @@ var Product = function (_Component) {
 
       var routeParams = this.props.params;
       var productRefRefreshed = routeParams ? routeParams.productRef : productRef;
-      //const queryParams = this.props.location.query;
+      // const queryParams = this.props.location.query;
 
-      //find specific product grid item with productRef & queryParams
-      //TODO: right now its NOT COMPLETE!!!!
+      // find specific product grid item with productRef & queryParams
+      // TODO: right now its NOT COMPLETE!!!!
 
       var productSpecs = _ezSiteContentStore.ContentSynchronizer.getProductGrid(productRefRefreshed);
       var PRODUCT_GRID_ITEM_ID = 3;
       var productGridItem = _ezSiteContentStore.ContentSynchronizer.getItem('grids', 'gridItemId', PRODUCT_GRID_ITEM_ID, true);
-      //TODO: Dynamic inject content... not very dry
+      // TODO: Dynamic inject content... not very dry
       productGridItem.gridContent.productSpecs = productSpecs;
 
       var bodyDisplay = _react2.default.createElement(_GridItem2.default, {
@@ -44434,11 +44512,13 @@ var Product = function (_Component) {
         gridContent: productGridItem.gridContent,
         gridStyle: productGridItem.gridStyle,
         gridComponent: productGridItem.gridComponent,
-        key: productGridItem.gridItemId.toString() });
+        key: productGridItem.gridItemId.toString()
+      });
       return _react2.default.createElement(_PageShell2.default, {
         containerLevelClass: '',
         anchorToBelow: 'sub-menu-bar',
-        style: {} }, bodyDisplay, children);
+        style: {}
+      }, bodyDisplay, children);
     }
   }]);
 
