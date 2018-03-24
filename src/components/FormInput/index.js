@@ -6,7 +6,6 @@ import InputField from './style/InputField';
 import FormTextarea from './style/FormTextarea';
 
 export default class FormInput extends Component {
-
   constructor(props) {
     super(props);
     const {
@@ -15,7 +14,7 @@ export default class FormInput extends Component {
     this.getInputField = this.getInputField.bind(this);
     this.getTextArea = this.getTextArea.bind(this);
     let InputComponent = null;
-    switch(inputType) {
+    switch (inputType) {
       case 'text-area':
         InputComponent = this.getTextArea;
         break;
@@ -38,11 +37,13 @@ export default class FormInput extends Component {
       placeholderText,
     } = this.props;
     return (
-      <InputField name={fieldName}
+      <InputField
+        name={fieldName}
         gridAreaId={inputType}
         type={inputType}
-        placeholder={placeholderText}/>
-    )
+        placeholder={placeholderText}
+      />
+    );
   }
   getTextArea() {
     const {
@@ -56,11 +57,12 @@ export default class FormInput extends Component {
       <FormTextarea
         gridAreaId={inputType}
         name={fieldName}
-        placeholder={placeholderText}/>
+        placeholder={placeholderText}
+      />
     );
   }
   render() {
-    let {
+    const {
       fieldLegendTitle,
       fieldName,
       inputType,
@@ -89,4 +91,4 @@ FormInput.defaultProps = {
   fieldName: '',
   inputType: '',
   placeholderText: '',
-}
+};

@@ -10,7 +10,7 @@ import LogoBar from '../../components/LogoBar';
 import BreadCrumb from '../../components/BreadCrumb';
 
 export default function getGridComponent(componentName, gridContent, gridType) {
-  //console.log(gridContent);
+  // console.log(gridContent);
   const {
     style,
     data,
@@ -18,50 +18,56 @@ export default function getGridComponent(componentName, gridContent, gridType) {
   } = gridContent;
 
   switch (componentName) {
-
     case 'NotificationBar':
-      return <NotificationBar
+      return (<NotificationBar
         contentData={data}
         contentType={type}
-        contentStyle={style} />;
+        contentStyle={style}
+      />);
     // case 'HeaderBar':
     //   return <HeaderBar />;
     case 'ProductDisplay':
 
-      return <ProductDisplay
+      return (<ProductDisplay
         productName={gridContent.productName}
         content={gridContent.productSpecs}
-        contentStyle={style} />;
+        contentStyle={style}
+      />);
     case 'FooterBar':
-      return <FooterBar
+      return (<FooterBar
         contentData={data}
         contentType={type}
-        contentStyle={style} />;
+        contentStyle={style}
+      />);
     case 'Listing':
-      return <Listing
+      return (<Listing
         contentData={data}
         contentType={type}
-        contentStyle={style} />;
+        contentStyle={style}
+      />);
     case 'ListingItem':
-      return <ListingItem
+      return (<ListingItem
         content={gridContent}
         type={type}
-        style={style} />;
+        style={style}
+      />);
     case 'BreadCrumb':
-      return <BreadCrumb
+      return (<BreadCrumb
         content={data}
         type={type}
-        style={style} />;
+        style={style}
+      />);
     case 'LogoBar':
-      return <LogoBar
+      return (<LogoBar
         content={gridContent}
         type={type}
-        style={style} />;
-    /*case 'TemplateComponent':
+        style={style}
+      />);
+    /* case 'TemplateComponent':
       return <TemplateComponent
         contentData={data}
         contentType={type}
-        contentStyle={style} />;*/
+        contentStyle={style} />; */
     default:
       return <div> Woops! </div>;
   }

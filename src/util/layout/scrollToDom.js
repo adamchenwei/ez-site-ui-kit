@@ -9,9 +9,8 @@ export default function scrollToDom(dom, delayMs) {
     setTimeout(() => {
       const node = ReactDOM.findDOMNode(dom);
       if (node) {
-        node.scrollIntoView({behavior: 'smooth'});
+        node.scrollIntoView({ behavior: 'smooth' });
       }
     }, delay);
   }
-
-};
+}

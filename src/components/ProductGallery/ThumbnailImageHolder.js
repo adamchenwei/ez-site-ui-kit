@@ -8,14 +8,13 @@ import {
 } from './style';
 
 export default class ThumbnailImageHolder extends Component {
-
   constructor(props) {
     super(props);
     this.changeImage = this.changeImage.bind(this);
   }
 
   changeImage() {
-    //HACK - for some reason first time the dom will be null!!!
+    // HACK - for some reason first time the dom will be null!!!
     scrollToDom();
 
     this.props.changeImage(this.props.src);
@@ -27,7 +26,7 @@ export default class ThumbnailImageHolder extends Component {
     });
   }
   render() {
-    let {
+    const {
       src,
     } = this.props;
     const COMPONENT_NAME = 'ThumbnailImageHolder';
@@ -45,4 +44,4 @@ ThumbnailImageHolder.propTypes = {
   src: PropTypes.string,
   changeImage: PropTypes.func,
   scrollTargetDom: PropTypes.any,
-}
+};

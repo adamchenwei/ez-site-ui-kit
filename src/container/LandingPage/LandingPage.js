@@ -7,7 +7,6 @@ import PageShell from '../PageShell/PageShell';
 import GridItemShell from '../../components/GridItem/GridItemShell';
 
 const LandingPage = class LandingPage extends Component {
-
   render() {
     require('./LandingPage.scss');
 
@@ -15,8 +14,9 @@ const LandingPage = class LandingPage extends Component {
     return (
 
       <PageShell
-        containerLevelClass={''}
-        style={{}} >
+        containerLevelClass=""
+        style={{}}
+      >
 
         <GridItemShell>
           <form>
@@ -34,6 +34,6 @@ const LandingPage = class LandingPage extends Component {
 LandingPage.propTypes = {
   location: PropTypes.any,
   params: PropTypes.object,
-}
+};
 
 export default withRouter(LandingPage);

@@ -5,14 +5,13 @@ import capToCamelCase from './../../util/transform/capToCamelCase';
 
 import Container from './style/Container';
 import HomeLink from './style/HomeLink';
-export default class BreadCrumb extends Component {
 
+export default class BreadCrumb extends Component {
   constructor(props) {
     super(props);
   }
 
   render() {
-
     const {
       content,
       style,
@@ -25,10 +24,10 @@ export default class BreadCrumb extends Component {
     const {
       title,
     } = this.props.content;
-    //TODO: Link's to should be a prop!!!
+    // TODO: Link's to should be a prop!!!
     return (
       <Container>
-        <HomeLink className={`${componentCSSName}__homeLink`} href='/products/all'>Home</HomeLink> / {title}
+        <HomeLink className={`${componentCSSName}__homeLink`} href="/products/all">Home</HomeLink> / {title}
       </Container>
     );
   }

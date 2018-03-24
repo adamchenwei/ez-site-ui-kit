@@ -1,15 +1,16 @@
 import React, { Component } from 'react'; import PropTypes from 'prop-types';
-import {ContentSynchronizer} from 'ez-site-content-store';
+import { ContentSynchronizer } from 'ez-site-content-store';
 import Container from './style/Container';
 import TextBody from './style/TextBody';
 import LinkBody from './style/LinkBody';
 import CloseButton from './style/CloseButton';
+
 export default class NotificationBar extends Component {
   constructor(props) {
     super(props);
     const isClosed = false;
     // TODO - this should NOT delete but move into a callback for fine tune functionalities
-    //const isClosed = ContentSynchronizer.getProperty(this.content, 'site.flag.notificationBar.closed.manually', false);;
+    // const isClosed = ContentSynchronizer.getProperty(this.content, 'site.flag.notificationBar.closed.manually', false);;
 
     this.state = {
       show: !isClosed,
@@ -22,9 +23,9 @@ export default class NotificationBar extends Component {
   }
 
   getContentComponent(type, data) {
-    /*this.setState({
+    /* this.setState({
       show: data.showAsDefault,
-    });*/
+    }); */
     switch (type) {
       case 'textOnly':
         return <TextBody>{data.text}</TextBody>;
@@ -52,7 +53,7 @@ export default class NotificationBar extends Component {
   }
 
   render() {
-    //require('./NotificationBar.scss');
+    // require('./NotificationBar.scss');
     const type = this.props.contentType;
     const data = this.props.contentData;
     const contentComponent = this.getContentComponent(type, data);

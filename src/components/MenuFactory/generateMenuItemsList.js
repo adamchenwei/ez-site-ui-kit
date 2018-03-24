@@ -1,7 +1,7 @@
-import {ContentSynchronizer} from 'ez-site-content-store';
+import { ContentSynchronizer } from 'ez-site-content-store';
 
-module.exports = function generateMenuItemsList (menu, baseTag) {
-  let list = [];
+module.exports = function generateMenuItemsList(menu, baseTag) {
+  const list = [];
 
   const {
     menuType,
@@ -10,10 +10,9 @@ module.exports = function generateMenuItemsList (menu, baseTag) {
 
   switch (menuType) {
     case 'custom': {
-      menuItems.map(
-        (menuItem, index) => {
+      menuItems.map((menuItem, index) => {
           list.push(constructMenuItem(menuItem, baseTag));
-        }
+        },
       );
       break;
     }
@@ -22,7 +21,7 @@ module.exports = function generateMenuItemsList (menu, baseTag) {
     }
   }
   return list;
-}
+};
 
 function constructMenuItem(menuItem, baseTag) {
   const menuBarItem = menuItem.componentName;
@@ -42,8 +41,8 @@ function constructMenuItem(menuItem, baseTag) {
     }
     case 'filter': {
       const collectionPath = menuItem.content.collectionName
-      ? `/${content.collectionName}`
-      : '';
+        ? `/${content.collectionName}`
+        : '';
       const path = `${collectionPath}/${menuItem.content.type}/${menuItem.content.name}`;
       const title = menuItem.content.link.name;
       return {

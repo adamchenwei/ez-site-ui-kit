@@ -1,7 +1,8 @@
-const path = require('path');
-//const HtmlWebpackPlugin = require('html-webpack-plugin');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-const DefinePlugin = require('webpack').DefinePlugin;
+// const HtmlWebpackPlugin = require('html-webpack-plugin');
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
+import { DefinePlugin } from 'webpack';
+import { path } from 'path';
+
 const Defined = new DefinePlugin({
   'process.env.NODE_ENV': JSON.stringify('production')
 });
@@ -14,13 +15,15 @@ const SOURCE_DIR = './src';
 //   inject: 'body'
 // });
 
-module.exports = env => {
+module.exports = (env) => {
+  /* eslint-disable */
   console.log(`Environment Configs: ${JSON.stringify(env) || 'Default'}`);
   console.log(`
   Available Configs:
   --env.watch = true / false //for allow webpack to watch build
   `)
-  let environment = env || {};
+  /* eslint-enable */
+  const environment = env || {};
   const {
     watch,
     analyze,
@@ -51,33 +54,34 @@ module.exports = env => {
     // Relative to bundles output directory.
     statsFilename: 'stats.json',
     // Options for `stats.toJson()` method.
-    // For example you can exclude sources of your modules from stats file with `source: false` option.
+    // For example you can exclude sources of your modules
+    // from stats file with `source: false` option.
     // See more options here: https://github.com/webpack/webpack/blob/webpack-1/lib/Stats.js#L21
     statsOptions: null,
     // Log level. Can be 'info', 'warn', 'error' or 'silent'.
-    logLevel: 'info'
+    logLevel: 'info',
   });
 
   return {
-    entry: SOURCE_DIR + '/index.js',
+    entry: `${SOURCE_DIR}/index.js`,
     output: {
-      path: path.resolve(__dirname, "dist"),
+      path: path.resolve(__dirname, 'dist'),
       filename: 'index.js',
-      libraryTarget: "commonjs"
+      libraryTarget: 'commonjs',
     },
     module: {
       loaders: [
         { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
         { test: /\.jsx?$/, loader: 'babel-loader', exclude: /node_modules/ }
-      ]
+      ],
     },
     watchOptions: {
       aggregateTimeout: 300,
-      poll: 1000
+      poll: 1000,
     },
     watch: Boolean(watch),
     plugins: [Defined, configedAnalyzer],
-    //plugins: [HtmlWebpackPluginConfig]
+    // plugins: [HtmlWebpackPluginConfig]
     externals: {
       react: 'react',
       reactstrap: 'reactstrap',
@@ -88,7 +92,7 @@ module.exports = env => {
         amd: 'react-dom',
         umd: 'react-dom',
       },
-      'axios': {
+      axios: {
         root: 'axios',
         commonjs2: 'axios',
         commonjs: 'axios',
@@ -130,7 +134,7 @@ module.exports = env => {
         amd: 'react-transition-group',
         umd: 'react-transition-group',
       },
-      'lodash': {
+      lodash: {
         root: 'lodash',
         commonjs2: 'lodash',
         commonjs: 'lodash',
@@ -151,7 +155,6 @@ module.exports = env => {
         amd: 'material-ui',
         umd: 'material-ui',
       },
-      
-    }
+    },
   };
 }

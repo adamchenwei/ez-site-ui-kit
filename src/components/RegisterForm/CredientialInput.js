@@ -45,8 +45,7 @@ class CredentialInput extends React.Component {
           value={contentObjectPropertyValue}
           type={inputType}
           onChange={event =>
-            this.props.handleFormChange(
-              event, contentObjectName
+            this.props.handleFormChange(event, contentObjectName,
             )}
         />
       </FormControl>

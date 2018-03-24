@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import mediaQuery from  "./../../../../theme/styled-components/mediaQuery";
+import mediaQuery from './../../../../theme/styled-components/mediaQuery';
 
 module.exports = styled.section`
   position: relative;
@@ -18,8 +18,8 @@ module.exports = styled.section`
 
   ${mediaQuery.mobileS`
     font-size: 24px;`
-  }
+}
   ${mediaQuery.tablet`
     font-size: 18px;`
-  }
+}
 `;

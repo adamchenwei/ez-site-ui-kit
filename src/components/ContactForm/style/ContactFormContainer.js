@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 module.exports = styled.form`
-  grid-area: form-contact-container${props => props.gridAreaId ? `-${props.gridAreaId}` : ''};
+  grid-area: form-contact-container${props => (props.gridAreaId ? `-${props.gridAreaId}` : '')};
   display: grid;
   grid-column-gap: 10px;
   grid-row-gap: 14px;

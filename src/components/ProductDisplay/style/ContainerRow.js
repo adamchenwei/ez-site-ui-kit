@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {Row} from 'reactstrap';
+import { Row } from 'reactstrap';
 
 module.exports = styled(Row)`
   font-size: 18px;

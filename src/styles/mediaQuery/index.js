@@ -1,16 +1,16 @@
 import { css } from 'styled-components';
 
-const mobileS= 320;
-const mobileM= 375;
-const mobileL= 425;
+const mobileS = 320;
+const mobileM = 375;
+const mobileL = 425;
 
-const tablet= 768;
+const tablet = 768;
 
-const laptop= 1024;
-const laptopL= 1440;
+const laptop = 1024;
+const laptopL = 1440;
 
 const mediaQuery = {
-  'mobileS': (...args) =>css`
+  mobileS: (...args) => css`
     @media (min-width: ${mobileS}px) {
       ${css(...args)}
     }
@@ -25,8 +25,7 @@ const mediaQuery = {
   //     ${css(...args)}
   //   }
   // `,
-}
-
+};
 
 
 // $mobile-s: 320px;

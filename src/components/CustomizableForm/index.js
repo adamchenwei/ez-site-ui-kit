@@ -11,14 +11,17 @@ export default class CustomizableForm extends Component {
   }
 
   render() {
-    let {
+    const {
       style,
       receiverEmail,
       instruction,
     } = this.props;
     return (
-      <FormContainer style={style} action={`https://formspree.io/${receiverEmail}`}
-        method="POST">
+      <FormContainer
+        style={style}
+        action={`https://formspree.io/${receiverEmail}`}
+        method="POST"
+      >
 
         {instruction.map((config) => {
           const {
@@ -36,10 +39,10 @@ export default class CustomizableForm extends Component {
               inputType={inputType}
               placeholderText={placeholderText}
             />
-          )
+          );
         })}
         <FormSubmitButton type="submit" value="Send" />
-    </FormContainer>
+      </FormContainer>
     );
   }
 }

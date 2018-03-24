@@ -4,7 +4,6 @@ import getGridComponent from './../../util/get/getGridComponent';
 import consoleShow from './../../util/debug/consoleShow';
 
 export default class GridItemShell extends Component {
-
   render() {
     const userCustomStyleClassNames = concatCssClasses(this.props.gridStyle) || '';
     const containerLevelStyle = `gridItemShell__container original ${userCustomStyleClassNames}`;
@@ -38,9 +37,12 @@ export default class GridItemShell extends Component {
     const customStyle = this.props.gridCustomStyle || {};
     const noCustomStyleAvailable = !Object.keys(customStyle).length && customStyle.constructor === Object;
     return (
-      <section className={composedStyles} style={
+      <section
+        className={composedStyles}
+        style={
         !noCustomStyleAvailable ? customStyle.container.inlineStyles : null
-      }>
+      }
+      >
         {this.props.children}
       </section>
     );

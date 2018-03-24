@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {gridAreaName} from './../../../styles/helpers';
+import { gridAreaName } from './../../../styles/helpers';
 
 module.exports = styled.span`
   width: 32px;

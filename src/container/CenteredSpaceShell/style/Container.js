@@ -6,4 +6,4 @@ export default styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-`
+`;

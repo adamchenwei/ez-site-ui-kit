@@ -1,4 +1,4 @@
-module.exports ={
+module.exports = {
   Container: require('./Container'),
-  //MenuItem: require('./MenuItem'),
-}
+  // MenuItem: require('./MenuItem'),
+};

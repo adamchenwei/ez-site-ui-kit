@@ -10,7 +10,6 @@ import {
 import scrollToDom from './../../util/layout/scrollToDom';
 
 export default class MenuBarNew extends Component {
-
   constructor(props) {
     super(props);
   }
@@ -24,7 +23,7 @@ export default class MenuBarNew extends Component {
   }
 
   render() {
-    let {
+    const {
       menuItems,
       customStyles,
     } = this.props;
@@ -36,18 +35,18 @@ export default class MenuBarNew extends Component {
         ref={(element) => {
           this.MenuBarTop = element;
         }}
-        gridAreaId={''}>
+        gridAreaId=""
+      >
         {
-          menuItems.map((menuItem, index) => {
-            return (
-              <MenuItemBox key={index}>
-                <MenuItemLink
-                  href={menuItem.path}>
-                  {menuItem.title}
-                </MenuItemLink>
-              </MenuItemBox>
-            )
-          })
+          menuItems.map((menuItem, index) => (
+            <MenuItemBox key={index}>
+              <MenuItemLink
+                href={menuItem.path}
+              >
+                {menuItem.title}
+              </MenuItemLink>
+            </MenuItemBox>
+            ))
         }
       </Container>
     );
@@ -58,4 +57,4 @@ MenuBarNew.propTypes = {
   menuItems: PropTypes.array.isRequired,
   customStyles: PropTypes.object,
   scrollToHere: PropTypes.bool,
-}
+};

@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import {
-  Container,
-} from './../Common';
+import { Container } from './../Common';
 import Paper from 'material-ui/Paper';
 import Card from 'material-ui/Card';
 import Button from 'material-ui/Button';
@@ -11,16 +9,14 @@ import CredentialInput from './CredientialInput';
 import axios from 'axios';
 
 export default class LoginForm extends Component {
-
   constructor(props) {
     super(props);
     this.state = {
       loggingIn: props.loggingIn || false,
-    }
+    };
     this.handleFormChange = this.handleFormChange.bind(this);
     this.changeLoggingInState = this.changeLoggingInState.bind(this);
     this.login = this.login.bind(this);
-
   }
 
   login() {
@@ -32,7 +28,7 @@ export default class LoginForm extends Component {
     setTimeout(() => {
       this.setState({
         loggingIn: state,
-      })
+      });
     });
   }
   handleFormChange(event, propertyName) {
@@ -40,7 +36,7 @@ export default class LoginForm extends Component {
   }
 
   render() {
-    let {
+    const {
       content,
       style,
       type,
@@ -56,20 +52,20 @@ export default class LoginForm extends Component {
       this.changeLoggingInState(false);
     }
 
-    let formStyle = {
+    const formStyle = {
       container: {
         marginTop: '24px',
-        marginBottom: '24px'
+        marginBottom: '24px',
       },
-    }
+    };
     if (layout === 'standAlone') {
-      formStyle.container.display='flex';
-      formStyle.container.flexFlow='column';
+      formStyle.container.display = 'flex';
+      formStyle.container.flexFlow = 'column';
       formStyle.credentialInputs = {
         display: 'flex',
         flexFlow: 'column',
       };
-      formStyle.avatarContainer={
+      formStyle.avatarContainer = {
         alignSelf: 'center',
         margin: '24px',
         avatar: {
@@ -77,8 +73,8 @@ export default class LoginForm extends Component {
         },
         phrase: {
           textAlign: 'center',
-        }
-      }
+        },
+      };
     }
     const returnToRoute = getReturnToRoute();
     return (
@@ -86,45 +82,45 @@ export default class LoginForm extends Component {
         {
           userInfo.loggedIn
           ? <section style={formStyle.avatarContainer || null}>
-              <h1 style={formStyle.avatarContainer.phrase || null}>Welcome!</h1>
-              <Avatar style={formStyle.avatarContainer.avatar || null}>
-                {userInfo.displayName
+            <h1 style={formStyle.avatarContainer.phrase || null}>Welcome!</h1>
+            <Avatar style={formStyle.avatarContainer.avatar || null}>
+              {userInfo.displayName
                 ? userInfo.displayName.charAt(0)
                 : 'ME'}
-              </Avatar>
+            </Avatar>
 
-              {
+            {
                 returnToRoute
                 ? <p style={formStyle.avatarContainer.phrase || null}>Bring me back to <a href={returnToRoute.uri}>{returnToRoute.name}</a></p>
                 : null
               }
             </section>
           : <section style={formStyle.credentialInputs}>
-              <CredentialInput
-                htmlIdName={'UserNameInput'}
-                inputTitle={'User Email'}
-                inputType={'email'}
-                contentObjectName={'userName'}
-                contentEmptyState={{userName: ''}}
-                contentObjectPropertyValue={userInfo.userName}
-                contentObjectPropertyName={''}
-                index={null}
-                event={null}
-                handleFormChange={(event)=>{this.handleFormChange(event, 'userName')}}
-              />
+            <CredentialInput
+              htmlIdName="UserNameInput"
+              inputTitle="User Email"
+              inputType="email"
+              contentObjectName="userName"
+              contentEmptyState={{ userName: '' }}
+              contentObjectPropertyValue={userInfo.userName}
+              contentObjectPropertyName=""
+              index={null}
+              event={null}
+              handleFormChange={(event) => { this.handleFormChange(event, 'userName'); }}
+            />
 
-              <CredentialInput
-                htmlIdName={'PasswordInput'}
-                inputTitle={'Password'}
-                inputType={'password'}
-                contentObjectName={'password'}
-                contentEmptyState={{password: ''}}
-                contentObjectPropertyValue={userInfo.password}
-                contentObjectPropertyName={'password'}
-                index={null}
-                event={null}
-                handleFormChange={(event)=>{this.handleFormChange(event, 'password')}}
-              />
+            <CredentialInput
+              htmlIdName="PasswordInput"
+              inputTitle="Password"
+              inputType="password"
+              contentObjectName="password"
+              contentEmptyState={{ password: '' }}
+              contentObjectPropertyValue={userInfo.password}
+              contentObjectPropertyName="password"
+              index={null}
+              event={null}
+              handleFormChange={(event) => { this.handleFormChange(event, 'password'); }}
+            />
             </section>
         }
 
@@ -146,7 +142,7 @@ export default class LoginForm extends Component {
               Log Out
             </Button>
           : <Button raised disabled={this.state.loggingIn} color="primary" onClick={this.login}>
-              {
+            {
                 this.state.loggingIn
                 ? 'Loading...'
                 : 'Log In'
@@ -173,4 +169,4 @@ LoginForm.propTypes = {
   handleLoginFormChange: PropTypes.any,
   statusCode: PropTypes.string,
   getReturnToRoute: PropTypes.any,
-}
+};

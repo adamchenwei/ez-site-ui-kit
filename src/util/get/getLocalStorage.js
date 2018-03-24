@@ -1,2 +1,2 @@
-let localStorage = localStorage || null;
+const localStorage = localStorage || null;
 export default localStorage;

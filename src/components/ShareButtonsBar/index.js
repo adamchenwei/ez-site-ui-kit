@@ -6,11 +6,13 @@ import {
 import {
   ShareButtons,
   ShareCounts,
-  generateShareIcon
+  generateShareIcon,
 } from 'react-share';
 import Link from 'material-ui-icons/Link';
 import getWindow from './../../util/get/getWindow';
+
 const setComponentWrapperContainerClasses = require('../../util/setup/setComponentWrapperContainerClasses');
+
 import LinkIconContainer from './style/LinkIconContainer';
 
 export default class ShareButtonsBar extends Component {
@@ -19,7 +21,7 @@ export default class ShareButtonsBar extends Component {
   }
 
   render() {
-    let {
+    const {
       content,
       style,
       type,
@@ -65,13 +67,17 @@ export default class ShareButtonsBar extends Component {
       <Container
         hasMarginBottom
         componentName={containerName}
-        gridAreaId={''} style={style}>
-        {homeLink ? <IconHolder style={{backgroundColor: '#11111108'}}>
+        gridAreaId=""
+        style={style}
+      >
+        {homeLink ? <IconHolder style={{ backgroundColor: '#11111108' }}>
           <LinkIconContainer href={homeLink}><Link /></LinkIconContainer>
         </IconHolder> : null}
         <IconHolder>
-          <FacebookShareButton url={locationHref}
-            quote={sharedTitle}>
+          <FacebookShareButton
+            url={locationHref}
+            quote={sharedTitle}
+          >
             <FacebookIcon size={32} />
           </FacebookShareButton>
         </IconHolder>
@@ -83,11 +89,13 @@ export default class ShareButtonsBar extends Component {
         </IconHolder>
 
         <IconHolder>
-          <PinterestShareButton url={locationHref}
+          <PinterestShareButton
+            url={locationHref}
             description={sharedDescriptionText}
             media={absoluteUrl}
-            hashtags={hashtags}>
-            <PinterestIcon size={32}/>
+            hashtags={hashtags}
+          >
+            <PinterestIcon size={32} />
           </PinterestShareButton>
         </IconHolder>
 
@@ -107,7 +115,7 @@ ShareButtonsBar.propTypes = {
   homeLink: PropTypes.string,
   hasMarginBottom: PropTypes.bool,
   moreLink: PropTypes.objectOf(PropTypes.object),
-}
+};
 
 ShareButtonsBar.defaultProps = {
   content: {},
@@ -120,4 +128,4 @@ ShareButtonsBar.defaultProps = {
   homeLink: '',
   hasMarginBottom: false,
   moreLink: {},
-}
+};

@@ -12,12 +12,13 @@ export default class ListingItemMask extends Component {
     super(props);
     consoleShow('props', {
       componentName: 'ListingItemMask',
-      props: this.props});
+      props: this.props,
+    });
     this.childComponent.bind(this);
   }
 
   childComponent(type, data) {
-    return <span className='templateComponent__textBody'>{data}</span>;
+    return <span className="templateComponent__textBody">{data}</span>;
   }
 
   toggleShade(event) {
@@ -40,16 +41,17 @@ export default class ListingItemMask extends Component {
     const data = this.props.content;
     const content = this.props.content;
 
-    //const contentComponent = this.childComponent(type, data);
-    
+    // const contentComponent = this.childComponent(type, data);
+
     return (
       <Container hide={!show}>
-        {/*Shade should always BEFORE content to avoid bleeding opacity!!!*/}
+        {/* Shade should always BEFORE content to avoid bleeding opacity!!! */}
         <Shade />
         <ClickableLink href={`/${collectionName}/detail/${path}`} />
         <Summary>
           <span>
-          {title}</span> {
+            {title}
+          </span> {
             price ? <span>${price}</span> : null
           }
         </Summary>

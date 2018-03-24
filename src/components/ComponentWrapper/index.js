@@ -3,14 +3,12 @@ import PropTypes from 'prop-types';
 import concatCssClasses from './../../util/concat/concatCssClasses';
 import capToCamelCase from './../../util/transform/capToCamelCase';
 
-export default class ComponentWrapper extends Component { 
-
+export default class ComponentWrapper extends Component {
   constructor(props) {
     super(props);
   }
 
   render() {
-
     let {
       style,
       containerLevelStyle,
@@ -21,8 +19,8 @@ export default class ComponentWrapper extends Component {
       style = {
         container: {
           classes: [],
-        }
-      }
+        },
+      };
     }
     containerLevelStyle = containerLevelStyle || 'component__container';
     return (
@@ -31,7 +29,7 @@ export default class ComponentWrapper extends Component {
       </section>
     );
   }
-};
+}
 
 ComponentWrapper.propTypes = {
   style: PropTypes.object,

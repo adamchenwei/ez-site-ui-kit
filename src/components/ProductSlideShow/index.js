@@ -1,16 +1,13 @@
 import React, { Component } from 'react'; import PropTypes from 'prop-types';
-import {
-  Container,
-} from './../Common';
+import { Container } from './../Common';
 
 export default class _TemplateComponent extends Component {
-
   constructor(props) {
     super(props);
   }
 
   render() {
-    let {
+    const {
       content,
       style,
       type,
@@ -19,7 +16,8 @@ export default class _TemplateComponent extends Component {
     return (
       <Container
         componentName={COMPONENT_NAME}
-        gridAreaId={''}>
+        gridAreaId=""
+      >
         SUCCESS
       </Container>
     );
@@ -30,4 +28,4 @@ _TemplateComponent.propTypes = {
   content: PropTypes.object,
   style: PropTypes.object,
   type: PropTypes.string,
-}
+};

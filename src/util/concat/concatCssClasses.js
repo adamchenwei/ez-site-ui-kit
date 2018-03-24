@@ -1,5 +1,5 @@
 export default function concatCssClasses(classesAsArray) {
-  if (!classesAsArray || !classesAsArray.length ) return '';
+  if (!classesAsArray || !classesAsArray.length) return '';
 
   let finalClasses = ' ';
   classesAsArray.forEach((item, index) => {

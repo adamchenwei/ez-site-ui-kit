@@ -16,7 +16,6 @@ import { FormControl, FormHelperText } from 'material-ui/Form';
 import Select from 'material-ui/Select';
 
 class CredentialInput extends React.Component {
-
   constructor() {
     super();
   }
@@ -46,8 +45,7 @@ class CredentialInput extends React.Component {
           value={contentObjectPropertyValue}
           type={inputType}
           onChange={event =>
-            this.props.handleFormChange(
-              event, contentObjectName
+            this.props.handleFormChange(event, contentObjectName,
             )}
         />
       </FormControl>

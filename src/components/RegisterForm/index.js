@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import {
-  Container,
-} from './../Common';
-import {Paper, Card, Button, Avatar} from 'material-ui';
+import { Container} from './../Common';
+import { Paper, Card, Button, Avatar } from 'material-ui';
 import CredentialInput from './CredientialInput';
 import axios from 'axios';
 import ContentSynchronizer from 'ez-site-content-store';
@@ -13,11 +11,10 @@ export default class RegisterForm extends Component {
     super(props);
     this.state = {
       isRegistering: props.isRegistering || false,
-    }
+    };
     this.handleFormChange = this.handleFormChange.bind(this);
     this.changeRegisteringState = this.changeRegisteringState.bind(this);
     this.registerNewUser = this.registerNewUser.bind(this);
-
   }
 
   registerNewUser() {
@@ -26,23 +23,26 @@ export default class RegisterForm extends Component {
       this.props.userInfo.userName,
       this.props.userInfo.password,
       this.props.userInfo.displayName,
-      this.changeRegisteringState);
+      this.changeRegisteringState,
+    );
   }
 
   changeRegisteringState(state) {
     setTimeout(() => {
       this.setState({
         isRegistering: state,
-      })
+      });
     });
   }
-  handleFormChange(event,
-    propertyName) {
+  handleFormChange(
+    event,
+    propertyName,
+  ) {
     this.props.handleRegisterFormChange(event, propertyName);
   }
 
   render() {
-    let {
+    const {
       content,
       style,
       type,
@@ -58,77 +58,77 @@ export default class RegisterForm extends Component {
       this.changeRegisteringState(false);
     }
 
-    let formStyle = {
+    const formStyle = {
       container: {
         marginTop: '24px',
-        marginBottom: '24px'
+        marginBottom: '24px',
       },
-    }
+    };
     if (layout === 'standAlone') {
-      formStyle.container.display='flex';
-      formStyle.container.flexFlow='column';
+      formStyle.container.display = 'flex';
+      formStyle.container.flexFlow = 'column';
       formStyle.credentialInputs = {
         display: 'flex',
         flexFlow: 'column',
       };
-      formStyle.avatarContainer={
+      formStyle.avatarContainer = {
         alignSelf: 'center',
         margin: '24px',
         avatar: {
           margin: '0 auto',
-        }
-      }
+        },
+      };
     }
     return (
       <Paper style={formStyle.container || null}>
         {
           userInfo.loggedIn
           ? <section style={formStyle.avatarContainer || null}>
-              <h1>Welcome!</h1>
-              <Avatar style={formStyle.avatarContainer.avatar || null}>
-                {userInfo.displayName
+            <h1>Welcome!</h1>
+            <Avatar style={formStyle.avatarContainer.avatar || null}>
+              {userInfo.displayName
                 ? userInfo.displayName.charAt(0)
                 : 'ME'}
-              </Avatar>
+            </Avatar>
             </section>
           : <section style={formStyle.credentialInputs}>
-              <CredentialInput
-                htmlIdName={'DisplayNameInput'}
-                inputTitle={'Display Name'}
-                inputType={'text'}
-                contentObjectName={'displayName'}
-                contentEmptyState={{displayName: ''}}
-                contentObjectPropertyValue={userInfo.displayName}
-                contentObjectPropertyName={''}
-                index={null}
-                event={null}
-                handleFormChange={(event)=>{this.handleFormChange(event, 'displayName')}}
-              />
-              <CredentialInput
-                htmlIdName={'UserNameInput'}
-                inputTitle={'User Email'}
-                inputType={'email'}
-                contentObjectName={'userName'}
-                contentEmptyState={{userName: ''}}
-                contentObjectPropertyValue={userInfo.userName}
-                contentObjectPropertyName={''}
-                index={null}
-                event={null}
-                handleFormChange={(event)=>{this.handleFormChange(event, 'userName')}}
-              />
+            <CredentialInput
+              htmlIdName="DisplayNameInput"
+              inputTitle="Display Name"
+              inputType="text"
+              contentObjectName="displayName"
+              contentEmptyState={{ displayName: '' }}
+              contentObjectPropertyValue={userInfo.displayName}
+              contentObjectPropertyName=""
+              index={null}
+              event={null}
+              handleFormChange={(event) => { this.handleFormChange(event, 'displayName'); }}
+            />
+            <CredentialInput
+              htmlIdName="UserNameInput"
+              inputTitle="User Email"
+              inputType="email"
+              contentObjectName="userName"
+              contentEmptyState={{ userName: '' }}
+              contentObjectPropertyValue={userInfo.userName}
+              contentObjectPropertyName=""
+              index={null}
+              event={null}
+              handleFormChange={(event) => { this.handleFormChange(event, 'userName'); }}
+            />
 
-              <CredentialInput
-                htmlIdName={'PasswordInput'}
-                inputTitle={'Password'}
-                inputType={'password'}
-                contentObjectName={'password'}
-                contentEmptyState={{password: ''}}
-                contentObjectPropertyValue={userInfo.password}
-                contentObjectPropertyName={'password'}
-                index={null}
-                event={null}
-                handleFormChange={(event)=>{this.handleFormChange(event, 'password')}}
-              />
+            <CredentialInput
+              htmlIdName="PasswordInput"
+              inputTitle="Password"
+              inputType="password"
+              contentObjectName="password"
+              contentEmptyState={{ password: '' }}
+              contentObjectPropertyValue={userInfo.password}
+              contentObjectPropertyName="password"
+              index={null}
+              event={null}
+              handleFormChange={(event) => { this.handleFormChange(event, 'password'); }}
+            />
             </section>
         }
 
@@ -162,7 +162,7 @@ export default class RegisterForm extends Component {
               Log Out
             </Button>
           : <Button raised disabled={this.state.isRegistering && !statusCode} color="primary" onClick={this.registerNewUser}>
-              {
+            {
                 this.state.isRegistering && !statusCode
                 ? 'Registering...'
                 : 'Register & Enjoy!'
@@ -189,4 +189,4 @@ RegisterForm.propTypes = {
   handleRegisterFormChange: PropTypes.any,
   statusCode: PropTypes.string,
   postEmailValidationPhrase: PropTypes.any,
-}
+};

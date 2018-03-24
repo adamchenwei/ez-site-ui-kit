@@ -123,5 +123,5 @@ const MOCK_INSTRUCTION_2 = [
 ];
 
 storiesOf('Customizable Form', module)
-.add('3 text input fields with custom text', () => <CustomizableForm instruction={MOCK_INSTRUCTION_1}/>)
-.add('multiple mixed fields with custom text', () => <CustomizableForm instruction={MOCK_INSTRUCTION_2}/>)
+  .add('3 text input fields with custom text', () => <CustomizableForm instruction={MOCK_INSTRUCTION_1} />)
+  .add('multiple mixed fields with custom text', () => <CustomizableForm instruction={MOCK_INSTRUCTION_2} />);

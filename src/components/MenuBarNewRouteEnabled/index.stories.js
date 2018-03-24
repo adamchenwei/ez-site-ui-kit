@@ -6,7 +6,7 @@ import {
   buildMenuItems,
   buildMenuFilterItems,
 } from './../MobileMenu/factory/menu';
-import {DummyStager, DummyBar} from './../Common';
+import { DummyStager, DummyBar } from './../Common';
 import {
   MasterMenuLong,
   MasterMenuLongWithLongText,
@@ -17,21 +17,20 @@ import {
   slidesMultiple,
   footerBarThreeIcons,
 } from './../../../stories/fakeData';
-import {BrowserRouter as Router} from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 const menuBarItems = buildMenuItems(2);
 
 storiesOf(`
 Menu Bar New - RouteEnabled
 `, module)
-.add('standard amount of items', () => {
-  return (
+  .add('standard amount of items', () => (
     <Router>
-    <MenuBarNewRouteEnabled
-      menuItems={menuBarItems} />
+      <MenuBarNewRouteEnabled
+        menuItems={menuBarItems}
+      />
     </Router>
-  )
-})
+  ));
 // .add('standard amount of items with top and bottom neighbors', () => {
 //   return (
 //     <section>

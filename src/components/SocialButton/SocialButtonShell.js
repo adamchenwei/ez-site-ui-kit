@@ -1,7 +1,7 @@
 import React, { Component } from 'react'; import PropTypes from 'prop-types';
 import concatCssClasses from './../../util/concat/concatCssClasses';
 import capToCamelCase from './../../util/transform/capToCamelCase';
-import {IconBoxLink} from './style';
+import { IconBoxLink } from './style';
 
 export default class SocialButtonShell extends Component {
   constructor(props) {
@@ -9,7 +9,7 @@ export default class SocialButtonShell extends Component {
   }
 
   render() {
-    //require('./SocialButtonShell.scss');
+    // require('./SocialButtonShell.scss');
 
     let {
       style,
@@ -22,15 +22,18 @@ export default class SocialButtonShell extends Component {
       style = {
         container: {
           classes: [],
-        }
-      }
+        },
+      };
     }
 
     return (
-      <IconBoxLink href={linkUrl || '/'} className={containerLevelStyle}
-      data-event-category="Links"
-      data-event-action="Click"
-      data-event-label={linkUrl}>
+      <IconBoxLink
+        href={linkUrl || '/'}
+        className={containerLevelStyle}
+        data-event-category="Links"
+        data-event-action="Click"
+        data-event-label={linkUrl}
+      >
         {children}
       </IconBoxLink>
     );
@@ -40,4 +43,4 @@ SocialButtonShell.propTypes = {
   style: PropTypes.object,
   containerLevelStyle: PropTypes.string,
   linkUrl: PropTypes.string,
-}
+};

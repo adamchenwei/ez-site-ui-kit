@@ -9,12 +9,13 @@ export default class YardSales extends Component {
     super(props);
     consoleShow('props', {
       componentName: 'YardSales',
-      props: this.props});
+      props: this.props,
+    });
     this.childComponent.bind(this);
   }
 
   childComponent(type, data) {
-    return <span className='templateComponent__textBody'>{data}</span>;
+    return <span className="templateComponent__textBody">{data}</span>;
   }
 
   render() {
@@ -34,21 +35,20 @@ export default class YardSales extends Component {
       },
     };
     return (
-      <section className='yardSales__container'>
-        {itemsForSale.map((item, index) => {
-          return (
-            <GridItemShell
-              gridContent=''
-              gridResponsiveProperties={responsiveConfig}
-              key={index.toString()} >
-              <ListingItem
-                content={item}
-                type='yardSaleItem'
-                style={[]}
-              />
-            </GridItemShell>
-          );
-        })}
+      <section className="yardSales__container">
+        {itemsForSale.map((item, index) => (
+          <GridItemShell
+            gridContent=""
+            gridResponsiveProperties={responsiveConfig}
+            key={index.toString()}
+          >
+            <ListingItem
+              content={item}
+              type="yardSaleItem"
+              style={[]}
+            />
+          </GridItemShell>
+          ))}
       </section>
     );
   }

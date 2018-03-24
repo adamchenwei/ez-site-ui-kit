@@ -2,10 +2,9 @@ import React, { Component } from 'react'; import PropTypes from 'prop-types';
 import concatCssClasses from './../../util/concat/concatCssClasses';
 import getGridComponent from './../../util/get/getGridComponent';
 import consoleShow from './../../util/debug/consoleShow';
-import {Col} from 'reactstrap';
+import { Col } from 'reactstrap';
 
 export default class GridItem extends Component {
-
   render() {
     const GridComponent = getGridComponent(this.props.gridComponent, this.props.gridContent, this.props.gridType);
     const userCustomStyleClassNames = concatCssClasses(this.props.gridStyle) || '';
@@ -25,7 +24,7 @@ export default class GridItem extends Component {
       xl: '',
     };
 
-    //Reactstrap Component Instead!
+    // Reactstrap Component Instead!
 
 
     const customStyle = this.props.gridCustomStyle || {};

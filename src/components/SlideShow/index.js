@@ -9,7 +9,6 @@ import {
 import SlideButton from './SlideButton';
 
 export default class SlideShow extends Component {
-
   constructor(props) {
     super(props);
 
@@ -17,7 +16,7 @@ export default class SlideShow extends Component {
       opacity: this.props.slides ? 1 : 0,
       url: this.props.slides.length ? this.props.slides[0].content.url : '',
       currentSlideId: 0,
-    }
+    };
     this.goToSlide = this.goToSlide.bind(this);
     this.slideLooper = null;
   }
@@ -55,7 +54,7 @@ export default class SlideShow extends Component {
         if (loopCounter >= LOOP_COUNT) {
           loopCounter = 0;
         } else {
-          loopCounter ++;
+          loopCounter++;
         }
         url = slides[loopCounter].content.url;
         if (this.slideLooper) {
@@ -63,7 +62,7 @@ export default class SlideShow extends Component {
             url,
           });
         }
-      }, TRANSITION_INTERVAL*2.5);
+      }, TRANSITION_INTERVAL * 2.5);
 
       setTimeout(() => {
         url = slides[loopCounter].content.url;
@@ -73,16 +72,14 @@ export default class SlideShow extends Component {
             opacity: 1,
           });
         }
-      }, TRANSITION_INTERVAL*3.5);
+      }, TRANSITION_INTERVAL * 3.5);
     }, LOOP_INTERVAL);
   }
 
   goToSlide(keyValue) {
     if (!keyValue && keyValue !== 0) return;
     const slides = this.props.slides;
-    const currentSlide = slides.filter((slide) => {
-      return slide.id === keyValue;
-    });
+    const currentSlide = slides.filter(slide => slide.id === keyValue);
     const slideUrl = currentSlide.length
       ? currentSlide[0].content.url
       : this.props.slides[0].content.url;
@@ -95,7 +92,7 @@ export default class SlideShow extends Component {
   }
 
   render() {
-    let {
+    const {
       slides,
     } = this.props;
     const COMPONENT_NAME = 'SlideShow';
@@ -103,12 +100,13 @@ export default class SlideShow extends Component {
     return (
       <Container
         componentName={COMPONENT_NAME}
-        gridAreaId={''}
+        gridAreaId=""
         style={{
           width: '100%',
           overflow: 'hidden',
           marginBottom: '16px',
-        }}>
+        }}
+      >
         <SlidesBox style={{
           alignSelf: 'center',
           height: '100%',
@@ -118,25 +116,28 @@ export default class SlideShow extends Component {
           justifyContent: 'center',
           alignItems: 'center',
           flexDirection: 'column',
-        }}>
-          <img src={this.state.url || ''} style={{
+        }}
+        >
+          <img
+            src={this.state.url || ''}
+            style={{
             width: '100%',
             transition: 'opacity 300ms ease-in-out',
             opacity: `${this.state.opacity}`,
             cursor: 'default',
-          }}/>
+          }}
+          />
 
 
         </SlidesBox>
         <SlideButtonsBox>
           {
-            slides.map((slide, index) => {
-              return <SlideButton
-                key={index}
-                currentSlideId={this.state.currentSlideId}
-                slideId={slide.id}
-                goToSlide={this.goToSlide} />
-            })
+            slides.map((slide, index) => (<SlideButton
+              key={index}
+              currentSlideId={this.state.currentSlideId}
+              slideId={slide.id}
+              goToSlide={this.goToSlide}
+            />))
           }
         </SlideButtonsBox>
       </Container>
@@ -146,4 +147,4 @@ export default class SlideShow extends Component {
 
 SlideShow.propTypes = {
   slides: PropTypes.array,
-}
+};

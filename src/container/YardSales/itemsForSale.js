@@ -16,7 +16,7 @@ export default [
       regular: 1,
       sale: 0.5,
     },
-    availableQuantity: 1, //99999 means unlimited
+    availableQuantity: 1, // 99999 means unlimited
     slideShow: [
       {
         name: 'front',

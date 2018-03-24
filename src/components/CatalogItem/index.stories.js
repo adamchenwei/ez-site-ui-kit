@@ -18,15 +18,15 @@ const {
 } = getACatelogItem();
 
 const location = locations[0];
-const subTitle = `${location.city || ''}, ${location.state || ''} ${location.country || ''}`
+const subTitle = `${location.city || ''}, ${location.state || ''} ${location.country || ''}`;
 
 storiesOf('CatalogItem', module)
-.add('default', () => <CatalogItem
-  id={id}
-  title={name}
-  location={location}
-  subTitle={subTitle}
-  description={description}
-  websiteUrl={website}
-  snapshots={snapshots}
-/>)
+  .add('default', () => (<CatalogItem
+    id={id}
+    title={name}
+    location={location}
+    subTitle={subTitle}
+    description={description}
+    websiteUrl={website}
+    snapshots={snapshots}
+  />));

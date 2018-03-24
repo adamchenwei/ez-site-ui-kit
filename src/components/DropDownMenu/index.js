@@ -8,10 +8,10 @@ export const DropDownMenu = styled.div`
   transition-duration: .3s;
   transition-timing-function: linear;
   overflow: hidden;
-  max-height: ${props => props.isOpen ? '100%' : '0'};
+  max-height: ${props => (props.isOpen ? '100%' : '0')};
 
   /*TODO: should be configables*/
   background: #212121;
-`
+`;
 
-export default DropDownMenu
+export default DropDownMenu;

@@ -2,7 +2,7 @@ import Product from './index';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import React from 'react';
-import {BrowserRouter as Router} from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 // const mock = {
 //   "history": {},
@@ -39,7 +39,8 @@ import {BrowserRouter as Router} from 'react-router-dom';
 //   }
 // };
 storiesOf('Product', module)
-.add('default', () => <Router>
+  .add('default', () => (<Router>
     <Product
-    productRef={'premium-raw-pistachios'}/>
-  </Router>)
+      productRef="premium-raw-pistachios"
+    />
+                         </Router>));

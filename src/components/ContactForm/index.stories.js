@@ -4,5 +4,5 @@ import { action } from '@storybook/addon-actions';
 import React from 'react';
 
 storiesOf('Contact Form', module)
-.add('basic', () => <ContactForm />)
+  .add('basic', () => <ContactForm />);
 

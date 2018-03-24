@@ -1,7 +1,7 @@
 import React, { Component } from 'react'; import PropTypes from 'prop-types';
 import consoleShow from './../../util/debug/consoleShow';
 import concatCssClasses from './../../util/concat/concatCssClasses';
-//import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import ListingItemMask from './ListingItemMask';
 import Container from './style/ListingItem/Container';
 import Display from './style/ListingItem/Display';
@@ -17,13 +17,14 @@ export default class ListingItem extends Component {
     };
     consoleShow('props', {
       componentName: 'ListingItem',
-      props: this.props});
-      this.childComponent = this.childComponent.bind(this);
-      this.toggleThing = this.toggleThing.bind(this);
+      props: this.props,
+    });
+    this.childComponent = this.childComponent.bind(this);
+    this.toggleThing = this.toggleThing.bind(this);
   }
 
   childComponent(type, data) {
-    return <span className='templateComponent__textBody'>{data}</span>;
+    return <span className="templateComponent__textBody">{data}</span>;
   }
 
   toggleThing(event) {
@@ -47,13 +48,15 @@ export default class ListingItem extends Component {
       <Container>
         <Display
           onMouseOver={this.toggleThing}
-          onMouseOut={this.toggleThing}>
+          onMouseOut={this.toggleThing}
+        >
           <ListingItemMask
             price={content.price.regular}
             title={content.title}
             collectionName={content.collectionName}
             path={content.route.name}
-            show={this.state.showMask}/>
+            show={this.state.showMask}
+          />
           <ImageAdjuster>
             <Image src={content.slideShow[0].images[0].url} />
           </ImageAdjuster>

@@ -3,17 +3,16 @@ import {
   Container,
   Link,
 } from './style';
-//import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 export default class MenuFilterItem extends Component {
-
   constructor(props) {
     super(props);
     this.toggleMenu = this.props.toggleMenu.bind(this);
   }
 
   render() {
-    let {
+    const {
       path,
       title,
     } = this.props;
@@ -22,7 +21,8 @@ export default class MenuFilterItem extends Component {
       <Container
         onClick={this.toggleMenu}
         componentName={COMPONENT_NAME}
-        gridAreaId={''}>
+        gridAreaId=""
+      >
         <Link to={path}>{title}</Link>
       </Container>
     );

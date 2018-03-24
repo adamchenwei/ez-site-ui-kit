@@ -12,16 +12,16 @@ import {
   RightColumn,
   Headline,
 } from './style';
+
 const Contact = class Contact extends Component {
-
   render() {
-
     const component = capToCamelCase('SocialIcon');
     return (
 
       <PageShell
-        containerLevelClass={''}
-        style={{}} >
+        containerLevelClass=""
+        style={{}}
+      >
         <GridItemShell>
           <Container>
             <Headline>We'd love to hear from you!</Headline>
@@ -36,5 +36,5 @@ const Contact = class Contact extends Component {
 Contact.propTypes = {
   location: PropTypes.any,
   params: PropTypes.object,
-}
+};
 export default Contact;

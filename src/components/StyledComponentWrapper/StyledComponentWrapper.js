@@ -5,8 +5,7 @@ export default class StyledComponentWrapper extends Component {
     super(props);
   }
   render() {
-
-    let {
+    const {
       children,
     } = this.props;
 

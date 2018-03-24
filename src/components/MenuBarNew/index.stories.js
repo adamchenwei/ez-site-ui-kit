@@ -6,7 +6,7 @@ import {
   buildMenuItems,
   buildMenuFilterItems,
 } from './../MobileMenu/factory/menu';
-import {DummyStager, DummyBar} from './../Common';
+import { DummyStager, DummyBar } from './../Common';
 import {
   MasterMenuLong,
   MasterMenuLongWithLongText,
@@ -23,24 +23,21 @@ const menuBarItems = buildMenuItems(2);
 storiesOf(`
 Menu Bar (New)
 `, module)
-.add('standard amount of items', () => {
-  return (
+  .add('standard amount of items', () => (
     <MenuBarNew
-      menuItems={menuBarItems} />
-  )
-})
-.add('standard amount of items with top and bottom neighbors', () => {
-  return (
+      menuItems={menuBarItems}
+    />
+  ))
+  .add('standard amount of items with top and bottom neighbors', () => (
     <section>
       <DummyBar />
       <MenuBarNew
-      menuItems={menuBarItems} />
+        menuItems={menuBarItems}
+      />
       <DummyBar />
     </section>
-  )
-})
-.add('standard amount of items with top and bottom margin 32px & top and bottom neighbors', () => {
-  return (
+  ))
+  .add('standard amount of items with top and bottom margin 32px & top and bottom neighbors', () => (
     <section>
       <DummyBar />
       <MenuBarNew
@@ -48,32 +45,28 @@ Menu Bar (New)
           marginTop: '32px',
           marginBottom: '32px',
         }}
-        menuItems={menuBarItems} />
+        menuItems={menuBarItems}
+      />
       <DummyBar />
     </section>
-  )
-})
-.add('no items should prevent menu bar from showing up', () => {
-  return (
+  ))
+  .add('no items should prevent menu bar from showing up', () => (
     <MenuBarNew
-      menuItems={[]} />
-  )
-})
-.add('long items', () => {
-  return (
+      menuItems={[]}
+    />
+  ))
+  .add('long items', () => (
     <MenuBarNew
-      menuItems={MasterMenuLong} />
-  )
-})
-.add('long items that have long phrases', () => {
-  return (
+      menuItems={MasterMenuLong}
+    />
+  ))
+  .add('long items that have long phrases', () => (
     <MenuBarNew
-      menuItems={MasterMenuLongWithLongText} />
-  )
-})
-.add('massive amount of items!', () => {
-  return (
+      menuItems={MasterMenuLongWithLongText}
+    />
+  ))
+  .add('massive amount of items!', () => (
     <MenuBarNew
-      menuItems={MasterMenuExtremelyLong} />
-  )
-})
+      menuItems={MasterMenuExtremelyLong}
+    />
+  ));

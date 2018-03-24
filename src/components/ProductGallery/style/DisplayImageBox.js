@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 module.exports = styled.section`
-  height: ${props => props.asfullHeight
+  height: ${props => (props.asfullHeight
     ? '100%'
-    : '75%'};
+    : '75%')};
   background-color: white;
 
   display: flex;

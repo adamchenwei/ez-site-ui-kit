@@ -7,6 +7,6 @@ module.exports = styled.section`
   display: flex;
   align-items: center;
   transition: opacity 300ms ease-in-out;
-  opacity: ${props=>props.hide
-    ? 0  : 1}
+  opacity: ${props => (props.hide
+    ? 0 : 1)}
 `;

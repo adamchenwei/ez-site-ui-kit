@@ -1,7 +1,9 @@
 import React, { Component, Children } from 'react';
 import PropTypes from 'prop-types';
-import { Container, Row, Col, Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle, Button } from 'reactstrap';
+import {
+  Container, Row, Col, Card, CardImg, CardText, CardBody,
+  CardTitle, CardSubtitle, Button,
+} from 'reactstrap';
 import get from 'lodash/get';
 import SnapshotDisplay from './../SnapshotDisplay';
 
@@ -38,11 +40,11 @@ export default class CatalogItem extends Component {
           <CardTitle>{title}</CardTitle>
           <CardSubtitle>{subTitle}</CardSubtitle>
           <CardText>
-              {description}
+            {description}
           </CardText>
         </CardBody>
       </Card>
-    )
+    );
   }
 }
 

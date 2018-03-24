@@ -3,6 +3,7 @@ import { action } from '@storybook/addon-actions';
 import React from 'react';
 import SiteMenuBar from './index';
 import { BrowserRouter as Router } from 'react-router-dom';
+
 const menuListStandard = [
   {
     id: 1,
@@ -119,58 +120,70 @@ const menuListLong = [
   },
 ];
 storiesOf('SiteMenuBar', module)
-.add('default', () => (
-  <Router>
-    <SiteMenuBar menuList={menuListStandard}
-      menuItemResponsiveConfig={{
+  .add('default', () => (
+    <Router>
+      <SiteMenuBar
+        menuList={menuListStandard}
+        menuItemResponsiveConfig={{
         xs: 12,
         sm: 6,
         md: 3,
         lg: 2,
         xl: 1,
       }}
-    />
-  </Router>
-))
-.add('default: long menus', () => (
-  <Router>
-    <SiteMenuBar menuList={menuListLong}
-    />
-  </Router>
-))
-.add('with custom logo component as child', () => (
-  <Router>
-    <SiteMenuBar menuList={menuListStandard}
-      menuItemResponsiveConfig={{
+      />
+    </Router>
+  ))
+  .add('default: long menus', () => (
+    <Router>
+      <SiteMenuBar menuList={menuListLong} />
+    </Router>
+  ))
+  .add('textcasing: uppercase', () => (
+    <Router>
+      <SiteMenuBar
+        menuList={menuListLong}
+        textcasing="uppercase"
+      />
+    </Router>
+  ))
+  .add('with custom logo component as child', () => (
+    <Router>
+      <SiteMenuBar
+        menuList={menuListStandard}
+        menuItemResponsiveConfig={{
         xs: 12,
         sm: 6,
         md: 3,
         lg: 2,
         xl: 1,
       }}
-    >
-      <div>Logo</div>
-    </SiteMenuBar>
-  </Router>
-))
-.add('align menu items to the left', () => (
-  <Router>
-    <SiteMenuBar menuList={menuListStandard}
-      left={'true'}
-    />
-  </Router>
-))
-.add('to left', () => (
-  <Router>
-    <SiteMenuBar menuList={menuListStandard}
-      left={'true'}
-    />
-  </Router>
-))
-.add('to left: long menus', () => (
-  <Router>
-    <SiteMenuBar menuList={menuListLong}
-      left={'true'}
-    />
-  </Router>
-))
+      >
+        <div>Logo</div>
+      </SiteMenuBar>
+    </Router>
+  ))
+  .add('align menu items to the left', () => (
+    <Router>
+      <SiteMenuBar
+        menuList={menuListStandard}
+        left="true"
+      />
+    </Router>
+  ))
+  .add('to left', () => (
+    <Router>
+      <SiteMenuBar
+        menuList={menuListStandard}
+        left="true"
+      />
+    </Router>
+  ))
+  .add('to left: long menus', () => (
+    <Router>
+      <SiteMenuBar
+        menuList={menuListLong}
+        left="true"
+      />
+    </Router>
+  ));

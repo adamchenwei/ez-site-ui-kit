@@ -10,11 +10,10 @@ import SnapshotDisplay from './../SnapshotDisplay';
 import {
   ShareButtons,
   ShareCounts,
-  generateShareIcon
+  generateShareIcon,
 } from 'react-share';
 
 export default class CatalogDetail extends Component {
-
   constructor(props) {
     super(props);
   }
@@ -36,7 +35,7 @@ export default class CatalogDetail extends Component {
     const TwitterIcon = generateShareIcon('twitter');
     const PinterestIcon = generateShareIcon('pinterest');
 
-    let {
+    const {
       title,
       style,
       type,
@@ -47,7 +46,7 @@ export default class CatalogDetail extends Component {
     } = this.props;
     const snapshotSrc = get(snapshots[0], 'url');
     return (
-      
+
       <Container>
         <SnapshotDisplay
           title={title}
@@ -59,8 +58,9 @@ export default class CatalogDetail extends Component {
         />
         <ShareButtonsBar
           hasMarginBottom
-          homeLink={website}/>
-        
+          homeLink={website}
+        />
+
       </Container>
     );
   }

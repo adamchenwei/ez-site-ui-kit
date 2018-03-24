@@ -8,7 +8,7 @@ export default class ProductSlideShow extends Component {
   }
 
   getStyle(name) {
-    //TODO: may need to expand to allow multiple styles!
+    // TODO: may need to expand to allow multiple styles!
     const styleName = name[0];
     switch (styleName) {
       case 'center-text':
@@ -21,7 +21,7 @@ export default class ProductSlideShow extends Component {
   getContentComponent(type, data) {
     switch (type) {
       case 'textOnly':
-        return <span className='productSlideShow__textBody'>{data.text}</span>;
+        return <span className="productSlideShow__textBody">{data.text}</span>;
       default:
         return 'Woops! No Notification Type Found!';
     }

@@ -1,19 +1,19 @@
 import styled from 'styled-components';
-import mediaQuery from  "./../../../theme/styled-components/mediaQuery";
+import mediaQuery from './../../../theme/styled-components/mediaQuery';
 
 module.exports = styled.input`
-  grid-area: form-input${props => props.gridAreaId ? `-${props.gridAreaId}` : ''};
-  ${props => props.responsive
+  grid-area: form-input${props => (props.gridAreaId ? `-${props.gridAreaId}` : '')};
+  ${props => (props.responsive
     ? `${mediaQuery.mobileS`
         display: block;
         position: absolute;`
-      }
+    }
       ${mediaQuery.mobileL`
         display: inline-block;
         position: initial;`
-      }`
-    : ''
-  };
+    }`
+    : '')
+};
 
   width: 100%;
   padding: 12px;

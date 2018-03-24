@@ -1,20 +1,20 @@
 import React, { Component, Children } from 'react'; import PropTypes from 'prop-types';
 import PageShell from '../PageShell/PageShell';
-import {PageContentContainer} from '../../components/Common';
+import { PageContentContainer } from '../../components/Common';
 import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser';
 import Parser from 'html-react-parser';
 import Description from './style/Description';
 
 const About = class About extends Component {
-
   render() {
     return (
 
       <PageShell
-        containerLevelClass={''}
-        style={{}} >
+        containerLevelClass=""
+        style={{}}
+      >
         <PageContentContainer>
-        {
+          {
           Parser(`
           <section style="max-width: 60%">
           <h1 style="font-size: 24px;

@@ -3,7 +3,6 @@ import concatCssClasses from './../../util/concat/concatCssClasses';
 import capToCamelCase from './../../util/transform/capToCamelCase';
 
 export default class EmptyStateUnderConstruction extends Component {
-
   constructor(props) {
     super(props);
   }
@@ -20,25 +19,25 @@ export default class EmptyStateUnderConstruction extends Component {
       style = {
         container: {
           classes: [],
-        }
-      }
+        },
+      };
     }
     const containerClasses = style.container.classes;
     if (containerClasses) {
       const style = concatCssClasses(containerClasses);
     }
-    
+
     const componentCSSName = capToCamelCase('EmptyStateUnderConstruction');
     const containerLevelStyle = `${componentCSSName}__container`;
 
     return (
       <section className={containerLevelStyle} style={style.container.inlineStyles}>
         <div className="object">
-            <div className="object-rope"></div>
-            <div className="object-shape">
-              Coming <span className="soon">Soon</span><br/>
+          <div className="object-rope" />
+          <div className="object-shape">
+              Coming <span className="soon">Soon</span><br />
               in shaa Allah
-            </div>
+          </div>
         </div>
       </section>
     );

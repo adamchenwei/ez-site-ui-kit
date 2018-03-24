@@ -3,4 +3,4 @@ module.exports = {
   LeftColumn: require('./LeftColumn'),
   RightColumn: require('./RightColumn'),
   Headline: require('./Headline'),
-}
+};

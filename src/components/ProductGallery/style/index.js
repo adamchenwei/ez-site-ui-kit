@@ -1,4 +1,4 @@
-module.exports ={
+module.exports = {
   Container: require('./Container'),
   ThumbnailImage: require('./ThumbnailImage'),
   ThumbnailFrame: require('./ThumbnailFrame'),
@@ -6,4 +6,4 @@ module.exports ={
   DisplayImageFrame: require('./DisplayImageFrame'),
   DisplayImageBox: require('./DisplayImageBox'),
   ThumbnailsContainer: require('./ThumbnailsContainer'),
-}
+};

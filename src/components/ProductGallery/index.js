@@ -1,7 +1,5 @@
 import React, { Component } from 'react'; import PropTypes from 'prop-types';
-import {
-  Container,
-} from './style';
+import { Container } from './style';
 
 import {
   ThumbnailsContainer,
@@ -13,13 +11,12 @@ import {
 import ThumbnailImageHolder from './ThumbnailImageHolder';
 
 export default class ProductGallery extends Component {
-
   constructor(props) {
     super(props);
     this.state = {
       isOpen: false,
       displayImageUrl: this.props.images[0].content.url || '',
-    }
+    };
     this.changeImage = this.changeImage.bind(this);
   }
 
@@ -42,7 +39,7 @@ export default class ProductGallery extends Component {
     });
   }
   render() {
-    let {
+    const {
       images,
       style,
     } = this.props;
@@ -52,25 +49,24 @@ export default class ProductGallery extends Component {
       <Container
         style={style}
         componentName={COMPONENT_NAME}
-        gridAreaId={''}>
-        <DisplayImageBox asfullHeight={hasOnlyOneImage} ref={(element)=> { this.displayBoxDom = element}}>
-          <DisplayImage className='img-fluid' src={this.state.displayImageUrl} />
+        gridAreaId=""
+      >
+        <DisplayImageBox asfullHeight={hasOnlyOneImage} ref={(element) => { this.displayBoxDom = element; }}>
+          <DisplayImage className="img-fluid" src={this.state.displayImageUrl} />
         </DisplayImageBox>
         {
           hasOnlyOneImage
           ? null
           : <ThumbnailsContainer>
             {
-              images.map((image, index) => {
-                return (
-                  <ThumbnailImageHolder
-                    src={image.content.url}
-                    key={index}
-                    changeImage={this.changeImage}
-                    scrollTargetDom={this.displayBoxDom}
-                  />
-                );
-              })
+              images.map((image, index) => (
+                <ThumbnailImageHolder
+                  src={image.content.url}
+                  key={index}
+                  changeImage={this.changeImage}
+                  scrollTargetDom={this.displayBoxDom}
+                />
+                ))
             }
           </ThumbnailsContainer>
         }
@@ -82,4 +78,4 @@ export default class ProductGallery extends Component {
 ProductGallery.propTypes = {
   images: PropTypes.array.isRequired,
   style: PropTypes.object,
-}
+};

@@ -1,5 +1,5 @@
-//TODO - Its another kind of input only, but style change is too dramatic
-//merge into ContactFormInput once some sort of conditional becomes allowed in styled.components
+// TODO - Its another kind of input only, but style change is too dramatic
+// merge into ContactFormInput once some sort of conditional becomes allowed in styled.components
 
 import styled from 'styled-components';
 

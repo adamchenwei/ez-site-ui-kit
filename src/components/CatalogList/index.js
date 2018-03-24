@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Container, Row, Col, Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle, Button } from 'reactstrap';
-import {Link} from 'react-router-dom';
-import CatalogItem  from './../CatalogItem';
+import {
+  Container, Row, Col, Card, CardImg, CardText, CardBody,
+  CardTitle, CardSubtitle, Button,
+} from 'reactstrap';
+import { Link } from 'react-router-dom';
+import CatalogItem from './../CatalogItem';
 
 export default class CatalogList extends Component {
-
   constructor(props) {
     super(props);
   }
 
   render() {
-    let {
+    const {
       collection,
       style,
       type,
@@ -35,7 +36,7 @@ export default class CatalogList extends Component {
           } = record;
 
           const location = locations[0];
-          const subTitle = `${location.city || ''}, ${location.state || ''} ${location.country || ''}`
+          const subTitle = `${location.city || ''}, ${location.state || ''} ${location.country || ''}`;
           return (
             <Col
               key={id}
@@ -53,7 +54,8 @@ export default class CatalogList extends Component {
               }}
               xl={{
                 size: 4,
-              }}>
+              }}
+            >
               <Link to={`/list/masjid/${route}/`}><CatalogItem
                 id={id}
                 title={name}
@@ -61,13 +63,14 @@ export default class CatalogList extends Component {
                 subTitle={subTitle}
                 description={description}
                 websiteUrl={website}
-                snapshots={snapshots} >
-
-              </CatalogItem></Link>
+                snapshots={snapshots}
+              />
+              </Link>
             </Col>
-          )
+          );
         })}
-      </Row></Container>
+      </Row>
+      </Container>
     );
   }
 }

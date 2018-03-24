@@ -7,13 +7,12 @@ import Name from './style/Name';
 import Address from './style/Address';
 
 export default class SnapshotDisplay extends Component {
-
   constructor(props) {
     super(props);
   }
 
   render() {
-    let {
+    const {
       title,
       displayLocation,
       snapshotSrc,

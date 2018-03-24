@@ -4,6 +4,8 @@ import Container from './style/Container';
 import MenuItemCol from './style/MenuItemCol';
 import CollapseBar from './style/CollapseBar';
 import NavBar from './style/NavBar';
+import StyledNavItem from './style/StyledNavItem';
+
 
 // import {Col, Row} from 'reactstrap';
 
@@ -14,39 +16,38 @@ import {
   NavbarToggler,
   NavbarBrand,
   Nav,
-  NavItem,
   NavLink,
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
-  DropdownItem } from 'reactstrap';
+  DropdownItem,
+} from 'reactstrap';
 
 import { Link } from 'react-router-dom';
-export default class SiteMenuBar extends Component {
 
+export default class SiteMenuBar extends Component {
   constructor(props) {
     super(props);
 
     this.toggle = this.toggle.bind(this);
     this.state = {
-      isOpen: false
+      isOpen: false,
     };
   }
   toggle() {
     this.setState({
-      isOpen: !this.state.isOpen
+      isOpen: !this.state.isOpen,
     });
   }
 
   render() {
-    let {
-      content,
+    const {
       style,
-      type,
       menuList,
       menuItemResponsiveConfig,
       children,
       left,
+      textcasing,
     } = this.props;
 
     return (
@@ -63,10 +64,10 @@ export default class SiteMenuBar extends Component {
                   id,
                 } = menuItem;
                 return (
-                  <NavItem key={id}>
-                    <Link className='nav-link' to={path}>{title}</Link>
-                  </NavItem>
-                  )
+                  <StyledNavItem key={id} textcasing={textcasing}>
+                    <Link className="nav-link" to={path}>{title}</Link>
+                  </StyledNavItem>
+                  );
               })
             }
             {/* TODO: inNavbar warning - https://github.com/reactstrap/reactstrap/issues/770#issuecomment-356472250 */}
@@ -90,12 +91,15 @@ export default class SiteMenuBar extends Component {
           </NavBar>
         </CollapseBar>
       </Navbar>
-    )
+    );
   }
 }
 
 SiteMenuBar.propTypes = {
-  content: PropTypes.object,
   style: PropTypes.object,
-  type: PropTypes.string,
+  textcasing: PropTypes.string,
+};
+SiteMenuBar.defaultProps = {
+  style: {},
+  textcasing: null,
 };

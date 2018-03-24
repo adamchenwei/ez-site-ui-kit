@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
-//two columns mode switch areas to:
-//"contact-page-left-column contact-page-right-column";
+// two columns mode switch areas to:
+// "contact-page-left-column contact-page-right-column";
 
 module.exports = styled.section`
-  grid-area: contact-page-container${props => props.gridAreaId ? `-${props.gridAreaId}` : ''};
+  grid-area: contact-page-container${props => (props.gridAreaId ? `-${props.gridAreaId}` : '')};
   display: grid;
   grid-column-gap: 10px;
   grid-row-gap: 10px;
