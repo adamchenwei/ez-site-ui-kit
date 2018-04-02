@@ -2,16 +2,17 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {
   Container,
-  Link,
+  MenuLink,
 } from './style';
 
 export default class MenuItem extends Component {
   constructor(props) {
     super(props);
     if (props.toggleMenu) {
-      this.toggleMenu = this.toggleMenu.bind(this);
+      this.toggleMenu = props.toggleMenu;
     }
   }
+
 
   render() {
     const {
@@ -25,14 +26,14 @@ export default class MenuItem extends Component {
         gridAreaId=""
         onClick={this.toggleMenu}
       >
-        <Link to={path}>{title}</Link>
+        <MenuLink to={path}>{title}</MenuLink>
       </Container>
     );
   }
 }
 MenuItem.propTypes = {
-  path: PropTypes.string,
-  title: PropTypes.string,
-  toggleMenu: PropTypes.func,
+  path: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  toggleMenu: PropTypes.func.isRequired,
 };
 

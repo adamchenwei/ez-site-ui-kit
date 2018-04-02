@@ -9,7 +9,8 @@ import FooterBar from '../../components/FooterBar';
 import LogoBar from '../../components/LogoBar';
 import BreadCrumb from '../../components/BreadCrumb';
 
-export default function getGridComponent(componentName, gridContent, gridType) {
+// , gridType
+export default function getGridComponent(componentName, gridContent) {
   // console.log(gridContent);
   const {
     style,

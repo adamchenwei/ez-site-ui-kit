@@ -2,7 +2,7 @@ export default function concatCssClasses(classesAsArray) {
   if (!classesAsArray || !classesAsArray.length) return '';
 
   let finalClasses = ' ';
-  classesAsArray.forEach((item, index) => {
+  classesAsArray.forEach((item) => {
     finalClasses = `${finalClasses} ${item}`;
   });
   finalClasses = `${finalClasses} `;

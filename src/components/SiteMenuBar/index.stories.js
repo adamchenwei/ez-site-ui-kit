@@ -1,8 +1,9 @@
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import React from 'react';
-import SiteMenuBar from './index';
 import { BrowserRouter as Router } from 'react-router-dom';
+
+import SiteMenuBar from './index';
 
 const menuListStandard = [
   {
@@ -184,6 +185,14 @@ storiesOf('SiteMenuBar', module)
       <SiteMenuBar
         menuList={menuListLong}
         left="true"
+      />
+    </Router>
+  ))
+  .add('sticky on top', () => (
+    <Router>
+      <SiteMenuBar
+        menuList={menuListLong}
+        stickyDirection="top"
       />
     </Router>
   ));

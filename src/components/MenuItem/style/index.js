@@ -1,4 +1,7 @@
+import MenuLink from './MenuLink';
+import Container from './Container';
+
 module.exports = {
-  Container: require('./Container'),
-  Link: require('./Link'),
+  Container,
+  MenuLink,
 };

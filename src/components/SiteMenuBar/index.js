@@ -1,29 +1,14 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Container from './style/Container';
-import MenuItemCol from './style/MenuItemCol';
-import CollapseBar from './style/CollapseBar';
-import NavBar from './style/NavBar';
-import StyledNavItem from './style/StyledNavItem';
-
-
-// import {Col, Row} from 'reactstrap';
-
-
+import { Link as RouterLink } from 'react-router-dom';
 import {
-  Collapse,
   Navbar,
   NavbarToggler,
   NavbarBrand,
-  Nav,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
 } from 'reactstrap';
-
-import { Link } from 'react-router-dom';
+import CollapseBar from './style/CollapseBar';
+import NavBar from './style/NavBar';
+import StyledNavItem from './style/StyledNavItem';
 
 export default class SiteMenuBar extends Component {
   constructor(props) {
@@ -43,15 +28,15 @@ export default class SiteMenuBar extends Component {
   render() {
     const {
       style,
+      className,
       menuList,
-      menuItemResponsiveConfig,
       children,
       left,
       textcasing,
     } = this.props;
 
     return (
-      <Navbar color="faded" light expand="md">
+      <Navbar style={style} className={className} color="faded" light expand="md">
         <NavbarBrand href="/">{children || 'Website Name'}</NavbarBrand>
         <NavbarToggler onClick={this.toggle} />
         <CollapseBar left={left} isOpen={this.state.isOpen} navbar>
@@ -65,7 +50,7 @@ export default class SiteMenuBar extends Component {
                 } = menuItem;
                 return (
                   <StyledNavItem key={id} textcasing={textcasing}>
-                    <Link className="nav-link" to={path}>{title}</Link>
+                    <RouterLink className="nav-link" to={path}>{title}</RouterLink>
                   </StyledNavItem>
                   );
               })
@@ -96,10 +81,19 @@ export default class SiteMenuBar extends Component {
 }
 
 SiteMenuBar.propTypes = {
-  style: PropTypes.object,
+  style: PropTypes.objectOf(PropTypes.any),
+  className: PropTypes.string,
   textcasing: PropTypes.string,
+  menuList: PropTypes.arrayOf(PropTypes.any),
+  children: PropTypes.node,
+  left: PropTypes.string,
+
 };
 SiteMenuBar.defaultProps = {
   style: {},
+  className: '',
   textcasing: null,
+  menuList: [],
+  children: null,
+  left: null,
 };

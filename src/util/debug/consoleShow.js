@@ -1,7 +1,9 @@
 
-export default function consoleShow(type, data, isDisabled) {
-  isDisabled = true;
-  if (isDisabled) return;
+
+export default function consoleShow(type, data, isDisabled) { //eslint-disable-line
+  // const disabled = isDisabled;
+  const disabled = true;
+  if (disabled) return;
   switch (type) {
     case 'props':
       console.log(`----------------- ${data.componentName}  has PROPS-----------------`); //eslint-disable-line

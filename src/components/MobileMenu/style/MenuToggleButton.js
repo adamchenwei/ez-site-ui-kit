@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { gridAreaName } from './../../../styles/helpers';
 
 module.exports = styled.a`
   height: 32px;
