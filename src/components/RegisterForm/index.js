@@ -23,8 +23,7 @@ export default class RegisterForm extends Component {
       this.props.userInfo.userName,
       this.props.userInfo.password,
       this.props.userInfo.displayName,
-      this.changeRegisteringState,
-    );
+      this.changeRegisteringState);
   }
 
   changeRegisteringState(state) {

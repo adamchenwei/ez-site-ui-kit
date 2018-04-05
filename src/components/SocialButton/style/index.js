@@ -1,4 +1,7 @@
-module.exports = {
-  IconImage: require('./IconImage'),
-  IconBoxLink: require('./IconBoxLink'),
+import IconImage from './IconImage';
+import IconBoxLink from './IconBoxLink';
+
+export default {
+  IconImage,
+  IconBoxLink,
 };

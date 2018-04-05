@@ -1,40 +1,34 @@
-import React, { Component } from 'react'; import PropTypes from 'prop-types';
-import GridItem from '../../components/GridItem/GridItem';
-import getGridItem from './../../util/get/getGridItem';
-import capToCamelCase from './../../util/transform/capToCamelCase';
+import React from 'react';
+import PropTypes from 'prop-types';
 import PageShell from '../PageShell/PageShell';
 import GridItemShell from '../../components/GridItem/GridItemShell';
 import ContactForm from '../../components/ContactForm';
+import Container from './style/Container';
+import LeftColumn from './style/LeftColumn';
+import Headline from './style/Headline';
 
-import {
-  Container,
-  LeftColumn,
-  RightColumn,
-  Headline,
-} from './style';
+function Contact(props) {
+  return (
 
-const Contact = class Contact extends Component {
-  render() {
-    const component = capToCamelCase('SocialIcon');
-    return (
+    <PageShell
+      containerLevelClass=""
+      style={{}}
+    >
+      <GridItemShell>
+        <Container>
+          <Headline>{'We\'d love to hear from you!'}</Headline>
+          <LeftColumn><ContactForm /></LeftColumn>
+        </Container>
+      </GridItemShell>
+      {props.children}
+    </PageShell>
+  );
+}
 
-      <PageShell
-        containerLevelClass=""
-        style={{}}
-      >
-        <GridItemShell>
-          <Container>
-            <Headline>We'd love to hear from you!</Headline>
-            <LeftColumn><ContactForm /></LeftColumn>
-          </Container>
-        </GridItemShell>
-        {this.props.children}
-      </PageShell>
-    );
-  }
-};
 Contact.propTypes = {
-  location: PropTypes.any,
-  params: PropTypes.object,
+  children: PropTypes.objectOf(PropTypes.any),
+};
+Contact.defaultProps = {
+  children: null,
 };
 export default Contact;

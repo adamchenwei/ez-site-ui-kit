@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { ContentSynchronizer } from 'ez-site-content-store';
-import GridItem from '../../components/GridItem/GridItem';
 import getGridItem from './../../util/get/getGridItem';
-import capToCamelCase from './../../util/transform/capToCamelCase';
 import MobileMenuRouteEnabled from './../../components/MobileMenuRouteEnabled';
 import FooterBar from './../../components/FooterBar';
 
@@ -14,8 +12,40 @@ import {
 } from './../../components/MobileMenu/factory/menu';
 
 import SlideShow from './../../components/SlideShow';
-// import { Head } from 'react-static'
 
+function showLogoBar() {
+  const LOGO_BAR_ID = 9;
+  return getGridItem(LOGO_BAR_ID);
+}
+
+
+function showFooterBar() {
+  const footerSocialIcons = ContentSynchronizer.getProperty('footer', 'socialIcons', []);
+  return (<FooterBar
+    socialIcons={footerSocialIcons}
+  />);
+}
+
+function showSlides() {
+  const slides = ContentSynchronizer.getCollection('banners');
+  return <SlideShow slides={slides} />;
+}
+
+function showNotificationBar() {
+  const NOTIFICATION_BAR_GRID_ITEM_ID = 1;
+  return getGridItem(NOTIFICATION_BAR_GRID_ITEM_ID);
+}
+
+function showMenuBar() {
+  const items = buildMenuItems(2);
+  return (<MenuBarNewRouteEnabled
+    customStyles={{
+      marginTop: '16px',
+      marginBottom: '16px',
+    }}
+    menuItems={items}
+  />);
+}
 export default class PageShell extends Component {
   constructor(props) {
     super(props);
@@ -28,23 +58,6 @@ export default class PageShell extends Component {
     };
   }
 
-  showNotificationBar() {
-    const NOTIFICATION_BAR_GRID_ITEM_ID = 1;
-    return getGridItem(NOTIFICATION_BAR_GRID_ITEM_ID);
-  }
-
-  showMenuBar() {
-    // const MENU_BAR_GRID_ITEM_ID = 2;
-    // return getGridItem(MENU_BAR_GRID_ITEM_ID);
-    const items = buildMenuItems(2);
-    return (<MenuBarNewRouteEnabled
-      customStyles={{
-        marginTop: '16px',
-        marginBottom: '16px',
-      }}
-      menuItems={items}
-    />);
-  }
 
   showSubMenuBar() {
     // start move away from grid reference matrix!
@@ -54,7 +67,12 @@ export default class PageShell extends Component {
     const items = buildProductMenuItems(10).sort((a, b) => {
       const textA = a.title.toUpperCase();
       const textB = b.title.toUpperCase();
-      return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+      if (textA < textB) {
+        return -1;
+      } else if (textA > textB) {
+        return 1;
+      }
+      return 0;
     });
     // console.log(items)
     return (<MenuBarNewRouteEnabled
@@ -70,7 +88,7 @@ export default class PageShell extends Component {
   showMobileMenu() {
     const site = ContentSynchronizer.getCollection('site');
     const siteName = site.siteName.casual;
-    const baseTag = site.baseTag;
+    const { baseTag } = site;
     return (<MobileMenuRouteEnabled
       siteName={siteName}
       baseTag={baseTag}
@@ -80,32 +98,15 @@ export default class PageShell extends Component {
     />);
   }
 
-  showLogoBar() {
-    const LOGO_BAR_ID = 9;
-    return getGridItem(LOGO_BAR_ID);
-  }
-
-
-  showFooterBar() {
-    const footerSocialIcons = ContentSynchronizer.getProperty('footer', 'socialIcons', []);
-    return (<FooterBar
-      socialIcons={footerSocialIcons}
-    />);
-  }
-
-  showSlides() {
-    const slides = ContentSynchronizer.getCollection('banners');
-    return <SlideShow slides={slides} />;
-  }
-
   render() {
-    let {
-      style,
-      containerLevelStyle,
+    const {
       children,
       hasSlides,
     } = this.props;
-
+    let {
+      style,
+      containerLevelStyle,
+    } = this.props;
     if (!style) {
       style = {
         container: {
@@ -121,22 +122,30 @@ export default class PageShell extends Component {
         {/* <Head>
           <title>Products</title>
         </Head> */}
-        {this.showNotificationBar()}
+        {showNotificationBar()}
         {this.showMobileMenu()}
-        {this.showMenuBar()}
-        {this.showLogoBar()}
+        {showMenuBar()}
+        {showLogoBar()}
         {this.showSubMenuBar()}
-        {hasSlides ? this.showSlides() : null}
+        {hasSlides ? showSlides() : null}
         {children}
 
-        {this.showFooterBar()}
+        {showFooterBar()}
       </section>
     );
   }
 }
 PageShell.propTypes = {
-  style: PropTypes.object,
-  containerLevelClass: PropTypes.string,
+  style: PropTypes.objectOf(PropTypes.any),
   hasSlides: PropTypes.bool,
   anchorToBelow: PropTypes.string,
+  children: PropTypes.objectOf(PropTypes.any).isRequired,
+  containerLevelStyle: PropTypes.string,
+};
+
+PageShell.defaultProps = {
+  style: {},
+  hasSlides: false,
+  anchorToBelow: '',
+  containerLevelStyle: '',
 };

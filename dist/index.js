@@ -7654,17 +7654,9 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 
 var _ezSiteContentStore = __webpack_require__(17);
 
-var _GridItem = __webpack_require__(44);
-
-var _GridItem2 = _interopRequireDefault(_GridItem);
-
 var _getGridItem = __webpack_require__(54);
 
 var _getGridItem2 = _interopRequireDefault(_getGridItem);
-
-var _capToCamelCase = __webpack_require__(36);
-
-var _capToCamelCase2 = _interopRequireDefault(_capToCamelCase);
 
 var _MobileMenuRouteEnabled = __webpack_require__(188);
 
@@ -7706,7 +7698,38 @@ function _inherits(subClass, superClass) {
   }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
 }
 
-// import { Head } from 'react-static'
+function showLogoBar() {
+  var LOGO_BAR_ID = 9;
+  return (0, _getGridItem2.default)(LOGO_BAR_ID);
+}
+
+function showFooterBar() {
+  var footerSocialIcons = _ezSiteContentStore.ContentSynchronizer.getProperty('footer', 'socialIcons', []);
+  return _react2.default.createElement(_FooterBar2.default, {
+    socialIcons: footerSocialIcons
+  });
+}
+
+function showSlides() {
+  var slides = _ezSiteContentStore.ContentSynchronizer.getCollection('banners');
+  return _react2.default.createElement(_SlideShow2.default, { slides: slides });
+}
+
+function showNotificationBar() {
+  var NOTIFICATION_BAR_GRID_ITEM_ID = 1;
+  return (0, _getGridItem2.default)(NOTIFICATION_BAR_GRID_ITEM_ID);
+}
+
+function showMenuBar() {
+  var items = (0, _menu.buildMenuItems)(2);
+  return _react2.default.createElement(_MenuBarNewRouteEnabled2.default, {
+    customStyles: {
+      marginTop: '16px',
+      marginBottom: '16px'
+    },
+    menuItems: items
+  });
+}
 
 var PageShell = function (_Component) {
   _inherits(PageShell, _Component);
@@ -7727,26 +7750,6 @@ var PageShell = function (_Component) {
   }
 
   _createClass(PageShell, [{
-    key: 'showNotificationBar',
-    value: function showNotificationBar() {
-      var NOTIFICATION_BAR_GRID_ITEM_ID = 1;
-      return (0, _getGridItem2.default)(NOTIFICATION_BAR_GRID_ITEM_ID);
-    }
-  }, {
-    key: 'showMenuBar',
-    value: function showMenuBar() {
-      // const MENU_BAR_GRID_ITEM_ID = 2;
-      // return getGridItem(MENU_BAR_GRID_ITEM_ID);
-      var items = (0, _menu.buildMenuItems)(2);
-      return _react2.default.createElement(_MenuBarNewRouteEnabled2.default, {
-        customStyles: {
-          marginTop: '16px',
-          marginBottom: '16px'
-        },
-        menuItems: items
-      });
-    }
-  }, {
     key: 'showSubMenuBar',
     value: function showSubMenuBar() {
       // start move away from grid reference matrix!
@@ -7756,7 +7759,12 @@ var PageShell = function (_Component) {
       var items = (0, _menu.buildProductMenuItems)(10).sort(function (a, b) {
         var textA = a.title.toUpperCase();
         var textB = b.title.toUpperCase();
-        return textA < textB ? -1 : textA > textB ? 1 : 0;
+        if (textA < textB) {
+          return -1;
+        } else if (textA > textB) {
+          return 1;
+        }
+        return 0;
       });
       // console.log(items)
       return _react2.default.createElement(_MenuBarNewRouteEnabled2.default, {
@@ -7774,6 +7782,7 @@ var PageShell = function (_Component) {
       var site = _ezSiteContentStore.ContentSynchronizer.getCollection('site');
       var siteName = site.siteName.casual;
       var baseTag = site.baseTag;
+
       return _react2.default.createElement(_MobileMenuRouteEnabled2.default, {
         siteName: siteName,
         baseTag: baseTag,
@@ -7783,33 +7792,14 @@ var PageShell = function (_Component) {
       });
     }
   }, {
-    key: 'showLogoBar',
-    value: function showLogoBar() {
-      var LOGO_BAR_ID = 9;
-      return (0, _getGridItem2.default)(LOGO_BAR_ID);
-    }
-  }, {
-    key: 'showFooterBar',
-    value: function showFooterBar() {
-      var footerSocialIcons = _ezSiteContentStore.ContentSynchronizer.getProperty('footer', 'socialIcons', []);
-      return _react2.default.createElement(_FooterBar2.default, {
-        socialIcons: footerSocialIcons
-      });
-    }
-  }, {
-    key: 'showSlides',
-    value: function showSlides() {
-      var slides = _ezSiteContentStore.ContentSynchronizer.getCollection('banners');
-      return _react2.default.createElement(_SlideShow2.default, { slides: slides });
-    }
-  }, {
     key: 'render',
     value: function render() {
       var _props = this.props,
-          style = _props.style,
-          containerLevelStyle = _props.containerLevelStyle,
           children = _props.children,
           hasSlides = _props.hasSlides;
+      var _props2 = this.props,
+          style = _props2.style,
+          containerLevelStyle = _props2.containerLevelStyle;
 
       if (!style) {
         style = {
@@ -7821,7 +7811,7 @@ var PageShell = function (_Component) {
 
       // NOTE: So far diff between PageShell and ComponentWrapper is the row class name!!!(at that time, since then there were lots done)
       containerLevelStyle = containerLevelStyle || 'page__container row no-gutters';
-      return _react2.default.createElement('section', { className: containerLevelStyle, style: style }, this.showNotificationBar(), this.showMobileMenu(), this.showMenuBar(), this.showLogoBar(), this.showSubMenuBar(), hasSlides ? this.showSlides() : null, children, this.showFooterBar());
+      return _react2.default.createElement('section', { className: containerLevelStyle, style: style }, showNotificationBar(), this.showMobileMenu(), showMenuBar(), showLogoBar(), this.showSubMenuBar(), hasSlides ? showSlides() : null, children, showFooterBar());
     }
   }]);
 
@@ -7831,10 +7821,18 @@ var PageShell = function (_Component) {
 exports.default = PageShell;
 
 PageShell.propTypes = {
-  style: _propTypes2.default.object,
-  containerLevelClass: _propTypes2.default.string,
+  style: _propTypes2.default.objectOf(_propTypes2.default.any),
   hasSlides: _propTypes2.default.bool,
-  anchorToBelow: _propTypes2.default.string
+  anchorToBelow: _propTypes2.default.string,
+  children: _propTypes2.default.objectOf(_propTypes2.default.any).isRequired,
+  containerLevelStyle: _propTypes2.default.string
+};
+
+PageShell.defaultProps = {
+  style: {},
+  hasSlides: false,
+  anchorToBelow: '',
+  containerLevelStyle: ''
 };
 
 /***/ }),
@@ -13805,8 +13803,6 @@ var _createClass = function () {
 
 var _react = __webpack_require__(0);
 
-var _react2 = _interopRequireDefault(_react);
-
 var _propTypes = __webpack_require__(1);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
@@ -13836,10 +13832,10 @@ function _inherits(subClass, superClass) {
 var StyledComponentWrapper = function (_Component) {
   _inherits(StyledComponentWrapper, _Component);
 
-  function StyledComponentWrapper(props) {
+  function StyledComponentWrapper() {
     _classCallCheck(this, StyledComponentWrapper);
 
-    return _possibleConstructorReturn(this, (StyledComponentWrapper.__proto__ || Object.getPrototypeOf(StyledComponentWrapper)).call(this, props));
+    return _possibleConstructorReturn(this, (StyledComponentWrapper.__proto__ || Object.getPrototypeOf(StyledComponentWrapper)).apply(this, arguments));
   }
 
   _createClass(StyledComponentWrapper, [{
@@ -13855,6 +13851,10 @@ var StyledComponentWrapper = function (_Component) {
 }(_react.Component);
 
 exports.default = StyledComponentWrapper;
+
+StyledComponentWrapper.propTypes = {
+  children: _propTypes2.default.objectOf(_propTypes2.default.any).isRequired
+};
 
 /***/ }),
 /* 170 */
@@ -14584,21 +14584,10 @@ module.exports = getNative;
 "use strict";
 
 
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-
-var _createClass = function () {
-  function defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
-    }
-  }return function (Constructor, protoProps, staticProps) {
-    if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
-  };
-}();
+exports.default = SnapshotDisplay;
 
 var _react = __webpack_require__(0);
 
@@ -14632,49 +14621,13 @@ function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : { default: obj };
 }
 
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
+function SnapshotDisplay(props) {
+  var title = props.title,
+      displayLocation = props.displayLocation,
+      snapshotSrc = props.snapshotSrc;
+
+  return _react2.default.createElement(_SnapshotContainer2.default, null, title || displayLocation ? _react2.default.createElement(_TitleContainer2.default, null, _react2.default.createElement(_Name2.default, null, title), _react2.default.createElement(_Address2.default, null, displayLocation)) : null, _react2.default.createElement(_Snapshot2.default, { src: snapshotSrc }));
 }
-
-function _possibleConstructorReturn(self, call) {
-  if (!self) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }return call && ((typeof call === "undefined" ? "undefined" : _typeof(call)) === "object" || typeof call === "function") ? call : self;
-}
-
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === "undefined" ? "undefined" : _typeof(superClass)));
-  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-}
-
-var SnapshotDisplay = function (_Component) {
-  _inherits(SnapshotDisplay, _Component);
-
-  function SnapshotDisplay(props) {
-    _classCallCheck(this, SnapshotDisplay);
-
-    return _possibleConstructorReturn(this, (SnapshotDisplay.__proto__ || Object.getPrototypeOf(SnapshotDisplay)).call(this, props));
-  }
-
-  _createClass(SnapshotDisplay, [{
-    key: 'render',
-    value: function render() {
-      var _props = this.props,
-          title = _props.title,
-          displayLocation = _props.displayLocation,
-          snapshotSrc = _props.snapshotSrc;
-
-      return _react2.default.createElement(_SnapshotContainer2.default, null, title || displayLocation ? _react2.default.createElement(_TitleContainer2.default, null, _react2.default.createElement(_Name2.default, null, title), _react2.default.createElement(_Address2.default, null, displayLocation)) : null, _react2.default.createElement(_Snapshot2.default, { src: snapshotSrc }));
-    }
-  }]);
-
-  return SnapshotDisplay;
-}(_react.Component);
-
-exports.default = SnapshotDisplay;
 
 SnapshotDisplay.propTypes = {
   title: _propTypes2.default.string,
@@ -14902,21 +14855,10 @@ exports.default = getWindow;
 "use strict";
 
 
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-
-var _createClass = function () {
-  function defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
-    }
-  }return function (Constructor, protoProps, staticProps) {
-    if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
-  };
-}();
+exports.default = ShareButtonsBar;
 
 var _react = __webpack_require__(0);
 
@@ -14926,137 +14868,98 @@ var _propTypes = __webpack_require__(1);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _style = __webpack_require__(480);
-
 var _reactShare = __webpack_require__(186);
 
 var _Link = __webpack_require__(483);
 
 var _Link2 = _interopRequireDefault(_Link);
 
-var _getWindow = __webpack_require__(184);
+var _Container = __webpack_require__(481);
 
-var _getWindow2 = _interopRequireDefault(_getWindow);
+var _Container2 = _interopRequireDefault(_Container);
+
+var _IconHolder = __webpack_require__(482);
+
+var _IconHolder2 = _interopRequireDefault(_IconHolder);
 
 var _LinkIconContainer = __webpack_require__(484);
 
 var _LinkIconContainer2 = _interopRequireDefault(_LinkIconContainer);
 
+var _getWindow = __webpack_require__(184);
+
+var _getWindow2 = _interopRequireDefault(_getWindow);
+
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : { default: obj };
 }
 
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-}
-
-function _possibleConstructorReturn(self, call) {
-  if (!self) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }return call && ((typeof call === "undefined" ? "undefined" : _typeof(call)) === "object" || typeof call === "function") ? call : self;
-}
-
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === "undefined" ? "undefined" : _typeof(superClass)));
-  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-}
-
 var setComponentWrapperContainerClasses = __webpack_require__(24);
 
-var ShareButtonsBar = function (_Component) {
-  _inherits(ShareButtonsBar, _Component);
+function ShareButtonsBar(props) {
+  var style = props.style,
+      sharedImageUrl = props.sharedImageUrl,
+      sharedDescriptionText = props.sharedDescriptionText,
+      hashtags = props.hashtags,
+      sharedTitle = props.sharedTitle,
+      homeLink = props.homeLink,
+      moreLink = props.moreLink;
+  var FacebookShareButton = _reactShare.ShareButtons.FacebookShareButton,
+      GooglePlusShareButton = _reactShare.ShareButtons.GooglePlusShareButton,
+      LinkedinShareButton = _reactShare.ShareButtons.LinkedinShareButton,
+      TwitterShareButton = _reactShare.ShareButtons.TwitterShareButton,
+      TelegramShareButton = _reactShare.ShareButtons.TelegramShareButton,
+      WhatsappShareButton = _reactShare.ShareButtons.WhatsappShareButton,
+      PinterestShareButton = _reactShare.ShareButtons.PinterestShareButton,
+      VKShareButton = _reactShare.ShareButtons.VKShareButton,
+      OKShareButton = _reactShare.ShareButtons.OKShareButton,
+      RedditShareButton = _reactShare.ShareButtons.RedditShareButton;
 
-  function ShareButtonsBar(props) {
-    _classCallCheck(this, ShareButtonsBar);
+  var COMPONENT_NAME = 'ShareButtonsBar';
+  var containerName = setComponentWrapperContainerClasses(COMPONENT_NAME);
 
-    return _possibleConstructorReturn(this, (ShareButtonsBar.__proto__ || Object.getPrototypeOf(ShareButtonsBar)).call(this, props));
-  }
+  var FacebookIcon = (0, _reactShare.generateShareIcon)('facebook');
+  var TwitterIcon = (0, _reactShare.generateShareIcon)('twitter');
+  var PinterestIcon = (0, _reactShare.generateShareIcon)('pinterest');
+  var locationHref = (0, _getWindow2.default)() ? (0, _getWindow2.default)().location.href : '';
+  var absoluteUrl = '' + locationHref + sharedImageUrl;
 
-  _createClass(ShareButtonsBar, [{
-    key: 'render',
-    value: function render() {
-      var _props = this.props,
-          content = _props.content,
-          style = _props.style,
-          type = _props.type,
-          sharedImageUrl = _props.sharedImageUrl,
-          sharedDescriptionText = _props.sharedDescriptionText,
-          hashtags = _props.hashtags,
-          sharedTitle = _props.sharedTitle,
-          homeLink = _props.homeLink,
-          hasMarginBottom = _props.hasMarginBottom,
-          moreLink = _props.moreLink;
-      var FacebookShareButton = _reactShare.ShareButtons.FacebookShareButton,
-          GooglePlusShareButton = _reactShare.ShareButtons.GooglePlusShareButton,
-          LinkedinShareButton = _reactShare.ShareButtons.LinkedinShareButton,
-          TwitterShareButton = _reactShare.ShareButtons.TwitterShareButton,
-          TelegramShareButton = _reactShare.ShareButtons.TelegramShareButton,
-          WhatsappShareButton = _reactShare.ShareButtons.WhatsappShareButton,
-          PinterestShareButton = _reactShare.ShareButtons.PinterestShareButton,
-          VKShareButton = _reactShare.ShareButtons.VKShareButton,
-          OKShareButton = _reactShare.ShareButtons.OKShareButton,
-          RedditShareButton = _reactShare.ShareButtons.RedditShareButton;
+  var spreaker = moreLink.spreaker,
+      mixler = moreLink.mixler;
 
-      var COMPONENT_NAME = 'ShareButtonsBar';
-      var containerName = setComponentWrapperContainerClasses(COMPONENT_NAME);
-
-      var FacebookIcon = (0, _reactShare.generateShareIcon)('facebook');
-      var TwitterIcon = (0, _reactShare.generateShareIcon)('twitter');
-      var PinterestIcon = (0, _reactShare.generateShareIcon)('pinterest');
-      var locationHref = (0, _getWindow2.default)() ? (0, _getWindow2.default)().location.href : '';
-      var absoluteUrl = '' + locationHref + sharedImageUrl;
-
-      var spreaker = moreLink.spreaker,
-          mixler = moreLink.mixler;
-
-      return _react2.default.createElement(_style.Container, {
-        hasMarginBottom: true,
-        componentName: containerName,
-        gridAreaId: '',
-        style: style
-      }, homeLink ? _react2.default.createElement(_style.IconHolder, { style: { backgroundColor: '#11111108' } }, _react2.default.createElement(_LinkIconContainer2.default, { href: homeLink }, _react2.default.createElement(_Link2.default, null))) : null, _react2.default.createElement(_style.IconHolder, null, _react2.default.createElement(FacebookShareButton, {
-        url: locationHref,
-        quote: sharedTitle
-      }, _react2.default.createElement(FacebookIcon, { size: 32 }))), _react2.default.createElement(_style.IconHolder, null, _react2.default.createElement(TwitterShareButton, { url: locationHref }, _react2.default.createElement(TwitterIcon, { size: 32 }))), _react2.default.createElement(_style.IconHolder, null, _react2.default.createElement(PinterestShareButton, {
-        url: locationHref,
-        description: sharedDescriptionText,
-        media: absoluteUrl,
-        hashtags: hashtags
-      }, _react2.default.createElement(PinterestIcon, { size: 32 }))));
-    }
-  }]);
-
-  return ShareButtonsBar;
-}(_react.Component);
-
-exports.default = ShareButtonsBar;
+  return _react2.default.createElement(_Container2.default, {
+    hasMarginBottom: true,
+    componentName: containerName,
+    gridAreaId: '',
+    style: style
+  }, homeLink ? _react2.default.createElement(_IconHolder2.default, { style: { backgroundColor: '#11111108' } }, _react2.default.createElement(_LinkIconContainer2.default, { href: homeLink }, _react2.default.createElement(_Link2.default, { href: homeLink }))) : null, _react2.default.createElement(_IconHolder2.default, null, _react2.default.createElement(FacebookShareButton, {
+    url: locationHref,
+    quote: sharedTitle
+  }, _react2.default.createElement(FacebookIcon, { size: 32 }))), _react2.default.createElement(_IconHolder2.default, null, _react2.default.createElement(TwitterShareButton, { url: locationHref }, _react2.default.createElement(TwitterIcon, { size: 32 }))), _react2.default.createElement(_IconHolder2.default, null, _react2.default.createElement(PinterestShareButton, {
+    url: locationHref,
+    description: sharedDescriptionText,
+    media: absoluteUrl,
+    hashtags: hashtags
+  }, _react2.default.createElement(PinterestIcon, { size: 32 }))));
+}
 
 ShareButtonsBar.propTypes = {
-  content: _propTypes2.default.object,
-  style: _propTypes2.default.object,
-  type: _propTypes2.default.string,
+  style: _propTypes2.default.objectOf(_propTypes2.default.any),
   sharedImageUrl: _propTypes2.default.string,
   sharedDescriptionText: _propTypes2.default.string,
   hashtags: _propTypes2.default.string,
   sharedTitle: _propTypes2.default.string,
   homeLink: _propTypes2.default.string,
-  hasMarginBottom: _propTypes2.default.bool,
   moreLink: _propTypes2.default.objectOf(_propTypes2.default.object)
 };
 
 ShareButtonsBar.defaultProps = {
-  content: {},
   style: {},
-  type: '',
   sharedImageUrl: '',
   sharedDescriptionText: '',
   hashtags: '',
   sharedTitle: '',
   homeLink: '',
-  hasMarginBottom: false,
   moreLink: {}
 };
 
@@ -15860,26 +15763,29 @@ FooterBar.propTypes = {
 "use strict";
 
 
-module.exports = {
-  IconImage: __webpack_require__(567),
-  IconBoxLink: __webpack_require__(568)
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _IconImage = __webpack_require__(567);
+
+var _IconImage2 = _interopRequireDefault(_IconImage);
+
+var _IconBoxLink = __webpack_require__(568);
+
+var _IconBoxLink2 = _interopRequireDefault(_IconBoxLink);
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
+
+exports.default = {
+  IconImage: _IconImage2.default,
+  IconBoxLink: _IconBoxLink2.default
 };
 
 /***/ }),
-/* 196 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-module.exports = {
-  Container: __webpack_require__(577),
-  SlidesBox: __webpack_require__(578),
-  SlideButtonIcon: __webpack_require__(579),
-  SlideButtonsBox: __webpack_require__(580)
-};
-
-/***/ }),
+/* 196 */,
 /* 197 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16106,6 +16012,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.products = exports.ContentCache = exports.CenteredSpaceShell = exports.Product = exports.ProductListing = exports.Contact = exports.About = exports.LoadingScreen = exports.CustomizableForm = exports.MobileMenuRouteEnabled = exports.MenuBarNewRouteEnabled = exports.CatalogDetail = exports.CatalogItem = exports.CatalogList = exports.ContactForm = exports.LoginForm = undefined;
 
+var _ezSiteContentStore = __webpack_require__(17);
+
 var _LoginForm = __webpack_require__(200);
 
 var _LoginForm2 = _interopRequireDefault(_LoginForm);
@@ -16161,8 +16069,6 @@ var _Product2 = _interopRequireDefault(_Product);
 var _CenteredSpaceShell = __webpack_require__(605);
 
 var _CenteredSpaceShell2 = _interopRequireDefault(_CenteredSpaceShell);
-
-var _ezSiteContentStore = __webpack_require__(17);
 
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : { default: obj };
@@ -36709,18 +36615,7 @@ ThumbnailImageHolder.propTypes = {
 module.exports = require("react-images");
 
 /***/ }),
-/* 480 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-module.exports = {
-  Container: __webpack_require__(481),
-  IconHolder: __webpack_require__(482)
-};
-
-/***/ }),
+/* 480 */,
 /* 481 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -38572,21 +38467,9 @@ exports.default = _styledComponents2.default.section(_templateObject);
 "use strict";
 
 
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-
-var _createClass = function () {
-  function defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
-    }
-  }return function (Constructor, protoProps, staticProps) {
-    if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
-  };
-}();
 
 var _react = __webpack_require__(0);
 
@@ -38596,70 +38479,31 @@ var _propTypes = __webpack_require__(1);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
+var _htmlReactParser = __webpack_require__(583);
+
+var _htmlReactParser2 = _interopRequireDefault(_htmlReactParser);
+
 var _PageShell = __webpack_require__(78);
 
 var _PageShell2 = _interopRequireDefault(_PageShell);
 
 var _Common = __webpack_require__(55);
 
-var _reactHtmlParser = __webpack_require__(582);
-
-var _reactHtmlParser2 = _interopRequireDefault(_reactHtmlParser);
-
-var _htmlReactParser = __webpack_require__(583);
-
-var _htmlReactParser2 = _interopRequireDefault(_htmlReactParser);
-
-var _Description = __webpack_require__(595);
-
-var _Description2 = _interopRequireDefault(_Description);
-
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : { default: obj };
 }
 
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
+function About(props) {
+  return _react2.default.createElement(_PageShell2.default, {
+    containerLevelClass: '',
+    style: {}
+  }, _react2.default.createElement(_Common.PageContentContainer, null, (0, _htmlReactParser2.default)('\n        <section style="max-width: 60%">\n        <h1 style="font-size: 24px;\n          text-transform: uppercase;\n          text-decoration: underline;">Our Goal</h1>\n        <p style="font-size: 16px;">We believe that health is the best investment. Our goal is to offer a healthy variety of nutritious snacks.</p>\n        <p style="font-size: 16px;">Our portfolio of natural sun-dried fruits and raw nuts are exceptional in flavor, quality and taste.</p>\n        <p style="font-size: 16px;">Our dried fruits and nuts are full of heart healthy antioxidants, essential trace elements and omega 3\u2019s fatty acids.</p>\n\n        <h1 style="font-size: 24px;\n          text-transform: uppercase;\n          text-decoration: underline;">Our difference</h1>\n        <p style="font-size: 16px;">Our products are exceptional in flavor, quality and taste.</p>\n        <p style="font-size: 16px;">This can be attributed to the unique eco system of the orchards, from which we source our produce.</p>\n        <p style="font-size: 16px;">These orchards are largely untouched by man, protected by Mother Nature and naturally irrigated by the water run-off from the surrounding mountain ranges. </p>\n        <p style="font-size: 16px;">Our products are harvested with care, naturally sun-dried and meticulously hand-packed.</p>\n\n        <h1 style="font-size: 24px;\n          text-transform: uppercase;\n          text-decoration: underline;">About Us</h1>\n        <p style="font-size: 16px;">We are a small organic food startup with offices in New York and a warehouse in the New Jersey Area.</p>\n        <p style="font-size: 16px;">Our initiatives are directed for the benefit of our suppliers and their communities most of whom are landlocked and have never before exported their produce beyond Central and South Asia.</p>\n        <p style="font-size: 16px;">We have built a value-added supply chain based on the principle of mutual trust and fair compensation practices. </p>\n\n        <h1 style="font-size: 24px;\n          text-transform: uppercase;\n          text-decoration: underline;">Organic Certification</h1>\n        <p style="font-size: 16px;">All our products are organic in nature, free of pesticides insecticides and any additives or preservatives. We are in the process of actively pursuing USDA organic certification for our full line of dried fruits and nuts. </p>\n        </section>\n        ')), props.children);
 }
-
-function _possibleConstructorReturn(self, call) {
-  if (!self) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }return call && ((typeof call === "undefined" ? "undefined" : _typeof(call)) === "object" || typeof call === "function") ? call : self;
-}
-
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === "undefined" ? "undefined" : _typeof(superClass)));
-  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-}
-
-var About = function (_Component) {
-  _inherits(About, _Component);
-
-  function About() {
-    _classCallCheck(this, About);
-
-    return _possibleConstructorReturn(this, (About.__proto__ || Object.getPrototypeOf(About)).apply(this, arguments));
-  }
-
-  _createClass(About, [{
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(_PageShell2.default, {
-        containerLevelClass: '',
-        style: {}
-      }, _react2.default.createElement(_Common.PageContentContainer, null, (0, _htmlReactParser2.default)("\n          <section style=\"max-width: 60%\">\n          <h1 style=\"font-size: 24px;\n            text-transform: uppercase;\n            text-decoration: underline;\">Our Goal</h1>\n          <p style=\"font-size: 16px;\">We believe that health is the best investment. Our goal is to offer a healthy variety of nutritious snacks.</p>\n          <p style=\"font-size: 16px;\">Our portfolio of natural sun-dried fruits and raw nuts are exceptional in flavor, quality and taste.</p>\n          <p style=\"font-size: 16px;\">Our dried fruits and nuts are full of heart healthy antioxidants, essential trace elements and omega 3\u2019s fatty acids.</p>\n\n          <h1 style=\"font-size: 24px;\n            text-transform: uppercase;\n            text-decoration: underline;\">Our difference</h1>\n          <p style=\"font-size: 16px;\">Our products are exceptional in flavor, quality and taste.</p>\n          <p style=\"font-size: 16px;\">This can be attributed to the unique eco system of the orchards, from which we source our produce.</p>\n          <p style=\"font-size: 16px;\">These orchards are largely untouched by man, protected by Mother Nature and naturally irrigated by the water run-off from the surrounding mountain ranges. </p>\n          <p style=\"font-size: 16px;\">Our products are harvested with care, naturally sun-dried and meticulously hand-packed.</p>\n\n          <h1 style=\"font-size: 24px;\n            text-transform: uppercase;\n            text-decoration: underline;\">About Us</h1>\n          <p style=\"font-size: 16px;\">We are a small organic food startup with offices in New York and a warehouse in the New Jersey Area.</p>\n          <p style=\"font-size: 16px;\">Our initiatives are directed for the benefit of our suppliers and their communities most of whom are landlocked and have never before exported their produce beyond Central and South Asia.</p>\n          <p style=\"font-size: 16px;\">We have built a value-added supply chain based on the principle of mutual trust and fair compensation practices. </p>\n\n          <h1 style=\"font-size: 24px;\n            text-transform: uppercase;\n            text-decoration: underline;\">Organic Certification</h1>\n          <p style=\"font-size: 16px;\">All our products are organic in nature, free of pesticides insecticides and any additives or preservatives. We are in the process of actively pursuing USDA organic certification for our full line of dried fruits and nuts. </p>\n          </section>\n          ")), this.props.children);
-    }
-  }]);
-
-  return About;
-}(_react.Component);
 About.propTypes = {
-  location: _propTypes2.default.any,
-  params: _propTypes2.default.object
+  children: _propTypes2.default.objectOf(_propTypes2.default.any)
+};
+About.defaultProps = {
+  children: null
 };
 exports.default = About;
 
@@ -40222,21 +40066,10 @@ module.exports = _styledComponents2.default.img(_templateObject);
 "use strict";
 
 
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-
-var _createClass = function () {
-  function defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
-    }
-  }return function (Constructor, protoProps, staticProps) {
-    if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
-  };
-}();
+exports.default = SocialIcon;
 
 var _react = __webpack_require__(0);
 
@@ -40245,18 +40078,6 @@ var _react2 = _interopRequireDefault(_react);
 var _propTypes = __webpack_require__(1);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
-
-var _reactDom = __webpack_require__(23);
-
-var _reactDom2 = _interopRequireDefault(_reactDom);
-
-var _reactSvg = __webpack_require__(557);
-
-var _reactSvg2 = _interopRequireDefault(_reactSvg);
-
-var _concatCssClasses = __webpack_require__(29);
-
-var _concatCssClasses2 = _interopRequireDefault(_concatCssClasses);
 
 var _capToCamelCase = __webpack_require__(36);
 
@@ -40272,987 +40093,53 @@ function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : { default: obj };
 }
 
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
+function SocialIcon(props) {
+  var style = props.style,
+      srcUrl = props.srcUrl,
+      linkUrl = props.linkUrl;
+
+  var componentCSSName = (0, _capToCamelCase2.default)('SocialIcon');
+  return !srcUrl && !linkUrl ? _react2.default.createElement('section', null) : _react2.default.createElement(_SocialButtonShell2.default, {
+    containerLevelStyle: componentCSSName + '__container',
+    style: style,
+    linkUrl: linkUrl
+  }, _react2.default.createElement(_style.IconImage, {
+    src: srcUrl
+  }));
 }
-
-function _possibleConstructorReturn(self, call) {
-  if (!self) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }return call && ((typeof call === "undefined" ? "undefined" : _typeof(call)) === "object" || typeof call === "function") ? call : self;
-}
-
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === "undefined" ? "undefined" : _typeof(superClass)));
-  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-}
-
-var SocialIcon = function (_Component) {
-  _inherits(SocialIcon, _Component);
-
-  function SocialIcon(props) {
-    _classCallCheck(this, SocialIcon);
-
-    return _possibleConstructorReturn(this, (SocialIcon.__proto__ || Object.getPrototypeOf(SocialIcon)).call(this, props));
-  }
-
-  _createClass(SocialIcon, [{
-    key: 'render',
-    value: function render() {
-      // require('./SocialIcon.scss');
-
-      var _props = this.props,
-          content = _props.content,
-          style = _props.style,
-          type = _props.type,
-          srcUrl = _props.srcUrl,
-          linkUrl = _props.linkUrl;
-
-      var componentCSSName = (0, _capToCamelCase2.default)('SocialIcon');
-      return !srcUrl && !linkUrl ? _react2.default.createElement('section', null) : _react2.default.createElement(_SocialButtonShell2.default, {
-        containerLevelStyle: componentCSSName + '__container',
-        style: style,
-        linkUrl: linkUrl
-      }, _react2.default.createElement(_style.IconImage, {
-        src: srcUrl
-      }));
-    }
-  }]);
-
-  return SocialIcon;
-}(_react.Component);
-
-exports.default = SocialIcon;
 
 SocialIcon.propTypes = {
-  style: _propTypes2.default.object,
+  style: _propTypes2.default.objectOf(_propTypes2.default.any),
   srcUrl: _propTypes2.default.string,
   linkUrl: _propTypes2.default.string
 };
 
-/***/ }),
-/* 557 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _propTypes = __webpack_require__(1);
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _server = __webpack_require__(558);
-
-var _server2 = _interopRequireDefault(_server);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-// See: https://github.com/webpack/react-starter/issues/37
-var isBrowser = typeof window !== 'undefined';
-var SVGInjector = isBrowser ? __webpack_require__(565) : undefined;
-
-var ReactSVG = function (_React$Component) {
-  _inherits(ReactSVG, _React$Component);
-
-  function ReactSVG() {
-    var _ref;
-
-    var _temp, _this, _ret;
-
-    _classCallCheck(this, ReactSVG);
-
-    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = ReactSVG.__proto__ || Object.getPrototypeOf(ReactSVG)).call.apply(_ref, [this].concat(args))), _this), _this.refCallback = function (container) {
-      if (!container) {
-        _this.removeSVG();
-        return;
-      }
-
-      _this.container = container;
-      _this.renderSVG();
-    }, _temp), _possibleConstructorReturn(_this, _ret);
-  }
-
-  _createClass(ReactSVG, [{
-    key: 'renderSVG',
-    value: function renderSVG() {
-      var props = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : this.props;
-      var each = props.callback,
-          className = props.className,
-          evalScripts = props.evalScripts,
-          path = props.path,
-          style = props.style;
-
-
-      var div = document.createElement('div');
-      div.innerHTML = _server2.default.renderToStaticMarkup(_react2.default.createElement(
-        'div',
-        null,
-        _react2.default.createElement('div', { className: className, 'data-src': path, style: style })
-      ));
-
-      var wrapper = this.container.appendChild(div.firstChild);
-
-      SVGInjector(wrapper.firstChild, {
-        evalScripts: evalScripts,
-        each: each
-      });
-    }
-  }, {
-    key: 'removeSVG',
-    value: function removeSVG() {
-      if (this.container instanceof Node && this.container.firstChild instanceof Node) {
-        this.container.removeChild(this.container.firstChild);
-      }
-    }
-  }, {
-    key: 'componentWillReceiveProps',
-    value: function componentWillReceiveProps(nextProps) {
-      this.removeSVG();
-      this.renderSVG(nextProps);
-    }
-  }, {
-    key: 'shouldComponentUpdate',
-    value: function shouldComponentUpdate() {
-      return false;
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement('div', { ref: this.refCallback, className: this.props.wrapperClassName });
-    }
-  }]);
-
-  return ReactSVG;
-}(_react2.default.Component);
-
-ReactSVG.defaultProps = {
-  callback: function callback() {},
-  className: null,
-  evalScripts: 'once',
+SocialIcon.defaultProps = {
   style: {},
-  wrapperClassName: null
-};
-ReactSVG.propTypes = {
-  callback: _propTypes2.default.func,
-  className: _propTypes2.default.string,
-  evalScripts: _propTypes2.default.oneOf(['always', 'once', 'never']),
-  path: _propTypes2.default.string.isRequired,
-  style: _propTypes2.default.object,
-  wrapperClassName: _propTypes2.default.string
-};
-exports.default = ReactSVG;
-module.exports = exports['default'];
-
-/***/ }),
-/* 558 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-if (true) {
-  module.exports = __webpack_require__(559);
-} else {
-  module.exports = require('./cjs/react-dom-server.browser.development.js');
-}
-
-
-/***/ }),
-/* 559 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/** @license React v16.2.0
- * react-dom-server.browser.production.min.js
- *
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-var h=__webpack_require__(560),n=__webpack_require__(0),aa=__webpack_require__(113),t=__webpack_require__(561),ba=__webpack_require__(562),ca=__webpack_require__(564);
-function w(a){for(var b=arguments.length-1,g="Minified React error #"+a+"; visit http://facebook.github.io/react/docs/error-decoder.html?invariant\x3d"+a,c=0;c<b;c++)g+="\x26args[]\x3d"+encodeURIComponent(arguments[c+1]);b=Error(g+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.");b.name="Invariant Violation";b.framesToPop=1;throw b;}
-var x={children:!0,dangerouslySetInnerHTML:!0,defaultValue:!0,defaultChecked:!0,innerHTML:!0,suppressContentEditableWarning:!0,suppressHydrationWarning:!0,style:!0};function z(a,b){return(a&b)===b}
-var B={MUST_USE_PROPERTY:1,HAS_BOOLEAN_VALUE:4,HAS_NUMERIC_VALUE:8,HAS_POSITIVE_NUMERIC_VALUE:24,HAS_OVERLOADED_BOOLEAN_VALUE:32,HAS_STRING_BOOLEAN_VALUE:64,injectDOMPropertyConfig:function(a){var b=B,g=a.Properties||{},c=a.DOMAttributeNamespaces||{},k=a.DOMAttributeNames||{};a=a.DOMMutationMethods||{};for(var f in g){C.hasOwnProperty(f)?w("48",f):void 0;var e=f.toLowerCase(),d=g[f];e={attributeName:e,attributeNamespace:null,propertyName:f,mutationMethod:null,mustUseProperty:z(d,b.MUST_USE_PROPERTY),
-hasBooleanValue:z(d,b.HAS_BOOLEAN_VALUE),hasNumericValue:z(d,b.HAS_NUMERIC_VALUE),hasPositiveNumericValue:z(d,b.HAS_POSITIVE_NUMERIC_VALUE),hasOverloadedBooleanValue:z(d,b.HAS_OVERLOADED_BOOLEAN_VALUE),hasStringBooleanValue:z(d,b.HAS_STRING_BOOLEAN_VALUE)};1>=e.hasBooleanValue+e.hasNumericValue+e.hasOverloadedBooleanValue?void 0:w("50",f);k.hasOwnProperty(f)&&(e.attributeName=k[f]);c.hasOwnProperty(f)&&(e.attributeNamespace=c[f]);a.hasOwnProperty(f)&&(e.mutationMethod=a[f]);C[f]=e}}},C={};
-function da(a,b){if(x.hasOwnProperty(a)||2<a.length&&("o"===a[0]||"O"===a[0])&&("n"===a[1]||"N"===a[1]))return!1;if(null===b)return!0;switch(typeof b){case "boolean":return D(a);case "undefined":case "number":case "string":case "object":return!0;default:return!1}}function E(a){return C.hasOwnProperty(a)?C[a]:null}
-function D(a){if(x.hasOwnProperty(a))return!0;var b=E(a);if(b)return b.hasBooleanValue||b.hasStringBooleanValue||b.hasOverloadedBooleanValue;a=a.toLowerCase().slice(0,5);return"data-"===a||"aria-"===a}
-var F=B,G=F.MUST_USE_PROPERTY,H=F.HAS_BOOLEAN_VALUE,I=F.HAS_NUMERIC_VALUE,J=F.HAS_POSITIVE_NUMERIC_VALUE,K=F.HAS_OVERLOADED_BOOLEAN_VALUE,L=F.HAS_STRING_BOOLEAN_VALUE,ea={Properties:{allowFullScreen:H,async:H,autoFocus:H,autoPlay:H,capture:K,checked:G|H,cols:J,contentEditable:L,controls:H,"default":H,defer:H,disabled:H,download:K,draggable:L,formNoValidate:H,hidden:H,loop:H,multiple:G|H,muted:G|H,noValidate:H,open:H,playsInline:H,readOnly:H,required:H,reversed:H,rows:J,rowSpan:I,scoped:H,seamless:H,
-selected:G|H,size:J,start:I,span:J,spellCheck:L,style:0,tabIndex:0,itemScope:H,acceptCharset:0,className:0,htmlFor:0,httpEquiv:0,value:L},DOMAttributeNames:{acceptCharset:"accept-charset",className:"class",htmlFor:"for",httpEquiv:"http-equiv"},DOMMutationMethods:{value:function(a,b){if(null==b)return a.removeAttribute("value");"number"!==a.type||!1===a.hasAttribute("value")?a.setAttribute("value",""+b):a.validity&&!a.validity.badInput&&a.ownerDocument.activeElement!==a&&a.setAttribute("value",""+
-b)}}},M=F.HAS_STRING_BOOLEAN_VALUE,N={xlink:"http://www.w3.org/1999/xlink",xml:"http://www.w3.org/XML/1998/namespace"},O={Properties:{autoReverse:M,externalResourcesRequired:M,preserveAlpha:M},DOMAttributeNames:{autoReverse:"autoReverse",externalResourcesRequired:"externalResourcesRequired",preserveAlpha:"preserveAlpha"},DOMAttributeNamespaces:{xlinkActuate:N.xlink,xlinkArcrole:N.xlink,xlinkHref:N.xlink,xlinkRole:N.xlink,xlinkShow:N.xlink,xlinkTitle:N.xlink,xlinkType:N.xlink,xmlBase:N.xml,xmlLang:N.xml,
-xmlSpace:N.xml}},fa=/[\-\:]([a-z])/g;function ha(a){return a[1].toUpperCase()}
-"accent-height alignment-baseline arabic-form baseline-shift cap-height clip-path clip-rule color-interpolation color-interpolation-filters color-profile color-rendering dominant-baseline enable-background fill-opacity fill-rule flood-color flood-opacity font-family font-size font-size-adjust font-stretch font-style font-variant font-weight glyph-name glyph-orientation-horizontal glyph-orientation-vertical horiz-adv-x horiz-origin-x image-rendering letter-spacing lighting-color marker-end marker-mid marker-start overline-position overline-thickness paint-order panose-1 pointer-events rendering-intent shape-rendering stop-color stop-opacity strikethrough-position strikethrough-thickness stroke-dasharray stroke-dashoffset stroke-linecap stroke-linejoin stroke-miterlimit stroke-opacity stroke-width text-anchor text-decoration text-rendering underline-position underline-thickness unicode-bidi unicode-range units-per-em v-alphabetic v-hanging v-ideographic v-mathematical vector-effect vert-adv-y vert-origin-x vert-origin-y word-spacing writing-mode x-height xlink:actuate xlink:arcrole xlink:href xlink:role xlink:show xlink:title xlink:type xml:base xmlns:xlink xml:lang xml:space".split(" ").forEach(function(a){var b=a.replace(fa,
-ha);O.Properties[b]=0;O.DOMAttributeNames[b]=a});F.injectDOMPropertyConfig(ea);F.injectDOMPropertyConfig(O);var P="function"===typeof Symbol&&Symbol["for"]?Symbol["for"]("react.fragment"):60107,ia=/["'&<>]/;
-function Q(a){if("boolean"===typeof a||"number"===typeof a)return""+a;a=""+a;var b=ia.exec(a);if(b){var g="",c,k=0;for(c=b.index;c<a.length;c++){switch(a.charCodeAt(c)){case 34:b="\x26quot;";break;case 38:b="\x26amp;";break;case 39:b="\x26#x27;";break;case 60:b="\x26lt;";break;case 62:b="\x26gt;";break;default:continue}k!==c&&(g+=a.substring(k,c));k=c+1;g+=b}a=k!==c?g+a.substring(k,c):g}return a}
-var ja=/^[:A-Z_a-z\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u02FF\u0370-\u037D\u037F-\u1FFF\u200C-\u200D\u2070-\u218F\u2C00-\u2FEF\u3001-\uD7FF\uF900-\uFDCF\uFDF0-\uFFFD][:A-Z_a-z\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u02FF\u0370-\u037D\u037F-\u1FFF\u200C-\u200D\u2070-\u218F\u2C00-\u2FEF\u3001-\uD7FF\uF900-\uFDCF\uFDF0-\uFFFD\-.0-9\u00B7\u0300-\u036F\u203F-\u2040]*$/,R={},S={};function ka(a){if(S.hasOwnProperty(a))return!0;if(R.hasOwnProperty(a))return!1;if(ja.test(a))return S[a]=!0;R[a]=!0;return!1}
-function la(a,b){var g=E(a);if(g){if(null==b||g.hasBooleanValue&&!b||g.hasNumericValue&&isNaN(b)||g.hasPositiveNumericValue&&1>b||g.hasOverloadedBooleanValue&&!1===b)return"";var c=g.attributeName;if(g.hasBooleanValue||g.hasOverloadedBooleanValue&&!0===b)return c+'\x3d""';if("boolean"!==typeof b||D(a))return c+"\x3d"+('"'+Q(b)+'"')}else if(da(a,b))return null==b?"":a+"\x3d"+('"'+Q(b)+'"');return null}var T={html:"http://www.w3.org/1999/xhtml",mathml:"http://www.w3.org/1998/Math/MathML",svg:"http://www.w3.org/2000/svg"};
-function U(a){switch(a){case "svg":return"http://www.w3.org/2000/svg";case "math":return"http://www.w3.org/1998/Math/MathML";default:return"http://www.w3.org/1999/xhtml"}}
-var V={area:!0,base:!0,br:!0,col:!0,embed:!0,hr:!0,img:!0,input:!0,keygen:!0,link:!0,meta:!0,param:!0,source:!0,track:!0,wbr:!0},ma=h({menuitem:!0},V),W={animationIterationCount:!0,borderImageOutset:!0,borderImageSlice:!0,borderImageWidth:!0,boxFlex:!0,boxFlexGroup:!0,boxOrdinalGroup:!0,columnCount:!0,columns:!0,flex:!0,flexGrow:!0,flexPositive:!0,flexShrink:!0,flexNegative:!0,flexOrder:!0,gridRow:!0,gridRowEnd:!0,gridRowSpan:!0,gridRowStart:!0,gridColumn:!0,gridColumnEnd:!0,gridColumnSpan:!0,gridColumnStart:!0,
-fontWeight:!0,lineClamp:!0,lineHeight:!0,opacity:!0,order:!0,orphans:!0,tabSize:!0,widows:!0,zIndex:!0,zoom:!0,fillOpacity:!0,floodOpacity:!0,stopOpacity:!0,strokeDasharray:!0,strokeDashoffset:!0,strokeMiterlimit:!0,strokeOpacity:!0,strokeWidth:!0},na=["Webkit","ms","Moz","O"];Object.keys(W).forEach(function(a){na.forEach(function(b){b=b+a.charAt(0).toUpperCase()+a.substring(1);W[b]=W[a]})});var X=n.Children.toArray,Y=aa.thatReturns(""),oa={listing:!0,pre:!0,textarea:!0};
-function pa(a){return"string"===typeof a?a:"function"===typeof a?a.displayName||a.name:null}var qa=/^[a-zA-Z][a-zA-Z:_\.\-\d]*$/,ra={},sa=ca(function(a){return ba(a)});function ta(a){var b="";n.Children.forEach(a,function(a){null==a||"string"!==typeof a&&"number"!==typeof a||(b+=a)});return b}function ua(a,b){if(a=a.contextTypes){var g={},c;for(c in a)g[c]=b[c];b=g}else b=t;return b}var va={children:null,dangerouslySetInnerHTML:null,suppressContentEditableWarning:null,suppressHydrationWarning:null};
-function wa(a,b){void 0===a&&w("152",pa(b)||"Component")}
-function xa(a,b){for(;n.isValidElement(a);){var g=a,c=g.type;if("function"!==typeof c)break;a=ua(c,b);var k=[],f=!1,e={isMounted:function(){return!1},enqueueForceUpdate:function(){if(null===k)return null},enqueueReplaceState:function(a,b){f=!0;k=[b]},enqueueSetState:function(a,b){if(null===k)return null;k.push(b)}};if(c.prototype&&c.prototype.isReactComponent)var d=new c(g.props,a,e);else if(d=c(g.props,a,e),null==d||null==d.render){a=d;wa(a,c);continue}d.props=g.props;d.context=a;d.updater=e;e=d.state;
-void 0===e&&(d.state=e=null);if(d.componentWillMount)if(d.componentWillMount(),k.length){e=k;var p=f;k=null;f=!1;if(p&&1===e.length)d.state=e[0];else{var q=p?e[0]:d.state,l=!0;for(p=p?1:0;p<e.length;p++){var m=e[p];if(m="function"===typeof m?m.call(d,q,g.props,a):m)l?(l=!1,q=h({},q,m)):h(q,m)}d.state=q}}else k=null;a=d.render();wa(a,c);if("function"===typeof d.getChildContext&&(g=c.childContextTypes,"object"===typeof g)){var A=d.getChildContext();for(var y in A)y in g?void 0:w("108",pa(c)||"Unknown",
-y)}A&&(b=h({},b,A))}return{child:a,context:b}}
-var ya=function(){function a(b,g){if(!(this instanceof a))throw new TypeError("Cannot call a class as a function");n.isValidElement(b)?b.type!==P?b=[b]:(b=b.props.children,b=n.isValidElement(b)?[b]:X(b)):b=X(b);this.stack=[{domNamespace:T.html,children:b,childIndex:0,context:t,footer:""}];this.exhausted=!1;this.currentSelectValue=null;this.previousWasTextNode=!1;this.makeStaticMarkup=g}a.prototype.read=function(a){if(this.exhausted)return null;for(var b="";b.length<a;){if(0===this.stack.length){this.exhausted=
-!0;break}var c=this.stack[this.stack.length-1];if(c.childIndex>=c.children.length){var k=c.footer;b+=k;""!==k&&(this.previousWasTextNode=!1);this.stack.pop();"select"===c.tag&&(this.currentSelectValue=null)}else k=c.children[c.childIndex++],b+=this.render(k,c.context,c.domNamespace)}return b};a.prototype.render=function(a,g,c){if("string"===typeof a||"number"===typeof a){c=""+a;if(""===c)return"";if(this.makeStaticMarkup)return Q(c);if(this.previousWasTextNode)return"\x3c!-- --\x3e"+Q(c);this.previousWasTextNode=
-!0;return Q(c)}g=xa(a,g);a=g.child;g=g.context;if(null===a||!1===a)return"";if(n.isValidElement(a))return a.type===P?(a=X(a.props.children),this.stack.push({domNamespace:c,children:a,childIndex:0,context:g,footer:""}),""):this.renderDOM(a,g,c);a=X(a);this.stack.push({domNamespace:c,children:a,childIndex:0,context:g,footer:""});return""};a.prototype.renderDOM=function(a,g,c){var b=a.type.toLowerCase();c===T.html&&U(b);ra.hasOwnProperty(b)||(qa.test(b)?void 0:w("65",b),ra[b]=!0);var f=a.props;if("input"===
-b)f=h({type:void 0},f,{defaultChecked:void 0,defaultValue:void 0,value:null!=f.value?f.value:f.defaultValue,checked:null!=f.checked?f.checked:f.defaultChecked});else if("textarea"===b){var e=f.value;if(null==e){e=f.defaultValue;var d=f.children;null!=d&&(null!=e?w("92"):void 0,Array.isArray(d)&&(1>=d.length?void 0:w("93"),d=d[0]),e=""+d);null==e&&(e="")}f=h({},f,{value:void 0,children:""+e})}else if("select"===b)this.currentSelectValue=null!=f.value?f.value:f.defaultValue,f=h({},f,{value:void 0});
-else if("option"===b){d=this.currentSelectValue;var p=ta(f.children);if(null!=d){var q=null!=f.value?f.value+"":p;e=!1;if(Array.isArray(d))for(var l=0;l<d.length;l++){if(""+d[l]===q){e=!0;break}}else e=""+d===q;f=h({selected:void 0,children:void 0},f,{selected:e,children:p})}}if(e=f)ma[b]&&(null!=e.children||null!=e.dangerouslySetInnerHTML?w("137",b,Y()):void 0),null!=e.dangerouslySetInnerHTML&&(null!=e.children?w("60"):void 0,"object"===typeof e.dangerouslySetInnerHTML&&"__html"in e.dangerouslySetInnerHTML?
-void 0:w("61")),null!=e.style&&"object"!==typeof e.style?w("62",Y()):void 0;e=f;d=this.makeStaticMarkup;p=1===this.stack.length;q="\x3c"+a.type;for(r in e)if(e.hasOwnProperty(r)){var m=e[r];if(null!=m){if("style"===r){l=void 0;var A="",y="";for(l in m)if(m.hasOwnProperty(l)){var u=0===l.indexOf("--"),v=m[l];null!=v&&(A+=y+sa(l)+":",y=l,u=null==v||"boolean"===typeof v||""===v?"":u||"number"!==typeof v||0===v||W.hasOwnProperty(y)&&W[y]?(""+v).trim():v+"px",A+=u,y=";")}m=A||null}l=null;b:if(u=b,v=e,
--1===u.indexOf("-"))u="string"===typeof v.is;else switch(u){case "annotation-xml":case "color-profile":case "font-face":case "font-face-src":case "font-face-uri":case "font-face-format":case "font-face-name":case "missing-glyph":u=!1;break b;default:u=!0}u?va.hasOwnProperty(r)||(l=r,l=ka(l)&&null!=m?l+"\x3d"+('"'+Q(m)+'"'):""):l=la(r,m);l&&(q+=" "+l)}}d||p&&(q+=' data-reactroot\x3d""');var r=q;e="";V.hasOwnProperty(b)?r+="/\x3e":(r+="\x3e",e="\x3c/"+a.type+"\x3e");a:{d=f.dangerouslySetInnerHTML;if(null!=
-d){if(null!=d.__html){d=d.__html;break a}}else if(d=f.children,"string"===typeof d||"number"===typeof d){d=Q(d);break a}d=null}null!=d?(f=[],oa[b]&&"\n"===d.charAt(0)&&(r+="\n"),r+=d):f=X(f.children);a=a.type;c=null==c||"http://www.w3.org/1999/xhtml"===c?U(a):"http://www.w3.org/2000/svg"===c&&"foreignObject"===a?"http://www.w3.org/1999/xhtml":c;this.stack.push({domNamespace:c,tag:b,children:f,childIndex:0,context:g,footer:e});this.previousWasTextNode=!1;return r};return a}(),za={renderToString:function(a){return(new ya(a,
-!1)).read(Infinity)},renderToStaticMarkup:function(a){return(new ya(a,!0)).read(Infinity)},renderToNodeStream:function(){w("207")},renderToStaticNodeStream:function(){w("208")},version:"16.2.0"},Aa=Object.freeze({default:za}),Z=Aa&&za||Aa;module.exports=Z["default"]?Z["default"]:Z;
-
-
-/***/ }),
-/* 560 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/*
-object-assign
-(c) Sindre Sorhus
-@license MIT
-*/
-
-
-/* eslint-disable no-unused-vars */
-var getOwnPropertySymbols = Object.getOwnPropertySymbols;
-var hasOwnProperty = Object.prototype.hasOwnProperty;
-var propIsEnumerable = Object.prototype.propertyIsEnumerable;
-
-function toObject(val) {
-	if (val === null || val === undefined) {
-		throw new TypeError('Object.assign cannot be called with null or undefined');
-	}
-
-	return Object(val);
-}
-
-function shouldUseNative() {
-	try {
-		if (!Object.assign) {
-			return false;
-		}
-
-		// Detect buggy property enumeration order in older V8 versions.
-
-		// https://bugs.chromium.org/p/v8/issues/detail?id=4118
-		var test1 = new String('abc');  // eslint-disable-line no-new-wrappers
-		test1[5] = 'de';
-		if (Object.getOwnPropertyNames(test1)[0] === '5') {
-			return false;
-		}
-
-		// https://bugs.chromium.org/p/v8/issues/detail?id=3056
-		var test2 = {};
-		for (var i = 0; i < 10; i++) {
-			test2['_' + String.fromCharCode(i)] = i;
-		}
-		var order2 = Object.getOwnPropertyNames(test2).map(function (n) {
-			return test2[n];
-		});
-		if (order2.join('') !== '0123456789') {
-			return false;
-		}
-
-		// https://bugs.chromium.org/p/v8/issues/detail?id=3056
-		var test3 = {};
-		'abcdefghijklmnopqrst'.split('').forEach(function (letter) {
-			test3[letter] = letter;
-		});
-		if (Object.keys(Object.assign({}, test3)).join('') !==
-				'abcdefghijklmnopqrst') {
-			return false;
-		}
-
-		return true;
-	} catch (err) {
-		// We don't expect any of the above to throw, but better to be safe.
-		return false;
-	}
-}
-
-module.exports = shouldUseNative() ? Object.assign : function (target, source) {
-	var from;
-	var to = toObject(target);
-	var symbols;
-
-	for (var s = 1; s < arguments.length; s++) {
-		from = Object(arguments[s]);
-
-		for (var key in from) {
-			if (hasOwnProperty.call(from, key)) {
-				to[key] = from[key];
-			}
-		}
-
-		if (getOwnPropertySymbols) {
-			symbols = getOwnPropertySymbols(from);
-			for (var i = 0; i < symbols.length; i++) {
-				if (propIsEnumerable.call(from, symbols[i])) {
-					to[symbols[i]] = from[symbols[i]];
-				}
-			}
-		}
-	}
-
-	return to;
+  srcUrl: '',
+  linkUrl: ''
 };
 
-
 /***/ }),
-/* 561 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- */
-
-
-
-var emptyObject = {};
-
-if (false) {
-  Object.freeze(emptyObject);
-}
-
-module.exports = emptyObject;
-
-/***/ }),
-/* 562 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- * @typechecks
- */
-
-
-
-var hyphenate = __webpack_require__(563);
-
-var msPattern = /^ms-/;
-
-/**
- * Hyphenates a camelcased CSS property name, for example:
- *
- *   > hyphenateStyleName('backgroundColor')
- *   < "background-color"
- *   > hyphenateStyleName('MozTransition')
- *   < "-moz-transition"
- *   > hyphenateStyleName('msTransition')
- *   < "-ms-transition"
- *
- * As Modernizr suggests (http://modernizr.com/docs/#prefixed), an `ms` prefix
- * is converted to `-ms-`.
- *
- * @param {string} string
- * @return {string}
- */
-function hyphenateStyleName(string) {
-  return hyphenate(string).replace(msPattern, '-ms-');
-}
-
-module.exports = hyphenateStyleName;
-
-/***/ }),
-/* 563 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- * @typechecks
- */
-
-var _uppercasePattern = /([A-Z])/g;
-
-/**
- * Hyphenates a camelcased string, for example:
- *
- *   > hyphenate('backgroundColor')
- *   < "background-color"
- *
- * For CSS style names, use `hyphenateStyleName` instead which works properly
- * with all vendor prefixes, including `ms`.
- *
- * @param {string} string
- * @return {string}
- */
-function hyphenate(string) {
-  return string.replace(_uppercasePattern, '-$1').toLowerCase();
-}
-
-module.exports = hyphenate;
-
-/***/ }),
-/* 564 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- * 
- * @typechecks static-only
- */
-
-
-
-/**
- * Memoizes the return value of a function that accepts one string argument.
- */
-
-function memoizeStringOnly(callback) {
-  var cache = {};
-  return function (string) {
-    if (!cache.hasOwnProperty(string)) {
-      cache[string] = callback.call(this, string);
-    }
-    return cache[string];
-  };
-}
-
-module.exports = memoizeStringOnly;
-
-/***/ }),
-/* 565 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var __WEBPACK_AMD_DEFINE_RESULT__;/**
- * SVGInjector v1.1.3 - Fast, caching, dynamic inline SVG DOM injection library
- * https://github.com/iconic/SVGInjector
- *
- * Copyright (c) 2014-2015 Waybury <hello@waybury.com>
- * @license MIT
- */
-
-(function (window, document) {
-
-  'use strict';
-
-  // Environment
-  var isLocal = window.location.protocol === 'file:';
-  var hasSvgSupport = document.implementation.hasFeature('http://www.w3.org/TR/SVG11/feature#BasicStructure', '1.1');
-
-  function uniqueClasses(list) {
-    list = list.split(' ');
-
-    var hash = {};
-    var i = list.length;
-    var out = [];
-
-    while (i--) {
-      if (!hash.hasOwnProperty(list[i])) {
-        hash[list[i]] = 1;
-        out.unshift(list[i]);
-      }
-    }
-
-    return out.join(' ');
-  }
-
-  /**
-   * cache (or polyfill for <= IE8) Array.forEach()
-   * source: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
-   */
-  var forEach = Array.prototype.forEach || function (fn, scope) {
-    if (this === void 0 || this === null || typeof fn !== 'function') {
-      throw new TypeError();
-    }
-
-    /* jshint bitwise: false */
-    var i, len = this.length >>> 0;
-    /* jshint bitwise: true */
-
-    for (i = 0; i < len; ++i) {
-      if (i in this) {
-        fn.call(scope, this[i], i, this);
-      }
-    }
-  };
-
-  // SVG Cache
-  var svgCache = {};
-
-  var injectCount = 0;
-  var injectedElements = [];
-
-  // Request Queue
-  var requestQueue = [];
-
-  // Script running status
-  var ranScripts = {};
-
-  var cloneSvg = function (sourceSvg) {
-    return sourceSvg.cloneNode(true);
-  };
-
-  var queueRequest = function (url, callback) {
-    requestQueue[url] = requestQueue[url] || [];
-    requestQueue[url].push(callback);
-  };
-
-  var processRequestQueue = function (url) {
-    for (var i = 0, len = requestQueue[url].length; i < len; i++) {
-      // Make these calls async so we avoid blocking the page/renderer
-      /* jshint loopfunc: true */
-      (function (index) {
-        setTimeout(function () {
-          requestQueue[url][index](cloneSvg(svgCache[url]));
-        }, 0);
-      })(i);
-      /* jshint loopfunc: false */
-    }
-  };
-
-  var loadSvg = function (url, callback) {
-    if (svgCache[url] !== undefined) {
-      if (svgCache[url] instanceof SVGSVGElement) {
-        // We already have it in cache, so use it
-        callback(cloneSvg(svgCache[url]));
-      }
-      else {
-        // We don't have it in cache yet, but we are loading it, so queue this request
-        queueRequest(url, callback);
-      }
-    }
-    else {
-
-      if (!window.XMLHttpRequest) {
-        callback('Browser does not support XMLHttpRequest');
-        return false;
-      }
-
-      // Seed the cache to indicate we are loading this URL already
-      svgCache[url] = {};
-      queueRequest(url, callback);
-
-      var httpRequest = new XMLHttpRequest();
-
-      httpRequest.onreadystatechange = function () {
-        // readyState 4 = complete
-        if (httpRequest.readyState === 4) {
-
-          // Handle status
-          if (httpRequest.status === 404 || httpRequest.responseXML === null) {
-            callback('Unable to load SVG file: ' + url);
-
-            if (isLocal) callback('Note: SVG injection ajax calls do not work locally without adjusting security setting in your browser. Or consider using a local webserver.');
-
-            callback();
-            return false;
-          }
-
-          // 200 success from server, or 0 when using file:// protocol locally
-          if (httpRequest.status === 200 || (isLocal && httpRequest.status === 0)) {
-
-            /* globals Document */
-            if (httpRequest.responseXML instanceof Document) {
-              // Cache it
-              svgCache[url] = httpRequest.responseXML.documentElement;
-            }
-            /* globals -Document */
-
-            // IE9 doesn't create a responseXML Document object from loaded SVG,
-            // and throws a "DOM Exception: HIERARCHY_REQUEST_ERR (3)" error when injected.
-            //
-            // So, we'll just create our own manually via the DOMParser using
-            // the the raw XML responseText.
-            //
-            // :NOTE: IE8 and older doesn't have DOMParser, but they can't do SVG either, so...
-            else if (DOMParser && (DOMParser instanceof Function)) {
-              var xmlDoc;
-              try {
-                var parser = new DOMParser();
-                xmlDoc = parser.parseFromString(httpRequest.responseText, 'text/xml');
-              }
-              catch (e) {
-                xmlDoc = undefined;
-              }
-
-              if (!xmlDoc || xmlDoc.getElementsByTagName('parsererror').length) {
-                callback('Unable to parse SVG file: ' + url);
-                return false;
-              }
-              else {
-                // Cache it
-                svgCache[url] = xmlDoc.documentElement;
-              }
-            }
-
-            // We've loaded a new asset, so process any requests waiting for it
-            processRequestQueue(url);
-          }
-          else {
-            callback('There was a problem injecting the SVG: ' + httpRequest.status + ' ' + httpRequest.statusText);
-            return false;
-          }
-        }
-      };
-
-      httpRequest.open('GET', url);
-
-      // Treat and parse the response as XML, even if the
-      // server sends us a different mimetype
-      if (httpRequest.overrideMimeType) httpRequest.overrideMimeType('text/xml');
-
-      httpRequest.send();
-    }
-  };
-
-  // Inject a single element
-  var injectElement = function (el, evalScripts, pngFallback, callback) {
-
-    // Grab the src or data-src attribute
-    var imgUrl = el.getAttribute('data-src') || el.getAttribute('src');
-
-    // We can only inject SVG
-    if (!(/\.svg/i).test(imgUrl)) {
-      callback('Attempted to inject a file with a non-svg extension: ' + imgUrl);
-      return;
-    }
-
-    // If we don't have SVG support try to fall back to a png,
-    // either defined per-element via data-fallback or data-png,
-    // or globally via the pngFallback directory setting
-    if (!hasSvgSupport) {
-      var perElementFallback = el.getAttribute('data-fallback') || el.getAttribute('data-png');
-
-      // Per-element specific PNG fallback defined, so use that
-      if (perElementFallback) {
-        el.setAttribute('src', perElementFallback);
-        callback(null);
-      }
-      // Global PNG fallback directoriy defined, use the same-named PNG
-      else if (pngFallback) {
-        el.setAttribute('src', pngFallback + '/' + imgUrl.split('/').pop().replace('.svg', '.png'));
-        callback(null);
-      }
-      // um...
-      else {
-        callback('This browser does not support SVG and no PNG fallback was defined.');
-      }
-
-      return;
-    }
-
-    // Make sure we aren't already in the process of injecting this element to
-    // avoid a race condition if multiple injections for the same element are run.
-    // :NOTE: Using indexOf() only _after_ we check for SVG support and bail,
-    // so no need for IE8 indexOf() polyfill
-    if (injectedElements.indexOf(el) !== -1) {
-      return;
-    }
-
-    // Remember the request to inject this element, in case other injection
-    // calls are also trying to replace this element before we finish
-    injectedElements.push(el);
-
-    // Try to avoid loading the orginal image src if possible.
-    el.setAttribute('src', '');
-
-    // Load it up
-    loadSvg(imgUrl, function (svg) {
-
-      if (typeof svg === 'undefined' || typeof svg === 'string') {
-        callback(svg);
-        return false;
-      }
-
-      var imgId = el.getAttribute('id');
-      if (imgId) {
-        svg.setAttribute('id', imgId);
-      }
-
-      var imgTitle = el.getAttribute('title');
-      if (imgTitle) {
-        svg.setAttribute('title', imgTitle);
-      }
-
-      // Concat the SVG classes + 'injected-svg' + the img classes
-      var classMerge = [].concat(svg.getAttribute('class') || [], 'injected-svg', el.getAttribute('class') || []).join(' ');
-      svg.setAttribute('class', uniqueClasses(classMerge));
-
-      var imgStyle = el.getAttribute('style');
-      if (imgStyle) {
-        svg.setAttribute('style', imgStyle);
-      }
-
-      // Copy all the data elements to the svg
-      var imgData = [].filter.call(el.attributes, function (at) {
-        return (/^data-\w[\w\-]*$/).test(at.name);
-      });
-      forEach.call(imgData, function (dataAttr) {
-        if (dataAttr.name && dataAttr.value) {
-          svg.setAttribute(dataAttr.name, dataAttr.value);
-        }
-      });
-
-      // Make sure any internally referenced clipPath ids and their
-      // clip-path references are unique.
-      //
-      // This addresses the issue of having multiple instances of the
-      // same SVG on a page and only the first clipPath id is referenced.
-      //
-      // Browsers often shortcut the SVG Spec and don't use clipPaths
-      // contained in parent elements that are hidden, so if you hide the first
-      // SVG instance on the page, then all other instances lose their clipping.
-      // Reference: https://bugzilla.mozilla.org/show_bug.cgi?id=376027
-
-      // Handle all defs elements that have iri capable attributes as defined by w3c: http://www.w3.org/TR/SVG/linking.html#processingIRI
-      // Mapping IRI addressable elements to the properties that can reference them:
-      var iriElementsAndProperties = {
-        'clipPath': ['clip-path'],
-        'color-profile': ['color-profile'],
-        'cursor': ['cursor'],
-        'filter': ['filter'],
-        'linearGradient': ['fill', 'stroke'],
-        'marker': ['marker', 'marker-start', 'marker-mid', 'marker-end'],
-        'mask': ['mask'],
-        'pattern': ['fill', 'stroke'],
-        'radialGradient': ['fill', 'stroke']
-      };
-
-      var element, elementDefs, properties, currentId, newId;
-      Object.keys(iriElementsAndProperties).forEach(function (key) {
-        element = key;
-        properties = iriElementsAndProperties[key];
-
-        elementDefs = svg.querySelectorAll('defs ' + element + '[id]');
-        for (var i = 0, elementsLen = elementDefs.length; i < elementsLen; i++) {
-          currentId = elementDefs[i].id;
-          newId = currentId + '-' + injectCount;
-
-          // All of the properties that can reference this element type
-          var referencingElements;
-          forEach.call(properties, function (property) {
-            // :NOTE: using a substring match attr selector here to deal with IE "adding extra quotes in url() attrs"
-            referencingElements = svg.querySelectorAll('[' + property + '*="' + currentId + '"]');
-            for (var j = 0, referencingElementLen = referencingElements.length; j < referencingElementLen; j++) {
-              referencingElements[j].setAttribute(property, 'url(#' + newId + ')');
-            }
-          });
-
-          elementDefs[i].id = newId;
-        }
-      });
-
-      // Remove any unwanted/invalid namespaces that might have been added by SVG editing tools
-      svg.removeAttribute('xmlns:a');
-
-      // Post page load injected SVGs don't automatically have their script
-      // elements run, so we'll need to make that happen, if requested
-
-      // Find then prune the scripts
-      var scripts = svg.querySelectorAll('script');
-      var scriptsToEval = [];
-      var script, scriptType;
-
-      for (var k = 0, scriptsLen = scripts.length; k < scriptsLen; k++) {
-        scriptType = scripts[k].getAttribute('type');
-
-        // Only process javascript types.
-        // SVG defaults to 'application/ecmascript' for unset types
-        if (!scriptType || scriptType === 'application/ecmascript' || scriptType === 'application/javascript') {
-
-          // innerText for IE, textContent for other browsers
-          script = scripts[k].innerText || scripts[k].textContent;
-
-          // Stash
-          scriptsToEval.push(script);
-
-          // Tidy up and remove the script element since we don't need it anymore
-          svg.removeChild(scripts[k]);
-        }
-      }
-
-      // Run/Eval the scripts if needed
-      if (scriptsToEval.length > 0 && (evalScripts === 'always' || (evalScripts === 'once' && !ranScripts[imgUrl]))) {
-        for (var l = 0, scriptsToEvalLen = scriptsToEval.length; l < scriptsToEvalLen; l++) {
-
-          // :NOTE: Yup, this is a form of eval, but it is being used to eval code
-          // the caller has explictely asked to be loaded, and the code is in a caller
-          // defined SVG file... not raw user input.
-          //
-          // Also, the code is evaluated in a closure and not in the global scope.
-          // If you need to put something in global scope, use 'window'
-          new Function(scriptsToEval[l])(window); // jshint ignore:line
-        }
-
-        // Remember we already ran scripts for this svg
-        ranScripts[imgUrl] = true;
-      }
-
-      // :WORKAROUND:
-      // IE doesn't evaluate <style> tags in SVGs that are dynamically added to the page.
-      // This trick will trigger IE to read and use any existing SVG <style> tags.
-      //
-      // Reference: https://github.com/iconic/SVGInjector/issues/23
-      var styleTags = svg.querySelectorAll('style');
-      forEach.call(styleTags, function (styleTag) {
-        styleTag.textContent += '';
-      });
-
-      // Replace the image with the svg
-      el.parentNode.replaceChild(svg, el);
-
-      // Now that we no longer need it, drop references
-      // to the original element so it can be GC'd
-      delete injectedElements[injectedElements.indexOf(el)];
-      el = null;
-
-      // Increment the injected count
-      injectCount++;
-
-      callback(svg);
-    });
-  };
-
-  /**
-   * SVGInjector
-   *
-   * Replace the given elements with their full inline SVG DOM elements.
-   *
-   * :NOTE: We are using get/setAttribute with SVG because the SVG DOM spec differs from HTML DOM and
-   * can return other unexpected object types when trying to directly access svg properties.
-   * ex: "className" returns a SVGAnimatedString with the class value found in the "baseVal" property,
-   * instead of simple string like with HTML Elements.
-   *
-   * @param {mixes} Array of or single DOM element
-   * @param {object} options
-   * @param {function} callback
-   * @return {object} Instance of SVGInjector
-   */
-  var SVGInjector = function (elements, options, done) {
-
-    // Options & defaults
-    options = options || {};
-
-    // Should we run the scripts blocks found in the SVG
-    // 'always' - Run them every time
-    // 'once' - Only run scripts once for each SVG
-    // [false|'never'] - Ignore scripts
-    var evalScripts = options.evalScripts || 'always';
-
-    // Location of fallback pngs, if desired
-    var pngFallback = options.pngFallback || false;
-
-    // Callback to run during each SVG injection, returning the SVG injected
-    var eachCallback = options.each;
-
-    // Do the injection...
-    if (elements.length !== undefined) {
-      var elementsLoaded = 0;
-      forEach.call(elements, function (element) {
-        injectElement(element, evalScripts, pngFallback, function (svg) {
-          if (eachCallback && typeof eachCallback === 'function') eachCallback(svg);
-          if (done && elements.length === ++elementsLoaded) done(elementsLoaded);
-        });
-      });
-    }
-    else {
-      if (elements) {
-        injectElement(elements, evalScripts, pngFallback, function (svg) {
-          if (eachCallback && typeof eachCallback === 'function') eachCallback(svg);
-          if (done) done(1);
-          elements = null;
-        });
-      }
-      else {
-        if (done) done(0);
-      }
-    }
-  };
-
-  /* global module, exports: true, define */
-  // Node.js or CommonJS
-  if (typeof module === 'object' && typeof module.exports === 'object') {
-    module.exports = exports = SVGInjector;
-  }
-  // AMD support
-  else if (true) {
-    !(__WEBPACK_AMD_DEFINE_RESULT__ = (function () {
-      return SVGInjector;
-    }).call(exports, __webpack_require__, exports, module),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-  }
-  // Otherwise, attach to window as global
-  else if (typeof window === 'object') {
-    window.SVGInjector = SVGInjector;
-  }
-  /* global -module, -exports, -define */
-
-}(window, document));
-
-
-/***/ }),
+/* 557 */,
+/* 558 */,
+/* 559 */,
+/* 560 */,
+/* 561 */,
+/* 562 */,
+/* 563 */,
+/* 564 */,
+/* 565 */,
 /* 566 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-
-var _createClass = function () {
-  function defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
-    }
-  }return function (Constructor, protoProps, staticProps) {
-    if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
-  };
-}();
+exports.default = SocialButtonShell;
 
 var _react = __webpack_require__(0);
 
@@ -41262,85 +40149,39 @@ var _propTypes = __webpack_require__(1);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _concatCssClasses = __webpack_require__(29);
-
-var _concatCssClasses2 = _interopRequireDefault(_concatCssClasses);
-
-var _capToCamelCase = __webpack_require__(36);
-
-var _capToCamelCase2 = _interopRequireDefault(_capToCamelCase);
-
 var _style = __webpack_require__(195);
+
+var _children = __webpack_require__(607);
+
+var _children2 = _interopRequireDefault(_children);
 
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : { default: obj };
 }
 
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
+function SocialButtonShell(props) {
+  var containerLevelStyle = props.containerLevelStyle,
+      children = props.children,
+      linkUrl = props.linkUrl;
+
+  return _react2.default.createElement(_style.IconBoxLink, {
+    href: linkUrl || '/',
+    className: containerLevelStyle,
+    'data-event-category': 'Links',
+    'data-event-action': 'Click',
+    'data-event-label': linkUrl
+  }, children);
 }
-
-function _possibleConstructorReturn(self, call) {
-  if (!self) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }return call && ((typeof call === "undefined" ? "undefined" : _typeof(call)) === "object" || typeof call === "function") ? call : self;
-}
-
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === "undefined" ? "undefined" : _typeof(superClass)));
-  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-}
-
-var SocialButtonShell = function (_Component) {
-  _inherits(SocialButtonShell, _Component);
-
-  function SocialButtonShell(props) {
-    _classCallCheck(this, SocialButtonShell);
-
-    return _possibleConstructorReturn(this, (SocialButtonShell.__proto__ || Object.getPrototypeOf(SocialButtonShell)).call(this, props));
-  }
-
-  _createClass(SocialButtonShell, [{
-    key: 'render',
-    value: function render() {
-      // require('./SocialButtonShell.scss');
-
-      var _props = this.props,
-          style = _props.style,
-          containerLevelStyle = _props.containerLevelStyle,
-          children = _props.children,
-          linkUrl = _props.linkUrl;
-
-      if (!style) {
-        style = {
-          container: {
-            classes: []
-          }
-        };
-      }
-
-      return _react2.default.createElement(_style.IconBoxLink, {
-        href: linkUrl || '/',
-        className: containerLevelStyle,
-        'data-event-category': 'Links',
-        'data-event-action': 'Click',
-        'data-event-label': linkUrl
-      }, children);
-    }
-  }]);
-
-  return SocialButtonShell;
-}(_react.Component);
-
-exports.default = SocialButtonShell;
-
 SocialButtonShell.propTypes = {
-  style: _propTypes2.default.object,
   containerLevelStyle: _propTypes2.default.string,
-  linkUrl: _propTypes2.default.string
+  linkUrl: _propTypes2.default.string,
+  children: _children2.default
+};
+
+SocialButtonShell.defaultProps = {
+  containerLevelStyle: '',
+  linkUrl: '',
+  children: null
 };
 
 /***/ }),
@@ -41727,7 +40568,17 @@ var _propTypes = __webpack_require__(1);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _style = __webpack_require__(196);
+var _Container = __webpack_require__(577);
+
+var _Container2 = _interopRequireDefault(_Container);
+
+var _SlidesBox = __webpack_require__(578);
+
+var _SlidesBox2 = _interopRequireDefault(_SlidesBox);
+
+var _SlideButtonsBox = __webpack_require__(580);
+
+var _SlideButtonsBox2 = _interopRequireDefault(_SlideButtonsBox);
 
 var _SlideButton = __webpack_require__(581);
 
@@ -41812,7 +40663,7 @@ var SlideShow = function (_Component) {
           if (loopCounter >= LOOP_COUNT) {
             loopCounter = 0;
           } else {
-            loopCounter++;
+            loopCounter += 1;
           }
           url = slides[loopCounter].content.url;
           if (_this2.slideLooper) {
@@ -41838,6 +40689,7 @@ var SlideShow = function (_Component) {
     value: function goToSlide(keyValue) {
       if (!keyValue && keyValue !== 0) return;
       var slides = this.props.slides;
+
       var currentSlide = slides.filter(function (slide) {
         return slide.id === keyValue;
       });
@@ -41858,7 +40710,7 @@ var SlideShow = function (_Component) {
 
       var COMPONENT_NAME = 'SlideShow';
 
-      return _react2.default.createElement(_style.Container, {
+      return _react2.default.createElement(_Container2.default, {
         componentName: COMPONENT_NAME,
         gridAreaId: '',
         style: {
@@ -41866,7 +40718,7 @@ var SlideShow = function (_Component) {
           overflow: 'hidden',
           marginBottom: '16px'
         }
-      }, _react2.default.createElement(_style.SlidesBox, { style: {
+      }, _react2.default.createElement(_SlidesBox2.default, { style: {
           alignSelf: 'center',
           height: '100%',
           width: '100%',
@@ -41877,6 +40729,7 @@ var SlideShow = function (_Component) {
           flexDirection: 'column'
         }
       }, _react2.default.createElement('img', {
+        alt: this.state.url || '',
         src: this.state.url || '',
         style: {
           width: '100%',
@@ -41884,7 +40737,7 @@ var SlideShow = function (_Component) {
           opacity: '' + this.state.opacity,
           cursor: 'default'
         }
-      })), _react2.default.createElement(_style.SlideButtonsBox, null, slides.map(function (slide, index) {
+      })), _react2.default.createElement(_SlideButtonsBox2.default, null, slides.map(function (slide, index) {
         return _react2.default.createElement(_SlideButton2.default, {
           key: index,
           currentSlideId: _this3.state.currentSlideId,
@@ -41917,10 +40770,6 @@ var _styledComponents = __webpack_require__(2);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
-var _mediaQuery = __webpack_require__(14);
-
-var _mediaQuery2 = _interopRequireDefault(_mediaQuery);
-
 function _interopRequireDefault(obj) {
                                                                         return obj && obj.__esModule ? obj : { default: obj };
 }
@@ -41928,6 +40777,8 @@ function _interopRequireDefault(obj) {
 function _taggedTemplateLiteral(strings, raw) {
                                                                         return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
 }
+
+// import mediaQuery from './../../../theme/styled-components/mediaQuery';
 
 module.exports = _styledComponents2.default.section(_templateObject, '' /* ${mediaQuery.mobileS`
                                                                         display: none;
@@ -41960,29 +40811,7 @@ function _taggedTemplateLiteral(strings, raw) {
 module.exports = _styledComponents2.default.section(_templateObject);
 
 /***/ }),
-/* 579 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _templateObject = _taggedTemplateLiteral(['\n\n'], ['\n\n']);
-
-var _styledComponents = __webpack_require__(2);
-
-var _styledComponents2 = _interopRequireDefault(_styledComponents);
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj };
-}
-
-function _taggedTemplateLiteral(strings, raw) {
-  return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
-}
-
-module.exports = _styledComponents2.default.section(_templateObject);
-
-/***/ }),
+/* 579 */,
 /* 580 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -42036,7 +40865,7 @@ var _propTypes = __webpack_require__(1);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _style = __webpack_require__(196);
+var _Container = __webpack_require__(577);
 
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : { default: obj };
@@ -42081,13 +40910,12 @@ var SlideButton = function (_Component) {
     key: 'render',
     value: function render() {
       var _props = this.props,
-          goToSlide = _props.goToSlide,
           currentSlideId = _props.currentSlideId,
           slideId = _props.slideId;
 
       var COMPONENT_NAME = 'SlideButton';
       var isCurrent = slideId === currentSlideId;
-      return _react2.default.createElement(_style.Container, {
+      return _react2.default.createElement(_Container.Container, {
         componentName: COMPONENT_NAME,
         gridAreaId: '',
         onClick: this.goSlide,
@@ -42114,12 +40942,7 @@ SlideButton.propTypes = {
 };
 
 /***/ }),
-/* 582 */
-/***/ (function(module, exports) {
-
-module.exports = require("react-html-parser");
-
-/***/ }),
+/* 582 */,
 /* 583 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -44115,50 +42938,16 @@ module.exports = function domparser(html) {
 
 
 /***/ }),
-/* 595 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _templateObject = _taggedTemplateLiteral(['\n  font-size: 24px;\n'], ['\n  font-size: 24px;\n']);
-
-var _styledComponents = __webpack_require__(2);
-
-var _styledComponents2 = _interopRequireDefault(_styledComponents);
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj };
-}
-
-function _taggedTemplateLiteral(strings, raw) {
-  return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
-}
-
-module.exports = _styledComponents2.default.p(_templateObject);
-
-/***/ }),
+/* 595 */,
 /* 596 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-
-var _createClass = function () {
-  function defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
-    }
-  }return function (Constructor, protoProps, staticProps) {
-    if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
-  };
-}();
 
 var _react = __webpack_require__(0);
 
@@ -44167,18 +42956,6 @@ var _react2 = _interopRequireDefault(_react);
 var _propTypes = __webpack_require__(1);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
-
-var _GridItem = __webpack_require__(44);
-
-var _GridItem2 = _interopRequireDefault(_GridItem);
-
-var _getGridItem = __webpack_require__(54);
-
-var _getGridItem2 = _interopRequireDefault(_getGridItem);
-
-var _capToCamelCase = __webpack_require__(36);
-
-var _capToCamelCase2 = _interopRequireDefault(_capToCamelCase);
 
 var _PageShell = __webpack_require__(78);
 
@@ -44192,55 +42969,34 @@ var _ContactForm = __webpack_require__(168);
 
 var _ContactForm2 = _interopRequireDefault(_ContactForm);
 
-var _style = __webpack_require__(598);
+var _Container = __webpack_require__(599);
+
+var _Container2 = _interopRequireDefault(_Container);
+
+var _LeftColumn = __webpack_require__(600);
+
+var _LeftColumn2 = _interopRequireDefault(_LeftColumn);
+
+var _Headline = __webpack_require__(602);
+
+var _Headline2 = _interopRequireDefault(_Headline);
 
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : { default: obj };
 }
 
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
+function Contact(props) {
+  return _react2.default.createElement(_PageShell2.default, {
+    containerLevelClass: '',
+    style: {}
+  }, _react2.default.createElement(_GridItemShell2.default, null, _react2.default.createElement(_Container2.default, null, _react2.default.createElement(_Headline2.default, null, 'We\'d love to hear from you!'), _react2.default.createElement(_LeftColumn2.default, null, _react2.default.createElement(_ContactForm2.default, null)))), props.children);
 }
 
-function _possibleConstructorReturn(self, call) {
-  if (!self) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }return call && ((typeof call === "undefined" ? "undefined" : _typeof(call)) === "object" || typeof call === "function") ? call : self;
-}
-
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === "undefined" ? "undefined" : _typeof(superClass)));
-  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-}
-
-var Contact = function (_Component) {
-  _inherits(Contact, _Component);
-
-  function Contact() {
-    _classCallCheck(this, Contact);
-
-    return _possibleConstructorReturn(this, (Contact.__proto__ || Object.getPrototypeOf(Contact)).apply(this, arguments));
-  }
-
-  _createClass(Contact, [{
-    key: 'render',
-    value: function render() {
-      var component = (0, _capToCamelCase2.default)('SocialIcon');
-      return _react2.default.createElement(_PageShell2.default, {
-        containerLevelClass: '',
-        style: {}
-      }, _react2.default.createElement(_GridItemShell2.default, null, _react2.default.createElement(_style.Container, null, _react2.default.createElement(_style.Headline, null, 'We\'d love to hear from you!'), _react2.default.createElement(_style.LeftColumn, null, _react2.default.createElement(_ContactForm2.default, null)))), this.props.children);
-    }
-  }]);
-
-  return Contact;
-}(_react.Component);
 Contact.propTypes = {
-  location: _propTypes2.default.any,
-  params: _propTypes2.default.object
+  children: _propTypes2.default.objectOf(_propTypes2.default.any)
+};
+Contact.defaultProps = {
+  children: null
 };
 exports.default = Contact;
 
@@ -44362,20 +43118,7 @@ GridItemShell.propTypes = {
 };
 
 /***/ }),
-/* 598 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-module.exports = {
-  Container: __webpack_require__(599),
-  LeftColumn: __webpack_require__(600),
-  RightColumn: __webpack_require__(601),
-  Headline: __webpack_require__(602)
-};
-
-/***/ }),
+/* 598 */,
 /* 599 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -44429,31 +43172,7 @@ module.exports = _styledComponents2.default.section(_templateObject, function (p
 });
 
 /***/ }),
-/* 601 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _templateObject = _taggedTemplateLiteral(['\n  grid-area: contact-page-right-column', ';\n'], ['\n  grid-area: contact-page-right-column', ';\n']);
-
-var _styledComponents = __webpack_require__(2);
-
-var _styledComponents2 = _interopRequireDefault(_styledComponents);
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj };
-}
-
-function _taggedTemplateLiteral(strings, raw) {
-  return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
-}
-
-module.exports = _styledComponents2.default.section(_templateObject, function (props) {
-  return props.gridAreaId ? '-' + props.gridAreaId : '';
-});
-
-/***/ }),
+/* 601 */,
 /* 602 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -44519,10 +43238,6 @@ var _consoleShow = __webpack_require__(45);
 
 var _consoleShow2 = _interopRequireDefault(_consoleShow);
 
-var _getGridItem = __webpack_require__(54);
-
-var _getGridItem2 = _interopRequireDefault(_getGridItem);
-
 var _PageShell = __webpack_require__(78);
 
 var _PageShell2 = _interopRequireDefault(_PageShell);
@@ -44559,36 +43274,6 @@ var ProductListing = function (_Component) {
   }
 
   _createClass(ProductListing, [{
-    key: 'showNotificationBar',
-    value: function showNotificationBar() {
-      var NOTIFICATION_BAR_GRID_ITEM_ID = 1;
-      return (0, _getGridItem2.default)(NOTIFICATION_BAR_GRID_ITEM_ID);
-    }
-  }, {
-    key: 'showMenuBar',
-    value: function showMenuBar() {
-      var MENU_BAR_GRID_ITEM_ID = 2;
-      return (0, _getGridItem2.default)(MENU_BAR_GRID_ITEM_ID);
-    }
-  }, {
-    key: 'showLogoBar',
-    value: function showLogoBar() {
-      var LOGO_BAR_ID = 9;
-      return (0, _getGridItem2.default)(LOGO_BAR_ID);
-    }
-  }, {
-    key: 'showSubMenuBar',
-    value: function showSubMenuBar() {
-      var SUB_MENU_BAR_GRID_ITEM_ID = 6;
-      return (0, _getGridItem2.default)(SUB_MENU_BAR_GRID_ITEM_ID);
-    }
-  }, {
-    key: 'showFooterBar',
-    value: function showFooterBar() {
-      var FOOTER_BAR_GRID_ITEM_NAME = 'main footer';
-      return (0, _getGridItem2.default)(FOOTER_BAR_GRID_ITEM_NAME, 'by name');
-    }
-  }, {
     key: 'render',
     value: function render() {
       (0, _consoleShow2.default)('props', {
@@ -44607,7 +43292,8 @@ var ProductListing = function (_Component) {
       var gridItemName = '';
       var listingGridItem = null;
 
-      // TODO in the future, taag path should be query param for multiple tags, instead of a path ref!!! NOT SCALABLE!
+      // TODO in the future, taag path should be query param for multiple tags,
+      // instead of a path ref!!! NOT SCALABLE!
       if (tagRef) {
         gridItemName = 'specific tag product listing';
         listingGridItem = _ezSiteContentStore.ContentSynchronizer.getItem('grids', 'gridItemName', gridItemName, true);
@@ -44617,10 +43303,11 @@ var ProductListing = function (_Component) {
         // had to be done for the filter type grid
         var collectionFilterName = listingGridItem.gridContent.data.name;
         var listingContentRaw = _ezSiteContentStore.ContentSynchronizer.getCollection(collectionFilterName);
-        listingGridItem.gridContent.data.filteredListing = listingContentRaw.filter(function (item, index) {
+        listingGridItem.gridContent.data.filteredListing = listingContentRaw.filter(function (item) {
           var tags = item.tags;
+
           var matched = false;
-          for (var i = 0; i < tags.length; i++) {
+          for (var i = 0; i < tags.length; i += 1) {
             if (tags[i] === tagRef) {
               matched = true;
               break;
@@ -44654,8 +43341,13 @@ var ProductListing = function (_Component) {
   return ProductListing;
 }(_react.Component);
 ProductListing.propTypes = {
-  location: _propTypes2.default.any,
-  params: _propTypes2.default.object
+  // TODO: need in the future for query param
+  // location: PropTypes.any,
+  params: _propTypes2.default.objectOf(_propTypes2.default.any).isRequired,
+  children: _propTypes2.default.objectOf(_propTypes2.default.any)
+};
+ProductListing.defaultProps = {
+  children: null
 };
 exports.default = ProductListing;
 
@@ -44666,21 +43358,9 @@ exports.default = ProductListing;
 "use strict";
 
 
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-
-var _createClass = function () {
-  function defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
-    }
-  }return function (Constructor, protoProps, staticProps) {
-    if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
-  };
-}();
 
 var _react = __webpack_require__(0);
 
@@ -44696,10 +43376,6 @@ var _GridItem = __webpack_require__(44);
 
 var _GridItem2 = _interopRequireDefault(_GridItem);
 
-var _getGridItem = __webpack_require__(54);
-
-var _getGridItem2 = _interopRequireDefault(_getGridItem);
-
 var _PageShell = __webpack_require__(78);
 
 var _PageShell2 = _interopRequireDefault(_PageShell);
@@ -44708,73 +43384,45 @@ function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : { default: obj };
 }
 
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
+function Product(props) {
+  var productRef = props.productRef,
+      children = props.children;
+
+  var routeParams = props.params;
+  var productRefRefreshed = routeParams ? routeParams.productRef : productRef;
+  // const queryParams = props.location.query;
+
+  // find specific product grid item with productRef & queryParams
+  // TODO: right now its NOT COMPLETE!!!!
+
+  var productSpecs = _ezSiteContentStore.ContentSynchronizer.getProductGrid(productRefRefreshed);
+  var PRODUCT_GRID_ITEM_ID = 3;
+  var productGridItem = _ezSiteContentStore.ContentSynchronizer.getItem('grids', 'gridItemId', PRODUCT_GRID_ITEM_ID, true);
+  // TODO: Dynamic inject content... not very dry
+  productGridItem.gridContent.productSpecs = productSpecs;
+
+  var bodyDisplay = _react2.default.createElement(_GridItem2.default, {
+    gridResponsiveProperties: productGridItem.gridResponsiveProperties,
+    gridContent: productGridItem.gridContent,
+    gridStyle: productGridItem.gridStyle,
+    gridComponent: productGridItem.gridComponent,
+    key: productGridItem.gridItemId.toString()
+  });
+  return _react2.default.createElement(_PageShell2.default, {
+    containerLevelClass: '',
+    anchorToBelow: 'sub-menu-bar',
+    style: {}
+  }, bodyDisplay, children);
 }
-
-function _possibleConstructorReturn(self, call) {
-  if (!self) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }return call && ((typeof call === "undefined" ? "undefined" : _typeof(call)) === "object" || typeof call === "function") ? call : self;
-}
-
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === "undefined" ? "undefined" : _typeof(superClass)));
-  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-}
-
-var Product = function (_Component) {
-  _inherits(Product, _Component);
-
-  function Product(props) {
-    _classCallCheck(this, Product);
-
-    return _possibleConstructorReturn(this, (Product.__proto__ || Object.getPrototypeOf(Product)).call(this));
-  }
-
-  _createClass(Product, [{
-    key: 'render',
-    value: function render() {
-      var _props = this.props,
-          productRef = _props.productRef,
-          children = _props.children;
-
-      var routeParams = this.props.params;
-      var productRefRefreshed = routeParams ? routeParams.productRef : productRef;
-      // const queryParams = this.props.location.query;
-
-      // find specific product grid item with productRef & queryParams
-      // TODO: right now its NOT COMPLETE!!!!
-
-      var productSpecs = _ezSiteContentStore.ContentSynchronizer.getProductGrid(productRefRefreshed);
-      var PRODUCT_GRID_ITEM_ID = 3;
-      var productGridItem = _ezSiteContentStore.ContentSynchronizer.getItem('grids', 'gridItemId', PRODUCT_GRID_ITEM_ID, true);
-      // TODO: Dynamic inject content... not very dry
-      productGridItem.gridContent.productSpecs = productSpecs;
-
-      var bodyDisplay = _react2.default.createElement(_GridItem2.default, {
-        gridResponsiveProperties: productGridItem.gridResponsiveProperties,
-        gridContent: productGridItem.gridContent,
-        gridStyle: productGridItem.gridStyle,
-        gridComponent: productGridItem.gridComponent,
-        key: productGridItem.gridItemId.toString()
-      });
-      return _react2.default.createElement(_PageShell2.default, {
-        containerLevelClass: '',
-        anchorToBelow: 'sub-menu-bar',
-        style: {}
-      }, bodyDisplay, children);
-    }
-  }]);
-
-  return Product;
-}(_react.Component);
 Product.propTypes = {
-  location: _propTypes2.default.any,
-  params: _propTypes2.default.object
+  // location: PropTypes.any,
+  params: _propTypes2.default.objectOf(_propTypes2.default.any),
+  productRef: _propTypes2.default.string.isRequired,
+  children: _propTypes2.default.objectOf(_propTypes2.default.any)
+};
+Product.defaultProps = {
+  params: null,
+  children: null
 };
 exports.default = Product;
 
@@ -44785,21 +43433,10 @@ exports.default = Product;
 "use strict";
 
 
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-
-var _createClass = function () {
-  function defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
-    }
-  }return function (Constructor, protoProps, staticProps) {
-    if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
-  };
-}();
+exports.default = CenteredSpaceShell;
 
 var _react = __webpack_require__(0);
 
@@ -44817,46 +43454,15 @@ function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : { default: obj };
 }
 
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
+function CenteredSpaceShell(props) {
+  var children = props.children;
+
+  return _react2.default.createElement(_Container2.default, null, children);
 }
 
-function _possibleConstructorReturn(self, call) {
-  if (!self) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }return call && ((typeof call === "undefined" ? "undefined" : _typeof(call)) === "object" || typeof call === "function") ? call : self;
-}
-
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === "undefined" ? "undefined" : _typeof(superClass)));
-  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-}
-
-var CenteredSpaceShell = function (_Component) {
-  _inherits(CenteredSpaceShell, _Component);
-
-  function CenteredSpaceShell(props) {
-    _classCallCheck(this, CenteredSpaceShell);
-
-    return _possibleConstructorReturn(this, (CenteredSpaceShell.__proto__ || Object.getPrototypeOf(CenteredSpaceShell)).call(this, props));
-  }
-
-  _createClass(CenteredSpaceShell, [{
-    key: 'render',
-    value: function render() {
-      var children = this.props.children;
-
-      return _react2.default.createElement(_Container2.default, null, children);
-    }
-  }]);
-
-  return CenteredSpaceShell;
-}(_react.Component);
-
-exports.default = CenteredSpaceShell;
+CenteredSpaceShell.propTypes = {
+  children: _propTypes2.default.objectOf(_propTypes2.default.any).isRequired
+};
 
 /***/ }),
 /* 606 */
@@ -44884,6 +43490,27 @@ function _taggedTemplateLiteral(strings, raw) {
 }
 
 exports.default = _styledComponents2.default.div(_templateObject);
+
+/***/ }),
+/* 607 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _propTypes = __webpack_require__(1);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
+
+exports.default = _propTypes2.default.objectOf(_propTypes2.default.any);
 
 /***/ })
 /******/ ])));

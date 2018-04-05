@@ -30,7 +30,10 @@ export default function SlideBasicCallToAction(props) {
         <Title>{title}</Title>
         <SubTitle>{subTitle}</SubTitle>
         <Paragraph>{paragraph}</Paragraph>
-        { CtaButton ? <CtaButtonContainer><CtaButton {...CtaButtonProps} /></CtaButtonContainer> : null}
+        { CtaButton ?
+          <CtaButtonContainer>
+            <CtaButton {...CtaButtonProps} />
+          </CtaButtonContainer> : null}
       </CenteredCtaTextContainer>
 
       <BackgroundImage alt="slide-background" src={imageSourcePath} />

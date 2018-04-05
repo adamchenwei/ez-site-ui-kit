@@ -1,10 +1,8 @@
 import React, { Component } from 'react'; import PropTypes from 'prop-types';
 
-import {
-  Container,
-  SlidesBox,
-  SlideButtonsBox,
-} from './style';
+import Container from './style/Container';
+import SlidesBox from './style/SlidesBox';
+import SlideButtonsBox from './style/SlideButtonsBox';
 
 import SlideButton from './SlideButton';
 
@@ -35,12 +33,12 @@ export default class SlideShow extends Component {
     const LOOP_INTERVAL = 10000;
     const TRANSITION_INTERVAL = 300;
     const LOOP_COUNT = this.props.slides.length - 1;
-    const slides = this.props.slides;
+    const { slides } = this.props;
 
     let loopCounter = 0;
 
     this.slideLooper = setInterval(() => {
-      let url = slides[loopCounter].content.url;
+      let { url } = slides[loopCounter].content;
 
       setTimeout(() => {
         if (this.slideLooper) {
@@ -54,7 +52,7 @@ export default class SlideShow extends Component {
         if (loopCounter >= LOOP_COUNT) {
           loopCounter = 0;
         } else {
-          loopCounter++;
+          loopCounter += 1;
         }
         url = slides[loopCounter].content.url;
         if (this.slideLooper) {
@@ -78,7 +76,7 @@ export default class SlideShow extends Component {
 
   goToSlide(keyValue) {
     if (!keyValue && keyValue !== 0) return;
-    const slides = this.props.slides;
+    const { slides } = this.props;
     const currentSlide = slides.filter(slide => slide.id === keyValue);
     const slideUrl = currentSlide.length
       ? currentSlide[0].content.url
@@ -119,6 +117,7 @@ export default class SlideShow extends Component {
         }}
         >
           <img
+            alt={this.state.url || ''}
             src={this.state.url || ''}
             style={{
             width: '100%',
@@ -127,8 +126,6 @@ export default class SlideShow extends Component {
             cursor: 'default',
           }}
           />
-
-
         </SlidesBox>
         <SlideButtonsBox>
           {

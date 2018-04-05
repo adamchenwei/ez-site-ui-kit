@@ -1,12 +1,12 @@
-import RegisterForm from './index';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import React from 'react';
+import RegisterForm from './index';
 
 // TOOD: need case when Register failed
 function mockCallBack(log) { console.log(log || 'triggered'); }
 
-storiesOf('RegisterForm/Stand Alone Version', module)
+storiesOf('material-ui/component/RegisterForm/Stand Alone Version', module)
   .add('initial', () => (
     <RegisterForm
       userInfo={{

@@ -1,20 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Container from './style/Container';
 
-export default class CenteredSpaceShell extends Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    const {
-      children,
-    } = this.props;
-    return (
-      <Container>
-        {children}
-      </Container>
-    );
-  }
+export default function CenteredSpaceShell(props) {
+  const {
+    children,
+  } = props;
+  return (
+    <Container>
+      {children}
+    </Container>
+  );
 }
+
+CenteredSpaceShell.propTypes = {
+  children: PropTypes.objectOf(PropTypes.any).isRequired,
+};

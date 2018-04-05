@@ -1,7 +1,7 @@
-import ShareButtonsBar from './index';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import React from 'react';
+import ShareButtonsBar from './index';
 
 storiesOf('Share Buttons Bar', module)
   .add('default', () => <ShareButtonsBar />)

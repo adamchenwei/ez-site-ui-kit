@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import mediaQuery from './../../../theme/styled-components/mediaQuery';
+// import mediaQuery from './../../../theme/styled-components/mediaQuery';
 
 module.exports = styled.section`
   ${'' /* ${mediaQuery.mobileS`

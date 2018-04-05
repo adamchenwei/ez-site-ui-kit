@@ -1,131 +1,113 @@
-import React, { Component } from 'react'; import PropTypes from 'prop-types';
-import {
-  Container,
-  IconHolder,
-} from './style';
+import React from 'react'; import PropTypes from 'prop-types';
 import {
   ShareButtons,
-  ShareCounts,
   generateShareIcon,
 } from 'react-share';
 import Link from 'material-ui-icons/Link';
+import Container from './style/Container';
+import IconHolder from './style/IconHolder';
+import LinkIconContainer from './style/LinkIconContainer';
 import getWindow from './../../util/get/getWindow';
 
 const setComponentWrapperContainerClasses = require('../../util/setup/setComponentWrapperContainerClasses');
 
-import LinkIconContainer from './style/LinkIconContainer';
+export default function ShareButtonsBar(props) {
+  const {
+    style,
+    sharedImageUrl,
+    sharedDescriptionText,
+    hashtags,
+    sharedTitle,
+    homeLink,
+    moreLink,
+  } = props;
 
-export default class ShareButtonsBar extends Component {
-  constructor(props) {
-    super(props);
-  }
+  const {
+    FacebookShareButton,
+    GooglePlusShareButton,
+    LinkedinShareButton,
+    TwitterShareButton,
+    TelegramShareButton,
+    WhatsappShareButton,
+    PinterestShareButton,
+    VKShareButton,
+    OKShareButton,
+    RedditShareButton,
+  } = ShareButtons;
 
-  render() {
-    const {
-      content,
-      style,
-      type,
-      sharedImageUrl,
-      sharedDescriptionText,
-      hashtags,
-      sharedTitle,
-      homeLink,
-      hasMarginBottom,
-      moreLink,
-    } = this.props;
+  const COMPONENT_NAME = 'ShareButtonsBar';
+  const containerName = setComponentWrapperContainerClasses(COMPONENT_NAME);
 
-    const {
-      FacebookShareButton,
-      GooglePlusShareButton,
-      LinkedinShareButton,
-      TwitterShareButton,
-      TelegramShareButton,
-      WhatsappShareButton,
-      PinterestShareButton,
-      VKShareButton,
-      OKShareButton,
-      RedditShareButton,
-    } = ShareButtons;
+  const FacebookIcon = generateShareIcon('facebook');
+  const TwitterIcon = generateShareIcon('twitter');
+  const PinterestIcon = generateShareIcon('pinterest');
+  const locationHref = getWindow()
+    ? getWindow().location.href
+    : '';
+  const absoluteUrl = `${locationHref}${sharedImageUrl}`;
 
-    const COMPONENT_NAME = 'ShareButtonsBar';
-    const containerName = setComponentWrapperContainerClasses(COMPONENT_NAME);
+  const {
+    spreaker,
+    mixler,
+  } = moreLink;
 
-    const FacebookIcon = generateShareIcon('facebook');
-    const TwitterIcon = generateShareIcon('twitter');
-    const PinterestIcon = generateShareIcon('pinterest');
-    const locationHref = getWindow()
-      ? getWindow().location.href
-      : '';
-    const absoluteUrl = `${locationHref}${sharedImageUrl}`;
-
-    const {
-      spreaker,
-      mixler,
-    } = moreLink;
-
-    return (
-      <Container
-        hasMarginBottom
-        componentName={containerName}
-        gridAreaId=""
-        style={style}
-      >
-        {homeLink ? <IconHolder style={{ backgroundColor: '#11111108' }}>
-          <LinkIconContainer href={homeLink}><Link /></LinkIconContainer>
+  return (
+    <Container
+      hasMarginBottom
+      componentName={containerName}
+      gridAreaId=""
+      style={style}
+    >
+      {homeLink ?
+        <IconHolder style={{ backgroundColor: '#11111108' }}>
+          <LinkIconContainer href={homeLink}><Link href={homeLink} /></LinkIconContainer>
         </IconHolder> : null}
-        <IconHolder>
-          <FacebookShareButton
-            url={locationHref}
-            quote={sharedTitle}
-          >
-            <FacebookIcon size={32} />
-          </FacebookShareButton>
-        </IconHolder>
+      <IconHolder>
+        <FacebookShareButton
+          url={locationHref}
+          quote={sharedTitle}
+        >
+          <FacebookIcon size={32} />
+        </FacebookShareButton>
+      </IconHolder>
 
-        <IconHolder>
-          <TwitterShareButton url={locationHref}>
-            <TwitterIcon size={32} />
-          </TwitterShareButton>
-        </IconHolder>
+      <IconHolder>
+        <TwitterShareButton url={locationHref}>
+          <TwitterIcon size={32} />
+        </TwitterShareButton>
+      </IconHolder>
 
-        <IconHolder>
-          <PinterestShareButton
-            url={locationHref}
-            description={sharedDescriptionText}
-            media={absoluteUrl}
-            hashtags={hashtags}
-          >
-            <PinterestIcon size={32} />
-          </PinterestShareButton>
-        </IconHolder>
+      <IconHolder>
+        <PinterestShareButton
+          url={locationHref}
+          description={sharedDescriptionText}
+          media={absoluteUrl}
+          hashtags={hashtags}
+        >
+          <PinterestIcon size={32} />
+        </PinterestShareButton>
+      </IconHolder>
 
-      </Container>
-    );
-  }
+    </Container>
+  );
 }
 
 ShareButtonsBar.propTypes = {
-  content: PropTypes.object,
-  style: PropTypes.object,
-  type: PropTypes.string,
+  style: PropTypes.objectOf(PropTypes.any),
   sharedImageUrl: PropTypes.string,
   sharedDescriptionText: PropTypes.string,
   hashtags: PropTypes.string,
   sharedTitle: PropTypes.string,
   homeLink: PropTypes.string,
-  hasMarginBottom: PropTypes.bool,
   moreLink: PropTypes.objectOf(PropTypes.object),
 };
 
 ShareButtonsBar.defaultProps = {
-  content: {},
   style: {},
-  type: '',
   sharedImageUrl: '',
   sharedDescriptionText: '',
   hashtags: '',
   sharedTitle: '',
   homeLink: '',
-  hasMarginBottom: false,
   moreLink: {},
 };

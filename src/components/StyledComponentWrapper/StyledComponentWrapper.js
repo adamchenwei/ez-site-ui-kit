@@ -1,9 +1,6 @@
-import React, { Component } from 'react'; import PropTypes from 'prop-types';
+import { Component } from 'react'; import PropTypes from 'prop-types';
 
 export default class StyledComponentWrapper extends Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     const {
       children,
@@ -14,3 +11,6 @@ export default class StyledComponentWrapper extends Component {
     );
   }
 }
+StyledComponentWrapper.propTypes = {
+  children: PropTypes.objectOf(PropTypes.any).isRequired,
+};

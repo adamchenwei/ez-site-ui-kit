@@ -1,44 +1,38 @@
-import React, { Component } from 'react'; import PropTypes from 'prop-types';
-import ReactDOM from 'react-dom';
-import ReactSVG from 'react-svg';
-import concatCssClasses from './../../util/concat/concatCssClasses';
+import React from 'react'; import PropTypes from 'prop-types';
+
 import capToCamelCase from './../../util/transform/capToCamelCase';
 import SocialButtonShell from './SocialButtonShell';
 import { IconImage } from './style';
 
-export default class SocialIcon extends Component {
-  constructor(props) {
-    super(props);
-  }
+export default function SocialIcon(props) {
+  const {
+    style,
+    srcUrl,
+    linkUrl,
+  } = props;
 
-  render() {
-    // require('./SocialIcon.scss');
-
-    const {
-      content,
-      style,
-      type,
-      srcUrl,
-      linkUrl,
-    } = this.props;
-
-    const componentCSSName = capToCamelCase('SocialIcon');
-    return !srcUrl && !linkUrl ? <section /> : (
-      <SocialButtonShell
-        containerLevelStyle={`${componentCSSName}__container`}
-        style={style}
-        linkUrl={linkUrl}
-      >
-        <IconImage
-          src={srcUrl}
-        />
-      </SocialButtonShell>
-    );
-  }
+  const componentCSSName = capToCamelCase('SocialIcon');
+  return !srcUrl && !linkUrl ? <section /> : (
+    <SocialButtonShell
+      containerLevelStyle={`${componentCSSName}__container`}
+      style={style}
+      linkUrl={linkUrl}
+    >
+      <IconImage
+        src={srcUrl}
+      />
+    </SocialButtonShell>
+  );
 }
 
 SocialIcon.propTypes = {
-  style: PropTypes.object,
+  style: PropTypes.objectOf(PropTypes.any),
   srcUrl: PropTypes.string,
   linkUrl: PropTypes.string,
+};
+
+SocialIcon.defaultProps = {
+  style: {},
+  srcUrl: '',
+  linkUrl: '',
 };

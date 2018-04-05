@@ -2,35 +2,9 @@ import React, { Component } from 'react'; import PropTypes from 'prop-types';
 import { ContentSynchronizer } from 'ez-site-content-store';
 import GridItem from '../../components/GridItem/GridItem';
 import consoleShow from './../../util/debug/consoleShow';
-import getGridItem from './../../util/get/getGridItem';
 import PageShell from '../PageShell/PageShell';
 
 const ProductListing = class ProductListing extends Component {
-  showNotificationBar() {
-    const NOTIFICATION_BAR_GRID_ITEM_ID = 1;
-    return getGridItem(NOTIFICATION_BAR_GRID_ITEM_ID);
-  }
-
-  showMenuBar() {
-    const MENU_BAR_GRID_ITEM_ID = 2;
-    return getGridItem(MENU_BAR_GRID_ITEM_ID);
-  }
-
-  showLogoBar() {
-    const LOGO_BAR_ID = 9;
-    return getGridItem(LOGO_BAR_ID);
-  }
-
-  showSubMenuBar() {
-    const SUB_MENU_BAR_GRID_ITEM_ID = 6;
-    return getGridItem(SUB_MENU_BAR_GRID_ITEM_ID);
-  }
-
-  showFooterBar() {
-    const FOOTER_BAR_GRID_ITEM_NAME = 'main footer';
-    return getGridItem(FOOTER_BAR_GRID_ITEM_NAME, 'by name');
-  }
-
   render() {
     consoleShow('props', {
       componentName: 'Listing',
@@ -49,7 +23,8 @@ const ProductListing = class ProductListing extends Component {
     let gridItemName = '';
     let listingGridItem = null;
 
-    // TODO in the future, taag path should be query param for multiple tags, instead of a path ref!!! NOT SCALABLE!
+    // TODO in the future, taag path should be query param for multiple tags,
+    // instead of a path ref!!! NOT SCALABLE!
     if (tagRef) {
       gridItemName = 'specific tag product listing';
       listingGridItem = ContentSynchronizer.getItem('grids', 'gridItemName', gridItemName, true);
@@ -59,10 +34,10 @@ const ProductListing = class ProductListing extends Component {
       // had to be done for the filter type grid
       const collectionFilterName = listingGridItem.gridContent.data.name;
       const listingContentRaw = ContentSynchronizer.getCollection(collectionFilterName);
-      listingGridItem.gridContent.data.filteredListing = listingContentRaw.filter((item, index) => {
-        const tags = item.tags;
+      listingGridItem.gridContent.data.filteredListing = listingContentRaw.filter((item) => {
+        const { tags } = item;
         let matched = false;
-        for (let i = 0; i < tags.length; i++) {
+        for (let i = 0; i < tags.length; i += 1) {
           if (tags[i] === tagRef) {
             matched = true;
             break;
@@ -98,7 +73,12 @@ const ProductListing = class ProductListing extends Component {
   }
 };
 ProductListing.propTypes = {
-  location: PropTypes.any,
-  params: PropTypes.object,
+  // TODO: need in the future for query param
+  // location: PropTypes.any,
+  params: PropTypes.objectOf(PropTypes.any).isRequired,
+  children: PropTypes.objectOf(PropTypes.any),
+};
+ProductListing.defaultProps = {
+  children: null,
 };
 export default ProductListing;

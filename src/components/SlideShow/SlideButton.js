@@ -1,5 +1,5 @@
 import React, { Component } from 'react'; import PropTypes from 'prop-types';
-import { Container } from './style';
+import { Container } from './style/Container';
 
 export default class SlideButton extends Component {
   constructor(props) {
@@ -13,7 +13,6 @@ export default class SlideButton extends Component {
 
   render() {
     const {
-      goToSlide,
       currentSlideId,
       slideId,
     } = this.props;
