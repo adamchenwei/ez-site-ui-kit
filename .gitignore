@@ -36,6 +36,9 @@
 # IntelliJ
 /out/
 
+# coverage
+coverage
+
 # mpeltonen/sbt-idea plugin
 .idea_modules/
 
