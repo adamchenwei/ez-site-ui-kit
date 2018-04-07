@@ -20,31 +20,31 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">20% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>10/10</span>
+        <span class='fraction'>2/10</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">42.86% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>3/7</span>
+        <span class='fraction'>0/7</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">80% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>4/5</span>
+        <span class='fraction'>0/5</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">22.22% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>9/9</span>
+        <span class='fraction'>2/9</span>
       </div>
     </div>
     <p class="quiet">
       Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
     </p>
   </div>
-  <div class='status-line high'></div>
+  <div class='status-line low'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -110,8 +110,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">20x</span>
-<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -119,21 +119,21 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">120x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">20x</span>
-<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -161,31 +161,31 @@ import MenuFilterItem from './../MenuFilterItem';
 const setComponentWrapperContainerClasses = require('../../util/setup/setComponentWrapperContainerClasses');
 &nbsp;
 export default class MenuFilterItems extends Component {
-  constructor(props) {
-    super(props);
-    this.toggleMenu = this.props.toggleMenu
+<span class="fstat-no" title="function not covered" >  co</span>nstructor(props) {
+<span class="cstat-no" title="statement not covered" >    super(props);</span>
+<span class="cstat-no" title="statement not covered" >    this.toggleMenu = this.props.toggleMenu</span>
       ? this.props.toggleMenu.bind(this)
-      : <span class="fstat-no" title="function not covered" ><span class="branch-1 cbranch-no" title="branch not covered" >fu</span>nction () {</span>
+      : <span class="fstat-no" title="function not covered" >fu</span>nction () {
 &nbsp;
       };
   }
 &nbsp;
-  generatedMenuFilterItems(items = <span class="branch-0 cbranch-no" title="branch not covered" >[])</span> {
-    return items.map((item, index) =&gt; &lt;MenuFilterItem toggleMenu={this.toggleMenu} path={item.path} title={item.title} key={index} /&gt; || <span class="branch-1 cbranch-no" title="branch not covered" >null)</span>;
+<span class="fstat-no" title="function not covered" >  ge</span>neratedMenuFilterItems(items = <span class="branch-0 cbranch-no" title="branch not covered" >[])</span> {
+<span class="cstat-no" title="statement not covered" >    return items.map(<span class="fstat-no" title="function not covered" >(i</span>tem, index) =&gt; <span class="cstat-no" title="statement not covered" >&lt;MenuFilterItem toggleMenu={this.toggleMenu} path={item.path} title={item.title} key={index} /&gt; || null)</span>;</span>
   }
 &nbsp;
-  render() {
-    const menuItems = this.props.menuItems || <span class="branch-1 cbranch-no" title="branch not covered" >[</span>
+<span class="fstat-no" title="function not covered" >  re</span>nder() {
+    const menuItems = <span class="cstat-no" title="statement not covered" >this.props.menuItems || [</span>
       {
         path: '/',
         title: 'Home',
       },
     ];
 &nbsp;
-    const COMPONENT_NAME = 'MenuFilterItems';
-    const containerName = setComponentWrapperContainerClasses(COMPONENT_NAME);
+    const COMPONENT_NAME = <span class="cstat-no" title="statement not covered" >'MenuFilterItems';</span>
+    const containerName = <span class="cstat-no" title="statement not covered" >setComponentWrapperContainerClasses(COMPONENT_NAME);</span>
 &nbsp;
-    return (
+<span class="cstat-no" title="statement not covered" >    return (</span>
       &lt;Container
         componentName={containerName}
         gridAreaId=""
@@ -208,7 +208,7 @@ MenuFilterItems.propTypes = {
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Apr 07 2018 15:29:29 GMT-0400 (EDT)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Apr 07 2018 16:07:08 GMT-0400 (EDT)
 </div>
 </div>
 <script src="../../../prettify.js"></script>
