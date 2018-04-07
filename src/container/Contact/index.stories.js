@@ -4,5 +4,5 @@ import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Contact from './index';
 
-storiesOf('Contact', module)
+storiesOf('Container/Contact (DontTest)', module)
   .add('default', () => <Router><Contact /></Router>);

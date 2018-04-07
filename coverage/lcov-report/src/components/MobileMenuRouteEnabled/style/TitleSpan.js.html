@@ -20,31 +20,31 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>0/6</span>
+        <span class='fraction'>5/5</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">50% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>0/6</span>
+        <span class='fraction'>3/6</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/3</span>
+        <span class='fraction'>3/3</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>0/6</span>
+        <span class='fraction'>5/5</span>
       </div>
     </div>
     <p class="quiet">
       Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
     </p>
   </div>
-  <div class='status-line low'></div>
+  <div class='status-line high'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -72,19 +72,17 @@
 <a name='L24'></a><a href='#L24'>24</a>
 <a name='L25'></a><a href='#L25'>25</a>
 <a name='L26'></a><a href='#L26'>26</a>
-<a name='L27'></a><a href='#L27'>27</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<a name='L27'></a><a href='#L27'>27</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -98,18 +96,20 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >import styled from 'styled-components';</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import styled from 'styled-components';
 &nbsp;
-const setComponentWrapperContainerClasses = <span class="cstat-no" title="statement not covered" >require('./../../../util/setup/setComponentWrapperContainerClasses');</span>
+const setComponentWrapperContainerClasses = require('./../../../util/setup/setComponentWrapperContainerClasses');
 &nbsp;
-<span class="cstat-no" title="statement not covered" >module.exports = styled.span`</span>
-  grid-area: ${<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >props =&gt; (props.componentName</span></span>
-    ? `${setComponentWrapperContainerClasses(props.componentName)}`
-    : 'component-container')}${<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >props =&gt; (props.gridAreaId</span></span>
+module.exports = styled.span`
+  grid-area: ${props =&gt; (props.componentName
+    ? <span class="branch-0 cbranch-no" title="branch not covered" >`${setComponentWrapperContainerClasses(props.componentName)}`</span>
+    : 'component-container')}${props =&gt; (props.gridAreaId
   ? `-${props.gridAreaId}`
-  : '')};
-  ${<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >props =&gt; (props.isGridContainer</span></span>
-    ? `
+  : <span class="branch-1 cbranch-no" title="branch not covered" >'')</span>};
+  ${props =&gt; (props.isGridContainer
+    ? <span class="branch-0 cbranch-no" title="branch not covered" >`</span>
       display: grid;grid-column-gap: 10px;
       grid-row-gap: 14px;
       grid-template-columns: 1fr;
@@ -130,7 +130,7 @@ const setComponentWrapperContainerClasses = <span class="cstat-no" title="statem
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Apr 07 2018 12:16:55 GMT-0400 (EDT)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Apr 07 2018 16:16:33 GMT-0400 (EDT)
 </div>
 </div>
 <script src="../../../../prettify.js"></script>

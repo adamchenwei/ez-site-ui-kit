@@ -63,5 +63,5 @@ const mock = {
   },
   contentStyle: [],
 };
-storiesOf('ProductDisplay', module)
+storiesOf('Component/ProductDisplay (DontTest) ', module)
   .add('default', () => <ProductDisplay productName={mock.productName} content={mock.content} contentStyle={[]} />);

@@ -4,7 +4,7 @@ import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import ProductListing from './index';
 
-storiesOf('ProductListing', module)
+storiesOf('Container/ProductListing (DontTest)', module)
   .add('default', () =>
     (<Router>
       <ProductListing params={{

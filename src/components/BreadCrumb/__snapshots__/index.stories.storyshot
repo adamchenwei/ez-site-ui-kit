@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots BreadCrumb default 1`] = `
+<section
+  className="Container__exports-cGduGO guCeBb"
+>
+  <a
+    className="breadCrumb__homeLink HomeLink__exports-TQoWp fNUZdH"
+    href="/products/all"
+  >
+    Home
+  </a>
+   / 
+  Home
+</section>
+`;

@@ -4,7 +4,7 @@ import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Product from './index';
 
-storiesOf('Product', module)
+storiesOf('Container/Product (DontTest)', module)
   .add('default', () => (
     <Router>
       <Product

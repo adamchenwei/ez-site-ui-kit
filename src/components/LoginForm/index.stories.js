@@ -4,7 +4,7 @@ import { action } from '@storybook/addon-actions';
 import React from 'react';
 
 // TOOD: need case when login failed
-function mockCallBack(log) { console.log(log || 'triggered'); }
+function mockCallBack(log) {  } //console.log(log || 'triggered');
 function mockReturnRoute() {
   return {
     uri: 'https://www.google.com',
@@ -13,8 +13,8 @@ function mockReturnRoute() {
 }
 storiesOf('LoginForm/Stand Alone Version', module)
   .add('Not Logged In', () => {
-    console.log(mockCallBack);
-    console.log('1');
+    // console.log(mockCallBack);
+    // console.log('1');
     return (<LoginForm
       userInfo={{
       userName: '',
@@ -29,7 +29,7 @@ storiesOf('LoginForm/Stand Alone Version', module)
     />);
   })
   .add('Logging In', () => {
-    console.log('2');
+    //console.log('2');
     return (
       <LoginForm
         userInfo={{

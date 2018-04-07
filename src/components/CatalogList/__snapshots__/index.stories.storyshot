@@ -1,0 +1,412 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots CatalogList default 1`] = `
+<div
+  className="container-fluid"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4"
+    >
+      <a
+        href="/list/masjid/Al-Masjid-Al-Awwal-1518933867988/"
+        onClick={[Function]}
+      >
+        <div
+          className="card"
+        >
+          <section
+            className="SnapshotContainer__exports-juqyDE cvtFfE"
+          >
+            <img
+              className="Snapshot__exports-kDzhxQ izwiEp"
+              src="/placeholder/masjid.jpg"
+            />
+          </section>
+          <div
+            className="card-body"
+          >
+            <h4
+              className="card-title"
+            >
+              Al-Masjid Al-Awwal
+            </h4>
+            <h6
+              className="card-subtitle"
+            >
+              Pittsburgh, PA USA
+            </h6>
+            <p
+              className="card-text"
+            >
+              
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div
+      className="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4"
+    >
+      <a
+        href="/list/masjid/Al-Masjid-Al-Awwal-1518933867988/"
+        onClick={[Function]}
+      >
+        <div
+          className="card"
+        >
+          <section
+            className="SnapshotContainer__exports-juqyDE cvtFfE"
+          >
+            <img
+              className="Snapshot__exports-kDzhxQ izwiEp"
+              src="/placeholder/masjid.jpg"
+            />
+          </section>
+          <div
+            className="card-body"
+          >
+            <h4
+              className="card-title"
+            >
+              Al-Masjid Al-Awwal
+            </h4>
+            <h6
+              className="card-subtitle"
+            >
+              Pittsburgh, PA USA
+            </h6>
+            <p
+              className="card-text"
+            >
+              
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div
+      className="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4"
+    >
+      <a
+        href="/list/masjid/Al-Masjid-Al-Awwal-1518933867988/"
+        onClick={[Function]}
+      >
+        <div
+          className="card"
+        >
+          <section
+            className="SnapshotContainer__exports-juqyDE cvtFfE"
+          >
+            <img
+              className="Snapshot__exports-kDzhxQ izwiEp"
+              src="/placeholder/masjid.jpg"
+            />
+          </section>
+          <div
+            className="card-body"
+          >
+            <h4
+              className="card-title"
+            >
+              Al-Masjid Al-Awwal
+            </h4>
+            <h6
+              className="card-subtitle"
+            >
+              Pittsburgh, PA USA
+            </h6>
+            <p
+              className="card-text"
+            >
+              
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div
+      className="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4"
+    >
+      <a
+        href="/list/masjid/Al-Masjid-Al-Awwal-1518933867988/"
+        onClick={[Function]}
+      >
+        <div
+          className="card"
+        >
+          <section
+            className="SnapshotContainer__exports-juqyDE cvtFfE"
+          >
+            <img
+              className="Snapshot__exports-kDzhxQ izwiEp"
+              src="/placeholder/masjid.jpg"
+            />
+          </section>
+          <div
+            className="card-body"
+          >
+            <h4
+              className="card-title"
+            >
+              Al-Masjid Al-Awwal
+            </h4>
+            <h6
+              className="card-subtitle"
+            >
+              Pittsburgh, PA USA
+            </h6>
+            <p
+              className="card-text"
+            >
+              
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div
+      className="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4"
+    >
+      <a
+        href="/list/masjid/Al-Masjid-Al-Awwal-1518933867988/"
+        onClick={[Function]}
+      >
+        <div
+          className="card"
+        >
+          <section
+            className="SnapshotContainer__exports-juqyDE cvtFfE"
+          >
+            <img
+              className="Snapshot__exports-kDzhxQ izwiEp"
+              src="/placeholder/masjid.jpg"
+            />
+          </section>
+          <div
+            className="card-body"
+          >
+            <h4
+              className="card-title"
+            >
+              Al-Masjid Al-Awwal
+            </h4>
+            <h6
+              className="card-subtitle"
+            >
+              Pittsburgh, PA USA
+            </h6>
+            <p
+              className="card-text"
+            >
+              
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div
+      className="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4"
+    >
+      <a
+        href="/list/masjid/Al-Masjid-Al-Awwal-1518933867988/"
+        onClick={[Function]}
+      >
+        <div
+          className="card"
+        >
+          <section
+            className="SnapshotContainer__exports-juqyDE cvtFfE"
+          >
+            <img
+              className="Snapshot__exports-kDzhxQ izwiEp"
+              src="/placeholder/masjid.jpg"
+            />
+          </section>
+          <div
+            className="card-body"
+          >
+            <h4
+              className="card-title"
+            >
+              Al-Masjid Al-Awwal
+            </h4>
+            <h6
+              className="card-subtitle"
+            >
+              Pittsburgh, PA USA
+            </h6>
+            <p
+              className="card-text"
+            >
+              
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div
+      className="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4"
+    >
+      <a
+        href="/list/masjid/Al-Masjid-Al-Awwal-1518933867988/"
+        onClick={[Function]}
+      >
+        <div
+          className="card"
+        >
+          <section
+            className="SnapshotContainer__exports-juqyDE cvtFfE"
+          >
+            <img
+              className="Snapshot__exports-kDzhxQ izwiEp"
+              src="/placeholder/masjid.jpg"
+            />
+          </section>
+          <div
+            className="card-body"
+          >
+            <h4
+              className="card-title"
+            >
+              Al-Masjid Al-Awwal
+            </h4>
+            <h6
+              className="card-subtitle"
+            >
+              Pittsburgh, PA USA
+            </h6>
+            <p
+              className="card-text"
+            >
+              
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div
+      className="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4"
+    >
+      <a
+        href="/list/masjid/Al-Masjid-Al-Awwal-1518933867988/"
+        onClick={[Function]}
+      >
+        <div
+          className="card"
+        >
+          <section
+            className="SnapshotContainer__exports-juqyDE cvtFfE"
+          >
+            <img
+              className="Snapshot__exports-kDzhxQ izwiEp"
+              src="/placeholder/masjid.jpg"
+            />
+          </section>
+          <div
+            className="card-body"
+          >
+            <h4
+              className="card-title"
+            >
+              Al-Masjid Al-Awwal
+            </h4>
+            <h6
+              className="card-subtitle"
+            >
+              Pittsburgh, PA USA
+            </h6>
+            <p
+              className="card-text"
+            >
+              
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div
+      className="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4"
+    >
+      <a
+        href="/list/masjid/Al-Masjid-Al-Awwal-1518933867988/"
+        onClick={[Function]}
+      >
+        <div
+          className="card"
+        >
+          <section
+            className="SnapshotContainer__exports-juqyDE cvtFfE"
+          >
+            <img
+              className="Snapshot__exports-kDzhxQ izwiEp"
+              src="/placeholder/masjid.jpg"
+            />
+          </section>
+          <div
+            className="card-body"
+          >
+            <h4
+              className="card-title"
+            >
+              Al-Masjid Al-Awwal
+            </h4>
+            <h6
+              className="card-subtitle"
+            >
+              Pittsburgh, PA USA
+            </h6>
+            <p
+              className="card-text"
+            >
+              
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div
+      className="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4"
+    >
+      <a
+        href="/list/masjid/Al-Masjid-Al-Awwal-1518933867988/"
+        onClick={[Function]}
+      >
+        <div
+          className="card"
+        >
+          <section
+            className="SnapshotContainer__exports-juqyDE cvtFfE"
+          >
+            <img
+              className="Snapshot__exports-kDzhxQ izwiEp"
+              src="/placeholder/masjid.jpg"
+            />
+          </section>
+          <div
+            className="card-body"
+          >
+            <h4
+              className="card-title"
+            >
+              Al-Masjid Al-Awwal
+            </h4>
+            <h6
+              className="card-subtitle"
+            >
+              Pittsburgh, PA USA
+            </h6>
+            <p
+              className="card-text"
+            >
+              
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+`;

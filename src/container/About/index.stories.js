@@ -4,5 +4,5 @@ import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import About from './index';
 
-storiesOf('About', module)
+storiesOf('Container/About (DontTest)', module)
   .add('default', () => <Router><About /></Router>);
