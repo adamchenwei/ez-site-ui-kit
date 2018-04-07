@@ -20,31 +20,31 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">22.22% </span>
+        <span class="strong">94.44% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>4/18</span>
+        <span class='fraction'>17/18</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">62.5% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>0/16</span>
+        <span class='fraction'>10/16</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">75% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/4</span>
+        <span class='fraction'>3/4</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">22.22% </span>
+        <span class="strong">94.44% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>4/18</span>
+        <span class='fraction'>17/18</span>
       </div>
     </div>
     <p class="quiet">
       Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
     </p>
   </div>
-  <div class='status-line low'></div>
+  <div class='status-line high'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -211,9 +211,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -231,22 +231,22 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -348,17 +348,17 @@ const setComponentWrapperContainerClasses = require('../../util/setup/setCompone
 const smartEnvSiteUrl = require('../../util/dev/smartEnvSiteUrl');
 &nbsp;
 export default class MobileMenuRouteEnabled extends Component {
-<span class="fstat-no" title="function not covered" >  co</span>nstructor(props) {
-<span class="cstat-no" title="statement not covered" >    super(props);</span>
-<span class="cstat-no" title="statement not covered" >    this.state = { isOpen: false };</span>
-<span class="cstat-no" title="statement not covered" >    this.toggleAnimation = this.toggleAnimation.bind(this);</span>
+  constructor(props) {
+    super(props);
+    this.state = { isOpen: false };
+    this.toggleAnimation = this.toggleAnimation.bind(this);
   }
 &nbsp;
 <span class="fstat-no" title="function not covered" >  to</span>ggleAnimation() {
 <span class="cstat-no" title="statement not covered" >    this.setState({ isOpen: !this.state.isOpen });</span>
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  re</span>nder() {
+  render() {
     let {
       content,
       style,
@@ -369,22 +369,22 @@ export default class MobileMenuRouteEnabled extends Component {
       menuItems,
       isCustomFilterItems,
       isCustomMenuItems,
-    } = <span class="cstat-no" title="statement not covered" >this.props;</span>
-    const isOpen = <span class="cstat-no" title="statement not covered" >isExpanded || this.state.isOpen;</span>
-    const COMPONENT_NAME = <span class="cstat-no" title="statement not covered" >'MobileMenuRouteEnabled';</span>
-    const containerName = <span class="cstat-no" title="statement not covered" >setComponentWrapperContainerClasses(COMPONENT_NAME);</span>
+    } = this.props;
+    const isOpen = isExpanded || this.state.isOpen;
+    const COMPONENT_NAME = 'MobileMenuRouteEnabled';
+    const containerName = setComponentWrapperContainerClasses(COMPONENT_NAME);
 &nbsp;
     // was filter but now its becoming just specific items ONLY
     // filterItems = buildMenuFilterItems(6) || [];
-<span class="cstat-no" title="statement not covered" >    filterItems = !isCustomFilterItems ? buildProductMenuItems(10).sort(<span class="fstat-no" title="function not covered" >(a</span>, b) =&gt; {</span>
-      const textA = <span class="cstat-no" title="statement not covered" >a.title.toUpperCase();</span>
-      const textB = <span class="cstat-no" title="statement not covered" >b.title.toUpperCase();</span>
-<span class="cstat-no" title="statement not covered" >      return (textA &lt; textB) ? -1 : (textA &gt; textB) ? 1 : 0;</span>
-    }) : filterItems;
+    filterItems = !isCustomFilterItems ? buildProductMenuItems(10).sort((a, b) =&gt; {
+      const textA = a.title.toUpperCase();
+      const textB = b.title.toUpperCase();
+      return (textA &lt; textB) ? -1 : (textA &gt; textB) ? 1 : <span class="branch-1 cbranch-no" title="branch not covered" >0;</span>
+    }) : <span class="branch-1 cbranch-no" title="branch not covered" >filterItems;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    menuItems = !isCustomMenuItems ? buildMenuItems(2) : menuItems;</span>
+    menuItems = !isCustomMenuItems ? buildMenuItems(2) : <span class="branch-1 cbranch-no" title="branch not covered" >menuItems;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    return (</span>
+    return (
       &lt;Container
         componentName={containerName}
         gridAreaId=""
@@ -409,7 +409,7 @@ export default class MobileMenuRouteEnabled extends Component {
             textTransform: 'uppercase',
           }}
         &gt;
-          {siteName || 'My Website'}
+          {siteName || <span class="branch-1 cbranch-no" title="branch not covered" >'My Website'}</span>
         &lt;/TitleSpan&gt;
         &lt;DropDownMenu
           isOpen={isOpen}
@@ -421,7 +421,7 @@ export default class MobileMenuRouteEnabled extends Component {
               menuItems={filterItems}
               toggleMenu={this.toggleAnimation}
             /&gt;
-            : null
+            : <span class="branch-1 cbranch-no" title="branch not covered" >null</span>
           }
           {
             menuItems.length
@@ -429,7 +429,7 @@ export default class MobileMenuRouteEnabled extends Component {
               menuItems={menuItems}
               toggleMenu={this.toggleAnimation}
             /&gt;
-            : &lt;EmptyStateHelperText color="white" fontSize="25px"&gt; Lets add some menu items!&lt;/EmptyStateHelperText&gt;
+            : <span class="branch-1 cbranch-no" title="branch not covered" >&lt;EmptyStateHelperText color="white" fontSize="25px"&gt; Lets add some menu items!&lt;/EmptyStateHelperText&gt;</span>
           }
 &nbsp;
           {/* {this.props.children} */}
@@ -466,7 +466,7 @@ MobileMenuRouteEnabled.defaultProps = {
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Apr 07 2018 16:07:08 GMT-0400 (EDT)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Apr 07 2018 16:16:33 GMT-0400 (EDT)
 </div>
 </div>
 <script src="../../../prettify.js"></script>
