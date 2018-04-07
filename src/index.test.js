@@ -1,4 +1,11 @@
-import initStoryshots from '@storybook/addon-storyshots';
+import initStoryshots, { multiSnapshotWithOptions } from '@storybook/addon-storyshots';
 
-initStoryshots();
+initStoryshots({
+  test: multiSnapshotWithOptions({}),
+});
 
+describe('root level test', () => {
+  it('should always pass', () => {
+    expect(true).toEqual(true);
+  });
+});

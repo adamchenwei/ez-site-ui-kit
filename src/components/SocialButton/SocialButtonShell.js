@@ -1,6 +1,6 @@
 import React from 'react'; import PropTypes from 'prop-types';
-import { IconBoxLink } from './style';
-import propTypesChildren from '../../proptypes/children';
+import IconBoxLink from './style/IconBoxLink';
+import childrenPropTypes from '../../proptypes/childrenPropTypes';
 
 export default function SocialButtonShell(props) {
   const {
@@ -24,7 +24,7 @@ export default function SocialButtonShell(props) {
 SocialButtonShell.propTypes = {
   containerLevelStyle: PropTypes.string,
   linkUrl: PropTypes.string,
-  children: propTypesChildren,
+  children: childrenPropTypes,
 };
 
 SocialButtonShell.defaultProps = {

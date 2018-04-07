@@ -6,7 +6,7 @@ import RegisterForm from './index';
 // TOOD: need case when Register failed
 function mockCallBack(log) { console.log(log || 'triggered'); }
 
-storiesOf('material-ui/component/RegisterForm/Stand Alone Version', module)
+storiesOf('material-ui/Component/RegisterForm/Stand Alone Version', module)
   .add('initial', () => (
     <RegisterForm
       userInfo={{

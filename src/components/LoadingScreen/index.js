@@ -7,7 +7,7 @@ import LoadingMaskContainer from './style/LoadingMaskContainer';
 import LogoContainer from './style/LogoContainer';
 import LoadingBarContainer from './style/LoadingBarContainer';
 
-const LOGO_IMAGE_URL = 'http://via.placeholder.com/350x150';
+const LOGO_IMAGE_URL = '';
 const LoadingMask = (props) => {
   const {
     fullScreen,

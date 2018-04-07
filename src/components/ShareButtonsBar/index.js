@@ -19,20 +19,20 @@ export default function ShareButtonsBar(props) {
     hashtags,
     sharedTitle,
     homeLink,
-    moreLink,
+    // moreLink,
   } = props;
 
   const {
     FacebookShareButton,
-    GooglePlusShareButton,
-    LinkedinShareButton,
     TwitterShareButton,
-    TelegramShareButton,
-    WhatsappShareButton,
     PinterestShareButton,
-    VKShareButton,
-    OKShareButton,
-    RedditShareButton,
+    // VKShareButton,
+    // OKShareButton,
+    // RedditShareButton,
+    // GooglePlusShareButton,
+    // LinkedinShareButton,
+    // TelegramShareButton,
+    // WhatsappShareButton,
   } = ShareButtons;
 
   const COMPONENT_NAME = 'ShareButtonsBar';
@@ -46,10 +46,10 @@ export default function ShareButtonsBar(props) {
     : '';
   const absoluteUrl = `${locationHref}${sharedImageUrl}`;
 
-  const {
-    spreaker,
-    mixler,
-  } = moreLink;
+  // const {
+  //   spreaker,
+  //   mixler,
+  // } = moreLink;
 
   return (
     <Container
@@ -99,7 +99,7 @@ ShareButtonsBar.propTypes = {
   hashtags: PropTypes.string,
   sharedTitle: PropTypes.string,
   homeLink: PropTypes.string,
-  moreLink: PropTypes.objectOf(PropTypes.object),
+  // moreLink: PropTypes.objectOf(PropTypes.object),
 };
 
 ShareButtonsBar.defaultProps = {
@@ -109,5 +109,5 @@ ShareButtonsBar.defaultProps = {
   hashtags: '',
   sharedTitle: '',
   homeLink: '',
-  moreLink: {},
+  // moreLink: {},
 };

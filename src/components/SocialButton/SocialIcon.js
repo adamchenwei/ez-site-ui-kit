@@ -2,7 +2,7 @@ import React from 'react'; import PropTypes from 'prop-types';
 
 import capToCamelCase from './../../util/transform/capToCamelCase';
 import SocialButtonShell from './SocialButtonShell';
-import { IconImage } from './style';
+import IconImage from './style/IconImage';
 
 export default function SocialIcon(props) {
   const {

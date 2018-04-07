@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component/Atom/AtomTemplateComponent renders as expected 1`] = `
+<div
+  className=""
+  style={Object {}}
+>
+  <h1>
+    SUCCESS
+  </h1>
+</div>
+`;

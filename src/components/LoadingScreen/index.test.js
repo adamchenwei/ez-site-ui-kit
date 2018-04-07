@@ -1,10 +1,10 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import LoadingMask from './index';
+import LoadingScreen from './index';
 
-describe('LoadingMask', () => {
+describe('LoadingScreen', () => {
   test('renders as expected', () => {
-    const tree = renderer.create(<LoadingMask />).toJSON();
+    const tree = renderer.create(<LoadingScreen />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

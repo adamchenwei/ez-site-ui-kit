@@ -12,6 +12,7 @@ import {
 } from './../../components/MobileMenu/factory/menu';
 
 import SlideShow from './../../components/SlideShow';
+import childrenPropTypes from '../../proptypes/childrenPropTypes';
 
 function showLogoBar() {
   const LOGO_BAR_ID = 9;
@@ -115,7 +116,8 @@ export default class PageShell extends Component {
       };
     }
 
-    // NOTE: So far diff between PageShell and ComponentWrapper is the row class name!!!(at that time, since then there were lots done)
+    // NOTE: So far diff between PageShell and ComponentWrapper
+    // is the row class name!!!(at that time, since then there were lots done)
     containerLevelStyle = containerLevelStyle || 'page__container row no-gutters';
     return (
       <section className={containerLevelStyle} style={style}>
@@ -139,7 +141,7 @@ PageShell.propTypes = {
   style: PropTypes.objectOf(PropTypes.any),
   hasSlides: PropTypes.bool,
   anchorToBelow: PropTypes.string,
-  children: PropTypes.objectOf(PropTypes.any).isRequired,
+  children: childrenPropTypes.isRequired,
   containerLevelStyle: PropTypes.string,
 };
 

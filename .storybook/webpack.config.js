@@ -13,6 +13,20 @@ module.exports = {
   module: {
     rules: [
       // add your custom rules.
+      {
+        test: /\.(png|jpg|gif)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {},
+          },
+        ]
+      },
+      {
+        test: /\.css?$/,
+        use: ['style-loader', 'css-loader'],
+      },
+
     ],
   },
 };

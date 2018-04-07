@@ -7676,6 +7676,10 @@ var _SlideShow = __webpack_require__(576);
 
 var _SlideShow2 = _interopRequireDefault(_SlideShow);
 
+var _childrenPropTypes = __webpack_require__(608);
+
+var _childrenPropTypes2 = _interopRequireDefault(_childrenPropTypes);
+
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : { default: obj };
 }
@@ -7809,7 +7813,8 @@ var PageShell = function (_Component) {
         };
       }
 
-      // NOTE: So far diff between PageShell and ComponentWrapper is the row class name!!!(at that time, since then there were lots done)
+      // NOTE: So far diff between PageShell and ComponentWrapper
+      // is the row class name!!!(at that time, since then there were lots done)
       containerLevelStyle = containerLevelStyle || 'page__container row no-gutters';
       return _react2.default.createElement('section', { className: containerLevelStyle, style: style }, showNotificationBar(), this.showMobileMenu(), showMenuBar(), showLogoBar(), this.showSubMenuBar(), hasSlides ? showSlides() : null, children, showFooterBar());
     }
@@ -7824,7 +7829,7 @@ PageShell.propTypes = {
   style: _propTypes2.default.objectOf(_propTypes2.default.any),
   hasSlides: _propTypes2.default.bool,
   anchorToBelow: _propTypes2.default.string,
-  children: _propTypes2.default.objectOf(_propTypes2.default.any).isRequired,
+  children: _childrenPropTypes2.default.isRequired,
   containerLevelStyle: _propTypes2.default.string
 };
 
@@ -14902,18 +14907,10 @@ function ShareButtonsBar(props) {
       sharedDescriptionText = props.sharedDescriptionText,
       hashtags = props.hashtags,
       sharedTitle = props.sharedTitle,
-      homeLink = props.homeLink,
-      moreLink = props.moreLink;
+      homeLink = props.homeLink;
   var FacebookShareButton = _reactShare.ShareButtons.FacebookShareButton,
-      GooglePlusShareButton = _reactShare.ShareButtons.GooglePlusShareButton,
-      LinkedinShareButton = _reactShare.ShareButtons.LinkedinShareButton,
       TwitterShareButton = _reactShare.ShareButtons.TwitterShareButton,
-      TelegramShareButton = _reactShare.ShareButtons.TelegramShareButton,
-      WhatsappShareButton = _reactShare.ShareButtons.WhatsappShareButton,
-      PinterestShareButton = _reactShare.ShareButtons.PinterestShareButton,
-      VKShareButton = _reactShare.ShareButtons.VKShareButton,
-      OKShareButton = _reactShare.ShareButtons.OKShareButton,
-      RedditShareButton = _reactShare.ShareButtons.RedditShareButton;
+      PinterestShareButton = _reactShare.ShareButtons.PinterestShareButton;
 
   var COMPONENT_NAME = 'ShareButtonsBar';
   var containerName = setComponentWrapperContainerClasses(COMPONENT_NAME);
@@ -14924,8 +14921,10 @@ function ShareButtonsBar(props) {
   var locationHref = (0, _getWindow2.default)() ? (0, _getWindow2.default)().location.href : '';
   var absoluteUrl = '' + locationHref + sharedImageUrl;
 
-  var spreaker = moreLink.spreaker,
-      mixler = moreLink.mixler;
+  // const {
+  //   spreaker,
+  //   mixler,
+  // } = moreLink;
 
   return _react2.default.createElement(_Container2.default, {
     hasMarginBottom: true,
@@ -14949,8 +14948,8 @@ ShareButtonsBar.propTypes = {
   sharedDescriptionText: _propTypes2.default.string,
   hashtags: _propTypes2.default.string,
   sharedTitle: _propTypes2.default.string,
-  homeLink: _propTypes2.default.string,
-  moreLink: _propTypes2.default.objectOf(_propTypes2.default.object)
+  homeLink: _propTypes2.default.string
+  // moreLink: PropTypes.objectOf(PropTypes.object),
 };
 
 ShareButtonsBar.defaultProps = {
@@ -14959,8 +14958,8 @@ ShareButtonsBar.defaultProps = {
   sharedDescriptionText: '',
   hashtags: '',
   sharedTitle: '',
-  homeLink: '',
-  moreLink: {}
+  homeLink: ''
+  // moreLink: {},
 };
 
 /***/ }),
@@ -15757,34 +15756,7 @@ FooterBar.propTypes = {
 };
 
 /***/ }),
-/* 195 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _IconImage = __webpack_require__(567);
-
-var _IconImage2 = _interopRequireDefault(_IconImage);
-
-var _IconBoxLink = __webpack_require__(568);
-
-var _IconBoxLink2 = _interopRequireDefault(_IconBoxLink);
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj };
-}
-
-exports.default = {
-  IconImage: _IconImage2.default,
-  IconBoxLink: _IconBoxLink2.default
-};
-
-/***/ }),
+/* 195 */,
 /* 196 */,
 /* 197 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -38249,7 +38221,7 @@ function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : { default: obj };
 }
 
-var LOGO_IMAGE_URL = 'http://via.placeholder.com/350x150';
+var LOGO_IMAGE_URL = '';
 var LoadingMask = function LoadingMask(props) {
   var fullScreen = props.fullScreen;
 
@@ -40087,7 +40059,9 @@ var _SocialButtonShell = __webpack_require__(566);
 
 var _SocialButtonShell2 = _interopRequireDefault(_SocialButtonShell);
 
-var _style = __webpack_require__(195);
+var _IconImage = __webpack_require__(567);
+
+var _IconImage2 = _interopRequireDefault(_IconImage);
 
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : { default: obj };
@@ -40103,7 +40077,7 @@ function SocialIcon(props) {
     containerLevelStyle: componentCSSName + '__container',
     style: style,
     linkUrl: linkUrl
-  }, _react2.default.createElement(_style.IconImage, {
+  }, _react2.default.createElement(_IconImage2.default, {
     src: srcUrl
   }));
 }
@@ -40149,11 +40123,13 @@ var _propTypes = __webpack_require__(1);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _style = __webpack_require__(195);
+var _IconBoxLink = __webpack_require__(568);
 
-var _children = __webpack_require__(607);
+var _IconBoxLink2 = _interopRequireDefault(_IconBoxLink);
 
-var _children2 = _interopRequireDefault(_children);
+var _childrenPropTypes = __webpack_require__(608);
+
+var _childrenPropTypes2 = _interopRequireDefault(_childrenPropTypes);
 
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : { default: obj };
@@ -40164,7 +40140,7 @@ function SocialButtonShell(props) {
       children = props.children,
       linkUrl = props.linkUrl;
 
-  return _react2.default.createElement(_style.IconBoxLink, {
+  return _react2.default.createElement(_IconBoxLink2.default, {
     href: linkUrl || '/',
     className: containerLevelStyle,
     'data-event-category': 'Links',
@@ -40175,7 +40151,7 @@ function SocialButtonShell(props) {
 SocialButtonShell.propTypes = {
   containerLevelStyle: _propTypes2.default.string,
   linkUrl: _propTypes2.default.string,
-  children: _children2.default
+  children: _childrenPropTypes2.default
 };
 
 SocialButtonShell.defaultProps = {
@@ -40636,6 +40612,11 @@ var SlideShow = function (_Component) {
     value: function componentWillUnmount() {
       clearInterval(this.slideLooper);
     }
+
+    // TODO: may need another looping mechanism for
+    // fading effect which require both images present
+    // and removing the earlier one...
+
   }, {
     key: 'startLoopingSlides',
     value: function startLoopingSlides() {
@@ -40665,7 +40646,7 @@ var SlideShow = function (_Component) {
           } else {
             loopCounter += 1;
           }
-          url = slides[loopCounter].content.url;
+          url = slides[loopCounter].content.url; // eslint-disable-line
           if (_this2.slideLooper) {
             _this2.setState({
               url: url
@@ -40674,7 +40655,7 @@ var SlideShow = function (_Component) {
         }, TRANSITION_INTERVAL * 2.5);
 
         setTimeout(function () {
-          url = slides[loopCounter].content.url;
+          url = slides[loopCounter].content.url; // eslint-disable-line
           if (_this2.slideLooper) {
             _this2.setState({
               currentSlideId: slides[loopCounter].id,
@@ -40754,7 +40735,7 @@ var SlideShow = function (_Component) {
 exports.default = SlideShow;
 
 SlideShow.propTypes = {
-  slides: _propTypes2.default.array
+  slides: _propTypes2.default.arrayOf(_propTypes2.default.any).isRequired
 };
 
 /***/ }),
@@ -40867,6 +40848,8 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 
 var _Container = __webpack_require__(577);
 
+var _Container2 = _interopRequireDefault(_Container);
+
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : { default: obj };
 }
@@ -40915,7 +40898,7 @@ var SlideButton = function (_Component) {
 
       var COMPONENT_NAME = 'SlideButton';
       var isCurrent = slideId === currentSlideId;
-      return _react2.default.createElement(_Container.Container, {
+      return _react2.default.createElement(_Container2.default, {
         componentName: COMPONENT_NAME,
         gridAreaId: '',
         onClick: this.goSlide,
@@ -40936,9 +40919,9 @@ var SlideButton = function (_Component) {
 exports.default = SlideButton;
 
 SlideButton.propTypes = {
-  goToSlide: _propTypes2.default.func,
-  slideId: _propTypes2.default.number,
-  currentSlideId: _propTypes2.default.number
+  goToSlide: _propTypes2.default.func.isRequired,
+  slideId: _propTypes2.default.number.isRequired,
+  currentSlideId: _propTypes2.default.number.isRequired
 };
 
 /***/ }),
@@ -43492,7 +43475,8 @@ function _taggedTemplateLiteral(strings, raw) {
 exports.default = _styledComponents2.default.div(_templateObject);
 
 /***/ }),
-/* 607 */
+/* 607 */,
+/* 608 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43510,7 +43494,7 @@ function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : { default: obj };
 }
 
-exports.default = _propTypes2.default.objectOf(_propTypes2.default.any);
+exports.default = _propTypes2.default.oneOfType([_propTypes2.default.object, _propTypes2.default.array]);
 
 /***/ })
 /******/ ])));

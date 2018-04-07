@@ -29,6 +29,9 @@ export default class SlideShow extends Component {
     clearInterval(this.slideLooper);
   }
 
+  // TODO: may need another looping mechanism for
+  // fading effect which require both images present
+  // and removing the earlier one...
   startLoopingSlides() {
     const LOOP_INTERVAL = 10000;
     const TRANSITION_INTERVAL = 300;
@@ -54,7 +57,7 @@ export default class SlideShow extends Component {
         } else {
           loopCounter += 1;
         }
-        url = slides[loopCounter].content.url;
+        url = slides[loopCounter].content.url;// eslint-disable-line
         if (this.slideLooper) {
           this.setState({
             url,
@@ -63,7 +66,7 @@ export default class SlideShow extends Component {
       }, TRANSITION_INTERVAL * 2.5);
 
       setTimeout(() => {
-        url = slides[loopCounter].content.url;
+        url = slides[loopCounter].content.url;// eslint-disable-line
         if (this.slideLooper) {
           this.setState({
             currentSlideId: slides[loopCounter].id,
@@ -128,6 +131,7 @@ export default class SlideShow extends Component {
           />
         </SlidesBox>
         <SlideButtonsBox>
+          {/* TODO: add id for slides */}
           {
             slides.map((slide, index) => (<SlideButton
               key={index}
@@ -143,5 +147,5 @@ export default class SlideShow extends Component {
 }
 
 SlideShow.propTypes = {
-  slides: PropTypes.array,
+  slides: PropTypes.arrayOf(PropTypes.any).isRequired,
 };
