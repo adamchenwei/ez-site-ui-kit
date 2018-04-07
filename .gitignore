@@ -38,6 +38,8 @@
 
 # coverage
 coverage/
+# test-report
+test-report/
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
