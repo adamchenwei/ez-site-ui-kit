@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots FormInput default 1`] = `
+<section
+  className="Container__exports-cGduGO fOZQpl"
+>
+  <legend
+    className="FormLegend__exports-jkPFQU cZkhhi"
+  >
+    
+  </legend>
+</section>
+`;
+
+exports[`Storyshots FormInput email 1`] = `
+<section
+  className="Container__exports-cGduGO fOZQpl"
+>
+  <legend
+    className="FormLegend__exports-jkPFQU dNkqLj"
+  >
+    Your Email
+  </legend>
+  <input
+    className="InputField__exports-fUueCr hIOOSe"
+    name="emailInput"
+    placeholder="i.e. mohammad@gmail.com"
+    type="email"
+  />
+</section>
+`;
+
+exports[`Storyshots FormInput text 1`] = `
+<section
+  className="Container__exports-cGduGO fOZQpl"
+>
+  <legend
+    className="FormLegend__exports-jkPFQU hFlUIC"
+  >
+    Your Text
+  </legend>
+  <input
+    className="InputField__exports-fUueCr WoEdj"
+    name="textInput"
+    placeholder="text here"
+    type="text"
+  />
+</section>
+`;
+
+exports[`Storyshots FormInput text-area 1`] = `
+<section
+  className="Container__exports-cGduGO fOZQpl"
+>
+  <legend
+    className="FormLegend__exports-jkPFQU hesYru"
+  >
+    Your Text
+  </legend>
+  <textarea
+    className="FormTextarea__exports-jTETjq ihvfIs"
+    name="textInput"
+    placeholder="text here"
+  />
+</section>
+`;

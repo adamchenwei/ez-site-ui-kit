@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots SnapshotDisplay default 1`] = `
+<section
+  className="SnapshotContainer__exports-juqyDE cvtFfE"
+>
+  <img
+    className="Snapshot__exports-kDzhxQ izwiEp"
+    src=""
+  />
+</section>
+`;

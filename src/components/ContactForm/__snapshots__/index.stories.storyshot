@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Contact Form basic 1`] = `
+<form
+  action="https://formspree.io/support@naturalorchards.us"
+  className="ContactFormContainer__exports-jKMzkD kbsoe"
+  method="POST"
+>
+  <legend
+    className="ContactFormLegend__exports-cVxNpo cSYqbY"
+  >
+    Name
+  </legend>
+  <input
+    className="ContactFormInput__exports-hmgMZo BiHlm"
+    name="customerFirstName"
+    placeholder="First Name"
+  />
+  <input
+    className="ContactFormInput__exports-hmgMZo hdWGhv"
+    name="customerLastName"
+    placeholder="Last Name"
+  />
+  <legend
+    className="ContactFormLegend__exports-cVxNpo hpegks"
+  >
+    Email
+  </legend>
+  <input
+    className="ContactFormInput__exports-hmgMZo lfzCqn"
+    name="customerEmail"
+    placeholder="i.e. youremail@gmail.com"
+    type="email"
+  />
+  <legend
+    className="ContactFormLegend__exports-cVxNpo jtjRaF"
+  >
+    Phone
+  </legend>
+  <input
+    className="ContactFormInput__exports-hmgMZo djMCma"
+    name="customerPhone"
+    placeholder="i.e. 3470000000"
+    type="tel"
+  />
+  <legend
+    className="ContactFormLegend__exports-cVxNpo eiAltO"
+  >
+    Message
+  </legend>
+  <textarea
+    className="ContactFormTextarea__exports-hPeRxO fgHdOA"
+    name="message"
+    placeholder="please send us as much detail as possible. We appreciate your support"
+  />
+  <input
+    className="ContactFormSubmitButton__exports-kwUANJ hKGezw"
+    type="submit"
+    value="Send"
+  />
+</form>
+`;

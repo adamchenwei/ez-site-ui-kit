@@ -1,0 +1,508 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots LoginForm/Stand Alone Version Logged In 1`] = `
+<div
+  className="MuiPaper-root-154 MuiPaper-shadow2-158 MuiPaper-rounded-155"
+  style={
+    Object {
+      "display": "flex",
+      "flexFlow": "column",
+      "marginBottom": "24px",
+      "marginTop": "24px",
+    }
+  }
+>
+  <section
+    style={
+      Object {
+        "alignSelf": "center",
+        "avatar": Object {
+          "margin": "0 auto",
+        },
+        "margin": "24px",
+        "phrase": Object {
+          "textAlign": "center",
+        },
+      }
+    }
+  >
+    <h1
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+    >
+      Welcome!
+    </h1>
+    <div
+      className="MuiAvatar-root-181 MuiAvatar-colorDefault-182"
+      style={
+        Object {
+          "margin": "0 auto",
+        }
+      }
+    >
+      A
+    </div>
+    <p
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+    >
+      Bring me back to 
+      <a
+        href="https://www.google.com"
+      >
+        Google Search
+      </a>
+    </p>
+  </section>
+  <button
+    className="MuiButtonBase-root-199 MuiButton-root-184 MuiButton-raised-191 MuiButton-raisedPrimary-193"
+    disabled={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    role="button"
+    tabIndex={0}
+    type="button"
+  >
+    <span
+      className="MuiButton-label-186"
+    >
+      Log Out
+    </span>
+    <span
+      className="MuiTouchRipple-root-201"
+    />
+  </button>
+</div>
+`;
+
+exports[`Storyshots LoginForm/Stand Alone Version Logged In But Return Route is Missing 1`] = `
+<div
+  className="MuiPaper-root-208 MuiPaper-shadow2-212 MuiPaper-rounded-209"
+  style={
+    Object {
+      "display": "flex",
+      "flexFlow": "column",
+      "marginBottom": "24px",
+      "marginTop": "24px",
+    }
+  }
+>
+  <section
+    style={
+      Object {
+        "alignSelf": "center",
+        "avatar": Object {
+          "margin": "0 auto",
+        },
+        "margin": "24px",
+        "phrase": Object {
+          "textAlign": "center",
+        },
+      }
+    }
+  >
+    <h1
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+    >
+      Welcome!
+    </h1>
+    <div
+      className="MuiAvatar-root-235 MuiAvatar-colorDefault-236"
+      style={
+        Object {
+          "margin": "0 auto",
+        }
+      }
+    >
+      A
+    </div>
+  </section>
+  <button
+    className="MuiButtonBase-root-253 MuiButton-root-238 MuiButton-raised-245 MuiButton-raisedPrimary-247"
+    disabled={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    role="button"
+    tabIndex={0}
+    type="button"
+  >
+    <span
+      className="MuiButton-label-240"
+    >
+      Log Out
+    </span>
+    <span
+      className="MuiTouchRipple-root-255"
+    />
+  </button>
+</div>
+`;
+
+exports[`Storyshots LoginForm/Stand Alone Version Logged In But User Name is Missing 1`] = `
+<div
+  className="MuiPaper-root-262 MuiPaper-shadow2-266 MuiPaper-rounded-263"
+  style={
+    Object {
+      "display": "flex",
+      "flexFlow": "column",
+      "marginBottom": "24px",
+      "marginTop": "24px",
+    }
+  }
+>
+  <section
+    style={
+      Object {
+        "alignSelf": "center",
+        "avatar": Object {
+          "margin": "0 auto",
+        },
+        "margin": "24px",
+        "phrase": Object {
+          "textAlign": "center",
+        },
+      }
+    }
+  >
+    <h1
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+    >
+      Welcome!
+    </h1>
+    <div
+      className="MuiAvatar-root-289 MuiAvatar-colorDefault-290"
+      style={
+        Object {
+          "margin": "0 auto",
+        }
+      }
+    >
+      ME
+    </div>
+    <p
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+    >
+      Bring me back to 
+      <a
+        href="https://www.google.com"
+      >
+        Google Search
+      </a>
+    </p>
+  </section>
+  <button
+    className="MuiButtonBase-root-307 MuiButton-root-292 MuiButton-raised-299 MuiButton-raisedPrimary-301"
+    disabled={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    role="button"
+    tabIndex={0}
+    type="button"
+  >
+    <span
+      className="MuiButton-label-294"
+    >
+      Log Out
+    </span>
+    <span
+      className="MuiTouchRipple-root-309"
+    />
+  </button>
+</div>
+`;
+
+exports[`Storyshots LoginForm/Stand Alone Version Logging In 1`] = `
+<div
+  className="MuiPaper-root-81 MuiPaper-shadow2-85 MuiPaper-rounded-82"
+  style={
+    Object {
+      "display": "flex",
+      "flexFlow": "column",
+      "marginBottom": "24px",
+      "marginTop": "24px",
+    }
+  }
+>
+  <section
+    style={
+      Object {
+        "display": "flex",
+        "flexFlow": "column",
+      }
+    }
+  >
+    <div
+      className="MuiFormControl-root-108"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      required={false}
+    >
+      <label
+        className="MuiFormLabel-root-118 MuiInputLabel-root-112 MuiInputLabel-formControl-113 MuiInputLabel-animated-116 MuiInputLabel-shrink-115"
+        data-shrink={true}
+        htmlFor="userNameUserNameInput"
+      >
+        User Email
+      </label>
+      <div
+        className="MuiInput-root-122 MuiInput-formControl-123 MuiInput-inkbar-124 MuiInput-underline-128"
+        onBlur={[Function]}
+        onFocus={[Function]}
+      >
+        <input
+          autoComplete={undefined}
+          autoFocus={undefined}
+          className="MuiInput-input-131 MuiInput-inputSingleline-134"
+          defaultValue={undefined}
+          disabled={false}
+          id="userNameUserNameInput"
+          name={undefined}
+          onChange={[Function]}
+          onKeyDown={undefined}
+          onKeyUp={undefined}
+          placeholder={undefined}
+          readOnly={undefined}
+          required={undefined}
+          rows={undefined}
+          type="email"
+          value="adam@gmail.com"
+        />
+      </div>
+    </div>
+    <div
+      className="MuiFormControl-root-108"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      required={false}
+    >
+      <label
+        className="MuiFormLabel-root-118 MuiInputLabel-root-112 MuiInputLabel-formControl-113 MuiInputLabel-animated-116 MuiInputLabel-shrink-115"
+        data-shrink={true}
+        htmlFor="passwordPasswordInput"
+      >
+        Password
+      </label>
+      <div
+        className="MuiInput-root-122 MuiInput-formControl-123 MuiInput-inkbar-124 MuiInput-underline-128"
+        onBlur={[Function]}
+        onFocus={[Function]}
+      >
+        <input
+          autoComplete={undefined}
+          autoFocus={undefined}
+          className="MuiInput-input-131 MuiInput-inputSingleline-134"
+          defaultValue={undefined}
+          disabled={false}
+          id="passwordPasswordInput"
+          name={undefined}
+          onChange={[Function]}
+          onKeyDown={undefined}
+          onKeyUp={undefined}
+          placeholder={undefined}
+          readOnly={undefined}
+          required={undefined}
+          rows={undefined}
+          type="password"
+          value="123"
+        />
+      </div>
+    </div>
+  </section>
+  <button
+    className="MuiButtonBase-root-152 MuiButtonBase-disabled-153 MuiButton-root-137 MuiButton-raised-144 MuiButton-raisedPrimary-146 MuiButton-disabled-149"
+    disabled={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    role="button"
+    tabIndex={-1}
+    type="button"
+  >
+    <span
+      className="MuiButton-label-139"
+    >
+      Loading...
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Storyshots LoginForm/Stand Alone Version Not Logged In 1`] = `
+<div
+  className="MuiPaper-root-1 MuiPaper-shadow2-5 MuiPaper-rounded-2"
+  style={
+    Object {
+      "display": "flex",
+      "flexFlow": "column",
+      "marginBottom": "24px",
+      "marginTop": "24px",
+    }
+  }
+>
+  <section
+    style={
+      Object {
+        "display": "flex",
+        "flexFlow": "column",
+      }
+    }
+  >
+    <div
+      className="MuiFormControl-root-28"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      required={false}
+    >
+      <label
+        className="MuiFormLabel-root-38 MuiInputLabel-root-32 MuiInputLabel-formControl-33 MuiInputLabel-animated-36"
+        data-shrink={false}
+        htmlFor="userNameUserNameInput"
+      >
+        User Email
+      </label>
+      <div
+        className="MuiInput-root-42 MuiInput-formControl-43 MuiInput-inkbar-44 MuiInput-underline-48"
+        onBlur={[Function]}
+        onFocus={[Function]}
+      >
+        <input
+          autoComplete={undefined}
+          autoFocus={undefined}
+          className="MuiInput-input-51 MuiInput-inputSingleline-54"
+          defaultValue={undefined}
+          disabled={false}
+          id="userNameUserNameInput"
+          name={undefined}
+          onChange={[Function]}
+          onKeyDown={undefined}
+          onKeyUp={undefined}
+          placeholder={undefined}
+          readOnly={undefined}
+          required={undefined}
+          rows={undefined}
+          type="email"
+          value=""
+        />
+      </div>
+    </div>
+    <div
+      className="MuiFormControl-root-28"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      required={false}
+    >
+      <label
+        className="MuiFormLabel-root-38 MuiInputLabel-root-32 MuiInputLabel-formControl-33 MuiInputLabel-animated-36"
+        data-shrink={false}
+        htmlFor="passwordPasswordInput"
+      >
+        Password
+      </label>
+      <div
+        className="MuiInput-root-42 MuiInput-formControl-43 MuiInput-inkbar-44 MuiInput-underline-48"
+        onBlur={[Function]}
+        onFocus={[Function]}
+      >
+        <input
+          autoComplete={undefined}
+          autoFocus={undefined}
+          className="MuiInput-input-51 MuiInput-inputSingleline-54"
+          defaultValue={undefined}
+          disabled={false}
+          id="passwordPasswordInput"
+          name={undefined}
+          onChange={[Function]}
+          onKeyDown={undefined}
+          onKeyUp={undefined}
+          placeholder={undefined}
+          readOnly={undefined}
+          required={undefined}
+          rows={undefined}
+          type="password"
+          value=""
+        />
+      </div>
+    </div>
+  </section>
+  <button
+    className="MuiButtonBase-root-72 MuiButton-root-57 MuiButton-raised-64 MuiButton-raisedPrimary-66"
+    disabled={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    role="button"
+    tabIndex={0}
+    type="button"
+  >
+    <span
+      className="MuiButton-label-59"
+    >
+      Log In
+    </span>
+    <span
+      className="MuiTouchRipple-root-74"
+    />
+  </button>
+</div>
+`;

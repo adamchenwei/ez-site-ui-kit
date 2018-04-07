@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots CatalogItem default 1`] = `
+<div
+  className="card"
+>
+  <section
+    className="SnapshotContainer__exports-juqyDE cvtFfE"
+  >
+    <img
+      className="Snapshot__exports-kDzhxQ izwiEp"
+      src="/placeholder/masjid.jpg"
+    />
+  </section>
+  <div
+    className="card-body"
+  >
+    <h4
+      className="card-title"
+    >
+      Al-Masjid Al-Awwal
+    </h4>
+    <h6
+      className="card-subtitle"
+    >
+      Pittsburgh, PA USA
+    </h6>
+    <p
+      className="card-text"
+    >
+      
+    </p>
+  </div>
+</div>
+`;

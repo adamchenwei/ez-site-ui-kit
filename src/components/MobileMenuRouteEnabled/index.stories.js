@@ -19,6 +19,8 @@ import {
   buildMenuItems,
   buildMenuFilterItems,
 } from './../MobileMenuRouteEnabled/factory/menu';
+import DummyStager from './../Common/Dummy/DummyStager';
+import DummyBar from './../Common/Dummy/DummyBar';
 
 const menuBarItems = buildMenuItems(2);
 const filterBarItems = buildMenuFilterItems(6);

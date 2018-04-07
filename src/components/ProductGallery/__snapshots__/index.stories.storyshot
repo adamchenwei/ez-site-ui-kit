@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Product Gallery hide gallery when only 1 image 1`] = `
+<section
+  style={
+    Object {
+      "height": "500px",
+      "position": "absolute",
+      "width": "500px",
+    }
+  }
+>
+  <section
+    className="Container__exports-cGduGO gmhdCo"
+    style={undefined}
+  >
+    <section
+      className="DisplayImageBox__exports-kkpcsN hUZazV"
+    >
+      <img
+        className="img-fluid DisplayImage__exports-MNIXO gcIKPC"
+        src="/assets/images/products/premium-sun-dried-mulberries-1.jpeg"
+      />
+    </section>
+  </section>
+</section>
+`;
+
+exports[`Storyshots Product Gallery stand alone 1`] = `
+<section
+  style={
+    Object {
+      "height": "500px",
+      "position": "absolute",
+      "width": "500px",
+    }
+  }
+>
+  <section
+    className="Container__exports-cGduGO gmhdCo"
+    style={undefined}
+  >
+    <section
+      className="DisplayImageBox__exports-kkpcsN hEjShO"
+    >
+      <img
+        className="img-fluid DisplayImage__exports-MNIXO gcIKPC"
+        src="/assets/images/products/premium-sun-dried-mulberries-1.jpeg"
+      />
+    </section>
+    <section
+      className="ThumbnailsContainer__exports-cyIKAY hvqAwF"
+    >
+      <section
+        className="ThumbnailFrame__exports-drYBNG gyPVzl"
+      >
+        <img
+          className="ThumbnailImage__exports-hAOHQT jUwIXd"
+          onClick={[Function]}
+          src="/assets/images/products/premium-sun-dried-mulberries-1.jpeg"
+        />
+      </section>
+      <section
+        className="ThumbnailFrame__exports-drYBNG gyPVzl"
+      >
+        <img
+          className="ThumbnailImage__exports-hAOHQT jUwIXd"
+          onClick={[Function]}
+          src="/assets/images/products/premium-sun-dried-apricots-1.jpg"
+        />
+      </section>
+      <section
+        className="ThumbnailFrame__exports-drYBNG gyPVzl"
+      >
+        <img
+          className="ThumbnailImage__exports-hAOHQT jUwIXd"
+          onClick={[Function]}
+          src="/assets/images/products/premium-raw-walnuts-1.jpeg"
+        />
+      </section>
+    </section>
+  </section>
+</section>
+`;

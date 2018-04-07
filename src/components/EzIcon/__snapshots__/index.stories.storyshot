@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots EzIcon default 1`] = `
+<section
+  className="Container__exports-cGduGO fOZQpl"
+>
+  SUCCESS
+</section>
+`;

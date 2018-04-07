@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Component/Atom/AtomTemplateComponent/Stand Alone default 1`] = `
+<div
+  className=""
+  style={Object {}}
+>
+  <h1>
+    SUCCESS
+  </h1>
+</div>
+`;
