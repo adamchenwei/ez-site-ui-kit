@@ -297,7 +297,7 @@ exports[`Storyshots Share Buttons Bar with link 1`] = `
     >
       <svg
         aria-hidden="true"
-        className="MuiSvgIcon-root-796"
+        className="MuiSvgIcon-root-1"
         focusable="false"
         href="www"
         viewBox="0 0 24 24"

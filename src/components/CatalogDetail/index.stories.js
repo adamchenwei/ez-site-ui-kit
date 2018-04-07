@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import React from 'react';
 
-storiesOf('CatalogDetail', module)
+storiesOf('Component/CatalogDetail (DontTest)', module)
 // TODO - flaw! lower screen szie below 500px width will see image shrink in height, need media query
   .add('1000x500', () => (<CatalogDetail
     query="Al+Masjid+Al+Awwal+Pittsburgh+PA"

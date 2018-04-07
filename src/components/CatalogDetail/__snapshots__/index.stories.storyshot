@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots CatalogDetail 300x200 1`] = `
+exports[`Storyshots DontTest 300x200 1`] = `
 <section
   className="Container__exports-cGduGO fOZQpl"
 >
@@ -171,7 +171,7 @@ exports[`Storyshots CatalogDetail 300x200 1`] = `
 </section>
 `;
 
-exports[`Storyshots CatalogDetail 500x500 1`] = `
+exports[`Storyshots DontTest 500x500 1`] = `
 <section
   className="Container__exports-cGduGO fOZQpl"
 >
@@ -342,7 +342,7 @@ exports[`Storyshots CatalogDetail 500x500 1`] = `
 </section>
 `;
 
-exports[`Storyshots CatalogDetail 500x1000 1`] = `
+exports[`Storyshots DontTest 500x1000 1`] = `
 <section
   className="Container__exports-cGduGO fOZQpl"
 >
@@ -513,7 +513,7 @@ exports[`Storyshots CatalogDetail 500x1000 1`] = `
 </section>
 `;
 
-exports[`Storyshots CatalogDetail 1000x500 1`] = `
+exports[`Storyshots DontTest 1000x500 1`] = `
 <section
   className="Container__exports-cGduGO fOZQpl"
 >

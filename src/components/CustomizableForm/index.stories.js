@@ -13,14 +13,14 @@ const MOCK_INSTRUCTION_1 = [
     placeholderText: 'i.e. Mohammmad Ibn Uthaymeen',
   },
   {
-    id: 1,
+    id: 2,
     fieldLegendTitle: 'Email',
     fieldName: 'email',
     inputType: 'email',
     placeholderText: 'i.e. abc@gmail.com',
   },
   {
-    id: 1,
+    id: 3,
     fieldLegendTitle: 'Feedback',
     fieldName: 'feedback',
     inputType: 'text-area',

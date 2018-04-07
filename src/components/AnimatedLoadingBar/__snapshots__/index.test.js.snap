@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`AnimatedLoadingBar renders as expected 1`] = `
-<div
-  className="Bar-gSSpUe eThZd"
-/>
-`;

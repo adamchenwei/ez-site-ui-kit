@@ -20,31 +20,31 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">23.08% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>13/13</span>
+        <span class='fraction'>3/13</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">75% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>3/4</span>
+        <span class='fraction'>0/4</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>1/1</span>
+        <span class='fraction'>0/1</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">23.08% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>13/13</span>
+        <span class='fraction'>3/13</span>
       </div>
     </div>
     <p class="quiet">
       Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
     </p>
   </div>
-  <div class='status-line high'></div>
+  <div class='status-line low'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -181,7 +181,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -194,25 +194,25 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -285,7 +285,7 @@ import getWindow from './../../util/get/getWindow';
 &nbsp;
 const setComponentWrapperContainerClasses = require('../../util/setup/setComponentWrapperContainerClasses');
 &nbsp;
-export default function ShareButtonsBar(props) {
+export default function <span class="fstat-no" title="function not covered" >ShareButtonsBar(</span>props) {
   const {
     style,
     sharedImageUrl,
@@ -294,7 +294,7 @@ export default function ShareButtonsBar(props) {
     sharedTitle,
     homeLink,
     // moreLink,
-  } = props;
+  } = <span class="cstat-no" title="statement not covered" >props;</span>
 &nbsp;
   const {
     FacebookShareButton,
@@ -307,25 +307,25 @@ export default function ShareButtonsBar(props) {
     // LinkedinShareButton,
     // TelegramShareButton,
     // WhatsappShareButton,
-  } = ShareButtons;
+  } = <span class="cstat-no" title="statement not covered" >ShareButtons;</span>
 &nbsp;
-  const COMPONENT_NAME = 'ShareButtonsBar';
-  const containerName = setComponentWrapperContainerClasses(COMPONENT_NAME);
+  const COMPONENT_NAME = <span class="cstat-no" title="statement not covered" >'ShareButtonsBar';</span>
+  const containerName = <span class="cstat-no" title="statement not covered" >setComponentWrapperContainerClasses(COMPONENT_NAME);</span>
 &nbsp;
-  const FacebookIcon = generateShareIcon('facebook');
-  const TwitterIcon = generateShareIcon('twitter');
-  const PinterestIcon = generateShareIcon('pinterest');
-  const locationHref = getWindow()
-    ? <span class="branch-0 cbranch-no" title="branch not covered" >getWindow().location.href</span>
+  const FacebookIcon = <span class="cstat-no" title="statement not covered" >generateShareIcon('facebook');</span>
+  const TwitterIcon = <span class="cstat-no" title="statement not covered" >generateShareIcon('twitter');</span>
+  const PinterestIcon = <span class="cstat-no" title="statement not covered" >generateShareIcon('pinterest');</span>
+  const locationHref = <span class="cstat-no" title="statement not covered" >getWindow()</span>
+    ? getWindow().location.href
     : '';
-  const absoluteUrl = `${locationHref}${sharedImageUrl}`;
+  const absoluteUrl = <span class="cstat-no" title="statement not covered" >`${locationHref}${sharedImageUrl}`;</span>
 &nbsp;
   // const {
   //   spreaker,
   //   mixler,
   // } = moreLink;
 &nbsp;
-  return (
+<span class="cstat-no" title="statement not covered" >  return (</span>
     &lt;Container
       hasMarginBottom
       componentName={containerName}
@@ -391,7 +391,7 @@ ShareButtonsBar.defaultProps = {
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Apr 07 2018 15:29:29 GMT-0400 (EDT)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Apr 07 2018 15:54:47 GMT-0400 (EDT)
 </div>
 </div>
 <script src="../../../prettify.js"></script>
