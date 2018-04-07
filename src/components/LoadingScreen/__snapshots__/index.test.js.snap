@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoadingScreen renders as expected 1`] = `
+<section
+  className="MaskingBackgroundContainer-goHeYq hxtXxm"
+>
+  <img
+    className="LogoContainer-byHpFi dcqnxi"
+    src=""
+  />
+  <section
+    className="LoadingBarContainer-iZnhQC iRpnww"
+  >
+    <div
+      className="Bar-gSSpUe eThZd"
+    />
+  </section>
+</section>
+`;
