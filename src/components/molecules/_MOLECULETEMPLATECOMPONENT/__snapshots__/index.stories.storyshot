@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Component/Bootstrap/Molecule/MoleculeTemplateComponent/Stand Alone default 1`] = `
+<section
+  className="Container-gZqETv fhghoX"
+  style={Object {}}
+>
+  SUCCESS
+</section>
+`;

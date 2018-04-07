@@ -9,7 +9,7 @@
     "prod": "set NODE_ENV=production npm run p && npm run analyze",
     "start": "webpack --env.watch=true",
     "start:p": "npm link ez-site-content-store && webpack -p --env.watch=true",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -s ./public -p 6006",
     "s": "npm link ez-site-content-store && npm run storybook",
     "build-storybook": "build-storybook",
     "analyze": "webpack --profile --json > stats.json",

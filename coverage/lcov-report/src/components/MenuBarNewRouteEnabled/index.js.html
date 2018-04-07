@@ -20,31 +20,31 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">81.82% </span>
+        <span class="strong">9.09% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>9/11</span>
+        <span class='fraction'>1/11</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">50% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>1/2</span>
+        <span class='fraction'>0/2</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>5/5</span>
+        <span class='fraction'>0/5</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">81.82% </span>
+        <span class="strong">9.09% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>9/11</span>
+        <span class='fraction'>1/11</span>
       </div>
     </div>
     <p class="quiet">
       Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
     </p>
   </div>
-  <div class='status-line high'></div>
+  <div class='status-line low'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -119,12 +119,12 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -134,20 +134,20 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -178,36 +178,36 @@ import {
 import scrollToDom from './../../util/layout/scrollToDom';
 &nbsp;
 export default class MenuBarNewRouteEnabled extends Component {
-  constructor(props) {
-    super(props);
+<span class="fstat-no" title="function not covered" >  co</span>nstructor(props) {
+<span class="cstat-no" title="statement not covered" >    super(props);</span>
   }
 &nbsp;
-  componentDidMount() {
-    const dom = this;
-    <span class="missing-if-branch" title="if path not taken" >I</span>if (this.props.scrollToHere) {
+<span class="fstat-no" title="function not covered" >  co</span>mponentDidMount() {
+    const dom = <span class="cstat-no" title="statement not covered" >this;</span>
+<span class="cstat-no" title="statement not covered" >    if (this.props.scrollToHere) {</span>
       const dom = <span class="cstat-no" title="statement not covered" >ReactDOM.findDOMNode(this.MenuBarTop);</span>
 <span class="cstat-no" title="statement not covered" >      scrollToDom(dom, 100);</span>
     }
   }
 &nbsp;
-  render() {
+<span class="fstat-no" title="function not covered" >  re</span>nder() {
     const {
       menuItems,
       customStyles,
-    } = this.props;
-    const COMPONENT_NAME = 'MenuBarNewRouteEnabled';
-    return (
+    } = <span class="cstat-no" title="statement not covered" >this.props;</span>
+    const COMPONENT_NAME = <span class="cstat-no" title="statement not covered" >'MenuBarNewRouteEnabled';</span>
+<span class="cstat-no" title="statement not covered" >    return (</span>
       &lt;Container
         style={customStyles}
         componentName={COMPONENT_NAME}
-        ref={(element) =&gt; {
-          this.MenuBarTop = element;
+        ref={<span class="fstat-no" title="function not covered" >(e</span>lement) =&gt; {
+<span class="cstat-no" title="statement not covered" >          this.MenuBarTop = element;</span>
         }}
         gridAreaId=""
       &gt;
         {
-          menuItems.map((menuItem, index) =&gt; (
-            &lt;MenuItemBox key={index}&gt;
+          menuItems.map(<span class="fstat-no" title="function not covered" >(m</span>enuItem, index) =&gt; (
+<span class="cstat-no" title="statement not covered" >            &lt;MenuItemBox key={index}&gt;</span>
               &lt;MenuItemLink
                 to={menuItem.path}
               &gt;
@@ -232,7 +232,7 @@ MenuBarNewRouteEnabled.propTypes = {
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Apr 07 2018 16:16:33 GMT-0400 (EDT)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Apr 07 2018 17:14:19 GMT-0400 (EDT)
 </div>
 </div>
 <script src="../../../prettify.js"></script>

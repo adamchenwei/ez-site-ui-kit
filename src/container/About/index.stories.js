@@ -3,6 +3,7 @@ import { action } from '@storybook/addon-actions';
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import About from './index';
+import { CONTAINER, BOOTSTRAP } from '../../storybookonly/config/MENU_CATEGORIES';
 
-storiesOf('Container/About (DontTest)', module)
+storiesOf(`${CONTAINER}/${BOOTSTRAP}/About (DontTest)`, module)
   .add('default', () => <Router><About /></Router>);

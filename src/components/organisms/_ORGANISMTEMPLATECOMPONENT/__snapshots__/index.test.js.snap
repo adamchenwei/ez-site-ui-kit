@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component/Bootstrap/OrganismTemplateComponent/Unit Test renders as expected 1`] = `
+<section
+  className="Container-gZqETv fhghoX"
+  style={Object {}}
+>
+  SUCCESS
+</section>
+`;
