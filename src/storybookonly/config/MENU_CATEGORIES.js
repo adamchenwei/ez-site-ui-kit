@@ -24,4 +24,4 @@ export default {
   MATERIALUI,
   PURE,
   CONTAINER,
-}
+};

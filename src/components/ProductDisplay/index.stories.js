@@ -2,7 +2,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import React from 'react';
 import ProductDisplay from './index';
-import {COMPONENT, BOOTSTRAP} from '../../storybookonly/config/MENU_CATEGORIES';
+import { COMPONENT, BOOTSTRAP } from '../../storybookonly/config/MENU_CATEGORIES';
 
 
 const mock = {

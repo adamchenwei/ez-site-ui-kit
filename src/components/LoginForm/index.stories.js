@@ -4,7 +4,7 @@ import { action } from '@storybook/addon-actions';
 import React from 'react';
 
 // TOOD: need case when login failed
-function mockCallBack(log) {  } //console.log(log || 'triggered');
+function mockCallBack(log) { } // console.log(log || 'triggered');
 function mockReturnRoute() {
   return {
     uri: 'https://www.google.com',
@@ -12,26 +12,26 @@ function mockReturnRoute() {
   };
 }
 storiesOf('LoginForm/Stand Alone Version', module)
-  .add('Not Logged In', () => {
+  .add('Not Logged In', () =>
     // console.log(mockCallBack);
     // console.log('1');
-    return (<LoginForm
-      userInfo={{
+    (<LoginForm
+       userInfo={{
       userName: '',
       password: '',
       loggedIn: false,
     }}
-      layout="standAlone"
-      handleLogin={mockCallBack}
-      handleLogout={mockCallBack}
-      handleLoginFormChange={mockCallBack}
-      getReturnToRoute={mockCallBack}
-    />);
-  })
-  .add('Logging In', () => {
-    //console.log('2');
-    return (
-      <LoginForm
+       layout="standAlone"
+       handleLogin={mockCallBack}
+       handleLogout={mockCallBack}
+       handleLoginFormChange={mockCallBack}
+       getReturnToRoute={mockCallBack}
+     />),
+  )
+  .add('Logging In', () =>
+    // console.log('2');
+    (
+       <LoginForm
         userInfo={{
         userName: 'adam@gmail.com',
         password: '123',
@@ -44,8 +44,8 @@ storiesOf('LoginForm/Stand Alone Version', module)
         handleLoginFormChange={mockCallBack}
         getReturnToRoute={mockCallBack}
       />
-    );
-  })
+    ),
+  )
   .add('Logged In', () => (
     <LoginForm
       userInfo={{
