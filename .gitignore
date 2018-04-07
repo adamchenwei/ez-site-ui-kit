@@ -57,3 +57,6 @@ node_modules
 
 # npm debug log
 npm-debug.log
+
+# System MacOS
+.DS_Store

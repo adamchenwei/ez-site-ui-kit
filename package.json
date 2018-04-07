@@ -25,6 +25,10 @@
     "cleanup": "npm run test:updateSnapshot && npm run lint:fix",
     "link": "npm link ez-site-content-store"
   },
+  "pre-push": [
+    "test",
+    "lint:fix"
+  ],
   "jest": {
     "collectCoverage": true,
     "collectCoverageFrom": [
