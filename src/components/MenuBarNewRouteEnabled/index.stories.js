@@ -3,7 +3,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 
 import React from 'react';
-import {buildMenuItems} from './../MobileMenu/factory/menu';
+import { buildMenuItems } from './../MobileMenu/factory/menu';
 import MenuBarNewRouteEnabled from './index';
 
 

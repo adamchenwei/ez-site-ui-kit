@@ -13920,7 +13920,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 function getWindow() {
-  var window = window || null;
+  var window = window || null; //eslint-disable-line
   var cachedWindow = window || null;
 
   return cachedWindow;

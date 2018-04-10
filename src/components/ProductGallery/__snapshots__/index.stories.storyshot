@@ -12,7 +12,7 @@ exports[`Storyshots Product Gallery hide gallery when only 1 image 1`] = `
 >
   <section
     className="Container__exports-cGduGO gmhdCo"
-    style={undefined}
+    style={Object {}}
   >
     <section
       className="DisplayImageBox__exports-kkpcsN hUZazV"
@@ -38,7 +38,7 @@ exports[`Storyshots Product Gallery stand alone 1`] = `
 >
   <section
     className="Container__exports-cGduGO gmhdCo"
-    style={undefined}
+    style={Object {}}
   >
     <section
       className="DisplayImageBox__exports-kkpcsN hEjShO"

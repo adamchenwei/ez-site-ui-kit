@@ -54,7 +54,6 @@ export default class ProductDisplay extends Component {
   }
 
 
-
   render() {
     // WARNNING: NEVER ADD  row WITHOUT no-gutters !!! CAUSE GHOST MARGIN ON THE RIGHT OF THE PAGE!!!!!
     const {
@@ -84,7 +83,7 @@ export default class ProductDisplay extends Component {
             url: image.url,
           },
         }
-      )
+      );
     });
     // <img className='img-fluid' src={imageUrl} />
     return (

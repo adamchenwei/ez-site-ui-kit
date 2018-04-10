@@ -18,6 +18,6 @@ export default function LogoBar(props) {
 
 LogoBar.propTypes = {
   content: PropTypes.objectOf(PropTypes.shape({
-    data: PropTypes.objectOf(PropTypes.any)
+    data: PropTypes.objectOf(PropTypes.any),
   })).isRequired,
 };

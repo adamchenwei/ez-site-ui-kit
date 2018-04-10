@@ -1,6 +1,6 @@
 
 function getWindow() {
-  const window = window || null;
+  const window = window || null;//eslint-disable-line
   const cachedWindow = window || null;
 
   return cachedWindow;

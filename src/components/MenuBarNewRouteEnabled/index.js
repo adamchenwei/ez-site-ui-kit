@@ -7,7 +7,6 @@ import MenuItemLink from './style/MenuItemLink';
 import scrollToDom from './../../util/layout/scrollToDom';
 
 export default class MenuBarNewRouteEnabled extends Component {
-
   componentDidMount() {
     let dom = this;
     if (this.props.scrollToHere) {

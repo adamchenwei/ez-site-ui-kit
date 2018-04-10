@@ -27,7 +27,7 @@ function CredentialInput(props) {
         onChange={event => props.handleFormChange(event, contentObjectName)}
       />
     </FormControl>
-  )
+  );
 }
 CredentialInput.propTypes = {
   htmlIdName: PropTypes.string,

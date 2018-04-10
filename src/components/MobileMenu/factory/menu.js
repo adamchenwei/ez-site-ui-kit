@@ -9,7 +9,7 @@ function buildMenuItems(gridItemId) {
   // console.log(content);
   const menuBar = ContentSynchronizer.getItem('grids', 'gridItemId', gridItemId, true);
   const menuBarConfig = ContentSynchronizer.getItem('menus', 'menuId', menuBar.gridContent.menuId, true);
-  const {baseTag} = ContentSynchronizer.getCollection('site').domain;
+  const { baseTag } = ContentSynchronizer.getCollection('site').domain;
 
   return generateMenuItemsList(menuBarConfig, baseTag);
 }
@@ -24,9 +24,9 @@ function buildMenuFilterItems(gridItemId) {
     collectionName,
     menuItemType,
   } = filterBarConfig.menuConfig;
-  const {menuName} = filterBarConfig;
+  const { menuName } = filterBarConfig;
   const collection = ContentSynchronizer.getCollection(collectionName);
-  const {baseTag} = ContentSynchronizer.getCollection('site').domain;
+  const { baseTag } = ContentSynchronizer.getCollection('site').domain;
   return generateFilterItemsList(collection, collectionName, menuItemType, menuName, baseTag);
 }
 
@@ -44,9 +44,9 @@ function buildProductMenuItems(gridItemId) {
     collectionName,
     menuItemType,
   } = productsBarConfig.menuConfig;
-  const {menuName} = productsBarConfig;
+  const { menuName } = productsBarConfig;
   const collection = ContentSynchronizer.getCollection(collectionName);
-  const {baseTag} = ContentSynchronizer.getCollection('site').domain;
+  const { baseTag } = ContentSynchronizer.getCollection('site').domain;
 
   return generateProductItemsList(collection, collectionName, menuItemType, menuName, baseTag);
 }
