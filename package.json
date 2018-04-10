@@ -23,7 +23,8 @@
     "test:updateSnapshot": "npm run link && ./node_modules/jest/bin/jest.js --updateSnapshot",
     "test:once": "./node_modules/jest/bin/jest.js --coverage",
     "cleanup": "npm run test:updateSnapshot && npm run lint:fix",
-    "link": "npm link ez-site-content-store"
+    "link": "npm link ez-site-content-store",
+    "push:master": "npm run link && git push origin master"
   },
   "pre-push": [
     "test",
