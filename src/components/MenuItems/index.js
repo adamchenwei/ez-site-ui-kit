@@ -1,7 +1,6 @@
 import React, { Component } from 'react'; import PropTypes from 'prop-types';
 import { Container } from './../Common';
 import MenuItem from './../MenuItem';
-import { ContentSynchronizer } from 'ez-site-content-store';
 
 const setComponentWrapperContainerClasses = require('../../util/setup/setComponentWrapperContainerClasses');
 
@@ -16,7 +15,7 @@ export default class MenuItems extends Component {
       toggleMenu={this.toggleMenu}
       path={item.path}
       title={item.title}
-      key={index}
+      key={item.id || index}
     /> || null);
   }
 
@@ -42,6 +41,11 @@ export default class MenuItems extends Component {
   }
 }
 MenuItems.propTypes = {
-  menuItems: PropTypes.array,
+  menuItems: PropTypes.arrayOf(PropTypes.any),
   toggleMenu: PropTypes.func,
 };
+MenuItems.defaultProps = {
+  menuItems: [],
+  toggleMenu: () => {},
+};
+

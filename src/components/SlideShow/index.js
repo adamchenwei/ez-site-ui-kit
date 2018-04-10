@@ -134,7 +134,7 @@ export default class SlideShow extends Component {
           {/* TODO: add id for slides */}
           {
             slides.map((slide, index) => (<SlideButton
-              key={index}
+              key={slide.id || index}
               currentSlideId={this.state.currentSlideId}
               slideId={slide.id}
               goToSlide={this.goToSlide}

@@ -1,11 +1,8 @@
 import React, { Component } from 'react'; import PropTypes from 'prop-types';
-
-import Lightbox from 'react-images';
 import scrollToDom from './../../util/layout/scrollToDom';
-import {
-  ThumbnailImage,
-  ThumbnailFrame,
-} from './style';
+
+import ThumbnailImage from './style/ThumbnailImage';
+import ThumbnailFrame from './style/ThumbnailFrame';
 
 export default class ThumbnailImageHolder extends Component {
   constructor(props) {
@@ -29,7 +26,6 @@ export default class ThumbnailImageHolder extends Component {
     const {
       src,
     } = this.props;
-    const COMPONENT_NAME = 'ThumbnailImageHolder';
     return (
       <ThumbnailFrame>
         <ThumbnailImage
@@ -41,7 +37,6 @@ export default class ThumbnailImageHolder extends Component {
   }
 }
 ThumbnailImageHolder.propTypes = {
-  src: PropTypes.string,
-  changeImage: PropTypes.func,
-  scrollTargetDom: PropTypes.any,
+  src: PropTypes.string.isRequired,
+  changeImage: PropTypes.func.isRequired,
 };

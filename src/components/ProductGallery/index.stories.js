@@ -1,11 +1,10 @@
-import ProductGallery from './index';
 import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
 import React from 'react';
 import {
   galleryImages,
   galleryImagesOnlyOne,
 } from './../../../stories/fakeData';
+import ProductGallery from './index';
 
 
 storiesOf('Product Gallery', module)

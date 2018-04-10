@@ -1,10 +1,10 @@
 import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
+
 import React from 'react';
 import RegisterForm from './index';
 
 // TOOD: need case when Register failed
-function mockCallBack(log) { console.log(log || 'triggered'); }
+function mockCallBack(log) { console.log(log || 'triggered'); /*eslint-disable-line*/ }
 
 storiesOf('material-ui/Component/RegisterForm/Stand Alone Version', module)
   .add('initial', () => (

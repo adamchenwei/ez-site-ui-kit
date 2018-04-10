@@ -1,7 +1,6 @@
-import NotificationBar from './index';
 import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
 import React from 'react';
+import NotificationBar from './index';
 
 const mock = {
   data: {

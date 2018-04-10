@@ -1,16 +1,11 @@
 import React, { Component } from 'react'; import PropTypes from 'prop-types';
-import {
-  Container,
-  MenuToggleButton,
-  // MobileMenuItem,
-  MenuButtonSpan,
-  SiteNameTitle,
-  TitleSpan,
-} from './style';
+import Container from './style/Container';
+import MenuToggleButton from './style/MenuToggleButton';
+import MenuButtonSpan from './style/MenuButtonSpan';
+import TitleSpan from './style/TitleSpan';
 
 import {
   buildMenuItems,
-  buildMenuFilterItems,
   buildProductMenuItems,
 } from './factory/menu';
 
@@ -21,7 +16,6 @@ import MenuFilterItems from './../MenuFilterItems';
 import MenuItems from './../MenuItems';
 
 const setComponentWrapperContainerClasses = require('../../util/setup/setComponentWrapperContainerClasses');
-const smartEnvSiteUrl = require('../../util/dev/smartEnvSiteUrl');
 
 export default class MobileMenu extends Component {
   constructor(props) {
@@ -35,12 +29,11 @@ export default class MobileMenu extends Component {
   }
 
   render() {
-    let {
-      content,
-      style,
-      type,
+    const {
       siteName,
       isExpanded,
+    } = this.props;
+    let {
       filterItems,
       menuItems,
     } = this.props;
@@ -53,7 +46,12 @@ export default class MobileMenu extends Component {
     filterItems = buildProductMenuItems(10).sort((a, b) => {
       const textA = a.title.toUpperCase();
       const textB = b.title.toUpperCase();
-      return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+      if (textA < textB) {
+        return -1;
+      } else if (textA > textB) {
+        return 1;
+      }
+      return 0;
     }) || [];
     menuItems = buildMenuItems(2) || [];
 
@@ -113,10 +111,15 @@ export default class MobileMenu extends Component {
 }
 
 MobileMenu.propTypes = {
-  content: PropTypes.object,
-  style: PropTypes.object,
-  type: PropTypes.string,
   siteName: PropTypes.string,
-  filterItems: PropTypes.array,
-  menuItems: PropTypes.array,
+  filterItems: PropTypes.arrayOf(PropTypes.any),
+  menuItems: PropTypes.arrayOf(PropTypes.any),
+  isExpanded: PropTypes.bool,
+};
+
+MobileMenu.defaultProps = {
+  siteName: '',
+  filterItems: [],
+  menuItems: [],
+  isExpanded: false,
 };

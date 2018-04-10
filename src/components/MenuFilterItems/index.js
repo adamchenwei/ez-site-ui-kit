@@ -13,13 +13,16 @@ export default class MenuFilterItems extends Component {
     super(props);
     this.toggleMenu = this.props.toggleMenu
       ? this.props.toggleMenu.bind(this)
-      : function () {
-
-      };
+      : () => {};
   }
 
   generatedMenuFilterItems(items = []) {
-    return items.map((item, index) => <MenuFilterItem toggleMenu={this.toggleMenu} path={item.path} title={item.title} key={index} /> || null);
+    return items.map((item, index) => <MenuFilterItem
+      toggleMenu={this.toggleMenu}
+      path={item.path}
+      title={item.title}
+      key={item.id || index}
+    /> || null);
   }
 
   render() {
@@ -47,6 +50,11 @@ export default class MenuFilterItems extends Component {
   }
 }
 MenuFilterItems.propTypes = {
-  menuItems: PropTypes.array,
+  menuItems: PropTypes.arrayOf(PropTypes.any),
   toggleMenu: PropTypes.func,
 };
+MenuFilterItems.defaultProps = {
+  menuItems: [],
+  toggleMenu: () => {},
+};
+

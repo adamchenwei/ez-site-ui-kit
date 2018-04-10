@@ -1,18 +1,11 @@
-import MobileMenuRouteEnabled from './index';
 import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
+
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
-
+import MobileMenuRouteEnabled from './index';
 import {
   MasterMenuLong,
-  MasterMenuLongWithLongText,
-  MasterMenuExtremelyLong,
   MastMenuShort,
-  galleryImages,
-  galleryImagesOnlyOne,
-  slidesMultiple,
-  footerBarThreeIcons,
 } from './../../../stories/fakeData';
 
 import {

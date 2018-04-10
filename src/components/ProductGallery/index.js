@@ -1,13 +1,8 @@
 import React, { Component } from 'react'; import PropTypes from 'prop-types';
-import { Container } from './style';
-
-import {
-  ThumbnailsContainer,
-  DisplayImage,
-  DisplayImageBox,
-  DisplayImageFrame,
-} from './style';
-
+import Container from './style/Container';
+import ThumbnailsContainer from './style/ThumbnailsContainer';
+import DisplayImage from './style/DisplayImage';
+import DisplayImageBox from './style/DisplayImageBox';
 import ThumbnailImageHolder from './ThumbnailImageHolder';
 
 export default class ProductGallery extends Component {
@@ -21,7 +16,8 @@ export default class ProductGallery extends Component {
   }
 
   componentWillReceiveProps(newProps) {
-    if (newProps && newProps.images && newProps.images[0].content.url !== this.props.images[0].content.url) {
+    if (newProps
+      && newProps.images && newProps.images[0].content.url !== this.props.images[0].content.url) {
       this.setState({
         displayImageUrl: newProps.images[0].content.url || '',
       });
@@ -51,18 +47,21 @@ export default class ProductGallery extends Component {
         componentName={COMPONENT_NAME}
         gridAreaId=""
       >
-        <DisplayImageBox asfullHeight={hasOnlyOneImage} ref={(element) => { this.displayBoxDom = element; }}>
+        <DisplayImageBox
+          asfullHeight={hasOnlyOneImage}
+          ref={(element) => { this.displayBoxDom = element; }}
+        >
           <DisplayImage className="img-fluid" src={this.state.displayImageUrl} />
         </DisplayImageBox>
         {
           hasOnlyOneImage
-          ? null
-          : <ThumbnailsContainer>
+          ? null :
+          <ThumbnailsContainer>
             {
               images.map((image, index) => (
                 <ThumbnailImageHolder
                   src={image.content.url}
-                  key={index}
+                  key={image.id || index}
                   changeImage={this.changeImage}
                   scrollTargetDom={this.displayBoxDom}
                 />
@@ -76,6 +75,10 @@ export default class ProductGallery extends Component {
 }
 
 ProductGallery.propTypes = {
-  images: PropTypes.array.isRequired,
-  style: PropTypes.object,
+  images: PropTypes.arrayOf(PropTypes.any).isRequired,
+  style: PropTypes.objectOf(PropTypes.any),
+};
+
+ProductGallery.defaultProps = {
+  style: {},
 };

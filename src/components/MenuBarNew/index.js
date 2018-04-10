@@ -10,14 +10,10 @@ import {
 import scrollToDom from './../../util/layout/scrollToDom';
 
 export default class MenuBarNew extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   componentDidMount() {
-    const dom = this;
+    let dom = this;
     if (this.props.scrollToHere) {
-      const dom = ReactDOM.findDOMNode(this.MenuBarTop);
+      dom = ReactDOM.findDOMNode(this.MenuBarTop);//eslint-disable-line
       scrollToDom(dom, 100);
     }
   }
@@ -39,7 +35,7 @@ export default class MenuBarNew extends Component {
       >
         {
           menuItems.map((menuItem, index) => (
-            <MenuItemBox key={index}>
+            <MenuItemBox key={menuItem.id || index}>
               <MenuItemLink
                 href={menuItem.path}
               >
@@ -54,7 +50,12 @@ export default class MenuBarNew extends Component {
 }
 
 MenuBarNew.propTypes = {
-  menuItems: PropTypes.array.isRequired,
-  customStyles: PropTypes.object,
+  menuItems: PropTypes.arrayOf(PropTypes.any).isRequired,
+  customStyles: PropTypes.objectOf(PropTypes.any),
   scrollToHere: PropTypes.bool,
+};
+
+MenuBarNew.defaultProps = {
+  customStyles: {},
+  scrollToHere: false,
 };

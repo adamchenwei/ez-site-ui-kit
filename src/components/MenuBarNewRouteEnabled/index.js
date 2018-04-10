@@ -1,23 +1,17 @@
 import React, { Component } from 'react'; import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 
-import {
-  Container,
-  MenuItemBox,
-  MenuItemLink,
-} from './style';
-
+import Container from './style/Container';
+import MenuItemBox from './style/MenuItemBox';
+import MenuItemLink from './style/MenuItemLink';
 import scrollToDom from './../../util/layout/scrollToDom';
 
 export default class MenuBarNewRouteEnabled extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   componentDidMount() {
-    const dom = this;
+    let dom = this;
     if (this.props.scrollToHere) {
-      const dom = ReactDOM.findDOMNode(this.MenuBarTop);
+      dom = ReactDOM.findDOMNode(this.MenuBarTop);//eslint-disable-line
       scrollToDom(dom, 100);
     }
   }
@@ -39,7 +33,7 @@ export default class MenuBarNewRouteEnabled extends Component {
       >
         {
           menuItems.map((menuItem, index) => (
-            <MenuItemBox key={index}>
+            <MenuItemBox key={menuItem.id || index}>
               <MenuItemLink
                 to={menuItem.path}
               >
@@ -54,7 +48,12 @@ export default class MenuBarNewRouteEnabled extends Component {
 }
 
 MenuBarNewRouteEnabled.propTypes = {
-  menuItems: PropTypes.array.isRequired,
-  customStyles: PropTypes.object,
+  menuItems: PropTypes.arrayOf(PropTypes.any).isRequired,
+  customStyles: PropTypes.objectOf(PropTypes.any),
   scrollToHere: PropTypes.bool,
+};
+
+MenuBarNewRouteEnabled.defaultProps = {
+  customStyles: {},
+  scrollToHere: false,
 };

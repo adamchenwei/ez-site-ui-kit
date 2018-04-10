@@ -3,12 +3,12 @@ module.exports = function generateProductItemsList(
   collectionName,
   menuItemType,
   menuName,
-  baseTag,
+  baseTag// eslint-disable-line
 ) {
   const list = [];
   switch (menuName) {
-    case 'products-all-items': {
-      collection.forEach((collectionItem, index) => {
+    case 'products-all-items':
+      collection.forEach((collectionItem) => {
         // console.log(collectionItem);
         const productRouteName = collectionItem.route.name;
         const path = `${baseTag}/${collectionName}/detail/${productRouteName}`;
@@ -18,7 +18,6 @@ module.exports = function generateProductItemsList(
           title,
         });
       });
-    }
       break;
     default:
       break;

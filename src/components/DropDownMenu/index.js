@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 
-export const DropDownMenu = styled.div`
+export default styled.div`
   width: 100%;
   position: relative;
   transition-property: max-height;
@@ -13,5 +13,3 @@ export const DropDownMenu = styled.div`
   /*TODO: should be configables*/
   background: #212121;
 `;
-
-export default DropDownMenu;

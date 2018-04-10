@@ -1,17 +1,12 @@
-import MobileMenu from './index';
 import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
+import { BrowserRouter as Router } from 'react-router-dom';
+
 import React from 'react';
 import {
   MasterMenuLong,
-  MasterMenuLongWithLongText,
-  MasterMenuExtremelyLong,
   MastMenuShort,
-  galleryImages,
-  galleryImagesOnlyOne,
-  slidesMultiple,
-  footerBarThreeIcons,
 } from './../../../stories/fakeData';
+import MobileMenu from './index';
 
 import {
   buildMenuItems,
@@ -22,7 +17,6 @@ import DummyBar from './../Common/Dummy/DummyBar';
 
 const menuBarItems = buildMenuItems(2);
 const filterBarItems = buildMenuFilterItems(6);
-import { BrowserRouter as Router } from 'react-router-dom';
 
 storiesOf(`
 Mobile Menu

@@ -35,7 +35,6 @@ onInputChange(event, customFormName) {
   updateField(field, value);
 }
 
-
 npm install --save braintree-web-drop-in-react
 https://github.com/Cretezy/braintree-web-drop-in-react
 

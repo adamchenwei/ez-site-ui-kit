@@ -4,26 +4,20 @@ import Container from './style/Container';
 import LogoBox from './style/LogoBox';
 import Logo from './style/Logo';
 
-export default class LogoBar extends Component {
-  constructor(props) {
-    super(props);
-  }
+export default function LogoBar(props) {
+  const content = props.content.data;
 
-  render() {
-    const content = this.props.content.data;
-
-    return (
-      <Container>
-        <LogoBox>
-          <Logo src={content.logo.image.url} />
-        </LogoBox>
-      </Container>
-    );
-  }
+  return (
+    <Container>
+      <LogoBox>
+        <Logo src={content.logo.image.url} />
+      </LogoBox>
+    </Container>
+  );
 }
 
 LogoBar.propTypes = {
-  content: PropTypes.object.isRequired,
-  style: PropTypes.array,
-  type: PropTypes.string,
+  content: PropTypes.objectOf(PropTypes.shape({
+    data: PropTypes.objectOf(PropTypes.any)
+  })).isRequired,
 };

@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Paper from 'material-ui/Paper';
-import Card from 'material-ui/Card';
 import Button from 'material-ui/Button';
 import Avatar from 'material-ui/Avatar';
 import CredentialInput from './CredientialInput';
-import axios from 'axios';
 
 
 export default class LoginForm extends Component {
@@ -37,16 +35,12 @@ export default class LoginForm extends Component {
 
   render() {
     const {
-      content,
-      style,
-      type,
       handleLogout,
       userInfo,
       layout,
       statusCode,
       getReturnToRoute,
     } = this.props;
-    const COMPONENT_NAME = 'LoginForm';
 
     if (userInfo.loggedIn && this.state.loggingIn) {
       this.changeLoggingInState(false);
@@ -80,47 +74,49 @@ export default class LoginForm extends Component {
     return (
       <Paper style={formStyle.container || null}>
         {
-          userInfo.loggedIn
-          ? <section style={formStyle.avatarContainer || null}>
-            <h1 style={formStyle.avatarContainer.phrase || null}>Welcome!</h1>
-            <Avatar style={formStyle.avatarContainer.avatar || null}>
-              {userInfo.displayName
-                ? userInfo.displayName.charAt(0)
-                : 'ME'}
-            </Avatar>
+          userInfo.loggedIn ?
+            <section style={formStyle.avatarContainer || null}>
+              <h1 style={formStyle.avatarContainer.phrase || null}>Welcome!</h1>
+              <Avatar style={formStyle.avatarContainer.avatar || null}>
+                {userInfo.displayName
+                  ? userInfo.displayName.charAt(0)
+                  : 'ME'}
+              </Avatar>
 
-            {
-                returnToRoute
-                ? <p style={formStyle.avatarContainer.phrase || null}>Bring me back to <a href={returnToRoute.uri}>{returnToRoute.name}</a></p>
-                : null
-              }
-            </section>
-          : <section style={formStyle.credentialInputs}>
-            <CredentialInput
-              htmlIdName="UserNameInput"
-              inputTitle="User Email"
-              inputType="email"
-              contentObjectName="userName"
-              contentEmptyState={{ userName: '' }}
-              contentObjectPropertyValue={userInfo.userName}
-              contentObjectPropertyName=""
-              index={null}
-              event={null}
-              handleFormChange={(event) => { this.handleFormChange(event, 'userName'); }}
-            />
+              {
+                  returnToRoute ?
+                    <p style={formStyle.avatarContainer.phrase || null}>
+                      Bring me back to <a href={returnToRoute.uri}>{returnToRoute.name}</a>
+                    </p>
+                  : null
+                }
+            </section> :
+            <section style={formStyle.credentialInputs}>
+              <CredentialInput
+                htmlIdName="UserNameInput"
+                inputTitle="User Email"
+                inputType="email"
+                contentObjectName="userName"
+                contentEmptyState={{ userName: '' }}
+                contentObjectPropertyValue={userInfo.userName}
+                contentObjectPropertyName=""
+                index={null}
+                event={null}
+                handleFormChange={(event) => { this.handleFormChange(event, 'userName'); }}
+              />
 
-            <CredentialInput
-              htmlIdName="PasswordInput"
-              inputTitle="Password"
-              inputType="password"
-              contentObjectName="password"
-              contentEmptyState={{ password: '' }}
-              contentObjectPropertyValue={userInfo.password}
-              contentObjectPropertyName="password"
-              index={null}
-              event={null}
-              handleFormChange={(event) => { this.handleFormChange(event, 'password'); }}
-            />
+              <CredentialInput
+                htmlIdName="PasswordInput"
+                inputTitle="Password"
+                inputType="password"
+                contentObjectName="password"
+                contentEmptyState={{ password: '' }}
+                contentObjectPropertyValue={userInfo.password}
+                contentObjectPropertyName="password"
+                index={null}
+                event={null}
+                handleFormChange={(event) => { this.handleFormChange(event, 'password'); }}
+              />
             </section>
         }
 

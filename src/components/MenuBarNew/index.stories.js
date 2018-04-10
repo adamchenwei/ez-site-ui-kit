@@ -1,21 +1,13 @@
-import MenuBarNew from './index';
 import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
+
 import React from 'react';
-import {
-  buildMenuItems,
-  buildMenuFilterItems,
-} from './../MobileMenu/factory/menu';
-import { DummyStager, DummyBar } from './../Common';
+import MenuBarNew from './index';
+import {buildMenuItems} from './../MobileMenu/factory/menu';
+import { DummyBar } from './../Common';
 import {
   MasterMenuLong,
   MasterMenuLongWithLongText,
   MasterMenuExtremelyLong,
-  MastMenuShort,
-  galleryImages,
-  galleryImagesOnlyOne,
-  slidesMultiple,
-  footerBarThreeIcons,
 } from './../../../stories/fakeData';
 
 const menuBarItems = buildMenuItems(2);
