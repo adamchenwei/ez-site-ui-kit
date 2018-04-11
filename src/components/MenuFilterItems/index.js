@@ -1,9 +1,7 @@
 import React, { Component } from 'react'; import PropTypes from 'prop-types';
-import {
-  Container,
-  ItemsContainer,
-  Header,
-} from './style';
+import Container from './style/Container';
+import ItemsContainer from './style/ItemsContainer';
+import Header from './style/Header';
 import MenuFilterItem from './../MenuFilterItem';
 
 const setComponentWrapperContainerClasses = require('../../util/setup/setComponentWrapperContainerClasses');

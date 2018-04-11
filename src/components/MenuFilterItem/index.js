@@ -1,8 +1,6 @@
 import React, { Component } from 'react'; import PropTypes from 'prop-types';
-import {
-  Container,
-  Link,
-} from './style';
+import Container from './style/Container';
+import StyledLink from './style/Link';
 // import { Link } from 'react-router-dom';
 
 export default class MenuFilterItem extends Component {
@@ -23,7 +21,7 @@ export default class MenuFilterItem extends Component {
         componentName={COMPONENT_NAME}
         gridAreaId=""
       >
-        <Link to={path}>{title}</Link>
+        <StyledLink to={path}>{title}</StyledLink>
       </Container>
     );
   }
@@ -31,5 +29,10 @@ export default class MenuFilterItem extends Component {
 MenuFilterItem.propTypes = {
   path: PropTypes.string,
   title: PropTypes.string,
-  toggleMenu: PropTypes.func,
+  toggleMenu: PropTypes.func.isRequired,
+};
+
+MenuFilterItem.defaultProps = {
+  path: '',
+  title: '',
 };

@@ -14371,37 +14371,6 @@ MobileMenuRouteEnabled.defaultProps = {
 "use strict";
 
 
-module.exports = function generateFilterItemsList(collection, collectionName, menuItemType, menuName, baseTag) {
-  var list = [];
-  switch (menuName) {
-    case 'tags':
-      {
-        var tagsCollection = [];
-        collection.forEach(function (collectionItem, index) {
-          tagsCollection = tagsCollection.concat(collectionItem.tags);
-        });
-        var uniqueTags = tagsCollection.filter(function (v, i, a) {
-          return a.indexOf(v) == i;
-        });
-        var tagMenuItemsDisplay = uniqueTags.map(function (tag, tagDisplayIndex) {
-          var content = constructCollectionMenuItemConfig(tag, collectionName, menuItemType, menuName);
-          var collectionPath = content.collectionName ? '/' + content.collectionName : '';
-          var path = '' + baseTag + collectionPath + '/' + content.type + '/' + content.name;
-          var title = content.link.name;
-
-          list.push({
-            path: path,
-            title: title
-          });
-        });
-      }
-      break;
-    default:
-      break;
-  }
-  return list;
-};
-
 function constructCollectionMenuItemConfig(item, collectionName, menuItemType, menuName) {
   switch (menuItemType) {
     case 'filter':
@@ -14420,12 +14389,43 @@ function constructCollectionMenuItemConfig(item, collectionName, menuItemType, m
             name: item
           }
         };
-        break;
       }
+    default:
+      return null;
+  }
+}
+
+module.exports = function generateFilterItemsList(collection, collectionName, menuItemType, menuName, baseTag) {
+  var list = [];
+  switch (menuName) {
+    case 'tags':
+      {
+        var tagsCollection = [];
+        collection.forEach(function (collectionItem) {
+          tagsCollection = tagsCollection.concat(collectionItem.tags);
+        });
+        var uniqueTags = tagsCollection.filter(function (v, i, a) {
+          return a.indexOf(v) === i;
+        });
+        uniqueTags.map(function (tag) {
+          var content = constructCollectionMenuItemConfig(tag, collectionName, menuItemType, menuName);
+          var collectionPath = content.collectionName ? '/' + content.collectionName : '';
+          var path = '' + baseTag + collectionPath + '/' + content.type + '/' + content.name;
+          var title = content.link.name;
+
+          list.push({
+            path: path,
+            title: title
+          });
+          return false;
+        });
+      }
+      break;
     default:
       break;
   }
-}
+  return list;
+};
 
 /***/ }),
 /* 188 */
@@ -14497,8 +14497,7 @@ module.exports = function generateMenuItemsList(menu, baseTag) {
 "use strict";
 
 
-module.exports = function generateProductItemsList(collection, collectionName, menuItemType, menuName, baseTag // eslint-disable-line
-) {
+module.exports = function generateProductItemsList(collection, collectionName, menuItemType, menuName, baseTag) {
   var list = [];
   switch (menuName) {
     case 'products-all-items':
@@ -14518,31 +14517,6 @@ module.exports = function generateProductItemsList(collection, collectionName, m
   }
   return list;
 };
-
-function constructCollectionMenuItemConfig(item, collectionName, menuItemType, menuName) {
-  switch (menuItemType) {
-    case 'filter':
-      {
-        return {
-          type: menuName,
-          name: item,
-          collectionName: collectionName,
-          /* query: [
-            {
-              paramName: 'tag',
-              paramValue: '',
-            },
-          ], */
-          link: {
-            name: item
-          }
-        };
-        break;
-      }
-    default:
-      break;
-  }
-}
 
 /***/ }),
 /* 190 */
@@ -29760,8 +29734,6 @@ module.exports = _styledComponents2.default.span.withConfig({
 
 var _ezSiteContentStore = __webpack_require__(17);
 
-var _ezSiteContentStore2 = _interopRequireDefault(_ezSiteContentStore);
-
 var _generateFilterItemsList = __webpack_require__(187);
 
 var _generateFilterItemsList2 = _interopRequireDefault(_generateFilterItemsList);
@@ -29778,18 +29750,13 @@ function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : { default: obj };
 }
 
-module.exports = {
-  buildMenuItems: buildMenuItems,
-  buildMenuFilterItems: buildMenuFilterItems,
-  buildProductMenuItems: buildProductMenuItems
-};
-
 // gridId 2
 function buildMenuItems(gridItemId) {
   if (!gridItemId) return [];
   // console.log(content);
   var menuBar = _ezSiteContentStore.ContentSynchronizer.getItem('grids', 'gridItemId', gridItemId, true);
   var menuBarConfig = _ezSiteContentStore.ContentSynchronizer.getItem('menus', 'menuId', menuBar.gridContent.menuId, true);
+
   var baseTag = _ezSiteContentStore.ContentSynchronizer.getCollection('site').domain.baseTag;
 
   return (0, _generateMenuItemsList2.default)(menuBarConfig, baseTag);
@@ -29804,10 +29771,12 @@ function buildMenuFilterItems(gridItemId) {
   var _filterBarConfig$menu = filterBarConfig.menuConfig,
       collectionName = _filterBarConfig$menu.collectionName,
       menuItemType = _filterBarConfig$menu.menuItemType;
-
   var menuName = filterBarConfig.menuName;
+
   var collection = _ezSiteContentStore.ContentSynchronizer.getCollection(collectionName);
+
   var baseTag = _ezSiteContentStore.ContentSynchronizer.getCollection('site').domain.baseTag;
+
   return (0, _generateFilterItemsList2.default)(collection, collectionName, menuItemType, menuName, baseTag);
 }
 
@@ -29823,13 +29792,20 @@ function buildProductMenuItems(gridItemId) {
   var _productsBarConfig$me = productsBarConfig.menuConfig,
       collectionName = _productsBarConfig$me.collectionName,
       menuItemType = _productsBarConfig$me.menuItemType;
-
   var menuName = productsBarConfig.menuName;
+
   var collection = _ezSiteContentStore.ContentSynchronizer.getCollection(collectionName);
+
   var baseTag = _ezSiteContentStore.ContentSynchronizer.getCollection('site').domain.baseTag;
 
   return (0, _generateProductItemsList2.default)(collection, collectionName, menuItemType, menuName, baseTag);
 }
+
+module.exports = {
+  buildMenuItems: buildMenuItems,
+  buildMenuFilterItems: buildMenuFilterItems,
+  buildProductMenuItems: buildProductMenuItems
+};
 
 /***/ }),
 /* 489 */
@@ -30040,7 +30016,17 @@ var _propTypes = __webpack_require__(1);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _style = __webpack_require__(497);
+var _Container = __webpack_require__(498);
+
+var _Container2 = _interopRequireDefault(_Container);
+
+var _ItemsContainer = __webpack_require__(499);
+
+var _ItemsContainer2 = _interopRequireDefault(_ItemsContainer);
+
+var _Header = __webpack_require__(500);
+
+var _Header2 = _interopRequireDefault(_Header);
 
 var _MenuFilterItem = __webpack_require__(501);
 
@@ -30109,10 +30095,10 @@ var MenuFilterItems = function (_Component) {
       var COMPONENT_NAME = 'MenuFilterItems';
       var containerName = setComponentWrapperContainerClasses(COMPONENT_NAME);
 
-      return _react2.default.createElement(_style.Container, {
+      return _react2.default.createElement(_Container2.default, {
         componentName: containerName,
         gridAreaId: ''
-      }, _react2.default.createElement(_style.Header, null, ' filter by:'), _react2.default.createElement(_style.ItemsContainer, null, this.generatedMenuFilterItems(menuItems)));
+      }, _react2.default.createElement(_Header2.default, null, ' filter by:'), _react2.default.createElement(_ItemsContainer2.default, null, this.generatedMenuFilterItems(menuItems)));
     }
   }]);
 
@@ -30131,20 +30117,7 @@ MenuFilterItems.defaultProps = {
 };
 
 /***/ }),
-/* 497 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-module.exports = {
-  Container: __webpack_require__(498),
-  ItemsContainer: __webpack_require__(499),
-  Header: __webpack_require__(500)
-  // MenuItem: require('./MenuItem'),
-};
-
-/***/ }),
+/* 497 */,
 /* 498 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -30232,7 +30205,13 @@ var _propTypes = __webpack_require__(1);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _style = __webpack_require__(502);
+var _Container = __webpack_require__(503);
+
+var _Container2 = _interopRequireDefault(_Container);
+
+var _Link = __webpack_require__(504);
+
+var _Link2 = _interopRequireDefault(_Link);
 
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : { default: obj };
@@ -30278,11 +30257,11 @@ var MenuFilterItem = function (_Component) {
           title = _props.title;
 
       var COMPONENT_NAME = 'MenuFilterItem';
-      return _react2.default.createElement(_style.Container, {
+      return _react2.default.createElement(_Container2.default, {
         onClick: this.toggleMenu,
         componentName: COMPONENT_NAME,
         gridAreaId: ''
-      }, _react2.default.createElement(_style.Link, { to: path }, title));
+      }, _react2.default.createElement(_Link2.default, { to: path }, title));
     }
   }]);
 
@@ -30294,22 +30273,16 @@ exports.default = MenuFilterItem;
 MenuFilterItem.propTypes = {
   path: _propTypes2.default.string,
   title: _propTypes2.default.string,
-  toggleMenu: _propTypes2.default.func
+  toggleMenu: _propTypes2.default.func.isRequired
+};
+
+MenuFilterItem.defaultProps = {
+  path: '',
+  title: ''
 };
 
 /***/ }),
-/* 502 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-module.exports = {
-  Container: __webpack_require__(503),
-  Link: __webpack_require__(504)
-};
-
-/***/ }),
+/* 502 */,
 /* 503 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -33721,7 +33694,8 @@ var ProductDisplay = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      // WARNNING: NEVER ADD  row WITHOUT no-gutters !!! CAUSE GHOST MARGIN ON THE RIGHT OF THE PAGE!!!!!
+      // WARNNING: NEVER ADD  row WITHOUT no-gutters !!!
+      // CAUSE GHOST MARGIN ON THE RIGHT OF THE PAGE!!!!!
       var content = this.props.content;
       var title = content.title,
           description = content.description,
@@ -33771,7 +33745,6 @@ var ProductDisplay = function (_Component) {
 exports.default = ProductDisplay;
 
 ProductDisplay.propTypes = {
-  contentStyle: _propTypes2.default.arrayOf(_propTypes2.default.any).isRequired,
   content: _propTypes2.default.objectOf(_propTypes2.default.any).isRequired
 };
 

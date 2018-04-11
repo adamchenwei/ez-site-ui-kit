@@ -1,11 +1,8 @@
 import React, { Component } from 'react'; import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
-
-import {
-  Container,
-  MenuItemBox,
-  MenuItemLink,
-} from './style';
+import Container from './style/Container';
+import MenuItemBox from './style/MenuItemBox';
+import MenuItemLink from './style/MenuItemLink';
 
 import scrollToDom from './../../util/layout/scrollToDom';
 

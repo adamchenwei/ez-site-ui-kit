@@ -2,13 +2,6 @@ import { ContentSynchronizer } from 'ez-site-content-store';
 import generateFilterItemsList from './../../MenuFactory/generateFilterItemsList';
 import generateMenuItemsList from './../../MenuFactory/generateMenuItemsList';
 import generateProductItemsList from './../../MenuFactory/generateProductItemsList';
-import content from 'ez-site-content-store';
-
-module.exports = {
-  buildMenuItems,
-  buildMenuFilterItems,
-  buildProductMenuItems,
-};
 
 // gridId 2
 function buildMenuItems(gridItemId) {
@@ -16,7 +9,7 @@ function buildMenuItems(gridItemId) {
   // console.log(content);
   const menuBar = ContentSynchronizer.getItem('grids', 'gridItemId', gridItemId, true);
   const menuBarConfig = ContentSynchronizer.getItem('menus', 'menuId', menuBar.gridContent.menuId, true);
-  const baseTag = ContentSynchronizer.getCollection('site').domain.baseTag;
+  const { baseTag } = ContentSynchronizer.getCollection('site').domain;
 
   return generateMenuItemsList(menuBarConfig, baseTag);
 }
@@ -31,9 +24,9 @@ function buildMenuFilterItems(gridItemId) {
     collectionName,
     menuItemType,
   } = filterBarConfig.menuConfig;
-  const menuName = filterBarConfig.menuName;
+  const { menuName } = filterBarConfig;
   const collection = ContentSynchronizer.getCollection(collectionName);
-  const baseTag = ContentSynchronizer.getCollection('site').domain.baseTag;
+  const { baseTag } = ContentSynchronizer.getCollection('site').domain;
   return generateFilterItemsList(collection, collectionName, menuItemType, menuName, baseTag);
 }
 
@@ -51,9 +44,15 @@ function buildProductMenuItems(gridItemId) {
     collectionName,
     menuItemType,
   } = productsBarConfig.menuConfig;
-  const menuName = productsBarConfig.menuName;
+  const { menuName } = productsBarConfig;
   const collection = ContentSynchronizer.getCollection(collectionName);
-  const baseTag = ContentSynchronizer.getCollection('site').domain.baseTag;
+  const { baseTag } = ContentSynchronizer.getCollection('site').domain;
 
   return generateProductItemsList(collection, collectionName, menuItemType, menuName, baseTag);
 }
+
+module.exports = {
+  buildMenuItems,
+  buildMenuFilterItems,
+  buildProductMenuItems,
+};

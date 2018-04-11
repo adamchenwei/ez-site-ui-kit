@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Container from './style/Container';
 import LogoBox from './style/LogoBox';

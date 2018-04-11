@@ -1,10 +1,8 @@
-module.exports = function generateProductItemsList(
-  collection,
+module.exports = function generateProductItemsList(collection,
   collectionName,
   menuItemType,
   menuName,
-  baseTag// eslint-disable-line
-) {
+  baseTag) {
   const list = [];
   switch (menuName) {
     case 'products-all-items':
@@ -24,28 +22,3 @@ module.exports = function generateProductItemsList(
   }
   return list;
 };
-
-
-function constructCollectionMenuItemConfig(item, collectionName, menuItemType, menuName) {
-  switch (menuItemType) {
-    case 'filter': {
-      return {
-        type: menuName,
-        name: item,
-        collectionName,
-        /* query: [
-          {
-            paramName: 'tag',
-            paramValue: '',
-          },
-        ], */
-        link: {
-          name: item,
-        },
-      };
-      break;
-    }
-    default:
-      break;
-  }
-}

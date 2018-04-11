@@ -16,8 +16,7 @@ export default class RegisterForm extends Component {
 
   registerNewUser() {
     this.changeRegisteringState(true);
-    this.props.handleRegister(
-      this.props.userInfo.userName,
+    this.props.handleRegister(this.props.userInfo.userName,
       this.props.userInfo.password,
       this.props.userInfo.displayName,
       this.changeRegisteringState); //eslint-disable-line
@@ -168,7 +167,7 @@ export default class RegisterForm extends Component {
 }
 
 RegisterForm.propTypes = {
-  userInfo: PropTypes.object,
+  userInfo: PropTypes.objectOf(PropTypes.any),
   isRegistering: PropTypes.bool,
   layout: PropTypes.string,
   // TODO: following SHOULD be .func.isRequired, but for some reason strange prop

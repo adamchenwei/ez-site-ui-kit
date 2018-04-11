@@ -55,7 +55,8 @@ export default class ProductDisplay extends Component {
 
 
   render() {
-    // WARNNING: NEVER ADD  row WITHOUT no-gutters !!! CAUSE GHOST MARGIN ON THE RIGHT OF THE PAGE!!!!!
+    // WARNNING: NEVER ADD  row WITHOUT no-gutters !!!
+    // CAUSE GHOST MARGIN ON THE RIGHT OF THE PAGE!!!!!
     const {
       content,
     } = this.props;
@@ -169,6 +170,5 @@ export default class ProductDisplay extends Component {
 }
 
 ProductDisplay.propTypes = {
-  contentStyle: PropTypes.arrayOf(PropTypes.any).isRequired,
   content: PropTypes.objectOf(PropTypes.any).isRequired,
 };

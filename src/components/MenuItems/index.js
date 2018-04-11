@@ -7,7 +7,7 @@ const setComponentWrapperContainerClasses = require('../../util/setup/setCompone
 export default class MenuItems extends Component {
   constructor(props) {
     super(props);
-    this.toggleMenu = this.props.toggleMenu ? this.props.toggleMenu.bind(this) : function () {};
+    this.toggleMenu = this.props.toggleMenu ? this.props.toggleMenu.bind(this) : () => {};
   }
 
   generatedMenuItems(items = []) {

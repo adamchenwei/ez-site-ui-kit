@@ -7,10 +7,12 @@ import { BOOTSTRAP, CONTAINER } from '../../storybookonly/config/MENU_CATEGORIES
 
 storiesOf(`${CONTAINER}/${BOOTSTRAP}/ProductListing (DontTest)`, module)
   .add('default', () =>
-    (<Router>
-      <ProductListing params={{
-      productRef: null,
-      tagRef: null,
-    }}
-      />
-    </Router>));
+    (
+      <Router>
+        <ProductListing params={{
+        productRef: null,
+        tagRef: null,
+      }}
+        />
+      </Router>
+    ));
