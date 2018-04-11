@@ -1,19 +1,15 @@
-import CatalogItem from './index';
 import { storiesOf } from '@storybook/react';
 
 import React from 'react';
 import getACatelogItem from './../../__mock__/getACatelogItem';
+import CatalogItem from './index';
 
 const {
   id,
   name,
-  route,
   description,
   website,
-  socialAccounts,
   locations,
-  imamsList,
-  phones,
   snapshots,
 } = getACatelogItem();
 

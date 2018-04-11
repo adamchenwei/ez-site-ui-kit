@@ -12199,21 +12199,10 @@ module.exports = {
 "use strict";
 
 
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-
-var _createClass = function () {
-  function defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
-    }
-  }return function (Constructor, protoProps, staticProps) {
-    if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
-  };
-}();
+exports.default = BreadCrumb;
 
 var _react = __webpack_require__(1);
 
@@ -12222,10 +12211,6 @@ var _react2 = _interopRequireDefault(_react);
 var _propTypes = __webpack_require__(2);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
-
-var _concatCssClasses = __webpack_require__(161);
-
-var _concatCssClasses2 = _interopRequireDefault(_concatCssClasses);
 
 var _capToCamelCase = __webpack_require__(95);
 
@@ -12243,60 +12228,18 @@ function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : { default: obj };
 }
 
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
+function BreadCrumb(props) {
+  var content = props.content;
+
+  var componentCSSName = (0, _capToCamelCase2.default)('BreadCrumb');
+
+  var title = content.title;
+  // TODO: Link's to should be a prop!!!
+
+  return _react2.default.createElement(_Container2.default, null, _react2.default.createElement(_HomeLink2.default, { className: componentCSSName + '__homeLink', href: '/products/all' }, 'Home'), ' / ', title);
 }
-
-function _possibleConstructorReturn(self, call) {
-  if (!self) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }return call && ((typeof call === "undefined" ? "undefined" : _typeof(call)) === "object" || typeof call === "function") ? call : self;
-}
-
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === "undefined" ? "undefined" : _typeof(superClass)));
-  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-}
-
-var BreadCrumb = function (_Component) {
-  _inherits(BreadCrumb, _Component);
-
-  function BreadCrumb(props) {
-    _classCallCheck(this, BreadCrumb);
-
-    return _possibleConstructorReturn(this, (BreadCrumb.__proto__ || Object.getPrototypeOf(BreadCrumb)).call(this, props));
-  }
-
-  _createClass(BreadCrumb, [{
-    key: 'render',
-    value: function render() {
-      var _props = this.props,
-          content = _props.content,
-          style = _props.style,
-          type = _props.type;
-
-      var componentCSSName = (0, _capToCamelCase2.default)('BreadCrumb');
-      var containerLevelStyle = componentCSSName + '__container';
-
-      var title = this.props.content.title;
-      // TODO: Link's to should be a prop!!!
-
-      return _react2.default.createElement(_Container2.default, null, _react2.default.createElement(_HomeLink2.default, { className: componentCSSName + '__homeLink', href: '/products/all' }, 'Home'), ' / ', title);
-    }
-  }]);
-
-  return BreadCrumb;
-}(_react.Component);
-
-exports.default = BreadCrumb;
-
 BreadCrumb.propTypes = {
-  content: _propTypes2.default.object,
-  style: _propTypes2.default.object,
-  type: _propTypes2.default.string
+  content: _propTypes2.default.objectOf(_propTypes2.default.any).isRequired
 };
 
 /***/ }),
@@ -28093,21 +28036,10 @@ module.exports = _styledComponents2.default.h2.withConfig({
 "use strict";
 
 
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-
-var _createClass = function () {
-  function defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
-    }
-  }return function (Constructor, protoProps, staticProps) {
-    if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
-  };
-}();
+exports.default = CatalogDetail;
 
 var _react = __webpack_require__(1);
 
@@ -28117,6 +28049,10 @@ var _propTypes = __webpack_require__(2);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
+var _get = __webpack_require__(144);
+
+var _get2 = _interopRequireDefault(_get);
+
 var _Container = __webpack_require__(400);
 
 var _Container2 = _interopRequireDefault(_Container);
@@ -28124,14 +28060,6 @@ var _Container2 = _interopRequireDefault(_Container);
 var _GoogleEmbbededMapView = __webpack_require__(401);
 
 var _GoogleEmbbededMapView2 = _interopRequireDefault(_GoogleEmbbededMapView);
-
-var _ProductGallery = __webpack_require__(147);
-
-var _ProductGallery2 = _interopRequireDefault(_ProductGallery);
-
-var _get = __webpack_require__(144);
-
-var _get2 = _interopRequireDefault(_get);
 
 var _ShareButtonsBar = __webpack_require__(150);
 
@@ -28141,101 +28069,66 @@ var _SnapshotDisplay = __webpack_require__(146);
 
 var _SnapshotDisplay2 = _interopRequireDefault(_SnapshotDisplay);
 
-var _reactShare = __webpack_require__(151);
-
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : { default: obj };
 }
 
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
+// import {
+//   ShareButtons,
+//   ShareCounts,
+//   generateShareIcon,
+// } from 'react-share';
+
+function CatalogDetail(props) {
+  // const {
+  //   FacebookShareButton,
+  //   GooglePlusShareButton,
+  //   LinkedinShareButton,
+  //   TwitterShareButton,
+  //   TelegramShareButton,
+  //   WhatsappShareButton,
+  //   PinterestShareButton,
+  //   VKShareButton,
+  //   OKShareButton,
+  //   RedditShareButton,
+  // } = ShareButtons;
+  // const FacebookIcon = generateShareIcon('facebook');
+  // const TwitterIcon = generateShareIcon('twitter');
+  // const PinterestIcon = generateShareIcon('pinterest');
+
+  var title = props.title,
+      query = props.query,
+      snapshots = props.snapshots,
+      displayLocation = props.displayLocation,
+      website = props.website;
+
+  var snapshotSrc = (0, _get2.default)(snapshots[0], 'url');
+  return _react2.default.createElement(_Container2.default, null, _react2.default.createElement(_SnapshotDisplay2.default, {
+    title: title,
+    displayLocation: displayLocation,
+    snapshotSrc: snapshotSrc
+  }), _react2.default.createElement(_GoogleEmbbededMapView2.default, {
+    query: query
+  }), _react2.default.createElement(_ShareButtonsBar2.default, {
+    hasMarginBottom: true,
+    homeLink: website
+  }));
 }
-
-function _possibleConstructorReturn(self, call) {
-  if (!self) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }return call && ((typeof call === "undefined" ? "undefined" : _typeof(call)) === "object" || typeof call === "function") ? call : self;
-}
-
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === "undefined" ? "undefined" : _typeof(superClass)));
-  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-}
-
-var CatalogDetail = function (_Component) {
-  _inherits(CatalogDetail, _Component);
-
-  function CatalogDetail(props) {
-    _classCallCheck(this, CatalogDetail);
-
-    return _possibleConstructorReturn(this, (CatalogDetail.__proto__ || Object.getPrototypeOf(CatalogDetail)).call(this, props));
-  }
-
-  _createClass(CatalogDetail, [{
-    key: 'render',
-    value: function render() {
-      var FacebookShareButton = _reactShare.ShareButtons.FacebookShareButton,
-          GooglePlusShareButton = _reactShare.ShareButtons.GooglePlusShareButton,
-          LinkedinShareButton = _reactShare.ShareButtons.LinkedinShareButton,
-          TwitterShareButton = _reactShare.ShareButtons.TwitterShareButton,
-          TelegramShareButton = _reactShare.ShareButtons.TelegramShareButton,
-          WhatsappShareButton = _reactShare.ShareButtons.WhatsappShareButton,
-          PinterestShareButton = _reactShare.ShareButtons.PinterestShareButton,
-          VKShareButton = _reactShare.ShareButtons.VKShareButton,
-          OKShareButton = _reactShare.ShareButtons.OKShareButton,
-          RedditShareButton = _reactShare.ShareButtons.RedditShareButton;
-
-      var FacebookIcon = (0, _reactShare.generateShareIcon)('facebook');
-      var TwitterIcon = (0, _reactShare.generateShareIcon)('twitter');
-      var PinterestIcon = (0, _reactShare.generateShareIcon)('pinterest');
-
-      var _props = this.props,
-          title = _props.title,
-          style = _props.style,
-          type = _props.type,
-          query = _props.query,
-          snapshots = _props.snapshots,
-          displayLocation = _props.displayLocation,
-          website = _props.website;
-
-      var snapshotSrc = (0, _get2.default)(snapshots[0], 'url');
-      return _react2.default.createElement(_Container2.default, null, _react2.default.createElement(_SnapshotDisplay2.default, {
-        title: title,
-        displayLocation: displayLocation,
-        snapshotSrc: snapshotSrc
-      }), _react2.default.createElement(_GoogleEmbbededMapView2.default, {
-        query: query
-      }), _react2.default.createElement(_ShareButtonsBar2.default, {
-        hasMarginBottom: true,
-        homeLink: website
-      }));
-    }
-  }]);
-
-  return CatalogDetail;
-}(_react.Component);
-
-exports.default = CatalogDetail;
 
 CatalogDetail.propTypes = {
-  style: _propTypes2.default.object,
   title: _propTypes2.default.string,
   displayLocation: _propTypes2.default.string,
-  type: _propTypes2.default.string,
   query: _propTypes2.default.string,
-  snapshots: _propTypes2.default.arrayOf(_propTypes2.default.object)
+  snapshots: _propTypes2.default.arrayOf(_propTypes2.default.object),
+  website: _propTypes2.default.string
 };
 
 CatalogDetail.defaultProps = {
-  style: {},
   title: 'Detail',
   displayLocation: '',
-  type: '',
   query: '',
-  snapshots: []
+  snapshots: [],
+  website: ''
 };
 
 /***/ }),
