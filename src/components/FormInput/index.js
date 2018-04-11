@@ -31,7 +31,6 @@ export default class FormInput extends Component {
 
   getInputField() {
     const {
-      fieldLegendTitle,
       fieldName,
       inputType,
       placeholderText,
@@ -47,7 +46,6 @@ export default class FormInput extends Component {
   }
   getTextArea() {
     const {
-      fieldLegendTitle,
       fieldName,
       inputType,
       placeholderText,
@@ -64,12 +62,9 @@ export default class FormInput extends Component {
   render() {
     const {
       fieldLegendTitle,
-      fieldName,
       inputType,
-      placeholderText,
-
     } = this.props;
-    const InputComponent = this.InputComponent;
+    const { InputComponent } = this;
     return (
       <Container>
         <FormLegend gridAreaId={inputType}>{fieldLegendTitle}</FormLegend>

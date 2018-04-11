@@ -1,7 +1,5 @@
 import React, { Component } from 'react'; import PropTypes from 'prop-types';
 import consoleShow from './../../util/debug/consoleShow';
-import concatCssClasses from './../../util/concat/concatCssClasses';
-import { Link } from 'react-router-dom';
 import Container from './style/ListingItemMask/Container';
 import Shade from './style/ListingItemMask/Shade';
 import ClickableLink from './style/ListingItemMask/ClickableLink';
@@ -14,18 +12,6 @@ export default class ListingItemMask extends Component {
       componentName: 'ListingItemMask',
       props: this.props,
     });
-    this.childComponent.bind(this);
-  }
-
-  childComponent(type, data) {
-    return <span className="templateComponent__textBody">{data}</span>;
-  }
-
-  toggleShade(event) {
-    consoleShow('line', {
-      name: 'shade',
-      object: event,
-    });
   }
 
   render() {
@@ -35,13 +21,7 @@ export default class ListingItemMask extends Component {
       show,
       collectionName,
       path,
-      type,
     } = this.props;
-
-    const data = this.props.content;
-    const content = this.props.content;
-
-    // const contentComponent = this.childComponent(type, data);
 
     return (
       <Container hide={!show}>
@@ -61,10 +41,9 @@ export default class ListingItemMask extends Component {
 }
 
 ListingItemMask.propTypes = {
-  content: PropTypes.object,
-  price: PropTypes.number,
-  style: PropTypes.array,
-  title: PropTypes.string,
-  type: PropTypes.string,
-  show: PropTypes.bool,
+  collectionName: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  show: PropTypes.bool.isRequired,
+  path: PropTypes.string.isRequired,
 };

@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 import {
   withScriptjs,
   withGoogleMap,
@@ -7,13 +6,11 @@ import {
   Marker,
 } from 'react-google-maps';
 
-import Container from './style/Container';
 
-export default withScriptjs(withGoogleMap(props =>
-  (<GoogleMap
+export default withScriptjs(withGoogleMap(props => (
+  <GoogleMap
     defaultZoom={8}
     defaultCenter={{ lat: -34.397, lng: 150.644 }}
   >
     {props.isMarkerShown && <Marker position={{ lat: -34.397, lng: 150.644 }} />}
-   </GoogleMap>),
-));
+  </GoogleMap>)));

@@ -58,4 +58,3 @@ module.exports = function generateFilterItemsList(collection,
   return list;
 };
 
-

@@ -19,7 +19,8 @@ export default class LoginForm extends Component {
 
   login() {
     this.changeLoggingInState(true);
-    this.props.handleLogin(this.props.userInfo.userName, this.props.userInfo.password, this.changeLoggingInState);
+    this.props.handleLogin(this.props.userInfo.userName,
+      this.props.userInfo.password, this.changeLoggingInState);
   }
 
   changeLoggingInState(state) {
@@ -128,17 +129,17 @@ export default class LoginForm extends Component {
 
         {
           statusCode === 'auth/user-not-found'
-            ? <p>We can't find your account! Would you like to <a href="/#/register">register as a new user</a>?</p>
+            ? <p>{"We can't find your account! Would you like to"} <a href="/#/register">register as a new user</a>?</p>
             : null
         }
 
         {
-          userInfo.loggedIn
-          ? <Button raised color="primary" onClick={handleLogout}>
+          userInfo.loggedIn ?
+            <Button raised color="primary" onClick={handleLogout}>
               Log Out
-            </Button>
-          : <Button raised disabled={this.state.loggingIn} color="primary" onClick={this.login}>
-            {
+            </Button> :
+            <Button raised disabled={this.state.loggingIn} color="primary" onClick={this.login}>
+              {
                 this.state.loggingIn
                 ? 'Loading...'
                 : 'Log In'
@@ -152,17 +153,18 @@ export default class LoginForm extends Component {
 }
 
 LoginForm.propTypes = {
-  content: PropTypes.object,
-  style: PropTypes.object,
-  type: PropTypes.string,
-  userInfo: PropTypes.object,
+  userInfo: PropTypes.objectOf(PropTypes.any).isRequired,
   loggingIn: PropTypes.bool,
-  layout: PropTypes.string,
+  layout: PropTypes.string.isRequired,
+  statusCode: PropTypes.string.isRequired,
   // TODO: following SHOULD be .func.isRequired, but for some reason strange prop
   // validation comes up even what got pass IS func.....
-  handleLogin: PropTypes.any,
-  handleLogout: PropTypes.any,
-  handleLoginFormChange: PropTypes.any,
-  statusCode: PropTypes.string,
-  getReturnToRoute: PropTypes.any,
+  handleLogin: PropTypes.func.isRequired,
+  handleLogout: PropTypes.func.isRequired,
+  handleLoginFormChange: PropTypes.func.isRequired,
+  getReturnToRoute: PropTypes.func.isRequired,
+};
+
+LoginForm.defaultProps = {
+  loggingIn: false,
 };

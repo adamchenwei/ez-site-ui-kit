@@ -1,9 +1,9 @@
-import React, { Component } from 'react'; import PropTypes from 'prop-types';
-import concatCssClasses from './../../util/concat/concatCssClasses';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { Row } from 'reactstrap';
 import { ContentSynchronizer } from 'ez-site-content-store';
 import GridItem from '../GridItem/GridItem';
 import consoleShow from './../../util/debug/consoleShow';
-import { Container, Row, Col } from 'reactstrap';
 
 export default class Listing extends Component {
   constructor(props) {
@@ -15,12 +15,6 @@ export default class Listing extends Component {
   }
 
   render() {
-    const contentStyle = concatCssClasses(this.props.contentStyle);
-    // const noGutter = 'no-gutters';
-
-    const containerLevelStyle = `listing__container row ${contentStyle}`;
-
-    const type = this.props.contentType;
     const data = this.props.contentData;
     const customStyle = data.listingCustomStyle;
 
@@ -30,7 +24,7 @@ export default class Listing extends Component {
 
       let listingContent = data.filteredListing;
       const mockedListingContent = [];
-      listingContent.forEach((listing, index) => {
+      listingContent.forEach((listing) => {
         mockedListingContent.push(listing);
       });
 
@@ -56,14 +50,15 @@ export default class Listing extends Component {
             const componentName = data.listingItemComponentName;
             const collectionName = data.name;
             // TODO anti pattern!!!! But need to be done
-            listing.collectionName = collectionName;
+            const newListing = listing;
+            newListing.collectionName = collectionName;
             return (
               <GridItem
                 gridResponsiveProperties={responsiveProperties}
-                gridContent={listing}
+                gridContent={newListing}
                 gridStyle={listingContentItemGridStyle}
                 gridCustomStyle={customStyle}
-                gridType={listing.gridTypeName}
+                gridType={newListing.gridTypeName}
                 gridComponent={componentName}
                 key={index.toString()}
               />
@@ -71,34 +66,10 @@ export default class Listing extends Component {
           })}
         </Row>
       );
-      // return (
-      //   <section className={containerLevelStyle}>
-      //     {listingContent.map((listing, index) => {
-      //       consoleShow('props', {
-      //         componentName: 'Listing Content Item',
-      //         props: listing});
-      //       const responsiveProperties = data.listingItemResponsiveProperties;
-      //       const componentName = data.listingItemComponentName;
-      //       const collectionName = data.name;
-      //       //TODO anti pattern!!!! But need to be done
-      //       listing.collectionName = collectionName;
-      //       return (
-      //         <GridItem
-      //           gridResponsiveProperties={responsiveProperties}
-      //           gridContent={listing}
-      //           gridStyle={listingContentItemGridStyle}
-      //           gridCustomStyle={customStyle}
-      //           gridType={listing.gridTypeName}
-      //           gridComponent={componentName}
-      //           key={index.toString()} />
-      //       );
-      //     })}
-      //   </section>
-      // );
     }
     let listingContent = ContentSynchronizer.getCollection(data.name);
     const mockedListingContent = [];
-    listingContent.forEach((listing, index) => {
+    listingContent.forEach((listing) => {
       mockedListingContent.push(listing);
     });
 
@@ -124,15 +95,16 @@ export default class Listing extends Component {
             const componentName = data.listingItemComponentName;
             const collectionName = data.name;
             // TODO anti pattern!!!! But need to be done
-            listing.collectionName = collectionName;
+            const newListing = listing;
+            newListing.collectionName = collectionName;
 
             return (
               <GridItem
                 gridResponsiveProperties={responsiveProperties}
-                gridContent={listing}
+                gridContent={newListing}
                 gridStyle={listingContentItemGridStyle}
                 gridCustomStyle={customStyle}
-                gridType={listing.gridTypeName}
+                gridType={newListing.gridTypeName}
                 gridComponent={componentName}
                 key={index.toString()}
               />
@@ -140,36 +112,9 @@ export default class Listing extends Component {
           })}
       </Row>
     );
-    // return (
-    //   <section className={containerLevelStyle}>
-    //     {listingContent.map((listing, index) => {
-    //       consoleShow('props', {
-    //         componentName: 'Listing Content Item',
-    //         props: listing});
-    //       const responsiveProperties = data.listingItemResponsiveProperties;
-    //       const componentName = data.listingItemComponentName;
-    //       const collectionName = data.name;
-    //       //TODO anti pattern!!!! But need to be done
-    //       listing.collectionName = collectionName;
-
-    //       return (
-    //         <GridItem
-    //           gridResponsiveProperties={responsiveProperties}
-    //           gridContent={listing}
-    //           gridStyle={listingContentItemGridStyle}
-    //           gridCustomStyle={customStyle}
-    //           gridType={listing.gridTypeName}
-    //           gridComponent={componentName}
-    //           key={index.toString()} />
-    //       );
-    //     })}
-    //   </section>
-    // );
   }
 }
 
 Listing.propTypes = {
-  contentData: PropTypes.object.isRequired,
-  contentStyle: PropTypes.array,
-  contentType: PropTypes.string,
+  contentData: PropTypes.objectOf(PropTypes.any).isRequired,
 };

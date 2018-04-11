@@ -1,7 +1,4 @@
 import styled from 'styled-components';
-import mediaQuery from './../../../theme/styled-components/mediaQuery';
-
-const setComponentWrapperContainerClasses = require('./../../../util/setup/setComponentWrapperContainerClasses');
 
 module.exports = styled.section`
   display: flex;

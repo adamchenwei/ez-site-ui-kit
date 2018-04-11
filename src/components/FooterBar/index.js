@@ -1,29 +1,23 @@
-import React, { Component } from 'react'; import PropTypes from 'prop-types';
+import React from 'react'; import PropTypes from 'prop-types';
 import SocialIcon from '../SocialButton/SocialIcon';
-import { Container } from './style';
+import Container from './style/Container';
 
-export default class FooterBar extends Component {
-  constructor(props) {
-    super(props);
-  }
+export default function FooterBar(props) {
+  const icons = props.socialIcons || [];
+  return (
+    <Container>
+      {icons.length
+      ? icons.map((icon, index) => (<SocialIcon
+        key={icon.id || index}
+        srcUrl={icon.srcUrl}
+        linkUrl={icon.linkUrl}
+      />))
+      : null}
 
-  render() {
-    const icons = this.props.socialIcons || [];
-    return (
-      <Container>
-        {icons.length
-        ? icons.map((icon, index) => (<SocialIcon
-          key={index}
-          srcUrl={icon.srcUrl}
-          linkUrl={icon.linkUrl}
-        />))
-        : null}
-
-      </Container>
-    );
-  }
+    </Container>
+  );
 }
 
 FooterBar.propTypes = {
-  socialIcons: PropTypes.array,
+  socialIcons: PropTypes.arrayOf(PropTypes.any).isRequired,
 };

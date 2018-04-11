@@ -1,7 +1,5 @@
 import React, { Component } from 'react'; import PropTypes from 'prop-types';
 import consoleShow from './../../util/debug/consoleShow';
-import concatCssClasses from './../../util/concat/concatCssClasses';
-// import { Link } from 'react-router-dom';
 import ListingItemMask from './ListingItemMask';
 import Container from './style/ListingItem/Container';
 import Display from './style/ListingItem/Display';
@@ -19,12 +17,7 @@ export default class ListingItem extends Component {
       componentName: 'ListingItem',
       props: this.props,
     });
-    this.childComponent = this.childComponent.bind(this);
     this.toggleThing = this.toggleThing.bind(this);
-  }
-
-  childComponent(type, data) {
-    return <span className="templateComponent__textBody">{data}</span>;
   }
 
   toggleThing(event) {
@@ -39,15 +32,14 @@ export default class ListingItem extends Component {
 
   render() {
     const {
-      collectionName,
-      type,
-      data,
       content,
     } = this.props;
     return (
       <Container>
         <Display
           onMouseOver={this.toggleThing}
+          onFocus={this.toggleThing}
+          onBlur={this.toggleThing}
           onMouseOut={this.toggleThing}
         >
           <ListingItemMask
@@ -67,7 +59,5 @@ export default class ListingItem extends Component {
 }
 
 ListingItem.propTypes = {
-  content: PropTypes.object,
-  style: PropTypes.array,
-  type: PropTypes.string,
+  content: PropTypes.objectOf(PropTypes.any).isRequired,
 };

@@ -7579,21 +7579,10 @@ PageShell.defaultProps = {
 "use strict";
 
 
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-
-var _createClass = function () {
-  function defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
-    }
-  }return function (Constructor, protoProps, staticProps) {
-    if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
-  };
-}();
+exports.default = GridItem;
 
 var _react = __webpack_require__(0);
 
@@ -7603,108 +7592,58 @@ var _propTypes = __webpack_require__(1);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _concatCssClasses = __webpack_require__(42);
-
-var _concatCssClasses2 = _interopRequireDefault(_concatCssClasses);
+var _reactstrap = __webpack_require__(28);
 
 var _getGridComponent = __webpack_require__(193);
 
 var _getGridComponent2 = _interopRequireDefault(_getGridComponent);
 
-var _consoleShow = __webpack_require__(43);
-
-var _consoleShow2 = _interopRequireDefault(_consoleShow);
-
-var _reactstrap = __webpack_require__(28);
-
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : { default: obj };
 }
 
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-}
+function GridItem() {
+  var GridComponent = (0, _getGridComponent2.default)(this.props.gridComponent, this.props.gridContent, this.props.gridType);
+  var responsive = this.props.gridResponsiveProperties;
+  var standard = responsive.standard || '';
+  var xs = responsive.xs || '';
+  var sm = responsive.sm || '';
+  var md = responsive.md || '';
+  var lg = responsive.lg || '';
+  var xl = responsive.xl || '';
+  var offset = responsive.offset || {
+    standard: '',
+    sm: '',
+    md: '',
+    lg: '',
+    xl: ''
+  };
 
-function _possibleConstructorReturn(self, call) {
-  if (!self) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }return call && ((typeof call === "undefined" ? "undefined" : _typeof(call)) === "object" || typeof call === "function") ? call : self;
-}
-
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === "undefined" ? "undefined" : _typeof(superClass)));
-  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-}
-
-var GridItem = function (_Component) {
-  _inherits(GridItem, _Component);
-
-  function GridItem() {
-    _classCallCheck(this, GridItem);
-
-    return _possibleConstructorReturn(this, (GridItem.__proto__ || Object.getPrototypeOf(GridItem)).apply(this, arguments));
-  }
-
-  _createClass(GridItem, [{
-    key: 'render',
-    value: function render() {
-      var GridComponent = (0, _getGridComponent2.default)(this.props.gridComponent, this.props.gridContent, this.props.gridType);
-      var userCustomStyleClassNames = (0, _concatCssClasses2.default)(this.props.gridStyle) || '';
-      var containerLevelStyle = 'gridItem__container original ' + userCustomStyleClassNames;
-      var responsive = this.props.gridResponsiveProperties;
-      var standard = responsive.standard || '';
-      var xs = responsive.xs || '';
-      var sm = responsive.sm || '';
-      var md = responsive.md || '';
-      var lg = responsive.lg || '';
-      var xl = responsive.xl || '';
-      var offset = responsive.offset || {
-        standard: '',
-        sm: '',
-        md: '',
-        lg: '',
-        xl: ''
-      };
-
-      // Reactstrap Component Instead!
-
-
-      var customStyle = this.props.gridCustomStyle || {};
-      var noCustomStyleAvailable = !Object.keys(customStyle).length && customStyle.constructor === Object;
-      return _react2.default.createElement(_reactstrap.Col, {
-        size: standard,
-        xs: {
-          size: xs || '',
-          offset: offset.xs || ''
-        },
-        sm: {
-          size: sm || '',
-          offset: offset.sm || ''
-        },
-        md: {
-          size: md || '',
-          offset: offset.md || ''
-        },
-        lg: {
-          size: lg || '',
-          offset: offset.lg || ''
-        },
-        xl: {
-          size: xl || '',
-          offset: offset.xl || ''
-        }
-      }, GridComponent);
+  return _react2.default.createElement(_reactstrap.Col, {
+    size: standard,
+    xs: {
+      size: xs || '',
+      offset: offset.xs || ''
+    },
+    sm: {
+      size: sm || '',
+      offset: offset.sm || ''
+    },
+    md: {
+      size: md || '',
+      offset: offset.md || ''
+    },
+    lg: {
+      size: lg || '',
+      offset: offset.lg || ''
+    },
+    xl: {
+      size: xl || '',
+      offset: offset.xl || ''
     }
-  }]);
-
-  return GridItem;
-}(_react.Component);
-
-exports.default = GridItem;
-
+  }, GridComponent);
+}
+/* eslint-disable */
 GridItem.propTypes = {
   gridComponent: _propTypes2.default.any.isRequired,
   gridContent: _propTypes2.default.any,
@@ -7713,6 +7652,7 @@ GridItem.propTypes = {
   gridCustomStyle: _propTypes2.default.any,
   gridType: _propTypes2.default.any
 };
+/* eslint-enable */
 
 /***/ }),
 /* 76 */
@@ -12740,21 +12680,10 @@ exports.default = setDisplayName;
 "use strict";
 
 
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-
-var _createClass = function () {
-  function defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
-    }
-  }return function (Constructor, protoProps, staticProps) {
-    if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
-  };
-}();
+exports.default = ContactForm;
 
 var _react = __webpack_require__(0);
 
@@ -12768,88 +12697,67 @@ var _StyledComponentWrapper = __webpack_require__(167);
 
 var _StyledComponentWrapper2 = _interopRequireDefault(_StyledComponentWrapper);
 
-var _style = __webpack_require__(386);
+var _ContactFormContainer = __webpack_require__(387);
+
+var _ContactFormContainer2 = _interopRequireDefault(_ContactFormContainer);
+
+var _ContactFormLegend = __webpack_require__(389);
+
+var _ContactFormLegend2 = _interopRequireDefault(_ContactFormLegend);
+
+var _ContactFormInput = __webpack_require__(388);
+
+var _ContactFormInput2 = _interopRequireDefault(_ContactFormInput);
+
+var _ContactFormTextarea = __webpack_require__(390);
+
+var _ContactFormTextarea2 = _interopRequireDefault(_ContactFormTextarea);
+
+var _ContactFormSubmitButton = __webpack_require__(391);
+
+var _ContactFormSubmitButton2 = _interopRequireDefault(_ContactFormSubmitButton);
 
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : { default: obj };
 }
 
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
+function ContactForm(props) {
+  var receiverEmail = props.receiverEmail;
+
+  return _react2.default.createElement(_StyledComponentWrapper2.default, null, _react2.default.createElement(_ContactFormContainer2.default, {
+    action: 'https://formspree.io/' + receiverEmail,
+    method: 'POST'
+  }, _react2.default.createElement(_ContactFormLegend2.default, { gridAreaId: 'name' }, 'Name'), _react2.default.createElement(_ContactFormInput2.default, {
+    gridAreaId: 'first-name',
+    name: 'customerFirstName',
+    placeholder: 'First Name'
+  }), _react2.default.createElement(_ContactFormInput2.default, {
+    responsive: true,
+    gridAreaId: 'last-name',
+    name: 'customerLastName',
+    placeholder: 'Last Name'
+  }), _react2.default.createElement(_ContactFormLegend2.default, { gridAreaId: 'email' }, 'Email'), _react2.default.createElement(_ContactFormInput2.default, {
+    name: 'customerEmail',
+    gridAreaId: 'email',
+    type: 'email',
+    placeholder: 'i.e. youremail@gmail.com'
+  }), _react2.default.createElement(_ContactFormLegend2.default, { gridAreaId: 'phone' }, 'Phone'), _react2.default.createElement(_ContactFormInput2.default, {
+    name: 'customerPhone',
+    gridAreaId: 'phone',
+    type: 'tel',
+    placeholder: 'i.e. 3470000000'
+  }), _react2.default.createElement(_ContactFormLegend2.default, { gridAreaId: 'message' }, 'Message'), _react2.default.createElement(_ContactFormTextarea2.default, {
+    gridAreaId: 'message',
+    name: 'message',
+    placeholder: 'please send us as much detail as possible. We appreciate your support'
+  }), _react2.default.createElement(_ContactFormSubmitButton2.default, { type: 'submit', value: 'Send' })));
 }
-
-function _possibleConstructorReturn(self, call) {
-  if (!self) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }return call && ((typeof call === "undefined" ? "undefined" : _typeof(call)) === "object" || typeof call === "function") ? call : self;
-}
-
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === "undefined" ? "undefined" : _typeof(superClass)));
-  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-}
-
-var ContactForm = function (_Component) {
-  _inherits(ContactForm, _Component);
-
-  function ContactForm(props) {
-    _classCallCheck(this, ContactForm);
-
-    return _possibleConstructorReturn(this, (ContactForm.__proto__ || Object.getPrototypeOf(ContactForm)).call(this, props));
-  }
-
-  _createClass(ContactForm, [{
-    key: 'render',
-    value: function render() {
-      var _props = this.props,
-          style = _props.style,
-          receiverEmail = _props.receiverEmail;
-
-      return _react2.default.createElement(_StyledComponentWrapper2.default, null, _react2.default.createElement(_style.ContactFormContainer, {
-        action: 'https://formspree.io/' + receiverEmail,
-        method: 'POST'
-      }, _react2.default.createElement(_style.ContactFormLegend, { gridAreaId: 'name' }, 'Name'), _react2.default.createElement(_style.ContactFormInput, {
-        gridAreaId: 'first-name',
-        name: 'customerFirstName',
-        placeholder: 'First Name'
-      }), _react2.default.createElement(_style.ContactFormInput, {
-        responsive: true,
-        gridAreaId: 'last-name',
-        name: 'customerLastName',
-        placeholder: 'Last Name'
-      }), _react2.default.createElement(_style.ContactFormLegend, { gridAreaId: 'email' }, 'Email'), _react2.default.createElement(_style.ContactFormInput, {
-        name: 'customerEmail',
-        gridAreaId: 'email',
-        type: 'email',
-        placeholder: 'i.e. youremail@gmail.com'
-      }), _react2.default.createElement(_style.ContactFormLegend, { gridAreaId: 'phone' }, 'Phone'), _react2.default.createElement(_style.ContactFormInput, {
-        name: 'customerPhone',
-        gridAreaId: 'phone',
-        type: 'tel',
-        placeholder: 'i.e. 3470000000'
-      }), _react2.default.createElement(_style.ContactFormLegend, { gridAreaId: 'message' }, 'Message'), _react2.default.createElement(_style.ContactFormTextarea, {
-        gridAreaId: 'message',
-        name: 'message',
-        placeholder: 'please send us as much detail as possible. We appreciate your support'
-      }), _react2.default.createElement(_style.ContactFormSubmitButton, { type: 'submit', value: 'Send' })));
-    }
-  }]);
-
-  return ContactForm;
-}(_react.Component);
-
-exports.default = ContactForm;
 
 ContactForm.propTypes = {
-  style: _propTypes2.default.object,
   receiverEmail: _propTypes2.default.string
 };
 
 ContactForm.defaultProps = {
-  style: {},
   receiverEmail: 'support@naturalorchards.us'
 };
 
@@ -15014,21 +14922,10 @@ BreadCrumb.propTypes = {
 "use strict";
 
 
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-
-var _createClass = function () {
-  function defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
-    }
-  }return function (Constructor, protoProps, staticProps) {
-    if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
-  };
-}();
+exports.default = FooterBar;
 
 var _react = __webpack_require__(0);
 
@@ -15042,60 +14939,27 @@ var _SocialIcon = __webpack_require__(567);
 
 var _SocialIcon2 = _interopRequireDefault(_SocialIcon);
 
-var _style = __webpack_require__(571);
+var _Container = __webpack_require__(572);
+
+var _Container2 = _interopRequireDefault(_Container);
 
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : { default: obj };
 }
 
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
+function FooterBar(props) {
+  var icons = props.socialIcons || [];
+  return _react2.default.createElement(_Container2.default, null, icons.length ? icons.map(function (icon, index) {
+    return _react2.default.createElement(_SocialIcon2.default, {
+      key: icon.id || index,
+      srcUrl: icon.srcUrl,
+      linkUrl: icon.linkUrl
+    });
+  }) : null);
 }
-
-function _possibleConstructorReturn(self, call) {
-  if (!self) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }return call && ((typeof call === "undefined" ? "undefined" : _typeof(call)) === "object" || typeof call === "function") ? call : self;
-}
-
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === "undefined" ? "undefined" : _typeof(superClass)));
-  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-}
-
-var FooterBar = function (_Component) {
-  _inherits(FooterBar, _Component);
-
-  function FooterBar(props) {
-    _classCallCheck(this, FooterBar);
-
-    return _possibleConstructorReturn(this, (FooterBar.__proto__ || Object.getPrototypeOf(FooterBar)).call(this, props));
-  }
-
-  _createClass(FooterBar, [{
-    key: 'render',
-    value: function render() {
-      var icons = this.props.socialIcons || [];
-      return _react2.default.createElement(_style.Container, null, icons.length ? icons.map(function (icon, index) {
-        return _react2.default.createElement(_SocialIcon2.default, {
-          key: index,
-          srcUrl: icon.srcUrl,
-          linkUrl: icon.linkUrl
-        });
-      }) : null);
-    }
-  }]);
-
-  return FooterBar;
-}(_react.Component);
-
-exports.default = FooterBar;
 
 FooterBar.propTypes = {
-  socialIcons: _propTypes2.default.array
+  socialIcons: _propTypes2.default.arrayOf(_propTypes2.default.any).isRequired
 };
 
 /***/ }),
@@ -15412,7 +15276,7 @@ var LoginForm = function (_Component) {
         handleFormChange: function handleFormChange(event) {
           _this3.handleFormChange(event, 'password');
         }
-      })), statusCode === 'auth/network-request-failed' ? _react2.default.createElement('p', null, 'Are you still connected to the internet?') : null, statusCode === 'auth/user-not-found' ? _react2.default.createElement('p', null, 'We can\'t find your account! Would you like to ', _react2.default.createElement('a', { href: '/#/register' }, 'register as a new user'), '?') : null, userInfo.loggedIn ? _react2.default.createElement(_Button2.default, { raised: true, color: 'primary', onClick: handleLogout }, 'Log Out') : _react2.default.createElement(_Button2.default, { raised: true, disabled: this.state.loggingIn, color: 'primary', onClick: this.login }, this.state.loggingIn ? 'Loading...' : 'Log In'));
+      })), statusCode === 'auth/network-request-failed' ? _react2.default.createElement('p', null, 'Are you still connected to the internet?') : null, statusCode === 'auth/user-not-found' ? _react2.default.createElement('p', null, "We can't find your account! Would you like to", ' ', _react2.default.createElement('a', { href: '/#/register' }, 'register as a new user'), '?') : null, userInfo.loggedIn ? _react2.default.createElement(_Button2.default, { raised: true, color: 'primary', onClick: handleLogout }, 'Log Out') : _react2.default.createElement(_Button2.default, { raised: true, disabled: this.state.loggingIn, color: 'primary', onClick: this.login }, this.state.loggingIn ? 'Loading...' : 'Log In'));
     }
   }]);
 
@@ -15422,19 +15286,20 @@ var LoginForm = function (_Component) {
 exports.default = LoginForm;
 
 LoginForm.propTypes = {
-  content: _propTypes2.default.object,
-  style: _propTypes2.default.object,
-  type: _propTypes2.default.string,
-  userInfo: _propTypes2.default.object,
+  userInfo: _propTypes2.default.objectOf(_propTypes2.default.any).isRequired,
   loggingIn: _propTypes2.default.bool,
-  layout: _propTypes2.default.string,
+  layout: _propTypes2.default.string.isRequired,
+  statusCode: _propTypes2.default.string.isRequired,
   // TODO: following SHOULD be .func.isRequired, but for some reason strange prop
   // validation comes up even what got pass IS func.....
-  handleLogin: _propTypes2.default.any,
-  handleLogout: _propTypes2.default.any,
-  handleLoginFormChange: _propTypes2.default.any,
-  statusCode: _propTypes2.default.string,
-  getReturnToRoute: _propTypes2.default.any
+  handleLogin: _propTypes2.default.func.isRequired,
+  handleLogout: _propTypes2.default.func.isRequired,
+  handleLoginFormChange: _propTypes2.default.func.isRequired,
+  getReturnToRoute: _propTypes2.default.func.isRequired
+};
+
+LoginForm.defaultProps = {
+  loggingIn: false
 };
 
 /***/ }),
@@ -24340,21 +24205,7 @@ exports.default = (0, _withStyles2.default)(styles, { name: 'MuiSvgIcon' })(SvgI
 /* 383 */,
 /* 384 */,
 /* 385 */,
-/* 386 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-module.exports = {
-  ContactFormContainer: __webpack_require__(387),
-  ContactFormInput: __webpack_require__(388),
-  ContactFormLegend: __webpack_require__(389),
-  ContactFormTextarea: __webpack_require__(390),
-  ContactFormSubmitButton: __webpack_require__(391)
-};
-
-/***/ }),
+/* 386 */,
 /* 387 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -29088,21 +28939,10 @@ module.exports = _styledComponents2.default.section.withConfig({
 "use strict";
 
 
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-
-var _createClass = function () {
-  function defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
-    }
-  }return function (Constructor, protoProps, staticProps) {
-    if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
-  };
-}();
+exports.default = GoogleEmbbededMapView;
 
 var _react = __webpack_require__(0);
 
@@ -29120,66 +28960,35 @@ function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : { default: obj };
 }
 
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
+function GoogleEmbbededMapView(props) {
+  var style = props.style,
+      query = props.query,
+      width = props.width,
+      height = props.height,
+      title = props.title;
+
+  return _react2.default.createElement('iframe', {
+    title: title,
+    width: width,
+    height: height,
+    frameBorder: '0',
+    style: style,
+    src: 'https://www.google.com/maps/embed/v1/place?key=' + _GOOGLE_EMBEDDED_MAP_API2.default + '&q=' + query,
+    allowFullScreen: true
+  });
 }
-
-function _possibleConstructorReturn(self, call) {
-  if (!self) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }return call && ((typeof call === "undefined" ? "undefined" : _typeof(call)) === "object" || typeof call === "function") ? call : self;
-}
-
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === "undefined" ? "undefined" : _typeof(superClass)));
-  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-}
-
-var GoogleEmbbededMapView = function (_Component) {
-  _inherits(GoogleEmbbededMapView, _Component);
-
-  function GoogleEmbbededMapView(props) {
-    _classCallCheck(this, GoogleEmbbededMapView);
-
-    return _possibleConstructorReturn(this, (GoogleEmbbededMapView.__proto__ || Object.getPrototypeOf(GoogleEmbbededMapView)).call(this, props));
-  }
-
-  _createClass(GoogleEmbbededMapView, [{
-    key: 'render',
-    value: function render() {
-      var _props = this.props,
-          style = _props.style,
-          query = _props.query,
-          width = _props.width,
-          height = _props.height;
-
-      return _react2.default.createElement('iframe', {
-        width: width,
-        height: height,
-        frameBorder: '0',
-        style: style,
-        src: 'https://www.google.com/maps/embed/v1/place?key=' + _GOOGLE_EMBEDDED_MAP_API2.default + '&q=' + query,
-        allowFullScreen: true
-      });
-    }
-  }]);
-
-  return GoogleEmbbededMapView;
-}(_react.Component);
-
-exports.default = GoogleEmbbededMapView;
 
 GoogleEmbbededMapView.propTypes = {
-  style: _propTypes2.default.object,
+  style: _propTypes2.default.objectOf(_propTypes2.default.any),
+  title: _propTypes2.default.string,
   query: _propTypes2.default.string,
-  height: _propTypes2.default.string
+  height: _propTypes2.default.string,
+  width: _propTypes2.default.string
 };
 
 GoogleEmbbededMapView.defaultProps = {
   style: {},
+  title: '',
   query: '',
   width: '100%',
   height: '100%'
@@ -30606,434 +30415,19 @@ module.exports = _styledComponents2.default.section.withConfig({
 /***/ }),
 /* 510 */,
 /* 511 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
 "use strict";
-
-
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () {
-  function defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
-    }
-  }return function (Constructor, protoProps, staticProps) {
-    if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
-  };
-}();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _propTypes = __webpack_require__(1);
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
-var _StyledComponentWrapper = __webpack_require__(167);
-
-var _StyledComponentWrapper2 = _interopRequireDefault(_StyledComponentWrapper);
-
-var _FormInput = __webpack_require__(512);
-
-var _FormInput2 = _interopRequireDefault(_FormInput);
-
-var _FormContainer = __webpack_require__(517);
-
-var _FormContainer2 = _interopRequireDefault(_FormContainer);
-
-var _FormSubmitButton = __webpack_require__(518);
-
-var _FormSubmitButton2 = _interopRequireDefault(_FormSubmitButton);
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj };
-}
-
-function _defineProperty(obj, key, value) {
-  if (key in obj) {
-    Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });
-  } else {
-    obj[key] = value;
-  }return obj;
-}
-
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-}
-
-function _possibleConstructorReturn(self, call) {
-  if (!self) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }return call && ((typeof call === "undefined" ? "undefined" : _typeof(call)) === "object" || typeof call === "function") ? call : self;
-}
-
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === "undefined" ? "undefined" : _typeof(superClass)));
-  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-}
-
-var CustomizableForm = function (_Component) {
-  _inherits(CustomizableForm, _Component);
-
-  function CustomizableForm(props) {
-    _classCallCheck(this, CustomizableForm);
-
-    return _possibleConstructorReturn(this, (CustomizableForm.__proto__ || Object.getPrototypeOf(CustomizableForm)).call(this, props));
-  }
-
-  _createClass(CustomizableForm, [{
-    key: 'render',
-    value: function render() {
-      var _props = this.props,
-          style = _props.style,
-          receiverEmail = _props.receiverEmail,
-          instruction = _props.instruction;
-
-      return _react2.default.createElement(_FormContainer2.default, {
-        style: style,
-        action: 'https://formspree.io/' + receiverEmail,
-        method: 'POST'
-      }, instruction.map(function (config) {
-        var id = config.id,
-            fieldLegendTitle = config.fieldLegendTitle,
-            fieldName = config.fieldName,
-            inputType = config.inputType,
-            placeholderText = config.placeholderText;
-
-        return _react2.default.createElement(_FormInput2.default, {
-          key: id,
-          fieldLegendTitle: fieldLegendTitle,
-          fieldName: fieldName,
-          inputType: inputType,
-          placeholderText: placeholderText
-        });
-      }), _react2.default.createElement(_FormSubmitButton2.default, { type: 'submit', value: 'Send' }));
-    }
-  }]);
-
-  return CustomizableForm;
-}(_react.Component);
-
-exports.default = CustomizableForm;
-
-CustomizableForm.propTypes = _defineProperty({
-  style: _propTypes2.default.object,
-  receiverEmail: _propTypes2.default.string,
-  instruction: _propTypes2.default.arrayOf(_propTypes2.default.object)
-}, 'style', _propTypes2.default.object);
-
-CustomizableForm.defaultProps = _defineProperty({
-  style: {},
-  receiverEmail: 'support@ezeewei.com',
-  instruction: []
-}, 'style', {});
+throw new Error("Module build failed: Error: ENOENT: no such file or directory, open '/Users/adamchenwei/www/ez-site-ui-kit/src/components/CustomizableForm/index.js'");
 
 /***/ }),
-/* 512 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () {
-  function defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
-    }
-  }return function (Constructor, protoProps, staticProps) {
-    if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
-  };
-}();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _propTypes = __webpack_require__(1);
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
-var _Container = __webpack_require__(513);
-
-var _Container2 = _interopRequireDefault(_Container);
-
-var _FormLegend = __webpack_require__(514);
-
-var _FormLegend2 = _interopRequireDefault(_FormLegend);
-
-var _InputField = __webpack_require__(515);
-
-var _InputField2 = _interopRequireDefault(_InputField);
-
-var _FormTextarea = __webpack_require__(516);
-
-var _FormTextarea2 = _interopRequireDefault(_FormTextarea);
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj };
-}
-
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-}
-
-function _possibleConstructorReturn(self, call) {
-  if (!self) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }return call && ((typeof call === "undefined" ? "undefined" : _typeof(call)) === "object" || typeof call === "function") ? call : self;
-}
-
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === "undefined" ? "undefined" : _typeof(superClass)));
-  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-}
-
-var FormInput = function (_Component) {
-  _inherits(FormInput, _Component);
-
-  function FormInput(props) {
-    _classCallCheck(this, FormInput);
-
-    var _this = _possibleConstructorReturn(this, (FormInput.__proto__ || Object.getPrototypeOf(FormInput)).call(this, props));
-
-    var inputType = props.inputType;
-
-    _this.getInputField = _this.getInputField.bind(_this);
-    _this.getTextArea = _this.getTextArea.bind(_this);
-    var InputComponent = null;
-    switch (inputType) {
-      case 'text-area':
-        InputComponent = _this.getTextArea;
-        break;
-      case 'email':
-      case 'text':
-      case 'phone':
-        InputComponent = _this.getInputField;
-        break;
-      default:
-        break;
-    }
-    _this.InputComponent = InputComponent;
-    return _this;
-  }
-
-  _createClass(FormInput, [{
-    key: 'getInputField',
-    value: function getInputField() {
-      var _props = this.props,
-          fieldLegendTitle = _props.fieldLegendTitle,
-          fieldName = _props.fieldName,
-          inputType = _props.inputType,
-          placeholderText = _props.placeholderText;
-
-      return _react2.default.createElement(_InputField2.default, {
-        name: fieldName,
-        gridAreaId: inputType,
-        type: inputType,
-        placeholder: placeholderText
-      });
-    }
-  }, {
-    key: 'getTextArea',
-    value: function getTextArea() {
-      var _props2 = this.props,
-          fieldLegendTitle = _props2.fieldLegendTitle,
-          fieldName = _props2.fieldName,
-          inputType = _props2.inputType,
-          placeholderText = _props2.placeholderText;
-
-      return _react2.default.createElement(_FormTextarea2.default, {
-        gridAreaId: inputType,
-        name: fieldName,
-        placeholder: placeholderText
-      });
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      var _props3 = this.props,
-          fieldLegendTitle = _props3.fieldLegendTitle,
-          fieldName = _props3.fieldName,
-          inputType = _props3.inputType,
-          placeholderText = _props3.placeholderText;
-
-      var InputComponent = this.InputComponent;
-      return _react2.default.createElement(_Container2.default, null, _react2.default.createElement(_FormLegend2.default, { gridAreaId: inputType }, fieldLegendTitle), InputComponent ? _react2.default.createElement(InputComponent, null) : null);
-    }
-  }]);
-
-  return FormInput;
-}(_react.Component);
-
-exports.default = FormInput;
-
-FormInput.propTypes = {
-  fieldLegendTitle: _propTypes2.default.string,
-  fieldName: _propTypes2.default.string,
-  inputType: _propTypes2.default.string,
-  placeholderText: _propTypes2.default.string
-};
-
-FormInput.defaultProps = {
-  fieldLegendTitle: '',
-  fieldName: '',
-  inputType: '',
-  placeholderText: ''
-};
-
-/***/ }),
-/* 513 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _styledComponents = __webpack_require__(2);
-
-var _styledComponents2 = _interopRequireDefault(_styledComponents);
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj };
-}
-
-module.exports = _styledComponents2.default.section.withConfig({
-  displayName: 'Container__exports'
-})(['']);
-
-/***/ }),
-/* 514 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _styledComponents = __webpack_require__(2);
-
-var _styledComponents2 = _interopRequireDefault(_styledComponents);
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj };
-}
-
-module.exports = _styledComponents2.default.legend.withConfig({
-  displayName: 'FormLegend__exports'
-})(['grid-area:form-legend', ';'], function (props) {
-  return props.gridAreaId ? '-' + props.gridAreaId : '';
-});
-
-/***/ }),
-/* 515 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _templateObject = _taggedTemplateLiteral(['\n        display: block;\n        position: absolute;'], ['\n        display: block;\n        position: absolute;']),
-    _templateObject2 = _taggedTemplateLiteral(['\n        display: inline-block;\n        position: initial;'], ['\n        display: inline-block;\n        position: initial;']);
-
-var _styledComponents = __webpack_require__(2);
-
-var _styledComponents2 = _interopRequireDefault(_styledComponents);
-
-var _mediaQuery = __webpack_require__(14);
-
-var _mediaQuery2 = _interopRequireDefault(_mediaQuery);
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj };
-}
-
-function _taggedTemplateLiteral(strings, raw) {
-  return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
-}
-
-module.exports = _styledComponents2.default.input.withConfig({
-  displayName: 'InputField__exports'
-})(['grid-area:form-input', ';', ';width:100%;padding:12px;margin:6px 0 4px;border:1px solid #ccc;background:#fafafa;color:#000;font-family:sans-serif;font-size:12px;line-height:normal;box-sizing:border-box;border-radius:2px;font-size:14px;background-color:white;display:inline-block;height:auto;padding:10px;'], function (props) {
-  return props.gridAreaId ? '-' + props.gridAreaId : '';
-}, function (props) {
-  return props.responsive ? _mediaQuery2.default.mobileS(_templateObject) + '\n      ' + _mediaQuery2.default.mobileL(_templateObject2) : null;
-});
-
-/***/ }),
-/* 516 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _styledComponents = __webpack_require__(2);
-
-var _styledComponents2 = _interopRequireDefault(_styledComponents);
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj };
-}
-
-module.exports = _styledComponents2.default.textarea.withConfig({
-  displayName: 'FormTextarea__exports'
-})(['grid-area:form-textarea', ';min-height:100px;resize:vertical;padding:12px;width:100%;'], function (props) {
-  return props.gridAreaId ? '-' + props.gridAreaId : '';
-});
-
-/***/ }),
-/* 517 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _styledComponents = __webpack_require__(2);
-
-var _styledComponents2 = _interopRequireDefault(_styledComponents);
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj };
-}
-
-module.exports = _styledComponents2.default.form.withConfig({
-  displayName: 'FormContainer__exports'
-})(['display:flex;flex-direction:column;']);
-
-/***/ }),
-/* 518 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _styledComponents = __webpack_require__(2);
-
-var _styledComponents2 = _interopRequireDefault(_styledComponents);
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj };
-}
-
-module.exports = _styledComponents2.default.input.withConfig({
-  displayName: 'FormSubmitButton__exports'
-})(['grid-area:form-submit-button;text-transform:uppercase;letter-spacing:1px;font-weight:bold;font-style:normal;background-color:transparent;color:#222;border-color:#333;border-radius:3px;border-width:2px;border-style:solid;transition:0.1s background-color linear,0.1s color linear;text-align:center;cursor:pointer;height:45px;']); // TODO - Its another kind of input only, but style change is too dramatic
-// merge into ContactFormInput once some sort of conditional becomes allowed in styled.components
-
-/***/ }),
+/* 512 */,
+/* 513 */,
+/* 514 */,
+/* 515 */,
+/* 516 */,
+/* 517 */,
+/* 518 */,
 /* 519 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -33997,9 +33391,7 @@ var _propTypes = __webpack_require__(1);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _concatCssClasses = __webpack_require__(42);
-
-var _concatCssClasses2 = _interopRequireDefault(_concatCssClasses);
+var _reactstrap = __webpack_require__(28);
 
 var _ezSiteContentStore = __webpack_require__(17);
 
@@ -34010,8 +33402,6 @@ var _GridItem2 = _interopRequireDefault(_GridItem);
 var _consoleShow = __webpack_require__(43);
 
 var _consoleShow2 = _interopRequireDefault(_consoleShow);
-
-var _reactstrap = __webpack_require__(28);
 
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : { default: obj };
@@ -34053,12 +33443,6 @@ var Listing = function (_Component) {
   _createClass(Listing, [{
     key: 'render',
     value: function render() {
-      var contentStyle = (0, _concatCssClasses2.default)(this.props.contentStyle);
-      // const noGutter = 'no-gutters';
-
-      var containerLevelStyle = 'listing__container row ' + contentStyle;
-
-      var type = this.props.contentType;
       var data = this.props.contentData;
       var customStyle = data.listingCustomStyle;
 
@@ -34068,7 +33452,7 @@ var Listing = function (_Component) {
 
         var _listingContent = data.filteredListing;
         var _mockedListingContent = [];
-        _listingContent.forEach(function (listing, index) {
+        _listingContent.forEach(function (listing) {
           _mockedListingContent.push(listing);
         });
 
@@ -34092,45 +33476,22 @@ var Listing = function (_Component) {
           var componentName = data.listingItemComponentName;
           var collectionName = data.name;
           // TODO anti pattern!!!! But need to be done
-          listing.collectionName = collectionName;
+          var newListing = listing;
+          newListing.collectionName = collectionName;
           return _react2.default.createElement(_GridItem2.default, {
             gridResponsiveProperties: responsiveProperties,
-            gridContent: listing,
+            gridContent: newListing,
             gridStyle: _listingContentItemGridStyle,
             gridCustomStyle: customStyle,
-            gridType: listing.gridTypeName,
+            gridType: newListing.gridTypeName,
             gridComponent: componentName,
             key: index.toString()
           });
         }));
-        // return (
-        //   <section className={containerLevelStyle}>
-        //     {listingContent.map((listing, index) => {
-        //       consoleShow('props', {
-        //         componentName: 'Listing Content Item',
-        //         props: listing});
-        //       const responsiveProperties = data.listingItemResponsiveProperties;
-        //       const componentName = data.listingItemComponentName;
-        //       const collectionName = data.name;
-        //       //TODO anti pattern!!!! But need to be done
-        //       listing.collectionName = collectionName;
-        //       return (
-        //         <GridItem
-        //           gridResponsiveProperties={responsiveProperties}
-        //           gridContent={listing}
-        //           gridStyle={listingContentItemGridStyle}
-        //           gridCustomStyle={customStyle}
-        //           gridType={listing.gridTypeName}
-        //           gridComponent={componentName}
-        //           key={index.toString()} />
-        //       );
-        //     })}
-        //   </section>
-        // );
       }
       var listingContent = _ezSiteContentStore.ContentSynchronizer.getCollection(data.name);
       var mockedListingContent = [];
-      listingContent.forEach(function (listing, index) {
+      listingContent.forEach(function (listing) {
         mockedListingContent.push(listing);
       });
 
@@ -34154,43 +33515,19 @@ var Listing = function (_Component) {
         var componentName = data.listingItemComponentName;
         var collectionName = data.name;
         // TODO anti pattern!!!! But need to be done
-        listing.collectionName = collectionName;
+        var newListing = listing;
+        newListing.collectionName = collectionName;
 
         return _react2.default.createElement(_GridItem2.default, {
           gridResponsiveProperties: responsiveProperties,
-          gridContent: listing,
+          gridContent: newListing,
           gridStyle: listingContentItemGridStyle,
           gridCustomStyle: customStyle,
-          gridType: listing.gridTypeName,
+          gridType: newListing.gridTypeName,
           gridComponent: componentName,
           key: index.toString()
         });
       }));
-      // return (
-      //   <section className={containerLevelStyle}>
-      //     {listingContent.map((listing, index) => {
-      //       consoleShow('props', {
-      //         componentName: 'Listing Content Item',
-      //         props: listing});
-      //       const responsiveProperties = data.listingItemResponsiveProperties;
-      //       const componentName = data.listingItemComponentName;
-      //       const collectionName = data.name;
-      //       //TODO anti pattern!!!! But need to be done
-      //       listing.collectionName = collectionName;
-
-      //       return (
-      //         <GridItem
-      //           gridResponsiveProperties={responsiveProperties}
-      //           gridContent={listing}
-      //           gridStyle={listingContentItemGridStyle}
-      //           gridCustomStyle={customStyle}
-      //           gridType={listing.gridTypeName}
-      //           gridComponent={componentName}
-      //           key={index.toString()} />
-      //       );
-      //     })}
-      //   </section>
-      // );
     }
   }]);
 
@@ -34200,9 +33537,7 @@ var Listing = function (_Component) {
 exports.default = Listing;
 
 Listing.propTypes = {
-  contentData: _propTypes2.default.object.isRequired,
-  contentStyle: _propTypes2.default.array,
-  contentType: _propTypes2.default.string
+  contentData: _propTypes2.default.objectOf(_propTypes2.default.any).isRequired
 };
 
 /***/ }),
@@ -34239,10 +33574,6 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 var _consoleShow = __webpack_require__(43);
 
 var _consoleShow2 = _interopRequireDefault(_consoleShow);
-
-var _concatCssClasses = __webpack_require__(42);
-
-var _concatCssClasses2 = _interopRequireDefault(_concatCssClasses);
 
 var _ListingItemMask = __webpack_require__(558);
 
@@ -34285,8 +33616,6 @@ function _inherits(subClass, superClass) {
     throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === "undefined" ? "undefined" : _typeof(superClass)));
   }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
 }
-// import { Link } from 'react-router-dom';
-
 
 var ListingItem = function (_Component) {
   _inherits(ListingItem, _Component);
@@ -34303,17 +33632,11 @@ var ListingItem = function (_Component) {
       componentName: 'ListingItem',
       props: _this.props
     });
-    _this.childComponent = _this.childComponent.bind(_this);
     _this.toggleThing = _this.toggleThing.bind(_this);
     return _this;
   }
 
   _createClass(ListingItem, [{
-    key: 'childComponent',
-    value: function childComponent(type, data) {
-      return _react2.default.createElement('span', { className: 'templateComponent__textBody' }, data);
-    }
-  }, {
     key: 'toggleThing',
     value: function toggleThing(event) {
       (0, _consoleShow2.default)('line', {
@@ -34327,14 +33650,12 @@ var ListingItem = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      var _props = this.props,
-          collectionName = _props.collectionName,
-          type = _props.type,
-          data = _props.data,
-          content = _props.content;
+      var content = this.props.content;
 
       return _react2.default.createElement(_Container2.default, null, _react2.default.createElement(_Display2.default, {
         onMouseOver: this.toggleThing,
+        onFocus: this.toggleThing,
+        onBlur: this.toggleThing,
         onMouseOut: this.toggleThing
       }, _react2.default.createElement(_ListingItemMask2.default, {
         price: content.price.regular,
@@ -34352,9 +33673,7 @@ var ListingItem = function (_Component) {
 exports.default = ListingItem;
 
 ListingItem.propTypes = {
-  content: _propTypes2.default.object,
-  style: _propTypes2.default.array,
-  type: _propTypes2.default.string
+  content: _propTypes2.default.objectOf(_propTypes2.default.any).isRequired
 };
 
 /***/ }),
@@ -34391,12 +33710,6 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 var _consoleShow = __webpack_require__(43);
 
 var _consoleShow2 = _interopRequireDefault(_consoleShow);
-
-var _concatCssClasses = __webpack_require__(42);
-
-var _concatCssClasses2 = _interopRequireDefault(_concatCssClasses);
-
-var _reactRouterDom = __webpack_require__(49);
 
 var _Container = __webpack_require__(559);
 
@@ -34448,24 +33761,10 @@ var ListingItemMask = function (_Component) {
       componentName: 'ListingItemMask',
       props: _this.props
     });
-    _this.childComponent.bind(_this);
     return _this;
   }
 
   _createClass(ListingItemMask, [{
-    key: 'childComponent',
-    value: function childComponent(type, data) {
-      return _react2.default.createElement('span', { className: 'templateComponent__textBody' }, data);
-    }
-  }, {
-    key: 'toggleShade',
-    value: function toggleShade(event) {
-      (0, _consoleShow2.default)('line', {
-        name: 'shade',
-        object: event
-      });
-    }
-  }, {
     key: 'render',
     value: function render() {
       var _props = this.props,
@@ -34473,13 +33772,7 @@ var ListingItemMask = function (_Component) {
           title = _props.title,
           show = _props.show,
           collectionName = _props.collectionName,
-          path = _props.path,
-          type = _props.type;
-
-      var data = this.props.content;
-      var content = this.props.content;
-
-      // const contentComponent = this.childComponent(type, data);
+          path = _props.path;
 
       return _react2.default.createElement(_Container2.default, { hide: !show }, _react2.default.createElement(_Shade2.default, null), _react2.default.createElement(_ClickableLink2.default, { href: '/' + collectionName + '/detail/' + path }), _react2.default.createElement(_Summary2.default, null, _react2.default.createElement('span', null, title), ' ', price ? _react2.default.createElement('span', null, '$', price) : null));
     }
@@ -34491,12 +33784,11 @@ var ListingItemMask = function (_Component) {
 exports.default = ListingItemMask;
 
 ListingItemMask.propTypes = {
-  content: _propTypes2.default.object,
-  price: _propTypes2.default.number,
-  style: _propTypes2.default.array,
-  title: _propTypes2.default.string,
-  type: _propTypes2.default.string,
-  show: _propTypes2.default.bool
+  collectionName: _propTypes2.default.string.isRequired,
+  price: _propTypes2.default.number.isRequired,
+  title: _propTypes2.default.string.isRequired,
+  show: _propTypes2.default.bool.isRequired,
+  path: _propTypes2.default.string.isRequired
 };
 
 /***/ }),
@@ -34845,17 +34137,7 @@ module.exports = _styledComponents2.default.img.withConfig({
 })(['', ' ', ' cursor:pointer;'], _mediaQuery2.default.mobileS(_templateObject), _mediaQuery2.default.tablet(_templateObject2));
 
 /***/ }),
-/* 571 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-module.exports = {
-  Container: __webpack_require__(572)
-};
-
-/***/ }),
+/* 571 */,
 /* 572 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -34866,15 +34148,9 @@ var _styledComponents = __webpack_require__(2);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
-var _mediaQuery = __webpack_require__(14);
-
-var _mediaQuery2 = _interopRequireDefault(_mediaQuery);
-
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : { default: obj };
 }
-
-var setComponentWrapperContainerClasses = __webpack_require__(25);
 
 module.exports = _styledComponents2.default.section.withConfig({
   displayName: 'Container__exports'
@@ -35530,21 +34806,10 @@ exports.default = Contact;
 "use strict";
 
 
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-
-var _createClass = function () {
-  function defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
-    }
-  }return function (Constructor, protoProps, staticProps) {
-    if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
-  };
-}();
+exports.default = GridItemShell;
 
 var _react = __webpack_require__(0);
 
@@ -35558,86 +34823,42 @@ var _concatCssClasses = __webpack_require__(42);
 
 var _concatCssClasses2 = _interopRequireDefault(_concatCssClasses);
 
-var _getGridComponent = __webpack_require__(193);
-
-var _getGridComponent2 = _interopRequireDefault(_getGridComponent);
-
-var _consoleShow = __webpack_require__(43);
-
-var _consoleShow2 = _interopRequireDefault(_consoleShow);
-
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : { default: obj };
 }
 
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
+function GridItemShell(props) {
+  var userCustomStyleClassNames = (0, _concatCssClasses2.default)(props.gridStyle) || '';
+  var containerLevelStyle = 'gridItemShell__container original ' + userCustomStyleClassNames;
+  var responsive = props.gridResponsiveProperties || {};
+  var standard = responsive.standard || 12;
+  var sm = responsive.sm || 12;
+  var md = responsive.md || 12;
+  var lg = responsive.lg || 12;
+  var xl = responsive.xl || 12;
+  var offset = responsive.offset || {
+    standard: '',
+    sm: '',
+    md: '',
+    lg: '',
+    xl: ''
+  };
+
+  var composedStyles = containerLevelStyle + '\n    col-' + standard + '\n    col-sm-' + sm + '\n    col-md-' + md + '\n    col-lg-' + lg + '\n    col-xl-' + xl + '\n    offset-' + offset.standard + '\n    offset-sm-' + offset.sm + '\n    offset-md-' + offset.md + '\n    offset-lg-' + offset.lg + '\n    offset-xl-' + offset.xl + '\n  ';
+
+  var customStyle = props.gridCustomStyle || {};
+  var noCustomStyleAvailable = !Object.keys(customStyle).length && customStyle.constructor === Object;
+  return _react2.default.createElement('section', {
+    className: composedStyles,
+    style: !noCustomStyleAvailable ? customStyle.container.inlineStyles : null
+  }, props.children);
 }
-
-function _possibleConstructorReturn(self, call) {
-  if (!self) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }return call && ((typeof call === "undefined" ? "undefined" : _typeof(call)) === "object" || typeof call === "function") ? call : self;
-}
-
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === "undefined" ? "undefined" : _typeof(superClass)));
-  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-}
-
-var GridItemShell = function (_Component) {
-  _inherits(GridItemShell, _Component);
-
-  function GridItemShell() {
-    _classCallCheck(this, GridItemShell);
-
-    return _possibleConstructorReturn(this, (GridItemShell.__proto__ || Object.getPrototypeOf(GridItemShell)).apply(this, arguments));
-  }
-
-  _createClass(GridItemShell, [{
-    key: 'render',
-    value: function render() {
-      var userCustomStyleClassNames = (0, _concatCssClasses2.default)(this.props.gridStyle) || '';
-      var containerLevelStyle = 'gridItemShell__container original ' + userCustomStyleClassNames;
-      var responsive = this.props.gridResponsiveProperties || {};
-      var standard = responsive.standard || 12;
-      var sm = responsive.sm || 12;
-      var md = responsive.md || 12;
-      var lg = responsive.lg || 12;
-      var xl = responsive.xl || 12;
-      var offset = responsive.offset || {
-        standard: '',
-        sm: '',
-        md: '',
-        lg: '',
-        xl: ''
-      };
-
-      var composedStyles = containerLevelStyle + '\n      col-' + standard + '\n      col-sm-' + sm + '\n      col-md-' + md + '\n      col-lg-' + lg + '\n      col-xl-' + xl + '\n      offset-' + offset.standard + '\n      offset-sm-' + offset.sm + '\n      offset-md-' + offset.md + '\n      offset-lg-' + offset.lg + '\n      offset-xl-' + offset.xl + '\n    ';
-
-      var customStyle = this.props.gridCustomStyle || {};
-      var noCustomStyleAvailable = !Object.keys(customStyle).length && customStyle.constructor === Object;
-      return _react2.default.createElement('section', {
-        className: composedStyles,
-        style: !noCustomStyleAvailable ? customStyle.container.inlineStyles : null
-      }, this.props.children);
-    }
-  }]);
-
-  return GridItemShell;
-}(_react.Component);
-
-exports.default = GridItemShell;
 
 GridItemShell.propTypes = {
-  gridContent: _propTypes2.default.any,
-  gridResponsiveProperties: _propTypes2.default.object,
-  gridStyle: _propTypes2.default.any,
-  gridCustomStyle: _propTypes2.default.any,
-  gridType: _propTypes2.default.any
+  gridResponsiveProperties: _propTypes2.default.objectOf(_propTypes2.default.any).isRequired,
+  gridStyle: _propTypes2.default.arrayOf(_propTypes2.default.any).isRequired,
+  gridCustomStyle: _propTypes2.default.objectOf(_propTypes2.default.any).isRequired,
+  children: _propTypes2.default.node.isRequired
 };
 
 /***/ }),
