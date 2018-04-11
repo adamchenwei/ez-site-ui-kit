@@ -1,7 +1,7 @@
 import React from 'react'; import PropTypes from 'prop-types';
 import Parser from 'html-react-parser';
 import PageShell from '../PageShell/PageShell';
-import { PageContentContainer } from '../../components/Common';
+import PageContentContainer from '../../components/Common/PageContentContainer';
 
 function About(props) {
   return (

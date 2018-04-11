@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import React from 'react';
 import MenuBarNew from './index';
 import { buildMenuItems } from './../MobileMenu/factory/menu';
-import { DummyBar } from './../Common';
+import DummyBar from './../Common/Dummy/DummyBar';
 import {
   MasterMenuLong,
   MasterMenuLongWithLongText,

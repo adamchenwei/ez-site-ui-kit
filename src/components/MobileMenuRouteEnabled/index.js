@@ -9,7 +9,7 @@ import {
   buildProductMenuItems,
 } from './factory/menu';
 
-import { EmptyStateHelperText } from './../Common';
+import EmptyStateHelperText from './../Common/EmptyStateHelperText';
 
 import DropDownMenu from './../DropDownMenu';
 import MenuFilterItems from './../MenuFilterItems';

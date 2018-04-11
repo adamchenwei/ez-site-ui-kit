@@ -7,7 +7,6 @@ import CatalogItem from './components/CatalogItem';
 import CatalogDetail from './components/CatalogDetail';
 import MenuBarNewRouteEnabled from './components/MenuBarNewRouteEnabled';
 import MobileMenuRouteEnabled from './components/MobileMenuRouteEnabled';
-import CustomizableForm from './components/CustomizableForm';
 import LoadingScreen from './components/LoadingScreen';
 
 
@@ -27,7 +26,6 @@ export {
   CatalogDetail,
   MenuBarNewRouteEnabled,
   MobileMenuRouteEnabled,
-  CustomizableForm,
   LoadingScreen,
 
   About,

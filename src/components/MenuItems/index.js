@@ -1,5 +1,5 @@
 import React, { Component } from 'react'; import PropTypes from 'prop-types';
-import { Container } from './../Common';
+import Container from './../Common/Container';
 import MenuItem from './../MenuItem';
 
 const setComponentWrapperContainerClasses = require('../../util/setup/setComponentWrapperContainerClasses');

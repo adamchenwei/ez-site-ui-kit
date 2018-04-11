@@ -1,26 +1,21 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import {
-  Container, Row, Col, Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle, Button,
+  Container,
+  Row,
+  Col,
 } from 'reactstrap';
-import { Link } from 'react-router-dom';
+import { Link as RouteLink } from 'react-router-dom';
 import CatalogItem from './../CatalogItem';
 
-export default class CatalogList extends Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    const {
-      collection,
-      style,
-      type,
-    } = this.props;
-    if (!collection.data.length) return null;
-    return (
-      <Container fluid><Row>
+export default function CatalogList(props) {
+  const {
+    collection,
+  } = props;
+  if (!collection.data.length) return null;
+  return (
+    <Container fluid>
+      <Row>
         {collection.data.map((record) => {
           const {
             id,
@@ -28,10 +23,10 @@ export default class CatalogList extends Component {
             route,
             description,
             website,
-            socialAccounts,
+            // socialAccounts,
             locations,
-            imamsList,
-            phones,
+            // imamsList,
+            // phones,
             snapshots,
           } = record;
 
@@ -56,7 +51,7 @@ export default class CatalogList extends Component {
                 size: 4,
               }}
             >
-              <Link to={`/list/masjid/${route}/`}><CatalogItem
+              <RouteLink to={`/list/masjid/${route}/`}><CatalogItem
                 id={id}
                 title={name}
                 location={location}
@@ -65,21 +60,19 @@ export default class CatalogList extends Component {
                 websiteUrl={website}
                 snapshots={snapshots}
               />
-              </Link>
+              </RouteLink>
             </Col>
           );
         })}
       </Row>
-      </Container>
-    );
-  }
+    </Container>
+  );
 }
 
 CatalogList.propTypes = {
-  collection: PropTypes.object,
-  style: PropTypes.object,
-  type: PropTypes.string,
-  title: PropTypes.string,
-  subTitle: PropTypes.string,
-  websiteUrl: PropTypes.string,
+  collection: PropTypes.objectOf(PropTypes.any),
+};
+
+CatalogList.defaultProps = {
+  collection: {},
 };
