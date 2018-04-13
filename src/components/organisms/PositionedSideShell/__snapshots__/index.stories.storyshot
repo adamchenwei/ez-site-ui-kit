@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Component/ES6/Organism/PositionedSlideShell/Stand Alone default 1`] = `
+<section
+  className="PositionedSlideContainer-gOwGkm duiVPZ"
+>
+  <section
+    className="Container-gZqETv JzdKd"
+    style={null}
+  >
+    <section
+      className="CenteredCtaTextContainer-hJEdzF eBTRBT"
+    >
+      <span
+        className="Title-kEkEAm eqgnIc"
+      >
+        
+      </span>
+      <span
+        className="SubTitle-iuoIPa fBktol"
+      >
+        
+      </span>
+      <span
+        className="Paragraph-hHEPzZ dFAwgl"
+      >
+        
+      </span>
+    </section>
+    <section
+      className="BackgroundImageContainer-bYnZFo caukJQ"
+    >
+      <img
+        alt="slide-background"
+        className="BackgroundImage-fVqyev bMuLyk"
+        src={null}
+      />
+    </section>
+  </section>
+</section>
+`;

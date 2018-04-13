@@ -2,7 +2,7 @@ import { storiesOf } from '@storybook/react';
 
 import React from 'react';
 import ProductDisplay from './index';
-import { COMPONENT, BOOTSTRAP } from '../../storybookonly/config/MENU_CATEGORIES';
+import { COMPONENT_LABEL, BOOTSTRAP } from '../../storybookonly/config/MENU_CATEGORIES';
 
 
 const mock = {
@@ -64,5 +64,5 @@ const mock = {
   },
   contentStyle: [],
 };
-storiesOf(`${COMPONENT}/${BOOTSTRAP}/ProductDisplay (DontTest)`, module)
+storiesOf(`${COMPONENT_LABEL}/${BOOTSTRAP}/ProductDisplay (DontTest)`, module)
   .add('default', () => <ProductDisplay productName={mock.productName} content={mock.content} contentStyle={[]} />);

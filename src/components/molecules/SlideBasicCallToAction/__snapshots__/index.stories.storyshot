@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Component/Molecule/ES6/SlideBasicCallToAction default 1`] = `
+<div
+  style={
+    Object {
+      "marginTop": "50px",
+    }
+  }
+>
+  <section
+    style={
+      Object {
+        "height": "450px",
+        "width": "100%",
+      }
+    }
+  >
+    <section
+      className="Container-gZqETv JzdKd"
+      style={null}
+    >
+      <section
+        className="CenteredCtaTextContainer-hJEdzF eBTRBT"
+      >
+        <span
+          className="Title-kEkEAm eqgnIc"
+        >
+          Enjoyable
+        </span>
+        <span
+          className="SubTitle-iuoIPa fBktol"
+        >
+          View Our Beautiful Slide
+        </span>
+        <span
+          className="Paragraph-hHEPzZ dFAwgl"
+        >
+          we got this beautiful slide that is crazy good, please try it out yourself when you have time!
+        </span>
+        <section
+          className="CtaButtonContainer-jzxGxK dLLlfc"
+        >
+          <button>
+            my custom button
+          </button>
+        </section>
+      </section>
+      <section
+        className="BackgroundImageContainer-bYnZFo caukJQ"
+      >
+        <img
+          alt="slide-background"
+          className="BackgroundImage-fVqyev bMuLyk"
+          src="./placeholder/images/1040x700color515151.svg"
+        />
+      </section>
+    </section>
+  </section>
+</div>
+`;

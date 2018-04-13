@@ -1,9 +1,9 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import AtomTemplateComponent from './index';
-import { COMPONENT, PURE } from '../../../storybookonly/config/MENU_CATEGORIES';
+import { COMPONENT_LABEL, ES6, ATOM_LABEL } from '../../../storybookonly/config/MENU_CATEGORIES';
 
-storiesOf(`${COMPONENT}/${PURE}/Atom/AtomTemplateComponent/Stand Alone`, module)
+storiesOf(`${COMPONENT_LABEL}/${ES6}/${ATOM_LABEL}/AtomTemplateComponent/Stand Alone`, module)
   .add('default', () => (
     <AtomTemplateComponent />
   ));

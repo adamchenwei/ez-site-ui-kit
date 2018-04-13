@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Component/Pure/Atom/AtomTemplateComponent/Stand Alone default 1`] = `
+exports[`Storyshots Component/ES6/Atom/AtomTemplateComponent/Stand Alone default 1`] = `
 <section
   className="Container-gZqETv fhghoX"
   style={Object {}}

@@ -8,6 +8,7 @@ import BackgroundImage from './style/BackgroundImage';
 import Title from './style/Title';
 import SubTitle from './style/SubTitle';
 import Paragraph from './style/Paragraph';
+import BackgroundImageContainer from './style/BackgroundImageContainer';
 
 
 export default function SlideBasicCallToAction(props) {
@@ -36,7 +37,9 @@ export default function SlideBasicCallToAction(props) {
           </CtaButtonContainer> : null}
       </CenteredCtaTextContainer>
 
-      <BackgroundImage alt="slide-background" src={imageSourcePath} />
+      <BackgroundImageContainer>
+        <BackgroundImage alt="slide-background" src={imageSourcePath} />
+      </BackgroundImageContainer>
     </Container>
   );
 }

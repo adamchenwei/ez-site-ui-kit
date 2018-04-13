@@ -1,0 +1,591 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Component/ES6/Organism/SliderShell/Stand Alone 3 slides: 1st slide / default 1`] = `
+<div
+  style={
+    Object {
+      "marginTop": "50px",
+    }
+  }
+>
+  <section
+    style={
+      Object {
+        "height": "450px",
+        "width": "100%",
+      }
+    }
+  >
+    <section
+      className="Container-gZqETv hbYoHa"
+      style={Object {}}
+    >
+      <section
+        className="PositionedSlideContainer-gOwGkm duiVPZ"
+      >
+        <section
+          className="Container-gZqETv JzdKd"
+          style={
+            Object {
+              "opacity": 1,
+              "transition": "opacity 500ms linear",
+              "zIndex": 890,
+            }
+          }
+        >
+          <section
+            className="CenteredCtaTextContainer-hJEdzF eBTRBT"
+          >
+            <span
+              className="Title-kEkEAm eqgnIc"
+            >
+              Happy
+            </span>
+            <span
+              className="SubTitle-iuoIPa fBktol"
+            >
+              View Our Happy Slide
+            </span>
+            <span
+              className="Paragraph-hHEPzZ dFAwgl"
+            >
+              we got this beautiful slide that is crazy good, please try it out yourself when you have time!
+            </span>
+            <section
+              className="CtaButtonContainer-jzxGxK dLLlfc"
+            >
+              <button>
+                my custom button 1
+              </button>
+            </section>
+          </section>
+          <section
+            className="BackgroundImageContainer-bYnZFo caukJQ"
+          >
+            <img
+              alt="slide-background"
+              className="BackgroundImage-fVqyev bMuLyk"
+              src="./placeholder/images/1040x700color355952.svg"
+            />
+          </section>
+        </section>
+      </section>
+      <section
+        className="PositionedSlideContainer-gOwGkm duiVPZ"
+      >
+        <section
+          className="Container-gZqETv JzdKd"
+          style={
+            Object {
+              "opacity": 0,
+              "transition": "opacity 500ms linear",
+              "zIndex": 891,
+            }
+          }
+        >
+          <section
+            className="CenteredCtaTextContainer-hJEdzF eBTRBT"
+          >
+            <span
+              className="Title-kEkEAm eqgnIc"
+            >
+              Enjoyable
+            </span>
+            <span
+              className="SubTitle-iuoIPa fBktol"
+            >
+              View Our Enjoyable Slide
+            </span>
+            <span
+              className="Paragraph-hHEPzZ dFAwgl"
+            >
+              we got this beautiful slide that is crazy good, please try it out yourself when you have time!
+            </span>
+            <section
+              className="CtaButtonContainer-jzxGxK dLLlfc"
+            >
+              <button>
+                my custom button 1
+              </button>
+            </section>
+          </section>
+          <section
+            className="BackgroundImageContainer-bYnZFo caukJQ"
+          >
+            <img
+              alt="slide-background"
+              className="BackgroundImage-fVqyev bMuLyk"
+              src="./placeholder/images/1040x700color515151.svg"
+            />
+          </section>
+        </section>
+      </section>
+      <section
+        className="PositionedSlideContainer-gOwGkm duiVPZ"
+      >
+        <section
+          className="Container-gZqETv JzdKd"
+          style={
+            Object {
+              "opacity": 0,
+              "transition": "opacity 500ms linear",
+              "zIndex": 892,
+            }
+          }
+        >
+          <section
+            className="CenteredCtaTextContainer-hJEdzF eBTRBT"
+          >
+            <span
+              className="Title-kEkEAm eqgnIc"
+            >
+              Funny
+            </span>
+            <span
+              className="SubTitle-iuoIPa fBktol"
+            >
+              View Our Funny Slide
+            </span>
+            <span
+              className="Paragraph-hHEPzZ dFAwgl"
+            >
+              we got this beautiful slide that is crazy good, please try it out yourself when you have time!
+            </span>
+            <section
+              className="CtaButtonContainer-jzxGxK dLLlfc"
+            >
+              <button>
+                my custom button 1
+              </button>
+            </section>
+          </section>
+          <section
+            className="BackgroundImageContainer-bYnZFo caukJQ"
+          >
+            <img
+              alt="slide-background"
+              className="BackgroundImage-fVqyev bMuLyk"
+              src="./placeholder/images/1040x700color373e7a.svg"
+            />
+          </section>
+        </section>
+      </section>
+    </section>
+  </section>
+</div>
+`;
+
+exports[`Storyshots Component/ES6/Organism/SliderShell/Stand Alone 3 slides: 2nd slide 1`] = `
+<div
+  style={
+    Object {
+      "marginTop": "50px",
+    }
+  }
+>
+  <section
+    style={
+      Object {
+        "height": "450px",
+        "width": "100%",
+      }
+    }
+  >
+    <section
+      className="Container-gZqETv hbYoHa"
+      style={Object {}}
+    >
+      <section
+        className="PositionedSlideContainer-gOwGkm duiVPZ"
+      >
+        <section
+          className="Container-gZqETv JzdKd"
+          style={
+            Object {
+              "opacity": 0,
+              "transition": "opacity 500ms linear",
+              "zIndex": 890,
+            }
+          }
+        >
+          <section
+            className="CenteredCtaTextContainer-hJEdzF eBTRBT"
+          >
+            <span
+              className="Title-kEkEAm eqgnIc"
+            >
+              Happy
+            </span>
+            <span
+              className="SubTitle-iuoIPa fBktol"
+            >
+              View Our Happy Slide
+            </span>
+            <span
+              className="Paragraph-hHEPzZ dFAwgl"
+            >
+              we got this beautiful slide that is crazy good, please try it out yourself when you have time!
+            </span>
+            <section
+              className="CtaButtonContainer-jzxGxK dLLlfc"
+            >
+              <button>
+                my custom button 1
+              </button>
+            </section>
+          </section>
+          <section
+            className="BackgroundImageContainer-bYnZFo caukJQ"
+          >
+            <img
+              alt="slide-background"
+              className="BackgroundImage-fVqyev bMuLyk"
+              src="./placeholder/images/1040x700color355952.svg"
+            />
+          </section>
+        </section>
+      </section>
+      <section
+        className="PositionedSlideContainer-gOwGkm duiVPZ"
+      >
+        <section
+          className="Container-gZqETv JzdKd"
+          style={
+            Object {
+              "opacity": 1,
+              "transition": "opacity 500ms linear",
+              "zIndex": 891,
+            }
+          }
+        >
+          <section
+            className="CenteredCtaTextContainer-hJEdzF eBTRBT"
+          >
+            <span
+              className="Title-kEkEAm eqgnIc"
+            >
+              Enjoyable
+            </span>
+            <span
+              className="SubTitle-iuoIPa fBktol"
+            >
+              View Our Enjoyable Slide
+            </span>
+            <span
+              className="Paragraph-hHEPzZ dFAwgl"
+            >
+              we got this beautiful slide that is crazy good, please try it out yourself when you have time!
+            </span>
+            <section
+              className="CtaButtonContainer-jzxGxK dLLlfc"
+            >
+              <button>
+                my custom button 1
+              </button>
+            </section>
+          </section>
+          <section
+            className="BackgroundImageContainer-bYnZFo caukJQ"
+          >
+            <img
+              alt="slide-background"
+              className="BackgroundImage-fVqyev bMuLyk"
+              src="./placeholder/images/1040x700color515151.svg"
+            />
+          </section>
+        </section>
+      </section>
+      <section
+        className="PositionedSlideContainer-gOwGkm duiVPZ"
+      >
+        <section
+          className="Container-gZqETv JzdKd"
+          style={
+            Object {
+              "opacity": 0,
+              "transition": "opacity 500ms linear",
+              "zIndex": 892,
+            }
+          }
+        >
+          <section
+            className="CenteredCtaTextContainer-hJEdzF eBTRBT"
+          >
+            <span
+              className="Title-kEkEAm eqgnIc"
+            >
+              Funny
+            </span>
+            <span
+              className="SubTitle-iuoIPa fBktol"
+            >
+              View Our Funny Slide
+            </span>
+            <span
+              className="Paragraph-hHEPzZ dFAwgl"
+            >
+              we got this beautiful slide that is crazy good, please try it out yourself when you have time!
+            </span>
+            <section
+              className="CtaButtonContainer-jzxGxK dLLlfc"
+            >
+              <button>
+                my custom button 1
+              </button>
+            </section>
+          </section>
+          <section
+            className="BackgroundImageContainer-bYnZFo caukJQ"
+          >
+            <img
+              alt="slide-background"
+              className="BackgroundImage-fVqyev bMuLyk"
+              src="./placeholder/images/1040x700color373e7a.svg"
+            />
+          </section>
+        </section>
+      </section>
+    </section>
+  </section>
+</div>
+`;
+
+exports[`Storyshots Component/ES6/Organism/SliderShell/Stand Alone 3 slides: last slide 1`] = `
+<div
+  style={
+    Object {
+      "marginTop": "50px",
+    }
+  }
+>
+  <section
+    style={
+      Object {
+        "height": "450px",
+        "width": "100%",
+      }
+    }
+  >
+    <section
+      className="Container-gZqETv hbYoHa"
+      style={Object {}}
+    >
+      <section
+        className="PositionedSlideContainer-gOwGkm duiVPZ"
+      >
+        <section
+          className="Container-gZqETv JzdKd"
+          style={
+            Object {
+              "opacity": 0,
+              "transition": "opacity 500ms linear",
+              "zIndex": 890,
+            }
+          }
+        >
+          <section
+            className="CenteredCtaTextContainer-hJEdzF eBTRBT"
+          >
+            <span
+              className="Title-kEkEAm eqgnIc"
+            >
+              Happy
+            </span>
+            <span
+              className="SubTitle-iuoIPa fBktol"
+            >
+              View Our Happy Slide
+            </span>
+            <span
+              className="Paragraph-hHEPzZ dFAwgl"
+            >
+              we got this beautiful slide that is crazy good, please try it out yourself when you have time!
+            </span>
+            <section
+              className="CtaButtonContainer-jzxGxK dLLlfc"
+            >
+              <button>
+                my custom button 1
+              </button>
+            </section>
+          </section>
+          <section
+            className="BackgroundImageContainer-bYnZFo caukJQ"
+          >
+            <img
+              alt="slide-background"
+              className="BackgroundImage-fVqyev bMuLyk"
+              src="./placeholder/images/1040x700color355952.svg"
+            />
+          </section>
+        </section>
+      </section>
+      <section
+        className="PositionedSlideContainer-gOwGkm duiVPZ"
+      >
+        <section
+          className="Container-gZqETv JzdKd"
+          style={
+            Object {
+              "opacity": 0,
+              "transition": "opacity 500ms linear",
+              "zIndex": 891,
+            }
+          }
+        >
+          <section
+            className="CenteredCtaTextContainer-hJEdzF eBTRBT"
+          >
+            <span
+              className="Title-kEkEAm eqgnIc"
+            >
+              Enjoyable
+            </span>
+            <span
+              className="SubTitle-iuoIPa fBktol"
+            >
+              View Our Enjoyable Slide
+            </span>
+            <span
+              className="Paragraph-hHEPzZ dFAwgl"
+            >
+              we got this beautiful slide that is crazy good, please try it out yourself when you have time!
+            </span>
+            <section
+              className="CtaButtonContainer-jzxGxK dLLlfc"
+            >
+              <button>
+                my custom button 1
+              </button>
+            </section>
+          </section>
+          <section
+            className="BackgroundImageContainer-bYnZFo caukJQ"
+          >
+            <img
+              alt="slide-background"
+              className="BackgroundImage-fVqyev bMuLyk"
+              src="./placeholder/images/1040x700color515151.svg"
+            />
+          </section>
+        </section>
+      </section>
+      <section
+        className="PositionedSlideContainer-gOwGkm duiVPZ"
+      >
+        <section
+          className="Container-gZqETv JzdKd"
+          style={
+            Object {
+              "opacity": 1,
+              "transition": "opacity 500ms linear",
+              "zIndex": 892,
+            }
+          }
+        >
+          <section
+            className="CenteredCtaTextContainer-hJEdzF eBTRBT"
+          >
+            <span
+              className="Title-kEkEAm eqgnIc"
+            >
+              Funny
+            </span>
+            <span
+              className="SubTitle-iuoIPa fBktol"
+            >
+              View Our Funny Slide
+            </span>
+            <span
+              className="Paragraph-hHEPzZ dFAwgl"
+            >
+              we got this beautiful slide that is crazy good, please try it out yourself when you have time!
+            </span>
+            <section
+              className="CtaButtonContainer-jzxGxK dLLlfc"
+            >
+              <button>
+                my custom button 1
+              </button>
+            </section>
+          </section>
+          <section
+            className="BackgroundImageContainer-bYnZFo caukJQ"
+          >
+            <img
+              alt="slide-background"
+              className="BackgroundImage-fVqyev bMuLyk"
+              src="./placeholder/images/1040x700color373e7a.svg"
+            />
+          </section>
+        </section>
+      </section>
+    </section>
+  </section>
+</div>
+`;
+
+exports[`Storyshots Component/ES6/Organism/SliderShell/Stand Alone default 1`] = `
+<div
+  style={
+    Object {
+      "marginTop": "50px",
+    }
+  }
+>
+  <section
+    style={
+      Object {
+        "height": "450px",
+        "width": "100%",
+      }
+    }
+  >
+    <section
+      className="Container-gZqETv hbYoHa"
+      style={Object {}}
+    >
+      <section
+        className="Container-gZqETv JzdKd"
+        style={null}
+      >
+        <section
+          className="CenteredCtaTextContainer-hJEdzF eBTRBT"
+        >
+          <span
+            className="Title-kEkEAm eqgnIc"
+          >
+            Enjoyable
+          </span>
+          <span
+            className="SubTitle-iuoIPa fBktol"
+          >
+            View Our Beautiful Slide
+          </span>
+          <span
+            className="Paragraph-hHEPzZ dFAwgl"
+          >
+            we got this beautiful slide that is crazy good, please try it out yourself when you have time!
+          </span>
+          <section
+            className="CtaButtonContainer-jzxGxK dLLlfc"
+          >
+            <button>
+              my custom button
+            </button>
+          </section>
+        </section>
+        <section
+          className="BackgroundImageContainer-bYnZFo caukJQ"
+        >
+          <img
+            alt="slide-background"
+            className="BackgroundImage-fVqyev bMuLyk"
+            src="./placeholder/images/1040x700color515151.svg"
+          />
+        </section>
+      </section>
+    </section>
+  </section>
+</div>
+`;
