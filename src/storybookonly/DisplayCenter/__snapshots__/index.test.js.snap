@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DisplayCenter renders as expected 1`] = `
+<section
+  className="Container-gZqETv fhdHkB"
+  style={Object {}}
+>
+  <div
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
+  >
+    <span>
+      test child
+    </span>
+  </div>
+</section>
+`;

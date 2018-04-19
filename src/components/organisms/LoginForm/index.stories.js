@@ -86,4 +86,7 @@ storiesOf('LoginForm/Stand Alone Version', module)
       handleLoginFormChange={mockCallBack}
       getReturnToRoute={mockReturnRoute}
     />
+  ))
+  .add('Empty State', () => (
+    <LoginForm />
   ));

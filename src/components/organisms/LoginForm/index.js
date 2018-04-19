@@ -153,18 +153,29 @@ export default class LoginForm extends Component {
 }
 
 LoginForm.propTypes = {
-  userInfo: PropTypes.objectOf(PropTypes.any).isRequired,
+  userInfo: PropTypes.objectOf(PropTypes.any),
   loggingIn: PropTypes.bool,
-  layout: PropTypes.string.isRequired,
+  layout: PropTypes.string,
   statusCode: PropTypes.string.isRequired,
   // TODO: following SHOULD be .func.isRequired, but for some reason strange prop
   // validation comes up even what got pass IS func.....
   handleLogin: PropTypes.func.isRequired,
   handleLogout: PropTypes.func.isRequired,
   handleLoginFormChange: PropTypes.func.isRequired,
-  getReturnToRoute: PropTypes.func.isRequired,
+  getReturnToRoute: PropTypes.func,
 };
 
 LoginForm.defaultProps = {
   loggingIn: false,
+  layout: 'standAlone',
+  userInfo: {
+    displayName: '',
+    userName: '',
+    password: '',
+    loggedIn: false,
+  },
+  getReturnToRoute: () => ({
+    name: 'Home',
+    uri: '/',
+  }),
 };

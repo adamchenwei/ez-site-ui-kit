@@ -13,7 +13,6 @@ const SliderShell = (props) => {
 
   function showSlides() {
     return slides.map((slide, index) => {
-      console.log(slide);
       const Slide = slide.component;
       const slideProps = slide.props;
       const zIndexLevel = 890 + index;

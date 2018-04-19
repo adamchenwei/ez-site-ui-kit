@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TemplateComponent renders as expected 1`] = `
+<section
+  className="Container-gZqETv fhghoX ComponentContainer-laIPWV fBlnNY"
+  style={Object {}}
+>
+  <div
+    className="row"
+  >
+    <div
+      className="col"
+    >
+      Success 
+      
+    </div>
+  </div>
+</section>
+`;
