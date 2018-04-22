@@ -2,10 +2,10 @@
 
 exports[`Storyshots BreadCrumb default 1`] = `
 <section
-  className="Container__exports-cGduGO guCeBb"
+  className="sc-bwzfXH kFwtQt"
 >
   <a
-    className="breadCrumb__homeLink HomeLink__exports-TQoWp fNUZdH"
+    className="breadCrumb__homeLink sc-htpNat fjGRcg"
     href="/products/all"
   >
     Home

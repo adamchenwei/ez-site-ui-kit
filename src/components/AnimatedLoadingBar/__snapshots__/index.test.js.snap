@@ -2,6 +2,6 @@
 
 exports[`AnimatedLoadingBar renders as expected 1`] = `
 <div
-  className="Bar-gSSpUe eThZd"
+  className="sc-bdVaJa fCebmG"
 />
 `;

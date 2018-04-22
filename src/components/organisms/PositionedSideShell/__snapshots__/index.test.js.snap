@@ -2,37 +2,37 @@
 
 exports[`Component/ES6/PositionedSlideShell/Unit Test renders as expected 1`] = `
 <section
-  className="PositionedSlideContainer-gOwGkm duiVPZ"
+  className="sc-htoDjs dnOwue"
 >
   <section
-    className="Container-gZqETv JzdKd"
+    className="sc-bdVaJa kZpTwA"
     style={null}
   >
     <section
-      className="CenteredCtaTextContainer-hJEdzF eBTRBT"
+      className="sc-htpNat jILPxC"
     >
       <span
-        className="Title-kEkEAm eqgnIc"
+        className="sc-ifAKCX fYEscZ"
       >
         
       </span>
       <span
-        className="SubTitle-iuoIPa fBktol"
+        className="sc-EHOje epUoHW"
       >
         
       </span>
       <span
-        className="Paragraph-hHEPzZ dFAwgl"
+        className="sc-bZQynM iVzJoL"
       >
         
       </span>
     </section>
     <section
-      className="BackgroundImageContainer-bYnZFo caukJQ"
+      className="sc-gzVnrw ecJclC"
     >
       <img
         alt="slide-background"
-        className="BackgroundImage-fVqyev bMuLyk"
+        className="sc-bxivhb haYJEf"
         src={null}
       />
     </section>

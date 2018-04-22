@@ -22,28 +22,18 @@ function CredentialInput(props) {
         id={`${contentObjectName}${htmlIdName}`}
         value={contentObjectPropertyValue}
         type={inputType}
-        onChange={inputEvent =>
-          props.handleFormChange(inputEvent, contentObjectName)}
+        onChange={event =>
+          this.props.handleFormChange(event, contentObjectName)}
       />
     </FormControl>
   );
 }
 
 CredentialInput.propTypes = {
-  htmlIdName: PropTypes.string,
-  inputTitle: PropTypes.string,
-  inputType: PropTypes.string,
-  contentObjectName: PropTypes.string,
-  contentObjectPropertyValue: PropTypes.string,
-  handleFormChange: PropTypes.func.isRequired,
+  htmlIdName: PropTypes.string.isRequired,
+  inputTitle: PropTypes.string.isRequired,
+  inputType: PropTypes.string.isRequired,
+  contentObjectName: PropTypes.string.isRequired,
+  contentObjectPropertyValue: PropTypes.oneOfType([PropTypes.any]).isRequired,
 };
-
-CredentialInput.defaultProps = {
-  htmlIdName: '',
-  inputTitle: '',
-  inputType: '',
-  contentObjectName: '',
-  contentObjectPropertyValue: '',
-};
-
 export default CredentialInput;

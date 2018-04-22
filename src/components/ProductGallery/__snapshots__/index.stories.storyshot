@@ -11,14 +11,14 @@ exports[`Storyshots Product Gallery hide gallery when only 1 image 1`] = `
   }
 >
   <section
-    className="Container__exports-cGduGO gmhdCo"
+    className="sc-cJSrbW jVeRsU"
     style={Object {}}
   >
     <section
-      className="DisplayImageBox__exports-kkpcsN hUZazV"
+      className="sc-frDJqD fEPDpr"
     >
       <img
-        className="img-fluid DisplayImage__exports-MNIXO gcIKPC"
+        className="img-fluid sc-hmzhuo knwFZs"
         src="/assets/images/products/premium-sun-dried-mulberries-1.jpeg"
       />
     </section>
@@ -37,43 +37,43 @@ exports[`Storyshots Product Gallery stand alone 1`] = `
   }
 >
   <section
-    className="Container__exports-cGduGO gmhdCo"
+    className="sc-cJSrbW jVeRsU"
     style={Object {}}
   >
     <section
-      className="DisplayImageBox__exports-kkpcsN hEjShO"
+      className="sc-frDJqD kJrKOC"
     >
       <img
-        className="img-fluid DisplayImage__exports-MNIXO gcIKPC"
+        className="img-fluid sc-hmzhuo knwFZs"
         src="/assets/images/products/premium-sun-dried-mulberries-1.jpeg"
       />
     </section>
     <section
-      className="ThumbnailsContainer__exports-cyIKAY hvqAwF"
+      className="sc-ksYbfQ kbfaTk"
     >
       <section
-        className="ThumbnailFrame__exports-drYBNG gyPVzl"
+        className="sc-hqyNC lpqbrZ"
       >
         <img
-          className="ThumbnailImage__exports-hAOHQT jUwIXd"
+          className="sc-kvZOFW gmEGDz"
           onClick={[Function]}
           src="/assets/images/products/premium-sun-dried-mulberries-1.jpeg"
         />
       </section>
       <section
-        className="ThumbnailFrame__exports-drYBNG gyPVzl"
+        className="sc-hqyNC lpqbrZ"
       >
         <img
-          className="ThumbnailImage__exports-hAOHQT jUwIXd"
+          className="sc-kvZOFW gmEGDz"
           onClick={[Function]}
           src="/assets/images/products/premium-sun-dried-apricots-1.jpg"
         />
       </section>
       <section
-        className="ThumbnailFrame__exports-drYBNG gyPVzl"
+        className="sc-hqyNC lpqbrZ"
       >
         <img
-          className="ThumbnailImage__exports-hAOHQT jUwIXd"
+          className="sc-kvZOFW gmEGDz"
           onClick={[Function]}
           src="/assets/images/products/premium-raw-walnuts-1.jpeg"
         />

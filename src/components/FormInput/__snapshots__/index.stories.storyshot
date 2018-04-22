@@ -2,10 +2,10 @@
 
 exports[`Storyshots FormInput default 1`] = `
 <section
-  className="Container__exports-cGduGO fOZQpl"
+  className="sc-cSHVUG eGldRJ"
 >
   <legend
-    className="FormLegend__exports-jkPFQU cZkhhi"
+    className="sc-kAzzGY jLIHFs"
   >
     
   </legend>
@@ -14,15 +14,15 @@ exports[`Storyshots FormInput default 1`] = `
 
 exports[`Storyshots FormInput email 1`] = `
 <section
-  className="Container__exports-cGduGO fOZQpl"
+  className="sc-cSHVUG eGldRJ"
 >
   <legend
-    className="FormLegend__exports-jkPFQU dNkqLj"
+    className="sc-kAzzGY hsXfUZ"
   >
     Your Email
   </legend>
   <input
-    className="InputField__exports-fUueCr hIOOSe"
+    className="sc-chPdSV fVQLCx"
     name="emailInput"
     placeholder="i.e. mohammad@gmail.com"
     type="email"
@@ -32,15 +32,15 @@ exports[`Storyshots FormInput email 1`] = `
 
 exports[`Storyshots FormInput text 1`] = `
 <section
-  className="Container__exports-cGduGO fOZQpl"
+  className="sc-cSHVUG eGldRJ"
 >
   <legend
-    className="FormLegend__exports-jkPFQU hFlUIC"
+    className="sc-kAzzGY lcVYpo"
   >
     Your Text
   </legend>
   <input
-    className="InputField__exports-fUueCr WoEdj"
+    className="sc-chPdSV eOKmUI"
     name="textInput"
     placeholder="text here"
     type="text"
@@ -50,15 +50,15 @@ exports[`Storyshots FormInput text 1`] = `
 
 exports[`Storyshots FormInput text-area 1`] = `
 <section
-  className="Container__exports-cGduGO fOZQpl"
+  className="sc-cSHVUG eGldRJ"
 >
   <legend
-    className="FormLegend__exports-jkPFQU hesYru"
+    className="sc-kAzzGY eyIiya"
   >
     Your Text
   </legend>
   <textarea
-    className="FormTextarea__exports-jTETjq ihvfIs"
+    className="sc-kgoBCf cnIzEh"
     name="textInput"
     placeholder="text here"
   />

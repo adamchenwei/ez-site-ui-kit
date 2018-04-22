@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Paper, Card, Button, Avatar } from 'material-ui';
+import { Paper, Button } from 'material-ui';
 import CredentialInput from './CredientialInput';
 
 export default class ForgetMyPassword extends Component {
@@ -16,7 +16,8 @@ export default class ForgetMyPassword extends Component {
 
   reset() {
     this.changeIsResettingState(true);
-    this.props.handleReset(this.props.userInfo.userName, this.props.userInfo.password, this.changeIsResettingState);
+    this.props.handleReset(this.props.userInfo.userName,
+      this.props.userInfo.password, this.changeIsResettingState);
   }
 
   changeIsResettingState(state) {
@@ -32,14 +33,10 @@ export default class ForgetMyPassword extends Component {
 
   render() {
     const {
-      content,
-      style,
-      type,
       userInfo,
       layout,
       statusCode,
     } = this.props;
-    const COMPONENT_NAME = 'ForgetMyPassword';
 
     if (userInfo.loggedIn && this.state.isResetting) {
       this.changeIsResettingState(false);
@@ -102,14 +99,20 @@ export default class ForgetMyPassword extends Component {
 
         {
           statusCode === 'auth/user-not-found'
-            ? <p>We can't find your account! Would you like to <a href="/#/register">register as a new user</a>?</p>
+            ? <p>{"We can't find your account! Would you like to"} <a href="/#/register">register as a new user</a>?</p>
             : null
         }
 
         {
           statusCode !== 'ezeewei/email-resetted'
-          ? <Button raised disabled={this.state.isResetting && !statusCode} color="primary" onClick={this.reset}>
-            {
+          ?
+            <Button
+              raised
+              disabled={this.state.isResetting && !statusCode}
+              color="primary"
+              onClick={this.reset}
+            >
+              {
                 this.state.isResetting && !statusCode
                 ? 'Resetting...'
                 : 'Reset My Password'
@@ -124,15 +127,21 @@ export default class ForgetMyPassword extends Component {
 }
 
 ForgetMyPassword.propTypes = {
-  content: PropTypes.object,
-  style: PropTypes.object,
-  type: PropTypes.string,
-  userInfo: PropTypes.object,
+  userInfo: PropTypes.objectOf(PropTypes.any),
   isResetting: PropTypes.bool,
   layout: PropTypes.string,
   // TODO: following SHOULD be .func.isRequired, but for some reason strange prop
   // validation comes up even what got pass IS func.....
-  handleReset: PropTypes.any,
-  handleForgetMyPasswordFormChange: PropTypes.any,
+  handleReset: PropTypes.func.isRequired,
+  handleForgetMyPasswordFormChange: PropTypes.func.isRequired,
   statusCode: PropTypes.string,
+};
+
+ForgetMyPassword.defaultProps = {
+  userInfo: '',
+  isResetting: false,
+  layout: '',
+  // TODO: following SHOULD be .func.isRequired, but for some reason strange prop
+  // validation comes up even what got pass IS func.....
+  statusCode: '',
 };

@@ -1,17 +1,15 @@
 import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
 import React from 'react';
 import ForgetMyPasswordForm from './index';
 import OrganismName from '../../../storybookonly/CategoryName/OrganismName';
+import consoleShow from '../../../util/debug/consoleShow';
 
 // TOOD: need case when login failed
-function mockCallBack(log) { console.log(log || 'triggered'); }
+function mockCallBack(log) { consoleShow(log); }
 
 storiesOf(`Component/${OrganismName}/ForgetMyPasswordForm/Stand Alone`, module)
-  .add('Initial', () => {
-    console.log(mockCallBack);
-    console.log('1');
-    return (<ForgetMyPasswordForm
+  .add('Initial', () => (
+    <ForgetMyPasswordForm
       userInfo={{
       userName: '',
       password: '',
@@ -20,24 +18,20 @@ storiesOf(`Component/${OrganismName}/ForgetMyPasswordForm/Stand Alone`, module)
       layout="standAlone"
       handleReset={mockCallBack}
       handleForgetMyPasswordFormChange={mockCallBack}
-    />);
-  })
-  .add('Resetting', () => {
-    console.log('2');
-    return (
-      <ForgetMyPasswordForm
-        userInfo={{
-        userName: 'adam@gmail.com',
-        password: '123',
-        loggedIn: false,
-      }}
-        layout="standAlone"
-        isResetting
-        handleReset={mockCallBack}
-        handleForgetMyPasswordFormChange={mockCallBack}
-      />
-    );
-  })
+    />))
+  .add('Resetting', () => (
+    <ForgetMyPasswordForm
+      userInfo={{
+      userName: 'adam@gmail.com',
+      password: '123',
+      loggedIn: false,
+    }}
+      layout="standAlone"
+      isResetting
+      handleReset={mockCallBack}
+      handleForgetMyPasswordFormChange={mockCallBack}
+    />
+  ))
   .add('Resetted', () => (
     <ForgetMyPasswordForm
       userInfo={{

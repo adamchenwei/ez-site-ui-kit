@@ -1,19 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import { withStyles } from 'material-ui/styles';
-import MenuItem from 'material-ui/Menu/MenuItem';
-import TextField from 'material-ui/TextField';
-import Button from 'material-ui/Button';
-import AddIcon from 'material-ui-icons/Add';
-import RemoveIcon from 'material-ui-icons/Remove';
-import Card from 'material-ui/Card';
-import Chip from 'material-ui/Chip';
-
-import Icon from 'material-ui/Icon';
-import IconButton from 'material-ui/IconButton';
 import Input, { InputLabel } from 'material-ui/Input';
-import { FormControl, FormHelperText } from 'material-ui/Form';
-import Select from 'material-ui/Select';
+import { FormControl } from 'material-ui/Form';
 
 function CredentialInput(props) {
   const {
@@ -21,12 +9,7 @@ function CredentialInput(props) {
     inputTitle,
     inputType,
     contentObjectName,
-    contentEmptyState,
     contentObjectPropertyValue,
-    contentObjectPropertyName,
-    index,
-    event,
-    handleFormChange,
   } = props;
   return (
     <FormControl>
@@ -39,9 +22,9 @@ function CredentialInput(props) {
         id={`${contentObjectName}${htmlIdName}`}
         value={contentObjectPropertyValue}
         type={inputType}
-        onChange={event =>
-          this.props.handleFormChange(event, contentObjectName,
-          )}
+        onChange={onChangeEvent =>
+          props.handleFormChange(onChangeEvent, contentObjectName)
+        }
       />
     </FormControl>
   );
@@ -52,11 +35,16 @@ CredentialInput.propTypes = {
   inputTitle: PropTypes.string,
   inputType: PropTypes.string,
   contentObjectName: PropTypes.string,
-  contentEmptyState: PropTypes.any,
-  contentObjectPropertyValue: PropTypes.any,
-  index: PropTypes.number,
-  event: PropTypes.object,
+  contentObjectPropertyValue: PropTypes.string,
   handleFormChange: PropTypes.func.isRequired,
+};
+
+CredentialInput.defaultProps = {
+  htmlIdName: '',
+  inputTitle: '',
+  inputType: '',
+  contentObjectName: '',
+  contentObjectPropertyValue: '',
 };
 
 export default CredentialInput;

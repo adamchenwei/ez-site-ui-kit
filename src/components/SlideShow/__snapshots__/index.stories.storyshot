@@ -2,7 +2,7 @@
 
 exports[`Storyshots SlideShow default 1`] = `
 <section
-  className="Container__exports-cGduGO hgjqmd"
+  className="sc-kafWEX hCyUpL"
   style={
     Object {
       "marginBottom": "16px",
@@ -12,7 +12,7 @@ exports[`Storyshots SlideShow default 1`] = `
   }
 >
   <section
-    className="SlidesBox__exports-gUCGDx jcqpyY"
+    className="sc-feJyhm frBXDL"
     style={
       Object {
         "alignItems": "center",
@@ -39,10 +39,10 @@ exports[`Storyshots SlideShow default 1`] = `
     />
   </section>
   <section
-    className="SlideButtonsBox__exports-kLdHXo bsNNvA"
+    className="sc-iELTvK jypMgQ"
   >
     <section
-      className="Container__exports-cGduGO hgjqmd"
+      className="sc-kafWEX hCyUpL"
       onClick={[Function]}
       style={
         Object {
@@ -57,7 +57,7 @@ exports[`Storyshots SlideShow default 1`] = `
       •
     </section>
     <section
-      className="Container__exports-cGduGO hgjqmd"
+      className="sc-kafWEX hCyUpL"
       onClick={[Function]}
       style={
         Object {
@@ -72,7 +72,7 @@ exports[`Storyshots SlideShow default 1`] = `
       •
     </section>
     <section
-      className="Container__exports-cGduGO hgjqmd"
+      className="sc-kafWEX hCyUpL"
       onClick={[Function]}
       style={
         Object {
@@ -87,7 +87,7 @@ exports[`Storyshots SlideShow default 1`] = `
       •
     </section>
     <section
-      className="Container__exports-cGduGO hgjqmd"
+      className="sc-kafWEX hCyUpL"
       onClick={[Function]}
       style={
         Object {

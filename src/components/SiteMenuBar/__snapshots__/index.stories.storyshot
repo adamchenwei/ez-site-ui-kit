@@ -21,15 +21,15 @@ exports[`Storyshots SiteMenuBar align menu items to the left 1`] = `
     />
   </button>
   <div
-    className="CollapseBar__exports-dUQqXi jQqvHi collapse navbar-collapse"
+    className="sc-hEsumM eYSYoK collapse navbar-collapse"
     left="true"
     style={Object {}}
   >
     <ul
-      className="ml-auto NavBar__exports-ktgUhP egeynG navbar-nav"
+      className="ml-auto sc-ktHwxA FZTfz navbar-nav"
     >
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -41,7 +41,7 @@ exports[`Storyshots SiteMenuBar align menu items to the left 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -53,7 +53,7 @@ exports[`Storyshots SiteMenuBar align menu items to the left 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -65,7 +65,7 @@ exports[`Storyshots SiteMenuBar align menu items to the left 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -77,7 +77,7 @@ exports[`Storyshots SiteMenuBar align menu items to the left 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -89,7 +89,7 @@ exports[`Storyshots SiteMenuBar align menu items to the left 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -101,7 +101,7 @@ exports[`Storyshots SiteMenuBar align menu items to the left 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -138,15 +138,15 @@ exports[`Storyshots SiteMenuBar default 1`] = `
     />
   </button>
   <div
-    className="CollapseBar__exports-dUQqXi grHsVo collapse navbar-collapse"
+    className="sc-hEsumM dIwjtE collapse navbar-collapse"
     left={null}
     style={Object {}}
   >
     <ul
-      className="ml-auto NavBar__exports-ktgUhP egeynG navbar-nav"
+      className="ml-auto sc-ktHwxA FZTfz navbar-nav"
     >
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -158,7 +158,7 @@ exports[`Storyshots SiteMenuBar default 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -170,7 +170,7 @@ exports[`Storyshots SiteMenuBar default 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -182,7 +182,7 @@ exports[`Storyshots SiteMenuBar default 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -194,7 +194,7 @@ exports[`Storyshots SiteMenuBar default 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -206,7 +206,7 @@ exports[`Storyshots SiteMenuBar default 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -218,7 +218,7 @@ exports[`Storyshots SiteMenuBar default 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -255,15 +255,15 @@ exports[`Storyshots SiteMenuBar default: long menus 1`] = `
     />
   </button>
   <div
-    className="CollapseBar__exports-dUQqXi grHsVo collapse navbar-collapse"
+    className="sc-hEsumM dIwjtE collapse navbar-collapse"
     left={null}
     style={Object {}}
   >
     <ul
-      className="ml-auto NavBar__exports-ktgUhP egeynG navbar-nav"
+      className="ml-auto sc-ktHwxA FZTfz navbar-nav"
     >
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -275,7 +275,7 @@ exports[`Storyshots SiteMenuBar default: long menus 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -287,7 +287,7 @@ exports[`Storyshots SiteMenuBar default: long menus 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -299,7 +299,7 @@ exports[`Storyshots SiteMenuBar default: long menus 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -311,7 +311,7 @@ exports[`Storyshots SiteMenuBar default: long menus 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -323,7 +323,7 @@ exports[`Storyshots SiteMenuBar default: long menus 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -335,7 +335,7 @@ exports[`Storyshots SiteMenuBar default: long menus 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -347,7 +347,7 @@ exports[`Storyshots SiteMenuBar default: long menus 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -359,7 +359,7 @@ exports[`Storyshots SiteMenuBar default: long menus 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -371,7 +371,7 @@ exports[`Storyshots SiteMenuBar default: long menus 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -383,7 +383,7 @@ exports[`Storyshots SiteMenuBar default: long menus 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -395,7 +395,7 @@ exports[`Storyshots SiteMenuBar default: long menus 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -407,7 +407,7 @@ exports[`Storyshots SiteMenuBar default: long menus 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -419,7 +419,7 @@ exports[`Storyshots SiteMenuBar default: long menus 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -431,7 +431,7 @@ exports[`Storyshots SiteMenuBar default: long menus 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -468,15 +468,15 @@ exports[`Storyshots SiteMenuBar sticky on top 1`] = `
     />
   </button>
   <div
-    className="CollapseBar__exports-dUQqXi grHsVo collapse navbar-collapse"
+    className="sc-hEsumM dIwjtE collapse navbar-collapse"
     left={null}
     style={Object {}}
   >
     <ul
-      className="ml-auto NavBar__exports-ktgUhP egeynG navbar-nav"
+      className="ml-auto sc-ktHwxA FZTfz navbar-nav"
     >
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -488,7 +488,7 @@ exports[`Storyshots SiteMenuBar sticky on top 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -500,7 +500,7 @@ exports[`Storyshots SiteMenuBar sticky on top 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -512,7 +512,7 @@ exports[`Storyshots SiteMenuBar sticky on top 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -524,7 +524,7 @@ exports[`Storyshots SiteMenuBar sticky on top 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -536,7 +536,7 @@ exports[`Storyshots SiteMenuBar sticky on top 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -548,7 +548,7 @@ exports[`Storyshots SiteMenuBar sticky on top 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -560,7 +560,7 @@ exports[`Storyshots SiteMenuBar sticky on top 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -572,7 +572,7 @@ exports[`Storyshots SiteMenuBar sticky on top 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -584,7 +584,7 @@ exports[`Storyshots SiteMenuBar sticky on top 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -596,7 +596,7 @@ exports[`Storyshots SiteMenuBar sticky on top 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -608,7 +608,7 @@ exports[`Storyshots SiteMenuBar sticky on top 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -620,7 +620,7 @@ exports[`Storyshots SiteMenuBar sticky on top 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -632,7 +632,7 @@ exports[`Storyshots SiteMenuBar sticky on top 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -644,7 +644,7 @@ exports[`Storyshots SiteMenuBar sticky on top 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -681,15 +681,15 @@ exports[`Storyshots SiteMenuBar textcasing: uppercase 1`] = `
     />
   </button>
   <div
-    className="CollapseBar__exports-dUQqXi grHsVo collapse navbar-collapse"
+    className="sc-hEsumM dIwjtE collapse navbar-collapse"
     left={null}
     style={Object {}}
   >
     <ul
-      className="ml-auto NavBar__exports-ktgUhP egeynG navbar-nav"
+      className="ml-auto sc-ktHwxA FZTfz navbar-nav"
     >
       <li
-        className="StyledNavItem__exports-cIQIzt jTczVE nav-item"
+        className="sc-cIShpX frlzFU nav-item"
         textcasing="uppercase"
       >
         <a
@@ -701,7 +701,7 @@ exports[`Storyshots SiteMenuBar textcasing: uppercase 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt jTczVE nav-item"
+        className="sc-cIShpX frlzFU nav-item"
         textcasing="uppercase"
       >
         <a
@@ -713,7 +713,7 @@ exports[`Storyshots SiteMenuBar textcasing: uppercase 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt jTczVE nav-item"
+        className="sc-cIShpX frlzFU nav-item"
         textcasing="uppercase"
       >
         <a
@@ -725,7 +725,7 @@ exports[`Storyshots SiteMenuBar textcasing: uppercase 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt jTczVE nav-item"
+        className="sc-cIShpX frlzFU nav-item"
         textcasing="uppercase"
       >
         <a
@@ -737,7 +737,7 @@ exports[`Storyshots SiteMenuBar textcasing: uppercase 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt jTczVE nav-item"
+        className="sc-cIShpX frlzFU nav-item"
         textcasing="uppercase"
       >
         <a
@@ -749,7 +749,7 @@ exports[`Storyshots SiteMenuBar textcasing: uppercase 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt jTczVE nav-item"
+        className="sc-cIShpX frlzFU nav-item"
         textcasing="uppercase"
       >
         <a
@@ -761,7 +761,7 @@ exports[`Storyshots SiteMenuBar textcasing: uppercase 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt jTczVE nav-item"
+        className="sc-cIShpX frlzFU nav-item"
         textcasing="uppercase"
       >
         <a
@@ -773,7 +773,7 @@ exports[`Storyshots SiteMenuBar textcasing: uppercase 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt jTczVE nav-item"
+        className="sc-cIShpX frlzFU nav-item"
         textcasing="uppercase"
       >
         <a
@@ -785,7 +785,7 @@ exports[`Storyshots SiteMenuBar textcasing: uppercase 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt jTczVE nav-item"
+        className="sc-cIShpX frlzFU nav-item"
         textcasing="uppercase"
       >
         <a
@@ -797,7 +797,7 @@ exports[`Storyshots SiteMenuBar textcasing: uppercase 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt jTczVE nav-item"
+        className="sc-cIShpX frlzFU nav-item"
         textcasing="uppercase"
       >
         <a
@@ -809,7 +809,7 @@ exports[`Storyshots SiteMenuBar textcasing: uppercase 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt jTczVE nav-item"
+        className="sc-cIShpX frlzFU nav-item"
         textcasing="uppercase"
       >
         <a
@@ -821,7 +821,7 @@ exports[`Storyshots SiteMenuBar textcasing: uppercase 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt jTczVE nav-item"
+        className="sc-cIShpX frlzFU nav-item"
         textcasing="uppercase"
       >
         <a
@@ -833,7 +833,7 @@ exports[`Storyshots SiteMenuBar textcasing: uppercase 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt jTczVE nav-item"
+        className="sc-cIShpX frlzFU nav-item"
         textcasing="uppercase"
       >
         <a
@@ -845,7 +845,7 @@ exports[`Storyshots SiteMenuBar textcasing: uppercase 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt jTczVE nav-item"
+        className="sc-cIShpX frlzFU nav-item"
         textcasing="uppercase"
       >
         <a
@@ -857,7 +857,7 @@ exports[`Storyshots SiteMenuBar textcasing: uppercase 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt jTczVE nav-item"
+        className="sc-cIShpX frlzFU nav-item"
         textcasing="uppercase"
       >
         <a
@@ -894,15 +894,15 @@ exports[`Storyshots SiteMenuBar to left 1`] = `
     />
   </button>
   <div
-    className="CollapseBar__exports-dUQqXi jQqvHi collapse navbar-collapse"
+    className="sc-hEsumM eYSYoK collapse navbar-collapse"
     left="true"
     style={Object {}}
   >
     <ul
-      className="ml-auto NavBar__exports-ktgUhP egeynG navbar-nav"
+      className="ml-auto sc-ktHwxA FZTfz navbar-nav"
     >
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -914,7 +914,7 @@ exports[`Storyshots SiteMenuBar to left 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -926,7 +926,7 @@ exports[`Storyshots SiteMenuBar to left 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -938,7 +938,7 @@ exports[`Storyshots SiteMenuBar to left 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -950,7 +950,7 @@ exports[`Storyshots SiteMenuBar to left 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -962,7 +962,7 @@ exports[`Storyshots SiteMenuBar to left 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -974,7 +974,7 @@ exports[`Storyshots SiteMenuBar to left 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -1011,15 +1011,15 @@ exports[`Storyshots SiteMenuBar to left: long menus 1`] = `
     />
   </button>
   <div
-    className="CollapseBar__exports-dUQqXi jQqvHi collapse navbar-collapse"
+    className="sc-hEsumM eYSYoK collapse navbar-collapse"
     left="true"
     style={Object {}}
   >
     <ul
-      className="ml-auto NavBar__exports-ktgUhP egeynG navbar-nav"
+      className="ml-auto sc-ktHwxA FZTfz navbar-nav"
     >
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -1031,7 +1031,7 @@ exports[`Storyshots SiteMenuBar to left: long menus 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -1043,7 +1043,7 @@ exports[`Storyshots SiteMenuBar to left: long menus 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -1055,7 +1055,7 @@ exports[`Storyshots SiteMenuBar to left: long menus 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -1067,7 +1067,7 @@ exports[`Storyshots SiteMenuBar to left: long menus 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -1079,7 +1079,7 @@ exports[`Storyshots SiteMenuBar to left: long menus 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -1091,7 +1091,7 @@ exports[`Storyshots SiteMenuBar to left: long menus 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -1103,7 +1103,7 @@ exports[`Storyshots SiteMenuBar to left: long menus 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -1115,7 +1115,7 @@ exports[`Storyshots SiteMenuBar to left: long menus 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -1127,7 +1127,7 @@ exports[`Storyshots SiteMenuBar to left: long menus 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -1139,7 +1139,7 @@ exports[`Storyshots SiteMenuBar to left: long menus 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -1151,7 +1151,7 @@ exports[`Storyshots SiteMenuBar to left: long menus 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -1163,7 +1163,7 @@ exports[`Storyshots SiteMenuBar to left: long menus 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -1175,7 +1175,7 @@ exports[`Storyshots SiteMenuBar to left: long menus 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -1187,7 +1187,7 @@ exports[`Storyshots SiteMenuBar to left: long menus 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -1226,15 +1226,15 @@ exports[`Storyshots SiteMenuBar with custom logo component as child 1`] = `
     />
   </button>
   <div
-    className="CollapseBar__exports-dUQqXi grHsVo collapse navbar-collapse"
+    className="sc-hEsumM dIwjtE collapse navbar-collapse"
     left={null}
     style={Object {}}
   >
     <ul
-      className="ml-auto NavBar__exports-ktgUhP egeynG navbar-nav"
+      className="ml-auto sc-ktHwxA FZTfz navbar-nav"
     >
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -1246,7 +1246,7 @@ exports[`Storyshots SiteMenuBar with custom logo component as child 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -1258,7 +1258,7 @@ exports[`Storyshots SiteMenuBar with custom logo component as child 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -1270,7 +1270,7 @@ exports[`Storyshots SiteMenuBar with custom logo component as child 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -1282,7 +1282,7 @@ exports[`Storyshots SiteMenuBar with custom logo component as child 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -1294,7 +1294,7 @@ exports[`Storyshots SiteMenuBar with custom logo component as child 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a
@@ -1306,7 +1306,7 @@ exports[`Storyshots SiteMenuBar with custom logo component as child 1`] = `
         </a>
       </li>
       <li
-        className="StyledNavItem__exports-cIQIzt hMebIS nav-item"
+        className="sc-cIShpX ifvisO nav-item"
         textcasing={null}
       >
         <a

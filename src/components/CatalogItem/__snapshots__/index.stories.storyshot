@@ -5,10 +5,10 @@ exports[`Storyshots CatalogItem default 1`] = `
   className="card"
 >
   <section
-    className="SnapshotContainer__exports-juqyDE cvtFfE"
+    className="sc-gzVnrw ejzQOU"
   >
     <img
-      className="Snapshot__exports-kDzhxQ izwiEp"
+      className="sc-htoDjs bXrisP"
       src="/placeholder/masjid.jpg"
     />
   </section>

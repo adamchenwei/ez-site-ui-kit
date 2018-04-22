@@ -3,58 +3,58 @@
 exports[`Storyshots Contact Form basic 1`] = `
 <form
   action="https://formspree.io/support@naturalorchards.us"
-  className="ContactFormContainer__exports-jKMzkD kbsoe"
+  className="sc-gqjmRU kaZyoM"
   method="POST"
 >
   <legend
-    className="ContactFormLegend__exports-cVxNpo cSYqbY"
+    className="sc-VigVT kJMYsB"
   >
     Name
   </legend>
   <input
-    className="ContactFormInput__exports-hmgMZo BiHlm"
+    className="sc-jTzLTM dZFVSC"
     name="customerFirstName"
     placeholder="First Name"
   />
   <input
-    className="ContactFormInput__exports-hmgMZo hdWGhv"
+    className="sc-jTzLTM llBXYi"
     name="customerLastName"
     placeholder="Last Name"
   />
   <legend
-    className="ContactFormLegend__exports-cVxNpo hpegks"
+    className="sc-VigVT dAFUVe"
   >
     Email
   </legend>
   <input
-    className="ContactFormInput__exports-hmgMZo lfzCqn"
+    className="sc-jTzLTM eqvPjP"
     name="customerEmail"
     placeholder="i.e. youremail@gmail.com"
     type="email"
   />
   <legend
-    className="ContactFormLegend__exports-cVxNpo jtjRaF"
+    className="sc-VigVT kXzOzi"
   >
     Phone
   </legend>
   <input
-    className="ContactFormInput__exports-hmgMZo djMCma"
+    className="sc-jTzLTM btRBus"
     name="customerPhone"
     placeholder="i.e. 3470000000"
     type="tel"
   />
   <legend
-    className="ContactFormLegend__exports-cVxNpo eiAltO"
+    className="sc-VigVT eVyQHO"
   >
     Message
   </legend>
   <textarea
-    className="ContactFormTextarea__exports-hPeRxO fgHdOA"
+    className="sc-fjdhpX jKeCfK"
     name="message"
     placeholder="please send us as much detail as possible. We appreciate your support"
   />
   <input
-    className="ContactFormSubmitButton__exports-kwUANJ hKGezw"
+    className="sc-jzJRlG jBTybe"
     type="submit"
     value="Send"
   />

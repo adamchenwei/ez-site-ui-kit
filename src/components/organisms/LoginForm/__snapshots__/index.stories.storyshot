@@ -1,8 +1,135 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots LoginForm/Stand Alone Version Empty State 1`] = `
+<div
+  className="MuiPaper-root-549 MuiPaper-shadow2-553 MuiPaper-rounded-550"
+  style={
+    Object {
+      "display": "flex",
+      "flexFlow": "column",
+      "marginBottom": "24px",
+      "marginTop": "24px",
+    }
+  }
+>
+  <section
+    style={
+      Object {
+        "display": "flex",
+        "flexFlow": "column",
+      }
+    }
+  >
+    <div
+      className="MuiFormControl-root-576"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      required={false}
+    >
+      <label
+        className="MuiFormLabel-root-586 MuiInputLabel-root-580 MuiInputLabel-formControl-581 MuiInputLabel-animated-584"
+        data-shrink={false}
+        htmlFor="userNameUserNameInput"
+      >
+        User Email
+      </label>
+      <div
+        className="MuiInput-root-590 MuiInput-formControl-591 MuiInput-inkbar-592 MuiInput-underline-596"
+        onBlur={[Function]}
+        onFocus={[Function]}
+      >
+        <input
+          autoComplete={undefined}
+          autoFocus={undefined}
+          className="MuiInput-input-599 MuiInput-inputSingleline-602"
+          defaultValue={undefined}
+          disabled={false}
+          id="userNameUserNameInput"
+          name={undefined}
+          onChange={[Function]}
+          onKeyDown={undefined}
+          onKeyUp={undefined}
+          placeholder={undefined}
+          readOnly={undefined}
+          required={undefined}
+          rows={undefined}
+          type="email"
+          value=""
+        />
+      </div>
+    </div>
+    <div
+      className="MuiFormControl-root-576"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      required={false}
+    >
+      <label
+        className="MuiFormLabel-root-586 MuiInputLabel-root-580 MuiInputLabel-formControl-581 MuiInputLabel-animated-584"
+        data-shrink={false}
+        htmlFor="passwordPasswordInput"
+      >
+        Password
+      </label>
+      <div
+        className="MuiInput-root-590 MuiInput-formControl-591 MuiInput-inkbar-592 MuiInput-underline-596"
+        onBlur={[Function]}
+        onFocus={[Function]}
+      >
+        <input
+          autoComplete={undefined}
+          autoFocus={undefined}
+          className="MuiInput-input-599 MuiInput-inputSingleline-602"
+          defaultValue={undefined}
+          disabled={false}
+          id="passwordPasswordInput"
+          name={undefined}
+          onChange={[Function]}
+          onKeyDown={undefined}
+          onKeyUp={undefined}
+          placeholder={undefined}
+          readOnly={undefined}
+          required={undefined}
+          rows={undefined}
+          type="password"
+          value=""
+        />
+      </div>
+    </div>
+  </section>
+  <button
+    className="MuiButtonBase-root-620 MuiButton-root-605 MuiButton-raised-612 MuiButton-raisedPrimary-614"
+    disabled={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    role="button"
+    tabIndex={0}
+    type="button"
+  >
+    <span
+      className="MuiButton-label-607"
+    >
+      Log In
+    </span>
+    <span
+      className="MuiTouchRipple-root-622"
+    />
+  </button>
+</div>
+`;
+
 exports[`Storyshots LoginForm/Stand Alone Version Logged In 1`] = `
 <div
-  className="MuiPaper-root-154 MuiPaper-shadow2-158 MuiPaper-rounded-155"
+  className="MuiPaper-root-387 MuiPaper-shadow2-391 MuiPaper-rounded-388"
   style={
     Object {
       "display": "flex",
@@ -36,7 +163,7 @@ exports[`Storyshots LoginForm/Stand Alone Version Logged In 1`] = `
       Welcome!
     </h1>
     <div
-      className="MuiAvatar-root-181 MuiAvatar-colorDefault-182"
+      className="MuiAvatar-root-414 MuiAvatar-colorDefault-415"
       style={
         Object {
           "margin": "0 auto",
@@ -61,7 +188,7 @@ exports[`Storyshots LoginForm/Stand Alone Version Logged In 1`] = `
     </p>
   </section>
   <button
-    className="MuiButtonBase-root-199 MuiButton-root-184 MuiButton-raised-191 MuiButton-raisedPrimary-193"
+    className="MuiButtonBase-root-432 MuiButton-root-417 MuiButton-raised-424 MuiButton-raisedPrimary-426"
     disabled={false}
     onBlur={[Function]}
     onClick={[Function]}
@@ -79,12 +206,12 @@ exports[`Storyshots LoginForm/Stand Alone Version Logged In 1`] = `
     type="button"
   >
     <span
-      className="MuiButton-label-186"
+      className="MuiButton-label-419"
     >
       Log Out
     </span>
     <span
-      className="MuiTouchRipple-root-201"
+      className="MuiTouchRipple-root-434"
     />
   </button>
 </div>
@@ -92,7 +219,7 @@ exports[`Storyshots LoginForm/Stand Alone Version Logged In 1`] = `
 
 exports[`Storyshots LoginForm/Stand Alone Version Logged In But Return Route is Missing 1`] = `
 <div
-  className="MuiPaper-root-208 MuiPaper-shadow2-212 MuiPaper-rounded-209"
+  className="MuiPaper-root-441 MuiPaper-shadow2-445 MuiPaper-rounded-442"
   style={
     Object {
       "display": "flex",
@@ -126,7 +253,7 @@ exports[`Storyshots LoginForm/Stand Alone Version Logged In But Return Route is 
       Welcome!
     </h1>
     <div
-      className="MuiAvatar-root-235 MuiAvatar-colorDefault-236"
+      className="MuiAvatar-root-468 MuiAvatar-colorDefault-469"
       style={
         Object {
           "margin": "0 auto",
@@ -137,7 +264,7 @@ exports[`Storyshots LoginForm/Stand Alone Version Logged In But Return Route is 
     </div>
   </section>
   <button
-    className="MuiButtonBase-root-253 MuiButton-root-238 MuiButton-raised-245 MuiButton-raisedPrimary-247"
+    className="MuiButtonBase-root-486 MuiButton-root-471 MuiButton-raised-478 MuiButton-raisedPrimary-480"
     disabled={false}
     onBlur={[Function]}
     onClick={[Function]}
@@ -155,12 +282,12 @@ exports[`Storyshots LoginForm/Stand Alone Version Logged In But Return Route is 
     type="button"
   >
     <span
-      className="MuiButton-label-240"
+      className="MuiButton-label-473"
     >
       Log Out
     </span>
     <span
-      className="MuiTouchRipple-root-255"
+      className="MuiTouchRipple-root-488"
     />
   </button>
 </div>
@@ -168,7 +295,7 @@ exports[`Storyshots LoginForm/Stand Alone Version Logged In But Return Route is 
 
 exports[`Storyshots LoginForm/Stand Alone Version Logged In But User Name is Missing 1`] = `
 <div
-  className="MuiPaper-root-262 MuiPaper-shadow2-266 MuiPaper-rounded-263"
+  className="MuiPaper-root-495 MuiPaper-shadow2-499 MuiPaper-rounded-496"
   style={
     Object {
       "display": "flex",
@@ -202,7 +329,7 @@ exports[`Storyshots LoginForm/Stand Alone Version Logged In But User Name is Mis
       Welcome!
     </h1>
     <div
-      className="MuiAvatar-root-289 MuiAvatar-colorDefault-290"
+      className="MuiAvatar-root-522 MuiAvatar-colorDefault-523"
       style={
         Object {
           "margin": "0 auto",
@@ -227,7 +354,7 @@ exports[`Storyshots LoginForm/Stand Alone Version Logged In But User Name is Mis
     </p>
   </section>
   <button
-    className="MuiButtonBase-root-307 MuiButton-root-292 MuiButton-raised-299 MuiButton-raisedPrimary-301"
+    className="MuiButtonBase-root-540 MuiButton-root-525 MuiButton-raised-532 MuiButton-raisedPrimary-534"
     disabled={false}
     onBlur={[Function]}
     onClick={[Function]}
@@ -245,12 +372,12 @@ exports[`Storyshots LoginForm/Stand Alone Version Logged In But User Name is Mis
     type="button"
   >
     <span
-      className="MuiButton-label-294"
+      className="MuiButton-label-527"
     >
       Log Out
     </span>
     <span
-      className="MuiTouchRipple-root-309"
+      className="MuiTouchRipple-root-542"
     />
   </button>
 </div>
@@ -258,7 +385,7 @@ exports[`Storyshots LoginForm/Stand Alone Version Logged In But User Name is Mis
 
 exports[`Storyshots LoginForm/Stand Alone Version Logging In 1`] = `
 <div
-  className="MuiPaper-root-81 MuiPaper-shadow2-85 MuiPaper-rounded-82"
+  className="MuiPaper-root-314 MuiPaper-shadow2-318 MuiPaper-rounded-315"
   style={
     Object {
       "display": "flex",
@@ -277,27 +404,27 @@ exports[`Storyshots LoginForm/Stand Alone Version Logging In 1`] = `
     }
   >
     <div
-      className="MuiFormControl-root-108"
+      className="MuiFormControl-root-341"
       onBlur={[Function]}
       onFocus={[Function]}
       required={false}
     >
       <label
-        className="MuiFormLabel-root-118 MuiInputLabel-root-112 MuiInputLabel-formControl-113 MuiInputLabel-animated-116 MuiInputLabel-shrink-115"
+        className="MuiFormLabel-root-351 MuiInputLabel-root-345 MuiInputLabel-formControl-346 MuiInputLabel-animated-349 MuiInputLabel-shrink-348"
         data-shrink={true}
         htmlFor="userNameUserNameInput"
       >
         User Email
       </label>
       <div
-        className="MuiInput-root-122 MuiInput-formControl-123 MuiInput-inkbar-124 MuiInput-underline-128"
+        className="MuiInput-root-355 MuiInput-formControl-356 MuiInput-inkbar-357 MuiInput-underline-361"
         onBlur={[Function]}
         onFocus={[Function]}
       >
         <input
           autoComplete={undefined}
           autoFocus={undefined}
-          className="MuiInput-input-131 MuiInput-inputSingleline-134"
+          className="MuiInput-input-364 MuiInput-inputSingleline-367"
           defaultValue={undefined}
           disabled={false}
           id="userNameUserNameInput"
@@ -315,27 +442,27 @@ exports[`Storyshots LoginForm/Stand Alone Version Logging In 1`] = `
       </div>
     </div>
     <div
-      className="MuiFormControl-root-108"
+      className="MuiFormControl-root-341"
       onBlur={[Function]}
       onFocus={[Function]}
       required={false}
     >
       <label
-        className="MuiFormLabel-root-118 MuiInputLabel-root-112 MuiInputLabel-formControl-113 MuiInputLabel-animated-116 MuiInputLabel-shrink-115"
+        className="MuiFormLabel-root-351 MuiInputLabel-root-345 MuiInputLabel-formControl-346 MuiInputLabel-animated-349 MuiInputLabel-shrink-348"
         data-shrink={true}
         htmlFor="passwordPasswordInput"
       >
         Password
       </label>
       <div
-        className="MuiInput-root-122 MuiInput-formControl-123 MuiInput-inkbar-124 MuiInput-underline-128"
+        className="MuiInput-root-355 MuiInput-formControl-356 MuiInput-inkbar-357 MuiInput-underline-361"
         onBlur={[Function]}
         onFocus={[Function]}
       >
         <input
           autoComplete={undefined}
           autoFocus={undefined}
-          className="MuiInput-input-131 MuiInput-inputSingleline-134"
+          className="MuiInput-input-364 MuiInput-inputSingleline-367"
           defaultValue={undefined}
           disabled={false}
           id="passwordPasswordInput"
@@ -354,7 +481,7 @@ exports[`Storyshots LoginForm/Stand Alone Version Logging In 1`] = `
     </div>
   </section>
   <button
-    className="MuiButtonBase-root-152 MuiButtonBase-disabled-153 MuiButton-root-137 MuiButton-raised-144 MuiButton-raisedPrimary-146 MuiButton-disabled-149"
+    className="MuiButtonBase-root-385 MuiButtonBase-disabled-386 MuiButton-root-370 MuiButton-raised-377 MuiButton-raisedPrimary-379 MuiButton-disabled-382"
     disabled={true}
     onBlur={[Function]}
     onClick={[Function]}
@@ -372,7 +499,7 @@ exports[`Storyshots LoginForm/Stand Alone Version Logging In 1`] = `
     type="button"
   >
     <span
-      className="MuiButton-label-139"
+      className="MuiButton-label-372"
     >
       Loading...
     </span>
@@ -382,7 +509,7 @@ exports[`Storyshots LoginForm/Stand Alone Version Logging In 1`] = `
 
 exports[`Storyshots LoginForm/Stand Alone Version Not Logged In 1`] = `
 <div
-  className="MuiPaper-root-1 MuiPaper-shadow2-5 MuiPaper-rounded-2"
+  className="MuiPaper-root-234 MuiPaper-shadow2-238 MuiPaper-rounded-235"
   style={
     Object {
       "display": "flex",
@@ -401,27 +528,27 @@ exports[`Storyshots LoginForm/Stand Alone Version Not Logged In 1`] = `
     }
   >
     <div
-      className="MuiFormControl-root-28"
+      className="MuiFormControl-root-261"
       onBlur={[Function]}
       onFocus={[Function]}
       required={false}
     >
       <label
-        className="MuiFormLabel-root-38 MuiInputLabel-root-32 MuiInputLabel-formControl-33 MuiInputLabel-animated-36"
+        className="MuiFormLabel-root-271 MuiInputLabel-root-265 MuiInputLabel-formControl-266 MuiInputLabel-animated-269"
         data-shrink={false}
         htmlFor="userNameUserNameInput"
       >
         User Email
       </label>
       <div
-        className="MuiInput-root-42 MuiInput-formControl-43 MuiInput-inkbar-44 MuiInput-underline-48"
+        className="MuiInput-root-275 MuiInput-formControl-276 MuiInput-inkbar-277 MuiInput-underline-281"
         onBlur={[Function]}
         onFocus={[Function]}
       >
         <input
           autoComplete={undefined}
           autoFocus={undefined}
-          className="MuiInput-input-51 MuiInput-inputSingleline-54"
+          className="MuiInput-input-284 MuiInput-inputSingleline-287"
           defaultValue={undefined}
           disabled={false}
           id="userNameUserNameInput"
@@ -439,27 +566,27 @@ exports[`Storyshots LoginForm/Stand Alone Version Not Logged In 1`] = `
       </div>
     </div>
     <div
-      className="MuiFormControl-root-28"
+      className="MuiFormControl-root-261"
       onBlur={[Function]}
       onFocus={[Function]}
       required={false}
     >
       <label
-        className="MuiFormLabel-root-38 MuiInputLabel-root-32 MuiInputLabel-formControl-33 MuiInputLabel-animated-36"
+        className="MuiFormLabel-root-271 MuiInputLabel-root-265 MuiInputLabel-formControl-266 MuiInputLabel-animated-269"
         data-shrink={false}
         htmlFor="passwordPasswordInput"
       >
         Password
       </label>
       <div
-        className="MuiInput-root-42 MuiInput-formControl-43 MuiInput-inkbar-44 MuiInput-underline-48"
+        className="MuiInput-root-275 MuiInput-formControl-276 MuiInput-inkbar-277 MuiInput-underline-281"
         onBlur={[Function]}
         onFocus={[Function]}
       >
         <input
           autoComplete={undefined}
           autoFocus={undefined}
-          className="MuiInput-input-51 MuiInput-inputSingleline-54"
+          className="MuiInput-input-284 MuiInput-inputSingleline-287"
           defaultValue={undefined}
           disabled={false}
           id="passwordPasswordInput"
@@ -478,7 +605,7 @@ exports[`Storyshots LoginForm/Stand Alone Version Not Logged In 1`] = `
     </div>
   </section>
   <button
-    className="MuiButtonBase-root-72 MuiButton-root-57 MuiButton-raised-64 MuiButton-raisedPrimary-66"
+    className="MuiButtonBase-root-305 MuiButton-root-290 MuiButton-raised-297 MuiButton-raisedPrimary-299"
     disabled={false}
     onBlur={[Function]}
     onClick={[Function]}
@@ -496,12 +623,12 @@ exports[`Storyshots LoginForm/Stand Alone Version Not Logged In 1`] = `
     type="button"
   >
     <span
-      className="MuiButton-label-59"
+      className="MuiButton-label-292"
     >
       Log In
     </span>
     <span
-      className="MuiTouchRipple-root-74"
+      className="MuiTouchRipple-root-307"
     />
   </button>
 </div>

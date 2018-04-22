@@ -2,7 +2,7 @@
 
 exports[`Component/ES6/SliderShell/Unit Test renders as expected 1`] = `
 <section
-  className="Container-gZqETv hbYoHa"
+  className="sc-bdVaJa jtAwRv"
   style={Object {}}
 />
 `;

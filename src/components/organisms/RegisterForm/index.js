@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Paper, Card, Button, Avatar } from 'material-ui';
+import { Paper, Button, Avatar } from 'material-ui';
 import CredentialInput from './CredientialInput';
 
 export default class RegisterForm extends Component {
@@ -19,7 +19,7 @@ export default class RegisterForm extends Component {
     this.props.handleRegister(this.props.userInfo.userName,
       this.props.userInfo.password,
       this.props.userInfo.displayName,
-      this.changeRegisteringState);
+      this.changeRegisteringState); //eslint-disable-line
   }
 
   changeRegisteringState(state) {
@@ -29,23 +29,18 @@ export default class RegisterForm extends Component {
       });
     });
   }
-  handleFormChange(event,
-    propertyName) {
+  handleFormChange(event, propertyName) {
     this.props.handleRegisterFormChange(event, propertyName);
   }
 
   render() {
     const {
-      content,
-      style,
-      type,
       handleLogout,
       userInfo,
       layout,
       statusCode,
       postEmailValidationPhrase,
     } = this.props;
-    const COMPONENT_NAME = 'RegisterForm';
 
     if (userInfo.loggedIn && this.state.isRegistering) {
       this.changeRegisteringState(false);
@@ -75,53 +70,54 @@ export default class RegisterForm extends Component {
     return (
       <Paper style={formStyle.container || null}>
         {
-          userInfo.loggedIn
-          ? <section style={formStyle.avatarContainer || null}>
-            <h1>Welcome!</h1>
-            <Avatar style={formStyle.avatarContainer.avatar || null}>
-              {userInfo.displayName
-                ? userInfo.displayName.charAt(0)
-                : 'ME'}
-            </Avatar>
+          userInfo.loggedIn ?
+            <section style={formStyle.avatarContainer || null}>
+              <h1>Welcome!</h1>
+              <Avatar style={formStyle.avatarContainer.avatar || null}>
+                {userInfo.displayName
+                  ? userInfo.displayName.charAt(0)
+                  : 'ME'}
+              </Avatar>
             </section>
-          : <section style={formStyle.credentialInputs}>
-            <CredentialInput
-              htmlIdName="DisplayNameInput"
-              inputTitle="Display Name"
-              inputType="text"
-              contentObjectName="displayName"
-              contentEmptyState={{ displayName: '' }}
-              contentObjectPropertyValue={userInfo.displayName}
-              contentObjectPropertyName=""
-              index={null}
-              event={null}
-              handleFormChange={(event) => { this.handleFormChange(event, 'displayName'); }}
-            />
-            <CredentialInput
-              htmlIdName="UserNameInput"
-              inputTitle="User Email"
-              inputType="email"
-              contentObjectName="userName"
-              contentEmptyState={{ userName: '' }}
-              contentObjectPropertyValue={userInfo.userName}
-              contentObjectPropertyName=""
-              index={null}
-              event={null}
-              handleFormChange={(event) => { this.handleFormChange(event, 'userName'); }}
-            />
+          :
+            <section style={formStyle.credentialInputs}>
+              <CredentialInput
+                htmlIdName="DisplayNameInput"
+                inputTitle="Display Name"
+                inputType="text"
+                contentObjectName="displayName"
+                contentEmptyState={{ displayName: '' }}
+                contentObjectPropertyValue={userInfo.displayName}
+                contentObjectPropertyName=""
+                index={null}
+                event={null}
+                handleFormChange={(event) => { this.handleFormChange(event, 'displayName'); }}
+              />
+              <CredentialInput
+                htmlIdName="UserNameInput"
+                inputTitle="User Email"
+                inputType="email"
+                contentObjectName="userName"
+                contentEmptyState={{ userName: '' }}
+                contentObjectPropertyValue={userInfo.userName}
+                contentObjectPropertyName=""
+                index={null}
+                event={null}
+                handleFormChange={(event) => { this.handleFormChange(event, 'userName'); }}
+              />
 
-            <CredentialInput
-              htmlIdName="PasswordInput"
-              inputTitle="Password"
-              inputType="password"
-              contentObjectName="password"
-              contentEmptyState={{ password: '' }}
-              contentObjectPropertyValue={userInfo.password}
-              contentObjectPropertyName="password"
-              index={null}
-              event={null}
-              handleFormChange={(event) => { this.handleFormChange(event, 'password'); }}
-            />
+              <CredentialInput
+                htmlIdName="PasswordInput"
+                inputTitle="Password"
+                inputType="password"
+                contentObjectName="password"
+                contentEmptyState={{ password: '' }}
+                contentObjectPropertyValue={userInfo.password}
+                contentObjectPropertyName="password"
+                index={null}
+                event={null}
+                handleFormChange={(event) => { this.handleFormChange(event, 'password'); }}
+              />
             </section>
         }
 
@@ -143,19 +139,21 @@ export default class RegisterForm extends Component {
             : null
         }
         {
-          statusCode === 'ezeewei/validate-email'
-            ? <p>We just sent a email to validate your email address!{postEmailValidationPhrase}
-              </p>
+          statusCode === 'ezeewei/validate-email' ?
+            <p>
+              We just sent a email to validate your email address!{postEmailValidationPhrase}
+            </p>
             : null
         }
 
         {
-          userInfo.loggedIn
-          ? <Button raised color="primary" onClick={handleLogout}>
+          userInfo.loggedIn ?
+            <Button raised color="primary" onClick={handleLogout}>
               Log Out
             </Button>
-          : <Button raised disabled={this.state.isRegistering && !statusCode} color="primary" onClick={this.registerNewUser}>
-            {
+          :
+            <Button raised disabled={this.state.isRegistering && !statusCode} color="primary" onClick={this.registerNewUser}>
+              {
                 this.state.isRegistering && !statusCode
                 ? 'Registering...'
                 : 'Register & Enjoy!'
@@ -169,17 +167,27 @@ export default class RegisterForm extends Component {
 }
 
 RegisterForm.propTypes = {
-  content: PropTypes.object,
-  style: PropTypes.object,
-  type: PropTypes.string,
-  userInfo: PropTypes.object,
+  userInfo: PropTypes.objectOf(PropTypes.any),
   isRegistering: PropTypes.bool,
   layout: PropTypes.string,
   // TODO: following SHOULD be .func.isRequired, but for some reason strange prop
   // validation comes up even what got pass IS func.....
-  handleRegister: PropTypes.any,
-  handleLogout: PropTypes.any,
-  handleRegisterFormChange: PropTypes.any,
+  handleRegister: PropTypes.func,
+  handleLogout: PropTypes.func,
+  handleRegisterFormChange: PropTypes.func,
   statusCode: PropTypes.string,
-  postEmailValidationPhrase: PropTypes.any,
+  postEmailValidationPhrase: PropTypes.string,
+};
+
+RegisterForm.defaultProps = {
+  userInfo: {},
+  isRegistering: false,
+  layout: 'standAlone',
+  // TODO: following SHOULD be .func.isRequired, but for some reason strange prop
+  // validation comes up even what got pass IS func.....
+  handleRegister: () => {},
+  handleLogout: () => {},
+  handleRegisterFormChange: () => {},
+  statusCode: PropTypes.string,
+  postEmailValidationPhrase: '',
 };

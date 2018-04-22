@@ -2,13 +2,13 @@
 
 exports[`Storyshots LogoBar default 1`] = `
 <section
-  className="Container__exports-cGduGO jUyOao"
+  className="sc-eNQAEJ GJZQH"
 >
   <section
-    className="LogoBox__exports-eNktoS hdueJw"
+    className="sc-hMqMXs cZOQOH"
   >
     <img
-      className="Logo__exports-khaJIn etonjF"
+      className="sc-kEYyzF bnShOR"
       src="./assets/images/logo.svg"
     />
   </section>

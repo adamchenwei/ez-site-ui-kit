@@ -17,29 +17,29 @@ exports[`Storyshots Component/Molecule/ES6/SlideBasicCallToAction default 1`] = 
     }
   >
     <section
-      className="Container-gZqETv JzdKd"
+      className="sc-jwKygS bYqhLd"
       style={null}
     >
       <section
-        className="CenteredCtaTextContainer-hJEdzF eBTRBT"
+        className="sc-lhVmIH kDnGja"
       >
         <span
-          className="Title-kEkEAm eqgnIc"
+          className="sc-elJkPf bWTQfH"
         >
           Enjoyable
         </span>
         <span
-          className="SubTitle-iuoIPa fBktol"
+          className="sc-jtRfpW daOKlg"
         >
           View Our Beautiful Slide
         </span>
         <span
-          className="Paragraph-hHEPzZ dFAwgl"
+          className="sc-kTUwUJ hoIETf"
         >
           we got this beautiful slide that is crazy good, please try it out yourself when you have time!
         </span>
         <section
-          className="CtaButtonContainer-jzxGxK dLLlfc"
+          className="sc-btzYZH ikpJUI"
         >
           <button>
             my custom button
@@ -47,11 +47,11 @@ exports[`Storyshots Component/Molecule/ES6/SlideBasicCallToAction default 1`] = 
         </section>
       </section>
       <section
-        className="BackgroundImageContainer-bYnZFo caukJQ"
+        className="sc-dqBHgY gEqyXK"
       >
         <img
           alt="slide-background"
-          className="BackgroundImage-fVqyev bMuLyk"
+          className="sc-bYSBpT gKgkXo"
           src="./placeholder/images/1040x700color515151.svg"
         />
       </section>

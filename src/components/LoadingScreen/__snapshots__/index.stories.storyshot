@@ -2,25 +2,25 @@
 
 exports[`Storyshots Component/LoadingScreen/Default default 1`] = `
 <section
-  className="LoadingMaskContainer-hGfXWf fDTObf"
+  className="sc-dxgOiQ cKsexn"
 >
   <section
-    className="MaskingBackgroundContainer-goHeYq hxtXxm"
+    className="sc-kGXeez fUAcnh"
   >
     <img
-      className="LogoContainer-byHpFi dcqnxi"
+      className="sc-ckVGcZ NIkid"
       src=""
     />
     <section
-      className="LoadingBarContainer-iZnhQC iRpnww"
+      className="sc-jKJlTe hvaBDX"
     >
       <div
-        className="Bar-gSSpUe eThZd"
+        className="sc-bdVaJa fCebmG"
       />
     </section>
   </section>
   <section
-    className="OpaqBackground-cIZeJE ewDfnp"
+    className="sc-kpOJdX gcVYan"
   />
 </section>
 `;

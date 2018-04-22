@@ -17,14 +17,14 @@ exports[`Storyshots Component/ES6/Organism/SliderShell/Stand Alone 3 slides: 1st
     }
   >
     <section
-      className="Container-gZqETv hbYoHa"
+      className="sc-gzOgki fuNUoJ"
       style={Object {}}
     >
       <section
-        className="PositionedSlideContainer-gOwGkm duiVPZ"
+        className="sc-dfVpRl kWmjBW"
       >
         <section
-          className="Container-gZqETv JzdKd"
+          className="sc-jwKygS bYqhLd"
           style={
             Object {
               "opacity": 1,
@@ -34,25 +34,25 @@ exports[`Storyshots Component/ES6/Organism/SliderShell/Stand Alone 3 slides: 1st
           }
         >
           <section
-            className="CenteredCtaTextContainer-hJEdzF eBTRBT"
+            className="sc-lhVmIH kDnGja"
           >
             <span
-              className="Title-kEkEAm eqgnIc"
+              className="sc-elJkPf bWTQfH"
             >
               Happy
             </span>
             <span
-              className="SubTitle-iuoIPa fBktol"
+              className="sc-jtRfpW daOKlg"
             >
               View Our Happy Slide
             </span>
             <span
-              className="Paragraph-hHEPzZ dFAwgl"
+              className="sc-kTUwUJ hoIETf"
             >
               we got this beautiful slide that is crazy good, please try it out yourself when you have time!
             </span>
             <section
-              className="CtaButtonContainer-jzxGxK dLLlfc"
+              className="sc-btzYZH ikpJUI"
             >
               <button>
                 my custom button 1
@@ -60,21 +60,21 @@ exports[`Storyshots Component/ES6/Organism/SliderShell/Stand Alone 3 slides: 1st
             </section>
           </section>
           <section
-            className="BackgroundImageContainer-bYnZFo caukJQ"
+            className="sc-dqBHgY gEqyXK"
           >
             <img
               alt="slide-background"
-              className="BackgroundImage-fVqyev bMuLyk"
+              className="sc-bYSBpT gKgkXo"
               src="./placeholder/images/1040x700color355952.svg"
             />
           </section>
         </section>
       </section>
       <section
-        className="PositionedSlideContainer-gOwGkm duiVPZ"
+        className="sc-dfVpRl kWmjBW"
       >
         <section
-          className="Container-gZqETv JzdKd"
+          className="sc-jwKygS bYqhLd"
           style={
             Object {
               "opacity": 0,
@@ -84,25 +84,25 @@ exports[`Storyshots Component/ES6/Organism/SliderShell/Stand Alone 3 slides: 1st
           }
         >
           <section
-            className="CenteredCtaTextContainer-hJEdzF eBTRBT"
+            className="sc-lhVmIH kDnGja"
           >
             <span
-              className="Title-kEkEAm eqgnIc"
+              className="sc-elJkPf bWTQfH"
             >
               Enjoyable
             </span>
             <span
-              className="SubTitle-iuoIPa fBktol"
+              className="sc-jtRfpW daOKlg"
             >
               View Our Enjoyable Slide
             </span>
             <span
-              className="Paragraph-hHEPzZ dFAwgl"
+              className="sc-kTUwUJ hoIETf"
             >
               we got this beautiful slide that is crazy good, please try it out yourself when you have time!
             </span>
             <section
-              className="CtaButtonContainer-jzxGxK dLLlfc"
+              className="sc-btzYZH ikpJUI"
             >
               <button>
                 my custom button 1
@@ -110,21 +110,21 @@ exports[`Storyshots Component/ES6/Organism/SliderShell/Stand Alone 3 slides: 1st
             </section>
           </section>
           <section
-            className="BackgroundImageContainer-bYnZFo caukJQ"
+            className="sc-dqBHgY gEqyXK"
           >
             <img
               alt="slide-background"
-              className="BackgroundImage-fVqyev bMuLyk"
+              className="sc-bYSBpT gKgkXo"
               src="./placeholder/images/1040x700color515151.svg"
             />
           </section>
         </section>
       </section>
       <section
-        className="PositionedSlideContainer-gOwGkm duiVPZ"
+        className="sc-dfVpRl kWmjBW"
       >
         <section
-          className="Container-gZqETv JzdKd"
+          className="sc-jwKygS bYqhLd"
           style={
             Object {
               "opacity": 0,
@@ -134,25 +134,25 @@ exports[`Storyshots Component/ES6/Organism/SliderShell/Stand Alone 3 slides: 1st
           }
         >
           <section
-            className="CenteredCtaTextContainer-hJEdzF eBTRBT"
+            className="sc-lhVmIH kDnGja"
           >
             <span
-              className="Title-kEkEAm eqgnIc"
+              className="sc-elJkPf bWTQfH"
             >
               Funny
             </span>
             <span
-              className="SubTitle-iuoIPa fBktol"
+              className="sc-jtRfpW daOKlg"
             >
               View Our Funny Slide
             </span>
             <span
-              className="Paragraph-hHEPzZ dFAwgl"
+              className="sc-kTUwUJ hoIETf"
             >
               we got this beautiful slide that is crazy good, please try it out yourself when you have time!
             </span>
             <section
-              className="CtaButtonContainer-jzxGxK dLLlfc"
+              className="sc-btzYZH ikpJUI"
             >
               <button>
                 my custom button 1
@@ -160,11 +160,11 @@ exports[`Storyshots Component/ES6/Organism/SliderShell/Stand Alone 3 slides: 1st
             </section>
           </section>
           <section
-            className="BackgroundImageContainer-bYnZFo caukJQ"
+            className="sc-dqBHgY gEqyXK"
           >
             <img
               alt="slide-background"
-              className="BackgroundImage-fVqyev bMuLyk"
+              className="sc-bYSBpT gKgkXo"
               src="./placeholder/images/1040x700color373e7a.svg"
             />
           </section>
@@ -192,14 +192,14 @@ exports[`Storyshots Component/ES6/Organism/SliderShell/Stand Alone 3 slides: 2nd
     }
   >
     <section
-      className="Container-gZqETv hbYoHa"
+      className="sc-gzOgki fuNUoJ"
       style={Object {}}
     >
       <section
-        className="PositionedSlideContainer-gOwGkm duiVPZ"
+        className="sc-dfVpRl kWmjBW"
       >
         <section
-          className="Container-gZqETv JzdKd"
+          className="sc-jwKygS bYqhLd"
           style={
             Object {
               "opacity": 0,
@@ -209,25 +209,25 @@ exports[`Storyshots Component/ES6/Organism/SliderShell/Stand Alone 3 slides: 2nd
           }
         >
           <section
-            className="CenteredCtaTextContainer-hJEdzF eBTRBT"
+            className="sc-lhVmIH kDnGja"
           >
             <span
-              className="Title-kEkEAm eqgnIc"
+              className="sc-elJkPf bWTQfH"
             >
               Happy
             </span>
             <span
-              className="SubTitle-iuoIPa fBktol"
+              className="sc-jtRfpW daOKlg"
             >
               View Our Happy Slide
             </span>
             <span
-              className="Paragraph-hHEPzZ dFAwgl"
+              className="sc-kTUwUJ hoIETf"
             >
               we got this beautiful slide that is crazy good, please try it out yourself when you have time!
             </span>
             <section
-              className="CtaButtonContainer-jzxGxK dLLlfc"
+              className="sc-btzYZH ikpJUI"
             >
               <button>
                 my custom button 1
@@ -235,21 +235,21 @@ exports[`Storyshots Component/ES6/Organism/SliderShell/Stand Alone 3 slides: 2nd
             </section>
           </section>
           <section
-            className="BackgroundImageContainer-bYnZFo caukJQ"
+            className="sc-dqBHgY gEqyXK"
           >
             <img
               alt="slide-background"
-              className="BackgroundImage-fVqyev bMuLyk"
+              className="sc-bYSBpT gKgkXo"
               src="./placeholder/images/1040x700color355952.svg"
             />
           </section>
         </section>
       </section>
       <section
-        className="PositionedSlideContainer-gOwGkm duiVPZ"
+        className="sc-dfVpRl kWmjBW"
       >
         <section
-          className="Container-gZqETv JzdKd"
+          className="sc-jwKygS bYqhLd"
           style={
             Object {
               "opacity": 1,
@@ -259,25 +259,25 @@ exports[`Storyshots Component/ES6/Organism/SliderShell/Stand Alone 3 slides: 2nd
           }
         >
           <section
-            className="CenteredCtaTextContainer-hJEdzF eBTRBT"
+            className="sc-lhVmIH kDnGja"
           >
             <span
-              className="Title-kEkEAm eqgnIc"
+              className="sc-elJkPf bWTQfH"
             >
               Enjoyable
             </span>
             <span
-              className="SubTitle-iuoIPa fBktol"
+              className="sc-jtRfpW daOKlg"
             >
               View Our Enjoyable Slide
             </span>
             <span
-              className="Paragraph-hHEPzZ dFAwgl"
+              className="sc-kTUwUJ hoIETf"
             >
               we got this beautiful slide that is crazy good, please try it out yourself when you have time!
             </span>
             <section
-              className="CtaButtonContainer-jzxGxK dLLlfc"
+              className="sc-btzYZH ikpJUI"
             >
               <button>
                 my custom button 1
@@ -285,21 +285,21 @@ exports[`Storyshots Component/ES6/Organism/SliderShell/Stand Alone 3 slides: 2nd
             </section>
           </section>
           <section
-            className="BackgroundImageContainer-bYnZFo caukJQ"
+            className="sc-dqBHgY gEqyXK"
           >
             <img
               alt="slide-background"
-              className="BackgroundImage-fVqyev bMuLyk"
+              className="sc-bYSBpT gKgkXo"
               src="./placeholder/images/1040x700color515151.svg"
             />
           </section>
         </section>
       </section>
       <section
-        className="PositionedSlideContainer-gOwGkm duiVPZ"
+        className="sc-dfVpRl kWmjBW"
       >
         <section
-          className="Container-gZqETv JzdKd"
+          className="sc-jwKygS bYqhLd"
           style={
             Object {
               "opacity": 0,
@@ -309,25 +309,25 @@ exports[`Storyshots Component/ES6/Organism/SliderShell/Stand Alone 3 slides: 2nd
           }
         >
           <section
-            className="CenteredCtaTextContainer-hJEdzF eBTRBT"
+            className="sc-lhVmIH kDnGja"
           >
             <span
-              className="Title-kEkEAm eqgnIc"
+              className="sc-elJkPf bWTQfH"
             >
               Funny
             </span>
             <span
-              className="SubTitle-iuoIPa fBktol"
+              className="sc-jtRfpW daOKlg"
             >
               View Our Funny Slide
             </span>
             <span
-              className="Paragraph-hHEPzZ dFAwgl"
+              className="sc-kTUwUJ hoIETf"
             >
               we got this beautiful slide that is crazy good, please try it out yourself when you have time!
             </span>
             <section
-              className="CtaButtonContainer-jzxGxK dLLlfc"
+              className="sc-btzYZH ikpJUI"
             >
               <button>
                 my custom button 1
@@ -335,11 +335,11 @@ exports[`Storyshots Component/ES6/Organism/SliderShell/Stand Alone 3 slides: 2nd
             </section>
           </section>
           <section
-            className="BackgroundImageContainer-bYnZFo caukJQ"
+            className="sc-dqBHgY gEqyXK"
           >
             <img
               alt="slide-background"
-              className="BackgroundImage-fVqyev bMuLyk"
+              className="sc-bYSBpT gKgkXo"
               src="./placeholder/images/1040x700color373e7a.svg"
             />
           </section>
@@ -367,14 +367,14 @@ exports[`Storyshots Component/ES6/Organism/SliderShell/Stand Alone 3 slides: las
     }
   >
     <section
-      className="Container-gZqETv hbYoHa"
+      className="sc-gzOgki fuNUoJ"
       style={Object {}}
     >
       <section
-        className="PositionedSlideContainer-gOwGkm duiVPZ"
+        className="sc-dfVpRl kWmjBW"
       >
         <section
-          className="Container-gZqETv JzdKd"
+          className="sc-jwKygS bYqhLd"
           style={
             Object {
               "opacity": 0,
@@ -384,25 +384,25 @@ exports[`Storyshots Component/ES6/Organism/SliderShell/Stand Alone 3 slides: las
           }
         >
           <section
-            className="CenteredCtaTextContainer-hJEdzF eBTRBT"
+            className="sc-lhVmIH kDnGja"
           >
             <span
-              className="Title-kEkEAm eqgnIc"
+              className="sc-elJkPf bWTQfH"
             >
               Happy
             </span>
             <span
-              className="SubTitle-iuoIPa fBktol"
+              className="sc-jtRfpW daOKlg"
             >
               View Our Happy Slide
             </span>
             <span
-              className="Paragraph-hHEPzZ dFAwgl"
+              className="sc-kTUwUJ hoIETf"
             >
               we got this beautiful slide that is crazy good, please try it out yourself when you have time!
             </span>
             <section
-              className="CtaButtonContainer-jzxGxK dLLlfc"
+              className="sc-btzYZH ikpJUI"
             >
               <button>
                 my custom button 1
@@ -410,21 +410,21 @@ exports[`Storyshots Component/ES6/Organism/SliderShell/Stand Alone 3 slides: las
             </section>
           </section>
           <section
-            className="BackgroundImageContainer-bYnZFo caukJQ"
+            className="sc-dqBHgY gEqyXK"
           >
             <img
               alt="slide-background"
-              className="BackgroundImage-fVqyev bMuLyk"
+              className="sc-bYSBpT gKgkXo"
               src="./placeholder/images/1040x700color355952.svg"
             />
           </section>
         </section>
       </section>
       <section
-        className="PositionedSlideContainer-gOwGkm duiVPZ"
+        className="sc-dfVpRl kWmjBW"
       >
         <section
-          className="Container-gZqETv JzdKd"
+          className="sc-jwKygS bYqhLd"
           style={
             Object {
               "opacity": 0,
@@ -434,25 +434,25 @@ exports[`Storyshots Component/ES6/Organism/SliderShell/Stand Alone 3 slides: las
           }
         >
           <section
-            className="CenteredCtaTextContainer-hJEdzF eBTRBT"
+            className="sc-lhVmIH kDnGja"
           >
             <span
-              className="Title-kEkEAm eqgnIc"
+              className="sc-elJkPf bWTQfH"
             >
               Enjoyable
             </span>
             <span
-              className="SubTitle-iuoIPa fBktol"
+              className="sc-jtRfpW daOKlg"
             >
               View Our Enjoyable Slide
             </span>
             <span
-              className="Paragraph-hHEPzZ dFAwgl"
+              className="sc-kTUwUJ hoIETf"
             >
               we got this beautiful slide that is crazy good, please try it out yourself when you have time!
             </span>
             <section
-              className="CtaButtonContainer-jzxGxK dLLlfc"
+              className="sc-btzYZH ikpJUI"
             >
               <button>
                 my custom button 1
@@ -460,21 +460,21 @@ exports[`Storyshots Component/ES6/Organism/SliderShell/Stand Alone 3 slides: las
             </section>
           </section>
           <section
-            className="BackgroundImageContainer-bYnZFo caukJQ"
+            className="sc-dqBHgY gEqyXK"
           >
             <img
               alt="slide-background"
-              className="BackgroundImage-fVqyev bMuLyk"
+              className="sc-bYSBpT gKgkXo"
               src="./placeholder/images/1040x700color515151.svg"
             />
           </section>
         </section>
       </section>
       <section
-        className="PositionedSlideContainer-gOwGkm duiVPZ"
+        className="sc-dfVpRl kWmjBW"
       >
         <section
-          className="Container-gZqETv JzdKd"
+          className="sc-jwKygS bYqhLd"
           style={
             Object {
               "opacity": 1,
@@ -484,25 +484,25 @@ exports[`Storyshots Component/ES6/Organism/SliderShell/Stand Alone 3 slides: las
           }
         >
           <section
-            className="CenteredCtaTextContainer-hJEdzF eBTRBT"
+            className="sc-lhVmIH kDnGja"
           >
             <span
-              className="Title-kEkEAm eqgnIc"
+              className="sc-elJkPf bWTQfH"
             >
               Funny
             </span>
             <span
-              className="SubTitle-iuoIPa fBktol"
+              className="sc-jtRfpW daOKlg"
             >
               View Our Funny Slide
             </span>
             <span
-              className="Paragraph-hHEPzZ dFAwgl"
+              className="sc-kTUwUJ hoIETf"
             >
               we got this beautiful slide that is crazy good, please try it out yourself when you have time!
             </span>
             <section
-              className="CtaButtonContainer-jzxGxK dLLlfc"
+              className="sc-btzYZH ikpJUI"
             >
               <button>
                 my custom button 1
@@ -510,11 +510,11 @@ exports[`Storyshots Component/ES6/Organism/SliderShell/Stand Alone 3 slides: las
             </section>
           </section>
           <section
-            className="BackgroundImageContainer-bYnZFo caukJQ"
+            className="sc-dqBHgY gEqyXK"
           >
             <img
               alt="slide-background"
-              className="BackgroundImage-fVqyev bMuLyk"
+              className="sc-bYSBpT gKgkXo"
               src="./placeholder/images/1040x700color373e7a.svg"
             />
           </section>
@@ -542,33 +542,33 @@ exports[`Storyshots Component/ES6/Organism/SliderShell/Stand Alone default 1`] =
     }
   >
     <section
-      className="Container-gZqETv hbYoHa"
+      className="sc-gzOgki fuNUoJ"
       style={Object {}}
     >
       <section
-        className="Container-gZqETv JzdKd"
+        className="sc-jwKygS bYqhLd"
         style={null}
       >
         <section
-          className="CenteredCtaTextContainer-hJEdzF eBTRBT"
+          className="sc-lhVmIH kDnGja"
         >
           <span
-            className="Title-kEkEAm eqgnIc"
+            className="sc-elJkPf bWTQfH"
           >
             Enjoyable
           </span>
           <span
-            className="SubTitle-iuoIPa fBktol"
+            className="sc-jtRfpW daOKlg"
           >
             View Our Beautiful Slide
           </span>
           <span
-            className="Paragraph-hHEPzZ dFAwgl"
+            className="sc-kTUwUJ hoIETf"
           >
             we got this beautiful slide that is crazy good, please try it out yourself when you have time!
           </span>
           <section
-            className="CtaButtonContainer-jzxGxK dLLlfc"
+            className="sc-btzYZH ikpJUI"
           >
             <button>
               my custom button
@@ -576,11 +576,11 @@ exports[`Storyshots Component/ES6/Organism/SliderShell/Stand Alone default 1`] =
           </section>
         </section>
         <section
-          className="BackgroundImageContainer-bYnZFo caukJQ"
+          className="sc-dqBHgY gEqyXK"
         >
           <img
             alt="slide-background"
-            className="BackgroundImage-fVqyev bMuLyk"
+            className="sc-bYSBpT gKgkXo"
             src="./placeholder/images/1040x700color515151.svg"
           />
         </section>

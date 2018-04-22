@@ -2,17 +2,17 @@
 
 exports[`LoadingScreen renders as expected 1`] = `
 <section
-  className="MaskingBackgroundContainer-goHeYq hxtXxm"
+  className="sc-bwzfXH hvAhux"
 >
   <img
-    className="LogoContainer-byHpFi dcqnxi"
+    className="sc-ifAKCX jmfedv"
     src=""
   />
   <section
-    className="LoadingBarContainer-iZnhQC iRpnww"
+    className="sc-EHOje cZAkwI"
   >
     <div
-      className="Bar-gSSpUe eThZd"
+      className="sc-bdVaJa fCebmG"
     />
   </section>
 </section>

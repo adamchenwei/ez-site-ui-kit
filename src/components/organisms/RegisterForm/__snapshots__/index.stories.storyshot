@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots material-ui/Component/RegisterForm/Stand Alone Version already registered 1`] = `
+exports[`Storyshots Component/⚘ Organism/RegisterForm/Stand Alone already registered 1`] = `
 <div
-  className="MuiPaper-root-476 MuiPaper-shadow2-480 MuiPaper-rounded-477"
+  className="MuiPaper-root-789 MuiPaper-shadow2-793 MuiPaper-rounded-790"
   style={
     Object {
       "display": "flex",
@@ -21,27 +21,27 @@ exports[`Storyshots material-ui/Component/RegisterForm/Stand Alone Version alrea
     }
   >
     <div
-      className="MuiFormControl-root-503"
+      className="MuiFormControl-root-816"
       onBlur={[Function]}
       onFocus={[Function]}
       required={false}
     >
       <label
-        className="MuiFormLabel-root-513 MuiInputLabel-root-507 MuiInputLabel-formControl-508 MuiInputLabel-animated-511 MuiInputLabel-shrink-510"
+        className="MuiFormLabel-root-826 MuiInputLabel-root-820 MuiInputLabel-formControl-821 MuiInputLabel-animated-824 MuiInputLabel-shrink-823"
         data-shrink={true}
         htmlFor="displayNameDisplayNameInput"
       >
         Display Name
       </label>
       <div
-        className="MuiInput-root-517 MuiInput-formControl-518 MuiInput-inkbar-519 MuiInput-underline-523"
+        className="MuiInput-root-830 MuiInput-formControl-831 MuiInput-inkbar-832 MuiInput-underline-836"
         onBlur={[Function]}
         onFocus={[Function]}
       >
         <input
           autoComplete={undefined}
           autoFocus={undefined}
-          className="MuiInput-input-526 MuiInput-inputSingleline-529"
+          className="MuiInput-input-839 MuiInput-inputSingleline-842"
           defaultValue={undefined}
           disabled={false}
           id="displayNameDisplayNameInput"
@@ -59,27 +59,27 @@ exports[`Storyshots material-ui/Component/RegisterForm/Stand Alone Version alrea
       </div>
     </div>
     <div
-      className="MuiFormControl-root-503"
+      className="MuiFormControl-root-816"
       onBlur={[Function]}
       onFocus={[Function]}
       required={false}
     >
       <label
-        className="MuiFormLabel-root-513 MuiInputLabel-root-507 MuiInputLabel-formControl-508 MuiInputLabel-animated-511 MuiInputLabel-shrink-510"
+        className="MuiFormLabel-root-826 MuiInputLabel-root-820 MuiInputLabel-formControl-821 MuiInputLabel-animated-824 MuiInputLabel-shrink-823"
         data-shrink={true}
         htmlFor="userNameUserNameInput"
       >
         User Email
       </label>
       <div
-        className="MuiInput-root-517 MuiInput-formControl-518 MuiInput-inkbar-519 MuiInput-underline-523"
+        className="MuiInput-root-830 MuiInput-formControl-831 MuiInput-inkbar-832 MuiInput-underline-836"
         onBlur={[Function]}
         onFocus={[Function]}
       >
         <input
           autoComplete={undefined}
           autoFocus={undefined}
-          className="MuiInput-input-526 MuiInput-inputSingleline-529"
+          className="MuiInput-input-839 MuiInput-inputSingleline-842"
           defaultValue={undefined}
           disabled={false}
           id="userNameUserNameInput"
@@ -97,27 +97,27 @@ exports[`Storyshots material-ui/Component/RegisterForm/Stand Alone Version alrea
       </div>
     </div>
     <div
-      className="MuiFormControl-root-503"
+      className="MuiFormControl-root-816"
       onBlur={[Function]}
       onFocus={[Function]}
       required={false}
     >
       <label
-        className="MuiFormLabel-root-513 MuiInputLabel-root-507 MuiInputLabel-formControl-508 MuiInputLabel-animated-511 MuiInputLabel-shrink-510"
+        className="MuiFormLabel-root-826 MuiInputLabel-root-820 MuiInputLabel-formControl-821 MuiInputLabel-animated-824 MuiInputLabel-shrink-823"
         data-shrink={true}
         htmlFor="passwordPasswordInput"
       >
         Password
       </label>
       <div
-        className="MuiInput-root-517 MuiInput-formControl-518 MuiInput-inkbar-519 MuiInput-underline-523"
+        className="MuiInput-root-830 MuiInput-formControl-831 MuiInput-inkbar-832 MuiInput-underline-836"
         onBlur={[Function]}
         onFocus={[Function]}
       >
         <input
           autoComplete={undefined}
           autoFocus={undefined}
-          className="MuiInput-input-526 MuiInput-inputSingleline-529"
+          className="MuiInput-input-839 MuiInput-inputSingleline-842"
           defaultValue={undefined}
           disabled={false}
           id="passwordPasswordInput"
@@ -145,7 +145,7 @@ exports[`Storyshots material-ui/Component/RegisterForm/Stand Alone Version alrea
     !
   </p>
   <button
-    className="MuiButtonBase-root-547 MuiButton-root-532 MuiButton-raised-539 MuiButton-raisedPrimary-541"
+    className="MuiButtonBase-root-860 MuiButton-root-845 MuiButton-raised-852 MuiButton-raisedPrimary-854"
     disabled={false}
     onBlur={[Function]}
     onClick={[Function]}
@@ -163,20 +163,20 @@ exports[`Storyshots material-ui/Component/RegisterForm/Stand Alone Version alrea
     type="button"
   >
     <span
-      className="MuiButton-label-534"
+      className="MuiButton-label-847"
     >
       Register & Enjoy!
     </span>
     <span
-      className="MuiTouchRipple-root-549"
+      className="MuiTouchRipple-root-862"
     />
   </button>
 </div>
 `;
 
-exports[`Storyshots material-ui/Component/RegisterForm/Stand Alone Version initial 1`] = `
+exports[`Storyshots Component/⚘ Organism/RegisterForm/Stand Alone initial 1`] = `
 <div
-  className="MuiPaper-root-316 MuiPaper-shadow2-320 MuiPaper-rounded-317"
+  className="MuiPaper-root-629 MuiPaper-shadow2-633 MuiPaper-rounded-630"
   style={
     Object {
       "display": "flex",
@@ -195,27 +195,27 @@ exports[`Storyshots material-ui/Component/RegisterForm/Stand Alone Version initi
     }
   >
     <div
-      className="MuiFormControl-root-343"
+      className="MuiFormControl-root-656"
       onBlur={[Function]}
       onFocus={[Function]}
       required={false}
     >
       <label
-        className="MuiFormLabel-root-353 MuiInputLabel-root-347 MuiInputLabel-formControl-348 MuiInputLabel-animated-351"
+        className="MuiFormLabel-root-666 MuiInputLabel-root-660 MuiInputLabel-formControl-661 MuiInputLabel-animated-664"
         data-shrink={false}
         htmlFor="displayNameDisplayNameInput"
       >
         Display Name
       </label>
       <div
-        className="MuiInput-root-357 MuiInput-formControl-358 MuiInput-inkbar-359 MuiInput-underline-363"
+        className="MuiInput-root-670 MuiInput-formControl-671 MuiInput-inkbar-672 MuiInput-underline-676"
         onBlur={[Function]}
         onFocus={[Function]}
       >
         <input
           autoComplete={undefined}
           autoFocus={undefined}
-          className="MuiInput-input-366 MuiInput-inputSingleline-369"
+          className="MuiInput-input-679 MuiInput-inputSingleline-682"
           defaultValue={undefined}
           disabled={false}
           id="displayNameDisplayNameInput"
@@ -233,27 +233,27 @@ exports[`Storyshots material-ui/Component/RegisterForm/Stand Alone Version initi
       </div>
     </div>
     <div
-      className="MuiFormControl-root-343"
+      className="MuiFormControl-root-656"
       onBlur={[Function]}
       onFocus={[Function]}
       required={false}
     >
       <label
-        className="MuiFormLabel-root-353 MuiInputLabel-root-347 MuiInputLabel-formControl-348 MuiInputLabel-animated-351"
+        className="MuiFormLabel-root-666 MuiInputLabel-root-660 MuiInputLabel-formControl-661 MuiInputLabel-animated-664"
         data-shrink={false}
         htmlFor="userNameUserNameInput"
       >
         User Email
       </label>
       <div
-        className="MuiInput-root-357 MuiInput-formControl-358 MuiInput-inkbar-359 MuiInput-underline-363"
+        className="MuiInput-root-670 MuiInput-formControl-671 MuiInput-inkbar-672 MuiInput-underline-676"
         onBlur={[Function]}
         onFocus={[Function]}
       >
         <input
           autoComplete={undefined}
           autoFocus={undefined}
-          className="MuiInput-input-366 MuiInput-inputSingleline-369"
+          className="MuiInput-input-679 MuiInput-inputSingleline-682"
           defaultValue={undefined}
           disabled={false}
           id="userNameUserNameInput"
@@ -271,27 +271,27 @@ exports[`Storyshots material-ui/Component/RegisterForm/Stand Alone Version initi
       </div>
     </div>
     <div
-      className="MuiFormControl-root-343"
+      className="MuiFormControl-root-656"
       onBlur={[Function]}
       onFocus={[Function]}
       required={false}
     >
       <label
-        className="MuiFormLabel-root-353 MuiInputLabel-root-347 MuiInputLabel-formControl-348 MuiInputLabel-animated-351"
+        className="MuiFormLabel-root-666 MuiInputLabel-root-660 MuiInputLabel-formControl-661 MuiInputLabel-animated-664"
         data-shrink={false}
         htmlFor="passwordPasswordInput"
       >
         Password
       </label>
       <div
-        className="MuiInput-root-357 MuiInput-formControl-358 MuiInput-inkbar-359 MuiInput-underline-363"
+        className="MuiInput-root-670 MuiInput-formControl-671 MuiInput-inkbar-672 MuiInput-underline-676"
         onBlur={[Function]}
         onFocus={[Function]}
       >
         <input
           autoComplete={undefined}
           autoFocus={undefined}
-          className="MuiInput-input-366 MuiInput-inputSingleline-369"
+          className="MuiInput-input-679 MuiInput-inputSingleline-682"
           defaultValue={undefined}
           disabled={false}
           id="passwordPasswordInput"
@@ -310,7 +310,7 @@ exports[`Storyshots material-ui/Component/RegisterForm/Stand Alone Version initi
     </div>
   </section>
   <button
-    className="MuiButtonBase-root-387 MuiButton-root-372 MuiButton-raised-379 MuiButton-raisedPrimary-381"
+    className="MuiButtonBase-root-700 MuiButton-root-685 MuiButton-raised-692 MuiButton-raisedPrimary-694"
     disabled={false}
     onBlur={[Function]}
     onClick={[Function]}
@@ -328,20 +328,20 @@ exports[`Storyshots material-ui/Component/RegisterForm/Stand Alone Version initi
     type="button"
   >
     <span
-      className="MuiButton-label-374"
+      className="MuiButton-label-687"
     >
       Register & Enjoy!
     </span>
     <span
-      className="MuiTouchRipple-root-389"
+      className="MuiTouchRipple-root-702"
     />
   </button>
 </div>
 `;
 
-exports[`Storyshots material-ui/Component/RegisterForm/Stand Alone Version network failure 1`] = `
+exports[`Storyshots Component/⚘ Organism/RegisterForm/Stand Alone network failure 1`] = `
 <div
-  className="MuiPaper-root-556 MuiPaper-shadow2-560 MuiPaper-rounded-557"
+  className="MuiPaper-root-869 MuiPaper-shadow2-873 MuiPaper-rounded-870"
   style={
     Object {
       "display": "flex",
@@ -360,27 +360,27 @@ exports[`Storyshots material-ui/Component/RegisterForm/Stand Alone Version netwo
     }
   >
     <div
-      className="MuiFormControl-root-583"
+      className="MuiFormControl-root-896"
       onBlur={[Function]}
       onFocus={[Function]}
       required={false}
     >
       <label
-        className="MuiFormLabel-root-593 MuiInputLabel-root-587 MuiInputLabel-formControl-588 MuiInputLabel-animated-591 MuiInputLabel-shrink-590"
+        className="MuiFormLabel-root-906 MuiInputLabel-root-900 MuiInputLabel-formControl-901 MuiInputLabel-animated-904 MuiInputLabel-shrink-903"
         data-shrink={true}
         htmlFor="displayNameDisplayNameInput"
       >
         Display Name
       </label>
       <div
-        className="MuiInput-root-597 MuiInput-formControl-598 MuiInput-inkbar-599 MuiInput-underline-603"
+        className="MuiInput-root-910 MuiInput-formControl-911 MuiInput-inkbar-912 MuiInput-underline-916"
         onBlur={[Function]}
         onFocus={[Function]}
       >
         <input
           autoComplete={undefined}
           autoFocus={undefined}
-          className="MuiInput-input-606 MuiInput-inputSingleline-609"
+          className="MuiInput-input-919 MuiInput-inputSingleline-922"
           defaultValue={undefined}
           disabled={false}
           id="displayNameDisplayNameInput"
@@ -398,27 +398,27 @@ exports[`Storyshots material-ui/Component/RegisterForm/Stand Alone Version netwo
       </div>
     </div>
     <div
-      className="MuiFormControl-root-583"
+      className="MuiFormControl-root-896"
       onBlur={[Function]}
       onFocus={[Function]}
       required={false}
     >
       <label
-        className="MuiFormLabel-root-593 MuiInputLabel-root-587 MuiInputLabel-formControl-588 MuiInputLabel-animated-591 MuiInputLabel-shrink-590"
+        className="MuiFormLabel-root-906 MuiInputLabel-root-900 MuiInputLabel-formControl-901 MuiInputLabel-animated-904 MuiInputLabel-shrink-903"
         data-shrink={true}
         htmlFor="userNameUserNameInput"
       >
         User Email
       </label>
       <div
-        className="MuiInput-root-597 MuiInput-formControl-598 MuiInput-inkbar-599 MuiInput-underline-603"
+        className="MuiInput-root-910 MuiInput-formControl-911 MuiInput-inkbar-912 MuiInput-underline-916"
         onBlur={[Function]}
         onFocus={[Function]}
       >
         <input
           autoComplete={undefined}
           autoFocus={undefined}
-          className="MuiInput-input-606 MuiInput-inputSingleline-609"
+          className="MuiInput-input-919 MuiInput-inputSingleline-922"
           defaultValue={undefined}
           disabled={false}
           id="userNameUserNameInput"
@@ -436,27 +436,27 @@ exports[`Storyshots material-ui/Component/RegisterForm/Stand Alone Version netwo
       </div>
     </div>
     <div
-      className="MuiFormControl-root-583"
+      className="MuiFormControl-root-896"
       onBlur={[Function]}
       onFocus={[Function]}
       required={false}
     >
       <label
-        className="MuiFormLabel-root-593 MuiInputLabel-root-587 MuiInputLabel-formControl-588 MuiInputLabel-animated-591 MuiInputLabel-shrink-590"
+        className="MuiFormLabel-root-906 MuiInputLabel-root-900 MuiInputLabel-formControl-901 MuiInputLabel-animated-904 MuiInputLabel-shrink-903"
         data-shrink={true}
         htmlFor="passwordPasswordInput"
       >
         Password
       </label>
       <div
-        className="MuiInput-root-597 MuiInput-formControl-598 MuiInput-inkbar-599 MuiInput-underline-603"
+        className="MuiInput-root-910 MuiInput-formControl-911 MuiInput-inkbar-912 MuiInput-underline-916"
         onBlur={[Function]}
         onFocus={[Function]}
       >
         <input
           autoComplete={undefined}
           autoFocus={undefined}
-          className="MuiInput-input-606 MuiInput-inputSingleline-609"
+          className="MuiInput-input-919 MuiInput-inputSingleline-922"
           defaultValue={undefined}
           disabled={false}
           id="passwordPasswordInput"
@@ -478,7 +478,7 @@ exports[`Storyshots material-ui/Component/RegisterForm/Stand Alone Version netwo
     Check the internet connection? try again later?
   </p>
   <button
-    className="MuiButtonBase-root-627 MuiButton-root-612 MuiButton-raised-619 MuiButton-raisedPrimary-621"
+    className="MuiButtonBase-root-940 MuiButton-root-925 MuiButton-raised-932 MuiButton-raisedPrimary-934"
     disabled={false}
     onBlur={[Function]}
     onClick={[Function]}
@@ -496,20 +496,20 @@ exports[`Storyshots material-ui/Component/RegisterForm/Stand Alone Version netwo
     type="button"
   >
     <span
-      className="MuiButton-label-614"
+      className="MuiButton-label-927"
     >
       Register & Enjoy!
     </span>
     <span
-      className="MuiTouchRipple-root-629"
+      className="MuiTouchRipple-root-942"
     />
   </button>
 </div>
 `;
 
-exports[`Storyshots material-ui/Component/RegisterForm/Stand Alone Version registering 1`] = `
+exports[`Storyshots Component/⚘ Organism/RegisterForm/Stand Alone registering 1`] = `
 <div
-  className="MuiPaper-root-396 MuiPaper-shadow2-400 MuiPaper-rounded-397"
+  className="MuiPaper-root-709 MuiPaper-shadow2-713 MuiPaper-rounded-710"
   style={
     Object {
       "display": "flex",
@@ -528,27 +528,27 @@ exports[`Storyshots material-ui/Component/RegisterForm/Stand Alone Version regis
     }
   >
     <div
-      className="MuiFormControl-root-423"
+      className="MuiFormControl-root-736"
       onBlur={[Function]}
       onFocus={[Function]}
       required={false}
     >
       <label
-        className="MuiFormLabel-root-433 MuiInputLabel-root-427 MuiInputLabel-formControl-428 MuiInputLabel-animated-431 MuiInputLabel-shrink-430"
+        className="MuiFormLabel-root-746 MuiInputLabel-root-740 MuiInputLabel-formControl-741 MuiInputLabel-animated-744 MuiInputLabel-shrink-743"
         data-shrink={true}
         htmlFor="displayNameDisplayNameInput"
       >
         Display Name
       </label>
       <div
-        className="MuiInput-root-437 MuiInput-formControl-438 MuiInput-inkbar-439 MuiInput-underline-443"
+        className="MuiInput-root-750 MuiInput-formControl-751 MuiInput-inkbar-752 MuiInput-underline-756"
         onBlur={[Function]}
         onFocus={[Function]}
       >
         <input
           autoComplete={undefined}
           autoFocus={undefined}
-          className="MuiInput-input-446 MuiInput-inputSingleline-449"
+          className="MuiInput-input-759 MuiInput-inputSingleline-762"
           defaultValue={undefined}
           disabled={false}
           id="displayNameDisplayNameInput"
@@ -566,27 +566,27 @@ exports[`Storyshots material-ui/Component/RegisterForm/Stand Alone Version regis
       </div>
     </div>
     <div
-      className="MuiFormControl-root-423"
+      className="MuiFormControl-root-736"
       onBlur={[Function]}
       onFocus={[Function]}
       required={false}
     >
       <label
-        className="MuiFormLabel-root-433 MuiInputLabel-root-427 MuiInputLabel-formControl-428 MuiInputLabel-animated-431 MuiInputLabel-shrink-430"
+        className="MuiFormLabel-root-746 MuiInputLabel-root-740 MuiInputLabel-formControl-741 MuiInputLabel-animated-744 MuiInputLabel-shrink-743"
         data-shrink={true}
         htmlFor="userNameUserNameInput"
       >
         User Email
       </label>
       <div
-        className="MuiInput-root-437 MuiInput-formControl-438 MuiInput-inkbar-439 MuiInput-underline-443"
+        className="MuiInput-root-750 MuiInput-formControl-751 MuiInput-inkbar-752 MuiInput-underline-756"
         onBlur={[Function]}
         onFocus={[Function]}
       >
         <input
           autoComplete={undefined}
           autoFocus={undefined}
-          className="MuiInput-input-446 MuiInput-inputSingleline-449"
+          className="MuiInput-input-759 MuiInput-inputSingleline-762"
           defaultValue={undefined}
           disabled={false}
           id="userNameUserNameInput"
@@ -604,27 +604,27 @@ exports[`Storyshots material-ui/Component/RegisterForm/Stand Alone Version regis
       </div>
     </div>
     <div
-      className="MuiFormControl-root-423"
+      className="MuiFormControl-root-736"
       onBlur={[Function]}
       onFocus={[Function]}
       required={false}
     >
       <label
-        className="MuiFormLabel-root-433 MuiInputLabel-root-427 MuiInputLabel-formControl-428 MuiInputLabel-animated-431 MuiInputLabel-shrink-430"
+        className="MuiFormLabel-root-746 MuiInputLabel-root-740 MuiInputLabel-formControl-741 MuiInputLabel-animated-744 MuiInputLabel-shrink-743"
         data-shrink={true}
         htmlFor="passwordPasswordInput"
       >
         Password
       </label>
       <div
-        className="MuiInput-root-437 MuiInput-formControl-438 MuiInput-inkbar-439 MuiInput-underline-443"
+        className="MuiInput-root-750 MuiInput-formControl-751 MuiInput-inkbar-752 MuiInput-underline-756"
         onBlur={[Function]}
         onFocus={[Function]}
       >
         <input
           autoComplete={undefined}
           autoFocus={undefined}
-          className="MuiInput-input-446 MuiInput-inputSingleline-449"
+          className="MuiInput-input-759 MuiInput-inputSingleline-762"
           defaultValue={undefined}
           disabled={false}
           id="passwordPasswordInput"
@@ -643,7 +643,7 @@ exports[`Storyshots material-ui/Component/RegisterForm/Stand Alone Version regis
     </div>
   </section>
   <button
-    className="MuiButtonBase-root-467 MuiButton-root-452 MuiButton-raised-459 MuiButton-raisedPrimary-461"
+    className="MuiButtonBase-root-780 MuiButton-root-765 MuiButton-raised-772 MuiButton-raisedPrimary-774"
     disabled={false}
     onBlur={[Function]}
     onClick={[Function]}
@@ -661,20 +661,20 @@ exports[`Storyshots material-ui/Component/RegisterForm/Stand Alone Version regis
     type="button"
   >
     <span
-      className="MuiButton-label-454"
+      className="MuiButton-label-767"
     >
       Register & Enjoy!
     </span>
     <span
-      className="MuiTouchRipple-root-469"
+      className="MuiTouchRipple-root-782"
     />
   </button>
 </div>
 `;
 
-exports[`Storyshots material-ui/Component/RegisterForm/Stand Alone Version validation email sent with additional phrase 1`] = `
+exports[`Storyshots Component/⚘ Organism/RegisterForm/Stand Alone validation email sent with additional phrase 1`] = `
 <div
-  className="MuiPaper-root-716 MuiPaper-shadow2-720 MuiPaper-rounded-717"
+  className="MuiPaper-root-1029 MuiPaper-shadow2-1033 MuiPaper-rounded-1030"
   style={
     Object {
       "display": "flex",
@@ -693,27 +693,27 @@ exports[`Storyshots material-ui/Component/RegisterForm/Stand Alone Version valid
     }
   >
     <div
-      className="MuiFormControl-root-743"
+      className="MuiFormControl-root-1056"
       onBlur={[Function]}
       onFocus={[Function]}
       required={false}
     >
       <label
-        className="MuiFormLabel-root-753 MuiInputLabel-root-747 MuiInputLabel-formControl-748 MuiInputLabel-animated-751 MuiInputLabel-shrink-750"
+        className="MuiFormLabel-root-1066 MuiInputLabel-root-1060 MuiInputLabel-formControl-1061 MuiInputLabel-animated-1064 MuiInputLabel-shrink-1063"
         data-shrink={true}
         htmlFor="displayNameDisplayNameInput"
       >
         Display Name
       </label>
       <div
-        className="MuiInput-root-757 MuiInput-formControl-758 MuiInput-inkbar-759 MuiInput-underline-763"
+        className="MuiInput-root-1070 MuiInput-formControl-1071 MuiInput-inkbar-1072 MuiInput-underline-1076"
         onBlur={[Function]}
         onFocus={[Function]}
       >
         <input
           autoComplete={undefined}
           autoFocus={undefined}
-          className="MuiInput-input-766 MuiInput-inputSingleline-769"
+          className="MuiInput-input-1079 MuiInput-inputSingleline-1082"
           defaultValue={undefined}
           disabled={false}
           id="displayNameDisplayNameInput"
@@ -731,27 +731,27 @@ exports[`Storyshots material-ui/Component/RegisterForm/Stand Alone Version valid
       </div>
     </div>
     <div
-      className="MuiFormControl-root-743"
+      className="MuiFormControl-root-1056"
       onBlur={[Function]}
       onFocus={[Function]}
       required={false}
     >
       <label
-        className="MuiFormLabel-root-753 MuiInputLabel-root-747 MuiInputLabel-formControl-748 MuiInputLabel-animated-751 MuiInputLabel-shrink-750"
+        className="MuiFormLabel-root-1066 MuiInputLabel-root-1060 MuiInputLabel-formControl-1061 MuiInputLabel-animated-1064 MuiInputLabel-shrink-1063"
         data-shrink={true}
         htmlFor="userNameUserNameInput"
       >
         User Email
       </label>
       <div
-        className="MuiInput-root-757 MuiInput-formControl-758 MuiInput-inkbar-759 MuiInput-underline-763"
+        className="MuiInput-root-1070 MuiInput-formControl-1071 MuiInput-inkbar-1072 MuiInput-underline-1076"
         onBlur={[Function]}
         onFocus={[Function]}
       >
         <input
           autoComplete={undefined}
           autoFocus={undefined}
-          className="MuiInput-input-766 MuiInput-inputSingleline-769"
+          className="MuiInput-input-1079 MuiInput-inputSingleline-1082"
           defaultValue={undefined}
           disabled={false}
           id="userNameUserNameInput"
@@ -769,27 +769,27 @@ exports[`Storyshots material-ui/Component/RegisterForm/Stand Alone Version valid
       </div>
     </div>
     <div
-      className="MuiFormControl-root-743"
+      className="MuiFormControl-root-1056"
       onBlur={[Function]}
       onFocus={[Function]}
       required={false}
     >
       <label
-        className="MuiFormLabel-root-753 MuiInputLabel-root-747 MuiInputLabel-formControl-748 MuiInputLabel-animated-751 MuiInputLabel-shrink-750"
+        className="MuiFormLabel-root-1066 MuiInputLabel-root-1060 MuiInputLabel-formControl-1061 MuiInputLabel-animated-1064 MuiInputLabel-shrink-1063"
         data-shrink={true}
         htmlFor="passwordPasswordInput"
       >
         Password
       </label>
       <div
-        className="MuiInput-root-757 MuiInput-formControl-758 MuiInput-inkbar-759 MuiInput-underline-763"
+        className="MuiInput-root-1070 MuiInput-formControl-1071 MuiInput-inkbar-1072 MuiInput-underline-1076"
         onBlur={[Function]}
         onFocus={[Function]}
       >
         <input
           autoComplete={undefined}
           autoFocus={undefined}
-          className="MuiInput-input-766 MuiInput-inputSingleline-769"
+          className="MuiInput-input-1079 MuiInput-inputSingleline-1082"
           defaultValue={undefined}
           disabled={false}
           id="passwordPasswordInput"
@@ -812,7 +812,7 @@ exports[`Storyshots material-ui/Component/RegisterForm/Stand Alone Version valid
      And this is post email validation phrase addition!!!
   </p>
   <button
-    className="MuiButtonBase-root-787 MuiButton-root-772 MuiButton-raised-779 MuiButton-raisedPrimary-781"
+    className="MuiButtonBase-root-1100 MuiButton-root-1085 MuiButton-raised-1092 MuiButton-raisedPrimary-1094"
     disabled={false}
     onBlur={[Function]}
     onClick={[Function]}
@@ -830,20 +830,20 @@ exports[`Storyshots material-ui/Component/RegisterForm/Stand Alone Version valid
     type="button"
   >
     <span
-      className="MuiButton-label-774"
+      className="MuiButton-label-1087"
     >
       Register & Enjoy!
     </span>
     <span
-      className="MuiTouchRipple-root-789"
+      className="MuiTouchRipple-root-1102"
     />
   </button>
 </div>
 `;
 
-exports[`Storyshots material-ui/Component/RegisterForm/Stand Alone Version validation email sent without additional phrase 1`] = `
+exports[`Storyshots Component/⚘ Organism/RegisterForm/Stand Alone validation email sent without additional phrase 1`] = `
 <div
-  className="MuiPaper-root-636 MuiPaper-shadow2-640 MuiPaper-rounded-637"
+  className="MuiPaper-root-949 MuiPaper-shadow2-953 MuiPaper-rounded-950"
   style={
     Object {
       "display": "flex",
@@ -862,27 +862,27 @@ exports[`Storyshots material-ui/Component/RegisterForm/Stand Alone Version valid
     }
   >
     <div
-      className="MuiFormControl-root-663"
+      className="MuiFormControl-root-976"
       onBlur={[Function]}
       onFocus={[Function]}
       required={false}
     >
       <label
-        className="MuiFormLabel-root-673 MuiInputLabel-root-667 MuiInputLabel-formControl-668 MuiInputLabel-animated-671 MuiInputLabel-shrink-670"
+        className="MuiFormLabel-root-986 MuiInputLabel-root-980 MuiInputLabel-formControl-981 MuiInputLabel-animated-984 MuiInputLabel-shrink-983"
         data-shrink={true}
         htmlFor="displayNameDisplayNameInput"
       >
         Display Name
       </label>
       <div
-        className="MuiInput-root-677 MuiInput-formControl-678 MuiInput-inkbar-679 MuiInput-underline-683"
+        className="MuiInput-root-990 MuiInput-formControl-991 MuiInput-inkbar-992 MuiInput-underline-996"
         onBlur={[Function]}
         onFocus={[Function]}
       >
         <input
           autoComplete={undefined}
           autoFocus={undefined}
-          className="MuiInput-input-686 MuiInput-inputSingleline-689"
+          className="MuiInput-input-999 MuiInput-inputSingleline-1002"
           defaultValue={undefined}
           disabled={false}
           id="displayNameDisplayNameInput"
@@ -900,27 +900,27 @@ exports[`Storyshots material-ui/Component/RegisterForm/Stand Alone Version valid
       </div>
     </div>
     <div
-      className="MuiFormControl-root-663"
+      className="MuiFormControl-root-976"
       onBlur={[Function]}
       onFocus={[Function]}
       required={false}
     >
       <label
-        className="MuiFormLabel-root-673 MuiInputLabel-root-667 MuiInputLabel-formControl-668 MuiInputLabel-animated-671 MuiInputLabel-shrink-670"
+        className="MuiFormLabel-root-986 MuiInputLabel-root-980 MuiInputLabel-formControl-981 MuiInputLabel-animated-984 MuiInputLabel-shrink-983"
         data-shrink={true}
         htmlFor="userNameUserNameInput"
       >
         User Email
       </label>
       <div
-        className="MuiInput-root-677 MuiInput-formControl-678 MuiInput-inkbar-679 MuiInput-underline-683"
+        className="MuiInput-root-990 MuiInput-formControl-991 MuiInput-inkbar-992 MuiInput-underline-996"
         onBlur={[Function]}
         onFocus={[Function]}
       >
         <input
           autoComplete={undefined}
           autoFocus={undefined}
-          className="MuiInput-input-686 MuiInput-inputSingleline-689"
+          className="MuiInput-input-999 MuiInput-inputSingleline-1002"
           defaultValue={undefined}
           disabled={false}
           id="userNameUserNameInput"
@@ -938,27 +938,27 @@ exports[`Storyshots material-ui/Component/RegisterForm/Stand Alone Version valid
       </div>
     </div>
     <div
-      className="MuiFormControl-root-663"
+      className="MuiFormControl-root-976"
       onBlur={[Function]}
       onFocus={[Function]}
       required={false}
     >
       <label
-        className="MuiFormLabel-root-673 MuiInputLabel-root-667 MuiInputLabel-formControl-668 MuiInputLabel-animated-671 MuiInputLabel-shrink-670"
+        className="MuiFormLabel-root-986 MuiInputLabel-root-980 MuiInputLabel-formControl-981 MuiInputLabel-animated-984 MuiInputLabel-shrink-983"
         data-shrink={true}
         htmlFor="passwordPasswordInput"
       >
         Password
       </label>
       <div
-        className="MuiInput-root-677 MuiInput-formControl-678 MuiInput-inkbar-679 MuiInput-underline-683"
+        className="MuiInput-root-990 MuiInput-formControl-991 MuiInput-inkbar-992 MuiInput-underline-996"
         onBlur={[Function]}
         onFocus={[Function]}
       >
         <input
           autoComplete={undefined}
           autoFocus={undefined}
-          className="MuiInput-input-686 MuiInput-inputSingleline-689"
+          className="MuiInput-input-999 MuiInput-inputSingleline-1002"
           defaultValue={undefined}
           disabled={false}
           id="passwordPasswordInput"
@@ -981,7 +981,7 @@ exports[`Storyshots material-ui/Component/RegisterForm/Stand Alone Version valid
     
   </p>
   <button
-    className="MuiButtonBase-root-707 MuiButton-root-692 MuiButton-raised-699 MuiButton-raisedPrimary-701"
+    className="MuiButtonBase-root-1020 MuiButton-root-1005 MuiButton-raised-1012 MuiButton-raisedPrimary-1014"
     disabled={false}
     onBlur={[Function]}
     onClick={[Function]}
@@ -999,12 +999,12 @@ exports[`Storyshots material-ui/Component/RegisterForm/Stand Alone Version valid
     type="button"
   >
     <span
-      className="MuiButton-label-694"
+      className="MuiButton-label-1007"
     >
       Register & Enjoy!
     </span>
     <span
-      className="MuiTouchRipple-root-709"
+      className="MuiTouchRipple-root-1022"
     />
   </button>
 </div>

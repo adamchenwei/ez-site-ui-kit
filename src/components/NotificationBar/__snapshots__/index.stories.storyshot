@@ -2,16 +2,16 @@
 
 exports[`Storyshots NotificationBar default 1`] = `
 <section
-  className="Container-gZqETv ivjUjT"
+  className="sc-kjoXOD fYMbGo"
 >
   <a
-    className="LinkBody-eaXbrR hCOdQB"
+    className="sc-TOsTZ czSqpV"
     href="http://naturalorchards.us"
   >
     we are in opening sale!
   </a>
   <div
-    className="CloseButton-hyXXkh dOgJng"
+    className="sc-kgAjT hvdKeJ"
     onClick={[Function]}
   >
     x
