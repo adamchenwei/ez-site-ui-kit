@@ -2,7 +2,7 @@
 
 exports[`Storyshots LoginForm/Stand Alone Version Empty State 1`] = `
 <section
-  className="sc-dfVpRl gkIjeC"
+  className="sc-gzOgki caoIvz"
   style={
     Object {
       "display": "flex",
@@ -69,7 +69,7 @@ exports[`Storyshots LoginForm/Stand Alone Version Empty State 1`] = `
 
 exports[`Storyshots LoginForm/Stand Alone Version Logged In 1`] = `
 <section
-  className="sc-dfVpRl gkIjeC"
+  className="sc-gzOgki caoIvz"
   style={
     Object {
       "display": "flex",
@@ -130,7 +130,7 @@ exports[`Storyshots LoginForm/Stand Alone Version Logged In 1`] = `
 
 exports[`Storyshots LoginForm/Stand Alone Version Logged In But Return Route is Missing 1`] = `
 <section
-  className="sc-dfVpRl gkIjeC"
+  className="sc-gzOgki caoIvz"
   style={
     Object {
       "display": "flex",
@@ -177,7 +177,7 @@ exports[`Storyshots LoginForm/Stand Alone Version Logged In But Return Route is 
 
 exports[`Storyshots LoginForm/Stand Alone Version Logged In But User Name is Missing 1`] = `
 <section
-  className="sc-dfVpRl gkIjeC"
+  className="sc-gzOgki caoIvz"
   style={
     Object {
       "display": "flex",
@@ -238,7 +238,7 @@ exports[`Storyshots LoginForm/Stand Alone Version Logged In But User Name is Mis
 
 exports[`Storyshots LoginForm/Stand Alone Version Logging In 1`] = `
 <section
-  className="sc-dfVpRl gkIjeC"
+  className="sc-gzOgki caoIvz"
   style={
     Object {
       "display": "flex",
@@ -305,7 +305,7 @@ exports[`Storyshots LoginForm/Stand Alone Version Logging In 1`] = `
 
 exports[`Storyshots LoginForm/Stand Alone Version Not Logged In 1`] = `
 <section
-  className="sc-dfVpRl gkIjeC"
+  className="sc-gzOgki caoIvz"
   style={
     Object {
       "display": "flex",

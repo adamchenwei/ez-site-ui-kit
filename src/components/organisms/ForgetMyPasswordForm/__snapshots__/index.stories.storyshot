@@ -1,0 +1,151 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Component/⚘ Organism/ForgetMyPasswordForm/Stand Alone Initial 1`] = `
+<section
+  className="sc-dfVpRl gkIjeC"
+  style={
+    Object {
+      "display": "flex",
+      "flexFlow": "column",
+      "marginBottom": "24px",
+      "marginTop": "24px",
+    }
+  }
+>
+  <section
+    style={
+      Object {
+        "display": "flex",
+        "flexFlow": "column",
+      }
+    }
+  >
+    <div
+      className="form-group"
+    >
+      <label
+        className=" form-control-label"
+        htmlFor="userNameUserNameInput"
+      >
+        User Email
+      </label>
+      <input
+        className="form-control"
+        id="userNameUserNameInput"
+        onChange={[Function]}
+        type="email"
+        value=""
+      />
+    </div>
+  </section>
+  <button
+    className="btn btn-primary"
+    disabled={false}
+    onClick={[Function]}
+    raised={true}
+    type="button"
+  >
+    Reset My Password
+  </button>
+</section>
+`;
+
+exports[`Storyshots Component/⚘ Organism/ForgetMyPasswordForm/Stand Alone Resetted 1`] = `
+<section
+  className="sc-dfVpRl gkIjeC"
+  style={
+    Object {
+      "display": "flex",
+      "flexFlow": "column",
+      "marginBottom": "24px",
+      "marginTop": "24px",
+    }
+  }
+>
+  <section
+    style={
+      Object {
+        "display": "flex",
+        "flexFlow": "column",
+      }
+    }
+  >
+    <div
+      className="form-group"
+    >
+      <label
+        className=" form-control-label"
+        htmlFor="userNameUserNameInput"
+      >
+        User Email
+      </label>
+      <input
+        className="form-control"
+        id="userNameUserNameInput"
+        onChange={[Function]}
+        type="email"
+        value="adamchenwei@gmail.com"
+      />
+    </div>
+  </section>
+  <button
+    className="btn btn-primary"
+    disabled={false}
+    onClick={[Function]}
+    raised={true}
+    type="button"
+  >
+    Reset My Password
+  </button>
+</section>
+`;
+
+exports[`Storyshots Component/⚘ Organism/ForgetMyPasswordForm/Stand Alone Resetting 1`] = `
+<section
+  className="sc-dfVpRl gkIjeC"
+  style={
+    Object {
+      "display": "flex",
+      "flexFlow": "column",
+      "marginBottom": "24px",
+      "marginTop": "24px",
+    }
+  }
+>
+  <section
+    style={
+      Object {
+        "display": "flex",
+        "flexFlow": "column",
+      }
+    }
+  >
+    <div
+      className="form-group"
+    >
+      <label
+        className=" form-control-label"
+        htmlFor="userNameUserNameInput"
+      >
+        User Email
+      </label>
+      <input
+        className="form-control"
+        id="userNameUserNameInput"
+        onChange={[Function]}
+        type="email"
+        value="adam@gmail.com"
+      />
+    </div>
+  </section>
+  <button
+    className="btn btn-primary disabled"
+    disabled={true}
+    onClick={[Function]}
+    raised={true}
+    type="button"
+  >
+    Resetting...
+  </button>
+</section>
+`;

@@ -1,0 +1,525 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Component/⚘ Organism/RegisterForm/Stand Alone already registered 1`] = `
+<section
+  className="sc-hwwEjo hpNebt"
+  style={
+    Object {
+      "display": "flex",
+      "flexFlow": "column",
+      "marginBottom": "24px",
+      "marginTop": "24px",
+    }
+  }
+>
+  <section
+    style={
+      Object {
+        "display": "flex",
+        "flexFlow": "column",
+      }
+    }
+  >
+    <div
+      className="form-group"
+    >
+      <label
+        className=" form-control-label"
+        htmlFor="displayNameDisplayNameInput"
+      >
+        Display Name
+      </label>
+      <input
+        className="form-control"
+        id="displayNameDisplayNameInput"
+        onChange={[Function]}
+        type="text"
+        value="Mr. Adam"
+      />
+    </div>
+    <div
+      className="form-group"
+    >
+      <label
+        className=" form-control-label"
+        htmlFor="userNameUserNameInput"
+      >
+        User Email
+      </label>
+      <input
+        className="form-control"
+        id="userNameUserNameInput"
+        onChange={[Function]}
+        type="email"
+        value="adam"
+      />
+    </div>
+    <div
+      className="form-group"
+    >
+      <label
+        className=" form-control-label"
+        htmlFor="passwordPasswordInput"
+      >
+        Password
+      </label>
+      <input
+        className="form-control"
+        id="passwordPasswordInput"
+        onChange={[Function]}
+        type="password"
+        value="123"
+      />
+    </div>
+  </section>
+  <p>
+    This Email is already registered! Please 
+    <a
+      href="/#/login"
+    >
+      login
+    </a>
+    !
+  </p>
+  <button
+    className="btn btn-primary"
+    disabled={false}
+    onClick={[Function]}
+    raised={true}
+    type="button"
+  >
+    Register & Enjoy!
+  </button>
+</section>
+`;
+
+exports[`Storyshots Component/⚘ Organism/RegisterForm/Stand Alone initial 1`] = `
+<section
+  className="sc-hwwEjo hpNebt"
+  style={
+    Object {
+      "display": "flex",
+      "flexFlow": "column",
+      "marginBottom": "24px",
+      "marginTop": "24px",
+    }
+  }
+>
+  <section
+    style={
+      Object {
+        "display": "flex",
+        "flexFlow": "column",
+      }
+    }
+  >
+    <div
+      className="form-group"
+    >
+      <label
+        className=" form-control-label"
+        htmlFor="displayNameDisplayNameInput"
+      >
+        Display Name
+      </label>
+      <input
+        className="form-control"
+        id="displayNameDisplayNameInput"
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      className="form-group"
+    >
+      <label
+        className=" form-control-label"
+        htmlFor="userNameUserNameInput"
+      >
+        User Email
+      </label>
+      <input
+        className="form-control"
+        id="userNameUserNameInput"
+        onChange={[Function]}
+        type="email"
+        value=""
+      />
+    </div>
+    <div
+      className="form-group"
+    >
+      <label
+        className=" form-control-label"
+        htmlFor="passwordPasswordInput"
+      >
+        Password
+      </label>
+      <input
+        className="form-control"
+        id="passwordPasswordInput"
+        onChange={[Function]}
+        type="password"
+        value=""
+      />
+    </div>
+  </section>
+  <button
+    className="btn btn-primary"
+    disabled={false}
+    onClick={[Function]}
+    raised={true}
+    type="button"
+  >
+    Register & Enjoy!
+  </button>
+</section>
+`;
+
+exports[`Storyshots Component/⚘ Organism/RegisterForm/Stand Alone network failure 1`] = `
+<section
+  className="sc-hwwEjo hpNebt"
+  style={
+    Object {
+      "display": "flex",
+      "flexFlow": "column",
+      "marginBottom": "24px",
+      "marginTop": "24px",
+    }
+  }
+>
+  <section
+    style={
+      Object {
+        "display": "flex",
+        "flexFlow": "column",
+      }
+    }
+  >
+    <div
+      className="form-group"
+    >
+      <label
+        className=" form-control-label"
+        htmlFor="displayNameDisplayNameInput"
+      >
+        Display Name
+      </label>
+      <input
+        className="form-control"
+        id="displayNameDisplayNameInput"
+        onChange={[Function]}
+        type="text"
+        value="Mr. Adam"
+      />
+    </div>
+    <div
+      className="form-group"
+    >
+      <label
+        className=" form-control-label"
+        htmlFor="userNameUserNameInput"
+      >
+        User Email
+      </label>
+      <input
+        className="form-control"
+        id="userNameUserNameInput"
+        onChange={[Function]}
+        type="email"
+        value="adam"
+      />
+    </div>
+    <div
+      className="form-group"
+    >
+      <label
+        className=" form-control-label"
+        htmlFor="passwordPasswordInput"
+      >
+        Password
+      </label>
+      <input
+        className="form-control"
+        id="passwordPasswordInput"
+        onChange={[Function]}
+        type="password"
+        value="123"
+      />
+    </div>
+  </section>
+  <p>
+    Check the internet connection? try again later?
+  </p>
+  <button
+    className="btn btn-primary"
+    disabled={false}
+    onClick={[Function]}
+    raised={true}
+    type="button"
+  >
+    Register & Enjoy!
+  </button>
+</section>
+`;
+
+exports[`Storyshots Component/⚘ Organism/RegisterForm/Stand Alone registering 1`] = `
+<section
+  className="sc-hwwEjo hpNebt"
+  style={
+    Object {
+      "display": "flex",
+      "flexFlow": "column",
+      "marginBottom": "24px",
+      "marginTop": "24px",
+    }
+  }
+>
+  <section
+    style={
+      Object {
+        "display": "flex",
+        "flexFlow": "column",
+      }
+    }
+  >
+    <div
+      className="form-group"
+    >
+      <label
+        className=" form-control-label"
+        htmlFor="displayNameDisplayNameInput"
+      >
+        Display Name
+      </label>
+      <input
+        className="form-control"
+        id="displayNameDisplayNameInput"
+        onChange={[Function]}
+        type="text"
+        value="Mr. Adam"
+      />
+    </div>
+    <div
+      className="form-group"
+    >
+      <label
+        className=" form-control-label"
+        htmlFor="userNameUserNameInput"
+      >
+        User Email
+      </label>
+      <input
+        className="form-control"
+        id="userNameUserNameInput"
+        onChange={[Function]}
+        type="email"
+        value="adam"
+      />
+    </div>
+    <div
+      className="form-group"
+    >
+      <label
+        className=" form-control-label"
+        htmlFor="passwordPasswordInput"
+      >
+        Password
+      </label>
+      <input
+        className="form-control"
+        id="passwordPasswordInput"
+        onChange={[Function]}
+        type="password"
+        value="123"
+      />
+    </div>
+  </section>
+  <button
+    className="btn btn-primary"
+    disabled={false}
+    onClick={[Function]}
+    raised={true}
+    type="button"
+  >
+    Register & Enjoy!
+  </button>
+</section>
+`;
+
+exports[`Storyshots Component/⚘ Organism/RegisterForm/Stand Alone validation email sent with additional phrase 1`] = `
+<section
+  className="sc-hwwEjo hpNebt"
+  style={
+    Object {
+      "display": "flex",
+      "flexFlow": "column",
+      "marginBottom": "24px",
+      "marginTop": "24px",
+    }
+  }
+>
+  <section
+    style={
+      Object {
+        "display": "flex",
+        "flexFlow": "column",
+      }
+    }
+  >
+    <div
+      className="form-group"
+    >
+      <label
+        className=" form-control-label"
+        htmlFor="displayNameDisplayNameInput"
+      >
+        Display Name
+      </label>
+      <input
+        className="form-control"
+        id="displayNameDisplayNameInput"
+        onChange={[Function]}
+        type="text"
+        value="Mr. Adam"
+      />
+    </div>
+    <div
+      className="form-group"
+    >
+      <label
+        className=" form-control-label"
+        htmlFor="userNameUserNameInput"
+      >
+        User Email
+      </label>
+      <input
+        className="form-control"
+        id="userNameUserNameInput"
+        onChange={[Function]}
+        type="email"
+        value="adam"
+      />
+    </div>
+    <div
+      className="form-group"
+    >
+      <label
+        className=" form-control-label"
+        htmlFor="passwordPasswordInput"
+      >
+        Password
+      </label>
+      <input
+        className="form-control"
+        id="passwordPasswordInput"
+        onChange={[Function]}
+        type="password"
+        value="123"
+      />
+    </div>
+  </section>
+  <p>
+    We just sent a email to validate your email address!
+     And this is post email validation phrase addition!!!
+  </p>
+  <button
+    className="btn btn-primary"
+    disabled={false}
+    onClick={[Function]}
+    raised={true}
+    type="button"
+  >
+    Register & Enjoy!
+  </button>
+</section>
+`;
+
+exports[`Storyshots Component/⚘ Organism/RegisterForm/Stand Alone validation email sent without additional phrase 1`] = `
+<section
+  className="sc-hwwEjo hpNebt"
+  style={
+    Object {
+      "display": "flex",
+      "flexFlow": "column",
+      "marginBottom": "24px",
+      "marginTop": "24px",
+    }
+  }
+>
+  <section
+    style={
+      Object {
+        "display": "flex",
+        "flexFlow": "column",
+      }
+    }
+  >
+    <div
+      className="form-group"
+    >
+      <label
+        className=" form-control-label"
+        htmlFor="displayNameDisplayNameInput"
+      >
+        Display Name
+      </label>
+      <input
+        className="form-control"
+        id="displayNameDisplayNameInput"
+        onChange={[Function]}
+        type="text"
+        value="Mr. Adam"
+      />
+    </div>
+    <div
+      className="form-group"
+    >
+      <label
+        className=" form-control-label"
+        htmlFor="userNameUserNameInput"
+      >
+        User Email
+      </label>
+      <input
+        className="form-control"
+        id="userNameUserNameInput"
+        onChange={[Function]}
+        type="email"
+        value="adam"
+      />
+    </div>
+    <div
+      className="form-group"
+    >
+      <label
+        className=" form-control-label"
+        htmlFor="passwordPasswordInput"
+      >
+        Password
+      </label>
+      <input
+        className="form-control"
+        id="passwordPasswordInput"
+        onChange={[Function]}
+        type="password"
+        value="123"
+      />
+    </div>
+  </section>
+  <p>
+    We just sent a email to validate your email address!
+    
+  </p>
+  <button
+    className="btn btn-primary"
+    disabled={false}
+    onClick={[Function]}
+    raised={true}
+    type="button"
+  >
+    Register & Enjoy!
+  </button>
+</section>
+`;
