@@ -2,8 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 // import { withStyles } from 'material-ui/styles';
 
-import Input, { InputLabel } from 'material-ui/Input';
-import { FormControl } from 'material-ui/Form';
+// import Input, { InputLabel } from 'material-ui/Input';
+// import { FormControl } from 'material-ui/Form';
+
+import { Input, Label, FormGroup } from 'reactstrap';
 
 function CredentialInput(props) {
   const {
@@ -14,19 +16,19 @@ function CredentialInput(props) {
     contentObjectPropertyValue,
   } = props;
   return (
-    <FormControl>
-      <InputLabel
+    <FormGroup>
+      <Label
         htmlFor={`${contentObjectName}${htmlIdName}`}
       >
         {inputTitle}
-      </InputLabel>
+      </Label>
       <Input
         id={`${contentObjectName}${htmlIdName}`}
         value={contentObjectPropertyValue}
         type={inputType}
         onChange={event => props.handleFormChange(event, contentObjectName)}
       />
-    </FormControl>
+    </FormGroup>
   );
 }
 CredentialInput.propTypes = {

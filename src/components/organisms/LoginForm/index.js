@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Paper from 'material-ui/Paper';
-import Button from 'material-ui/Button';
-import Avatar from 'material-ui/Avatar';
+import { Button } from 'reactstrap';
+// import Avatar from 'material-ui/Avatar';
 import CredentialInput from './CredientialInput';
-
+import Container from './style/Container';
 
 export default class LoginForm extends Component {
   constructor(props) {
@@ -73,16 +72,16 @@ export default class LoginForm extends Component {
     }
     const returnToRoute = getReturnToRoute();
     return (
-      <Paper style={formStyle.container || null}>
+      <Container style={formStyle.container || null}>
         {
           userInfo.loggedIn ?
             <section style={formStyle.avatarContainer || null}>
               <h1 style={formStyle.avatarContainer.phrase || null}>Welcome!</h1>
-              <Avatar style={formStyle.avatarContainer.avatar || null}>
+              {/* <Avatar style={formStyle.avatarContainer.avatar || null}>
                 {userInfo.displayName
                   ? userInfo.displayName.charAt(0)
                   : 'ME'}
-              </Avatar>
+              </Avatar> */}
 
               {
                   returnToRoute ?
@@ -147,7 +146,7 @@ export default class LoginForm extends Component {
             </Button>
         }
 
-      </Paper>
+      </Container>
     );
   }
 }

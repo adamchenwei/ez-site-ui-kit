@@ -1,7 +1,7 @@
 import { www___naturalorchards__us as ContentCache } from 'ez-site-content-store';
 
-import LoginForm from './components/organisms/LoginForm';
-import ForgetMyPasswordForm from './components/organisms/ForgetMyPasswordForm';
+// import LoginForm from './components/organisms/LoginForm';
+// import ForgetMyPasswordForm from './components/organisms/ForgetMyPasswordForm';
 import ContactForm from './components/ContactForm';
 import CatalogList from './components/CatalogList';
 import CatalogItem from './components/CatalogItem';
@@ -19,8 +19,8 @@ import CenteredSpaceShell from './container/CenteredSpaceShell';
 
 const { products } = ContentCache;
 export {
-  LoginForm,
-  ForgetMyPasswordForm,
+  // LoginForm,
+  // ForgetMyPasswordForm,
   ContactForm,
   CatalogList,
   CatalogItem,

@@ -3,7 +3,6 @@ import {
   ShareButtons,
   generateShareIcon,
 } from 'react-share';
-import Link from 'material-ui-icons/Link';
 import Container from './style/Container';
 import IconHolder from './style/IconHolder';
 import LinkIconContainer from './style/LinkIconContainer';
@@ -60,7 +59,11 @@ export default function ShareButtonsBar(props) {
     >
       {homeLink ?
         <IconHolder style={{ backgroundColor: '#11111108' }}>
-          <LinkIconContainer href={homeLink}><Link href={homeLink} /></LinkIconContainer>
+          <LinkIconContainer href={homeLink}>
+            {/* eslint-disable */}
+            <a href={homeLink} />
+            {/* eslint-enable */}
+          </LinkIconContainer>
         </IconHolder> : null}
       <IconHolder>
         <FacebookShareButton
