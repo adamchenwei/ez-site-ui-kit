@@ -151,11 +151,11 @@ export default class RegisterForm extends Component {
 
         {
           userInfo.loggedIn ?
-            <Button raised color="primary" onClick={handleLogout}>
+            <Button color="primary" onClick={handleLogout}>
               Log Out
             </Button>
           :
-            <Button raised disabled={this.state.isRegistering && !statusCode} color="primary" onClick={this.registerNewUser}>
+            <Button disabled={this.state.isRegistering && !statusCode} color="primary" onClick={this.registerNewUser}>
               {
                 this.state.isRegistering && !statusCode
                 ? 'Registering...'

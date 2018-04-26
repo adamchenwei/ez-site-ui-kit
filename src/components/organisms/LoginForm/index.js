@@ -7,6 +7,7 @@ import Container from './style/Container';
 
 export default class LoginForm extends Component {
   constructor(props) {
+    console.log('loginformaaaaaah');
     super(props);
     this.state = {
       loggingIn: props.loggingIn || false,
@@ -134,10 +135,10 @@ export default class LoginForm extends Component {
 
         {
           userInfo.loggedIn ?
-            <Button raised color="primary" onClick={handleLogout}>
+            <Button color="primary" onClick={handleLogout}>
               Log Out
             </Button> :
-            <Button raised disabled={this.state.loggingIn} color="primary" onClick={this.login}>
+            <Button disabled={this.state.loggingIn} color="primary" onClick={this.login}>
               {
                 this.state.loggingIn
                 ? 'Loading...'

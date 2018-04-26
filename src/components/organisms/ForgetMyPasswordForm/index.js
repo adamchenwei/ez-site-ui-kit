@@ -110,7 +110,6 @@ export default class ForgetMyPassword extends Component {
           statusCode !== 'ezeewei/email-resetted'
           ?
             <Button
-              raised
               disabled={this.state.isResetting && !statusCode}
               color="primary"
               onClick={this.reset}
