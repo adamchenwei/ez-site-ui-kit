@@ -1,51 +1,38 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Button } from 'reactstrap';
-
-// import { Paper, Button, Avatar } from 'material-ui';
-import CredentialInput from './CredientialInput';
 import Container from './style/Container';
+import FormInput from '../FormInput';
 
 export default class RegisterForm extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      isRegistering: props.isRegistering || false,
-    };
-    this.handleFormChange = this.handleFormChange.bind(this);
-    this.changeRegisteringState = this.changeRegisteringState.bind(this);
-    this.registerNewUser = this.registerNewUser.bind(this);
   }
 
-  registerNewUser() {
-    this.changeRegisteringState(true);
-    this.props.handleRegister(this.props.userInfo.userName,
-      this.props.userInfo.password,
-      this.props.userInfo.displayName,
-      this.changeRegisteringState); //eslint-disable-line
-  }
-
-  changeRegisteringState(state) {
-    setTimeout(() => {
-      this.setState({
-        isRegistering: state,
-      });
-    });
-  }
-  handleFormChange(event, propertyName) {
-    this.props.handleRegisterFormChange(event, propertyName);
-  }
+  // changeRegisteringState(state) {
+  //   setTimeout(() => {
+  //     this.setState({
+  //       isRegistering: state,
+  //     });
+  //   });
+  // }
 
   render() {
     const {
       handleLogout,
-      userInfo,
       layout,
       statusCode,
       postEmailValidationPhrase,
+      onChange,
+      email,
+      password,
+      displayName,
+      loggedIn,
+      isRegistering,
+      handleRegister,
     } = this.props;
 
-    if (userInfo.loggedIn && this.state.isRegistering) {
+    if (loggedIn && isRegistering) {
       this.changeRegisteringState(false);
     }
 
@@ -73,7 +60,7 @@ export default class RegisterForm extends Component {
     return (
       <Container style={formStyle.container || null}>
         {
-          userInfo.loggedIn ?
+          loggedIn ?
             <section style={formStyle.avatarContainer || null}>
               <h1>Welcome!</h1>
               {/* <Avatar style={formStyle.avatarContainer.avatar || null}>
@@ -84,42 +71,29 @@ export default class RegisterForm extends Component {
             </section>
           :
             <section style={formStyle.credentialInputs}>
-              <CredentialInput
-                htmlIdName="DisplayNameInput"
-                inputTitle="Display Name"
-                inputType="text"
-                contentObjectName="displayName"
-                contentEmptyState={{ displayName: '' }}
-                contentObjectPropertyValue={userInfo.displayName}
-                contentObjectPropertyName=""
-                index={null}
-                event={null}
-                handleFormChange={(event) => { this.handleFormChange(event, 'displayName'); }}
+              <FormInput
+                title="Full Name"
+                name="displayName"
+                value={displayName}
+                type="text"
+                placeholder="i.e. John B. Adam"
+                onChange={onChange}
               />
-              <CredentialInput
-                htmlIdName="UserNameInput"
-                inputTitle="User Email"
-                inputType="email"
-                contentObjectName="userName"
-                contentEmptyState={{ userName: '' }}
-                contentObjectPropertyValue={userInfo.userName}
-                contentObjectPropertyName=""
-                index={null}
-                event={null}
-                handleFormChange={(event) => { this.handleFormChange(event, 'userName'); }}
+              <FormInput
+                title="Email"
+                name="email"
+                value={email}
+                type="email"
+                placeholder="i.e. abc@gmail.com"
+                onChange={onChange}
               />
-
-              <CredentialInput
-                htmlIdName="PasswordInput"
-                inputTitle="Password"
-                inputType="password"
-                contentObjectName="password"
-                contentEmptyState={{ password: '' }}
-                contentObjectPropertyValue={userInfo.password}
-                contentObjectPropertyName="password"
-                index={null}
-                event={null}
-                handleFormChange={(event) => { this.handleFormChange(event, 'password'); }}
+              <FormInput
+                title="Password"
+                name="password"
+                value={password}
+                type="password"
+                placeholder=""
+                onChange={onChange}
               />
             </section>
         }
@@ -137,7 +111,7 @@ export default class RegisterForm extends Component {
         }
 
         {
-          this.state.isRegistering && !statusCode
+          isRegistering && !statusCode
             ? <p>hold on, we are writing a very important message for you here...</p>
             : null
         }
@@ -150,14 +124,14 @@ export default class RegisterForm extends Component {
         }
 
         {
-          userInfo.loggedIn ?
+          loggedIn ?
             <Button color="primary" onClick={handleLogout}>
               Log Out
             </Button>
           :
-            <Button disabled={this.state.isRegistering && !statusCode} color="primary" onClick={this.registerNewUser}>
+            <Button disabled={isRegistering && !statusCode} color="primary" onClick={handleRegister}>
               {
-                this.state.isRegistering && !statusCode
+                isRegistering && !statusCode
                 ? 'Registering...'
                 : 'Register & Enjoy!'
               }
@@ -170,16 +144,19 @@ export default class RegisterForm extends Component {
 }
 
 RegisterForm.propTypes = {
-  userInfo: PropTypes.objectOf(PropTypes.any),
   isRegistering: PropTypes.bool,
   layout: PropTypes.string,
   // TODO: following SHOULD be .func.isRequired, but for some reason strange prop
   // validation comes up even what got pass IS func.....
   handleRegister: PropTypes.func,
   handleLogout: PropTypes.func,
-  handleRegisterFormChange: PropTypes.func,
+  onChange: PropTypes.func.isRequired,
   statusCode: PropTypes.string,
   postEmailValidationPhrase: PropTypes.string,
+  email: PropTypes.string,
+  password: PropTypes.string,
+  displayName: PropTypes.string,
+  loggedIn: PropTypes.bool,
 };
 
 RegisterForm.defaultProps = {
@@ -190,7 +167,10 @@ RegisterForm.defaultProps = {
   // validation comes up even what got pass IS func.....
   handleRegister: () => {},
   handleLogout: () => {},
-  handleRegisterFormChange: () => {},
-  statusCode: PropTypes.string,
+  statusCode: '',
   postEmailValidationPhrase: '',
+  email: '',
+  password: '',
+  displayName: '',
+  loggedIn: false,
 };

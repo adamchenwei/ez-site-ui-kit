@@ -85,7 +85,6 @@ exports[`Storyshots Component/⚘ Organism/RegisterForm/Stand Alone already regi
     className="btn btn-primary"
     disabled={false}
     onClick={[Function]}
-    raised={true}
     type="button"
   >
     Register & Enjoy!
@@ -169,7 +168,6 @@ exports[`Storyshots Component/⚘ Organism/RegisterForm/Stand Alone initial 1`] 
     className="btn btn-primary"
     disabled={false}
     onClick={[Function]}
-    raised={true}
     type="button"
   >
     Register & Enjoy!
@@ -256,7 +254,6 @@ exports[`Storyshots Component/⚘ Organism/RegisterForm/Stand Alone network fail
     className="btn btn-primary"
     disabled={false}
     onClick={[Function]}
-    raised={true}
     type="button"
   >
     Register & Enjoy!
@@ -340,7 +337,6 @@ exports[`Storyshots Component/⚘ Organism/RegisterForm/Stand Alone registering 
     className="btn btn-primary"
     disabled={false}
     onClick={[Function]}
-    raised={true}
     type="button"
   >
     Register & Enjoy!
@@ -428,7 +424,6 @@ exports[`Storyshots Component/⚘ Organism/RegisterForm/Stand Alone validation e
     className="btn btn-primary"
     disabled={false}
     onClick={[Function]}
-    raised={true}
     type="button"
   >
     Register & Enjoy!
@@ -516,7 +511,6 @@ exports[`Storyshots Component/⚘ Organism/RegisterForm/Stand Alone validation e
     className="btn btn-primary"
     disabled={false}
     onClick={[Function]}
-    raised={true}
     type="button"
   >
     Register & Enjoy!

@@ -59,7 +59,6 @@ exports[`Storyshots LoginForm/Stand Alone Version Empty State 1`] = `
     className="btn btn-primary"
     disabled={false}
     onClick={[Function]}
-    raised={true}
     type="button"
   >
     Log In
@@ -120,7 +119,6 @@ exports[`Storyshots LoginForm/Stand Alone Version Logged In 1`] = `
   <button
     className="btn btn-primary"
     onClick={[Function]}
-    raised={true}
     type="button"
   >
     Log Out
@@ -167,7 +165,6 @@ exports[`Storyshots LoginForm/Stand Alone Version Logged In But Return Route is 
   <button
     className="btn btn-primary"
     onClick={[Function]}
-    raised={true}
     type="button"
   >
     Log Out
@@ -228,7 +225,6 @@ exports[`Storyshots LoginForm/Stand Alone Version Logged In But User Name is Mis
   <button
     className="btn btn-primary"
     onClick={[Function]}
-    raised={true}
     type="button"
   >
     Log Out
@@ -295,7 +291,6 @@ exports[`Storyshots LoginForm/Stand Alone Version Logging In 1`] = `
     className="btn btn-primary disabled"
     disabled={true}
     onClick={[Function]}
-    raised={true}
     type="button"
   >
     Loading...
@@ -362,7 +357,6 @@ exports[`Storyshots LoginForm/Stand Alone Version Not Logged In 1`] = `
     className="btn btn-primary"
     disabled={false}
     onClick={[Function]}
-    raised={true}
     type="button"
   >
     Log In

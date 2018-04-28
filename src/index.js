@@ -18,10 +18,14 @@ import ProductListing from './container/ProductListing';
 import Product from './container/Product';
 import CenteredSpaceShell from './container/CenteredSpaceShell';
 import EzTester from './components/atoms/EzTester';
+import onChange from './components/organisms/FormInput/service/onChange';
+import FormInput from './components/organisms/FormInput';
 
 const { products } = ContentCache;
 export {
+  FormInput,
   LoginForm,
+  onChange,
   ForgetMyPasswordForm,
   RegisterForm,
   ContactForm,

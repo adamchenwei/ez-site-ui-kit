@@ -1,9 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Component/☉ Atom/AtomTemplateComponent/Stand Alone default 1`] = `
+exports[`Storyshots Component/☉ Atom/EzTester/Stand Alone default 1`] = `
 <h1
   val=""
 >
+  EzTester 
   
 </h1>
 `;
