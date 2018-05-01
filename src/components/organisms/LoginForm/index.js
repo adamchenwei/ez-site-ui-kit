@@ -7,7 +7,6 @@ import Container from './style/Container';
 
 export default class LoginForm extends Component {
   constructor(props) {
-    console.log('loginformaaaaaah');
     super(props);
     this.state = {
       loggingIn: props.loggingIn || false,

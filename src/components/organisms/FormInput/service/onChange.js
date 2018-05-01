@@ -4,7 +4,6 @@ export default function onChange(event, config = {
   isState: true,
   callback: null,
 }) {
-  console.log('onchange');
   const {
     isState,
     callback,

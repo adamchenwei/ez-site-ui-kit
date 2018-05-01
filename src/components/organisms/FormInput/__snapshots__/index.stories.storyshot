@@ -1,11 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Component/⚘ Organism/OrganismsTemplateComponent/Stand Alone default 1`] = `
-<h1
-  className=""
-  style={Object {}}
+exports[`Storyshots Component/⚘ Organism/FormInput/Stand Alone interactive: text 1`] = `
+<div
+  className="form-group"
 >
-  Success 
-  
-</h1>
+  <label
+    className=" form-control-label"
+    htmlFor="testField"
+  >
+    Form Input Title
+  </label>
+  <input
+    className="form-control"
+    name="aTestInputField"
+    onChange={[Function]}
+    placeholder="your text here"
+    type="text"
+    value=""
+  />
+</div>
 `;

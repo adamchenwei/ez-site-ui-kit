@@ -25,16 +25,17 @@ exports[`Storyshots Component/⚘ Organism/RegisterForm/Stand Alone already regi
     >
       <label
         className=" form-control-label"
-        htmlFor="displayNameDisplayNameInput"
+        htmlFor=""
       >
-        Display Name
+        Full Name
       </label>
       <input
         className="form-control"
-        id="displayNameDisplayNameInput"
+        name="displayName"
         onChange={[Function]}
+        placeholder="i.e. John B. Adam"
         type="text"
-        value="Mr. Adam"
+        value=""
       />
     </div>
     <div
@@ -42,16 +43,17 @@ exports[`Storyshots Component/⚘ Organism/RegisterForm/Stand Alone already regi
     >
       <label
         className=" form-control-label"
-        htmlFor="userNameUserNameInput"
+        htmlFor=""
       >
-        User Email
+        Email
       </label>
       <input
         className="form-control"
-        id="userNameUserNameInput"
+        name="email"
         onChange={[Function]}
+        placeholder="i.e. abc@gmail.com"
         type="email"
-        value="adam"
+        value=""
       />
     </div>
     <div
@@ -59,35 +61,39 @@ exports[`Storyshots Component/⚘ Organism/RegisterForm/Stand Alone already regi
     >
       <label
         className=" form-control-label"
-        htmlFor="passwordPasswordInput"
+        htmlFor=""
       >
         Password
       </label>
       <input
         className="form-control"
-        id="passwordPasswordInput"
+        name="password"
         onChange={[Function]}
+        placeholder=""
         type="password"
-        value="123"
+        value=""
       />
     </div>
   </section>
   <p>
     This Email is already registered! Please 
     <a
-      href="/#/login"
+      href="/user/login"
     >
       login
     </a>
     !
   </p>
+  <p>
+    
+  </p>
   <button
-    className="btn btn-primary"
-    disabled={false}
+    className="btn btn-primary disabled"
+    disabled={true}
     onClick={[Function]}
     type="button"
   >
-    Register & Enjoy!
+    Register
   </button>
 </section>
 `;
@@ -117,14 +123,15 @@ exports[`Storyshots Component/⚘ Organism/RegisterForm/Stand Alone initial 1`] 
     >
       <label
         className=" form-control-label"
-        htmlFor="displayNameDisplayNameInput"
+        htmlFor=""
       >
-        Display Name
+        Full Name
       </label>
       <input
         className="form-control"
-        id="displayNameDisplayNameInput"
+        name="displayName"
         onChange={[Function]}
+        placeholder="i.e. John B. Adam"
         type="text"
         value=""
       />
@@ -134,14 +141,15 @@ exports[`Storyshots Component/⚘ Organism/RegisterForm/Stand Alone initial 1`] 
     >
       <label
         className=" form-control-label"
-        htmlFor="userNameUserNameInput"
+        htmlFor=""
       >
-        User Email
+        Email
       </label>
       <input
         className="form-control"
-        id="userNameUserNameInput"
+        name="email"
         onChange={[Function]}
+        placeholder="i.e. abc@gmail.com"
         type="email"
         value=""
       />
@@ -151,26 +159,159 @@ exports[`Storyshots Component/⚘ Organism/RegisterForm/Stand Alone initial 1`] 
     >
       <label
         className=" form-control-label"
-        htmlFor="passwordPasswordInput"
+        htmlFor=""
       >
         Password
       </label>
       <input
         className="form-control"
-        id="passwordPasswordInput"
+        name="password"
         onChange={[Function]}
+        placeholder=""
         type="password"
         value=""
       />
     </div>
   </section>
+  <p>
+    
+  </p>
   <button
     className="btn btn-primary"
     disabled={false}
     onClick={[Function]}
     type="button"
   >
-    Register & Enjoy!
+    Register
+  </button>
+</section>
+`;
+
+exports[`Storyshots Component/⚘ Organism/RegisterForm/Stand Alone interactive 1`] = `
+<section
+  className="sc-hwwEjo hpNebt"
+  style={
+    Object {
+      "display": "flex",
+      "flexFlow": "column",
+      "marginBottom": "24px",
+      "marginTop": "24px",
+    }
+  }
+>
+  <section
+    style={
+      Object {
+        "display": "flex",
+        "flexFlow": "column",
+      }
+    }
+  >
+    <div
+      className="form-group"
+    >
+      <label
+        className=" form-control-label"
+        htmlFor=""
+      >
+        Full Name
+      </label>
+      <input
+        className="form-control"
+        name="displayName"
+        onChange={[Function]}
+        placeholder="i.e. John B. Adam"
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      className="form-group"
+    >
+      <label
+        className=" form-control-label"
+        htmlFor=""
+      >
+        Email
+      </label>
+      <input
+        className="form-control"
+        name="email"
+        onChange={[Function]}
+        placeholder="i.e. abc@gmail.com"
+        type="email"
+        value=""
+      />
+    </div>
+    <div
+      className="form-group"
+    >
+      <label
+        className=" form-control-label"
+        htmlFor=""
+      >
+        Password
+      </label>
+      <input
+        className="form-control"
+        name="password"
+        onChange={[Function]}
+        placeholder=""
+        type="password"
+        value=""
+      />
+    </div>
+  </section>
+  <p>
+    
+  </p>
+  <button
+    className="btn btn-primary"
+    disabled={false}
+    onClick={[Function]}
+    type="button"
+  >
+    Register
+  </button>
+</section>
+`;
+
+exports[`Storyshots Component/⚘ Organism/RegisterForm/Stand Alone loggedin 1`] = `
+<section
+  className="sc-hwwEjo hpNebt"
+  style={
+    Object {
+      "display": "flex",
+      "flexFlow": "column",
+      "marginBottom": "24px",
+      "marginTop": "24px",
+    }
+  }
+>
+  <section
+    style={
+      Object {
+        "alignSelf": "center",
+        "avatar": Object {
+          "margin": "0 auto",
+        },
+        "margin": "24px",
+      }
+    }
+  >
+    <h1>
+      Welcome!
+    </h1>
+  </section>
+  <p>
+    
+  </p>
+  <button
+    className="btn btn-primary"
+    onClick={[Function]}
+    type="button"
+  >
+    Log Out
   </button>
 </section>
 `;
@@ -200,16 +341,17 @@ exports[`Storyshots Component/⚘ Organism/RegisterForm/Stand Alone network fail
     >
       <label
         className=" form-control-label"
-        htmlFor="displayNameDisplayNameInput"
+        htmlFor=""
       >
-        Display Name
+        Full Name
       </label>
       <input
         className="form-control"
-        id="displayNameDisplayNameInput"
+        name="displayName"
         onChange={[Function]}
+        placeholder="i.e. John B. Adam"
         type="text"
-        value="Mr. Adam"
+        value=""
       />
     </div>
     <div
@@ -217,16 +359,17 @@ exports[`Storyshots Component/⚘ Organism/RegisterForm/Stand Alone network fail
     >
       <label
         className=" form-control-label"
-        htmlFor="userNameUserNameInput"
+        htmlFor=""
       >
-        User Email
+        Email
       </label>
       <input
         className="form-control"
-        id="userNameUserNameInput"
+        name="email"
         onChange={[Function]}
+        placeholder="i.e. abc@gmail.com"
         type="email"
-        value="adam"
+        value=""
       />
     </div>
     <div
@@ -234,29 +377,33 @@ exports[`Storyshots Component/⚘ Organism/RegisterForm/Stand Alone network fail
     >
       <label
         className=" form-control-label"
-        htmlFor="passwordPasswordInput"
+        htmlFor=""
       >
         Password
       </label>
       <input
         className="form-control"
-        id="passwordPasswordInput"
+        name="password"
         onChange={[Function]}
+        placeholder=""
         type="password"
-        value="123"
+        value=""
       />
     </div>
   </section>
   <p>
     Check the internet connection? try again later?
   </p>
+  <p>
+    
+  </p>
   <button
-    className="btn btn-primary"
-    disabled={false}
+    className="btn btn-primary disabled"
+    disabled={true}
     onClick={[Function]}
     type="button"
   >
-    Register & Enjoy!
+    Register
   </button>
 </section>
 `;
@@ -286,16 +433,17 @@ exports[`Storyshots Component/⚘ Organism/RegisterForm/Stand Alone registering 
     >
       <label
         className=" form-control-label"
-        htmlFor="displayNameDisplayNameInput"
+        htmlFor=""
       >
-        Display Name
+        Full Name
       </label>
       <input
         className="form-control"
-        id="displayNameDisplayNameInput"
+        name="displayName"
         onChange={[Function]}
+        placeholder="i.e. John B. Adam"
         type="text"
-        value="Mr. Adam"
+        value=""
       />
     </div>
     <div
@@ -303,16 +451,17 @@ exports[`Storyshots Component/⚘ Organism/RegisterForm/Stand Alone registering 
     >
       <label
         className=" form-control-label"
-        htmlFor="userNameUserNameInput"
+        htmlFor=""
       >
-        User Email
+        Email
       </label>
       <input
         className="form-control"
-        id="userNameUserNameInput"
+        name="email"
         onChange={[Function]}
+        placeholder="i.e. abc@gmail.com"
         type="email"
-        value="adam"
+        value=""
       />
     </div>
     <div
@@ -320,26 +469,122 @@ exports[`Storyshots Component/⚘ Organism/RegisterForm/Stand Alone registering 
     >
       <label
         className=" form-control-label"
-        htmlFor="passwordPasswordInput"
+        htmlFor=""
       >
         Password
       </label>
       <input
         className="form-control"
-        id="passwordPasswordInput"
+        name="password"
         onChange={[Function]}
+        placeholder=""
         type="password"
-        value="123"
+        value=""
       />
     </div>
   </section>
+  <p>
+    hold on, we are writing a very important message for you here...
+  </p>
+  <p>
+    
+  </p>
+  <button
+    className="btn btn-primary disabled"
+    disabled={true}
+    onClick={[Function]}
+    type="button"
+  >
+    registering...
+  </button>
+</section>
+`;
+
+exports[`Storyshots Component/⚘ Organism/RegisterForm/Stand Alone status message 1`] = `
+<section
+  className="sc-hwwEjo hpNebt"
+  style={
+    Object {
+      "display": "flex",
+      "flexFlow": "column",
+      "marginBottom": "24px",
+      "marginTop": "24px",
+    }
+  }
+>
+  <section
+    style={
+      Object {
+        "display": "flex",
+        "flexFlow": "column",
+      }
+    }
+  >
+    <div
+      className="form-group"
+    >
+      <label
+        className=" form-control-label"
+        htmlFor=""
+      >
+        Full Name
+      </label>
+      <input
+        className="form-control"
+        name="displayName"
+        onChange={[Function]}
+        placeholder="i.e. John B. Adam"
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      className="form-group"
+    >
+      <label
+        className=" form-control-label"
+        htmlFor=""
+      >
+        Email
+      </label>
+      <input
+        className="form-control"
+        name="email"
+        onChange={[Function]}
+        placeholder="i.e. abc@gmail.com"
+        type="email"
+        value=""
+      />
+    </div>
+    <div
+      className="form-group"
+    >
+      <label
+        className=" form-control-label"
+        htmlFor=""
+      >
+        Password
+      </label>
+      <input
+        className="form-control"
+        name="password"
+        onChange={[Function]}
+        placeholder=""
+        type="password"
+        value=""
+      />
+    </div>
+  </section>
+  <p>
+    here is your status message from api
+  </p>
   <button
     className="btn btn-primary"
     disabled={false}
     onClick={[Function]}
     type="button"
   >
-    Register & Enjoy!
+    Register
   </button>
 </section>
 `;
@@ -369,16 +614,17 @@ exports[`Storyshots Component/⚘ Organism/RegisterForm/Stand Alone validation e
     >
       <label
         className=" form-control-label"
-        htmlFor="displayNameDisplayNameInput"
+        htmlFor=""
       >
-        Display Name
+        Full Name
       </label>
       <input
         className="form-control"
-        id="displayNameDisplayNameInput"
+        name="displayName"
         onChange={[Function]}
+        placeholder="i.e. John B. Adam"
         type="text"
-        value="Mr. Adam"
+        value=""
       />
     </div>
     <div
@@ -386,16 +632,17 @@ exports[`Storyshots Component/⚘ Organism/RegisterForm/Stand Alone validation e
     >
       <label
         className=" form-control-label"
-        htmlFor="userNameUserNameInput"
+        htmlFor=""
       >
-        User Email
+        Email
       </label>
       <input
         className="form-control"
-        id="userNameUserNameInput"
+        name="email"
         onChange={[Function]}
+        placeholder="i.e. abc@gmail.com"
         type="email"
-        value="adam"
+        value=""
       />
     </div>
     <div
@@ -403,16 +650,17 @@ exports[`Storyshots Component/⚘ Organism/RegisterForm/Stand Alone validation e
     >
       <label
         className=" form-control-label"
-        htmlFor="passwordPasswordInput"
+        htmlFor=""
       >
         Password
       </label>
       <input
         className="form-control"
-        id="passwordPasswordInput"
+        name="password"
         onChange={[Function]}
+        placeholder=""
         type="password"
-        value="123"
+        value=""
       />
     </div>
   </section>
@@ -420,13 +668,16 @@ exports[`Storyshots Component/⚘ Organism/RegisterForm/Stand Alone validation e
     We just sent a email to validate your email address!
      And this is post email validation phrase addition!!!
   </p>
+  <p>
+    
+  </p>
   <button
-    className="btn btn-primary"
-    disabled={false}
+    className="btn btn-primary disabled"
+    disabled={true}
     onClick={[Function]}
     type="button"
   >
-    Register & Enjoy!
+    Register
   </button>
 </section>
 `;
@@ -456,16 +707,17 @@ exports[`Storyshots Component/⚘ Organism/RegisterForm/Stand Alone validation e
     >
       <label
         className=" form-control-label"
-        htmlFor="displayNameDisplayNameInput"
+        htmlFor=""
       >
-        Display Name
+        Full Name
       </label>
       <input
         className="form-control"
-        id="displayNameDisplayNameInput"
+        name="displayName"
         onChange={[Function]}
+        placeholder="i.e. John B. Adam"
         type="text"
-        value="Mr. Adam"
+        value=""
       />
     </div>
     <div
@@ -473,16 +725,17 @@ exports[`Storyshots Component/⚘ Organism/RegisterForm/Stand Alone validation e
     >
       <label
         className=" form-control-label"
-        htmlFor="userNameUserNameInput"
+        htmlFor=""
       >
-        User Email
+        Email
       </label>
       <input
         className="form-control"
-        id="userNameUserNameInput"
+        name="email"
         onChange={[Function]}
+        placeholder="i.e. abc@gmail.com"
         type="email"
-        value="adam"
+        value=""
       />
     </div>
     <div
@@ -490,16 +743,17 @@ exports[`Storyshots Component/⚘ Organism/RegisterForm/Stand Alone validation e
     >
       <label
         className=" form-control-label"
-        htmlFor="passwordPasswordInput"
+        htmlFor=""
       >
         Password
       </label>
       <input
         className="form-control"
-        id="passwordPasswordInput"
+        name="password"
         onChange={[Function]}
+        placeholder=""
         type="password"
-        value="123"
+        value=""
       />
     </div>
   </section>
@@ -507,13 +761,16 @@ exports[`Storyshots Component/⚘ Organism/RegisterForm/Stand Alone validation e
     We just sent a email to validate your email address!
     
   </p>
+  <p>
+    
+  </p>
   <button
-    className="btn btn-primary"
-    disabled={false}
+    className="btn btn-primary disabled"
+    disabled={true}
     onClick={[Function]}
     type="button"
   >
-    Register & Enjoy!
+    Register
   </button>
 </section>
 `;

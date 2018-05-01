@@ -21,7 +21,6 @@ class RegisterFormInteractive extends React.Component {
   }
 
   onFormInputChange(event) {
-    console.log('c');
     this.onChange(event);
   }
 
@@ -57,6 +56,16 @@ storiesOf(`Component/${OrganismName}/RegisterForm/Stand Alone`, module)
       onChange={mockCallBack}
     />
   ))
+  .add('status message', () => (
+    <RegisterForm
+      statusMessage="here is your status message from api"
+      layout="standAlone"
+      handleRegister={mockCallBack}
+      handleLogout={mockCallBack}
+      handleRegisterFormChange={mockCallBack}
+      onChange={mockCallBack}
+    />
+  ))
   .add('loggedin', () => (
     <RegisterForm
       userInfo={{
@@ -83,6 +92,7 @@ storiesOf(`Component/${OrganismName}/RegisterForm/Stand Alone`, module)
       }}
       layout="standAlone"
       isRegistering
+      registerButtonTitle="registering..."
       handleRegister={mockCallBack}
       handleLogout={mockCallBack}
       handleRegisterFormChange={mockCallBack}

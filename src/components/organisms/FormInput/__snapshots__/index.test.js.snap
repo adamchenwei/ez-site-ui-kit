@@ -1,11 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`OrganismsTemplateComponent renders as expected 1`] = `
-<h1
-  className=""
-  style={Object {}}
+exports[`FormInput renders as expected 1`] = `
+<div
+  className="form-group"
 >
-  Success 
-  
-</h1>
+  <label
+    className=" form-control-label"
+    htmlFor=""
+  >
+    
+  </label>
+  <input
+    className="form-control"
+    name="aTestInputField"
+    placeholder="your text here"
+    type="text"
+    value=""
+  />
+</div>
 `;
