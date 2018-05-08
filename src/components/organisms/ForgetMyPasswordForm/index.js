@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { Button } from 'reactstrap';
 
 // import { Paper, Button } from 'material-ui';
-import CredentialInput from './CredientialInput';
 import Container from './style/Container';
+import FormInput from '../FormInput/index';
 
 export default class ForgetMyPassword extends Component {
   constructor(props) {
@@ -12,15 +12,13 @@ export default class ForgetMyPassword extends Component {
     this.state = {
       isResetting: props.isResetting || false,
     };
-    this.handleFormChange = this.handleFormChange.bind(this);
     this.changeIsResettingState = this.changeIsResettingState.bind(this);
     this.reset = this.reset.bind(this);
   }
 
   reset() {
     this.changeIsResettingState(true);
-    this.props.handleReset(this.props.userInfo.userName,
-      this.props.userInfo.password, this.changeIsResettingState);
+    this.props.handleReset(this.props.email);
   }
 
   changeIsResettingState(state) {
@@ -30,20 +28,19 @@ export default class ForgetMyPassword extends Component {
       });
     });
   }
-  handleFormChange(event, propertyName) {
-    this.props.handleForgetMyPasswordFormChange(event, propertyName);
-  }
 
   render() {
     const {
-      userInfo,
+      // userInfo,
       layout,
       statusCode,
+      email,
+      onChangeAction,
     } = this.props;
 
-    if (userInfo.loggedIn && this.state.isResetting) {
-      this.changeIsResettingState(false);
-    }
+    // if (userInfo.loggedIn && this.state.isResetting) {
+    //   this.changeIsResettingState(false);
+    // }
 
     const formStyle = {
       container: {
@@ -75,17 +72,13 @@ export default class ForgetMyPassword extends Component {
               <a href="/#">Bring me back to home page</a>
             </section> :
             <section style={formStyle.credentialInputs}>
-              <CredentialInput
-                htmlIdName="UserNameInput"
-                inputTitle="User Email"
-                inputType="email"
-                contentObjectName="userName"
-                contentEmptyState={{ userName: '' }}
-                contentObjectPropertyValue={userInfo.userName}
-                contentObjectPropertyName=""
-                index={null}
-                event={null}
-                handleFormChange={(event) => { this.handleFormChange(event, 'userName'); }}
+              <FormInput
+                title="Email"
+                name="email"
+                value={email}
+                type="email"
+                placeholder=""
+                onChange={onChangeAction}
               />
             </section>
         }
@@ -102,7 +95,7 @@ export default class ForgetMyPassword extends Component {
 
         {
           statusCode === 'auth/user-not-found'
-            ? <p>{"We can't find your account! Would you like to"} <a href="/#/register">register as a new user</a>?</p>
+            ? <p>{"We can't find your account! Would you like to"} <a href="/user/register">register as a new user</a>?</p>
             : null
         }
 
@@ -135,8 +128,10 @@ ForgetMyPassword.propTypes = {
   // TODO: following SHOULD be .func.isRequired, but for some reason strange prop
   // validation comes up even what got pass IS func.....
   handleReset: PropTypes.func.isRequired,
-  handleForgetMyPasswordFormChange: PropTypes.func.isRequired,
+  onChangeAction: PropTypes.func.isRequired,
   statusCode: PropTypes.string,
+  email: PropTypes.string,
+
 };
 
 ForgetMyPassword.defaultProps = {
@@ -146,4 +141,5 @@ ForgetMyPassword.defaultProps = {
   // TODO: following SHOULD be .func.isRequired, but for some reason strange prop
   // validation comes up even what got pass IS func.....
   statusCode: '',
+  email: '',
 };

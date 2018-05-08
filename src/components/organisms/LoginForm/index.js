@@ -128,7 +128,7 @@ export default class LoginForm extends Component {
 
         {
           statusCode === 'auth/user-not-found'
-            ? <p>{"We can't find your account! Would you like to"} <a href="/#/register">register as a new user</a>?</p>
+            ? <p>{"We can't find your account! Would you like to"} <a href="/user/register">register as a new user</a>?</p>
             : null
         }
 
