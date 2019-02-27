@@ -122,7 +122,7 @@ export default class ForgetMyPassword extends Component {
 }
 
 ForgetMyPassword.propTypes = {
-  userInfo: PropTypes.objectOf(PropTypes.any),
+  // userInfo: PropTypes.objectOf(PropTypes.any),
   isResetting: PropTypes.bool,
   layout: PropTypes.string,
   // TODO: following SHOULD be .func.isRequired, but for some reason strange prop
@@ -135,7 +135,7 @@ ForgetMyPassword.propTypes = {
 };
 
 ForgetMyPassword.defaultProps = {
-  userInfo: '',
+  // userInfo: '',
   isResetting: false,
   layout: '',
   // TODO: following SHOULD be .func.isRequired, but for some reason strange prop
