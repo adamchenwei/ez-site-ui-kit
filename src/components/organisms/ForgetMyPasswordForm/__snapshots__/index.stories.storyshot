@@ -25,14 +25,15 @@ exports[`Storyshots Component/⚘ Organism/ForgetMyPasswordForm/Stand Alone Init
     >
       <label
         className=" form-control-label"
-        htmlFor="userNameUserNameInput"
+        htmlFor=""
       >
-        User Email
+        Email
       </label>
       <input
         className="form-control"
-        id="userNameUserNameInput"
-        onChange={[Function]}
+        name="email"
+        onChange={undefined}
+        placeholder=""
         type="email"
         value=""
       />
@@ -74,16 +75,17 @@ exports[`Storyshots Component/⚘ Organism/ForgetMyPasswordForm/Stand Alone Rese
     >
       <label
         className=" form-control-label"
-        htmlFor="userNameUserNameInput"
+        htmlFor=""
       >
-        User Email
+        Email
       </label>
       <input
         className="form-control"
-        id="userNameUserNameInput"
-        onChange={[Function]}
+        name="email"
+        onChange={undefined}
+        placeholder=""
         type="email"
-        value="adamchenwei@gmail.com"
+        value=""
       />
     </div>
   </section>
@@ -123,16 +125,17 @@ exports[`Storyshots Component/⚘ Organism/ForgetMyPasswordForm/Stand Alone Rese
     >
       <label
         className=" form-control-label"
-        htmlFor="userNameUserNameInput"
+        htmlFor=""
       >
-        User Email
+        Email
       </label>
       <input
         className="form-control"
-        id="userNameUserNameInput"
-        onChange={[Function]}
+        name="email"
+        onChange={undefined}
+        placeholder=""
         type="email"
-        value="adam@gmail.com"
+        value=""
       />
     </div>
   </section>
